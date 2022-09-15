@@ -150,7 +150,8 @@ namespace PluginAPI.Loader
 		{
 			try
 			{
-				return (assembly = Assembly.Load(File.ReadAllBytes(path))) != null;
+				assembly = Assembly.Load(File.ReadAllBytes(path));
+				return true;
 			}
 			catch (Exception e)
 			{
