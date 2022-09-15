@@ -1,0 +1,6 @@
+SCPSL_Data\Managed\Assembly-CSharp.dll
+SCPSL_Data\Managed\CommandSystem.Core.dll
+SCPSL_Data\Managed\Mirror.dll
+SCPSL_Data\Managed\NorthwoodLib.dll
+SCPSL_Data\Managed\UnityEngine.CoreModule.dll
+SCPSL_Data\Managed\UnityEngine.PhysicsModule.dll

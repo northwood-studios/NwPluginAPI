@@ -1,0 +1,19 @@
+namespace PluginAPI.Core.Zones.Heavy
+{
+	using MapGeneration;
+	using PluginAPI.Core.Zones;
+
+	public class HczRoom : FacilityRoom
+	{
+		public readonly new HeavyZone Zone;
+
+		public Generator Generator { get; internal set; }
+
+		/// <summary>
+		/// Constructor for heqavy zone room.
+		/// </summary>
+		/// <param name="zone">The zone type.</param>
+		/// <param name="room">The room identifier.</param>
+		public HczRoom(HeavyZone zone, RoomIdentifier room) : base(zone, room) { }
+	}
+}
