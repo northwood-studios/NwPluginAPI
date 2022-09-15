@@ -35,12 +35,10 @@
             {
                 return entity;
             }
-            else
-            {
-                var ent = Create(component);
-                Entities.Add(component, ent);
-                return ent;
-            }
+
+            var ent = Create(component);
+            Entities.Add(component, ent);
+            return ent;
         }
     }
 }
