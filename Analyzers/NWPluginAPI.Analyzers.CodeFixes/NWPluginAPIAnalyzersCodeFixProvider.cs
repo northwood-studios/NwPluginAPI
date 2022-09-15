@@ -32,14 +32,14 @@ namespace NWPluginAPI.Analyzers
 
 		public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
 		{
-			var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
+			SyntaxNode root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
 
 			// TODO: Replace the following code with your own analysis, generating a CodeAction for each fix to suggest
-			var diagnostic = context.Diagnostics.First();
-			var diagnosticSpan = diagnostic.Location.SourceSpan;
+			Diagnostic diagnostic = context.Diagnostics.First();
+			TextSpan diagnosticSpan = diagnostic.Location.SourceSpan;
 
 			// Find the type declaration identified by the diagnostic.
-			var declaration = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<MethodDeclarationSyntax>().First();
+			MethodDeclarationSyntax declaration = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<MethodDeclarationSyntax>().First();
 
 			// Register a code action that will invoke the fix.
 			context.RegisterCodeFix(
@@ -52,15 +52,15 @@ namespace NWPluginAPI.Analyzers
 
 		private async Task<Document> MakeUppercaseAsync(Document document, MethodDeclarationSyntax param, CancellationToken cancellationToken)
 		{
-			var attribute = SyntaxFactory.AttributeList(
+			AttributeListSyntax attribute = SyntaxFactory.AttributeList(
 	SyntaxFactory.SingletonSeparatedList<AttributeSyntax>(
 		SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("PluginEvent"), null)));
 						
-			var newParam = param.WithAttributeLists(param.AttributeLists.Add(attribute));
+			MethodDeclarationSyntax newParam = param.WithAttributeLists(param.AttributeLists.Add(attribute));
 
-			var root = await document.GetSyntaxRootAsync();
-			var newRoot = root.ReplaceNode(param, newParam);
-			var newDocument = document.WithSyntaxRoot(newRoot);
+			SyntaxNode root = await document.GetSyntaxRootAsync();
+			SyntaxNode newRoot = root.ReplaceNode(param, newParam);
+			Document newDocument = document.WithSyntaxRoot(newRoot);
 
 			return newDocument;
 		}

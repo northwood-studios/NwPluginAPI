@@ -37,9 +37,9 @@ namespace NWPluginAPI.Analyzers
 		private static void AnalyzeSymbol(SymbolAnalysisContext context)
 		{
 			// TODO: Replace the following code with your own analysis, generating Diagnostic objects for any issues you find
-			var namedTypeSymbol = (INamedTypeSymbol)context.Symbol;
+			INamedTypeSymbol namedTypeSymbol = (INamedTypeSymbol)context.Symbol;
 
-			var diagnostic = Diagnostic.Create(Rule, namedTypeSymbol.Locations[0], namedTypeSymbol.Name);
+			Diagnostic diagnostic = Diagnostic.Create(Rule, namedTypeSymbol.Locations[0], namedTypeSymbol.Name);
 
 			context.ReportDiagnostic(diagnostic);
 		}

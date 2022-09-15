@@ -36,7 +36,7 @@
                 return entity;
             }
 
-            var ent = Create(component);
+            T ent = Create(component);
             Entities.Add(component, ent);
             return ent;
         }

@@ -1,3 +1,5 @@
+using PluginAPI.Core;
+
 namespace PluginAPI.Commands
 {
     using System;
@@ -18,7 +20,7 @@ namespace PluginAPI.Commands
 		public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
 		{
 			List<string> plugins = new List<string>();
-			foreach (var plugin in AssemblyLoader.InstalledPlugins)
+			foreach (PluginHandler plugin in AssemblyLoader.InstalledPlugins)
 			{
 				plugins.Add($"<color=lime>{(plugin.PluginName)}</color> v<color=orange>{plugin.PluginVersion}</color>");
 			}

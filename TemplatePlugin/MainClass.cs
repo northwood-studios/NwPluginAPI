@@ -33,7 +33,7 @@
         {
             Log.Info($"Player &6{player.UserId}&r joined this server with &1{player.Test}&4");
 
-            foreach(var plr in Player.GetPlayers<MyPlayer>())
+            foreach(MyPlayer plr in Player.GetPlayers<MyPlayer>())
             {
                 Log.Info($"Player online &6{plr.Nickname}&r, role &6{plr.Role}&r");
             }

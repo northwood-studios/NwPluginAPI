@@ -162,15 +162,15 @@ namespace PluginAPI.Events
 				_handlerInstances.Add(eventHandler, handle);
             }
 
-            foreach (var method in eventHandler.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
+            foreach (MethodInfo method in eventHandler.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
-                var attribute = method.GetCustomAttribute<Attribute>();
+                Attribute attribute = method.GetCustomAttribute<Attribute>();
 
                 switch (attribute)
 				{
 					case PluginEvent pluginEvent:
 
-                        var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
+                        Type[] eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
 
 						if (!ValidateEvent(eventParameters, _requiredParameters[(int)pluginEvent.EventType]))
 						{
@@ -225,7 +225,7 @@ namespace PluginAPI.Events
 			List<IndexInfo> indexesToRegenerate = new List<IndexInfo>();
 			for(int x = 0; x < _requiredParameters[(int)type].Length; x++)
 			{
-				var paramType = _requiredParameters[(int)type][x];
+				Type paramType = _requiredParameters[(int)type][x];
 
                 if (args[x] == null)
 				{
@@ -244,9 +244,9 @@ namespace PluginAPI.Events
 
 			bool isCanceled = false;
 
-			foreach (var ev in registeredEvents)
+			foreach (EventInfo ev in registeredEvents)
 			{
-				foreach (var index in indexesToRegenerate)
+				foreach (IndexInfo index in indexesToRegenerate)
 				{
 					if (index.Type == typeof(IPlayer))
 					{

@@ -39,7 +39,7 @@ namespace PluginAPI.Core.Items
 				return it;
 			else
 			{
-				var newItem = new ItemPickup(item);
+				ItemPickup newItem = new ItemPickup(item);
 				CachedItems.Add(item.Info.Serial, newItem);
 				return newItem;
 			}

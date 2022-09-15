@@ -60,9 +60,9 @@ namespace PluginAPI.Loader
 			LoadPlugins(Paths.LocalPlugins);
 
 			Log.Info("<---<       Start all plugins       <---<");
-			foreach (var plugin in Plugins.Values)
+			foreach (Dictionary<Type, PluginHandler> plugin in Plugins.Values)
 			{
-				foreach (var pluginType in plugin.Values)
+				foreach (PluginHandler pluginType in plugin.Values)
 				{
 					try
 					{
@@ -93,7 +93,7 @@ namespace PluginAPI.Loader
                 if (!TryGetAssembly(dependencyPath, out Assembly assembly))
 					continue;
 
-                foreach (var type in assembly.GetTypes())
+                foreach (Type type in assembly.GetTypes())
 				{
 					if (!type.IsValidEntrypoint()) continue;
 

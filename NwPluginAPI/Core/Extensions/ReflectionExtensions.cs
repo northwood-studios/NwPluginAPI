@@ -8,9 +8,9 @@
     {
         public static bool IsValidEntrypoint(this Type type)
         {
-            foreach(var method in type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
+            foreach(MethodInfo method in type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
             {
-                var attr = method.GetCustomAttribute<PluginEntryPoint>();
+                PluginEntryPoint attr = method.GetCustomAttribute<PluginEntryPoint>();
                 if (attr != null)
                     return true;
             }

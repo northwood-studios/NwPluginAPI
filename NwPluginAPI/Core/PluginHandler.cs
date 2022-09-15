@@ -104,9 +104,9 @@ namespace PluginAPI.Core
 			_plugin = Activator.CreateInstance(type);
             _pluginType = _plugin.GetType();
 
-            foreach (var method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
+            foreach (MethodInfo method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
-				var attribute = method.GetCustomAttribute<Attribute>();
+				Attribute attribute = method.GetCustomAttribute<Attribute>();
 
 				switch (attribute)
 				{
@@ -132,9 +132,9 @@ namespace PluginAPI.Core
                 Log.Info($"Created missing plugin directory for \"{PluginName}\".");
             }
 
-            foreach (var field in _pluginType.GetFields())
+            foreach (FieldInfo field in _pluginType.GetFields())
 			{
-                var attribute = field.GetCustomAttribute<Attribute>();
+                Attribute attribute = field.GetCustomAttribute<Attribute>();
 
                 switch (attribute)
 				{
@@ -145,7 +145,7 @@ namespace PluginAPI.Core
                         if (!File.Exists(Path.Combine(_pluginDirectory.Plugins, _entryInfo.Name, "config.yml")))
                         {
 
-                            var defaultConfig = Activator.CreateInstance(_configType);
+                            object defaultConfig = Activator.CreateInstance(_configType);
 
                             _configInfo.SetValue(_plugin, defaultConfig);
 

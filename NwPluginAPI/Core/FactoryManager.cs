@@ -28,7 +28,7 @@
 		/// <param name="factory">The factory.</param>
         public static void RegisterPlayerFactory(object plugin, PlayerFactory factory)
         {
-            var type = plugin.GetType();
+            Type type = plugin.GetType();
 
             if (PlayerFactories.ContainsKey(type)) return;
 
@@ -49,9 +49,9 @@
 
         static void OnUpdate()
         {
-            foreach (var factory in PlayerFactories.Values)
+            foreach (PlayerFactory factory in PlayerFactories.Values)
             {
-                foreach(var entity in factory.Entities)
+                foreach(KeyValuePair<IGameComponent, IPlayer> entity in factory.Entities)
                 {
                     entity.Value.OnUpdate();
                 }
@@ -60,9 +60,9 @@
 
         static void OnLateUpdate()
         {
-            foreach (var factory in PlayerFactories.Values)
+            foreach (PlayerFactory factory in PlayerFactories.Values)
             {
-                foreach (var entity in factory.Entities)
+                foreach (KeyValuePair<IGameComponent, IPlayer> entity in factory.Entities)
                 {
                     try
                     {
@@ -78,9 +78,9 @@
 
         static void OnFixedUpdate()
         {
-            foreach (var factory in PlayerFactories.Values)
+            foreach (PlayerFactory factory in PlayerFactories.Values)
             {
-                foreach (var entity in factory.Entities)
+                foreach (KeyValuePair<IGameComponent, IPlayer> entity in factory.Entities)
                 {
                     try
                     {
@@ -96,7 +96,7 @@
 
         static void RemovePlayer(ReferenceHub obj)
         {
-            foreach(var factory in PlayerFactories.Values)
+            foreach(PlayerFactory factory in PlayerFactories.Values)
             {
                 if (factory.Entities.TryGetValue(obj, out IPlayer plr))
                 {
