@@ -1,10 +1,9 @@
-using PluginAPI.Core;
-
 namespace PluginAPI.Commands
 {
     using System;
     using System.Collections.Generic;
     using CommandSystem;
+    using PluginAPI.Core;
     using PluginAPI.Loader;
 
     [CommandHandler(typeof(PluginsCommand))]
