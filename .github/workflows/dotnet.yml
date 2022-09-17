@@ -36,4 +36,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration Release
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with: 
+        name: PluginAPI
+        path: NwPluginAPI/bin/Release/PluginAPI.dll
