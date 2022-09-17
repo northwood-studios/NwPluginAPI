@@ -115,9 +115,7 @@ namespace PluginAPI.Events
 			{
 				if (requiredParameters[x].IsInterface)
 				{
-					if (requiredParameters[x].IsAssignableFrom(parameters[x]))
-						continue;
-					else
+					if (!requiredParameters[x].IsAssignableFrom(parameters[x]))
 						return false;
 				}
 				else if (requiredParameters[x] != parameters[x])

@@ -1,5 +1,5 @@
 # Nw Plugin API
 
-Serverside plugin system made for game SCP: Secret Laboratory, developed by Northwood Studios.
+Official server-side plugin system for SCP: Secret Laboratory game.
 
 # API will be released in SCP:SL version 12.0.0
