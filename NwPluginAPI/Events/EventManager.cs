@@ -39,71 +39,71 @@ namespace PluginAPI.Events
 
 		private static Dictionary<Type, object> _handlerInstances = new Dictionary<Type, object>();
 
-		private static Dictionary<int, List<EventInfo>> _registeredEvents = new Dictionary<int, List<EventInfo>>();
+		private static Dictionary<ServerEventType, List<EventInfo>> _registeredEvents = new Dictionary<ServerEventType, List<EventInfo>>();
 
-		private static Dictionary<int, Type[]> _requiredParameters = new Dictionary<int, Type[]>()
+		private static Dictionary<ServerEventType, Type[]> _requiredParameters = new Dictionary<ServerEventType, Type[]>()
 		{
-			{ (int)ServerEventType.PlayerJoined, new Type[] { typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerLeft, new Type[] { typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerDeath, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(DamageHandlerBase) } },
-			{ (int)ServerEventType.LczDecontaminationStart, new Type[0] },
-			{ (int)ServerEventType.LczDecontaminationAnnouncement, new Type[] { typeof(int) } },
-			{ (int)ServerEventType.MapGenerated, new Type[0] },
-			{ (int)ServerEventType.GrenadeExploded, new Type[] { typeof(ItemPickupBase) } },
-			{ (int)ServerEventType.ItemSpawned, new Type[] { typeof(ItemType) } },
-			{ (int)ServerEventType.GeneratorActivated, new Type[] { typeof(Scp079Generator) } },
-			{ (int)ServerEventType.PlaceBlood, new Type[0] },
-			{ (int)ServerEventType.PlaceBulletHole, new Type[0] },
-			{ (int)ServerEventType.PlayerActivateGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
-			{ (int)ServerEventType.PlayerAimWeapon, new Type[] { typeof(IPlayer), typeof(Firearm), typeof(bool) } },
-			{ (int)ServerEventType.PlayerBanned, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string), typeof(long) } },
-			{ (int)ServerEventType.PlayerCancelUsingItem, new Type[] { typeof(IPlayer), typeof(UsableItem) } },
-			{ (int)ServerEventType.PlayerChangeItem, new Type[] { typeof(IPlayer), typeof(ushort), typeof(ushort) } },
-			{ (int)ServerEventType.PlayerChangeRadioRange, new Type[] { typeof(IPlayer), typeof(RadioItem), typeof(byte) } },
-			{ (int)ServerEventType.PlayerChangeSpectator, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerCloseGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
-			{ (int)ServerEventType.PlayerDamagedShootingTarget, new Type[] { typeof(IPlayer), typeof(ShootingTarget), typeof(DamageHandlerBase), typeof(float) } },
-			{ (int)ServerEventType.PlayerDamagedWindow, new Type[] { typeof(IPlayer), typeof(BreakableWindow), typeof(DamageHandlerBase), typeof(float) } },
-			{ (int)ServerEventType.PlayerDeactivatedGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
-			{ (int)ServerEventType.PlayerDropAmmo, new Type[] { typeof(IPlayer), typeof(ItemType), typeof(int) } },
-			{ (int)ServerEventType.PlayerDropItem, new Type[] { typeof(IPlayer), typeof(ItemBase) } },
-			{ (int)ServerEventType.PlayerDryfireWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
-			{ (int)ServerEventType.PlayerEscape, new Type[] { typeof(IPlayer), typeof(RoleTypeId) } },
-			{ (int)ServerEventType.PlayerHandcuff, new Type[] { typeof(IPlayer), typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerRemoveHandcuffs, new Type[] { typeof(IPlayer), typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerDamage, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(DamageHandlerBase) } },
-			{ (int)ServerEventType.PlayerInteractElevator, new Type[] { typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerInteractLocker, new Type[] { typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerInteractScp330, new Type[] { typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerInteractShootingTarget, new Type[] { typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerKicked, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string) } },
-			{ (int)ServerEventType.PlayerMakeNoise, new Type[] { typeof(IPlayer) } },
-			{ (int)ServerEventType.PlayerOpenGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
-			{ (int)ServerEventType.PlayerPickupAmmo, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
-			{ (int)ServerEventType.PlayerPickupArmor, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
-			{ (int)ServerEventType.PlayerPickupScp330, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
-			{ (int)ServerEventType.PlayerPreauth, new Type[] { typeof(string), typeof(string), typeof(long), typeof(CentralAuthPreauthFlags), typeof(string), typeof(byte[]) } },
-			{ (int)ServerEventType.PlayerReceiveEffect, new Type[] { typeof(IPlayer), typeof(PlayerEffect) } },
-			{ (int)ServerEventType.PlayerReloadWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
-			{ (int)ServerEventType.PlayerChangeRole, new Type[] { typeof(IPlayer), typeof(PlayerRoleBase), typeof(PlayerRoleBase), typeof(RoleChangeReason) } },
-			{ (int)ServerEventType.PlayerSearchPickup, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
-			{ (int)ServerEventType.PlayerSearchedPickup, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
-			{ (int)ServerEventType.PlayerShotWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
-			{ (int)ServerEventType.PlayerSpawn, new Type[] { typeof(IPlayer), typeof(RoleTypeId) } },
-			{ (int)ServerEventType.RagdollSpawn, new Type[] { typeof(IPlayer), typeof(IRagdollRole), typeof(DamageHandlerBase) } },
-			{ (int)ServerEventType.PlayerThrowItem, new Type[] { typeof(IPlayer), typeof(ItemBase) } },
-			{ (int)ServerEventType.PlayerToggleFlashlight, new Type[] { typeof(IPlayer), typeof(ItemBase), typeof(bool) } },
-			{ (int)ServerEventType.PlayerUnloadWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
-			{ (int)ServerEventType.PlayerUnlockGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
-			{ (int)ServerEventType.PlayerUsedItem, new Type[] { typeof(IPlayer), typeof(ItemBase) } },
-			{ (int)ServerEventType.PlayerUseHotkey, new Type[] { typeof(IPlayer), typeof(ActionName) } },
-			{ (int)ServerEventType.PlayerUseItem, new Type[] { typeof(IPlayer), typeof(UsableItem) } },
-			{ (int)ServerEventType.PlayerReport, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string) } },
-			{ (int)ServerEventType.PlayerCheaterReport, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string) } },
-            { (int)ServerEventType.RoundEnd, new Type[0] },
-            { (int)ServerEventType.RoundRestart, new Type[0] },
-			{ (int)ServerEventType.RoundStart, new Type[0] },
-            { (int)ServerEventType.WaitingForPlayers, new Type[0] },
+			{ ServerEventType.PlayerJoined, new Type[] { typeof(IPlayer) } },
+			{ ServerEventType.PlayerLeft, new Type[] { typeof(IPlayer) } },
+			{ ServerEventType.PlayerDeath, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(DamageHandlerBase) } },
+			{ ServerEventType.LczDecontaminationStart, new Type[0] },
+			{ ServerEventType.LczDecontaminationAnnouncement, new Type[] { typeof(int) } },
+			{ ServerEventType.MapGenerated, new Type[0] },
+			{ ServerEventType.GrenadeExploded, new Type[] { typeof(ItemPickupBase) } },
+			{ ServerEventType.ItemSpawned, new Type[] { typeof(ItemType) } },
+			{ ServerEventType.GeneratorActivated, new Type[] { typeof(Scp079Generator) } },
+			{ ServerEventType.PlaceBlood, new Type[0] },
+			{ ServerEventType.PlaceBulletHole, new Type[0] },
+			{ ServerEventType.PlayerActivateGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
+			{ ServerEventType.PlayerAimWeapon, new Type[] { typeof(IPlayer), typeof(Firearm), typeof(bool) } },
+			{ ServerEventType.PlayerBanned, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string), typeof(long) } },
+			{ ServerEventType.PlayerCancelUsingItem, new Type[] { typeof(IPlayer), typeof(UsableItem) } },
+			{ ServerEventType.PlayerChangeItem, new Type[] { typeof(IPlayer), typeof(ushort), typeof(ushort) } },
+			{ ServerEventType.PlayerChangeRadioRange, new Type[] { typeof(IPlayer), typeof(RadioItem), typeof(byte) } },
+			{ ServerEventType.PlayerChangeSpectator, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(IPlayer) } },
+			{ ServerEventType.PlayerCloseGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
+			{ ServerEventType.PlayerDamagedShootingTarget, new Type[] { typeof(IPlayer), typeof(ShootingTarget), typeof(DamageHandlerBase), typeof(float) } },
+			{ ServerEventType.PlayerDamagedWindow, new Type[] { typeof(IPlayer), typeof(BreakableWindow), typeof(DamageHandlerBase), typeof(float) } },
+			{ ServerEventType.PlayerDeactivatedGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
+			{ ServerEventType.PlayerDropAmmo, new Type[] { typeof(IPlayer), typeof(ItemType), typeof(int) } },
+			{ ServerEventType.PlayerDropItem, new Type[] { typeof(IPlayer), typeof(ItemBase) } },
+			{ ServerEventType.PlayerDryfireWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
+			{ ServerEventType.PlayerEscape, new Type[] { typeof(IPlayer), typeof(RoleTypeId) } },
+			{ ServerEventType.PlayerHandcuff, new Type[] { typeof(IPlayer), typeof(IPlayer) } },
+			{ ServerEventType.PlayerRemoveHandcuffs, new Type[] { typeof(IPlayer), typeof(IPlayer) } },
+			{ ServerEventType.PlayerDamage, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(DamageHandlerBase) } },
+			{ ServerEventType.PlayerInteractElevator, new Type[] { typeof(IPlayer) } },
+			{ ServerEventType.PlayerInteractLocker, new Type[] { typeof(IPlayer) } },
+			{ ServerEventType.PlayerInteractScp330, new Type[] { typeof(IPlayer) } },
+			{ ServerEventType.PlayerInteractShootingTarget, new Type[] { typeof(IPlayer) } },
+			{ ServerEventType.PlayerKicked, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string) } },
+			{ ServerEventType.PlayerMakeNoise, new Type[] { typeof(IPlayer) } },
+			{ ServerEventType.PlayerOpenGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
+			{ ServerEventType.PlayerPickupAmmo, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
+			{ ServerEventType.PlayerPickupArmor, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
+			{ ServerEventType.PlayerPickupScp330, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
+			{ ServerEventType.PlayerPreauth, new Type[] { typeof(string), typeof(string), typeof(long), typeof(CentralAuthPreauthFlags), typeof(string), typeof(byte[]) } },
+			{ ServerEventType.PlayerReceiveEffect, new Type[] { typeof(IPlayer), typeof(PlayerEffect) } },
+			{ ServerEventType.PlayerReloadWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
+			{ ServerEventType.PlayerChangeRole, new Type[] { typeof(IPlayer), typeof(PlayerRoleBase), typeof(PlayerRoleBase), typeof(RoleChangeReason) } },
+			{ ServerEventType.PlayerSearchPickup, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
+			{ ServerEventType.PlayerSearchedPickup, new Type[] { typeof(IPlayer), typeof(ItemPickupBase) } },
+			{ ServerEventType.PlayerShotWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
+			{ ServerEventType.PlayerSpawn, new Type[] { typeof(IPlayer), typeof(RoleTypeId) } },
+			{ ServerEventType.RagdollSpawn, new Type[] { typeof(IPlayer), typeof(IRagdollRole), typeof(DamageHandlerBase) } },
+			{ ServerEventType.PlayerThrowItem, new Type[] { typeof(IPlayer), typeof(ItemBase) } },
+			{ ServerEventType.PlayerToggleFlashlight, new Type[] { typeof(IPlayer), typeof(ItemBase), typeof(bool) } },
+			{ ServerEventType.PlayerUnloadWeapon, new Type[] { typeof(IPlayer), typeof(Firearm) } },
+			{ ServerEventType.PlayerUnlockGenerator, new Type[] { typeof(IPlayer), typeof(Scp079Generator) } },
+			{ ServerEventType.PlayerUsedItem, new Type[] { typeof(IPlayer), typeof(ItemBase) } },
+			{ ServerEventType.PlayerUseHotkey, new Type[] { typeof(IPlayer), typeof(ActionName) } },
+			{ ServerEventType.PlayerUseItem, new Type[] { typeof(IPlayer), typeof(UsableItem) } },
+			{ ServerEventType.PlayerReport, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string) } },
+			{ ServerEventType.PlayerCheaterReport, new Type[] { typeof(IPlayer), typeof(IPlayer), typeof(string) } },
+            { ServerEventType.RoundEnd, new Type[0] },
+            { ServerEventType.RoundRestart, new Type[0] },
+			{ ServerEventType.RoundStart, new Type[0] },
+            { ServerEventType.WaitingForPlayers, new Type[0] },
         };
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
@@ -172,21 +172,19 @@ namespace PluginAPI.Events
 
                         var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
 
-						if (!ValidateEvent(eventParameters, _requiredParameters[(int)pluginEvent.EventType]))
+						if (!ValidateEvent(eventParameters, _requiredParameters[pluginEvent.EventType]))
 						{
-                            Log.Error($"Event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", _requiredParameters[(int)pluginEvent.EventType].Select(p => p.Name)))}.");
+                            Log.Error($"Event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", _requiredParameters[pluginEvent.EventType].Select(p => p.Name)))}.");
                             continue;
 						}
 
-						int eventType = (int)pluginEvent.EventType;
-
-                        if (!_registeredEvents.ContainsKey(eventType))
-							_registeredEvents.Add(eventType, new List<EventInfo>());
+                        if (!_registeredEvents.ContainsKey(pluginEvent.EventType))
+							_registeredEvents.Add(pluginEvent.EventType, new List<EventInfo>());
 
                         switch (pluginEvent.EventType)
                         {
 							default:
-								_registeredEvents[eventType].Add(new EventInfo()
+								_registeredEvents[pluginEvent.EventType].Add(new EventInfo()
 								{
 									Plugin = plugin,
 									Target = handle,
@@ -218,14 +216,14 @@ namespace PluginAPI.Events
 		/// <returns>If false event is canceled.</returns>
         public static bool ExecuteEvent(ServerEventType type, params object[] args)
 		{
-			if (!_registeredEvents.TryGetValue((int)type, out List<EventInfo> registeredEvents))
+			if (!_registeredEvents.TryGetValue(type, out List<EventInfo> registeredEvents))
                 return true;
 
             List<object> constructEventParameters = new List<object>();
 			List<IndexInfo> indexesToRegenerate = new List<IndexInfo>();
-			for(int x = 0; x < _requiredParameters[(int)type].Length; x++)
+			for(int x = 0; x < _requiredParameters[type].Length; x++)
 			{
-				var paramType = _requiredParameters[(int)type][x];
+				var paramType = _requiredParameters[type][x];
 
                 if (args[x] == null)
 				{
