@@ -252,10 +252,10 @@ namespace PluginAPI.Events
 				{
 					result = ev.Method.Invoke(ev.Target, constructEventParameters.ToArray());
 				}
-				catch(Exception ex)
+				catch (Exception ex)
 				{
 					Log.Error($"Failed executing event &6{ev.Method.Name}&r (&6{type}&r) in plugin &6{ev.Plugin.FullName}&r\n{ex}");
-					return true;
+					continue;
 				}
 
 				switch (result)
