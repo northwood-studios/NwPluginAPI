@@ -2,9 +2,9 @@
 {
 	using System;
 	using System.Collections.Generic;
-	using PluginAPI.Core.Factories;
-	using PluginAPI.Core.Interfaces;
-	using PluginAPI.Events;
+	using Factories;
+	using Interfaces;
+	using Events;
 
 	/// <summary>
 	/// Factory manager for plugin system.
@@ -98,19 +98,19 @@
         {
             foreach(var factory in PlayerFactories.Values)
             {
-                if (factory.Entities.TryGetValue(obj, out IPlayer plr))
-                {
-                    try
-                    {
-						PlayerSharedStorage.DestroyStorage(plr);
-                        plr.OnDestroy();
-                    }
-                    catch (Exception ex)
-                    {
-                        Log.Error($"Failed executing OnDestroy in {plr.GetType().Name}, error\n {ex}");
-                    }
-                    factory.Entities.Remove(obj);
-                }
+	            if (!factory.Entities.TryGetValue(obj, out IPlayer plr))
+		            continue;
+
+	            try
+	            {
+		            PlayerSharedStorage.DestroyStorage(plr);
+		            plr.OnDestroy();
+	            }
+	            catch (Exception ex)
+	            {
+		            Log.Error($"Failed executing OnDestroy in {plr.GetType().Name}, error\n {ex}");
+	            }
+	            factory.Entities.Remove(obj);
             }
         }
     }

@@ -2,7 +2,7 @@ namespace PluginAPI.Core
 {
 	using System.Collections.Generic;
 	using Mirror;
-	using PluginAPI.Core.Interfaces;
+	using Interfaces;
 	using RoundRestarting;
 	using static BanHandler;
 	using static Broadcast;
@@ -94,7 +94,7 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of banned player.</param>
 		/// <returns>If ban is successful.</returns>
-		public static bool BanPlayerByUserId(string userId, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, Server.Instance, reason, duration, bannedPlayerNickname);
+		public static bool BanPlayerByUserId(string userId, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, Instance, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
 		/// Bans player from server.
@@ -109,7 +109,7 @@ namespace PluginAPI.Core
 		{
 			if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(reason)) return false;
 
-			return BanHandler.IssueBan(new BanDetails()
+			return IssueBan(new BanDetails()
 			{
 				Id = userId,
 				IssuanceTime = TimeBehaviour.CurrentTimestamp(),
@@ -128,7 +128,7 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of banned player.</param>
 		/// <returns>If ban is successful.</returns>
-		public static bool BanPlayerByIpAddress(string ipAddress, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, Server.Instance, reason, duration, bannedPlayerNickname);
+		public static bool BanPlayerByIpAddress(string ipAddress, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, Instance, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
 		/// Bans player from server.
@@ -143,7 +143,7 @@ namespace PluginAPI.Core
 		{
 			if (string.IsNullOrEmpty(ipAddress) || string.IsNullOrEmpty(reason)) return false;
 
-			return BanHandler.IssueBan(new BanDetails()
+			return IssueBan(new BanDetails()
 			{
 				Id = ipAddress,
 				IssuanceTime = TimeBehaviour.CurrentTimestamp(),
@@ -165,7 +165,7 @@ namespace PluginAPI.Core
 
 			if (!IsPlayerBanned(userId)) return false;
 
-			BanHandler.RemoveBan(userId, BanType.UserId);
+			RemoveBan(userId, BanType.UserId);
 			return true;
 		}
 
@@ -180,7 +180,7 @@ namespace PluginAPI.Core
 
 			if (!IsPlayerBanned(ipAddress)) return false;
 
-			BanHandler.RemoveBan(ipAddress, BanType.IP);
+			RemoveBan(ipAddress, BanType.IP);
 			return true;
 		}
 
@@ -193,7 +193,7 @@ namespace PluginAPI.Core
 		{
 			if (string.IsNullOrEmpty(value)) return false;
 
-			return (value.Contains("@") ? BanHandler.GetBan(value, BanType.UserId) : BanHandler.GetBan(value, BanType.IP)) != null;
+			return (value.Contains("@") ? GetBan(value, BanType.UserId) : GetBan(value, BanType.IP)) != null;
 		}
 
 		/// <summary>
@@ -202,8 +202,8 @@ namespace PluginAPI.Core
 		/// <returns>List of all banned players.</returns>
 		public static BanDetails[] GetAllPlayersBanned()
 		{
-			List<BanDetails> bans = BanHandler.GetBans(BanType.UserId);
-			bans.AddRange(BanHandler.GetBans(BanType.IP));
+			List<BanDetails> bans = GetBans(BanType.UserId);
+			bans.AddRange(GetBans(BanType.IP));
 			return bans.ToArray();
 		}
 
@@ -212,7 +212,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="banType">The type of ban.</param>
 		/// <returns>List of specified ban types.</returns>
-		public static BanDetails[] GetAllPlayersBanned(BanType banType) => BanHandler.GetBans(banType).ToArray();
+		public static BanDetails[] GetAllPlayersBanned(BanType banType) => GetBans(banType).ToArray();
 		#endregion
 
 		/// <summary>
@@ -257,16 +257,16 @@ namespace PluginAPI.Core
 		/// <param name="duration">The broadcast duration.</param>
 		/// <param name="type">The broadcast type.</param>
 		/// <param name="shouldClearPrevious">Clears previous displayed broadcast.</param>
-		public static new void SendBroadcast(string message, ushort duration, BroadcastFlags type = BroadcastFlags.Normal, bool shouldClearPrevious = false)
+		public new static void SendBroadcast(string message, ushort duration, BroadcastFlags type = BroadcastFlags.Normal, bool shouldClearPrevious = false)
 		{
 			if (shouldClearPrevious) ClearBroadcasts();
 
-			Server.Instance.GetComponent<Broadcast>().RpcAddElement(message, duration, type);
+			Instance.GetComponent<Broadcast>().RpcAddElement(message, duration, type);
 		}
 
 		/// <summary>
 		/// Clears displayed broadcast.
 		/// </summary>
-		public static new void ClearBroadcasts() => Server.Instance.GetComponent<Broadcast>().RpcClearElements();
+		public new static void ClearBroadcasts() => Instance.GetComponent<Broadcast>().RpcClearElements();
 	}
 }

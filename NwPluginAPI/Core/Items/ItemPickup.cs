@@ -4,45 +4,44 @@ namespace PluginAPI.Core.Items
 	using InventorySystem.Items;
 	using InventorySystem.Items.Pickups;
 	using Mirror;
-	using PluginAPI.Core;
+	using Core;
 	using System.Collections.Generic;
 	using UnityEngine;
 
 	public class ItemPickup
 	{
-		internal static readonly Dictionary<ushort, ItemPickup> CachedItems = new Dictionary<ushort, ItemPickup>();
-		public readonly ItemPickupBase OrginalObject;
+		private static readonly Dictionary<ushort, ItemPickup> CachedItems = new Dictionary<ushort, ItemPickup>();
+		
+		public readonly ItemPickupBase OriginalObject;
 
-		public ItemType Type => OrginalObject.Info.ItemId;
-		public Player LastOwner => OrginalObject.PreviousOwner.Hub != null ? Player.Get<Player>(OrginalObject.PreviousOwner.Hub) : null;
-		public ushort Serial => OrginalObject.Info.Serial;
+		public ItemType Type => OriginalObject.Info.ItemId;
+		public Player LastOwner => OriginalObject.PreviousOwner.Hub != null ? Player.Get<Player>(OriginalObject.PreviousOwner.Hub) : null;
+		public ushort Serial => OriginalObject.Info.Serial;
 		public float Weight
 		{
-			get => OrginalObject.Info.Weight;
-			set => OrginalObject.Info.Weight = value;
+			get => OriginalObject.Info.Weight;
+			set => OriginalObject.Info.Weight = value;
 		}
 		public bool IsLocked
 		{
-			get => OrginalObject.Info.Locked;
-			set => OrginalObject.Info.Locked = value;
+			get => OriginalObject.Info.Locked;
+			set => OriginalObject.Info.Locked = value;
 		}
 
-		public Rigidbody Rigibody => OrginalObject.RigidBody;
-		public Transform Transform => OrginalObject.transform;
-		public GameObject GameObject => OrginalObject.gameObject;
+		public Rigidbody Rigidbody => OriginalObject.RigidBody;
+		public Transform Transform => OriginalObject.transform;
+		public GameObject GameObject => OriginalObject.gameObject;
 		public Vector3 Position => Transform.position;
 		public Quaternion Rotation => Transform.rotation;
 
-		internal static ItemPickup GetOrAdd(ItemPickupBase item)
+		private static ItemPickup GetOrAdd(ItemPickupBase item)
 		{
 			if (CachedItems.TryGetValue(item.Info.Serial, out ItemPickup it))
 				return it;
-			else
-			{
-				var newItem = new ItemPickup(item);
-				CachedItems.Add(item.Info.Serial, newItem);
-				return newItem;
-			}
+			
+			var newItem = new ItemPickup(item);
+			CachedItems.Add(item.Info.Serial, newItem);
+			return newItem;
 		}
 
 		internal static bool Remove(ItemPickupBase item)
@@ -69,18 +68,18 @@ namespace PluginAPI.Core.Items
 
 		public void Spawn()
 		{
-			OrginalObject.InfoReceived(default, OrginalObject.Info);
+			OriginalObject.InfoReceived(default, OriginalObject.Info);
 			NetworkServer.Spawn(GameObject);
 		}
 
 		public void Destroy()
 		{
-			OrginalObject.DestroySelf();
+			OriginalObject.DestroySelf();
 		}
 
 		internal ItemPickup(ItemPickupBase item)
 		{
-			OrginalObject = item;
+			OriginalObject = item;
 			Debug.Log($"Create new PICKUP " + Type);
 		}
 	}

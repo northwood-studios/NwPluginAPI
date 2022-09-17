@@ -7,10 +7,10 @@ namespace PluginAPI.Enums
 	/// Command types.
 	/// </summary>
 	[Flags]
-	public enum CommandType
+	public enum CommandType : byte
 	{
-		Console,
-		GameConsole,
-		RemoteAdmin
+		Console = 1,
+		GameConsole = 1 << 1,
+		RemoteAdmin = 1 << 2
 	}
 }

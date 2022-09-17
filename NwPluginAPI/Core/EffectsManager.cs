@@ -7,7 +7,7 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class EffectsManager
 	{
-		private Player _player;
+		private readonly Player _player;
 
 		/// <summary>
 		/// Constructor for effects manager.

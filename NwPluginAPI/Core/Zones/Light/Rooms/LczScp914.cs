@@ -2,9 +2,9 @@ namespace PluginAPI.Core.Zones.Light.Rooms
 {
 	using Interactables.Interobjects;
 	using MapGeneration;
-	using PluginAPI.Core;
-	using PluginAPI.Core.Zones;
-	using PluginAPI.Core.Zones.Light;
+	using Core;
+	using Zones;
+	using Light;
 	using Scp914;
 	using UnityEngine;
 

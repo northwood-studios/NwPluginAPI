@@ -5,10 +5,10 @@ namespace PluginAPI.Loader
     using System.IO;
     using System.Linq;
     using System.Reflection;
-    using PluginAPI.Core;
-    using PluginAPI.Core.Extensions;
-    using PluginAPI.Helpers;
-    using PluginAPI.Loader.Features;
+    using Core;
+    using Core.Extensions;
+    using Helpers;
+    using Features;
 
 	/// <summary>
 	/// Manages initialization of plugin system and loading of plugins.

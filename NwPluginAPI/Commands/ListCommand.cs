@@ -3,7 +3,7 @@ namespace PluginAPI.Commands
     using System;
     using System.Collections.Generic;
     using CommandSystem;
-    using PluginAPI.Loader;
+    using Loader;
 
     [CommandHandler(typeof(PluginsCommand))]
 	public class ListCommand : ICommand

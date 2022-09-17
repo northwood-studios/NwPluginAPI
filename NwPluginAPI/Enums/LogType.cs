@@ -3,12 +3,12 @@ namespace PluginAPI.Enums
 	/// <summary>
 	/// Log types.
 	/// </summary>
-    public enum LogType
+    public enum LogType : byte
 	{
-		Info,
-		Warning,
-		Error,
-		Debug,
-		Raw,
+		Info = 0,
+		Warning = 1,
+		Error = 2,
+		Debug = 3,
+		Raw = 4
 	}
 }

@@ -2,50 +2,50 @@ namespace PluginAPI.Core.Doors
 {
 	using Interactables.Interobjects;
 	using Interactables.Interobjects.DoorUtils;
-	using PluginAPI.Core;
-	using PluginAPI.Core.Zones;
+	using Core;
+	using Zones;
 	using System.Collections.Generic;
 	using System.Linq;
 
 	public class FacilityBreakableDoor : FacilityDoor
 	{
-		public static new List<FacilityBreakableDoor> List => Facility.Doors.Where(x => x is FacilityBreakableDoor).Cast<FacilityBreakableDoor>().ToList();
-		public static new int Count => List.Count;
+		public new static List<FacilityBreakableDoor> List => Facility.Doors.Where(x => x is FacilityBreakableDoor).Cast<FacilityBreakableDoor>().ToList();
+		public new static int Count => List.Count;
 
-		public new readonly BreakableDoor OrginalObject;
+		public new readonly BreakableDoor OriginalObject;
 
 		public float Health
 		{
-			get => OrginalObject.RemainingHealth;
-			set => OrginalObject.RemainingHealth = value;
+			get => OriginalObject.RemainingHealth;
+			set => OriginalObject.RemainingHealth = value;
 		}
 
 		public float MaxHealth
 		{
-			get => OrginalObject.MaxHealth;
-			set => OrginalObject.MaxHealth = value;
+			get => OriginalObject.MaxHealth;
+			set => OriginalObject.MaxHealth = value;
 		}
 		
 		public DoorDamageType IgnoredDamageSources
 		{
-			get => OrginalObject.IgnoredDamageSources;
-			set => OrginalObject.IgnoredDamageSources = value;
+			get => OriginalObject.IgnoredDamageSources;
+			set => OriginalObject.IgnoredDamageSources = value;
 		}
 
-		public bool IsDestroyed => OrginalObject.IsDestroyed;
+		public bool IsDestroyed => OriginalObject.IsDestroyed;
 
 		public void Destroy()
 		{
-			if (!IsDestroyed)
-			{
-				OrginalObject.IsDestroyed = true;
-				DoorEvents.TriggerAction(OrginalObject, DoorAction.Destroyed, null);
-			}
+			if (IsDestroyed)
+				return;
+
+			OriginalObject.IsDestroyed = true;
+			DoorEvents.TriggerAction(OriginalObject, DoorAction.Destroyed, null);
 		}
 
 		public FacilityBreakableDoor(FacilityRoom room, BreakableDoor door) : base(room, door)
 		{
-			OrginalObject = door;
+			OriginalObject = door;
 		}
 	}
 }

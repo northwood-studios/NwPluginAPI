@@ -1,11 +1,11 @@
 namespace PluginAPI.Core.Zones.Light
 {
 	using MapGeneration;
-	using PluginAPI.Core.Zones;
+	using Zones;
 
 	public class LczRoom : FacilityRoom
 	{
-		public readonly new LightZone Zone;
+		public new readonly LightZone Zone;
 
 		/// <summary>
 		/// Constructor for light zone room.

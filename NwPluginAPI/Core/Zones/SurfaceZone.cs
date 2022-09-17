@@ -1,7 +1,7 @@
 namespace PluginAPI.Core.Zones
 {
 	using MapGeneration;
-	using PluginAPI.Core.Doors;
+	using Doors;
 	using System.Collections.Generic;
 	using System.Linq;
 

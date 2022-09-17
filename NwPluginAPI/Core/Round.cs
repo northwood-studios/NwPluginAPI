@@ -37,7 +37,7 @@ namespace PluginAPI.Core
 		/// <param name="restartAction">The restart action.</param>
 		public static void Restart(bool fastRestart = true, bool overrideRestartAction = false, NextRoundAction restartAction = NextRoundAction.Restart)
 		{
-			if (overrideRestartAction) ServerStatic.StopNextRound = restartAction;
+			if (overrideRestartAction) StopNextRound = restartAction;
 
 			bool oldValue = CustomNetworkManager.EnableFastRestart;
 
@@ -64,13 +64,12 @@ namespace PluginAPI.Core
 		{
 			if (RoundSummary.singleton.KeepRoundOnOne && Player.Count < 2) return false;
 
-			if (IsRoundStarted && !IsLocked)
-			{
-				RoundSummary.singleton.ForceEnd();
-				return true;
-			}
+			if (!IsRoundStarted || IsLocked)
+				return false;
 
-			return false;
+			RoundSummary.singleton.ForceEnd();
+			return true;
+
 		}
 	}
 }

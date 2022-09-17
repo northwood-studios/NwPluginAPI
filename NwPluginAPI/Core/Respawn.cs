@@ -37,7 +37,7 @@ namespace PluginAPI.Core
 		public static void Spawn(SpawnableTeamType team, bool playEffects = false)
 		{
 			RespawnManager.Singleton.ForceSpawnTeam(team);
-			if (playEffects) RespawnEffectsController.ExecuteAllEffects(EffectType.Selection, team);
+			if (playEffects) ExecuteAllEffects(EffectType.Selection, team);
 		}
 	}
 }

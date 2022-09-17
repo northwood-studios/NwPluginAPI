@@ -3,12 +3,12 @@ namespace PluginAPI.Enums
 	/// <summary>
 	/// Load priorities for plugins.
 	/// </summary>
-	public enum LoadPriority
+	public enum LoadPriority : byte
 	{
-		Lowest,
-		Low,
-		Medium,
-		High,
-		Highest,
+		Lowest = 0,
+		Low = 1,
+		Medium = 2,
+		High = 3,
+		Highest = 4
 	}
 }

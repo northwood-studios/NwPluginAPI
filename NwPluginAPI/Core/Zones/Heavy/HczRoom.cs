@@ -1,12 +1,10 @@
 namespace PluginAPI.Core.Zones.Heavy
 {
 	using MapGeneration;
-	using PluginAPI.Core.Zones;
+	using Zones;
 
 	public class HczRoom : FacilityRoom
 	{
-		public readonly new HeavyZone Zone;
-
 		public Generator Generator { get; internal set; }
 
 		/// <summary>

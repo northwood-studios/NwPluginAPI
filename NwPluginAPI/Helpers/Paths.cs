@@ -2,8 +2,8 @@ namespace PluginAPI.Helpers
 {
 	using System;
 	using System.IO;
-	using PluginAPI.Core;
-	using PluginAPI.Loader.Features;
+	using Core;
+	using Loader.Features;
 
 	/// <summary>
 	/// Contains easy access to all important folder paths.

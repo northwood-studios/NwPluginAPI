@@ -1,13 +1,13 @@
 namespace PluginAPI.Core.Zones.Pocket
 {
 	using MapGeneration;
-	using PluginAPI.Core.Zones;
+	using Zones;
 	using System.Collections.Generic;
 	using System.Linq;
 
 	public class PocketDimension : FacilityRoom
 	{
-		public readonly new UnknownZone Zone;
+		public new readonly UnknownZone Zone;
 
 		internal PocketDimensionGenerator _pocketDim;
 		internal List<PocketDimensionTeleport> _teleports = new List<PocketDimensionTeleport>();

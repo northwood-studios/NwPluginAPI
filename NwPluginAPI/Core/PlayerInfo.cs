@@ -5,7 +5,7 @@
 	/// </summary>
 	public class PlayerInfo
 	{
-		private Player _player;
+		private readonly Player _player;
 
 		/// <summary>
 		/// Constructor for player info.
@@ -22,9 +22,9 @@
 			set
 			{
 				if (value)
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo & ~PlayerInfoArea.Nickname;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo &= ~PlayerInfoArea.Nickname;
 				else
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo | PlayerInfoArea.Nickname;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo |= PlayerInfoArea.Nickname;
 			}
 		}
 
@@ -37,9 +37,9 @@
 			set
 			{
 				if (value)
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo & ~PlayerInfoArea.Badge;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo &= ~PlayerInfoArea.Badge;
 				else
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo | PlayerInfoArea.Badge;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo |= PlayerInfoArea.Badge;
 			}
 		}
 
@@ -52,9 +52,9 @@
 			set
 			{
 				if (value)
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo & ~PlayerInfoArea.CustomInfo;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo &= ~PlayerInfoArea.CustomInfo;
 				else
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo | PlayerInfoArea.CustomInfo;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo |= PlayerInfoArea.CustomInfo;
 			}
 		}
 
@@ -67,9 +67,9 @@
 			set
 			{
 				if (value)
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo & ~PlayerInfoArea.PowerStatus;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo &= ~PlayerInfoArea.PowerStatus;
 				else
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo | PlayerInfoArea.PowerStatus;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo |= PlayerInfoArea.PowerStatus;
 			}
 		}
 
@@ -82,9 +82,9 @@
 			set
 			{
 				if (value)
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo & ~PlayerInfoArea.Role;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo &= ~PlayerInfoArea.Role;
 				else
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo | PlayerInfoArea.Role;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo |= PlayerInfoArea.Role;
 			}
 		}
 
@@ -97,9 +97,9 @@
 			set
 			{
 				if (value)
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo & ~PlayerInfoArea.UnitName;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo &= ~PlayerInfoArea.UnitName;
 				else
-					_player.ReferenceHub.nicknameSync.ShownPlayerInfo = _player.ReferenceHub.nicknameSync.ShownPlayerInfo | PlayerInfoArea.UnitName;
+					_player.ReferenceHub.nicknameSync.ShownPlayerInfo |= PlayerInfoArea.UnitName;
 			}
 		}
 	}
