@@ -268,7 +268,7 @@ namespace PluginAPI.Events
 				switch (result)
 				{
 					case bool b:
-						if (b) isCanceled = true;
+						if (!b) isCanceled = true;
                         break;
 				}
 			}
