@@ -10,7 +10,7 @@ namespace PluginAPI.Enums
 	using InventorySystem.Items.Firearms;
 	using InventorySystem.Items.Pickups;
 
-	public enum ServerEventType
+	public enum ServerEventType : int
 	{
         /// <summary>
         /// Event executed when player is verified.
@@ -18,7 +18,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerJoined,
+        PlayerJoined = 0,
 
         /// <summary>
         /// Event executed when player object is destroyed.
@@ -26,7 +26,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerLeft,
+        PlayerLeft = 1,
 
         /// <summary>
         /// Event executed when player dies.
@@ -34,12 +34,12 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
         /// </remarks>
-        PlayerDeath,
+        PlayerDeath = 2,
 
         /// <summary>
         /// Event executed when decontamination in LCZ starts.
         /// </summary>
-        LczDecontaminationStart,
+        LczDecontaminationStart = 3,
 
         /// <summary>
         /// Event executed when information about decontamination is annoucement.
@@ -47,12 +47,12 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="int"/> announcement type.
         /// </remarks>
-        LczDecontaminationAnnouncement,
+        LczDecontaminationAnnouncement = 4,
 
         /// <summary>
         /// Event executed when map generates.
         /// </summary>
-        MapGenerated,
+        MapGenerated = 5,
 
         /// <summary>
         /// Event executed when grenade explodes.
@@ -60,7 +60,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="ItemPickupBase"/> pickup.
         /// </remarks>
-        GrenadeExploded,
+        GrenadeExploded = 6,
 
         /// <summary>
         /// Event executed when item is spawned while generation of map.
@@ -68,7 +68,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="ItemType"/> item.
         /// </remarks>
-        ItemSpawned,
+        ItemSpawned = 7,
 
         /// <summary>
         /// Event executed when generator activates.
@@ -76,17 +76,17 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="Generator"/> generator.
         /// </remarks>
-        GeneratorActivated,
+        GeneratorActivated = 8,
 
         /// <summary>
         /// Event executed when blood is placed.
         /// </summary>
-        PlaceBlood,
+        PlaceBlood = 9,
 
         /// <summary>
         /// Event executed when bullet hole is placed.
         /// </summary>
-        PlaceBulletHole,
+        PlaceBulletHole = 10,
 
         /// <summary>
         /// Event executed when player activated generator.
@@ -94,7 +94,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Generator"/> generator.
         /// </remarks>
-        PlayerActivateGenerator,
+        PlayerActivateGenerator = 11,
 
         /// <summary>
         /// Event executed when player aims weapon
@@ -102,7 +102,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> weapon, <see cref="bool"/> isAiming.
         /// </remarks>
-        PlayerAimWeapon,
+        PlayerAimWeapon = 12,
 
         /// <summary>
         /// Event executed when player gets banned.
@@ -110,7 +110,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> issuer, ref <see cref="string"/> reason, ref <see cref="long"/> duration.
         /// </remarks>
-        PlayerBanned,
+        PlayerBanned = 13,
 
         /// <summary>
         /// Event executed when player cancels using item.
@@ -118,7 +118,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="UsableItem"/> item.
         /// </remarks>
-        PlayerCancelUsingItem,
+        PlayerCancelUsingItem = 14,
 
         /// <summary>
         /// Event executed when player changes current item.
@@ -126,7 +126,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ushort"/> oldItem, <see cref="ushort"/> newItem.
         /// </remarks>
-        PlayerChangeItem,
+        PlayerChangeItem = 15,
 
         /// <summary>
         /// Event executed when player changes range in radio.
@@ -134,7 +134,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="byte"> range.
         /// </remarks>
-        PlayerChangeRadioRange,
+        PlayerChangeRadioRange = 16,
 
         /// <summary>
         /// Event executed when player changes spectating player.
@@ -142,7 +142,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> oldTarget, <see cref="IPlayer"/> newTarget.
         /// </remarks>
-        PlayerChangeSpectator,
+        PlayerChangeSpectator = 17,
 
         /// <summary>
         /// Event executed when player closes generator.
@@ -150,7 +150,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Generator"/> generator.
         /// </remarks>
-        PlayerCloseGenerator,
+        PlayerCloseGenerator = 18,
 
         /// <summary>
         /// Event executed when player damages shooting target.
@@ -158,7 +158,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ShootingTarget"/> target, <see cref="DamageHandlerBase"/> damageHandler, <see cref="float"/> damageAmount.
         /// </remarks>
-        PlayerDamagedShootingTarget,
+        PlayerDamagedShootingTarget = 19,
 
         /// <summary>
         /// Event executed when player damages window.
@@ -166,7 +166,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="BreakableWindow"/> window, <see cref="DamageHandlerBase"/> damageHandler, <see cref="float"/> damageAmount.
         /// </remarks>
-        PlayerDamagedWindow,
+        PlayerDamagedWindow = 20,
 
         /// <summary>
         /// Event executed when player deactivates generator.
@@ -174,7 +174,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Generator"/> generator.
         /// </remarks>
-        PlayerDeactivatedGenerator,
+        PlayerDeactivatedGenerator = 21,
 
         /// <summary>
         /// Event executed when player drops ammo.
@@ -182,7 +182,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ItemType"/> type. <see cref="int"/> amount.
         /// </remarks>
-        PlayerDropAmmo,
+        PlayerDropAmmo = 22,
 
         /// <summary>
         /// Event executed when player drops item.
@@ -190,7 +190,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
         /// </remarks>
-        PlayerDropItem,
+        PlayerDropItem = 23,
 
         /// <summary>
         /// Event executed when player dryfires weapon.
@@ -198,7 +198,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> weapon.
         /// </remarks>
-        PlayerDryfireWeapon,
+        PlayerDryfireWeapon = 24,
 
         /// <summary>
         /// Event executed when player escapes.
@@ -206,7 +206,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="RoleTypeId"/> newClass.
         /// </remarks>
-        PlayerEscape,
+        PlayerEscape = 25,
 
         /// <summary>
         /// Event executed when player handcuffs other player.
@@ -214,7 +214,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target.
         /// </remarks>
-        PlayerHandcuff,
+        PlayerHandcuff = 26,
 
         /// <summary>
         /// Event executed when player removes handcuffs from other player.
@@ -222,7 +222,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target.
         /// </remarks>
-        PlayerRemoveHandcuffs,
+        PlayerRemoveHandcuffs = 27,
 
         /// <summary>
         /// Event executed when player damages someone.
@@ -230,7 +230,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="DamageHandlerBase"/> damageHandler.
         /// </remarks>
-        PlayerDamage,
+        PlayerDamage = 28,
 
         /// <summary>
         /// Event executed when player interacts with elevator.
@@ -238,7 +238,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerInteractElevator,
+        PlayerInteractElevator = 29,
 
         /// <summary>
         /// Event executed when player interacts with locker.
@@ -246,7 +246,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerInteractLocker,
+        PlayerInteractLocker = 30,
 
         /// <summary>
         /// Event executed when player interacts with SCP330.
@@ -254,7 +254,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerInteractScp330,
+        PlayerInteractScp330 = 31,
 
         /// <summary>
         /// Event executed when player interacts with shooting target.
@@ -262,7 +262,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerInteractShootingTarget,
+        PlayerInteractShootingTarget = 32,
 
         /// <summary>
         /// Event executed when player gets kicked from server.
@@ -270,7 +270,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerKicked,
+        PlayerKicked = 33,
 
         /// <summary>
         /// Event executed when player makes noise.
@@ -278,7 +278,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
         /// </remarks>
-        PlayerMakeNoise,
+        PlayerMakeNoise = 34,
 
         /// <summary>
         /// Event executed when player opens generator.
@@ -286,7 +286,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Generator"/> generator.
         /// </remarks>
-        PlayerOpenGenerator,
+        PlayerOpenGenerator = 35,
 
         /// <summary>
         /// Event executed when player pickups ammo.
@@ -294,7 +294,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ItemPickupBase"/> item.
         /// </remarks>
-        PlayerPickupAmmo,
+        PlayerPickupAmmo = 36,
 
         /// <summary>
         /// Event executed when player pickups armor.
@@ -302,7 +302,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ItemPickupBase"/> item.
         /// </remarks>
-        PlayerPickupArmor,
+        PlayerPickupArmor = 37,
 
         /// <summary>
         /// Event executed when player pickups SCP330.
@@ -310,7 +310,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ItemPickupBase"/> item.
         /// </remarks>
-        PlayerPickupScp330,
+        PlayerPickupScp330 = 38,
 
         /// <summary>
         /// Event executed when player preauths.
@@ -318,7 +318,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="string"/> userid, <see cref="string"/> ipAddress, <see cref="long"/> expiration, <see cref="CentralAuthPreauthFlags"/> flags, <see cref="string"/> country, <see cref="byte[]"/> signature.
         /// </remarks>
-        PlayerPreauth,
+        PlayerPreauth = 39,
 
         /// <summary>
         /// Event executed when player receives effect.
@@ -326,7 +326,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerEffect"/> effect.
         /// </remarks>
-        PlayerReceiveEffect,
+        PlayerReceiveEffect = 40,
 
         /// <summary>
         /// Event executed when player reloads weapon.
@@ -334,7 +334,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Firearm"/> weapon.
         /// </remarks>
-        PlayerReloadWeapon,
+        PlayerReloadWeapon = 41,
 
         /// <summary>
         /// Event executed when player changes role.
@@ -342,7 +342,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerRoleBase"/> oldRole, <see cref="PlayerRoleBase"/> newRole, <see cref="RoleChangeReason"/> reason.
         /// </remarks>
-        PlayerChangeRole,
+        PlayerChangeRole = 42,
 
         /// <summary>
         /// Event executed when player searches pickup.
@@ -350,7 +350,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ItemPickupBase"/> item.
         /// </remarks>
-        PlayerSearchPickup,
+        PlayerSearchPickup = 43,
 
 		/// <summary>
 		/// Event executed when player searched pickup.
@@ -358,7 +358,7 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemPickupBase"/> item.
 		/// </remarks>
-		PlayerSearchedPickup,
+		PlayerSearchedPickup = 44,
 
 		/// <summary>
 		/// Event executed when player shots weapon.
@@ -366,7 +366,7 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="Firearm"/> item.
 		/// </remarks>
-		PlayerShotWeapon,
+		PlayerShotWeapon = 45,
 
         /// <summary>
         /// Event executed when player spawns.
@@ -374,7 +374,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="RoleTypeId"/> role.
         /// </remarks>
-        PlayerSpawn,
+        PlayerSpawn = 46,
 
         /// <summary>
         /// Event executed when ragdoll spawns.
@@ -382,7 +382,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IRagdollRole"/> ragdoll, <see cref="DamageHandlerBase"/> damageHandler.
         /// </remarks>
-        RagdollSpawn,
+        RagdollSpawn = 47,
 
         /// <summary>
         /// Event executed when player throws item.
@@ -390,7 +390,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
         /// </remarks>
-        PlayerThrowItem,
+        PlayerThrowItem = 48,
 
         /// <summary>
         /// Event executed when player toggles flashlight.
@@ -398,7 +398,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item, <see cref="bool"/> isToggled.
         /// </remarks>
-        PlayerToggleFlashlight,
+        PlayerToggleFlashlight = 49,
 
         /// <summary>
         /// Event executed when player unloads weapon.
@@ -406,7 +406,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> weapon.
         /// </remarks>
-        PlayerUnloadWeapon,
+        PlayerUnloadWeapon = 50,
 
         /// <summary>
         /// Event executed when player unlocks generator.
@@ -414,7 +414,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Generator"/> generator.
         /// </remarks>
-        PlayerUnlockGenerator,
+        PlayerUnlockGenerator = 51,
 
         /// <summary>
         /// Event executed when player used item.
@@ -422,7 +422,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
         /// </remarks>
-        PlayerUsedItem,
+        PlayerUsedItem = 52,
 
         /// <summary>
         /// Event executed when player uses hotkey.
@@ -430,7 +430,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ActionName"/> hotkey.
         /// </remarks>
-        PlayerUseHotkey,
+        PlayerUseHotkey = 53,
 
         /// <summary>
         /// Event executed when player starts using item.
@@ -438,7 +438,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
         /// </remarks>
-        PlayerUseItem,
+        PlayerUseItem = 54,
 
         /// <summary>
         /// Event executed when player reports someone for breaking server rules.
@@ -446,7 +446,7 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="string"/> reason.
         /// </remarks>
-        PlayerReport,
+        PlayerReport = 55,
 
         /// <summary>
         /// Event executed when player reports someone for cheating.
@@ -454,26 +454,26 @@ namespace PluginAPI.Enums
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="string"/> reason.
         /// </remarks>
-        PlayerCheaterReport,
+        PlayerCheaterReport = 56,
 
         /// <summary>
         /// Event executed when round ended.
         /// </summary>
-        RoundEnd,
+        RoundEnd = 57,
 
         /// <summary>
         /// Event executed when round restarts.
         /// </summary>
-        RoundRestart,
+        RoundRestart = 58,
 
 		/// <summary>
 		/// Event executed when round starts.
 		/// </summary>
-		RoundStart,
+		RoundStart = 59,
 
 		/// <summary>
 		/// Event executed when server waits for players.
 		/// </summary>
-		WaitingForPlayers,
+		WaitingForPlayers = 60,
     }
 }
