@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with: 
         name: PluginAPI
-        path: ${{ github.workspace }}/NwPluginAPI/bin/Release/PluginAPI.dll
+        path: ${{ github.workspace }}/NwPluginAPI/bin/Release/net48/PluginAPI.dll
