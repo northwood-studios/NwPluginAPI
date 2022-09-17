@@ -1,10 +1,9 @@
 namespace PluginAPI.Core.Zones.Heavy.Rooms
 {
 	using MapGeneration;
-	using PluginAPI.Core;
-	using PluginAPI.Core.Doors;
-	using PluginAPI.Core.Zones;
-	using PluginAPI.Core.Zones.Heavy;
+	using Core;
+	using Zones;
+	using Heavy;
 
 	public class HczScp049 : HczRoom
 	{
@@ -12,8 +11,6 @@ namespace PluginAPI.Core.Zones.Heavy.Rooms
 
 		public static RoomLight RoomLights => Instance.Lights;
 		public static RoomIdentifier RoomIdentifier => Instance.Identifier;
-
-		public readonly FacilityGate Gate;
 
 		/// <summary>
 		/// Constructor for SCP 049 room.

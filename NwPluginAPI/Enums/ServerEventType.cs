@@ -1,11 +1,11 @@
 namespace PluginAPI.Enums
 {
-	using PluginAPI.Core.Interfaces;
+	using Core.Interfaces;
 	using PlayerRoles;
 	using AdminToys;
 	using PlayerStatsSystem;
 	using CustomPlayerEffects;
-	using PluginAPI.Core.Items;
+	using Core.Items;
 	using InventorySystem.Items.Usables;
 	using InventorySystem.Items.Firearms;
 	using InventorySystem.Items.Pickups;

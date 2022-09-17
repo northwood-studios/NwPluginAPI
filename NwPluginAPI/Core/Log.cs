@@ -2,7 +2,7 @@ namespace PluginAPI.Core
 {
 	using System;
 	using System.Reflection;
-	using PluginAPI.Enums;
+	using Enums;
 
 	/// <summary>
 	/// Logger for plugin system.
@@ -204,25 +204,25 @@ namespace PluginAPI.Core
 							break;
 						//Underline on
 						case 'n':
-							if (unityRichText && unityRichText) break;
+							if (unityRichText) break;
 
 							newText += $"{escapeChar}[4m";
 							break;
 						//Underline off
 						case 'N':
-							if (unityRichText && unityRichText) break;
+							if (unityRichText) break;
 
 							newText += $"{escapeChar}[24m";
 							break;
 						//Strikethrough on 
 						case 'm':
-							if (unityRichText && unityRichText) break;
+							if (unityRichText) break;
 
 							newText += $"{escapeChar}[9m";
 							break;
 						//Strikethrough off
 						case 'M':
-							if (unityRichText && unityRichText) break;
+							if (unityRichText) break;
 
 							newText += $"{escapeChar}[29m";
 							break;
@@ -276,7 +276,7 @@ namespace PluginAPI.Core
 					if (UnityEditor)
 						UnityEngine.Debug.Log(FormatText($"{(!string.IsNullOrEmpty(prefix) ? $"&7[&b&2{prefix}&B&7] " : "")}" + message, "7", true));
 					else
-						ServerConsole.AddLog(FormatText($"{(!string.IsNullOrEmpty(prefix) ? $"&7[&b&2{prefix}&B&7] " : "")}" + message, "7"), ConsoleColor.Gray);
+						ServerConsole.AddLog(FormatText($"{(!string.IsNullOrEmpty(prefix) ? $"&7[&b&2{prefix}&B&7] " : "")}" + message, "7"));
 					break;
 			}
 		}

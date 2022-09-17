@@ -1,6 +1,6 @@
 namespace PluginAPI.Loader.Features
 {
-	using PluginAPI.Helpers;
+	using Helpers;
 
 	/// <summary>
     /// Contains all the paths leading to plugins and dependencies.

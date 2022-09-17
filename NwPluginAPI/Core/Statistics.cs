@@ -38,7 +38,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Statistics related to current round.
 		/// </summary>
-		public static Round CurrentRound = new Round();
+		public static readonly Round CurrentRound = new Round();
 
 		public class FastestRound
 		{
@@ -58,42 +58,42 @@ namespace PluginAPI.Core
 			/// <summary>
 			/// Gets the duration of current round.
 			/// </summary>
-			public TimeSpan Duration => RoundStart.RoundLength;
+			public static TimeSpan Duration => RoundStart.RoundLength;
 
 			/// <summary>
 			/// Gets the round start timestamp.
 			/// </summary>
-			public DateTime StartTimestamp => DateTime.Now - Statistics.CurrentRound.Duration;
+			public DateTime StartTimestamp => DateTime.Now - Duration;
 
 			/// <summary>
 			/// Gets the total amount of players deaths.
 			/// </summary>
-			public int TotalKilledPlayers => RoundSummary.Kills;
+			public int TotalKilledPlayers => Kills;
 
 			/// <summary>
 			/// Gets the total amount of kills madey by SCP.
 			/// </summary>
-			public int TotalScpKills => RoundSummary.KilledBySCPs;
+			public int TotalScpKills => KilledBySCPs;
 
 			/// <summary>
 			/// Gets the total amount of created Scp049-2.
 			/// </summary>
-			public int TotalScp0492Made => RoundSummary.ChangedIntoZombies;
+			public int TotalScp0492Made => ChangedIntoZombies;
 
 			/// <summary>
 			/// Gets the total amount of escaped ClassD.
 			/// </summary>
-			public int TotalEscapedClassD => RoundSummary.EscapedClassD;
+			public int TotalEscapedClassD => EscapedClassD;
 
 			/// <summary>
 			/// Gets the total amount of escaped Scientists.
 			/// </summary>
-			public int TotalEscapedScientists => RoundSummary.EscapedScientists;
+			public int TotalEscapedScientists => EscapedScientists;
 
 			/// <summary>
 			/// Gets the total amount of scps alive.
 			/// </summary>
-			public int ScpsAlive => RoundSummary.SurvivingSCPs;
+			public int ScpsAlive => SurvivingSCPs;
 		}
 	}
 }

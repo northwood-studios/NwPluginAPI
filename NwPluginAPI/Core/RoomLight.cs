@@ -4,13 +4,13 @@ namespace PluginAPI.Core
 
 	public class RoomLight
 	{
-		internal FlickerableLightController LightController;
+		private readonly FlickerableLightController _lightController;
 		private Color? _defaultLightColor;
 
 		private void SaveDefaultColor()
 		{
 			if (!_defaultLightColor.HasValue)
-				_defaultLightColor = LightController.WarheadLightColor;
+				_defaultLightColor = _lightController.WarheadLightColor;
 		}
 
 		/// <summary>
@@ -20,11 +20,12 @@ namespace PluginAPI.Core
 		{
 			get
 			{
-				return LightController.LightsEnabled;
+				return _lightController.LightsEnabled;
 			}
+			
 			set
 			{
-				LightController.LightsEnabled = value;
+				_lightController.LightsEnabled = value;
 			}
 		}
 
@@ -37,11 +38,12 @@ namespace PluginAPI.Core
 			{
 				return DefaultColor;
 			}
+			
 			set
 			{
 				SaveDefaultColor();
-				LightController.WarheadLightColor = value;
-				LightController.WarheadLightOverride = value != DefaultColor;
+				_lightController.WarheadLightColor = value;
+				_lightController.WarheadLightOverride = value != DefaultColor;
 			}
 		}
 
@@ -64,11 +66,12 @@ namespace PluginAPI.Core
 		{
 			get
 			{
-				return LightController.LightIntensityMultiplier;
+				return _lightController.LightIntensityMultiplier;
 			}
+			
 			set
 			{
-				LightController.LightIntensityMultiplier = value;
+				_lightController.LightIntensityMultiplier = value;
 			}
 		}
 
@@ -78,13 +81,13 @@ namespace PluginAPI.Core
 		/// <param name="duration">The durtaion of flicker.</param>
 		public void FlickerLights(float duration)
 		{
-			LightController.ServerFlickerLights(duration);
+			_lightController.ServerFlickerLights(duration);
 		}
 
 		/// <summary>
 		/// Constructor.
 		/// </summary>
 		/// <param name="lightController">The light controller for room.</param>
-		public RoomLight(FlickerableLightController lightController) => LightController = lightController;
+		public RoomLight(FlickerableLightController lightController) => _lightController = lightController;
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace PluginAPI.Core.Extensions
 {
-	using PluginAPI.Core.Attributes;
+	using Attributes;
 	using System;
 	using System.Reflection;
 

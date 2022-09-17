@@ -1,6 +1,6 @@
 ﻿namespace PluginAPI.Core.Factories
 {
-	using PluginAPI.Core.Interfaces;
+	using Interfaces;
 	using System.Collections.Generic;
 
 	/// <summary>
@@ -9,7 +9,7 @@
 	/// <typeparam name="T">The entity type.</typeparam>
 	public class Factory<T> : IEntityFactory<T> where T : IEntity
     {    
-        internal Dictionary<IGameComponent, T> Entities = new Dictionary<IGameComponent, T>();
+        internal readonly Dictionary<IGameComponent, T> Entities = new Dictionary<IGameComponent, T>();
 
 		/// <summary>
 		/// Gets all entities stored in factory.
