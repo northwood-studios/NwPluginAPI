@@ -384,7 +384,7 @@ namespace PluginAPI.Events
 						continue;
 					}
 					
-					if (result is void)
+					if (result is null)
 						continue;
 
 					if (isBool)
