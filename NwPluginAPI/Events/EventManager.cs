@@ -1,3 +1,5 @@
+using LiteNetLib;
+
 namespace PluginAPI.Events
 {
 	using System;
@@ -150,7 +152,9 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(long), "expiration"),
 				new EventParameter(typeof(CentralAuthPreauthFlags), "centralFlags"),
 				new EventParameter(typeof(string), "region"),
-				new EventParameter(typeof(byte[]), "signature")) },
+				new EventParameter(typeof(byte[]), "signature"),
+				new EventParameter(typeof(ConnectionRequest), "connectionRequest"),
+				new EventParameter(typeof(int), "readerStartPosition")) },
 			{ ServerEventType.PlayerReceiveEffect, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(PlayerEffect), "effect")) },
@@ -311,12 +315,21 @@ namespace PluginAPI.Events
 		/// <param name="type">The type of event</param>
 		/// <param name="args">The arguments of event.</param>
 		/// <returns>If false event is canceled.</returns>
-        public static bool ExecuteEvent(ServerEventType type, params object[] args)
+		public static bool ExecuteEvent(ServerEventType type, params object[] args) => ExecuteEvent<bool>(type, args);
+
+		/// <summary>
+		/// Executes event.
+		/// </summary>
+		/// <param name="type">The type of event</param>
+		/// <param name="args">The arguments of event.</param>
+		/// <returns>Event cancellation data.</returns>
+		// ReSharper disable once MemberCanBePrivate.Global
+		public static T ExecuteEvent<T>(ServerEventType type, params object[] args) where T : struct
 		{
 			if (!Events.TryGetValue(type, out Event ev))
 			{
 				Log.Error($"Event &6{type}&r is not registered in manager! ( create issue on github )");
-				return true;
+				return default;
 			}
 
 			switch (type)
@@ -346,7 +359,9 @@ namespace PluginAPI.Events
 					constructEventParameters.Add(args[x]);
             }
 
-			var isCanceled = false;
+			bool isBool = typeof(T) == typeof(bool);
+			bool cancelled = false;
+			T cancellation = default;
 
 			foreach(var plugin in ev.Invokers.Values)
 			{
@@ -368,17 +383,31 @@ namespace PluginAPI.Events
 						Log.Error($"Failed executing event &6{invoker.Method.Name}&r (&6{type}&r) in plugin &6{invoker.Plugin.FullName}&r\n{ex}");
 						continue;
 					}
+					
+					if (result is void)
+						continue;
 
-					switch (result)
+					if (isBool)
 					{
-						case bool b when !b:
-							isCanceled = true;
-							break;
+						if (result is bool b && b)
+							cancellation = (T)result;
+					}
+					else if (result is T r)
+					{
+						if (cancelled || !(r is IEventCancellation ecd) || !ecd.IsCancelled)
+							continue;
+
+						cancellation = r;
+						cancelled = true;
+					}
+					else
+					{
+						Log.Error($"Plugin &6{invoker.Plugin.FullName}&r passed invalid data type for event &6{invoker.Method.Name}&r.");
 					}
 				}
 			}
-
-			return !isCanceled;
+			
+			return cancellation;
 		}
     }
 }
