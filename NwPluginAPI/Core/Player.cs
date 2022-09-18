@@ -3,17 +3,15 @@ namespace PluginAPI.Core
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
-	using CustomPlayerEffects;
 	using Hints;
 	using InventorySystem;
-	using InventorySystem.Configs;
 	using InventorySystem.Items;
 	using Mirror;
 	using PlayerRoles;
 	using PlayerRoles.FirstPersonControl;
 	using PlayerStatsSystem;
-	using PluginAPI.Core.Factories;
-	using PluginAPI.Core.Interfaces;
+	using Factories;
+	using Interfaces;
 	using RoundRestarting;
 	using UnityEngine;
 	using VoiceChat;
@@ -422,28 +420,28 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float Health
 		{
-			get => (ReferenceHub.playerStats.StatModules[0] as HealthStat).CurValue;
-			set => (ReferenceHub.playerStats.StatModules[0] as HealthStat).CurValue = value;
+			get => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).CurValue;
+			set => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).CurValue = value;
 		}
 
 		/// <summary>
 		/// Gets player current maximum health;
 		/// </summary>
-		public float MaxHealth => (ReferenceHub.playerStats.StatModules[0] as HealthStat).MaxValue;
+		public float MaxHealth => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).MaxValue;
 
 		/// <summary>
 		/// Gets or sets player current artificial health;
 		/// </summary>
 		public float ArtificialHealth
 		{
-			get => (ReferenceHub.playerStats.StatModules[0] as AhpStat).CurValue;
-			set => (ReferenceHub.playerStats.StatModules[0] as AhpStat).CurValue = value;
+			get => ((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue;
+			set => ((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue = value;
 		}
 
 		/// <summary>
 		/// Gets player current maximum artifical health.
 		/// </summary>
-		public float MaxArtificalHealth => (ReferenceHub.playerStats.StatModules[1] as AhpStat).MaxValue;
+		public float MaxArtificalHealth => ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
 
 		/// <summary>
 		/// Gets if player has remoteadmin access. 
@@ -625,7 +623,7 @@ namespace PluginAPI.Core
             }
             catch (Exception ex)
 			{
-				Log.Error($"Failed executing OnStart in {this.GetType().Name}, error\n {ex}");
+				Log.Error($"Failed executing OnStart in {GetType().Name}, error\n {ex}");
 			}
 		}
 		#endregion
@@ -736,7 +734,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Adds ammo of specific item type.
 		/// </summary>
-		/// <param name="item"><The type of ammo./param>
+		/// <param name="item">The type of ammo.</param>
 		/// <param name="amount">The amount of ammo.</param>
 		public void AddAmmo(ItemType item, ushort amount) => ReferenceHub.inventory.ServerAddAmmo(item, amount);
 
@@ -785,7 +783,7 @@ namespace PluginAPI.Core
 		/// Disconnects player from server.
 		/// </summary>
 		/// <param name="reason">The reason.</param>
-		public void Disconnect(string reason = null) => ServerConsole.Disconnect(GameObject, reason == null ? string.Empty : reason);
+		public void Disconnect(string reason = null) => ServerConsole.Disconnect(GameObject, reason ?? string.Empty);
 
 		/// <summary>
 		/// Player receives hint text.

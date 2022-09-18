@@ -3,7 +3,7 @@ namespace PluginAPI.Core.Zones
 	using Interactables.Interobjects;
 	using Interactables.Interobjects.DoorUtils;
 	using MapGeneration;
-	using PluginAPI.Core.Doors;
+	using Doors;
 	using System;
 	using System.Collections.Generic;
 	using UnityEngine;

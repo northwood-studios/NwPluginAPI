@@ -4,7 +4,7 @@ namespace PluginAPI.Core.Zones
 
 	public class Surface : FacilityRoom
 	{
-		public readonly new SurfaceZone Zone;
+		public new readonly SurfaceZone Zone;
 
 		/// <summary>
 		/// Constructor for surface zone room.

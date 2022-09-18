@@ -1,9 +1,9 @@
 namespace PluginAPI.Core.Zones
 {
 	using MapGeneration;
-	using PluginAPI.Core.Doors;
-	using PluginAPI.Core.Zones.Heavy;
-	using PluginAPI.Core.Zones.Heavy.Rooms;
+	using Doors;
+	using Heavy;
+	using Heavy.Rooms;
 	using System.Collections.Generic;
 	using System.Linq;
 

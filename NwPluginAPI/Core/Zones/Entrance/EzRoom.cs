@@ -1,12 +1,10 @@
 namespace PluginAPI.Core.Zones.Entrance
 {
 	using MapGeneration;
-	using PluginAPI.Core.Zones;
+	using Zones;
 
 	public class EzRoom : FacilityRoom
 	{
-		public readonly new EntranceZone Zone;
-
 		/// <summary>
 		/// Constructor for entrance zone room.
 		/// </summary>

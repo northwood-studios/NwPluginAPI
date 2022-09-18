@@ -1,6 +1,6 @@
 namespace PluginAPI.Core.Attributes
 {
-	using PluginAPI.Enums;
+	using Enums;
 	using System;
 
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]

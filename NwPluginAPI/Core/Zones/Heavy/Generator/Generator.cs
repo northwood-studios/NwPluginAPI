@@ -1,25 +1,22 @@
 namespace PluginAPI.Core.Zones.Heavy
 {
 	using MapGeneration.Distributors;
-	using PluginAPI.Core.Zones.Heavy;
 	using UnityEngine;
 
 	public class Generator
 	{
-		public readonly Scp079Generator OrginalObject;
+		public readonly Scp079Generator OriginalObject;
 		public readonly HczRoom Room;
-
-		public GeneratorLogic Logic { get; set; }
 
 		/*public bool IsOpened
 		{
 			get
 			{
-				return OrginalObject.HasFlag(OrginalObject._flags, Scp079Generator.GeneratorFlags.Open);
+				return OriginalObject.HasFlag(OriginalObject._flags, Scp079Generator.GeneratorFlags.Open);
 			}
 			set
 			{
-				OrginalObject.ServerSetFlag(Scp079Generator.GeneratorFlags.Open, value);
+				OriginalObject.ServerSetFlag(Scp079Generator.GeneratorFlags.Open, value);
 			}
 		}
 
@@ -27,37 +24,37 @@ namespace PluginAPI.Core.Zones.Heavy
 		{
 			get
 			{
-				return !OrginalObject.HasFlag(OrginalObject._flags, Scp079Generator.GeneratorFlags.Unlocked);
+				return !OriginalObject.HasFlag(OriginalObject._flags, Scp079Generator.GeneratorFlags.Unlocked);
 			}
 			set
 			{
-				OrginalObject.ServerSetFlag(Scp079Generator.GeneratorFlags.Unlocked, !value);
+				OriginalObject.ServerSetFlag(Scp079Generator.GeneratorFlags.Unlocked, !value);
 			}
 		}
 		*/
 		public bool IsActivating
 		{
-			get => OrginalObject.Activating;
-			set => OrginalObject.Activating = value;
+			get => OriginalObject.Activating;
+			set => OriginalObject.Activating = value;
 
 		}
-		public bool IsActivationReady => false;//OrginalObject.ActivationReady;
+		public bool IsActivationReady => false;//OriginalObject.ActivationReady;
 
 		public bool IsEngaged
 		{
-			get => OrginalObject.Engaged;
-			set => OrginalObject.Engaged = value;
+			get => OriginalObject.Engaged;
+			set => OriginalObject.Engaged = value;
 		}
 
 		/*public short SynchronizedTime
 		{
 			get
 			{
-				return OrginalObject._syncTime;
+				return OriginalObject._syncTime;
 			}
 			set
 			{
-				OrginalObject._syncTime = value;
+				OriginalObject._syncTime = value;
 			}
 		}*/
 
@@ -65,11 +62,11 @@ namespace PluginAPI.Core.Zones.Heavy
 		{
 			get
 			{
-				return OrginalObject._doorToggleCooldownTime;
+				return OriginalObject._doorToggleCooldownTime;
 			}
 			set
 			{
-				OrginalObject._doorToggleCooldownTime = value;
+				OriginalObject._doorToggleCooldownTime = value;
 			}
 		}
 		*/
@@ -77,28 +74,28 @@ namespace PluginAPI.Core.Zones.Heavy
 		{
 			get
 			{
-				return OrginalObject._unlockCooldownTime;
+				return OriginalObject._unlockCooldownTime;
 			}
 			set
 			{
-				OrginalObject._unlockCooldownTime = value;
+				OriginalObject._unlockCooldownTime = value;
 			}
 		}
 		*/
-		public Transform Transform => OrginalObject.transform;
-		public GameObject GameObject => OrginalObject.gameObject;
+		public Transform Transform => OriginalObject.transform;
+		public GameObject GameObject => OriginalObject.gameObject;
 		public Vector3 Position => Transform.position;
 		public Quaternion Rotation => Transform.rotation;
 
 		public void PlayDeniedSound()
 		{
-			//OrginalObject.RpcDenied();
+			//OriginalObject.RpcDenied();
 		}
 
 		public Generator(HczRoom room, Scp079Generator generator)
 		{
 			Room = room;
-			OrginalObject = generator;
+			OriginalObject = generator;
 		}
 	}
 }

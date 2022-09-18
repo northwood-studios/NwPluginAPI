@@ -1,7 +1,7 @@
 namespace PluginAPI.Commands
 {
 	using CommandSystem;
-	using PluginAPI.Loader;
+	using Loader;
 	using System;
 	using System.Collections.Generic;
 

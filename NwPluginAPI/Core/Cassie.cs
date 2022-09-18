@@ -16,12 +16,12 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets a value if CASSIE is speaking.
 		/// </summary>
-		public static bool IsSpeaking => NineTailedFoxAnnouncer.singleton.queue.Count != 0;
+		public static bool IsSpeaking => singleton.queue.Count != 0;
 
 		/// <summary>
 		/// Gets a collection of CASSIE voice lines.
 		/// </summary>
-		public static IEnumerable<VoiceLine> VoiceLines => NineTailedFoxAnnouncer.singleton.voiceLines;
+		public static IEnumerable<VoiceLine> VoiceLines => singleton.voiceLines;
 
 		#endregion
 
@@ -42,7 +42,7 @@ namespace PluginAPI.Core
 		/// <param name="message">The message.</param>
 		/// <param name="glitchChance">The chance of placing a glitch phrase between each word.</param>
 		/// <param name="jamChance">The chance of jamming each word.</param>
-		public static void GlitchyMessage(string message, float glitchChance, float jamChance) => NineTailedFoxAnnouncer.singleton.ServerOnlyAddGlitchyPhrase(message, glitchChance, jamChance);
+		public static void GlitchyMessage(string message, float glitchChance, float jamChance) => singleton.ServerOnlyAddGlitchyPhrase(message, glitchChance, jamChance);
 		#endregion
 
 		/// <summary>
@@ -56,7 +56,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="rawNumber">Raw number.</param>
-	    public static float CalculateDuration(string message, bool rawNumber = false) => NineTailedFoxAnnouncer.singleton.CalculateDuration(message, rawNumber);
+	    public static float CalculateDuration(string message, bool rawNumber = false) => singleton.CalculateDuration(message, rawNumber);
 
 		/// <summary>
 		/// Converts team into CASSIE readable unit name.
@@ -75,7 +75,7 @@ namespace PluginAPI.Core
 		/// Checks if provided word is CASSIE readable one.
 		/// </summary>
 		/// <param name="word">The word.</param>
-		public static bool IsValid(string word) => NineTailedFoxAnnouncer.singleton.voiceLines.Any(line => line.apiName.ToUpper() == word.ToUpper());
+		public static bool IsValid(string word) => singleton.voiceLines.Any(line => line.apiName.ToUpper() == word.ToUpper());
 		#endregion
 
 		/// <summary>
@@ -84,7 +84,7 @@ namespace PluginAPI.Core
 		/// <param name="scp">The player.</param>
 		/// <param name="info">The damage information.</param>
 		public static void ScpTermination(Player player, DamageHandlerBase info)
-			=> NineTailedFoxAnnouncer.AnnounceScpTermination(player.ReferenceHub, info);
+			=> AnnounceScpTermination(player.ReferenceHub, info);
 		#endregion
 	}
 }

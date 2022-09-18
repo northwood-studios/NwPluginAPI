@@ -3,8 +3,8 @@ namespace PluginAPI.Core
 	using Interactables.Interobjects;
 	using Interactables.Interobjects.DoorUtils;
 	using MapGeneration;
-	using PluginAPI.Core.Doors;
-	using PluginAPI.Core.Zones;
+	using Doors;
+	using Zones;
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
@@ -16,8 +16,9 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class Facility
 	{
-		internal static Dictionary<int, FacilityZone> _zones = new Dictionary<int, FacilityZone>();
-		internal static Dictionary<Type, MapGeneration.FacilityZone> _typeToZone = new Dictionary<Type, MapGeneration.FacilityZone>()
+		private static readonly Dictionary<int, FacilityZone> Zones = new Dictionary<int, FacilityZone>();
+
+		private static readonly Dictionary<Type, MapGeneration.FacilityZone> TypeToZone = new Dictionary<Type, MapGeneration.FacilityZone>()
 		{
 			{ typeof(EntranceZone), MapGeneration.FacilityZone.Entrance },
 			{ typeof(HeavyZone), MapGeneration.FacilityZone.HeavyContainment },
@@ -34,7 +35,7 @@ namespace PluginAPI.Core
 			return room;
 		}
 
-		internal static bool TryGetRoom(RoomIdentifier roomIdentity, out FacilityRoom room)
+		private static bool TryGetRoom(RoomIdentifier roomIdentity, out FacilityRoom room)
 		{
 			if (roomIdentity == null)
 			{
@@ -42,31 +43,28 @@ namespace PluginAPI.Core
 				return false;
 			}
 
-			if (!TryGetZone(roomIdentity.Zone, out FacilityZone zone))
-			{
-				room = null;
-				return false;
-			}
+			if (TryGetZone(roomIdentity.Zone, out FacilityZone zone))
+				return zone.TryGetRoom(roomIdentity, out room);
 
-			return zone.TryGetRoom(roomIdentity, out room);
+			room = null;
+			return false;
 		}
 
 		internal static bool TryGetZone<T>(out FacilityZone facilityZone) where T : FacilityZone
 		{
-			if (!_typeToZone.TryGetValue(typeof(T), out MapGeneration.FacilityZone zone))
-			{
-				facilityZone = default(T);
-				return false;
-			}
+			if (TypeToZone.TryGetValue(typeof(T), out MapGeneration.FacilityZone zone))
+				return TryGetZone(zone, out facilityZone);
 
-			return TryGetZone(zone, out facilityZone);
+			facilityZone = default(T);
+			return false;
+
 		}
 
-		internal static bool TryGetZone<T>(MapGeneration.FacilityZone zone, out T facilityZone) where T : FacilityZone
+		private static bool TryGetZone<T>(MapGeneration.FacilityZone zone, out T facilityZone) where T : FacilityZone
 		{
 			int zoneId = (int) zone;
 
-			if (Facility._zones.TryGetValue(zoneId, out FacilityZone facZone))
+			if (Zones.TryGetValue(zoneId, out FacilityZone facZone))
 			{
 				facilityZone = (T) facZone;
 				return true;
@@ -96,7 +94,7 @@ namespace PluginAPI.Core
 					return false;
 			}
 
-			Facility._zones.Add(zoneId, newZone);
+			Zones.Add(zoneId, newZone);
 			facilityZone = (T) newZone;
 			return true;
 		}
@@ -107,7 +105,7 @@ namespace PluginAPI.Core
 				RegisterDoor(room, door);
 		}
 
-		internal static void RegisterDoor(FacilityRoom room, DoorVariant door)
+		private static void RegisterDoor(FacilityRoom room, DoorVariant door)
 		{
 			switch (door)
 			{
@@ -133,7 +131,7 @@ namespace PluginAPI.Core
 			RegisterDoor(room, door);
 		}
 
-		internal static RoomIdentifier FindRoomIdentifier(Transform tr)
+		private static RoomIdentifier FindRoomIdentifier(Transform tr)
 		{
 			if (tr.TryGetComponent<RoomIdentifier>(out RoomIdentifier ri))
 				return ri;
@@ -145,13 +143,13 @@ namespace PluginAPI.Core
 
 		internal static void Reset()
 		{
-			_zones.Clear();
+			Zones.Clear();
 		}
 
 		/// <summary>
 		/// Gets all rooms in facility.
 		/// </summary>
-		public static List<FacilityRoom> Rooms => _zones.Values.SelectMany(x => x.GetRooms()).ToList();
+		public static List<FacilityRoom> Rooms => Zones.Values.SelectMany(x => x.GetRooms()).ToList();
 		
 		/// <summary>
 		/// Gets all doors in facility.

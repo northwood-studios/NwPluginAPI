@@ -1,6 +1,6 @@
 ﻿namespace PluginAPI.Core
 {
-	using PluginAPI.Core.Interfaces;
+	using Interfaces;
 	using System;
 	using System.Collections.Generic;
 	using UnityEngine;
@@ -10,7 +10,7 @@
 	/// </summary>
 	public class PlayerSharedStorage
 	{
-		static Dictionary<IPlayer, PlayerSharedStorage> Storage { get; } = new Dictionary<IPlayer, PlayerSharedStorage>();
+		private static Dictionary<IPlayer, PlayerSharedStorage> Storage { get; } = new Dictionary<IPlayer, PlayerSharedStorage>();
 	
 		/// <summary>
 		/// Gets player storage.
@@ -19,11 +19,11 @@
 		/// <returns>The storage.</returns>
 		internal static PlayerSharedStorage GetStorage(Player player)
 		{
-			if (!Storage.TryGetValue(player, out PlayerSharedStorage storage))
-			{
-				storage = new PlayerSharedStorage(player);
-				Storage.Add(player, storage);
-			}
+			if (Storage.TryGetValue(player, out PlayerSharedStorage storage))
+				return storage;
+
+			storage = new PlayerSharedStorage();
+			Storage.Add(player, storage);
 
 			return storage;
 		}
@@ -34,13 +34,6 @@
 		/// <param name="player">The player.</param>
 		/// <returns>If storage was destroyed successfully.</returns>
 		internal static bool DestroyStorage(IPlayer player) => Storage.Remove(player);
-
-		private Player _player;
-
-		internal PlayerSharedStorage(Player player)
-		{
-			_player = player;
-		}
 
 		/// <summary>
 		/// Gets stored components.
