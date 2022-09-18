@@ -18,6 +18,8 @@ namespace PluginAPI.Events
 	{
 		public bool IsCancelled { get; }
 
+		private readonly bool _handledManually;
+		
 		private readonly NetDataWriter _customWriter;
 		private readonly RejectionReason _reason;
 		private readonly bool _isForced;
@@ -116,8 +118,10 @@ namespace PluginAPI.Events
 		public static PreauthCancellationData Accept() =>
 			new PreauthCancellationData(RejectionReason.NotSpecified, false, isCancelled: false);
 		
+		public static PreauthCancellationData HandledManually() => new PreauthCancellationData(RejectionReason.NotSpecified, false, handledManually: true);
+		
 		private PreauthCancellationData(RejectionReason rejectionReason, bool isForced, string customReason = null,
-			long expiration = 0, byte seconds = 0, ushort port = 0, NetDataWriter writer = null, bool isCancelled = true)
+			long expiration = 0, byte seconds = 0, ushort port = 0, NetDataWriter writer = null, bool isCancelled = true, bool handledManually = false)
 		{
 			IsCancelled = isCancelled;
 
@@ -129,6 +133,7 @@ namespace PluginAPI.Events
 			_seconds = seconds;
 			_port = port;
 			_customWriter = writer;
+			_handledManually = handledManually;
 		}
 		
 		/// <summary>
@@ -140,7 +145,7 @@ namespace PluginAPI.Events
 		{
 			forced = _isForced;
 			
-			if (!IsCancelled)
+			if (!IsCancelled || _handledManually)
 				return null;
 
 			if (_reason == RejectionReason.NotSpecified && _customWriter != null)
