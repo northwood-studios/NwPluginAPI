@@ -41,7 +41,7 @@ namespace PluginAPI.Events
 
 		private static Dictionary<int, List<EventInfo>> _registeredEvents = new Dictionary<int, List<EventInfo>>();
 
-		private static Dictionary<int, Type[]> _requiredParameters = new Dictionary<int, Type[]>()
+		public static Dictionary<int, Type[]> RequiredParameters = new Dictionary<int, Type[]>()
 		{
 			{ (int)ServerEventType.PlayerJoined, new Type[] { typeof(IPlayer) } },
 			{ (int)ServerEventType.PlayerLeft, new Type[] { typeof(IPlayer) } },
@@ -172,9 +172,9 @@ namespace PluginAPI.Events
 
                         var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
 
-						if (!ValidateEvent(eventParameters, _requiredParameters[(int)pluginEvent.EventType]))
+						if (!ValidateEvent(eventParameters, RequiredParameters[(int)pluginEvent.EventType]))
 						{
-                            Log.Error($"Event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", _requiredParameters[(int)pluginEvent.EventType].Select(p => p.Name)))}.");
+                            Log.Error($"Event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", RequiredParameters[(int)pluginEvent.EventType].Select(p => p.Name)))}.");
                             continue;
 						}
 
@@ -223,9 +223,9 @@ namespace PluginAPI.Events
 
             List<object> constructEventParameters = new List<object>();
 			List<IndexInfo> indexesToRegenerate = new List<IndexInfo>();
-			for(int x = 0; x < _requiredParameters[(int)type].Length; x++)
+			for(int x = 0; x < RequiredParameters[(int)type].Length; x++)
 			{
-				var paramType = _requiredParameters[(int)type][x];
+				var paramType = RequiredParameters[(int)type][x];
 
                 if (args[x] == null)
 				{

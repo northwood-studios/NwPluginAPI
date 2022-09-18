@@ -3,10 +3,6 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Rename;
-using Microsoft.CodeAnalysis.Text;
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Composition;
@@ -21,12 +17,11 @@ namespace NWPluginAPI.Analyzers
 	{
 		public sealed override ImmutableArray<string> FixableDiagnosticIds
 		{
-			get { return ImmutableArray.Create(NWPluginAPIAnalyzersAnalyzer.DiagnosticId); }
+			get { return ImmutableArray.Create(NWPluginAPIAnalyzersAnalyzer.WrongParameterDiagnosticId, NWPluginAPIAnalyzersAnalyzer.MissingParameterDiagnosticId, NWPluginAPIAnalyzersAnalyzer.MissingParametersDiagnosticId, NWPluginAPIAnalyzersAnalyzer.ParameterNotRequiredDiagnosticId); }
 		}
 
 		public sealed override FixAllProvider GetFixAllProvider()
 		{
-			// See https://github.com/dotnet/roslyn/blob/main/docs/analyzers/FixAllProvider.md for more information on Fix All Providers
 			return WellKnownFixAllProviders.BatchFixer;
 		}
 
@@ -34,35 +29,92 @@ namespace NWPluginAPI.Analyzers
 		{
 			var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
 
-			// TODO: Replace the following code with your own analysis, generating a CodeAction for each fix to suggest
-			var diagnostic = context.Diagnostics.First();
-			var diagnosticSpan = diagnostic.Location.SourceSpan;
+			foreach(var diagnostic in context.Diagnostics)
+			{
+				var diagnosticSpan = diagnostic.Location.SourceSpan;
 
-			// Find the type declaration identified by the diagnostic.
-			var declaration = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<MethodDeclarationSyntax>().First();
+				var declaration = root.FindToken(diagnosticSpan.Start).Parent.AncestorsAndSelf().OfType<MethodDeclarationSyntax>().First();
 
-			// Register a code action that will invoke the fix.
-			context.RegisterCodeFix(
-				CodeAction.Create(
-					title: "Add missing parameters",
-					createChangedDocument: c => MakeUppercaseAsync(context.Document, declaration, c),
-					equivalenceKey: nameof(CodeFixResources.CodeFixTitle)),
-				diagnostic);
+				switch (diagnostic.Id)
+				{
+					case NWPluginAPIAnalyzersAnalyzer.WrongParameterDiagnosticId:
+						context.RegisterCodeFix(
+							CodeAction.Create(
+								title: "Replace parameter",
+								createChangedDocument: c => ReplaceParameterAsync(context.Document, diagnostic.Properties, declaration, c),
+								equivalenceKey: "Replace parameter"),
+							diagnostic);
+						break;
+					case NWPluginAPIAnalyzersAnalyzer.MissingParameterDiagnosticId:
+						context.RegisterCodeFix(
+							CodeAction.Create(
+								title: "Add parameter",
+								createChangedDocument: c => AddParameterAsync(context.Document, diagnostic.Properties, declaration, c),
+								equivalenceKey: "Add parameter"),
+							diagnostic);
+						break;
+					case NWPluginAPIAnalyzersAnalyzer.MissingParametersDiagnosticId:
+						context.RegisterCodeFix(
+							CodeAction.Create(
+								title: "Add parameters",
+								createChangedDocument: c => AddParametersAsync(context.Document, diagnostic.Properties, declaration, c),
+								equivalenceKey: "Add parameters"),
+							diagnostic);
+						break;
+				}
+			}
 		}
 
-		private async Task<Document> MakeUppercaseAsync(Document document, MethodDeclarationSyntax param, CancellationToken cancellationToken)
+		private async Task<Document> ReplaceParameterAsync(Document document, ImmutableDictionary<string, string> properties, MethodDeclarationSyntax method, CancellationToken token)
 		{
-			var attribute = SyntaxFactory.AttributeList(
-	SyntaxFactory.SingletonSeparatedList<AttributeSyntax>(
-		SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("PluginEvent"), null)));
-						
-			var newParam = param.WithAttributeLists(param.AttributeLists.Add(attribute));
-
 			var root = await document.GetSyntaxRootAsync();
-			var newRoot = root.ReplaceNode(param, newParam);
-			var newDocument = document.WithSyntaxRoot(newRoot);
 
-			return newDocument;
+			var updatedMethod = method.AddParameterListParameters(
+				SyntaxFactory.Parameter(
+					SyntaxFactory.Identifier("amogus"))
+					.WithType(SyntaxFactory.ParseTypeName("PluginAPI.Core.Player")));
+
+			var updatedSyntaxTree = root.ReplaceNode(method, updatedMethod);
+
+			return document.WithSyntaxRoot(updatedSyntaxTree);
+		}
+
+		private async Task<Document> AddParameterAsync(Document document, ImmutableDictionary<string, string> properties, MethodDeclarationSyntax method, CancellationToken token)
+		{
+			var root = await document.GetSyntaxRootAsync();
+
+			if (!properties.TryGetValue("parameterType", out string type)) return document;
+			if (!properties.TryGetValue("parameterName", out string name)) return document;
+
+			var updatedMethod = method.AddParameterListParameters(
+				SyntaxFactory.Parameter(
+					SyntaxFactory.Identifier(name))
+					.WithType(SyntaxFactory.ParseTypeName(type)));
+
+			var updatedSyntaxTree = root.ReplaceNode(method, updatedMethod);
+
+			return document.WithSyntaxRoot(updatedSyntaxTree);
+		}
+
+		private async Task<Document> AddParametersAsync(Document document, ImmutableDictionary<string, string> properties, MethodDeclarationSyntax method, CancellationToken token)
+		{
+			var root = await document.GetSyntaxRootAsync();
+
+
+			List<ParameterSyntax> parameters = new List<ParameterSyntax>();
+
+			foreach (var prop in properties)
+			{
+				parameters.Add(
+					SyntaxFactory.Parameter(
+						SyntaxFactory.Identifier(prop.Key)).WithType(SyntaxFactory.ParseTypeName(prop.Value)));
+			}
+
+			MethodDeclarationSyntax updatedMethod = method.AddParameterListParameters(parameters.ToArray());
+
+			var updatedSyntaxTree = root.ReplaceNode(method, updatedMethod);
+
+			return document.WithSyntaxRoot(updatedSyntaxTree);
 		}
 	}
 }

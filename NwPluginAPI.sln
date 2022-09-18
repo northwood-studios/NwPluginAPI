@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWPluginAPI.Analyzers", "An
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWPluginAPI.Analyzers.CodeFixes", "Analyzers\NWPluginAPI.Analyzers.CodeFixes\NWPluginAPI.Analyzers.CodeFixes.csproj", "{2044B87B-5C3C-478A-8048-452367690DF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NwPluginAPI.Analyzers.Generator", "Analyzers\NwPluginAPI.Analyzers.Generator\NwPluginAPI.Analyzers.Generator.csproj", "{9638A1ED-142B-4487-8DAA-A24E1F42E04C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{2044B87B-5C3C-478A-8048-452367690DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2044B87B-5C3C-478A-8048-452367690DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2044B87B-5C3C-478A-8048-452367690DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9638A1ED-142B-4487-8DAA-A24E1F42E04C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9638A1ED-142B-4487-8DAA-A24E1F42E04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9638A1ED-142B-4487-8DAA-A24E1F42E04C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9638A1ED-142B-4487-8DAA-A24E1F42E04C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +53,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4BE5D776-39A9-4532-9390-C59FB45E9571} = {3CA0C582-BA36-455A-A480-8DD78BDD24D0}
 		{2044B87B-5C3C-478A-8048-452367690DF8} = {3CA0C582-BA36-455A-A480-8DD78BDD24D0}
+		{9638A1ED-142B-4487-8DAA-A24E1F42E04C} = {3CA0C582-BA36-455A-A480-8DD78BDD24D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1737D319-028C-47BB-8B5F-7E1F5DEB9264}

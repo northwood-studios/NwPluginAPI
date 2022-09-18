@@ -11,6 +11,7 @@
 	using PlayerStatsSystem;
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
+	using PluginAPI.Core.Interfaces;
 	using PluginAPI.Enums;
 	using PluginAPI.Events;
 	using TemplatePlugin.Factory;
@@ -54,7 +55,7 @@
                 Log.Info($"Player &6{attacker.Nickname}&r (&6{attacker.UserId}&r) killed &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler}");
         }
 
-        [PluginEvent(ServerEventType.LczDecontaminationStart)]
+		[PluginEvent(ServerEventType.LczDecontaminationStart)]
         void OnLczDecontaminationStarts()
         {
             Log.Info("Started LCZ decontamination.");
@@ -111,7 +112,7 @@
         [PluginEvent(ServerEventType.PlayerAimWeapon)]
         void OnPlayerAimsWeapon(MyPlayer plr, Firearm gun, bool isAiming)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) is {(isAiming ? "not aiming" : "aiming")} gun &6{gun.ItemTypeId}&r");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) is {(isAiming ? "aiming" : "not aiming")} gun &6{gun.ItemTypeId}&r");
         }
 
         [PluginEvent(ServerEventType.PlayerBanned)]
