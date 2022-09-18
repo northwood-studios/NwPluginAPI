@@ -493,7 +493,7 @@ namespace PluginAPI.Core
 		public bool IsIntercomMuted => VoiceChatMutes.QueryLocalMute(UserId, true);
 
 		/// <summary>
-		/// Gets if player is using voiec chat.
+		/// Gets if player is using voicechat.
 		/// </summary>
 		public bool IsUsingVoiceChat => PersonalRadioPlayback.IsTransmitting(ReferenceHub);
 
@@ -617,6 +617,9 @@ namespace PluginAPI.Core
 			EffectsManager = new EffectsManager(this);
 			DamageManager = new DamageManager(this);
 
+			if (!PlayersIds.ContainsKey(PlayerId))
+				PlayersIds.Add(PlayerId, ReferenceHub);
+
 			try
 			{
                 OnStart();
@@ -625,6 +628,16 @@ namespace PluginAPI.Core
 			{
 				Log.Error($"Failed executing OnStart in {GetType().Name}, error\n {ex}");
 			}
+		}
+		#endregion
+
+		#region Internal Methods
+		internal void OnInternalDestroy()
+		{
+			PlayerSharedStorage.DestroyStorage(this);
+			PlayersIds.Remove(PlayerId);
+			if (UserId != null)
+				PlayersUserIds.Remove(UserId);
 		}
 		#endregion
 

@@ -83,13 +83,20 @@ namespace NWPluginAPI.Analyzers
 		{
 			var root = await document.GetSyntaxRootAsync();
 
-			if (!properties.TryGetValue("parameterType", out string type)) return document;
-			if (!properties.TryGetValue("parameterName", out string name)) return document;
+			if (!properties.TryGetValue("eventId", out string rawEventId)) return document;
+
+			if (!int.TryParse(rawEventId, out int eventId)) return document;
+
+			if (!EventManager.Events.TryGetValue(eventId, out Event ev)) return document;
+
+			if (!properties.TryGetValue("parameters", out string rawParam)) return document;
+
+			if (!int.TryParse(rawParam, out int parameterIndex)) return document;
 
 			var updatedMethod = method.AddParameterListParameters(
 				SyntaxFactory.Parameter(
-					SyntaxFactory.Identifier(name))
-					.WithType(SyntaxFactory.ParseTypeName(type)));
+					SyntaxFactory.Identifier(ev.Parameters[parameterIndex].DefaultIdentifierName))
+					.WithType(SyntaxFactory.ParseTypeName(ev.Parameters[parameterIndex].BaseType)));
 
 			var updatedSyntaxTree = root.ReplaceNode(method, updatedMethod);
 
@@ -100,14 +107,23 @@ namespace NWPluginAPI.Analyzers
 		{
 			var root = await document.GetSyntaxRootAsync();
 
+			if (!properties.TryGetValue("eventId", out string rawEventId)) return document;
+
+			if (!int.TryParse(rawEventId, out int eventId)) return document;
+
+			if (!EventManager.Events.TryGetValue(eventId, out Event ev)) return document;
+
+			if (!properties.TryGetValue("parameters", out string rawParam)) return document;
+
+			var indexes = rawParam.Split(',').Select(x => int.Parse(x));
 
 			List<ParameterSyntax> parameters = new List<ParameterSyntax>();
 
-			foreach (var prop in properties)
+			foreach (var index in indexes)
 			{
 				parameters.Add(
 					SyntaxFactory.Parameter(
-						SyntaxFactory.Identifier(prop.Key)).WithType(SyntaxFactory.ParseTypeName(prop.Value)));
+						SyntaxFactory.Identifier(ev.Parameters[index].DefaultIdentifierName)).WithType(SyntaxFactory.ParseTypeName(ev.Parameters[index].BaseType)));
 			}
 
 			MethodDeclarationSyntax updatedMethod = method.AddParameterListParameters(parameters.ToArray());

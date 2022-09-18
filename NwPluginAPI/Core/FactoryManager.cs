@@ -37,9 +37,15 @@
         }
 
 		/// <summary>
+		/// Registers new player factory.
+		/// </summary>
+		/// <param name="plugin">The plugin object.</param>
+		public static void RegisterPlayerFactory<T>(object plugin) where T : PlayerFactory => RegisterPlayerFactory(plugin, Activator.CreateInstance<T>());
+
+		/// <summary>
 		/// Initializes factory manager.
 		/// </summary>
-        public static void Init()
+		public static void Init()
         {
             StaticUnityMethods.OnUpdate += OnUpdate;
             StaticUnityMethods.OnLateUpdate += OnLateUpdate;
@@ -103,14 +109,17 @@
 
 	            try
 	            {
-		            PlayerSharedStorage.DestroyStorage(plr);
 		            plr.OnDestroy();
 	            }
 	            catch (Exception ex)
 	            {
 		            Log.Error($"Failed executing OnDestroy in {plr.GetType().Name}, error\n {ex}");
 	            }
-	            factory.Entities.Remove(obj);
+
+				if (plr is Player p)
+					p.OnInternalDestroy();
+
+				factory.Entities.Remove(obj);
             }
         }
     }

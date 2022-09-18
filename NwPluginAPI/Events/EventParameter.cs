@@ -1,12 +1,16 @@
-﻿namespace PluginAPI.Events
+﻿using System;
+
+namespace PluginAPI.Events
 {
 	public class EventParameter
 	{
+		public Type BaseType { get; }
 		public string DefaultIdentifierName { get; }
 		
-		public EventParameter(string identifierName) 
+		public EventParameter(Type type,string defaultIdentifierName) 
 		{
-			DefaultIdentifierName = identifierName;
+			BaseType = type;
+			DefaultIdentifierName = defaultIdentifierName;
 		}
 	}
 }
