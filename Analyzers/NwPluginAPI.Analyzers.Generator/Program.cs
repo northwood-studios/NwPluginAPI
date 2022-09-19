@@ -17,11 +17,13 @@ builder.AppendLine(string.Empty);
 builder.AppendLine("public class EventParameter");
 builder.AppendLine("{");
 builder.AppendLine("	public string BaseType { get; set; }");
+builder.AppendLine("    public bool IsArray { get; set; }");
 builder.AppendLine("	public string DefaultIdentifierName { get; set; }");
 builder.AppendLine(string.Empty);
-builder.AppendLine("	public EventParameter(string baseType, string defaultIdentifierName)");
+builder.AppendLine("	public EventParameter(string baseType, bool isArray, string defaultIdentifierName)");
 builder.AppendLine("	{");
 builder.AppendLine("		BaseType = baseType;");
+builder.AppendLine("		IsArray = isArray;");
 builder.AppendLine("		DefaultIdentifierName = defaultIdentifierName;");
 builder.AppendLine("	}");
 builder.AppendLine("}");
@@ -42,7 +44,10 @@ foreach (var ev in EventManager.Events)
 		{
 			var param = ev.Value.Parameters[x];
 
-			builder.AppendLine("			new EventParameter(\"" + param.BaseType.FullName + "\", \"" + param.DefaultIdentifierName+ "\")" + (x == (ev.Value.Parameters.Length - 1) ? ") }," : ","));
+			if (param.BaseType.IsArray)
+				builder.AppendLine("			new EventParameter(\"" + param.BaseType.GetElementType()?.FullName + "\", true, \"" + param.DefaultIdentifierName+ "\")" + (x == (ev.Value.Parameters.Length - 1) ? ") }," : ","));
+			else
+				builder.AppendLine("			new EventParameter(\"" + param.BaseType.FullName + "\", false, \"" + param.DefaultIdentifierName+ "\")" + (x == (ev.Value.Parameters.Length - 1) ? ") }," : ","));
 		}
 	}
 }

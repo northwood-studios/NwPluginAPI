@@ -59,7 +59,14 @@
             {
                 foreach(var entity in factory.Entities)
                 {
-                    entity.Value.OnUpdate();
+					try
+					{
+						entity.Value.OnUpdate();
+					}
+					catch (Exception ex)
+					{
+						Log.Error($"Failed executing OnUpdate in {entity.Value.GetType().Name}, error\n {ex}");
+					}
                 }
             }
         }

@@ -3,10 +3,13 @@ using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.CodeAnalysis.Editing;
+using Microsoft.CodeAnalysis.Simplification;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Composition;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -95,8 +98,10 @@ namespace NWPluginAPI.Analyzers
 
 			var updatedMethod = method.AddParameterListParameters(
 				SyntaxFactory.Parameter(
-					SyntaxFactory.Identifier(ev.Parameters[parameterIndex].DefaultIdentifierName))
-					.WithType(SyntaxFactory.ParseTypeName(ev.Parameters[parameterIndex].BaseType)));
+						SyntaxFactory.Identifier(
+							ev.Parameters[parameterIndex].DefaultIdentifierName)).WithType(
+						SyntaxFactory.ParseTypeName(ev.Parameters[parameterIndex].BaseType + (ev.Parameters[parameterIndex].IsArray ? "[]" : string.Empty))
+							.WithAdditionalAnnotations(Simplifier.Annotation)));
 
 			var updatedSyntaxTree = root.ReplaceNode(method, updatedMethod);
 
@@ -123,7 +128,10 @@ namespace NWPluginAPI.Analyzers
 			{
 				parameters.Add(
 					SyntaxFactory.Parameter(
-						SyntaxFactory.Identifier(ev.Parameters[index].DefaultIdentifierName)).WithType(SyntaxFactory.ParseTypeName(ev.Parameters[index].BaseType)));
+						SyntaxFactory.Identifier(
+							ev.Parameters[index].DefaultIdentifierName)).WithType(
+						SyntaxFactory.ParseTypeName(ev.Parameters[index].BaseType + (ev.Parameters[index].IsArray ? "[]" : string.Empty))
+								.WithAdditionalAnnotations(Simplifier.Annotation)));
 			}
 
 			MethodDeclarationSyntax updatedMethod = method.AddParameterListParameters(parameters.ToArray());

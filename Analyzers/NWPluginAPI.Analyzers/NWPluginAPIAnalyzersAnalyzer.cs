@@ -4,10 +4,7 @@ using NWPluginAPI.Analyzers.Enums;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Reflection.Metadata;
 
 namespace NWPluginAPI.Analyzers
 {
@@ -21,9 +18,9 @@ namespace NWPluginAPI.Analyzers
 
 
 		private static readonly DiagnosticDescriptor ParameterNotRequiredRule = new DiagnosticDescriptor(ParameterNotRequiredDiagnosticId,
-			"Parameter not required", 
-			"Parameter '{0}' is not used in this event!", 
-			"Naming", 
+			"Parameter not required",
+			"Parameter '{0}' is not used in this event!",
+			"Naming",
 			DiagnosticSeverity.Error,
 			isEnabledByDefault: true);
 
@@ -66,11 +63,11 @@ namespace NWPluginAPI.Analyzers
 
 			INamedTypeSymbol eventTypeEnum = context.Compilation.GetTypeByMetadataName("PluginAPI.Enums.ServerEventType");
 
-			var eventAttribute = methodSymbol.GetAttributes().FirstOrDefault(x => x.AttributeClass.Equals(attribute));
+			var eventAttribute = methodSymbol.GetAttributes().FirstOrDefault(x => SymbolEqualityComparer.Default.Equals(x.AttributeClass, attribute));
 
 			if (eventAttribute == null) return;
 
-			var eventType = eventAttribute.ConstructorArguments.FirstOrDefault(x => x.Type.Equals(eventTypeEnum));
+			var eventType = eventAttribute.ConstructorArguments.FirstOrDefault(x => SymbolEqualityComparer.Default.Equals(x.Type, eventTypeEnum));
 
 			if (eventType.IsNull) return;
 
@@ -80,14 +77,19 @@ namespace NWPluginAPI.Analyzers
 
 			List<INamedTypeSymbol> requiredSymbols = new List<INamedTypeSymbol>();
 
-			for(int x = 0; x < ev.Parameters.Length; x++)
+			for (int x = 0; x < ev.Parameters.Length; x++)
 			{
 				requiredSymbols.Add(context.Compilation.GetTypeByMetadataName(ev.Parameters[x].BaseType));
 			}
 
-			List<ActionType> result = new List<ActionType>(ev.Parameters.Length);
+			List<ActionType> result = new List<ActionType>();
 
-			for(int x = 0; x < methodSymbol.Parameters.Length; x++)
+			for (int x = 0; x < ev.Parameters.Length; x++)
+			{
+				result.Add(ActionType.Add);
+			}
+
+			for (int x = 0; x < methodSymbol.Parameters.Length; x++)
 			{
 				var parameter = methodSymbol.Parameters[x];
 
@@ -100,7 +102,24 @@ namespace NWPluginAPI.Analyzers
 					continue;
 				}
 
-				if (!parameter.Type.TypeKind.Equals(requiredSymbols[x].TypeKind))
+				if (parameter.Type.TypeKind == requiredSymbols[x].TypeKind)
+				{
+					if (parameter.Type.SpecialType == SpecialType.System_Array && ev.Parameters[x].IsArray)
+					{
+						result[x] = ActionType.None;
+						continue;
+					}
+
+					if (ev.Parameters[x].IsArray)
+					{
+						var diagReplace = Diagnostic.Create(WrongParameterRule, parameter.Locations[0], parameter.Type.Name, requiredSymbols[x].Name);
+
+						context.ReportDiagnostic(diagReplace);
+						result[x] = ActionType.Replace;
+						continue;
+					}
+				}
+				else
 				{
 					if (requiredSymbols[x].AllInterfaces.Length != 0)
 					{
@@ -121,13 +140,16 @@ namespace NWPluginAPI.Analyzers
 				result[x] = ActionType.None;
 			}
 
-			var missingParameters = result
-				.Where(x => x == ActionType.Add)
-				.Select((action, index) => 
-					new KeyValuePair<int, EventParameter>(index, EventManager.Events[eventNum].Parameters[index]))
-				.ToArray();
+			Dictionary<int, EventParameter> missingParameters = new Dictionary<int, EventParameter>();
 
-			if (missingParameters.Length != 0)
+			for (int x = 0; x < result.Count; x++)
+			{
+				if (result[x] != ActionType.Add) continue;
+
+				missingParameters.Add(x, ev.Parameters[x]);
+			}
+
+			if (missingParameters.Count != 0)
 			{
 				Dictionary<string, string> paramsToAdd = new Dictionary<string, string>()
 				{
@@ -140,14 +162,14 @@ namespace NWPluginAPI.Analyzers
 				foreach (var missingParam in missingParameters)
 				{
 					missingParams += $"{missingParam.Key},";
-					missingParamsStr += $"{requiredSymbols[missingParam.Key].Name}, ";
+					missingParamsStr += $"{missingParam.Value.BaseType}, ";
 				}
 
-				missingParams = missingParams.Substring(missingParams.Length - 1);
+				missingParams = missingParams.Substring(0, missingParams.Length - 1);
 
 				paramsToAdd.Add("parameters", missingParams);
 
-				missingParamsStr = missingParamsStr.Substring(missingParamsStr.Length - 2);
+				missingParamsStr = missingParamsStr.Substring(0, missingParamsStr.Length - 2);
 
 				if (missingParams.Length == 1)
 				{
@@ -159,7 +181,6 @@ namespace NWPluginAPI.Analyzers
 					var diagMissingParams = Diagnostic.Create(MissingParametersRule, methodSymbol.Locations[0], ImmutableDictionary.CreateRange<string, string>(paramsToAdd), missingParamsStr);
 					context.ReportDiagnostic(diagMissingParams);
 				}
-
 			}
 		}
 	}
