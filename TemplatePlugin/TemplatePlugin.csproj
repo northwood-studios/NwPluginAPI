@@ -18,10 +18,12 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\NwPluginAPI\NwPluginAPI.csproj" />
+	  <ProjectReference Include="..\Analyzers\NWPluginAPI.Analyzers\NwPluginAPI.Analyzers.csproj" PrivateAssets="all" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="Assembly-CSharp" HintPath="$(SL_REFERENCES)\Assembly-CSharp.dll"/>
+	  <Reference Include="Assembly-CSharp" HintPath="$(SL_REFERENCES)\Assembly-CSharp.dll" />
+	  <Reference Include="Mirror" HintPath="$(SL_REFERENCES)\Mirror.dll" />
 	  <Reference Include="UnityEngine.CoreModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.CoreModule.dll" />
 	</ItemGroup>
 </Project>
