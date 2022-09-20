@@ -314,7 +314,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="type">The type of event</param>
 		/// <param name="args">The arguments of event.</param>
-		/// <returns>If false event is canceled.</returns>
+		/// <returns>If false event is cancelled.</returns>
 		public static bool ExecuteEvent(ServerEventType type, params object[] args) => ExecuteEvent<bool>(type, args);
 
 		/// <summary>
