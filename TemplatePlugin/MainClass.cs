@@ -6,6 +6,7 @@
 	using InventorySystem.Items.Firearms;
 	using InventorySystem.Items.Radio;
 	using InventorySystem.Items.Usables;
+	using LiteNetLib;
 	using MapGeneration.Distributors;
 	using PlayerRoles;
 	using PlayerStatsSystem;
@@ -14,6 +15,7 @@
 	using PluginAPI.Core.Interfaces;
 	using PluginAPI.Enums;
 	using PluginAPI.Events;
+	using System;
 	using TemplatePlugin.Factory;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 
@@ -254,7 +256,7 @@
         }
 
         [PluginEvent(ServerEventType.PlayerPreauth)]
-        void OnPreauth(string userid, string ipAddress, long expiration, CentralAuthPreauthFlags flags, string country, byte[] signature)
+        void OnPreauth(string userid, string ipAddress, long expiration, CentralAuthPreauthFlags flags, string country, byte[] signature, ConnectionRequest req, Int32 index)
         {
             Log.Info($"Player &6{userid}&r (&6{ipAddress}&r) preauthenticated from country &6{country}&r with central flags &6{flags}&r");
         }

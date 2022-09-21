@@ -246,7 +246,7 @@ namespace PluginAPI.Events
 		public static void RegisterEvents(object plugin)
 		{
 			Type type = plugin.GetType();
-			RegisterEvents(type, type);
+			RegisterEvents(type, plugin);
 		}
 
 		/// <summary>
