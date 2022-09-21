@@ -361,7 +361,12 @@ namespace PluginAPI.Events
 
 			bool isBool = typeof(T) == typeof(bool);
 			bool cancelled = false;
-			T cancellation = default;
+
+			T cancellation;
+
+			if (isBool)
+				cancellation = (T)(object)true;
+			else cancellation = default;
 
 			foreach(var plugin in ev.Invokers.Values)
 			{
@@ -384,17 +389,20 @@ namespace PluginAPI.Events
 						continue;
 					}
 					
-					if (result is null)
+					if (cancelled || result is null)
 						continue;
 
 					if (isBool)
 					{
 						if (result is bool b && b)
-							cancellation = (T)result;
+							continue;
+						
+						cancellation = (T)result;
+						cancelled = true;
 					}
 					else if (result is T r)
 					{
-						if (cancelled || !(r is IEventCancellation ecd) || !ecd.IsCancelled)
+						if (!(r is IEventCancellation ecd) || !ecd.IsCancelled)
 							continue;
 
 						cancellation = r;
