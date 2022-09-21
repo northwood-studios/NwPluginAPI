@@ -26,10 +26,19 @@
 	<PackageVersion>12.0.0-beta3</PackageVersion>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<!-- Disable automatic generation of version attribute -->
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+	</PropertyGroup>
+	
   <ItemGroup>
 	  <None Include="..\..\README.md" Pack="True" PackagePath="\" />
 	  <None Include="..\..\LICENSE" Pack="True" PackagePath="\" />
 	  <None Include="..\..\NwPluginAPI\Resources\nw_logo.jpg" Pack="True" PackagePath="\" />
+	  <None Include="..\..\NwPluginAPI\Properties\VersionInfo.cs" Pack="True" PackagePath="\Properties\" />
+	  <None Include="..\..\NwPluginAPI\PluginApiVersion.cs" Pack="True" PackagePath="\" />
   </ItemGroup>
 	
   <ItemGroup>
@@ -39,6 +48,7 @@
   </ItemGroup>
 	
   <ItemGroup>
+    <Folder Include="Properties\" />
     <Folder Include="Resources\" />
   </ItemGroup>
 </Project>
