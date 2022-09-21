@@ -13,29 +13,38 @@
 
 		<SignAssembly>False</SignAssembly>
 
-		<PackageId>PluginAPI</PackageId>
-		<Version>1.0.0</Version>
-		<Authors>Northwood Studio</Authors>
+		<PackageId>Northwood.PluginAPI</PackageId>
+		<Authors>Northwood Studios</Authors>
 		<Company>Northwood Studio</Company>
 		<Product>PluginAPI</Product>
-		<Description>Plugin API for SCP: Secret Laboratory made by Northwood Studios.</Description>
-		<PackageProjectUrl>github.com/northwood-studios/NwPluginAPI</PackageProjectUrl>
+		<Description>Official server-side plugin system for SCP: Secret Laboratory game.</Description>
+		<PackageProjectUrl>https://github.com/northwood-studios/NwPluginAPI</PackageProjectUrl>
 		<PackageIcon>Resources\nw_logo.jpg</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryUrl>github.com/northwood-studios/NwPluginAPI</RepositoryUrl>
+		<RepositoryUrl>https://github.com/northwood-studios/NwPluginAPI</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>pluginapi,scpsl</PackageTags>
 		<NeutralLanguage>en</NeutralLanguage>
-		<AssemblyVersion>1.0.0</AssemblyVersion>
-		<FileVersion>1.0.0</FileVersion>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Title>Northwood.PluginAPI</Title>
+		<Copyright>Copyright by Hubert Moszka Northwood, 2022</Copyright>
+		<PackageVersion>12.0.0-beta2</PackageVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- Disable automatic generation of version attribute -->
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />
 		<None Include="..\README.md" Pack="True" PackagePath="\" />
 		<None Include="..\LICENSE" Pack="True" PackagePath="\" />
+		<None Include="Resources\nw_logo.jpg" Pack="True" PackagePath="\Resources\" />
 	</ItemGroup>
 
 	<ItemGroup>
