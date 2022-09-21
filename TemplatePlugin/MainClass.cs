@@ -19,7 +19,7 @@
 
 	public class MainClass
     {
-        [PluginEntryPoint("Template Plugin", "1.0.0", "Just template plugin.", "Northwood")]
+        [PluginEntryPoint("Template Plugin", "1.0.0", "Just a template plugin.", "Northwood")]
         void LoadPlugin()
         {
             Log.Info("Loaded plugin, register events...");
@@ -124,7 +124,7 @@
         [PluginEvent(ServerEventType.PlayerCancelUsingItem)]
         void OnPlayerCancelsUsingItem(MyPlayer plr, UsableItem item)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) canceled using item &6{item.ItemTypeId}&r");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) cancelled using item &6{item.ItemTypeId}&r");
         }
 
         [PluginEvent(ServerEventType.PlayerChangeItem)]
@@ -174,7 +174,7 @@
         [PluginEvent(ServerEventType.PlayerDeactivatedGenerator)]
         void OnPlayerDeactivatedGenerator(MyPlayer plr, Scp079Generator gen)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) deactivated generator.");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) deactivated a generator.");
         }
 
         [PluginEvent(ServerEventType.PlayerDropAmmo)]
