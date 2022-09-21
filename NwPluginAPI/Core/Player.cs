@@ -407,15 +407,6 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets player current unit.
-		/// </summary>
-		public string CurrentUnit
-		{
-			get => ReferenceHub.characterClassManager.CurUnitName;
-			set => ReferenceHub.characterClassManager.CurUnitName = value;
-		}
-
-		/// <summary>
 		/// Gets or sets player current health;
 		/// </summary>
 		public float Health
