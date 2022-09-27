@@ -25,13 +25,6 @@
 	<Copyright>Copyright by Hubert Moszka Northwood, 2022</Copyright>
 	<PackageVersion>12.0.0-beta3</PackageVersion>
   </PropertyGroup>
-
-	<PropertyGroup>
-		<!-- Disable automatic generation of version attribute -->
-		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-	</PropertyGroup>
 	
   <ItemGroup>
 	  <None Include="..\..\README.md" Pack="True" PackagePath="\" />
