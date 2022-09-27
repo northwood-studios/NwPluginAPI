@@ -1,10 +1,15 @@
 namespace PluginAPI.Core
 {
 	using System;
+	using System.Collections.Generic;
 	using System.IO;
 	using System.Reflection;
+	using System.Runtime.InteropServices;
 	using Attributes;
+	using CommandSystem;
 	using Loader.Features;
+	using PluginAPI.Commands;
+	using RemoteAdmin;
 	using Serialization;
 
 	/// <summary>
@@ -50,7 +55,7 @@ namespace PluginAPI.Core
 		{
             if (_onUnload == null)
             {
-                Log.Warning($"Plugin {PluginName} has missing unload method!");
+                Log.Warning($"Plugin &2{PluginName}&r has missing unload method!");
                 return;
             }
 
@@ -60,7 +65,7 @@ namespace PluginAPI.Core
 			}
 			catch (Exception ex)
 			{
-				Log.Error($"Failed unloading plugin {PluginName}!\n{ex}");
+				Log.Error($"Failed unloading plugin &2{PluginName}&r!\n{ex}");
 			}
 		}
 
@@ -71,7 +76,7 @@ namespace PluginAPI.Core
 		{
 			if (_entryPoint == null)
 			{
-				Log.Error($"Failed loading plugin {PluginName}, invalid entrypoint!");
+				Log.Error($"Failed loading plugin &2{PluginName}&r, invalid entrypoint!");
 				return;
 			}
 
@@ -81,7 +86,7 @@ namespace PluginAPI.Core
 			}
 			catch (Exception ex)
 			{
-				Log.Error($"Failed loading plugin {_entryInfo.Name},\n{ex}");
+				Log.Error($"Failed loading plugin &2{_entryInfo.Name}&r,\n{ex}");
 			}
 		}
 
@@ -89,10 +94,11 @@ namespace PluginAPI.Core
 		/// Constructor
 		/// </summary>
 		/// <param name="directory">The directory of plugin.</param>
-		/// <param name="type">The type of plugin.</param>
-        public PluginHandler(PluginDirectory directory, Type type)
+		/// <param name="entryType">The type of plugin.</param>
+		/// <param name="types">The all types in plugin.</param>
+		public PluginHandler(PluginDirectory directory, Type entryType, Type[] types)
 		{
-			_plugin = Activator.CreateInstance(type);
+			_plugin = Activator.CreateInstance(entryType);
             _pluginType = _plugin.GetType();
 
             foreach (var method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
@@ -114,14 +120,28 @@ namespace PluginAPI.Core
 
 			if (_entryInfo == null)
 			{
-                Log.Error($"Missing entrypoint for plugin {PluginName}!");
+                Log.Error($"Missing entrypoint for plugin &2{PluginName}&r!");
                 return;
+			}
+
+			foreach(var type in types)
+			{
+				if (!type.IsClass) continue;
+
+				if (!typeof(ICommand).IsAssignableFrom(type)) continue;
+
+				foreach (var attributeData in type.GetCustomAttributesData())
+				{
+					if (attributeData.AttributeType != typeof(CommandHandlerAttribute)) continue;
+
+					CommandsManager.RegisterCommand(this, (Type)attributeData.ConstructorArguments[0].Value, type);
+				}
 			}
 
             if (!Directory.Exists(Path.Combine(directory.Plugins, PluginName)))
 			{
                 Directory.CreateDirectory(Path.Combine(directory.Plugins, PluginName));
-                Log.Info($"Created missing plugin directory for \"{PluginName}\".");
+                Log.Info($"Created missing plugin directory for \"&2{PluginName}&r\".");
             }
 
             foreach (var field in _pluginType.GetFields())
@@ -131,24 +151,22 @@ namespace PluginAPI.Core
                 switch (attribute)
 				{
 					case PluginConfig _:
-                        var configType = field.FieldType;
-                        var configInfo = field;
-
                         if (!File.Exists(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml")))
                         {
+                            var defaultConfig = Activator.CreateInstance(field.FieldType);
 
-                            var defaultConfig = Activator.CreateInstance(configType);
-
-                            configInfo.SetValue(_plugin, defaultConfig);
+							field.SetValue(_plugin, defaultConfig);
 
                             File.WriteAllText(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml"), YamlParser.Serializer.Serialize(defaultConfig));
-                            Log.Info($"Created missing config file for \"{PluginName}\".");
+                            Log.Info($"Created missing config file for &2{PluginName}&r.");
                         }
                         else
                         {
-                            var config = YamlParser.Deserializer.Deserialize(File.ReadAllText(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml")), configType);
-                            configInfo.SetValue(_plugin, config);
-                            Log.Info($"Loaded config file for \"{PluginName}\".");
+                            var config = YamlParser.Deserializer.Deserialize(File.ReadAllText(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml")), field.FieldType);
+							field.SetValue(_plugin, config);
+							File.WriteAllText(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml"), YamlParser.Serializer.Serialize(config));
+
+							Log.Info($"Loaded config file for &2{PluginName}&r.");
                         }
                         break;
 				}

@@ -23,7 +23,8 @@
 
 	<ItemGroup>
 	  <Reference Include="Assembly-CSharp" HintPath="$(SL_REFERENCES)\Assembly-CSharp.dll" />
-	  <Reference Include="Mirror" HintPath="$(SL_REFERENCES)\Mirror.dll" />
+		<Reference Include="CommandSystem.Core" HintPath="$(SL_REFERENCES)\CommandSystem.Core.dll" />
+		<Reference Include="Mirror" HintPath="$(SL_REFERENCES)\Mirror.dll" />
 	  <Reference Include="UnityEngine.CoreModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.CoreModule.dll" />
 	</ItemGroup>
 </Project>

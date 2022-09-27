@@ -4,6 +4,7 @@ namespace PluginAPI.Helpers
 	using System.IO;
 	using Core;
 	using Loader.Features;
+	using NorthwoodLib;
 
 	/// <summary>
 	/// Contains easy access to all important folder paths.
@@ -33,7 +34,7 @@ namespace PluginAPI.Helpers
 		/// <summary>
 		/// Gets the path to the system's AppData folder.
 		/// </summary>
-		public static string AppData { get; } = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+		public static string AppData { get; private set; }
 
 		/// <summary>
 		/// Gets the path to the "Secret Laboratory" folder, located inside AppData.
@@ -60,6 +61,12 @@ namespace PluginAPI.Helpers
 		/// </summary>
 		internal static void Setup()
 		{
+			AppData = GetHosterPolicy() ? 
+				"AppData" : 
+				Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+			if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
+
 			SecretLab = GetDirectory(AppData, "SCP Secret Laboratory");
 
 			PluginAPI = GetDirectory(SecretLab, "PluginAPI");
@@ -67,6 +74,24 @@ namespace PluginAPI.Helpers
 
 			GlobalPlugins = new PluginDirectory(GetDirectory(Plugins, "global"));
 			LocalPlugins = new PluginDirectory(GetDirectory(Plugins, Server.Port.ToString()));
+		}
+
+		internal static bool GetHosterPolicy()
+		{
+			if (!File.Exists("hoster_policy.txt"))
+				return false;
+
+			var lines = File.ReadAllLines("hoster_policy.txt");
+
+			foreach (var l in lines)
+			{
+				if (!l.Contains("gamedir_for_configs: true", StringComparison.OrdinalIgnoreCase))
+					continue;
+
+				return true;
+			}
+
+			return false;
 		}
 
 		/// <summary>

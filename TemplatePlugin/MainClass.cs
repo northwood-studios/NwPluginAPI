@@ -259,7 +259,7 @@
         void OnPreauth(string userid, string ipAddress, long expiration, CentralAuthPreauthFlags flags, string country, byte[] signature, ConnectionRequest req, Int32 index)
         {
             Log.Info($"Player &6{userid}&r (&6{ipAddress}&r) preauthenticated from country &6{country}&r with central flags &6{flags}&r");
-        }
+		}
 
         [PluginEvent(ServerEventType.PlayerReceiveEffect)]
         void OnReceiveEffect(MyPlayer plr, PlayerEffect effect)

@@ -405,7 +405,6 @@ namespace PluginAPI.Events
 						if (result is bool b && b)
 							continue;
 
-						Log.Info($"ISBOOL {type} {cancellation}");
 						cancellation = (T)result;
 						cancelled = true;
 					}
@@ -414,7 +413,6 @@ namespace PluginAPI.Events
 						if (!(r is IEventCancellation ecd) || !ecd.IsCancelled)
 							continue;
 
-						Log.Info($"Custom RESULT {type} {cancellation}");
 						cancellation = r;
 						cancelled = true;
 					}
@@ -425,7 +423,6 @@ namespace PluginAPI.Events
 				}
 			}
 
-			Log.Info($"{type} {cancellation}");
 			return cancellation;
 		}
     }

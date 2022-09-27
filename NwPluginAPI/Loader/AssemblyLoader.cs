@@ -9,6 +9,7 @@ namespace PluginAPI.Loader
     using Core.Extensions;
     using Helpers;
     using Features;
+	using UnityEngine;
 
 	/// <summary>
 	/// Manages initialization of plugin system and loading of plugins.
@@ -97,15 +98,17 @@ namespace PluginAPI.Loader
                 if (!TryGetAssembly(dependencyPath, out Assembly assembly))
 					continue;
 
-                foreach (var type in assembly.GetTypes())
+				var types = assembly.GetTypes();
+
+				foreach (var entryType in types)
 				{
-					if (!type.IsValidEntrypoint()) continue;
+					if (!entryType.IsValidEntrypoint()) continue;
 
                     if (!Plugins.ContainsKey(assembly)) Plugins.Add(assembly, new Dictionary<Type, PluginHandler>());
 
-					if (!Plugins[assembly].ContainsKey(type))
+					if (!Plugins[assembly].ContainsKey(entryType))
 					{
-						Plugins[assembly].Add(type, new PluginHandler(directory, type));
+						Plugins[assembly].Add(entryType, new PluginHandler(directory, entryType, types));
 						successes++;
 					}
 				}
