@@ -200,7 +200,7 @@
         [PluginEvent(ServerEventType.PlayerEscape)]
         void OnPlayerEscaped(MyPlayer plr, RoleTypeId role)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) escaped as &6{role}&r.");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) escaped as &6{plr.Role}&r and new role is &6{role}&r.");
         }
 
         [PluginEvent(ServerEventType.PlayerHandcuff)]
@@ -259,7 +259,7 @@
         void OnPreauth(string userid, string ipAddress, long expiration, CentralAuthPreauthFlags flags, string country, byte[] signature, ConnectionRequest req, Int32 index)
         {
             Log.Info($"Player &6{userid}&r (&6{ipAddress}&r) preauthenticated from country &6{country}&r with central flags &6{flags}&r");
-        }
+		}
 
         [PluginEvent(ServerEventType.PlayerReceiveEffect)]
         void OnReceiveEffect(MyPlayer plr, PlayerEffect effect)

@@ -350,6 +350,12 @@ namespace PluginAPI.Events
 			{
 				var paramType = ev.Parameters[x].BaseType;
 
+				if (args[x] == null)
+				{
+					constructEventParameters.Add(null);
+					continue;
+				}
+
                 if (paramType == typeof(IPlayer))
 				{
 					indexesToRegenerate.Add(new IndexInfo { Index = x, Type = paramType });
@@ -365,7 +371,9 @@ namespace PluginAPI.Events
 			T cancellation;
 
 			if (isBool)
+			{
 				cancellation = (T)(object)true;
+			}
 			else cancellation = default;
 
 			foreach(var plugin in ev.Invokers.Values)
@@ -396,7 +404,7 @@ namespace PluginAPI.Events
 					{
 						if (result is bool b && b)
 							continue;
-						
+
 						cancellation = (T)result;
 						cancelled = true;
 					}
@@ -414,7 +422,7 @@ namespace PluginAPI.Events
 					}
 				}
 			}
-			
+
 			return cancellation;
 		}
     }
