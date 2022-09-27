@@ -200,7 +200,7 @@
         [PluginEvent(ServerEventType.PlayerEscape)]
         void OnPlayerEscaped(MyPlayer plr, RoleTypeId role)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) escaped as &6{role}&r.");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) escaped as &6{plr.Role}&r and new role is &6{role}&r.");
         }
 
         [PluginEvent(ServerEventType.PlayerHandcuff)]
