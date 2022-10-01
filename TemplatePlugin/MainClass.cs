@@ -10,9 +10,9 @@
 	using MapGeneration.Distributors;
 	using PlayerRoles;
 	using PlayerStatsSystem;
+	using PluginAPI.Commands.Structs;
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
-	using PluginAPI.Core.Interfaces;
 	using PluginAPI.Enums;
 	using PluginAPI.Events;
 	using System;
@@ -30,6 +30,14 @@
             FactoryManager.RegisterPlayerFactory(this, new MyPlayerFactory());
             Log.Info("Registered player factory!");
         }
+
+
+		[PluginCommand("testplugin", "Test plugin with new system.", CommandType.RemoteAdmin)]
+		[PluginCommandAliases("tstplugin", "test")]
+		CommandResponse OnCommandTestPlugin(MyPlayer invoker, string text)
+		{
+			return CommandResponse.Success($"Thanks {text}");
+		}
 
         [PluginEvent(ServerEventType.PlayerJoined)]
         void OnPlayerJoin(MyPlayer player)

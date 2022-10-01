@@ -48,9 +48,6 @@ namespace PluginAPI.Loader
 			Log.Info("Loading of dependencies and plugins in progress...");
 			IsLoaded = true;
 
-			if (StartupArgs.Args.Any(arg => string.Equals(arg, "-disableAnsiColors", StringComparison.OrdinalIgnoreCase)))
-				Log.DisableBetterColors = true;
-
 			Paths.Setup();
 			FactoryManager.Init();
 

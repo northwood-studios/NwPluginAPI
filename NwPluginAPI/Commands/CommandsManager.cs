@@ -2,14 +2,17 @@
 {
 	using System;
 	using System.Collections.Generic;
-	
+	using System.Reflection;
 	using CommandSystem;
-
+	using PluginAPI.Commands.Structs;
 	using PluginAPI.Core;
+	using PluginAPI.Core.Attributes;
 	using RemoteAdmin;
 
 	public class CommandsManager
 	{
+		private static readonly Dictionary<Type, object> CommandHandlers = new Dictionary<Type, object>();
+
 		private static readonly Dictionary<Type, Dictionary<string, Command>> _registeredCommands = new Dictionary<Type, Dictionary<string, Command>>()
 		{
 			// Console commands.
@@ -66,6 +69,66 @@
 			commands.Add(command.Object.Command, command);
 			Log.Info($"&7[{_commandHandlerToName[commandHandler]}&7]&r Registered command &6{command.Object.Command}&r in plugin &6{handler.PluginName}&r!");
 			return true;
+		}
+
+		/// <summary>
+		/// Registers comamnds in plugin.
+		/// </summary>
+		/// <param name="plugin">The object of plugin.</param>
+		public static void RegisterCommands(object plugin)
+		{
+			Type type = plugin.GetType();
+			RegisterEvents(type, plugin);
+		}
+
+		/// <summary>
+		/// Registers comamnds in type of plugin.
+		/// </summary>
+		/// <param name="plugin">The object of plugin.</param>
+		public static void RegisterCommands<T>(object plugin) where T : Type
+		{
+			if (!CommandHandlers.TryGetValue(typeof(T), out object handler))
+			{
+				handler = Activator.CreateInstance(typeof(T));
+				CommandHandlers.Add(typeof(T), handler);
+			}
+
+			RegisterEvents(plugin.GetType(), handler);
+		}
+
+		static void RegisterEvents(Type pluginType, object handler)
+		{
+			foreach (var method in handler.GetType().GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
+			{
+				var attributes = method.GetCustomAttributes<Attribute>();
+
+				PluginCommand command = null;
+				PluginCommandAliases commandAliases = null;
+
+				foreach(var attribute in attributes)
+				{
+					switch (attribute)
+					{
+						case PluginCommand cmd:
+							command = cmd;
+							break;
+						case PluginCommandAliases aliases:
+							commandAliases = aliases;
+							break;
+					}
+				}
+
+				if (command == null) continue;
+
+				if (method.ReturnType != typeof(CommandResponse))
+				{
+					Log.Error($"Command &6{command.Name}&r (&6{method.Name}&r) has wrong return type &6{method.ReturnType.Name}&r, required &6CommandResponse&r!");
+					continue;
+				}
+
+
+
+			}
 		}
 	}
 }

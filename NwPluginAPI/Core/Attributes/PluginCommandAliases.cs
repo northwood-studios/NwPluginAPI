@@ -7,7 +7,7 @@ namespace PluginAPI.Core.Attributes
 	{
 		public string[] Aliases { get; set; }
 
-		public PluginCommandAliases(string[] aliases)
+		public PluginCommandAliases(params string[] aliases)
 		{
 			Aliases = aliases;
 		}
