@@ -23,57 +23,43 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets a value if warhead is detonated.
 		/// </summary>
-		public static bool IsDetonated => Server.Instance.GetComponent<AlphaWarheadController>().detonated;
+		public static bool IsDetonated => AlphaWarheadController.Detonated;
 
 		/// <summary>
-		/// Gets a value if warhead detonation is in prgoress.
+		/// Gets a value if warhead detonation is in progress.
 		/// </summary>
-		public static bool IsDetonationInProgress => Server.Instance.GetComponent<AlphaWarheadController>().inProgress;
-
-		/// <summary>
-		/// Gets a value if detonation can be started.
-		/// </summary>
-		public static bool CanBeStarted => Server.Instance.GetComponent<AlphaWarheadController>().CanDetonate;
+		public static bool IsDetonationInProgress => AlphaWarheadController.InProgress;
 
 		/// <summary>
 		/// Gets or sets a time of detonation.
 		/// </summary>
 		public static float DetonationTime
 		{
-			get => Server.Instance.GetComponent<AlphaWarheadController>().timeToDetonation;
-			set => Server.Instance.GetComponent<AlphaWarheadController>().timeToDetonation = value;
+			get => AlphaWarheadController.TimeUntilDetonation;
+			set => Server.Instance.GetComponent<AlphaWarheadController>().ForceTime(value);
 		}
-
-		/// <summary>
-		/// Gets a real detonation time.
-		/// </summary>
-		public static float RealDetonationTime => Server.Instance.GetComponent<AlphaWarheadController>().RealDetonationTime();
 
 		#region Detonation
 		/// <summary>
 		/// Starts the detonation countdown.
 		/// </summary>
-		public static void Start()
+		/// <param name="isAutomatic">Determines whether the detonation is automatic.</param>
+		/// <param name="suppressSubtitles">Determines whether subtitles should be suppressed.</param>
+		public static void Start(bool isAutomatic = true, bool suppressSubtitles = false)
 		{
 			Server.Instance.GetComponent<AlphaWarheadController>().InstantPrepare();
-			Server.Instance.GetComponent<AlphaWarheadController>().StartDetonation();
+			Server.Instance.GetComponent<AlphaWarheadController>().StartDetonation(isAutomatic, suppressSubtitles);
 		}
 
 		/// <summary>
 		/// Stops the detonation countdown.
 		/// </summary>
-		public static void Stop()
-		{
-			Server.Instance.GetComponent<AlphaWarheadController>().CancelDetonation();
-		}
+		public static void Stop() => Server.Instance.GetComponent<AlphaWarheadController>().CancelDetonation();
 
 		/// <summary>
 		/// Detonate warhead.
 		/// </summary>
-		public static void Detonate()
-		{
-			Server.Instance.GetComponent<AlphaWarheadController>().StartDetonation(instant: true);
-		}
+		public static void Detonate() => Server.Instance.GetComponent<AlphaWarheadController>().ForceTime(0);
 		#endregion
 
 		#region Shake Effect
