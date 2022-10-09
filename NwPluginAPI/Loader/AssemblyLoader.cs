@@ -113,6 +113,10 @@ namespace PluginAPI.Loader
 					}
 				}
 			}
+
+            if (successes > 0)
+	            CustomNetworkManager.Modded = true;
+            
 			Log.Info($"Loaded &2{successes}&r/&2{files.Length}&r plugins.");
 		}
 
