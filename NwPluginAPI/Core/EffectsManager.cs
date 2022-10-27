@@ -15,55 +15,74 @@ namespace PluginAPI.Core
 		/// <param name="plr">The player.</param>
 		public EffectsManager(Player plr) => _player = plr;
 
-		#region Enable/Disable
 		/// <summary>
-		/// Enables effect on player.
+		/// Changes the state of a <see cref="StatusEffectBase">status effect</see> on the <see cref="Player"/>.
 		/// </summary>
-		/// <typeparam name="T">The type of effect.</typeparam>
-		/// <param name="duration">The duration of effect.</param>
-		/// <param name="addDurationIfActive">If effect is active duration will be increased.</param>
-		public void EnableEffect<T>(float duration = 0f, bool addDurationIfActive = false) where T : PlayerEffect => _player.ReferenceHub.playerEffectsController.EnableEffect<T>(duration, addDurationIfActive);
+		/// <param name="intensity">The effect's new intensity.</param>
+		/// <param name="duration">The effect's new duration.</param>
+		/// <param name="addDuration">Whether the duration will be forced set or added to it's current one.</param>
+		/// <returns>Whether an effect was found.</returns>
+		public T ChangeState<T>(byte intensity, float duration = 0f, bool addDuration = false) where T : StatusEffectBase =>
+			_player.ReferenceHub.playerEffectsController.ChangeState<T>(intensity, duration, addDuration);
 
 		/// <summary>
-		/// Enables effect on player.
+		/// Changes the state of a <see cref="StatusEffectBase">status effect</see> on the <see cref="Player"/>.
 		/// </summary>
-		/// <param name="effect">The type of effect.</param>
-		/// <param name="duration">The duration of effect.</param>
-		/// <param name="addDurationIfActive">If effect is active duration will be increased.</param>
-		public void EnableEffect(PlayerEffect effect, float duration = 0f, bool addDurationIfActive = false) => _player.ReferenceHub.playerEffectsController.EnableEffect(effect, duration, addDurationIfActive);
+		/// <param name="effectName">The string that will be used to lookup the effect.</param>
+		/// <param name="intensity">The effect's new intensity.</param>
+		/// <param name="duration">The effect's new duration.</param>
+		/// <param name="addDuration">Whether the duration will be forced set or added to it's current one.</param>
+		/// <returns>Whether an effect was found.</returns>
+		public StatusEffectBase ChangeState(string effectName, byte intensity, float duration = 0f, bool addDuration = false) =>
+			_player.ReferenceHub.playerEffectsController.ChangeState(effectName, intensity, duration, addDuration);
 
 		/// <summary>
-		/// Enables effect on player.
+		/// Disables all <see cref="StatusEffectBase">status effects</see>.
 		/// </summary>
-		/// <param name="name">The name of effect.</param>
-		/// <param name="duration">The duration of effect.</param>
-		/// <param name="addDurationIfActive">If effect is active duration will be increased.</param>
-		/// <returns>If player effect was successfully enabled.</returns>
-		public bool EnableEffect(string name, float duration = 0f, bool addDurationIfActive = false) => _player.ReferenceHub.playerEffectsController.EnableByString(name, duration, addDurationIfActive);
+		public void DisableAllEffects() => _player.ReferenceHub.playerEffectsController.DisableAllEffects();
 
 		/// <summary>
-		/// Disables effect on player.
+		/// Enables a specific <see cref="StatusEffectBase">status effect</see> on the <see cref="Player"/>.
 		/// </summary>
-		/// <typeparam name="T">The type of effect.</typeparam>
-		public void DisableEffect<T>() where T : PlayerEffect => _player.ReferenceHub.playerEffectsController.DisableEffect<T>();
-		#endregion
-
-		#region Intensity
-		/// <summary>
-		/// Changes player effect intensity.
-		/// </summary>
-		/// <typeparam name="T">The type of player effect.</typeparam>
-		/// <param name="intensity">The intensity amount.</param>
-		public void ChangeEffectIntensity<T>(byte intensity) where T : PlayerEffect => _player.ReferenceHub.playerEffectsController.ChangeEffectIntensity<T>(intensity);
+		/// <typeparam name="T">The specified effect that will be looked for.</typeparam>
+		/// <param name="duration">The effect's new duration, by default the effect is.</param>
+		/// <param name="addDuration">Whether the duration will be forced set or added to it's current one.</param>
+		/// <returns>The <see cref="StatusEffectBase"/> instance of <typeparamref name="T"/>, otherwise <see langword="null"/>.</returns>
+		public T EnableEffect<T>(float duration = 0f, bool addDuration = false) where T : StatusEffectBase =>
+			_player.ReferenceHub.playerEffectsController.EnableEffect<T>(duration, addDuration);
 
 		/// <summary>
-		/// Changes player effect intensity.
+		/// Disables a specific <see cref="StatusEffectBase">status effect</see> on the <see cref="Player"/>.
 		/// </summary>
-		/// <param name="name">The name of effect.</param>
-		/// <param name="intensity">The intensity amount.</param>
-		/// <param name="duration">The duration of effect.</param>
-		/// <returns>If player effect was successfully changed.</returns>
-		public bool ChangeEffectIntensity(string name, byte intensity, float duration = 0) => _player.ReferenceHub.playerEffectsController.ChangeByString(name, intensity, duration);
-		#endregion
+		/// <typeparam name="T">The specified effect that will be looked for.</typeparam>
+		/// <returns>The <see cref="StatusEffectBase"/> instance of <typeparamref name="T"/>, otherwise <see langword="null"/>.</returns>
+		public T DisableEffect<T>() where T : StatusEffectBase =>
+			_player.ReferenceHub.playerEffectsController.DisableEffect<T>();
+
+		/// <summary>
+		/// Gets a specific <see cref="StatusEffectBase"/>.
+		/// </summary>
+		/// <typeparam name="T">The specified effect that will be looked for.</typeparam>
+		/// <returns>The <see cref="StatusEffectBase"/> instance of <typeparamref name="T"/>, otherwise <see langword="null"/>.</returns>
+		public T GetEffect<T>() where T : StatusEffectBase =>
+			_player.ReferenceHub.playerEffectsController.GetEffect<T>();
+
+		/// <summary>
+		/// Attempts to find a <see cref="StatusEffectBase"/> and safely casts it.
+		/// </summary>
+		/// <typeparam name="T">The specified effect that will be looked for.</typeparam>
+		/// <param name="statusEffect">The found player effect.</param>
+		/// <returns>Whether a player effect was found. (And was cast successfully)</returns>
+		public bool TryGetEffect<T>(out T statusEffect) where T : StatusEffectBase =>
+			_player.ReferenceHub.playerEffectsController.TryGetEffect(out statusEffect);
+
+		/// <summary>
+		/// Attempts to find a <see cref="StatusEffectBase"/> based on the input string.
+		/// </summary>
+		/// <param name="effectName">The string that will be used to lookup the effect.</param>
+		/// <param name="statusEffect">The returned player effect, if any was found. Otherwise it will be null.</param>
+		/// <returns>Whether an effect was found.</returns>
+		public bool TryGetEffect(string effectName, out StatusEffectBase statusEffect) =>
+			_player.ReferenceHub.playerEffectsController.TryGetEffect(effectName, out statusEffect);
 	}
 }
