@@ -262,7 +262,7 @@
 		}
 
         [PluginEvent(ServerEventType.PlayerReceiveEffect)]
-        void OnReceiveEffect(MyPlayer plr, PlayerEffect effect)
+        void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect)
         {
             Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) received effect &6{effect}&r.");
         }
