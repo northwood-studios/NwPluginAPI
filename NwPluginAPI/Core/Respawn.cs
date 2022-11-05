@@ -8,12 +8,12 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the amount of NTF tickets.
 		/// </summary>
-		public static int NtfTickets => RespawnTickets.Singleton.GetAvailableTickets(SpawnableTeamType.NineTailedFox);
+		public static float NtfTickets => RespawnTokensManager.GetTeamDominance(SpawnableTeamType.NineTailedFox);
 
 		/// <summary>
 		/// Gets the amount of chaos tickets.
 		/// </summary>
-		public static int ChaosTickets => RespawnTickets.Singleton.GetAvailableTickets(SpawnableTeamType.ChaosInsurgency);
+		public static float ChaosTickets => RespawnTokensManager.GetTeamDominance(SpawnableTeamType.ChaosInsurgency);
 
 		/// <summary>
 		/// Gets the next team which will be spawned
@@ -25,9 +25,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="team">The team type.</param>
 		/// <param name="amount">The amount of tickets.</param>
-		/// <param name="overrideLocks"></param>
-		/// <returns></returns>
-		public static bool AddTickets(SpawnableTeamType team, int amount, bool overrideLocks = false) => RespawnTickets.Singleton.GrantTickets(team, amount, overrideLocks);
+		public static void AddTickets(SpawnableTeamType team, float amount) => RespawnTokensManager.GrantTokens(team, amount);
 
 		/// <summary>
 		/// Spawns specific team.

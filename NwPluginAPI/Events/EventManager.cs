@@ -253,7 +253,7 @@ namespace PluginAPI.Events
 		/// Registers events in type of plugin.
 		/// </summary>
 		/// <param name="plugin">The object of plugin.</param>
-		public static void RegisterEvents<T>(object plugin) where T : Type
+		public static void RegisterEvents<T>(object plugin) where T : class
 		{
 			if (!EventHandlers.TryGetValue(typeof(T), out object handler))
 			{

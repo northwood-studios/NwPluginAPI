@@ -12,7 +12,6 @@
 	using PlayerStatsSystem;
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
-	using PluginAPI.Core.Interfaces;
 	using PluginAPI.Enums;
 	using PluginAPI.Events;
 	using System;
@@ -26,6 +25,7 @@
         {
             Log.Info("Loaded plugin, register events...");
             EventManager.RegisterEvents(this);
+			EventManager.RegisterEvents<EventHandlers>(this);
             Log.Info($"Registered events, config &2&b{PluginConfig.TestConfig}&B&r, register factory...");
             FactoryManager.RegisterPlayerFactory(this, new MyPlayerFactory());
             Log.Info("Registered player factory!");
