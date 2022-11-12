@@ -274,15 +274,15 @@
         }
 
         [PluginEvent(ServerEventType.PlayerChangeRole)]
-        void OnChangeRole(MyPlayer plr, PlayerRoleBase oldRole, PlayerRoleBase newRole, RoleChangeReason reason)
+        void OnChangeRole(MyPlayer plr, PlayerRoleBase oldRole, RoleTypeId newRole, RoleChangeReason reason)
         {
 			if (oldRole == null)
 			{
-				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed role to &6{newRole.RoleName}&r with reason &6{reason}&r");
+				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed role to &6{newRole}&r with reason &6{reason}&r");
 			}
 			else
 			{
-				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed role from &6{oldRole.RoleName}&r to &6{newRole.RoleName}&r with reason &6{reason}&r");
+				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed role from &6{oldRole.RoleName}&r to &6{newRole}&r with reason &6{reason}&r");
 			}
 		}
 

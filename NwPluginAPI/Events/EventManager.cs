@@ -21,6 +21,7 @@ namespace PluginAPI.Events
 	using Core.Interfaces;
 	using Enums;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
+	using Respawning;
 
 	public static class EventManager
 	{
@@ -39,8 +40,8 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerLeft, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.PlayerDeath, new Event(
-				new EventParameter(typeof(IPlayer), "player"), 
-				new EventParameter(typeof(IPlayer), "attacker"), 
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "attacker"),
 				new EventParameter(typeof(DamageHandlerBase), "damageHandler")) },
 			{ ServerEventType.LczDecontaminationStart, new Event() },
 			{ ServerEventType.LczDecontaminationAnnouncement, new Event(
@@ -55,22 +56,22 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlaceBlood, new Event() },
 			{ ServerEventType.PlaceBulletHole, new Event() },
 			{ ServerEventType.PlayerActivateGenerator, new Event(
-				new EventParameter(typeof(IPlayer), "player"), 
+				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Scp079Generator), "generator")) },
 			{ ServerEventType.PlayerAimWeapon, new Event(
-				new EventParameter(typeof(IPlayer), "player"), 
-				new EventParameter(typeof(Firearm), "firearm"), 
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Firearm), "firearm"),
 				new EventParameter(typeof(bool), "isAiming")) },
 			{ ServerEventType.PlayerBanned, new Event(
-				new EventParameter(typeof(IPlayer), "player"), 
-				new EventParameter(typeof(IPlayer), "issuer"), 
-				new EventParameter(typeof(string), "reason"), 
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "issuer"),
+				new EventParameter(typeof(string), "reason"),
 				new EventParameter(typeof(long), "duration")) },
 			{ ServerEventType.PlayerCancelUsingItem, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(UsableItem), "item")) },
 			{ ServerEventType.PlayerChangeItem, new Event(
-				new EventParameter(typeof(IPlayer), "player"), 
+				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(ushort), "oldItem"),
 				new EventParameter(typeof(ushort), "newItem")) },
 			{ ServerEventType.PlayerChangeRadioRange, new Event(
@@ -164,7 +165,7 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerChangeRole, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(PlayerRoleBase), "oldRole"),
-				new EventParameter(typeof(PlayerRoleBase), "newRole"),
+				new EventParameter(typeof(RoleTypeId), "newRole"),
 				new EventParameter(typeof(RoleChangeReason), "changeReason")) },
 			{ ServerEventType.PlayerSearchPickup, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
@@ -216,6 +217,36 @@ namespace PluginAPI.Events
 			{ ServerEventType.RoundRestart, new Event() },
 			{ ServerEventType.RoundStart, new Event() },
 			{ ServerEventType.WaitingForPlayers, new Event() },
+			{ ServerEventType.WarheadStart, new Event(
+				new EventParameter(typeof(bool), "isAutomatic"),
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.WarheadStop, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.WarheadDetonation, new Event() },
+			{ ServerEventType.PlayerMuted, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "isIntercom")) },
+			{ ServerEventType.PlayerUnmuted, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "isIntercom")) },
+			{ ServerEventType.PlayerCheckReservedSlot, new Event(
+				new EventParameter(typeof(string), "userid"),
+				new EventParameter(typeof(bool), "hasReservedSlot")) },
+			{ ServerEventType.PlayerRemoteAdminCommand, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(string), "command"),
+				new EventParameter(typeof(string[]), "arguments")) },
+			{ ServerEventType.PlayerGameConsoleCommand, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(string), "command"),
+				new EventParameter(typeof(string[]), "arguments")) },
+			{ ServerEventType.ConsoleCommand, new Event(
+				new EventParameter(typeof(string), "command"),
+				new EventParameter(typeof(string[]), "arguments")) },
+			{ ServerEventType.TeamRespawn, new Event(
+				new EventParameter(typeof(SpawnableTeamType), "team")) },
+			{ ServerEventType.TeamRespawnSelected, new Event(
+				new EventParameter(typeof(SpawnableTeamType), "team")) },
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
@@ -262,14 +293,21 @@ namespace PluginAPI.Events
 			}
 
 			RegisterEvents(plugin.GetType(), handler);
-		} 
+		}
 
 		/// <summary>
-		/// Registers events in plugin.
+		/// Registers events in type of plugin.
 		/// </summary>
 		/// <param name="plugin">The object of plugin.</param>
 		/// <param name="eventHandler">The event handler.</param>
-        static void RegisterEvents(Type plugin, object eventHandler)
+		public static void RegisterEvents(object plugin, object eventHandler) => RegisterEvents(plugin.GetType(), eventHandler);
+
+		/// <summary>
+		/// Registers events in plugin.
+		/// </summary>>The o
+		/// <param name="plugin"bject of plugin.</param>
+		/// <param name="eventHandler">The event handler.</param>
+		static void RegisterEvents(Type plugin, object eventHandler)
 		{
             foreach (var method in eventHandler.GetType().GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
