@@ -54,19 +54,19 @@
 		[PluginEvent(ServerEventType.PlayerRemoteAdminCommand)]
 		public void OnPlayerRemoteadminCommand(MyPlayer player, string command, string[] arguments)
 		{
-			Log.Info($"&7[&1RemoteAdmin&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r with arguemnts &6{string.Join(", ", arguments)}&r");
+			Log.Info($"&7[&1RemoteAdmin&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r{(arguments.Length != 0 ? $"with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}");
 		}
 
 		[PluginEvent(ServerEventType.PlayerGameConsoleCommand)]
 		public void OnPlayerGameconsoleCommand(MyPlayer player, string command, string[] arguments)
 		{
-			Log.Info($"&7[&3GameConsole&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r with arguemnts &6{string.Join(", ", arguments)}&r");
+			Log.Info($"&7[&3GameConsole&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r{(arguments.Length != 0 ? $"with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}");
 		}
 
 		[PluginEvent(ServerEventType.ConsoleCommand)]
 		public void OnConsoleCommand(string command, string[] arguments)
 		{
-			Log.Info($"&7[&2Console&7]&r Server used command &6{command}&r with arguemnts &6{string.Join(", ", arguments)}&r");
+			Log.Info($"&7[&2Console&7]&r Server used command &6{command}&r{(arguments.Length != 0 ? $"with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}");
 		}
 
 		[PluginEvent(ServerEventType.TeamRespawnSelected)]
