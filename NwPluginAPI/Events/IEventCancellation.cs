@@ -33,6 +33,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="seconds">The delay in seconds.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>Event cancellation data</returns>
 		public static PreauthCancellationData RejectDelay(byte seconds, bool isForced)
 		{
 			if (seconds < 1 || seconds > 25)
@@ -46,6 +47,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="port">The new server port.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>Event cancellation data</returns>
 		public static PreauthCancellationData RejectRedirect(ushort port, bool isForced) => new PreauthCancellationData(RejectionReason.Redirect, isForced, port: port);
 
 		/// <summary>
@@ -54,6 +56,7 @@ namespace PluginAPI.Events
 		/// <param name="banReason">The ban reason.</param>
 		/// <param name="expiration">The ban expiration time.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>Event cancellation data</returns>
 		public static PreauthCancellationData RejectBanned(string banReason, DateTime expiration, bool isForced) =>
 			RejectBanned(banReason, expiration.Ticks, isForced);
 
@@ -63,6 +66,7 @@ namespace PluginAPI.Events
 		/// <param name="banReason">The ban reason.</param>
 		/// <param name="expiration">The ban expiration time in .NET Ticks.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>Event cancellation data</returns>
 		// ReSharper disable once MemberCanBePrivate.Global
 		public static PreauthCancellationData RejectBanned(string banReason, long expiration, bool isForced)
 		{
@@ -77,6 +81,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="customReason">Custom rejection reason.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>Event cancellation data</returns>
 		public static PreauthCancellationData Reject(string customReason, bool isForced)
 		{
 			if (string.IsNullOrEmpty(customReason) || customReason.Length > 400)
@@ -90,6 +95,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="reason">Rejection reason.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>Event cancellation data</returns>
 		public static PreauthCancellationData Reject(RejectionReason reason, bool isForced)
 		{
 			switch (reason)
@@ -110,11 +116,13 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="writer">The <see cref="NetDataWriter"/> instance.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>Event cancellation data</returns>
 		public static PreauthCancellationData Reject(NetDataWriter writer, bool isForced) => new PreauthCancellationData(RejectionReason.NotSpecified, isForced, writer: writer);
 
 		/// <summary>
 		/// Accepts the connection.
 		/// </summary>
+		/// <returns>Event cancellation data</returns>
 		public static PreauthCancellationData Accept() =>
 			new PreauthCancellationData(RejectionReason.NotSpecified, false, isCancelled: false);
 		
@@ -176,5 +184,37 @@ namespace PluginAPI.Events
 
 			return writer;
 		}
+	}
+
+	/// <summary>
+	/// Preauth Event Cancellation Data
+	/// </summary>
+	public readonly struct PlayerCheckReservedSlotCancellationData : IEventCancellation
+	{
+		public bool IsCancelled { get; }
+
+		// ReSharper disable once MemberCanBePrivate.Global
+		public readonly bool HasReservedSlot;
+
+		private PlayerCheckReservedSlotCancellationData(bool isCancelled, bool hasReservedSlot)
+		{
+			IsCancelled = isCancelled;
+			HasReservedSlot = hasReservedSlot;
+		}
+
+		/// <summary>
+		/// Doesn't override the reserved slot check.
+		/// </summary>
+		/// <returns>Event cancellation data</returns>
+		public static PlayerCheckReservedSlotCancellationData LeaveUnchanged() =>
+			new PlayerCheckReservedSlotCancellationData(false, false);
+
+		/// <summary>
+		/// Overrides reserved slot check.
+		/// </summary>
+		/// <param name="hasReservedSlot">Indicates whether the player has a reserved slot or not.</param>
+		/// <returns>Event cancellation data</returns>
+		public static PlayerCheckReservedSlotCancellationData Override(bool hasReservedSlot) =>
+			new PlayerCheckReservedSlotCancellationData(true, hasReservedSlot);
 	}
 }
