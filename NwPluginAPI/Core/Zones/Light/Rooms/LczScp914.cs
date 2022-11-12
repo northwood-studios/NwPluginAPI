@@ -10,13 +10,13 @@ namespace PluginAPI.Core.Zones.Light.Rooms
 
 	public class LczScp914 : LczRoom
 	{
-		internal static LczScp914 Instance;
+		/*internal static LczScp914 Instance;
 
 		public static RoomLight RoomLights => Instance.Lights;
 
 		public static RoomIdentifier RoomIdentifier => Instance.Identifier;
 
-		public static PryableDoor Gate => null;
+		public static PryableDoor Gate => null;*/
 
 		/// <summary>
 		/// Gets the intake chamber <see cref="Transform"/>.

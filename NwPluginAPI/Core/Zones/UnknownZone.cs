@@ -5,9 +5,9 @@ namespace PluginAPI.Core.Zones
 	/// </summary>
 	public class UnknownZone : FacilityZone
 	{
-		internal static UnknownZone Instance;
+		/*internal static UnknownZone Instance;
 
 		/// <inheritdoc/>
-		public override MapGeneration.FacilityZone ZoneType { get; } = MapGeneration.FacilityZone.Other;
+		public override MapGeneration.FacilityZone ZoneType { get; } = MapGeneration.FacilityZone.Other;*/
 	}
 }

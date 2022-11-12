@@ -248,7 +248,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="command">The command name.</param>
 		/// <param name="sender">The <see cref="CommandSender"/> running the command.</param>
-		public static void RunCommand(string command, CommandSender sender = null) => GameCore.Console.singleton.TypeCommand(command, sender);
+		public static string RunCommand(string command, CommandSender sender = null) => ServerConsole.EnterCommand(command, sender);
 
 		/// <summary>
 		/// Shows a broadcast to the player.
