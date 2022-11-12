@@ -1,0 +1,1569 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Server
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Server
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PluginAPI.Core.Server">
+  
+  
+  <h1 id="PluginAPI_Core_Server" data-uid="PluginAPI.Core.Server" class="text-break">Class Server
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="PluginAPI.Core.Player.html">Player</a></div>
+    <div class="level2"><span class="xref">Server</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PluginAPI.Core.Interfaces.IPlayer.html">IPlayer</a></div>
+    <div><a class="xref" href="PluginAPI.Core.Interfaces.IEntity.html">IEntity</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Count">Player.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_GetPlayers__1">Player.GetPlayers&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGet__1_PluginAPI_Core_Interfaces_IGameComponent___0__">Player.TryGet&lt;T&gt;(IGameComponent, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Get__1_UnityEngine_GameObject_">Player.Get&lt;T&gt;(GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGet__1_UnityEngine_GameObject___0__">Player.TryGet&lt;T&gt;(GameObject, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Get__1_ReferenceHub_">Player.Get&lt;T&gt;(ReferenceHub)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGet__1_ReferenceHub___0__">Player.TryGet&lt;T&gt;(ReferenceHub, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Get__1_Mirror_NetworkIdentity_">Player.Get&lt;T&gt;(NetworkIdentity)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGet__1_Mirror_NetworkIdentity___0__">Player.TryGet&lt;T&gt;(NetworkIdentity, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_GetByName__1_System_String_">Player.GetByName&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGetByName__1_System_String___0__">Player.TryGetByName&lt;T&gt;(String, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Get__1_System_Int32_">Player.Get&lt;T&gt;(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGet__1_System_Int32___0__">Player.TryGet&lt;T&gt;(Int32, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Get__1_System_String_">Player.Get&lt;T&gt;(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGet__1_System_String___0__">Player.TryGet&lt;T&gt;(String, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Get__1_System_UInt32_">Player.Get&lt;T&gt;(UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGet__1_System_UInt32___0__">Player.TryGet&lt;T&gt;(UInt32, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_ReferenceHub">Player.ReferenceHub</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_GameObject">Player.GameObject</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_NetworkId">Player.NetworkId</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_PlayerId">Player.PlayerId</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Nickname">Player.Nickname</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_DisplayNickname">Player.DisplayNickname</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_UserId">Player.UserId</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IpAddress">Player.IpAddress</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Role">Player.Role</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_CustomInfo">Player.CustomInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Health">Player.Health</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_MaxHealth">Player.MaxHealth</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_ArtificialHealth">Player.ArtificialHealth</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_MaxArtificalHealth">Player.MaxArtificalHealth</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_RemoteAdminAccess">Player.RemoteAdminAccess</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_DoNotTrack">Player.DoNotTrack</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsOverwatchEnabled">Player.IsOverwatchEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_PlayerInfo">Player.PlayerInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_CurrentItem">Player.CurrentItem</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsMuted">Player.IsMuted</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsIntercomMuted">Player.IsIntercomMuted</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsUsingVoiceChat">Player.IsUsingVoiceChat</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsGlobalModerator">Player.IsGlobalModerator</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsNorthwoodStaff">Player.IsNorthwoodStaff</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsBypassEnabled">Player.IsBypassEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsGodModeEnabled">Player.IsGodModeEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsNoclipEnabled">Player.IsNoclipEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsInventoryFull">Player.IsInventoryFull</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsHuman">Player.IsHuman</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsAlive">Player.IsAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsReady">Player.IsReady</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IsServer">Player.IsServer</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Connection">Player.Connection</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Camera">Player.Camera</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TemporaryData">Player.TemporaryData</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_EffectsManager">Player.EffectsManager</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_DamageManager">Player.DamageManager</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Position">Player.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Rotation">Player.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_SendConsoleMessage_System_String_System_String_">Player.SendConsoleMessage(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Ban_PluginAPI_Core_Interfaces_IPlayer_System_String_System_Int64_">Player.Ban(IPlayer, String, Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Ban_System_String_System_Int64_">Player.Ban(String, Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Kick_PluginAPI_Core_Interfaces_IPlayer_System_String_">Player.Kick(IPlayer, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Kick_System_String_">Player.Kick(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Mute_System_Boolean_">Player.Mute(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Unmute_System_Boolean_">Player.Unmute(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IntercomMute_System_Boolean_">Player.IntercomMute(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_IntercomUnmute_System_Boolean_">Player.IntercomUnmute(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_AddItem_ItemType_">Player.AddItem(ItemType)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_AddAmmo_ItemType_System_UInt16_">Player.AddAmmo(ItemType, UInt16)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_SetAmmo_ItemType_System_UInt16_">Player.SetAmmo(ItemType, UInt16)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_GetAmmo_ItemType_">Player.GetAmmo(ItemType)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_DropAmmo_ItemType_System_UInt16_System_Boolean_">Player.DropAmmo(ItemType, UInt16, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_DropEverything">Player.DropEverything()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Heal_System_Single_">Player.Heal(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_SetRole_PlayerRoles_RoleTypeId_PlayerRoles_RoleChangeReason_">Player.SetRole(RoleTypeId, RoleChangeReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Disconnect_System_String_">Player.Disconnect(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_ReceiveHint_System_String_System_Single_">Player.ReceiveHint(String, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_ReceiveHint_System_String_Hints_HintEffect___System_Single_">Player.ReceiveHint(String, HintEffect[], Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_ReceiveHitMarker_System_Single_">Player.ReceiveHitMarker(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_GetStatModule__1">Player.GetStatModule&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_RedirectToServer_System_UInt16_">Player.RedirectToServer(UInt16)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_Reconnect_System_Single_System_Boolean_">Player.Reconnect(Single, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_OnStart">Player.OnStart()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_OnDestroy">Player.OnDestroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_OnUpdate">Player.OnUpdate()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_OnLateUpdate">Player.OnLateUpdate()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_OnFixedUpdate">Player.OnFixedUpdate()</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_GetComponent__1_System_Boolean_">Player.GetComponent&lt;T&gt;(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="PluginAPI.Core.Player.html#PluginAPI_Core_Player_TryGetComponent__1___0__System_Boolean_">Player.TryGetComponent&lt;T&gt;(T, Boolean)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PluginAPI.Core.html">PluginAPI.Core</a></h6>
+  <h6><strong>Assembly</strong>: PluginAPI.dll</h6>
+  <h5 id="PluginAPI_Core_Server_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Server : Player, IPlayer, IEntity</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server__ctor_PluginAPI_Core_Interfaces_IGameComponent_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.%23ctor(PluginAPI.Core.Interfaces.IGameComponent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L21">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server__ctor_" data-uid="PluginAPI.Core.Server.#ctor*"></a>
+  <h4 id="PluginAPI_Core_Server__ctor_PluginAPI_Core_Interfaces_IGameComponent_" data-uid="PluginAPI.Core.Server.#ctor(PluginAPI.Core.Interfaces.IGameComponent)">Server(IGameComponent)</h4>
+  <div class="markdown level1 summary"><p>Constructor for server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Server(IGameComponent hub)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Interfaces.IGameComponent.html">IGameComponent</a></td>
+        <td><span class="parametername">hub</span></td>
+        <td><p>The hub of server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_FriendlyFire.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.FriendlyFire%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L39">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_FriendlyFire_" data-uid="PluginAPI.Core.Server.FriendlyFire*"></a>
+  <h4 id="PluginAPI_Core_Server_FriendlyFire" data-uid="PluginAPI.Core.Server.FriendlyFire">FriendlyFire</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value if server has enabled friendly fire.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool FriendlyFire { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_Instance.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L15">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_Instance_" data-uid="PluginAPI.Core.Server.Instance*"></a>
+  <h4 id="PluginAPI_Core_Server_Instance" data-uid="PluginAPI.Core.Server.Instance">Instance</h4>
+  <div class="markdown level1 summary"><p>Instance of server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Server Instance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Server.html">Server</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_MaxPlayers.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.MaxPlayers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L48">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_MaxPlayers_" data-uid="PluginAPI.Core.Server.MaxPlayers*"></a>
+  <h4 id="PluginAPI_Core_Server_MaxPlayers" data-uid="PluginAPI.Core.Server.MaxPlayers">MaxPlayers</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value of maximum online players.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int MaxPlayers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_Port.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.Port%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L34">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_Port_" data-uid="PluginAPI.Core.Server.Port*"></a>
+  <h4 id="PluginAPI_Core_Server_Port" data-uid="PluginAPI.Core.Server.Port">Port</h4>
+  <div class="markdown level1 summary"><p>Gets the port of the server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ushort Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_ServerIpAddress.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.ServerIpAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L29">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_ServerIpAddress_" data-uid="PluginAPI.Core.Server.ServerIpAddress*"></a>
+  <h4 id="PluginAPI_Core_Server_ServerIpAddress" data-uid="PluginAPI.Core.Server.ServerIpAddress">ServerIpAddress</h4>
+  <div class="markdown level1 summary"><p>Gets the Ip address of the server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ServerIpAddress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_BanPlayer_PluginAPI_Core_Player_PluginAPI_Core_Interfaces_IPlayer_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player%2CPluginAPI.Core.Interfaces.IPlayer%2CSystem.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L72">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_BanPlayer_" data-uid="PluginAPI.Core.Server.BanPlayer*"></a>
+  <h4 id="PluginAPI_Core_Server_BanPlayer_PluginAPI_Core_Player_PluginAPI_Core_Interfaces_IPlayer_System_String_System_Int64_" data-uid="PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64)">BanPlayer(Player, IPlayer, String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Bans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool BanPlayer(Player player, IPlayer issuer, string reason, long duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td><p>The player which gets banned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Interfaces.IPlayer.html">IPlayer</a></td>
+        <td><span class="parametername">issuer</span></td>
+        <td><p>The player which issued ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The reason of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The duration of ban in seconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If ban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_BanPlayer_PluginAPI_Core_Player_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player%2CSystem.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L62">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_BanPlayer_" data-uid="PluginAPI.Core.Server.BanPlayer*"></a>
+  <h4 id="PluginAPI_Core_Server_BanPlayer_PluginAPI_Core_Player_System_String_System_Int64_" data-uid="PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,System.String,System.Int64)">BanPlayer(Player, String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Bans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool BanPlayer(Player player, string reason, long duration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td><p>The target player which will be banned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The reason of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The duration of ban in seconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If ban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_BanPlayerByIpAddress_System_String_PluginAPI_Core_Player_System_String_System_Int64_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.BanPlayerByIpAddress(System.String%2CPluginAPI.Core.Player%2CSystem.String%2CSystem.Int64%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L142">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_BanPlayerByIpAddress_" data-uid="PluginAPI.Core.Server.BanPlayerByIpAddress*"></a>
+  <h4 id="PluginAPI_Core_Server_BanPlayerByIpAddress_System_String_PluginAPI_Core_Player_System_String_System_Int64_System_String_" data-uid="PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)">BanPlayerByIpAddress(String, Player, String, Int64, String)</h4>
+  <div class="markdown level1 summary"><p>Bans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool BanPlayerByIpAddress(string ipAddress, Player issuer, string reason, long duration, string bannedPlayerNickname = &quot;UnknownName&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td><p>The ip address of player which will be banned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Player.html">Player</a></td>
+        <td><span class="parametername">issuer</span></td>
+        <td><p>The issuer of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The ban reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The duration of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bannedPlayerNickname</span></td>
+        <td><p>The nickname of banned player.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If ban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_BanPlayerByIpAddress_System_String_System_String_System_Int64_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.BanPlayerByIpAddress(System.String%2CSystem.String%2CSystem.Int64%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L131">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_BanPlayerByIpAddress_" data-uid="PluginAPI.Core.Server.BanPlayerByIpAddress*"></a>
+  <h4 id="PluginAPI_Core_Server_BanPlayerByIpAddress_System_String_System_String_System_Int64_System_String_" data-uid="PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,System.String,System.Int64,System.String)">BanPlayerByIpAddress(String, String, Int64, String)</h4>
+  <div class="markdown level1 summary"><p>Bans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool BanPlayerByIpAddress(string ipAddress, string reason, long duration, string bannedPlayerNickname = &quot;UnknownName&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td><p>The ip address of player which will be banned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The ban reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The duration of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bannedPlayerNickname</span></td>
+        <td><p>The nickname of banned player.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If ban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_BanPlayerByUserId_System_String_PluginAPI_Core_Player_System_String_System_Int64_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.BanPlayerByUserId(System.String%2CPluginAPI.Core.Player%2CSystem.String%2CSystem.Int64%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L108">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_BanPlayerByUserId_" data-uid="PluginAPI.Core.Server.BanPlayerByUserId*"></a>
+  <h4 id="PluginAPI_Core_Server_BanPlayerByUserId_System_String_PluginAPI_Core_Player_System_String_System_Int64_System_String_" data-uid="PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)">BanPlayerByUserId(String, Player, String, Int64, String)</h4>
+  <div class="markdown level1 summary"><p>Bans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool BanPlayerByUserId(string userId, Player issuer, string reason, long duration, string bannedPlayerNickname = &quot;UnknownName&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The userid of player which will be banned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Player.html">Player</a></td>
+        <td><span class="parametername">issuer</span></td>
+        <td><p>The issuer of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The ban reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The duration of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bannedPlayerNickname</span></td>
+        <td><p>The nickname of banned player.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If ban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_BanPlayerByUserId_System_String_System_String_System_Int64_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.BanPlayerByUserId(System.String%2CSystem.String%2CSystem.Int64%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L97">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_BanPlayerByUserId_" data-uid="PluginAPI.Core.Server.BanPlayerByUserId*"></a>
+  <h4 id="PluginAPI_Core_Server_BanPlayerByUserId_System_String_System_String_System_Int64_System_String_" data-uid="PluginAPI.Core.Server.BanPlayerByUserId(System.String,System.String,System.Int64,System.String)">BanPlayerByUserId(String, String, Int64, String)</h4>
+  <div class="markdown level1 summary"><p>Bans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool BanPlayerByUserId(string userId, string reason, long duration, string bannedPlayerNickname = &quot;UnknownName&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The userid of player which will be banned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The ban reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The duration of ban.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">bannedPlayerNickname</span></td>
+        <td><p>The nickname of banned player.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If ban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_ClearBroadcasts.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.ClearBroadcasts%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L270">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_ClearBroadcasts_" data-uid="PluginAPI.Core.Server.ClearBroadcasts*"></a>
+  <h4 id="PluginAPI_Core_Server_ClearBroadcasts" data-uid="PluginAPI.Core.Server.ClearBroadcasts">ClearBroadcasts()</h4>
+  <div class="markdown level1 summary"><p>Clears displayed broadcast.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ClearBroadcasts()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_GetAllPlayersBanned.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.GetAllPlayersBanned%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L203">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_GetAllPlayersBanned_" data-uid="PluginAPI.Core.Server.GetAllPlayersBanned*"></a>
+  <h4 id="PluginAPI_Core_Server_GetAllPlayersBanned" data-uid="PluginAPI.Core.Server.GetAllPlayersBanned">GetAllPlayersBanned()</h4>
+  <div class="markdown level1 summary"><p>Gets all banned players.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BanDetails[] GetAllPlayersBanned()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BanDetails</span>[]</td>
+        <td><p>List of all banned players.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_GetAllPlayersBanned_BanHandler_BanType_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.GetAllPlayersBanned(BanHandler.BanType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L215">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_GetAllPlayersBanned_" data-uid="PluginAPI.Core.Server.GetAllPlayersBanned*"></a>
+  <h4 id="PluginAPI_Core_Server_GetAllPlayersBanned_BanHandler_BanType_" data-uid="PluginAPI.Core.Server.GetAllPlayersBanned(BanHandler.BanType)">GetAllPlayersBanned(BanHandler.BanType)</h4>
+  <div class="markdown level1 summary"><p>Gets all banned players.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static BanDetails[] GetAllPlayersBanned(BanHandler.BanType banType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BanHandler.BanType</span></td>
+        <td><span class="parametername">banType</span></td>
+        <td><p>The type of ban.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BanDetails</span>[]</td>
+        <td><p>List of specified ban types.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_IsPlayerBanned_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.IsPlayerBanned(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L192">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_IsPlayerBanned_" data-uid="PluginAPI.Core.Server.IsPlayerBanned*"></a>
+  <h4 id="PluginAPI_Core_Server_IsPlayerBanned_System_String_" data-uid="PluginAPI.Core.Server.IsPlayerBanned(System.String)">IsPlayerBanned(String)</h4>
+  <div class="markdown level1 summary"><p>Checks if player is banned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPlayerBanned(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value can be as userid or ip address of player.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If player is banned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_KickPlayer_PluginAPI_Core_Player_PluginAPI_Core_Interfaces_IPlayer_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player%2CPluginAPI.Core.Interfaces.IPlayer%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L80">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_KickPlayer_" data-uid="PluginAPI.Core.Server.KickPlayer*"></a>
+  <h4 id="PluginAPI_Core_Server_KickPlayer_PluginAPI_Core_Player_PluginAPI_Core_Interfaces_IPlayer_System_String_" data-uid="PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String)">KickPlayer(Player, IPlayer, String)</h4>
+  <div class="markdown level1 summary"><p>Kicks player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void KickPlayer(Player player, IPlayer issuer, string reason)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td><p>The player which will be kicked.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Interfaces.IPlayer.html">IPlayer</a></td>
+        <td><span class="parametername">issuer</span></td>
+        <td><p>The player which issued kick.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The reason of kick.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_KickPlayer_PluginAPI_Core_Player_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L87">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_KickPlayer_" data-uid="PluginAPI.Core.Server.KickPlayer*"></a>
+  <h4 id="PluginAPI_Core_Server_KickPlayer_PluginAPI_Core_Player_System_String_" data-uid="PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,System.String)">KickPlayer(Player, String)</h4>
+  <div class="markdown level1 summary"><p>Kicks player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void KickPlayer(Player player, string reason)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Player.html">Player</a></td>
+        <td><span class="parametername">player</span></td>
+        <td><p>The player which will be kicked.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The reason of kick.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_Restart.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.Restart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L221">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_Restart_" data-uid="PluginAPI.Core.Server.Restart*"></a>
+  <h4 id="PluginAPI_Core_Server_Restart" data-uid="PluginAPI.Core.Server.Restart">Restart()</h4>
+  <div class="markdown level1 summary"><p>Restarts the server and reconnects all players.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Restart()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_Restart_System_UInt16_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.Restart(System.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L226">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_Restart_" data-uid="PluginAPI.Core.Server.Restart*"></a>
+  <h4 id="PluginAPI_Core_Server_Restart_System_UInt16_" data-uid="PluginAPI.Core.Server.Restart(System.UInt16)">Restart(UInt16)</h4>
+  <div class="markdown level1 summary"><p>Restarts the server and reconnects all players to target server port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Restart(ushort redirectPort)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">redirectPort</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_RunCommand_System_String_CommandSender_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.RunCommand(System.String%2CCommandSender)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L251">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_RunCommand_" data-uid="PluginAPI.Core.Server.RunCommand*"></a>
+  <h4 id="PluginAPI_Core_Server_RunCommand_System_String_CommandSender_" data-uid="PluginAPI.Core.Server.RunCommand(System.String,CommandSender)">RunCommand(String, CommandSender)</h4>
+  <div class="markdown level1 summary"><p>Run command as server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RunCommand(string command, CommandSender sender = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CommandSender</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The <span class="xref">CommandSender</span> running the command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_SendBroadcast_System_String_System_UInt16_Broadcast_BroadcastFlags_System_Boolean_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.SendBroadcast(System.String%2CSystem.UInt16%2CBroadcast.BroadcastFlags%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L260">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_SendBroadcast_" data-uid="PluginAPI.Core.Server.SendBroadcast*"></a>
+  <h4 id="PluginAPI_Core_Server_SendBroadcast_System_String_System_UInt16_Broadcast_BroadcastFlags_System_Boolean_" data-uid="PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)">SendBroadcast(String, UInt16, Broadcast.BroadcastFlags, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Shows a broadcast to the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SendBroadcast(string message, ushort duration, Broadcast.BroadcastFlags type = Broadcast.BroadcastFlags.Normal, bool shouldClearPrevious = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to be broadcasted.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">duration</span></td>
+        <td><p>The broadcast duration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Broadcast.BroadcastFlags</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The broadcast type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">shouldClearPrevious</span></td>
+        <td><p>Clears previous displayed broadcast.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_Shutdown.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.Shutdown%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L235">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_Shutdown_" data-uid="PluginAPI.Core.Server.Shutdown*"></a>
+  <h4 id="PluginAPI_Core_Server_Shutdown" data-uid="PluginAPI.Core.Server.Shutdown">Shutdown()</h4>
+  <div class="markdown level1 summary"><p>Shutdowns the server and disconnects all players.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Shutdown()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_Shutdown_System_UInt16_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.Shutdown(System.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L240">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_Shutdown_" data-uid="PluginAPI.Core.Server.Shutdown*"></a>
+  <h4 id="PluginAPI_Core_Server_Shutdown_System_UInt16_" data-uid="PluginAPI.Core.Server.Shutdown(System.UInt16)">Shutdown(UInt16)</h4>
+  <div class="markdown level1 summary"><p>Shutdowns the server and reconnects all players to target server port.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Shutdown(ushort redirectPort)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td><span class="parametername">redirectPort</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_UnbanPlayerByIpAddress_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.UnbanPlayerByIpAddress(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L177">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_UnbanPlayerByIpAddress_" data-uid="PluginAPI.Core.Server.UnbanPlayerByIpAddress*"></a>
+  <h4 id="PluginAPI_Core_Server_UnbanPlayerByIpAddress_System_String_" data-uid="PluginAPI.Core.Server.UnbanPlayerByIpAddress(System.String)">UnbanPlayerByIpAddress(String)</h4>
+  <div class="markdown level1 summary"><p>Unbans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UnbanPlayerByIpAddress(string ipAddress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td><p>The ip address of player.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If unban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server_UnbanPlayerByUserId_System_String_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server.UnbanPlayerByUserId(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L162">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Server_UnbanPlayerByUserId_" data-uid="PluginAPI.Core.Server.UnbanPlayerByUserId*"></a>
+  <h4 id="PluginAPI_Core_Server_UnbanPlayerByUserId_System_String_" data-uid="PluginAPI.Core.Server.UnbanPlayerByUserId(System.String)">UnbanPlayerByUserId(String)</h4>
+  <div class="markdown level1 summary"><p>Unbans player from server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool UnbanPlayerByUserId(string userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The userid of player.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>If unban is successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PluginAPI.Core.Interfaces.IPlayer.html">IPlayer</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginAPI.Core.Interfaces.IEntity.html">IEntity</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="PluginAPI.Core.PlayerExtensions.html#PluginAPI_Core_PlayerExtensions_GetAmmoLimit_PluginAPI_Core_Player_ItemType_">PlayerExtensions.GetAmmoLimit(Player, ItemType)</a>
+  </div>
+  <div>
+      <a class="xref" href="PluginAPI.Core.PlayerExtensions.html#PluginAPI_Core_PlayerExtensions_GetCategoryLimit_PluginAPI_Core_Player_ItemCategory_">PlayerExtensions.GetCategoryLimit(Player, ItemCategory)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Server.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Server%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Server.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

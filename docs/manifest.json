@@ -1,0 +1,1291 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Klaudiusz/source/repos/NwPluginAPI/NwPluginAPI.Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "K9/nD9iGn1omsvTQh8RdK44m0Mq1xnJIoxZVnp9egLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "EUP60KjkaAjJBXU/mzyVLYOKC9yLR288PntS9H3v/9s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "8jviACXXtMKCs3DRBjenDIOAMMg4Ner11TMztebLXME="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Commands.Command.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Commands.Command.html",
+          "hash": "/HEqxOr43yr68H8EL+uLM7UZaF0wIsmPnXL9NieDWQM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Commands.CommandsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Commands.CommandsManager.html",
+          "hash": "ifH3x8S7qZTQo1XWD3VArTEC3DzUIpKEE0Oc18Uqvl0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Commands.ListCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Commands.ListCommand.html",
+          "hash": "Ud6lREAMBNixV82UK5Hz+TPacoO6L0uifl6f26tmSEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Commands.PluginsCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Commands.PluginsCommand.html",
+          "hash": "64zj5tcv3aXt+R5Ydybxj+kESqjuj5I69Wg0ABFFsJg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Commands.ReloadCommmand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Commands.ReloadCommmand.html",
+          "hash": "q9Dy7x7Hrnzja0jkY5+OSPBZyCUQapDIIaMq8dfjw98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Commands.html",
+          "hash": "PoMIL8UHdSoqcShh1DhnXZdArYc6zrxKEK0j0zJiN0Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.PluginCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.PluginCommand.html",
+          "hash": "Z7XNVfX5IbvNK0SVzOXAsBopl0Gj/JofLwaBQMZBIII="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.PluginCommandAliases.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.PluginCommandAliases.html",
+          "hash": "MBUfzmyuzQLlh5NCcEtOBIt6iugNRhuYyLRYUIexzis="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.PluginConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.PluginConfig.html",
+          "hash": "sGmJyKc248Y+jJTcMnCL1GZW/lDzi5+lc6cTG+Wbhug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.PluginEntryPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.PluginEntryPoint.html",
+          "hash": "bAaeOM0nsobggdSHu/0XyoGayl6g7OFiLRZnYRAhoHQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.PluginEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.PluginEvent.html",
+          "hash": "aKq55wQsllfmIR7WkHPB+iq+6fAE+HleHu3I7BDol3I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.PluginReload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.PluginReload.html",
+          "hash": "N7DfoaZ+9gPjHIxJs3+soFV7/WfjDbW1ZDPnTyHLhRo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.PluginUnload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.PluginUnload.html",
+          "hash": "BFm6q76U9jgywQrOlFiHzMhQeoW8tANgioyK1otwNaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Attributes.html",
+          "hash": "OvhOgjCOUYY2J91/U34PqkLxqiLxHMK3CnBEt1lyEV4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Cassie.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Cassie.html",
+          "hash": "rZg6dCxaPuheluPi7gYjXJVJwAlR4OM+jzv6sDFuP0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.DamageManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.DamageManager.html",
+          "hash": "mIO7iolFSBEXJ5EJqhBvBy9s+J7tkbk+s3wV/NOle/E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.DataStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.DataStorage.html",
+          "hash": "8xClcJolKQhxtviKgm9squkJWl/4b4ww/vSd7YsC22E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Doors.FacilityBreakableDoor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Doors.FacilityBreakableDoor.html",
+          "hash": "csSzKvKvd69hEQAOCUTBfmugzWytX06MZV8MPgtTBP8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Doors.FacilityDoor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Doors.FacilityDoor.html",
+          "hash": "KbDYa97MNbrClDhGnE30SbO/hbrZC1g86fd61jiYkuI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Doors.FacilityGate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Doors.FacilityGate.html",
+          "hash": "j/KY/GAJ6Rsy3fqxg5/WYJ3WtinpkZs629YtVFKp8dk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Doors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Doors.html",
+          "hash": "0V9TLASw69QKMyB1l9i2zKNSFaUeABe7PUq2rG3iQ2k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.EffectsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.EffectsManager.html",
+          "hash": "9jYvGgfjHvgSssoVqhiEAGwMsAbdhxnEz12lbzNbjK8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Extensions.ReflectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Extensions.ReflectionExtensions.html",
+          "hash": "ZIOWkWpoZOLQDhQAV8Ye2sDBYWCECbrFokoA/fibgdE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Extensions.html",
+          "hash": "jPHxEpgxVntwS/XYtZx1m5JVato/ntUNvo+x9ua8ivM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Facility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Facility.html",
+          "hash": "/Gqs6QaxosYnQloDQRnuheyjJ4WpVJnPyIeG2/8AbyE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Factories.Factory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Factories.Factory-1.html",
+          "hash": "a4sGKIlryHAXycCVCSAX0YvwPVczgW4DyNeICSyGw6Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Factories.IEntityFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Factories.IEntityFactory-1.html",
+          "hash": "B0pHt6x5jsnwhV6E0l+DUgr9eMdC7IAUZTF82Powqh0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Factories.PlayerFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Factories.PlayerFactory.html",
+          "hash": "eIli8b+FszYPqNRuEf5Uw1q4HZeI6VDodyH4MhyfKYw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Factories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Factories.html",
+          "hash": "GrrvJCEHGSnzjzoz1nXDNoFkSzRcEt6KEKzgCkhnwJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.FactoryManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.FactoryManager.html",
+          "hash": "cnoeTdorHRbF7PxaqbBhutpKYZmf1Wlge4nNNsqYlEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Interfaces.IEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Interfaces.IEntity.html",
+          "hash": "z32X4lHByQYp39IEcFXvk3pC/z0dH2+PDQkIXKswSeM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Interfaces.IGameComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Interfaces.IGameComponent.html",
+          "hash": "vtc3wwWMHddyGF6iditiske0mY7xnMkyqc2wasHZHhU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Interfaces.IGameItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Interfaces.IGameItem.html",
+          "hash": "BOxIj3UX+FpNbOECbtmtk1L/x1DVXE13yCgqS0mys1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Interfaces.IPlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Interfaces.IPlayer.html",
+          "hash": "ibJ+U/F2AXjIoCbGCFshELQHacf+iQUGCADT4hcv4FM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Interfaces.html",
+          "hash": "IPMe3Wyo4oMSkRcxAnqJWbT0n4Z2VYbr3zDD9Evv4D4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Items.Item.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Items.Item.html",
+          "hash": "GCGbt/go4vq5VPN1P0GuGHOVQaHhtyhG+0QLpOE6Vt4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Items.ItemPickup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Items.ItemPickup.html",
+          "hash": "ZN4UDI/9gUK+TBk5pYU9RExB7P6quWNl56x9bwJpmmA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Items.html",
+          "hash": "b3eGQIBQWq7uTNDYkDFYIBzVRKoxiCWdbYwnrbCiQ7U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Log.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Log.html",
+          "hash": "xMKMmPOabrVt4gCWmekS+UFKcopM8xRQY9tcAxz5ul8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Map.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Map.html",
+          "hash": "x+nS1CwiMjZ54vmPe9oJFlZMPwltCe72aA/P+xrv0lA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Player.html",
+          "hash": "8060etSFRSlQ6R+fp74umvPSUYN9oWp9SZliK+o2MLY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.PlayerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.PlayerExtensions.html",
+          "hash": "rmimsxYdu8CtOuSYW/BlwrIwUAQT+y1gsKiKSq56Bbs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.PlayerInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.PlayerInfo.html",
+          "hash": "PPtZrdCCRSg7/lBWYoRY/ivLLfb0wPnB8SO9Sdsta0Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.PlayerSharedStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.PlayerSharedStorage.html",
+          "hash": "ppD0QaLG3flGIMxw28ZY6m6sbc1cY8GAwELgxMfSAVI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.PluginHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.PluginHandler.html",
+          "hash": "x9VbbizgC8EtFufJkAi0QqZe7XdqoQDxFpLTV0uQMw4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Respawn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Respawn.html",
+          "hash": "Ts9TVV1oGtLWZNz36jE+nBHzTT1mILFc0q+iiTYNGlI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.RoomLight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.RoomLight.html",
+          "hash": "Z0J9QEPolrU5gPpsPienMDdMzHQlI6Cr4jpgwhJbh+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Round.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Round.html",
+          "hash": "JvqNvSvYDZqPoCOuNwTkTbSX/Hu7vtVJQWpMOpwMTqI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Server.html",
+          "hash": "a3PfNZYsAHPDcnH3TRcPpPJrsSVAS3BOlmiryFq12jg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Statistics.FastestRound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Statistics.FastestRound.html",
+          "hash": "6LAgI2YYJIn/AtrqovKxrGvyHRlJ4PRSse1vlluDJdg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Statistics.Peak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Statistics.Peak.html",
+          "hash": "VyExxD6VyDxUUQ5xHXqTyplgdVBuCz7dcPHMf7OiM84="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Statistics.Round.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Statistics.Round.html",
+          "hash": "Fup+pdleHLUMk83BmFiq/vnyMFxRMLpLVgK1JnmcnFQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Statistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Statistics.html",
+          "hash": "qG7R8jgH0asvyEonas97ZpvwzRghQvtx6sy7bgmq6PQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Warhead.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Warhead.html",
+          "hash": "XQuUvcCiv0+SPwa36iALSIWCb7Ht72/0Zt7jTIfOvIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Entrance.EzRoom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Entrance.EzRoom.html",
+          "hash": "YQRJ3iGBjCK42ugBksv9SDQbhUw9EwqQT/YNuUztXEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Entrance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Entrance.html",
+          "hash": "JXGGrVcBVNYRx+e37FeOQ2vpd/Pf/u+ofu7R3boswuk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.EntranceZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.EntranceZone.html",
+          "hash": "YF2BGfFSJDoUpEqkpDBnhfS3nScDXKMSTTgnfl46R8Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.FacilityRoom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.FacilityRoom.html",
+          "hash": "UKtQDIszRmtDTGan1cT4M8ShGyJLMJXI1daRfY0Vh2I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.FacilityZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.FacilityZone.html",
+          "hash": "PlaQaiwZpi4iiGOGUPg4/vP/VROm+CRHLks1W4/ypn8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Heavy.Generator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Heavy.Generator.html",
+          "hash": "UoIp163iaM+3ZjbJdxzWBeejPvJpunPfPx0pc4qP1UE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Heavy.GeneratorLogic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Heavy.GeneratorLogic.html",
+          "hash": "Nj6D77Y0YuYWSMPRtkIIL8WJL+MDf8ElOZK0e2dEaLg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Heavy.HczRoom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Heavy.HczRoom.html",
+          "hash": "kY9zlKrLAoGv3m8iE4WbfdTu6w4zfOzfejw71dD4wPE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.html",
+          "hash": "+Qv8vGKSpARAJwanOgRFdAO9iZZLFEnXhpVwPO7lWJ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Heavy.Rooms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Heavy.Rooms.html",
+          "hash": "OU67V9r/YNbRwM+qrDjrO2S6tuVqdkyXSAHKlvUkrGs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Heavy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Heavy.html",
+          "hash": "BRQsl79mXyFxwbHOkez4pp3jILavQwO/h+bMTkYoAfs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.HeavyZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.HeavyZone.html",
+          "hash": "Pjh+UOEKBQUKRdgLjUB/52Uh8ywk9ktqZz3hJ0At1I8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Light.LczRoom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Light.LczRoom.html",
+          "hash": "sJdSW0meEcpZKhe1dVqj2pnBu6r+cRH/uQstwJTHJ70="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html",
+          "hash": "1NtNBNOEJ0ySB5oIHp8JL6sEa0j4ZASggynL2J0Cy78="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Light.Rooms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Light.Rooms.html",
+          "hash": "e5XFP8VsuMNo1YQ2Ot1xC3OKP8p0qHJ1yscHWoL/wEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Light.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Light.html",
+          "hash": "14AAVZdTqCKA9FXpf16eUf+pbNgcVpRp3SUx8D2jRMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.LightZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.LightZone.html",
+          "hash": "Bl7Wg3UbK5300wfrK3DNvhI1A7MdP1ykYmt1PWJg4V0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Pocket.PocketDimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Pocket.PocketDimension.html",
+          "hash": "cpQ1GOG4VvE+xmeritw6Z7gHLnkYk8SIOMPJf5dRz4s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.html",
+          "hash": "/wpKRb64qYang9ki5/9M2xh2BOXZLDiUfh5DlVxYkvo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Pocket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Pocket.html",
+          "hash": "h+p+65Hf26yml079qe/TsKmgbYWEy6wq7ejXIvI2UPY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.Surface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.Surface.html",
+          "hash": "/Hf0JsvybBdGLbyhmMQGSpxuX4G7DqLGSPe1bmJnvoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.SurfaceZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.SurfaceZone.html",
+          "hash": "VYPaHDU1PEx2I7KczTURmF7oVaUfbrx8EtmgN7yNRpw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.UnknownZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.UnknownZone.html",
+          "hash": "0tYMEyBr5LpFuZ5cWS/hzld9t4KA53aGS7zNZY/0RF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.Zones.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.Zones.html",
+          "hash": "7jkgqhESuLlYQHkZue9oVxuS6EipHDHqdyqZlxw+Ato="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Core.html",
+          "hash": "F/rdl5LErCfQCRV7y1sjNQ2y5ZcRO6sl5n+kjdsedqE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Enums.CommandType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Enums.CommandType.html",
+          "hash": "KFBCau/Wujtgm/j8TmxfYI6Es5ogn3DRdyTICmMV2p0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Enums.LoadPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Enums.LoadPriority.html",
+          "hash": "nRNT5xNeCQGCQWykjskqtSWLw/jkGYLGO02waYJ5r04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Enums.LogType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Enums.LogType.html",
+          "hash": "bcAZj4Yi6hjXPc8rnBDEtoCSSzQLkKOATVCGheSiV1I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Enums.ServerEventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Enums.ServerEventType.html",
+          "hash": "XyX1xgixyEEKv/4JykTR4VCI+0rIp7wTS2t+l+KxeJw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Enums.html",
+          "hash": "v8S1DEM9al+UoZmEIKB186bPjkVDdTCm7Ssi17m+JWs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Events.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Events.Event.html",
+          "hash": "fBYZPRvcZZ35ZR7VSM0+kKrrad3DDHLg19kjS1ea4sA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Events.EventInvokeLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Events.EventInvokeLocation.html",
+          "hash": "qYn050DFrdn7iv+JAGliHWWOuhD8J8HLRgE96vpyqV8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Events.EventManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Events.EventManager.html",
+          "hash": "JYNZ/LhHmqhbYdK8jeRW9oUbsb/W71qlDPhJiJEKAuw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Events.EventParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Events.EventParameter.html",
+          "hash": "0SeqqtJBmI9jHjR5oF7ixNxYG90lWd/CBhrJPfqnqiQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Events.IEventCancellation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Events.IEventCancellation.html",
+          "hash": "Rqo4dL2pP6HDzjhpXPnupLRB1vPlq6VZud68d72qhPU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Events.PreauthCancellationData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Events.PreauthCancellationData.html",
+          "hash": "8sS9LBJTax/lAw8qHbJImB96xVXwOOUc//N/ghTvkac="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Events.html",
+          "hash": "bFVcS/eBZZ+2xqW8IYfggE+B4Ce/9eyer18prMj63tg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Helpers.Paths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Helpers.Paths.html",
+          "hash": "AlqjVokkgAjs9lZVMN0srCbTstExl1ZHcPODCXb70iE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Helpers.html",
+          "hash": "rhX+zqDmLsicg3TTp4S3qSlJqSnNnF6r/W8cCnio0RI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Loader.AssemblyLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Loader.AssemblyLoader.html",
+          "hash": "6uQ4F4bJbEMvEBHrr8osa2ePHJmbYUExKc2xxqYL9Uc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Loader.Features.PluginDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Loader.Features.PluginDirectory.html",
+          "hash": "Mbjp9TlCxYQZxMLIEJt0OfHx5HNnAFc23zDBwHwooek="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Loader.Features.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Loader.Features.html",
+          "hash": "+mjh35YfasB652lVy0eoIoWkK61LJBIh5cNTUYxFIQs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PluginAPI.Loader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PluginAPI.Loader.html",
+          "hash": "Gx0wwSTmQzF0JH4Tpbt9InX8wKzUUs1FrloR73PFnNY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "mzZy3m2Hug8qzdq6fCgHBI4TgHbaUB7UyY3VgXyyiMs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ManagedReferenceDocumentProcessor disable incremental build because last build doesn't contain version .",
+          "incrementalPhase": "build",
+          "total_file_count": 97,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
