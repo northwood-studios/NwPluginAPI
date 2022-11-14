@@ -4,6 +4,9 @@
 	using System;
 	using System.Reflection;
 
+	/// <summary>
+	/// Reflection-related extensions.
+	/// </summary>
 	public static class ReflectionExtensions
     {
         public static bool IsValidEntrypoint(this Type type)

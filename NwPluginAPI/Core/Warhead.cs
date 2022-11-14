@@ -1,9 +1,12 @@
 namespace PluginAPI.Core
 {
+	/// <summary>
+	/// Manages the warhead.
+	/// </summary>
     public static class Warhead
 	{
 		/// <summary>
-		/// Gets or sets a value if lever in nukesite is enabled or disabled.
+		/// Gets or sets a value indicating whether or not the lever in the warhead room is enabled.
 		/// </summary>
 		public static bool LeverStatus
 		{
@@ -12,7 +15,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets a value if button in outside nuke panel is unlocked.
+		/// Gets or sets a value indicating whether or not the button in outside nuke panel is unlocked.
 		/// </summary>
 		public static bool WarheadUnlocked
 		{
@@ -21,12 +24,12 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets a value if warhead is detonated.
+		/// Gets a value indicating whether or not the warhead is detonated.
 		/// </summary>
 		public static bool IsDetonated => AlphaWarheadController.Detonated;
 
 		/// <summary>
-		/// Gets a value if warhead detonation is in progress.
+		/// Gets a value indicating whether or not the warhead detonation is in progress.
 		/// </summary>
 		public static bool IsDetonationInProgress => AlphaWarheadController.InProgress;
 
@@ -64,7 +67,7 @@ namespace PluginAPI.Core
 
 		#region Shake Effect
 		/// <summary>
-		/// Show shake effect on all players.
+		/// Show the shake effect to all players.
 		/// </summary>
 		public static void Shake()
 		{

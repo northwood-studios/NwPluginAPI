@@ -17,27 +17,28 @@ namespace PluginAPI.Loader
 	public static class AssemblyLoader
 	{
 		/// <summary>
-		/// A list of all recognized and loaded plugins.
+		/// Gets a list of all recognized and loaded plugins.
 		/// </summary>
 		public static Dictionary<Assembly, Dictionary<Type, PluginHandler>> Plugins { get; } = new Dictionary<Assembly, Dictionary<Type, PluginHandler>>();
 
 		/// <summary>
-		/// A list of all installed and enabled plugins.
+		/// Gets a list of all installed and enabled plugins.
 		/// </summary>
 		public static IEnumerable<PluginHandler> InstalledPlugins => Plugins.Values.SelectMany(p => p.Values);
 
 		/// <summary>
-		/// A list of all recognized and loaded dependencies.
+		/// Gets a list of all recognized and loaded dependencies.
 		/// </summary>
 		public static List<Assembly> Dependencies { get; } = new List<Assembly>();
 
 		/// <summary>
-		/// Whether the Loader has been run already, prevents it from being ran multiple times during runtime.
+		/// Whether the loader has been run already.
+		/// <remarks>This exists to prevent the loader from being ran multiple times in one session.</remarks>
 		/// </summary>
 		public static bool IsLoaded { get; set; } = false;
 
 		/// <summary>
-		/// Ran on server startup, loads plugins and dependencies and all main features from our API.
+		/// Ran on server startup, loads plugins and dependencies and all main features from the API.
 		/// </summary>
 		public static void Initialize()
 		{
@@ -156,7 +157,7 @@ namespace PluginAPI.Loader
 		/// </summary>
 		/// <param name="path">The path to load the assembly from.</param>
 		/// <param name="assembly">The loaded assembly, if the method returns false, it will be null.</param>
-		/// <returns>Returns whether the assembly was loaded correctly.</returns>
+		/// <returns>Returns whether or not the assembly was loaded correctly.</returns>
 		private static bool TryGetAssembly(string path, out Assembly assembly)
 		{
 			try

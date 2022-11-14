@@ -7,18 +7,39 @@ namespace PluginAPI.Core.Doors
 	using System.Linq;
 	using UnityEngine;
 
+	/// <summary>
+	/// Represents a gate.
+	/// </summary>
 	public class FacilityGate : FacilityDoor
 	{
+		/// <summary>
+		/// Gets a list of all the <see cref="FacilityGate"/>'s.
+		/// </summary>
 		public new static List<FacilityGate> List => Facility.Doors.Where(x => x is FacilityGate).Cast<FacilityGate>().ToList();
+
+		/// <summary>
+		/// Gets the total amount of gates.
+		/// </summary>
 		public new static int Count => List.Count;
 
+		/// <summary>
+		/// The base-game object.
+		/// </summary>
 		public new readonly PryableDoor OriginalObject;
 
+		/// <summary>
+		/// Gets the positions the door can be pryed open from.
+		/// </summary>
 		public Transform[] PryPositions => OriginalObject.PryPositions;
 
-		public FacilityGate(FacilityRoom room, PryableDoor door) : base(room, door)
+		/// <summary>
+		/// Initializes a new instance of the <see cref="FacilityGate"/> class.
+		/// </summary>
+		/// <param name="room">The room the gate is in.</param>
+		/// <param name="gate">The base-game object.</param>
+		public FacilityGate(FacilityRoom room, PryableDoor gate) : base(room, gate)
 		{
-			OriginalObject = door;
+			OriginalObject = gate;
 		}
 	}
 }

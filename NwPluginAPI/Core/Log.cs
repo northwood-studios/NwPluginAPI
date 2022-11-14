@@ -12,45 +12,45 @@ namespace PluginAPI.Core
 		private static Assembly _mainAssembly;
 
 		/// <summary>
-		/// Disables custom colors from log messages.
+		/// Whether or not to disable custom colors from log messages.
 		/// </summary>
 		public static bool DisableBetterColors;
 
 		/// <summary>
-		/// Check if its running in editor.
+		/// Whether or not its running in the unity editor.
 		/// </summary>
 		public static bool UnityEditor;
 
 		/// <summary>
-		/// Sends debug message.
+		/// Sends a debug message.
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="prefix">The prefix of message.</param>
 		public static void Debug(string message, string prefix = null) => ConsoleWrite(Assembly.GetCallingAssembly(), prefix, LogType.Debug, message);
 
 		/// <summary>
-		/// Sends info message.
+		/// Sends a info message.
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="prefix">The prefix of message.</param>
 		public static void Info(string message, string prefix = null) => ConsoleWrite(Assembly.GetCallingAssembly(), prefix, LogType.Info, message);
 
 		/// <summary>
-		/// Sends warning message.
+		/// Sends a warning message.
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="prefix">The prefix of message.</param>
 		public static void Warning(string message, string prefix = null) => ConsoleWrite(Assembly.GetCallingAssembly(), prefix, LogType.Warning, message);
 
 		/// <summary>
-		/// Sends error message.
+		/// Sends a error message.
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="prefix">The prefix of message.</param>
 		public static void Error(string message, string prefix = null) => ConsoleWrite(Assembly.GetCallingAssembly(), prefix, LogType.Error, message);
 
 		/// <summary>
-		/// Sends raw message.
+		/// Sends a raw message.
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="prefix">The prefix of message.</param>
@@ -65,7 +65,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Converts raw message with color tags to formatted message.
+		/// Converts a raw message with color tags to formatted message.
 		/// </summary>
 		/// <param name="message">The raw message.</param>
 		/// <param name="defaultColor">The default color of message.</param>

@@ -7,7 +7,7 @@
 	using Events;
 
 	/// <summary>
-	/// Factory manager for plugin system.
+	/// Manages factories for plugin system.
 	/// </summary>
 	public static class FactoryManager
     {
@@ -22,7 +22,7 @@
         };
 
 		/// <summary>
-		/// Registers new player factory.
+		/// Registers a new player factory.
 		/// </summary>
 		/// <param name="plugin">The plugin object.</param>
 		/// <param name="factory">The factory.</param>
@@ -37,13 +37,13 @@
         }
 
 		/// <summary>
-		/// Registers new player factory.
+		/// Registers a new player factory.
 		/// </summary>
 		/// <param name="plugin">The plugin object.</param>
 		public static void RegisterPlayerFactory<T>(object plugin) where T : PlayerFactory => RegisterPlayerFactory(plugin, Activator.CreateInstance<T>());
 
 		/// <summary>
-		/// Initializes factory manager.
+		/// Initializes the factory manager.
 		/// </summary>
 		public static void Init()
         {

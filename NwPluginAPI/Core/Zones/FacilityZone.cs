@@ -3,6 +3,9 @@ namespace PluginAPI.Core.Zones
 	using MapGeneration;
 	using System.Collections.Generic;
 
+	/// <summary>
+	/// Represents a zone.
+	/// </summary>
 	public class FacilityZone
 	{
 		/// <summary>
@@ -23,7 +26,7 @@ namespace PluginAPI.Core.Zones
 		/// </summary>
 		/// <param name="roomIdentity">The room identifier.</param>
 		/// <param name="room">The facility room.</param>
-		/// <returns>If</returns>
+		/// <returns>Whether or not the room was found.</returns>
 		public virtual bool TryGetRoom(RoomIdentifier roomIdentity, out FacilityRoom room)
 		{
 			room = default;
@@ -31,7 +34,7 @@ namespace PluginAPI.Core.Zones
 		}
 
 		/// <summary>
-		/// Gets type of zone.
+		/// Gets the zone type.
 		/// </summary>
 		public virtual MapGeneration.FacilityZone ZoneType { get; }
 	}

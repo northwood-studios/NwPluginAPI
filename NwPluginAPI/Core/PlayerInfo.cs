@@ -8,13 +8,13 @@
 		private readonly Player _player;
 
 		/// <summary>
-		/// Constructor for player info.
+		/// Initializes a new instance of the <see cref="PluginAPI.Core.PlayerInfo"/> class.
 		/// </summary>
 		/// <param name="plr">The player.</param>
 		public PlayerInfo(Player plr) => _player = plr;
 
 		/// <summary>
-		/// Gets or sets if player nickname is hidden in player info.
+		/// Gets or sets whether or not the player's nickname is hidden in their player info.
 		/// </summary>
 		public bool IsNicknameHidden
 		{
@@ -29,7 +29,7 @@
 		}
 
 		/// <summary>
-		/// Gets or sets if player badge is hidden in player info.
+		/// Gets or sets whether or not the player's badge is hidden in their player info.
 		/// </summary>
 		public bool IsBadgeHidden
 		{
@@ -44,7 +44,7 @@
 		}
 
 		/// <summary>
-		/// Gets or sets if player custom info is hidden in player info.
+		/// Gets or sets whether or not the player's custom info is hidden in their player info.
 		/// </summary>
 		public bool IsCustomInfoHidden
 		{
@@ -59,7 +59,7 @@
 		}
 
 		/// <summary>
-		/// Gets or sets if player power status is hidden in player info.
+		/// Gets or sets whether or not the player's power status is hidden in their player info.
 		/// </summary>
 		public bool IsPowerStatusHidden
 		{
@@ -74,7 +74,7 @@
 		}
 
 		/// <summary>
-		/// Gets or sets if player role is hidden in player info.
+		/// Gets or sets whether or not the player's role is hidden in their player info.
 		/// </summary>
 		public bool IsRoleHidden
 		{
@@ -89,7 +89,7 @@
 		}
 
 		/// <summary>
-		/// Gets or sets if player unit name is hidden in player info.
+		/// Gets or sets whether or not the player's unit name is hidden in their player info.
 		/// </summary>
 		public bool IsUnitNameHidden
 		{

@@ -5,6 +5,9 @@ namespace PluginAPI.Commands
     using CommandSystem;
     using Loader;
 
+    /// <summary>
+    /// Lists all plugins on the server.
+    /// </summary>
     [CommandHandler(typeof(PluginsCommand))]
 	public class ListCommand : ICommand
 	{

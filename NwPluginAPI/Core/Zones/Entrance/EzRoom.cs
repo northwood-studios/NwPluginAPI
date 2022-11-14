@@ -3,6 +3,9 @@ namespace PluginAPI.Core.Zones.Entrance
 	using MapGeneration;
 	using Zones;
 
+	/// <summary>
+	/// Represents an room inside the entrance zone.
+	/// </summary>
 	public class EzRoom : FacilityRoom
 	{
 		/// <summary>

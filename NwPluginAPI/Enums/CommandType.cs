@@ -4,7 +4,7 @@ namespace PluginAPI.Enums
 	using System;
 
 	/// <summary>
-	/// Command types.
+	/// Represents command types.
 	/// </summary>
 	[Flags]
 	public enum CommandType : byte

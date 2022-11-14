@@ -1,7 +1,7 @@
 namespace PluginAPI.Core.Zones
 {
 	/// <summary>
-	/// Unknown zone in facility.
+	/// Represents a unknown zone in facility.
 	/// </summary>
 	public class UnknownZone : FacilityZone
 	{

@@ -5,6 +5,9 @@ namespace PluginAPI.Commands
 	using System;
 	using System.Collections.Generic;
 
+	/// <summary>
+	/// Reloads plugins configs.
+	/// </summary>
 	[CommandHandler(typeof(PluginsCommand))]
 	public class ReloadCommmand : ICommand
 	{
