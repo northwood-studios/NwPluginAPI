@@ -151,14 +151,14 @@ public static class EventManager
 			new EventParameter("System.Int32", false, "readerStartPosition")) },
 		{ 40, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("CustomPlayerEffects.PlayerEffect", false, "effect")) },
+			new EventParameter("CustomPlayerEffects.StatusEffectBase", false, "effect")) },
 		{ 41, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("InventorySystem.Items.Firearms.Firearm", false, "firearm")) },
 		{ 42, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PlayerRoles.PlayerRoleBase", false, "oldRole"),
-			new EventParameter("PlayerRoles.PlayerRoleBase", false, "newRole"),
+			new EventParameter("PlayerRoles.RoleTypeId", false, "newRole"),
 			new EventParameter("PlayerRoles.RoleChangeReason", false, "changeReason")) },
 		{ 43, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
@@ -210,5 +210,35 @@ public static class EventManager
 		{ 58, new Event() },
 		{ 59, new Event() },
 		{ 60, new Event() },
+		{ 61, new Event(
+			new EventParameter("System.Boolean", false, "isAutomatic"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 62, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 63, new Event() },
+		{ 64, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.Boolean", false, "isIntercom")) },
+		{ 65, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.Boolean", false, "isIntercom")) },
+		{ 66, new Event(
+			new EventParameter("System.String", false, "userid"),
+			new EventParameter("System.Boolean", false, "hasReservedSlot")) },
+		{ 67, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.String", false, "command"),
+			new EventParameter("System.String", true, "arguments")) },
+		{ 68, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.String", false, "command"),
+			new EventParameter("System.String", true, "arguments")) },
+		{ 69, new Event(
+			new EventParameter("System.String", false, "command"),
+			new EventParameter("System.String", true, "arguments")) },
+		{ 71, new Event(
+			new EventParameter("Respawning.SpawnableTeamType", false, "team")) },
+		{ 70, new Event(
+			new EventParameter("Respawning.SpawnableTeamType", false, "team")) },
 	};
 }

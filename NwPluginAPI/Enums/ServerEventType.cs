@@ -4,11 +4,11 @@ namespace PluginAPI.Enums
 	using PlayerRoles;
 	using AdminToys;
 	using PlayerStatsSystem;
-	using CustomPlayerEffects;
 	using Core.Items;
 	using InventorySystem.Items.Usables;
 	using InventorySystem.Items.Firearms;
 	using InventorySystem.Items.Pickups;
+	using Respawning;
 
 	public enum ServerEventType : int
 	{
@@ -340,7 +340,7 @@ namespace PluginAPI.Enums
         /// Event executed when player changes role.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerRoleBase"/> oldRole, <see cref="PlayerRoleBase"/> newRole, <see cref="RoleChangeReason"/> reason.
+        /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerRoleBase"/> oldRole, <see cref="RoleTypeId"/> newRole, <see cref="RoleChangeReason"/> reason.
         /// </remarks>
         PlayerChangeRole = 42,
 
@@ -475,5 +475,91 @@ namespace PluginAPI.Enums
 		/// Event executed when server waits for players.
 		/// </summary>
 		WaitingForPlayers = 60,
-    }
+
+		/// <summary>
+		/// Event executed when warhead is started.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="bool"/> isAutomatic, <see cref="IPlayer"/> player.
+		/// </remarks>
+		WarheadStart = 61,
+
+		/// <summary>
+		/// Event executed when warhead is stopped.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		WarheadStop = 62,
+
+		/// <summary>
+		/// Event executed when warhead detonates.
+		/// </summary>
+		WarheadDetonation = 63,
+
+		/// <summary>
+		/// Event executed when player is muted.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isIntercom.
+		/// </remarks>
+		PlayerMuted = 64,
+
+		/// <summary>
+		/// Event executed when player is unmuted.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isIntercom.
+		/// </remarks>
+		PlayerUnmuted = 65,
+
+		/// <summary>
+		/// Event executed when joining to server for reserved slot verification.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="string"/> userId, <see cref="bool"/> hasReservedSlot.
+		/// </remarks>
+		PlayerCheckReservedSlot = 66,
+
+		/// <summary>
+		/// Event executed when using remoteadmin command.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="bool"/> arguments.
+		/// </remarks>
+		PlayerRemoteAdminCommand = 67,
+
+		/// <summary>
+		/// Event executed when using game console command.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="bool"/> arguments.
+		/// </remarks>
+		PlayerGameConsoleCommand = 68,
+
+		/// <summary>
+		/// Event executed when using console command.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="string"/> command, <see cref="bool"/> arguments.
+		/// </remarks>
+		ConsoleCommand = 69,
+
+		/// <summary>
+		/// Event executed when selecting next team to spawn.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="SpawnableTeamType"/> team.
+		/// </remarks>
+		/// 
+		TeamRespawnSelected = 70,
+
+		/// <summary>
+		/// Event executed when spawning next team.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="SpawnableTeamType"/> team.
+		/// </remarks>
+		TeamRespawn = 71,
+	}
 }

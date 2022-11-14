@@ -526,6 +526,11 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets if player inventory is full.
+		/// </summary>
+		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
+
+		/// <summary>
 		/// Gets if player is human.
 		/// </summary>
 		public bool IsHuman => ReferenceHub.IsHuman();
@@ -734,6 +739,13 @@ namespace PluginAPI.Core
 			else
 				VoiceChatMutes.SetFlags(ReferenceHub, VcMuteFlags.None);
 		}
+
+		/// <summary>
+		/// Adds item of specific type.
+		/// </summary>
+		/// <param name="item">The type of item.</param>
+		/// <returns>Item</returns>
+		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
 
 		/// <summary>
 		/// Adds ammo of specific item type.

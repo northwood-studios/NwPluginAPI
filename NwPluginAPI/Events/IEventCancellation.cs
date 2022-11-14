@@ -46,7 +46,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="port">The new server port.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
-		public static PreauthCancellationData RejectRedirect(byte port, bool isForced) => new PreauthCancellationData(RejectionReason.Redirect, isForced, port: port);
+		public static PreauthCancellationData RejectRedirect(ushort port, bool isForced) => new PreauthCancellationData(RejectionReason.Redirect, isForced, port: port);
 
 		/// <summary>
 		/// Rejects a player who's trying to authenticate.

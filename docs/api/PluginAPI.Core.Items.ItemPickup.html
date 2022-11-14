@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ItemPickup
+     | Nw Plugin API </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ItemPickup
+     | Nw Plugin API ">
+      <meta name="generator" content="docfx 2.59.4.0">
+      
+      <link rel="shortcut icon" href="../images/nw_logo.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+      
+      <meta property="docfx:rel" content="../">
+      <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../index.html">
+              <img src="../images/nw_logo.png" alt="Nw Plugin API" class="logomark">
+              <span class="brand-title">Nw Plugin API</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../index.html">
+                          <img src="../images/nw_logo.png" alt="Nw Plugin API" class="logomark">
+                          <span class="brand-title">Nw Plugin API</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  
+                  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="PluginAPI.Core.Items.ItemPickup">
+  
+  
+  <h1 id="PluginAPI_Core_Items_ItemPickup" data-uid="PluginAPI.Core.Items.ItemPickup" class="text-break">Class ItemPickup
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ItemPickup</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PluginAPI.Core.Items.html">PluginAPI.Core.Items</a></h6>
+  <h6><strong>Assembly</strong>: PluginAPI.dll</h6>
+  <h5 id="PluginAPI_Core_Items_ItemPickup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ItemPickup</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_OriginalObject.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.OriginalObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L15">View Source</a>
+  </span>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_OriginalObject" data-uid="PluginAPI.Core.Items.ItemPickup.OriginalObject">OriginalObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ItemPickupBase OriginalObject</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InventorySystem.Items.Pickups.ItemPickupBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_GameObject.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.GameObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L33">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_GameObject_" data-uid="PluginAPI.Core.Items.ItemPickup.GameObject*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_GameObject" data-uid="PluginAPI.Core.Items.ItemPickup.GameObject">GameObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject GameObject { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_IsLocked.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.IsLocked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L25">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_IsLocked_" data-uid="PluginAPI.Core.Items.ItemPickup.IsLocked*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_IsLocked" data-uid="PluginAPI.Core.Items.ItemPickup.IsLocked">IsLocked</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLocked { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_LastOwner.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.LastOwner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L18">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_LastOwner_" data-uid="PluginAPI.Core.Items.ItemPickup.LastOwner*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_LastOwner" data-uid="PluginAPI.Core.Items.ItemPickup.LastOwner">LastOwner</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Player LastOwner { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Player.html">Player</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Position.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L34">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Position_" data-uid="PluginAPI.Core.Items.ItemPickup.Position*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Position" data-uid="PluginAPI.Core.Items.ItemPickup.Position">Position</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 Position { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Rigidbody.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Rigidbody%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L31">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Rigidbody_" data-uid="PluginAPI.Core.Items.ItemPickup.Rigidbody*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Rigidbody" data-uid="PluginAPI.Core.Items.ItemPickup.Rigidbody">Rigidbody</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Rigidbody Rigidbody { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Rigidbody</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Rotation.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Rotation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L35">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Rotation_" data-uid="PluginAPI.Core.Items.ItemPickup.Rotation*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Rotation" data-uid="PluginAPI.Core.Items.ItemPickup.Rotation">Rotation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Quaternion Rotation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Quaternion</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Serial.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Serial%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L19">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Serial_" data-uid="PluginAPI.Core.Items.ItemPickup.Serial*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Serial" data-uid="PluginAPI.Core.Items.ItemPickup.Serial">Serial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ushort Serial { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt16</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Transform.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Transform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L32">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Transform_" data-uid="PluginAPI.Core.Items.ItemPickup.Transform*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Transform" data-uid="PluginAPI.Core.Items.ItemPickup.Transform">Transform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform Transform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Type.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L17">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Type_" data-uid="PluginAPI.Core.Items.ItemPickup.Type*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Type" data-uid="PluginAPI.Core.Items.ItemPickup.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ItemType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ItemType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Weight.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Weight%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L20">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Weight_" data-uid="PluginAPI.Core.Items.ItemPickup.Weight*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Weight" data-uid="PluginAPI.Core.Items.ItemPickup.Weight">Weight</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Weight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Create_ItemType_UnityEngine_Vector3_UnityEngine_Quaternion_.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Create(ItemType%2CUnityEngine.Vector3%2CUnityEngine.Quaternion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L55">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Create_" data-uid="PluginAPI.Core.Items.ItemPickup.Create*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Create_ItemType_UnityEngine_Vector3_UnityEngine_Quaternion_" data-uid="PluginAPI.Core.Items.ItemPickup.Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)">Create(ItemType, Vector3, Quaternion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ItemPickup Create(ItemType item, Vector3 position, Quaternion rotation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ItemType</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Quaternion</span></td>
+        <td><span class="parametername">rotation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PluginAPI.Core.Items.ItemPickup.html">ItemPickup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Destroy.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L75">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Destroy_" data-uid="PluginAPI.Core.Items.ItemPickup.Destroy*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Destroy" data-uid="PluginAPI.Core.Items.ItemPickup.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/northwood-studios/NwPluginAPI/new/dev/apiSpec/new?filename=PluginAPI_Core_Items_ItemPickup_Spawn.md&amp;value=---%0Auid%3A%20PluginAPI.Core.Items.ItemPickup.Spawn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/northwood-studios/NwPluginAPI/blob/dev/NwPluginAPI/Core/Items/ItemPickup.cs/#L69">View Source</a>
+  </span>
+  <a id="PluginAPI_Core_Items_ItemPickup_Spawn_" data-uid="PluginAPI.Core.Items.ItemPickup.Spawn*"></a>
+  <h4 id="PluginAPI_Core_Items_ItemPickup_Spawn" data-uid="PluginAPI.Core.Items.ItemPickup.Spawn">Spawn()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Spawn()</code></pre>
+  </div>
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Northwood Studios. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+</html>
