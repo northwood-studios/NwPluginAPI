@@ -5,7 +5,7 @@
 	using PluginAPI.Core.Interfaces;
 
 	/// <summary>
-	/// A factory 
+	/// A factory for <see cref="MyPlayer"/>s.
 	/// </summary>
 	public class MyPlayerFactory : PlayerFactory
     {

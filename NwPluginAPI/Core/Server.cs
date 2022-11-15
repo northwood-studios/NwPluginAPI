@@ -56,7 +56,7 @@ namespace PluginAPI.Core
 
 		#region Ban System
 		/// <summary>
-		/// Bans a player from server.
+		/// Bans a player from the server.
 		/// </summary>
 		/// <param name="player">The target player which will be banned.</param>
 		/// <param name="reason">The reason of the ban.</param>
@@ -65,7 +65,7 @@ namespace PluginAPI.Core
 		public static bool BanPlayer(Player player, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, reason, duration);
 
 		/// <summary>
-		/// Bans a player from server.
+		/// Bans a player from the server.
 		/// </summary>
 		/// <param name="player">The player which will be banned.</param>
 		/// <param name="issuer">The player who issued the ban.</param>
@@ -75,7 +75,7 @@ namespace PluginAPI.Core
 		public static bool BanPlayer(Player player, IPlayer issuer, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, issuer.ReferenceHub, reason, duration);
 
 		/// <summary>
-		/// Kicks a player from server.
+		/// Kicks a player from the server.
 		/// </summary>
 		/// <param name="player">The player which will be kicked.</param>
 		/// <param name="issuer">The player who issued kick.</param>
@@ -83,14 +83,14 @@ namespace PluginAPI.Core
 		public static void KickPlayer(Player player, IPlayer issuer, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, issuer.ReferenceHub, reason);
 
 		/// <summary>
-		/// Kicks a player from server.
+		/// Kicks a player from the server.
 		/// </summary>
 		/// <param name="player">The player which will be kicked.</param>
 		/// <param name="reason">The reason of the kick.</param>
 		public static void KickPlayer(Player player, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, reason);
 
 		/// <summary>
-		/// Bans a player from server.
+		/// Bans a player from the server.
 		/// </summary>
 		/// <param name="userId">The userid of player which will be banned.</param>
 		/// <param name="reason">The ban reason.</param>
@@ -100,7 +100,7 @@ namespace PluginAPI.Core
 		public static bool BanPlayerByUserId(string userId, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, Instance, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
-		/// Bans a player from server.
+		/// Bans a player from the server.
 		/// </summary>
 		/// <param name="userId">The userid of the player which will be banned.</param>
 		/// <param name="issuer">The issuer of the ban.</param>
@@ -124,7 +124,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Bans a player from server.
+		/// Bans a player from the server.
 		/// </summary>
 		/// <param name="ipAddress">The ip address of the player which will be banned.</param>
 		/// <param name="reason">The ban reason.</param>
@@ -134,9 +134,9 @@ namespace PluginAPI.Core
 		public static bool BanPlayerByIpAddress(string ipAddress, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, Instance, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
-		/// Bans a player from server.
+		/// Bans a player from the server.
 		/// </summary>
-		/// <param name="ipAddress">The ip address of player which will be banned.</param>
+		/// <param name="ipAddress">The ip address of the player which will be banned.</param>
 		/// <param name="issuer">The issuer of the ban.</param>
 		/// <param name="reason">The ban reason.</param>
 		/// <param name="duration">The duration of the ban.</param>
@@ -158,7 +158,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Unbans a player from server.
+		/// Unbans a player from the server.
 		/// </summary>
 		/// <param name="userId">The userid of the player to unban.</param>
 		/// <returns>Whether or not the unban was successful.</returns>
@@ -173,7 +173,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Unbans a player from server.
+		/// Unbans a player from the server.
 		/// </summary>
 		/// <param name="ipAddress">The ip address of the player.</param>
 		/// <returns>Whether or not the unban was successful.</returns>
@@ -188,7 +188,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Checks if a player is banned.
+		/// Checks whether or not a player is banned.
 		/// </summary>
 		/// <param name="value">The userid or ip of the player.</param>
 		/// <returns>Whether or not the player is banned.</returns>
