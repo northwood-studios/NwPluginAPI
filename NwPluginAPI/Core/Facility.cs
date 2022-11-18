@@ -12,7 +12,7 @@ namespace PluginAPI.Core
 	using FacilityZone = Zones.FacilityZone;
 
 	/// <summary>
-	/// Facility.
+	/// Represents the facility.
 	/// </summary>
 	public class Facility
 	{

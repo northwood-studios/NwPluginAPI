@@ -8,7 +8,7 @@ namespace PluginAPI.Core.Zones.Heavy
 		public Generator Generator { get; internal set; }
 
 		/// <summary>
-		/// Constructor for heqavy zone room.
+		/// Initializes a new instance of the <see cref="HczRoom"/> class.
 		/// </summary>
 		/// <param name="zone">The zone type.</param>
 		/// <param name="room">The room identifier.</param>

@@ -7,15 +7,18 @@ namespace PluginAPI.Core
 	using static BanHandler;
 	using static Broadcast;
 
+	/// <summary>
+	/// Represents the server.
+	/// </summary>
 	public class Server : Player
 	{
 		/// <summary>
-		/// Instance of server.
+		/// The <see cref="Server"/> instance.
 		/// </summary>
 		public static Server Instance { get; private set; }
 
 		/// <summary>
-		/// Constructor for server.
+		/// Initializes a new instance of the <see cref="Server"/> class.
 		/// </summary>
 		/// <param name="hub">The hub of server.</param>
 		public Server(IGameComponent hub) : base(hub)
@@ -34,7 +37,7 @@ namespace PluginAPI.Core
 		public static ushort Port => ServerStatic.ServerPort;
 
 		/// <summary>
-		/// Gets or sets a value if server has enabled friendly fire.
+		/// Gets or sets a value indicating whether or not server has enabled friendly fire.
 		/// </summary>
 		public static bool FriendlyFire
 		{
@@ -43,7 +46,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets a value of maximum online players.
+		/// Gets or sets the maximum amount of players online at the same time.
 		/// </summary>
 		public static int MaxPlayers
 		{
@@ -53,58 +56,58 @@ namespace PluginAPI.Core
 
 		#region Ban System
 		/// <summary>
-		/// Bans player from server.
+		/// Bans a player from the server.
 		/// </summary>
 		/// <param name="player">The target player which will be banned.</param>
-		/// <param name="reason">The reason of ban.</param>
-		/// <param name="duration">The duration of ban in seconds.</param>
-		/// <returns>If ban is successful.</returns>
+		/// <param name="reason">The reason of the ban.</param>
+		/// <param name="duration">The duration of the ban in seconds.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
 		public static bool BanPlayer(Player player, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, reason, duration);
 
 		/// <summary>
-		/// Bans player from server.
+		/// Bans a player from the server.
 		/// </summary>
-		/// <param name="player">The player which gets banned.</param>
-		/// <param name="issuer">The player which issued ban.</param>
+		/// <param name="player">The player which will be banned.</param>
+		/// <param name="issuer">The player who issued the ban.</param>
 		/// <param name="reason">The reason of ban.</param>
-		/// <param name="duration">The duration of ban in seconds.</param>
-		/// <returns>If ban is successful.</returns>
+		/// <param name="duration">The duration of the ban in seconds.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
 		public static bool BanPlayer(Player player, IPlayer issuer, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, issuer.ReferenceHub, reason, duration);
 
 		/// <summary>
-		/// Kicks player from server.
+		/// Kicks a player from the server.
 		/// </summary>
 		/// <param name="player">The player which will be kicked.</param>
-		/// <param name="issuer">The player which issued kick.</param>
-		/// <param name="reason">The reason of kick.</param>
+		/// <param name="issuer">The player who issued kick.</param>
+		/// <param name="reason">The reason of the kick.</param>
 		public static void KickPlayer(Player player, IPlayer issuer, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, issuer.ReferenceHub, reason);
 
 		/// <summary>
-		/// Kicks player from server.
+		/// Kicks a player from the server.
 		/// </summary>
 		/// <param name="player">The player which will be kicked.</param>
-		/// <param name="reason">The reason of kick.</param>
+		/// <param name="reason">The reason of the kick.</param>
 		public static void KickPlayer(Player player, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, reason);
 
 		/// <summary>
-		/// Bans player from server.
+		/// Bans a player from the server.
 		/// </summary>
 		/// <param name="userId">The userid of player which will be banned.</param>
 		/// <param name="reason">The ban reason.</param>
-		/// <param name="duration">The duration of ban.</param>
-		/// <param name="bannedPlayerNickname">The nickname of banned player.</param>
-		/// <returns>If ban is successful.</returns>
+		/// <param name="duration">The duration of the ban.</param>
+		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
 		public static bool BanPlayerByUserId(string userId, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, Instance, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
-		/// Bans player from server.
+		/// Bans a player from the server.
 		/// </summary>
-		/// <param name="userId">The userid of player which will be banned.</param>
-		/// <param name="issuer">The issuer of ban.</param>
+		/// <param name="userId">The userid of the player which will be banned.</param>
+		/// <param name="issuer">The issuer of the ban.</param>
 		/// <param name="reason">The ban reason.</param>
-		/// <param name="duration">The duration of ban.</param>
-		/// <param name="bannedPlayerNickname">The nickname of banned player.</param>
-		/// <returns>If ban is successful.</returns>
+		/// <param name="duration">The duration of the ban.</param>
+		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
 		public static bool BanPlayerByUserId(string userId, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
 		{
 			if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(reason)) return false;
@@ -121,24 +124,24 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Bans player from server.
+		/// Bans a player from the server.
 		/// </summary>
-		/// <param name="ipAddress">The ip address of player which will be banned.</param>
+		/// <param name="ipAddress">The ip address of the player which will be banned.</param>
 		/// <param name="reason">The ban reason.</param>
-		/// <param name="duration">The duration of ban.</param>
-		/// <param name="bannedPlayerNickname">The nickname of banned player.</param>
-		/// <returns>If ban is successful.</returns>
+		/// <param name="duration">The duration of the ban.</param>
+		/// <param name="bannedPlayerNickname">The nickname of the the banned player.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
 		public static bool BanPlayerByIpAddress(string ipAddress, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, Instance, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
-		/// Bans player from server.
+		/// Bans a player from the server.
 		/// </summary>
-		/// <param name="ipAddress">The ip address of player which will be banned.</param>
-		/// <param name="issuer">The issuer of ban.</param>
+		/// <param name="ipAddress">The ip address of the player which will be banned.</param>
+		/// <param name="issuer">The issuer of the ban.</param>
 		/// <param name="reason">The ban reason.</param>
-		/// <param name="duration">The duration of ban.</param>
-		/// <param name="bannedPlayerNickname">The nickname of banned player.</param>
-		/// <returns>If ban is successful.</returns>
+		/// <param name="duration">The duration of the ban.</param>
+		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
 		public static bool BanPlayerByIpAddress(string ipAddress, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
 		{
 			if (string.IsNullOrEmpty(ipAddress) || string.IsNullOrEmpty(reason)) return false;
@@ -155,10 +158,10 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Unbans player from server.
+		/// Unbans a player from the server.
 		/// </summary>
-		/// <param name="userId">The userid of player.</param>
-		/// <returns>If unban is successful.</returns>
+		/// <param name="userId">The userid of the player to unban.</param>
+		/// <returns>Whether or not the unban was successful.</returns>
 		public static bool UnbanPlayerByUserId(string userId)
 		{
 			if (string.IsNullOrEmpty(userId)) return false;
@@ -170,10 +173,10 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Unbans player from server.
+		/// Unbans a player from the server.
 		/// </summary>
-		/// <param name="ipAddress">The ip address of player.</param>
-		/// <returns>If unban is successful.</returns>
+		/// <param name="ipAddress">The ip address of the player.</param>
+		/// <returns>Whether or not the unban was successful.</returns>
 		public static bool UnbanPlayerByIpAddress(string ipAddress)
 		{
 			if (string.IsNullOrEmpty(ipAddress)) return false;
@@ -185,10 +188,10 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Checks if player is banned.
+		/// Checks whether or not a player is banned.
 		/// </summary>
-		/// <param name="value">The value can be as userid or ip address of player.</param>
-		/// <returns>If player is banned.</returns>
+		/// <param name="value">The userid or ip of the player.</param>
+		/// <returns>Whether or not the player is banned.</returns>
 		public static bool IsPlayerBanned(string value)
 		{
 			if (string.IsNullOrEmpty(value)) return false;

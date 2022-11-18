@@ -13,7 +13,7 @@ namespace PluginAPI.Core
 	using Serialization;
 
 	/// <summary>
-	/// Plugin.
+	/// Handles a plugin.
 	/// </summary>
 	public class PluginHandler
 	{
@@ -29,27 +29,27 @@ namespace PluginAPI.Core
         private readonly MethodInfo _onUnload;
 
         /// <summary>
-		/// Name of plugin.
+		/// Gets the name of the plugin.
 		/// </summary>
         public string PluginName => _entryInfo?.Name ?? _pluginType.FullName;
 
 		/// <summary>
-		/// Version of plugin.
+		/// Gets the version of the plugin.
 		/// </summary>
 		public string PluginVersion => _entryInfo?.Version ?? UnknownVersion;
 
 		/// <summary>
-		/// Description of plugin.
+		/// Gets the description of the plugin.
 		/// </summary>
 		public string PluginDescription => _entryInfo?.Description ?? UnknownName;
 
 		/// <summary>
-		/// Author of plugin.
+		/// Gets the author of the plugin.
 		/// </summary>
 		public string PluginAuthor => _entryInfo?.Author ?? UnknownName;
 
 		/// <summary>
-		/// Unloads plugin.
+		/// Unloads the plugin.
 		/// </summary>
 		public void Unload()
 		{
@@ -70,7 +70,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Loads plugin.
+		/// Loads the plugin.
 		/// </summary>
 		public void Load()
 		{
@@ -91,7 +91,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Constructor
+		/// Initializes a new instance of the <see cref="PluginHandler"/> class.
 		/// </summary>
 		/// <param name="directory">The directory of plugin.</param>
 		/// <param name="entryType">The type of plugin.</param>

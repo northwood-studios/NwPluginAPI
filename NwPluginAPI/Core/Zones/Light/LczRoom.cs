@@ -5,10 +5,13 @@ namespace PluginAPI.Core.Zones.Light
 
 	public class LczRoom : FacilityRoom
 	{
+		/// <summary>
+		/// The zone the room is in.
+		/// </summary>
 		public new readonly LightZone Zone;
 
 		/// <summary>
-		/// Constructor for light zone room.
+		/// Initializes a new instance of the <see cref="LczRoom"/> class.
 		/// </summary>
 		/// <param name="zone">The zone type.</param>
 		/// <param name="room">The room identifier.</param>

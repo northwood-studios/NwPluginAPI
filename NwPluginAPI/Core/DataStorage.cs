@@ -4,7 +4,7 @@ namespace PluginAPI.Core
 	using System.Collections.Generic;
 
 	/// <summary>
-	/// Temporary data storage.
+	/// Manages a player's temporary data storage.
 	/// </summary>
 	public class DataStorage
 	{
@@ -24,7 +24,7 @@ namespace PluginAPI.Core
 		/// <typeparam name="T">The type of data.</typeparam>
 		/// <param name="dataName">The data name.</param>
 		/// <param name="data">The output value.</param>
-		/// <returns>If data is stored it returns true.</returns>
+		/// <returns>Whether or not data was previously stored.</returns>
 		public bool TryGet<T>(string dataName, out T data) where T : class, IComparable
 		{
 			if (StoredData.TryGetValue(dataName, out object obj))
@@ -57,7 +57,7 @@ namespace PluginAPI.Core
 		/// <typeparam name="T">The type of data.</typeparam>
 		/// <param name="dataName">The data name.</param>
 		/// <param name="data">The object of data.</param>
-		/// <returns>If data is not stored it returns true.</returns>
+		/// <returns>Whether or not data had not been previously stored.</returns>
 		public bool Add<T>(string dataName, T data) where T : class, IComparable
 		{
 			if (Contains(dataName)) return false;
@@ -87,14 +87,14 @@ namespace PluginAPI.Core
 		/// Checks if data name is already stored.
 		/// </summary>
 		/// <param name="dataName">The data name.</param>
-		/// <returns>If data is stored it returns true.</returns>
+		/// <returns>Whether or not the data is exists.</returns>
 		public bool Contains(string dataName) => StoredData.ContainsKey(dataName);
 
 		/// <summary>
 		/// Removes data from storage.
 		/// </summary>
 		/// <param name="dataName">The data name.</param>
-		/// <returns>If data is removed it returns true.</returns>
+		/// <returns>Whether or not data removal was successful</returns>
 		public bool Remove(string dataName) => StoredData.Remove(dataName);
 	}
 }

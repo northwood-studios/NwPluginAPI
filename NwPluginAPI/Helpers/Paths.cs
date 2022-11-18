@@ -7,7 +7,7 @@ namespace PluginAPI.Helpers
 	using NorthwoodLib;
 
 	/// <summary>
-	/// Contains easy access to all important folder paths.
+	/// Contains all important folder paths.
 	/// </summary>
 	public static class Paths
 	{
@@ -42,22 +42,22 @@ namespace PluginAPI.Helpers
 		public static string SecretLab { get; private set; }
 
 		/// <summary>
-		/// Gets the path to the "Plugin API" folder, located inside SCP Secret laboratory.
+		/// Gets the path to the "Plugin API" folder, located inside the "SCP Secret laboratory Dedicated Server" folder.
 		/// </summary>
 		public static string PluginAPI { get; private set; }
 
 		/// <summary>
-		/// Gets the path to the "Plugins" folder, located inside Plugin API.
+		/// Gets the path to the "Plugins" folder, located inside the "Plugin API" folder.
 		/// </summary>
 		public static string Plugins { get; private set; }
 
 		/// <summary>
-		/// Gets the path to the "Dependencies" folder, located inside Plugins.
+		/// Gets the path to the "Dependencies" folder, located inside the "Plugins" folder.
 		/// </summary>
 		public static string Dependencies { get; private set; }
 
 		/// <summary>
-		/// Sets all the paths up during run-time.
+		/// Intializes all the paths.
 		/// </summary>
 		internal static void Setup()
 		{

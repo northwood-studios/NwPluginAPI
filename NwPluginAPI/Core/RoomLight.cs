@@ -2,6 +2,9 @@ namespace PluginAPI.Core
 {
 	using UnityEngine;
 
+	/// <summary>
+	/// Represents a room's light.
+	/// </summary>
 	public class RoomLight
 	{
 		private readonly FlickerableLightController _lightController;
@@ -14,7 +17,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Enables or disables light in room.
+		/// Gets or sets whether or not the light in room is enabled.
 		/// </summary>
 		public bool IsEnabled
 		{
@@ -30,7 +33,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets color of lights in room.
+		/// Gets or sets the color of the lights.
 		/// </summary>
 		public Color LightColor
 		{
@@ -48,7 +51,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets default color of lights.
+		/// Gets the default color of lights.
 		/// </summary>
 		public Color DefaultColor
 		{
@@ -60,7 +63,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets lights intensity in room.
+		/// Gets or sets lightning intensity in room.
 		/// </summary>
 		public float LightIntensity
 		{
@@ -76,7 +79,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Flickers lights in room.
+		/// Flickers the lights.
 		/// </summary>
 		/// <param name="duration">The durtaion of flicker.</param>
 		public void FlickerLights(float duration)
@@ -85,7 +88,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Constructor.
+		/// Initializes a new instance of the <see cref="RoomLight"/> class.
 		/// </summary>
 		/// <param name="lightController">The light controller for room.</param>
 		public RoomLight(FlickerableLightController lightController) => _lightController = lightController;

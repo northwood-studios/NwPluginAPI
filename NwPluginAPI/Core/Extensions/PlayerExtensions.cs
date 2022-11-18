@@ -2,6 +2,9 @@
 {
 	using InventorySystem.Configs;
 
+	/// <summary>
+	/// Player-related extensions.
+	/// </summary>
 	public static class PlayerExtensions
 	{
 		/// <summary>

@@ -6,8 +6,14 @@ namespace PluginAPI.Core.Zones
 	using System.Collections.Generic;
 	using System.Linq;
 
+	/// <summary>
+	/// Represents the entrance zone.
+	/// </summary>
 	public class EntranceZone : FacilityZone
 	{
+		/// <summary>
+		/// The <see cref="EntranceZone"/> instance.
+		/// </summary>
 		internal static EntranceZone Instance;
 		internal Dictionary<RoomIdentifier, EzRoom> _rooms = new Dictionary<RoomIdentifier, EzRoom>();
 
@@ -50,7 +56,7 @@ namespace PluginAPI.Core.Zones
 		}
 
 		/// <summary>
-		/// Constructor for entrance zone.
+		/// Initializes a new instance of the <see cref="EntranceZone"/> class.
 		/// </summary>
 		public EntranceZone() => Instance = this;
 	}

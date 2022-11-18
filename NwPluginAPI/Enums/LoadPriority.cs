@@ -1,7 +1,7 @@
 namespace PluginAPI.Enums
 {
 	/// <summary>
-	/// Load priorities for plugins.
+	/// Represents load priorities for plugins.
 	/// </summary>
 	public enum LoadPriority : byte
 	{

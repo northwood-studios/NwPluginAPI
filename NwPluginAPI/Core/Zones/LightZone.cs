@@ -8,6 +8,9 @@ namespace PluginAPI.Core.Zones
 	using System.Collections.Generic;
 	using System.Linq;
 
+	/// <summary>
+	/// Represents the light containment zone.
+	/// </summary>
 	public class LightZone : FacilityZone
 	{
 		internal static LightZone Instance;
@@ -55,7 +58,7 @@ namespace PluginAPI.Core.Zones
 		}
 
 		/// <summary>
-		/// Checks if zone is already decontaminated.
+		/// Checks whether or not the zone has already been decontaminated.
 		/// </summary>
 		public static bool IsDecontaminated => false;// DecontaminationController.Singleton._stopUpdating && !DecontaminationController.Singleton.disableDecontamination;
 
@@ -69,7 +72,7 @@ namespace PluginAPI.Core.Zones
 		}
 
 		/// <summary>
-		/// Consturcor for light zone.
+		/// Initializes a new instance of the <see cref="LightZone"/> class.
 		/// </summary>
 		public LightZone() => Instance = this;
 	}
