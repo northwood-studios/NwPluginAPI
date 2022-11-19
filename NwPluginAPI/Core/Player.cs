@@ -17,6 +17,9 @@ namespace PluginAPI.Core
 	using VoiceChat;
 	using VoiceChat.Playbacks;
 	using static Broadcast;
+	using InventorySystem.Disarming;
+	using static InventorySystem.Disarming.DisarmedPlayers;
+	using Utils.Networking;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -474,6 +477,27 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets or sets whether or not the player is disarmed.
+		/// </summary>
+		public bool IsDisarmed
+		{
+			get => DisarmedPlayers.IsDisarmed(ReferenceHub.inventory);
+			set
+			{
+				if (value)
+				{
+					ReferenceHub.inventory.SetDisarmedStatus(null);
+					DisarmedPlayers.Entries.Add(new DisarmedPlayers.DisarmedEntry(ReferenceHub.networkIdentity.netId, 0U));
+					new DisarmedPlayersListMessage(DisarmedPlayers.Entries).SendToAuthenticated(0);
+					return;
+				}
+
+				ReferenceHub.inventory.SetDisarmedStatus(null);
+				new DisarmedPlayersListMessage(DisarmedPlayers.Entries).SendToAuthenticated(0);
+			}
+		}
+
+		/// <summary>
 		/// Gets whether or not the player is muted.
 		/// </summary>
 		public bool IsMuted => VoiceChatMutes.QueryLocalMute(UserId);
@@ -549,6 +573,27 @@ namespace PluginAPI.Core
 		/// Gets whether or not the player is the dedicated server.
 		/// </summary>
 		public bool IsServer => ReferenceHub.isLocalPlayer;
+
+		/// <summary>
+		/// Gets or sets the disarmer of that player.
+		/// </summary>
+		public Player DisarmedBy
+		{
+			get
+			{
+				if (!IsDisarmed) return null;
+				
+				DisarmedEntry entry = DisarmedPlayers.Entries.Find(x => x.DisarmedPlayer == NetworkId);
+
+				return Player.Get<Player>(entry.Disarmer);
+			}
+			set
+			{
+				ReferenceHub.inventory.SetDisarmedStatus(null);
+				DisarmedPlayers.Entries.Add(new DisarmedPlayers.DisarmedEntry(NetworkId, value.NetworkId));
+				new DisarmedPlayersListMessage(DisarmedPlayers.Entries).SendToAuthenticated(0);
+			}
+		}
 
 		/// <summary>
 		/// Gets the player's network connection.
