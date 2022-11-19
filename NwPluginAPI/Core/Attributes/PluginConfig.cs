@@ -8,5 +8,13 @@ namespace PluginAPI.Core.Attributes
 	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
 	public class PluginConfig : Attribute
 	{
+		public string ConfigPath { get; set; }
+
+		public PluginConfig() { }
+
+		public PluginConfig(string configPath)
+		{
+			ConfigPath = configPath;
+		}
 	}
 }

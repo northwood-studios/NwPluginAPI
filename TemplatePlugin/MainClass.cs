@@ -15,6 +15,8 @@
 	using PluginAPI.Enums;
 	using PluginAPI.Events;
 	using System;
+	using System.Collections.Generic;
+	using TemplatePlugin.Configs;
 	using TemplatePlugin.Factory;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 
@@ -26,7 +28,7 @@
             Log.Info("Loaded plugin, register events...");
             EventManager.RegisterEvents(this);
 			EventManager.RegisterEvents<EventHandlers>(this);
-            Log.Info($"Registered events, config &2&b{PluginConfig.TestConfig}&B&r, register factory...");
+            Log.Info($"Registered events, config &2&b{PluginConfig.IntValue}&B&r, register factory...");
             FactoryManager.RegisterPlayerFactory(this, new MyPlayerFactory());
             Log.Info("Registered player factory!");
 
@@ -36,8 +38,11 @@
 			Log.Info(handler.PluginFilePath);
 			Log.Info(handler.PluginDirectoryPath);
 
-			PluginConfig.TestConfig = "testValue";
+			PluginConfig.StringValue = "test Value";
 			handler.SaveConfig(this, nameof(PluginConfig));
+
+			AnotherConfig.TestList = new List<string>() { "Template0" };
+			handler.SaveConfig(this, nameof(AnotherConfig));
         }
 
         [PluginEvent(ServerEventType.PlayerJoined)]
@@ -431,6 +436,9 @@
         }
 
         [PluginConfig]
-        public Config PluginConfig;
+        public MainConfig PluginConfig;
+
+		[PluginConfig("configs/another-config.yml")]
+		public AnotherConfig AnotherConfig;
     }
 }

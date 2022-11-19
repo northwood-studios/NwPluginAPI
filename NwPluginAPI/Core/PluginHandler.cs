@@ -135,17 +135,24 @@ namespace PluginAPI.Core
 			var field = plugin.GetType().GetField(configField);
 			if (field == null) return;
 
-			if (!File.Exists(_mainConfigPath))
+			var attribute = field.GetCustomAttribute<Attribute>();
+
+			if (!(attribute is PluginConfig cfg)) return;
+
+			string targetPath = string.IsNullOrEmpty(cfg.ConfigPath) ? _mainConfigPath : Path.Combine(PluginDirectoryPath, cfg.ConfigPath);
+
+			if (!Directory.Exists(Path.GetDirectoryName(targetPath))) Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
+
+			if (!File.Exists(targetPath))
 			{
 				LoadDefaultConfig(plugin, configField);
 				Log.Debug($"Created missing config file for &2{PluginName}&r.", Log.DebugMode);
-
 			}
 			else
 			{
-				var config = YamlParser.Deserializer.Deserialize(File.ReadAllText(_mainConfigPath), field.FieldType);
+				var config = YamlParser.Deserializer.Deserialize(File.ReadAllText(targetPath), field.FieldType);
 				field.SetValue(plugin, config);
-				File.WriteAllText(_mainConfigPath, YamlParser.Serializer.Serialize(config));
+				File.WriteAllText(targetPath, YamlParser.Serializer.Serialize(config));
 
 				Log.Debug($"Loaded config file for &2{PluginName}&r.", Log.DebugMode);
 			}	
@@ -160,10 +167,18 @@ namespace PluginAPI.Core
 			var field = plugin.GetType().GetField(configField);
 			if (field == null) return;
 
+			var attribute = field.GetCustomAttribute<Attribute>();
+
+			if (!(attribute is PluginConfig cfg)) return;
+
+			string targetPath = string.IsNullOrEmpty(cfg.ConfigPath) ? _mainConfigPath : Path.Combine(PluginDirectoryPath, cfg.ConfigPath);
+
+			if (!Directory.Exists(Path.GetDirectoryName(targetPath))) Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
+
 			var defaultConfig = Activator.CreateInstance(field.FieldType);
 			field.SetValue(plugin, defaultConfig);
 
-			File.WriteAllText(_mainConfigPath, YamlParser.Serializer.Serialize(defaultConfig));
+			File.WriteAllText(targetPath, YamlParser.Serializer.Serialize(defaultConfig));
 		}
 
 		/// <summary>
@@ -176,7 +191,16 @@ namespace PluginAPI.Core
 			var field = plugin.GetType().GetField(configField);
 			if (field == null) return;
 
-			File.WriteAllText(_mainConfigPath, YamlParser.Serializer.Serialize(field.GetValue(plugin)));
+			var attribute = field.GetCustomAttribute<Attribute>();
+
+			if (!(attribute is PluginConfig cfg)) return;
+
+			string targetPath = string.IsNullOrEmpty(cfg.ConfigPath) ? _mainConfigPath : Path.Combine(PluginDirectoryPath, cfg.ConfigPath);
+
+			if (!Directory.Exists(Path.GetDirectoryName(targetPath))) Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
+
+			File.WriteAllText(targetPath, YamlParser.Serializer.Serialize(field.GetValue(plugin)));
+
 			Log.Debug($"Saved config file for &2{PluginName}&r.", Log.DebugMode);
 		}
 
