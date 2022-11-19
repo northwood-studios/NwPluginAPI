@@ -4,6 +4,9 @@ namespace PluginAPI.Commands
 	using System;
 	using UnityEngine;
 
+	/// <summary>
+	/// The parent command for the NW-API commands.
+	/// </summary>
 	[CommandHandler(typeof(GameConsoleCommandHandler))]
 	public class PluginsCommand : ParentCommand, IUsageProvider
 	{

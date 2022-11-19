@@ -3,35 +3,38 @@ namespace PluginAPI.Core
 	using Respawning;
 	using static Respawning.RespawnEffectsController;
 
+	/// <summary>
+	/// Handles respawning
+	/// </summary>
 	public static class Respawn
 	{
 		/// <summary>
-		/// Gets the amount of NTF tickets.
+		/// Gets the amount of NTF tickets left.
 		/// </summary>
 		public static float NtfTickets => RespawnTokensManager.GetTeamDominance(SpawnableTeamType.NineTailedFox);
 
 		/// <summary>
-		/// Gets the amount of chaos tickets.
+		/// Gets the amount of chaos tickets left.
 		/// </summary>
 		public static float ChaosTickets => RespawnTokensManager.GetTeamDominance(SpawnableTeamType.ChaosInsurgency);
 
 		/// <summary>
-		/// Gets the next team which will be spawned
+		/// Gets the next team which will be spawned.
 		/// </summary>
 		public static SpawnableTeamType NextKnownTeam => RespawnManager.Singleton.NextKnownTeam;
 
 		/// <summary>
-		/// Add tickets to specific team.
+		/// Adds tickets to a specific team.
 		/// </summary>
-		/// <param name="team">The team type.</param>
-		/// <param name="amount">The amount of tickets.</param>
+		/// <param name="team">The team to add tickets to.</param>
+		/// <param name="amount">The amount of tickets to add.</param>
 		public static void AddTickets(SpawnableTeamType team, float amount) => RespawnTokensManager.GrantTokens(team, amount);
 
 		/// <summary>
-		/// Spawns specific team.
+		/// Spawns a specific team.
 		/// </summary>
-		/// <param name="team">The team type.</param>
-		/// <param name="playEffects">Play effects like chaos van arrive or helicopter land.</param>
+		/// <param name="team">The team to spawn.</param>
+		/// <param name="playEffects">Plays spawn effects.</param>
 		public static void Spawn(SpawnableTeamType team, bool playEffects = false)
 		{
 			RespawnManager.Singleton.ForceSpawnTeam(team);

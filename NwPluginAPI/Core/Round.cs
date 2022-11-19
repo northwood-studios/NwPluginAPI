@@ -12,7 +12,7 @@ namespace PluginAPI.Core
 		public static bool IsRoundStarted => RoundSummary.RoundInProgress();
 
 		/// <summary>
-		/// Gets or sets a value whether the round is locked or not.
+		/// Gets or sets a value indicating whether the round is locked or not.
 		/// </summary>
 		public static bool IsLocked
 		{
@@ -21,7 +21,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets a value whether the lobby is locked or not.
+		/// Gets or sets a value indicating whether the lobby is locked or not.
 		/// </summary>
 		public static bool IsLobbyLocked
 		{
@@ -32,7 +32,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Restarts round.
 		/// </summary>
-		/// <param name="fastRestart">If its fast restart.</param>
+		/// <param name="fastRestart">Whether or not it fast restart is enabled.</param>
 		/// <param name="overrideRestartAction">Overrides stop next round action.</param>
 		/// <param name="restartAction">The restart action.</param>
 		public static void Restart(bool fastRestart = true, bool overrideRestartAction = false, NextRoundAction restartAction = NextRoundAction.Restart)

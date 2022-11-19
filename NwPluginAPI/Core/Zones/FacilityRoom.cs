@@ -8,43 +8,46 @@ namespace PluginAPI.Core.Zones
 	using System.Collections.Generic;
 	using UnityEngine;
 
+	/// <summary>
+	/// Represents a room.
+	/// </summary>
 	public class FacilityRoom
 	{
 		Dictionary<Type, MonoBehaviour> StoredComponents = new Dictionary<Type, MonoBehaviour>();
 		internal Dictionary<DoorVariant, FacilityDoor> _doors = new Dictionary<DoorVariant, FacilityDoor>();
 
 		/// <summary>
-		/// Gets type of zone.
+		/// Gets the zone type.
 		/// </summary>
 		public readonly FacilityZone Zone;
 
 		/// <summary>
-		/// Gets lights controller.
+		/// Gets the lights controller.
 		/// </summary>
 		public readonly RoomLight Lights;
 
 		/// <summary>
-		/// Gets room identifier.
+		/// Gets the room identifier.
 		/// </summary>
 		public readonly RoomIdentifier Identifier;
 
 		/// <summary>
-		/// Gets room transform.
+		/// Gets the room's <see cref="UnityEngine.Transform"/>.
 		/// </summary>
 		public Transform Transform => Identifier.transform;
 
 		/// <summary>
-		/// Gets room gameobject.
+		/// Gets room's <see cref="UnityEngine.GameObject"/>.
 		/// </summary>
 		public GameObject GameObject => Identifier.gameObject;
 
 		/// <summary>
-		/// Gets room position.
+		/// Gets room's position.
 		/// </summary>
 		public Vector3 Position => Transform.position;
 
 		/// <summary>
-		/// Gets room rotation.
+		/// Gets room's rotation.
 		/// </summary>
 		public Quaternion Rotation => Transform.rotation;
 
@@ -135,7 +138,7 @@ namespace PluginAPI.Core.Zones
 		}
 
 		/// <summary>
-		/// Constructor for facility room.
+		/// Initializes a new instance of the <see cref="FacilityRoom"/> class.
 		/// </summary>
 		/// <param name="zone">The zone type.</param>
 		/// <param name="room">The room identifier.</param>

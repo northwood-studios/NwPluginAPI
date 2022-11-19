@@ -23,6 +23,9 @@ namespace PluginAPI.Events
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 	using Respawning;
 
+	/// <summary>
+	/// Manages plugin events.
+	/// </summary>
 	public static class EventManager
 	{
 		private class IndexInfo
@@ -31,8 +34,14 @@ namespace PluginAPI.Events
 			public Type Type;
 		}
 
+		/// <summary>
+		/// Contains all registered event handlers.
+		/// </summary>
 		private static readonly Dictionary<Type, object> EventHandlers = new Dictionary<Type, object>();
 
+		/// <summary>
+		/// Contains all events and their parameters.
+		/// </summary>
 		public static readonly Dictionary<ServerEventType, Event> Events = new Dictionary<ServerEventType, Event>()
 		{
 			{ ServerEventType.PlayerJoined, new Event(

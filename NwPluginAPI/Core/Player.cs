@@ -19,7 +19,7 @@ namespace PluginAPI.Core
 	using static Broadcast;
 
 	/// <summary>
-	/// Player connected to server.
+	/// Represents a player connected to server.
 	/// </summary>
 	public class Player : IPlayer
     {
@@ -30,7 +30,7 @@ namespace PluginAPI.Core
 
         #region Static Parameters
         /// <summary>
-        /// Amount of online players.
+        /// Gets the amount of online players.
         /// </summary>
         public static int Count => ReferenceHub.AllHubs.Count;
         #endregion
@@ -64,7 +64,7 @@ namespace PluginAPI.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Player"/> from <see cref="IGameComponent"/>.
+        /// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
         /// </summary>
         public static bool TryGet<T>(IGameComponent component, out T player) where T : IPlayer
         {
@@ -87,7 +87,7 @@ namespace PluginAPI.Core
         #region Get player from gameobject.
 
         /// <summary>
-        /// Gets the <see cref="Player"/> from <see cref="GameObject"/>.
+        /// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
         /// </summary>
         public static T Get<T>(GameObject gameObject) where T : IPlayer
         {
@@ -96,9 +96,9 @@ namespace PluginAPI.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Player"/> from <see cref="GameObject"/>.
+        /// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
         /// </summary>
-        /// <returns>Returns <see langword="true"/> if player found or <see langword="false"/> if not found.</returns>
+        /// <returns>Whether or not a player was found.</returns>
         public static bool TryGet<T>(GameObject gameObject, out T player) where T : IPlayer
         {
 			if (gameObject == null)
@@ -126,7 +126,7 @@ namespace PluginAPI.Core
 
         #region Get player from reference hub.
         /// <summary>
-        /// Gets the <see cref="Player"/> from <see cref="ReferenceHub"/>.
+        /// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
         /// </summary>
         public static T Get<T>(ReferenceHub hub) where T : IPlayer
         {
@@ -135,9 +135,9 @@ namespace PluginAPI.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Player"/> from <see cref="ReferenceHub"/>.
+        /// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
         /// </summary>
-        /// <returns>Returns <see langword="true"/> if player found or <see langword="false"/> if not found.</returns>
+        /// <returns>Whether or not a player was found.</returns>
         public static bool TryGet<T>(ReferenceHub hub, out T player) where T : IPlayer
         {
             if (hub == null)
@@ -159,7 +159,7 @@ namespace PluginAPI.Core
 
         #region Get player from network identity.
         /// <summary>
-        /// Gets the <see cref="Player"/> from <see cref="NetworkIdentity"/>.
+        /// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
         /// </summary>
         public static T Get<T>(NetworkIdentity netIdentity) where T : IPlayer
 		{
@@ -168,9 +168,9 @@ namespace PluginAPI.Core
 		}
 
         /// <summary>
-        /// Gets the <see cref="Player"/> from <see cref="NetworkIdentity"/>.
+        /// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
         /// </summary>
-        /// <returns>Returns <see langword="true"/> if player found or <see langword="false"/> if not found.</returns>
+        /// <returns>Whether or not a player was found.</returns>
         public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : IPlayer
         {
             if (netIdentity == null)
@@ -192,7 +192,7 @@ namespace PluginAPI.Core
         #region Get player from name.
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by name.
+        /// Gets the <see cref="Player"/> by their name.
         /// </summary>
         public static T GetByName<T>(string name) where T : IPlayer
         {
@@ -201,9 +201,9 @@ namespace PluginAPI.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by name.
+        /// Gets the <see cref="Player"/> by their name.
         /// </summary>
-        /// <returns>Returns <see langword="true"/> if player found or <see langword="false"/> if not found.</returns>
+        /// <returns>Whether or not a player was found.</returns>
         public static bool TryGetByName<T>(string name, out T player) where T : IPlayer
         {
             if (string.IsNullOrEmpty(name))
@@ -237,7 +237,7 @@ namespace PluginAPI.Core
         #region Get player from player id.
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by player id.
+        /// Gets the <see cref="Player"/> by their player id.
         /// </summary>
         public static T Get<T>(int playerId) where T : IPlayer
         {
@@ -246,9 +246,9 @@ namespace PluginAPI.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by player id.
+        /// Gets the <see cref="Player"/> by their player id.
         /// </summary>
-        /// <returns>Returns <see langword="true"/> if player found or <see langword="false"/> if not found.</returns>
+        /// <returns>Whether or not a player was found.</returns>
         public static bool TryGet<T>(int playerId, out T player) where T : IPlayer
         {
             if (!PlayersIds.TryGetValue(playerId, out IGameComponent component))
@@ -271,7 +271,7 @@ namespace PluginAPI.Core
         #region Get player from userid.
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by user id.
+        /// Gets the <see cref="Player"/> by their user id.
         /// </summary>
         public static T Get<T>(string userId) where T : IPlayer
         {
@@ -280,9 +280,9 @@ namespace PluginAPI.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by user id.
+        /// Gets the <see cref="Player"/> by their user id.
         /// </summary>
-        /// <returns>Returns <see langword="true"/> if player found or <see langword="false"/> if not found.</returns>
+        /// <returns>Whether or not a player was found.</returns>
         public static bool TryGet<T>(string userId, out T player) where T : IPlayer
         {
             if (string.IsNullOrEmpty(userId))
@@ -311,7 +311,7 @@ namespace PluginAPI.Core
         #region Get player from network id.
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by network id.
+        /// Gets the <see cref="Player"/> by their network id.
         /// </summary>
         public static T Get<T>(uint networkId) where T : IPlayer
         {
@@ -320,9 +320,9 @@ namespace PluginAPI.Core
         }
 
         /// <summary>
-        /// Gets the <see cref="Player"/> by network id.
+        /// Gets the <see cref="Player"/> by their network id.
         /// </summary>
-        /// <returns>Returns <see langword="true"/> if player found or <see langword="false"/> if not found.</returns>
+        /// <returns>Whether or not a player was found.</returns>
         public static bool TryGet<T>(uint networkId, out T player) where T : IPlayer
         {
             if (!ReferenceHub.TryGetHubNetID(networkId, out ReferenceHub hub))
@@ -355,22 +355,22 @@ namespace PluginAPI.Core
 		public GameObject GameObject => ReferenceHub.gameObject;
 
 		/// <summary>
-		/// Gets the network id.
+		/// Gets the player's network id.
 		/// </summary>
 		public uint NetworkId => ReferenceHub.characterClassManager.netId;
 
 		/// <summary>
-		/// Gets the player unique id per round.
+		/// Gets the player's unique id per round.
 		/// </summary>
 		public int PlayerId => ReferenceHub.PlayerId;
 
 		/// <summary>
-		/// Gets the player name.
+		/// Gets the player's name.
 		/// </summary>
 		public string Nickname => string.IsNullOrEmpty(ReferenceHub.nicknameSync.MyNick) ? "(unknown nickname)" : ReferenceHub.nicknameSync.MyNick;
 
 		/// <summary>
-		/// Gets or sets player display name.
+		/// Gets or sets the player's display name.
 		/// </summary>
 		public string DisplayNickname
 		{
@@ -379,17 +379,17 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets the player user id.
+		/// Gets the player's user id.
 		/// </summary>
 		public string UserId => IsServer ? "server@server" : ReferenceHub.characterClassManager.UserId;
 
 		/// <summary>
-		/// Gets the player ip address.
+		/// Gets the player's ip address.
 		/// </summary>
 		public string IpAddress => ReferenceHub.characterClassManager.connectionToClient.address;
 
 		/// <summary>
-		/// Gets or sets player current role.
+		/// Gets or sets the player's current role.
 		/// </summary>
 		public RoleTypeId Role
 		{
@@ -398,7 +398,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets player custom info.
+		/// Gets or sets the player's custom info.
 		/// </summary>
 		public string CustomInfo
 		{
@@ -407,7 +407,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets player current health;
+		/// Gets or sets the player's current health;
 		/// </summary>
 		public float Health
 		{
@@ -416,12 +416,12 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets player current maximum health;
+		/// Gets the player's current maximum health;
 		/// </summary>
 		public float MaxHealth => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).MaxValue;
 
 		/// <summary>
-		/// Gets or sets player current artificial health;
+		/// Gets or sets the player's current artificial health;
 		/// </summary>
 		public float ArtificialHealth
 		{
@@ -430,22 +430,22 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets player current maximum artifical health.
+		/// Gets the player's current maximum artifical health.
 		/// </summary>
 		public float MaxArtificalHealth => ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
 
 		/// <summary>
-		/// Gets if player has remoteadmin access. 
+		/// Gets whether or not the player has remoteadmin access. 
 		/// </summary>
 		public bool RemoteAdminAccess => ReferenceHub.serverRoles.RemoteAdmin;
 
 		/// <summary>
-		/// Gets if player has DoNotTrack enabled.
+		/// Gets if the player has DoNotTrack enabled.
 		/// </summary>
 		public bool DoNotTrack => ReferenceHub.serverRoles.DoNotTrack;
 
 		/// <summary>
-		/// Gets or sets if player is using overwatch.
+		/// Gets or sets whether ot not the player has overwatch enabled.
 		/// </summary>
 		public bool IsOverwatchEnabled
 		{
@@ -454,7 +454,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Player info displayed while looking at player.
+		/// Player info displayed while looking at the player.
 		/// </summary>
 		public PlayerInfo PlayerInfo { get; }
 
@@ -474,32 +474,32 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets if player is muted.
+		/// Gets whether or not the player is muted.
 		/// </summary>
 		public bool IsMuted => VoiceChatMutes.QueryLocalMute(UserId);
 
 		/// <summary>
-		/// Gets if player is muted at intercom.
+		/// Gets whether or not the player is muted at intercom.
 		/// </summary>
 		public bool IsIntercomMuted => VoiceChatMutes.QueryLocalMute(UserId, true);
 
 		/// <summary>
-		/// Gets if player is using voicechat.
+		/// Gets whether or not the player is using voicechat.
 		/// </summary>
 		public bool IsUsingVoiceChat => PersonalRadioPlayback.IsTransmitting(ReferenceHub);
 
 		/// <summary>
-		/// Gets if player is global moderator.
+		/// Gets whether or not the player is global moderator.
 		/// </summary>
 		public bool IsGlobalModerator => ReferenceHub.serverRoles.RaEverywhere;
 
 		/// <summary>
-		/// Gets if player is northwood staff.
+		/// Gets whether or not the player is northwood staff.
 		/// </summary>
 		public bool IsNorthwoodStaff => ReferenceHub.serverRoles.Staff;
 
 		/// <summary>
-		/// Gets if player has bypass mode.
+		/// Gets whether or not the player has bypass mode.
 		/// </summary>
 		public bool IsBypassEnabled
 		{
@@ -508,7 +508,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets if player has god mode.
+		/// Gets whether or not the player has god mode enabled.
 		/// </summary>
 		public bool IsGodModeEnabled
 		{
@@ -517,7 +517,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets if player has noclip.
+		/// Gets whether or not the player has noclip enabled.
 		/// </summary>
 		public bool IsNoclipEnabled
 		{
@@ -525,58 +525,58 @@ namespace PluginAPI.Core
 			set => ReferenceHub.playerStats.GetModule<AdminFlagsStat>().SetFlag(AdminFlags.Noclip, value);
 		}
 
-		/// <summary>
-		/// Gets if player inventory is full.
-		/// </summary>
-		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
+        /// <summary>
+		/// Gets whether or not the player's inventory is full.
+        /// </summary>
+        public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
+
+        /// <summary>
+        /// Gets whether or not the player is human.
+        /// </summary>
+        public bool IsHuman => ReferenceHub.IsHuman();
 
 		/// <summary>
-		/// Gets if player is human.
-		/// </summary>
-		public bool IsHuman => ReferenceHub.IsHuman();
-
-		/// <summary>
-		/// Gets if player is alive
+		/// Gets whether or not the player is alive
 		/// </summary>
 		public bool IsAlive => ReferenceHub.IsAlive();
 
 		/// <summary>
-		/// Gets if player is properly connected to server.
+		/// Gets whether or not the player is properly connected to server.
 		/// </summary>
 		public bool IsReady => ReferenceHub.characterClassManager.InstanceMode != ClientInstanceMode.Unverified && ReferenceHub.nicknameSync.NickSet;
 
 		/// <summary>
-		/// Gets if player is dedicated server.
+		/// Gets whether or not the player is the dedicated server.
 		/// </summary>
 		public bool IsServer => ReferenceHub.isLocalPlayer;
 
 		/// <summary>
-		/// Gets player network connection.
+		/// Gets the player's network connection.
 		/// </summary>
 		public NetworkConnection Connection => IsServer ? ReferenceHub.networkIdentity.connectionToServer : ReferenceHub.networkIdentity.connectionToClient;
 
 		/// <summary>
-		/// Gets player camera transform.
+		/// Gets the player's camera transform.
 		/// </summary>
 		public Transform Camera => ReferenceHub.PlayerCameraReference;
 
 		/// <summary>
-		/// Storage for temporary date for current session.
+		/// The <see cref="PluginAPI.Core.DataStorage"/>.
 		/// </summary>
 		public DataStorage TemporaryData { get; } = new DataStorage();
 
 		/// <summary>
-		/// The manager for player effects.
+		/// The <see cref="PluginAPI.Core.EffectsManager"/>.
 		/// </summary>
 		public EffectsManager EffectsManager { get; }
 
 		/// <summary>
-		/// The manager for player damage.
+		/// The <see cref="PluginAPI.Core.DamageManager"/>.
 		/// </summary>
 		public DamageManager DamageManager { get; }
 
 		/// <summary>
-		/// Gets or sets player position.
+		/// Gets or sets the player's position.
 		/// </summary>
 		public Vector3 Position
 		{
@@ -585,7 +585,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets player rotation.
+		/// Gets or sets player's rotation.
 		/// </summary>
 		public Vector3 Rotation
 		{
@@ -600,7 +600,7 @@ namespace PluginAPI.Core
 
 		#region Constructor
 		/// <summary>
-		/// Constructor for player.
+		/// Initializes a new instance of the <see cref="Player"/> class.
 		/// </summary>
 		/// <param name="component">The game component.</param>
 		public Player(IGameComponent component)
@@ -639,12 +639,12 @@ namespace PluginAPI.Core
 
 		#region Public Methods
 		/// <summary>
-		/// Shows a broadcast to the player.
+		/// Sends a broadcast to the player.
 		/// </summary>
 		/// <param name="message">The message to be broadcasted.</param>
 		/// <param name="duration">The broadcast duration.</param>
 		/// <param name="type">The broadcast type.</param>
-		/// <param name="shouldClearPrevious">Clears previous displayed broadcast.</param>
+		/// <param name="shouldClearPrevious">Whether or not it should clear previous broadcasts.</param>
 		public void SendBroadcast(string message, ushort duration, BroadcastFlags type = BroadcastFlags.Normal, bool shouldClearPrevious = false)
 		{
 			if (shouldClearPrevious) ClearBroadcasts();
@@ -653,7 +653,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Clears displayed broadcast.
+		/// Clears displayed broadcast(s).
 		/// </summary>
 		public void ClearBroadcasts() => Server.Instance.GetComponent<Broadcast>().TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
 
@@ -665,7 +665,7 @@ namespace PluginAPI.Core
 		public void SendConsoleMessage(string message, string color = "green") => ReferenceHub.gameConsoleTransmission.SendToClient(ReferenceHub.characterClassManager.connectionToClient, message, color);
 
 		/// <summary>
-		/// Bans player from server.
+		/// Bans the player from the server.
 		/// </summary>
 		/// <param name="issuer">The player which issued ban.</param>
 		/// <param name="reason">The reason of ban.</param>
@@ -674,7 +674,7 @@ namespace PluginAPI.Core
 		public bool Ban(IPlayer issuer, string reason, long duration) => Server.BanPlayer(this, issuer, reason, duration);
 
 		/// <summary>
-		/// Bans player from server.
+		/// Bans the player from the server.
 		/// </summary>
 		/// <param name="reason">The reason of ban.</param>
 		/// <param name="duration">The duration of ban in seconds.</param>
@@ -682,20 +682,20 @@ namespace PluginAPI.Core
 		public bool Ban(string reason, long duration) => Server.BanPlayer(this, Server.Instance, reason, duration);
 
 		/// <summary>
-		/// Kicks player from server.
+		/// Kicks the player from the server.
 		/// </summary>
 		/// <param name="issuer">The player which issued kick.</param>
 		/// <param name="reason">The reason of kick.</param>
 		public void Kick(IPlayer issuer, string reason) => Server.KickPlayer(this, issuer, reason);
 
 		/// <summary>
-		/// Kicks player from server.
+		/// Kicks the player from the server.
 		/// </summary>
 		/// <param name="reason">The reason of kick.</param>
 		public void Kick(string reason) => Server.KickPlayer(this, Server.Instance, reason);
 
 		/// <summary>
-		/// Issue a mute to a player, disallowing them from using voicechat.
+		/// Issue a mute to a player, prevents them from using voicechat.
 		/// </summary>
 		public void Mute(bool isTemporary = true)
 		{
@@ -718,7 +718,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Issue a mute to a player, disallowing them from using intercom.
+		/// Issue a mute to a player, preventing them from using intercom.
 		/// </summary>
 		public void IntercomMute(bool isTemporary = false)
 		{
@@ -731,7 +731,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Revoke a player's mute, allowing them to use intercom again.
 		/// </summary>
-		/// <param name="revokeMute">If set to true, this player's <see cref="UserId"/> will be removed from the mute file.</param>
+		/// <param name="revokeMute">Whether or not this player's <see cref="UserId"/> will be removed from the mute file.</param>
 		public void IntercomUnmute(bool revokeMute)
 		{
 			if (revokeMute)
@@ -741,13 +741,6 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Adds item of specific type.
-		/// </summary>
-		/// <param name="item">The type of item.</param>
-		/// <returns>Item</returns>
-		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
-
-		/// <summary>
 		/// Adds ammo of specific item type.
 		/// </summary>
 		/// <param name="item">The type of ammo.</param>
@@ -755,17 +748,17 @@ namespace PluginAPI.Core
 		public void AddAmmo(ItemType item, ushort amount) => ReferenceHub.inventory.ServerAddAmmo(item, amount);
 
 		/// <summary>
-		/// Sets ammo amount of specific item type.
+		/// Sets the ammo amount of a specific ammo type.
 		/// </summary>
 		/// <param name="item">The type of ammo</param>
 		/// <param name="amount">The amount of ammo.</param>
 		public void SetAmmo(ItemType item, ushort amount) => ReferenceHub.inventory.ServerSetAmmo(item, amount);
 
 		/// <summary>
-		/// Gets ammo amount of specific item type.
+		/// Gets ammo amount of specific ammo type.
 		/// </summary>
 		/// <param name="item">The type of ammo.</param>
-		/// <returns>Amount of ammo which player has.</returns>
+		/// <returns>The amount of ammo which the player has.</returns>
 		public ushort GetAmmo(ItemType item) => ReferenceHub.inventory.GetCurAmmo(item);
 
 		/// <summary>
@@ -774,7 +767,7 @@ namespace PluginAPI.Core
 		/// <param name="item">The type of ammo.</param>
 		/// <param name="amount">The amount of ammo which will be dropped.</param>
 		/// <param name="checkMinimals">Will prevent dropping small amounts of ammo.</param>
-		/// <returns>If player dropped ammo successfully.</returns>
+		/// <returns>Whether or not the player dropped the ammo successfully.</returns>
 		public bool DropAmmo(ItemType item, ushort amount, bool checkMinimals = false) => ReferenceHub.inventory.ServerDropAmmo(item, amount, checkMinimals);
 
 		/// <summary>
@@ -789,57 +782,57 @@ namespace PluginAPI.Core
 		public void Heal(float amount) => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).ServerHeal(amount);
 
 		/// <summary>
-		/// Sets player role.
+		/// Sets the players role.
 		/// </summary>
 		/// <param name="newRole">The <see cref="RoleTypeId"/> which will be set.</param>
 		/// <param name="reason">The <see cref="RoleChangeReason"/> of role change.</param>
 		public void SetRole(RoleTypeId newRole, RoleChangeReason reason = RoleChangeReason.RemoteAdmin) => ReferenceHub.roleManager.ServerSetRole(newRole, reason);
 
 		/// <summary>
-		/// Disconnects player from server.
+		/// Disconnects the player from the server.
 		/// </summary>
 		/// <param name="reason">The reason.</param>
 		public void Disconnect(string reason = null) => ServerConsole.Disconnect(GameObject, reason ?? string.Empty);
 
 		/// <summary>
-		/// Player receives hint text.
+		/// Sends the player a hint text.
 		/// </summary>
 		/// <param name="text">The text which will be displayed.</param>
-		/// <param name="duration">The duration of text visibility.</param>
+		/// <param name="duration">The duration of which the text will be visible.</param>
 		public void ReceiveHint(string text, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, null, duration));
 
 		/// <summary>
-		/// Player receives hint text with effects.
+		/// Sends the player a hint text with effects.
 		/// </summary>
 		/// <param name="text">The text which will be displayed.</param>
 		/// <param name="effects">The effects of text.</param>
-		/// <param name="duration">The duration of text visibility.</param>
+		/// <param name="duration">The duration of which the text will be visible.</param>
 		public void ReceiveHint(string text, HintEffect[] effects, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, effects, duration));
 
 		/// <summary>
-		/// Player receives hit marker.
+		/// Sends the player a hit marker.
 		/// </summary>
 		/// <param name="size">The size of hit marker.</param>
 		public void ReceiveHitMarker(float size = 1f) => Hitmarker.SendHitmarker(Connection, size);
 
 		/// <summary>
-		/// Gets stats module.
+		/// Gets the stats module.
 		/// </summary>
-		/// <typeparam name="T">The type of module.</typeparam>
+		/// <typeparam name="T">The type of the stat module.</typeparam>
 		/// <returns>The stat module.</returns>
 		public T GetStatModule<T>() where T : StatBase => ReferenceHub.playerStats.GetModule<T>();
 
 		/// <summary>
-		/// Redirects player connection to target server port.
+		/// Redirects player connection to a target server port.
 		/// </summary>
-		/// <param name="port">The port of target server.</param>
+		/// <param name="port">The port of the target server.</param>
 		public void RedirectToServer(ushort port) => Connection.Send(new RoundRestartMessage(RoundRestartType.RedirectRestart, 0.1f, port, true, false));
 
 		/// <summary>
-		/// Tells player to reconnect to server.
+		/// Tells the player to reconnect to the server.
 		/// </summary>
 		/// <param name="delay">The delay when client will reconnect to server.</param>
-		/// <param name="isFastRestart">If fast restart is enabled.</param>
+		/// <param name="isFastRestart">Whether or not fast restart is enabled.</param>
 		public void Reconnect(float delay = 3f, bool isFastRestart = false) => Connection.Send(new RoundRestartMessage(isFastRestart ? RoundRestartType.FastRestart : RoundRestartType.FullRestart, delay, 0, true, false));
 
         /// <inheritdoc/>

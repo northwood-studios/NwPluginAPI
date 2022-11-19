@@ -6,7 +6,7 @@ namespace PluginAPI.Core.Zones
 	using System.Linq;
 
 	/// <summary>
-	/// Surface zone.
+	/// Represents the surface zone.
 	/// </summary>
 	public class SurfaceZone : FacilityZone
 	{
@@ -52,7 +52,7 @@ namespace PluginAPI.Core.Zones
 		}
 
 		/// <summary>
-		/// Constructor for surface zone.
+		/// Initializes a new instance of the <see cref="SurfaceZone"/> class.
 		/// </summary>
 		public SurfaceZone() => Instance = this;
 	}

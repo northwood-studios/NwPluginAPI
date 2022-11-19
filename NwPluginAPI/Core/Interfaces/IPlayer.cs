@@ -2,6 +2,9 @@ namespace PluginAPI.Core.Interfaces
 {
 	using UnityEngine;
 
+	/// <summary>
+	/// Defines a player.
+	/// </summary>
 	public interface IPlayer : IEntity
 	{
 		/// <summary>
@@ -45,7 +48,8 @@ namespace PluginAPI.Core.Interfaces
         void OnLateUpdate();
 
         /// <summary>
-        /// Executed with frequency of physics system.
+        /// Executed with the frequency of the physics system.
+        /// <remarks>Unity's physics engine runs at 50hz by default.</remarks>
         /// </summary>
         void OnFixedUpdate();
 

@@ -3,14 +3,14 @@
 namespace PluginAPI.Core
 {
 	/// <summary>
-	/// Manager for player effects.
+	/// Manages a players effects.
 	/// </summary>
 	public class EffectsManager
 	{
 		private readonly Player _player;
 
 		/// <summary>
-		/// Constructor for effects manager.
+		/// Initializes a new instance of the <see cref="EffectsManager"/> class.
 		/// </summary>
 		/// <param name="plr">The player.</param>
 		public EffectsManager(Player plr) => _player = plr;
@@ -21,7 +21,7 @@ namespace PluginAPI.Core
 		/// <param name="intensity">The effect's new intensity.</param>
 		/// <param name="duration">The effect's new duration.</param>
 		/// <param name="addDuration">Whether the duration will be forced set or added to it's current one.</param>
-		/// <returns>Whether an effect was found.</returns>
+		/// <returns>Whether or not an effect was found.</returns>
 		public T ChangeState<T>(byte intensity, float duration = 0f, bool addDuration = false) where T : StatusEffectBase =>
 			_player.ReferenceHub.playerEffectsController.ChangeState<T>(intensity, duration, addDuration);
 
@@ -32,7 +32,7 @@ namespace PluginAPI.Core
 		/// <param name="intensity">The effect's new intensity.</param>
 		/// <param name="duration">The effect's new duration.</param>
 		/// <param name="addDuration">Whether the duration will be forced set or added to it's current one.</param>
-		/// <returns>Whether an effect was found.</returns>
+		/// <returns>Whether or not an effect was found.</returns>
 		public StatusEffectBase ChangeState(string effectName, byte intensity, float duration = 0f, bool addDuration = false) =>
 			_player.ReferenceHub.playerEffectsController.ChangeState(effectName, intensity, duration, addDuration);
 
@@ -72,7 +72,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <typeparam name="T">The specified effect that will be looked for.</typeparam>
 		/// <param name="statusEffect">The found player effect.</param>
-		/// <returns>Whether a player effect was found. (And was cast successfully)</returns>
+		/// <returns>Whether or not a player effect was found. (And was cast successfully)</returns>
 		public bool TryGetEffect<T>(out T statusEffect) where T : StatusEffectBase =>
 			_player.ReferenceHub.playerEffectsController.TryGetEffect(out statusEffect);
 
@@ -81,7 +81,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="effectName">The string that will be used to lookup the effect.</param>
 		/// <param name="statusEffect">The returned player effect, if any was found. Otherwise it will be null.</param>
-		/// <returns>Whether an effect was found.</returns>
+		/// <returns>Whether or not an effect was found.</returns>
 		public bool TryGetEffect(string effectName, out StatusEffectBase statusEffect) =>
 			_player.ReferenceHub.playerEffectsController.TryGetEffect(effectName, out statusEffect);
 	}

@@ -8,6 +8,9 @@
 	using PluginAPI.Core;
 	using RemoteAdmin;
 
+	/// <summary>
+	/// Manages commands.
+	/// </summary>
 	public class CommandsManager
 	{
 		private static readonly Dictionary<Type, Dictionary<string, Command>> _registeredCommands = new Dictionary<Type, Dictionary<string, Command>>()
@@ -30,6 +33,13 @@
 			{ typeof(RemoteAdminCommandHandler), "&1RemoteAdmin" },
 		};
 
+		/// <summary>
+		/// Registers a command.
+		/// </summary>
+		/// <param name="handler">The plugin handler.</param>
+		/// <param name="commandHandler">The command handler.</param>
+		/// <param name="commandType">The command type.</param>
+		/// <returns></returns>
 		internal static bool RegisterCommand(PluginHandler handler, Type commandHandler, Type commandType)
 		{
 			if (!_registeredCommands.TryGetValue(commandHandler, out Dictionary<string, Command> commands))

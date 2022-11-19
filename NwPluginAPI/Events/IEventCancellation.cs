@@ -3,6 +3,9 @@ using LiteNetLib.Utils;
 
 namespace PluginAPI.Events
 {
+	/// <summary>
+	/// Defines a cancellable event param.
+	/// </summary>
 	public interface IEventCancellation
 	{
 		/// <summary>
@@ -12,14 +15,15 @@ namespace PluginAPI.Events
 	}
 
 	/// <summary>
-	/// Preauth Event Cancellation Data
+	/// Represents preauth event cancellation data.
 	/// </summary>
 	public readonly struct PreauthCancellationData : IEventCancellation
 	{
+		/// <inheritdoc />
 		public bool IsCancelled { get; }
 
 		private readonly bool _handledManually;
-		
+
 		private readonly NetDataWriter _customWriter;
 		private readonly RejectionReason _reason;
 		private readonly bool _isForced;
@@ -32,7 +36,8 @@ namespace PluginAPI.Events
 		/// Delays the connection.
 		/// </summary>
 		/// <param name="seconds">The delay in seconds.</param>
-		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <param name="isForced">Indicates whether or not the player has to be rejected forcefully.</param>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData RejectDelay(byte seconds, bool isForced)
 		{
 			if (seconds < 1 || seconds > 25)
@@ -45,7 +50,8 @@ namespace PluginAPI.Events
 		/// Rejects the player and redirects them to another server port.
 		/// </summary>
 		/// <param name="port">The new server port.</param>
-		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <param name="isForced">Indicates whether or not the player has to be rejected forcefully.</param>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData RejectRedirect(ushort port, bool isForced) => new PreauthCancellationData(RejectionReason.Redirect, isForced, port: port);
 
 		/// <summary>
@@ -53,7 +59,8 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="banReason">The ban reason.</param>
 		/// <param name="expiration">The ban expiration time.</param>
-		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <param name="isForced">Indicates whether or not the player has to be rejected forcefully.</param>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData RejectBanned(string banReason, DateTime expiration, bool isForced) =>
 			RejectBanned(banReason, expiration.Ticks, isForced);
 
@@ -62,7 +69,8 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="banReason">The ban reason.</param>
 		/// <param name="expiration">The ban expiration time in .NET Ticks.</param>
-		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <param name="isForced">Indicates whether or not the player has to be rejected forcefully.</param>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		// ReSharper disable once MemberCanBePrivate.Global
 		public static PreauthCancellationData RejectBanned(string banReason, long expiration, bool isForced)
 		{
@@ -75,8 +83,9 @@ namespace PluginAPI.Events
 		/// <summary>
 		/// Rejects a player who's trying to authenticate.
 		/// </summary>
-		/// <param name="customReason">Custom rejection reason.</param>
+		/// <param name="customReason">The custom rejection reason.</param>
 		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData Reject(string customReason, bool isForced)
 		{
 			if (string.IsNullOrEmpty(customReason) || customReason.Length > 400)
@@ -89,7 +98,8 @@ namespace PluginAPI.Events
 		/// Rejects a player who's trying to authenticate.
 		/// </summary>
 		/// <param name="reason">Rejection reason.</param>
-		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <param name="isForced">Indicates whether or not the player has to be rejected forcefully.</param>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData Reject(RejectionReason reason, bool isForced)
 		{
 			switch (reason)
@@ -104,22 +114,28 @@ namespace PluginAPI.Events
 					return new PreauthCancellationData(reason, isForced);
 			}
 		}
-		
+
 		/// <summary>
 		/// Rejects a player who's trying to authenticate.
 		/// </summary>
 		/// <param name="writer">The <see cref="NetDataWriter"/> instance.</param>
-		/// <param name="isForced">Indicates whether the player has to be rejected forcefully or not.</param>
+		/// <param name="isForced">Indicates whether or not the player has to be rejected forcefully or not.</param>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData Reject(NetDataWriter writer, bool isForced) => new PreauthCancellationData(RejectionReason.NotSpecified, isForced, writer: writer);
 
 		/// <summary>
 		/// Accepts the connection.
 		/// </summary>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData Accept() =>
 			new PreauthCancellationData(RejectionReason.NotSpecified, false, isCancelled: false);
-		
+
+		/// <summary>
+		/// Handles the connection manually.
+		/// </summary>
+		/// <returns>The <see cref="PreauthCancellationData"/>.</returns>
 		public static PreauthCancellationData HandledManually() => new PreauthCancellationData(RejectionReason.NotSpecified, false, handledManually: true);
-		
+
 		private PreauthCancellationData(RejectionReason rejectionReason, bool isForced, string customReason = null,
 			long expiration = 0, byte seconds = 0, ushort port = 0, NetDataWriter writer = null, bool isCancelled = true, bool handledManually = false)
 		{
@@ -135,25 +151,25 @@ namespace PluginAPI.Events
 			_customWriter = writer;
 			_handledManually = handledManually;
 		}
-		
+
 		/// <summary>
-		/// Generates network writer for the rejection packet.
+		/// Generates a network writer for the rejection packet.
 		/// </summary>
-		/// <param name="forced">Determines whether the rejection is forced.</param>
-		/// <returns>Network writer</returns>
+		/// <param name="forced">Indicates whether or not the rejection is forced.</param>
+		/// <returns>The generated network writer.</returns>
 		public NetDataWriter GenerateWriter(out bool forced)
 		{
 			forced = _isForced;
-			
+
 			if (!IsCancelled || _handledManually)
 				return null;
 
 			if (_reason == RejectionReason.NotSpecified && _customWriter != null)
 				return _customWriter;
-			
+
 			var writer = new NetDataWriter();
 			writer.Put((byte)_reason);
-			
+
 			switch (_reason)
 			{
 				case RejectionReason.Banned:
@@ -176,5 +192,38 @@ namespace PluginAPI.Events
 
 			return writer;
 		}
+	}
+
+	/// <summary>
+	/// Represents reserved slot check event cancellation data.
+	/// </summary>
+	public readonly struct PlayerCheckReservedSlotCancellationData : IEventCancellation
+	{
+		/// <inheritdoc />
+		public bool IsCancelled { get; }
+
+		// ReSharper disable once MemberCanBePrivate.Global
+		public readonly bool HasReservedSlot;
+
+		private PlayerCheckReservedSlotCancellationData(bool isCancelled, bool hasReservedSlot)
+		{
+			IsCancelled = isCancelled;
+			HasReservedSlot = hasReservedSlot;
+		}
+
+		/// <summary>
+		/// Doesn't override the reserved slot check.
+		/// </summary>
+		/// <returns>The <see cref="PlayerCheckReservedSlotCancellationData"/>.</returns>
+		public static PlayerCheckReservedSlotCancellationData LeaveUnchanged() =>
+			new PlayerCheckReservedSlotCancellationData(false, false);
+
+		/// <summary>
+		/// Overrides a reserved slot check.
+		/// </summary>
+		/// <param name="hasReservedSlot">Indicating whether or not the player has a reserved slot.</param>
+		/// <returns>The <see cref="PlayerCheckReservedSlotCancellationData"/>.</returns>
+		public static PlayerCheckReservedSlotCancellationData Override(bool hasReservedSlot) =>
+			new PlayerCheckReservedSlotCancellationData(true, hasReservedSlot);
 	}
 }

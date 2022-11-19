@@ -3,12 +3,26 @@ namespace PluginAPI.Core.Zones.Heavy
 	using MapGeneration.Distributors;
 	using UnityEngine;
 
+	/// <summary>
+	/// Represents an generator.
+	/// </summary>
 	public class Generator
 	{
+		/// <summary>
+		/// The base-game object.
+		/// </summary>
 		public readonly Scp079Generator OriginalObject;
+
+		/// <summary>
+		/// The room the generator is in.
+		/// </summary>
 		public readonly HczRoom Room;
 
-		/*public bool IsOpened
+		/*
+		/// <summary>
+		/// Gets or sets whether or not the generator is opened.
+		/// </summary>
+		public bool IsOpened
 		{
 			get
 			{
@@ -20,6 +34,9 @@ namespace PluginAPI.Core.Zones.Heavy
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets whether or not the generator is locked.
+		/// </summary>
 		public bool IsLocked
 		{
 			get
@@ -32,14 +49,24 @@ namespace PluginAPI.Core.Zones.Heavy
 			}
 		}
 		*/
+		/// <summary>
+		/// Gets or sets whether or not the generator is activating.
+		/// </summary>
 		public bool IsActivating
 		{
 			get => OriginalObject.Activating;
 			set => OriginalObject.Activating = value;
 
 		}
+
+		/// <summary>
+		/// Gets whether or not the generator is activation-ready.
+		/// </summary>
 		public bool IsActivationReady => false;//OriginalObject.ActivationReady;
 
+		/// <summary>
+		/// Gets or sets whether or not the generator is engaged (active).
+		/// </summary>
 		public bool IsEngaged
 		{
 			get => OriginalObject.Engaged;
@@ -82,16 +109,39 @@ namespace PluginAPI.Core.Zones.Heavy
 			}
 		}
 		*/
+		/// <summary>
+		/// Gets the generator's <see cref="UnityEngine.Transform"/>.
+		/// </summary>
 		public Transform Transform => OriginalObject.transform;
+
+		/// <summary>
+		/// Gets the generator's <see cref="UnityEngine.GameObject"/>.
+		/// </summary>
 		public GameObject GameObject => OriginalObject.gameObject;
+
+		/// <summary>
+		/// Gets the generator's position.
+		/// </summary>
 		public Vector3 Position => Transform.position;
+
+		/// <summary>
+		/// Gets the generator rotation.
+		/// </summary>
 		public Quaternion Rotation => Transform.rotation;
 
+		/// <summary>
+		/// Plays the generator's denied sound.
+		/// </summary>
 		public void PlayDeniedSound()
 		{
 			//OriginalObject.RpcDenied();
 		}
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="Generator"/> class.
+		/// </summary>
+		/// <param name="room">The room the generator is in.</param>
+		/// <param name="generator">The base-game generator.</param>
 		public Generator(HczRoom room, Scp079Generator generator)
 		{
 			Room = room;

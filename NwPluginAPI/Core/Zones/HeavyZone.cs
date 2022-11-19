@@ -7,6 +7,9 @@ namespace PluginAPI.Core.Zones
 	using System.Collections.Generic;
 	using System.Linq;
 
+	/// <summary>
+	/// Represents the heavy containment zone.
+	/// </summary>
 	public class HeavyZone : FacilityZone
 	{
 		internal static HeavyZone Instance;
@@ -54,7 +57,7 @@ namespace PluginAPI.Core.Zones
 		}
 
 		/// <summary>
-		/// Constructor for heavy zone.
+		/// Initializes a new instance of the <see cref="HeavyZone"/> class.
 		/// </summary>
 		public HeavyZone() => Instance = this;
 	}
