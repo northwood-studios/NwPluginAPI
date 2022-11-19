@@ -4,13 +4,14 @@ namespace PluginAPI.Core
 	using System.Collections.Generic;
 	using System.IO;
 	using System.Reflection;
-	using System.Runtime.InteropServices;
 	using Attributes;
 	using CommandSystem;
 	using Loader.Features;
 	using PluginAPI.Commands;
-	using RemoteAdmin;
+	using PluginAPI.Loader;
 	using Serialization;
+	using Directory = System.IO.Directory;
+	using File = System.IO.File;
 
 	/// <summary>
 	/// Handles a plugin.
@@ -20,18 +21,37 @@ namespace PluginAPI.Core
 		private static readonly string UnknownName = "Unknown";
 		private static readonly string UnknownVersion = "0.0.0";
 
-		private readonly object _plugin;
-		private readonly Type _pluginType;
+		private readonly string _pluginDirectory;
+		private readonly string _mainConfigPath;
 
         private readonly PluginEntryPoint _entryInfo;
 
         private readonly MethodInfo _entryPoint;
         private readonly MethodInfo _onUnload;
 
-        /// <summary>
+		private readonly object _plugin;
+		private readonly Type _pluginType;
+
+		/// <summary>
+		/// Gets plugin handler.
+		/// </summary>
+		/// <param name="plugin">The plugin.</param>
+		/// <returns>The Plugin handler.</returns>
+		public static PluginHandler Get(object plugin)
+		{
+			if (!AssemblyLoader.PluginToAssembly.TryGetValue(plugin, out Assembly ass)) return null;
+
+			if (!AssemblyLoader.Plugins.TryGetValue(ass, out Dictionary<Type, PluginHandler> handlers)) return null;
+
+			if (!handlers.TryGetValue(plugin.GetType(), out PluginHandler handler)) return null;
+
+			return handler;
+		}
+
+		/// <summary>
 		/// Gets the name of the plugin.
 		/// </summary>
-        public string PluginName => _entryInfo?.Name ?? _pluginType.FullName;
+		public string PluginName => _entryInfo?.Name ?? _pluginType.FullName;
 
 		/// <summary>
 		/// Gets the version of the plugin.
@@ -47,6 +67,21 @@ namespace PluginAPI.Core
 		/// Gets the author of the plugin.
 		/// </summary>
 		public string PluginAuthor => _entryInfo?.Author ?? UnknownName;
+
+		/// <summary>
+		/// Gets the path of plugin file. ( default name: pluginName.dll )
+		/// </summary>
+		public string PluginFilePath { get; internal set; }
+
+		/// <summary>
+		/// Gets the path of plugin directory.
+		/// </summary>
+		public string PluginDirectoryPath => _pluginDirectory;
+
+		/// <summary>
+		/// Gets the path of main plugin config. ( default name: config.yml )
+		/// </summary>
+		public string MainConfigPath => _mainConfigPath;
 
 		/// <summary>
 		/// Unloads the plugin.
@@ -91,17 +126,73 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Loads the plugin config.
+		/// </summary>
+		/// <param name="plugin">The class location of config field.</param>
+		/// <param name="configField">The name of config field.</param>
+		public void LoadConfig(object plugin, string configField)
+		{
+			var field = plugin.GetType().GetField(configField);
+			if (field == null) return;
+
+			if (!File.Exists(_mainConfigPath))
+			{
+				LoadDefaultConfig(plugin, configField);
+				Log.Debug($"Created missing config file for &2{PluginName}&r.", Log.DebugMode);
+
+			}
+			else
+			{
+				var config = YamlParser.Deserializer.Deserialize(File.ReadAllText(_mainConfigPath), field.FieldType);
+				field.SetValue(plugin, config);
+				File.WriteAllText(_mainConfigPath, YamlParser.Serializer.Serialize(config));
+
+				Log.Debug($"Loaded config file for &2{PluginName}&r.", Log.DebugMode);
+			}	
+		}
+		/// <summary>
+		/// Loads the default plugin config.
+		/// </summary>
+		/// <param name="plugin">The class location of config field.</param>
+		/// <param name="configField">The name of config field.</param>
+		public void LoadDefaultConfig(object plugin, string configField)
+		{
+			var field = plugin.GetType().GetField(configField);
+			if (field == null) return;
+
+			var defaultConfig = Activator.CreateInstance(field.FieldType);
+			field.SetValue(plugin, defaultConfig);
+
+			File.WriteAllText(_mainConfigPath, YamlParser.Serializer.Serialize(defaultConfig));
+		}
+
+		/// <summary>
+		/// Saves the plugin config.
+		/// </summary>
+		/// <param name="plugin">The class location of config field.</param>
+		/// <param name="configField">The name of config field.</param>
+		public void SaveConfig(object plugin, string configField)
+		{
+			var field = plugin.GetType().GetField(configField);
+			if (field == null) return;
+
+			File.WriteAllText(_mainConfigPath, YamlParser.Serializer.Serialize(field.GetValue(plugin)));
+			Log.Debug($"Saved config file for &2{PluginName}&r.", Log.DebugMode);
+		}
+
+		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginHandler"/> class.
 		/// </summary>
 		/// <param name="directory">The directory of plugin.</param>
-		/// <param name="entryType">The type of plugin.</param>
+		/// <param name="plugin">The plugin object.</param>
+		/// <param name="pluginType">The type of plugin.</param>
 		/// <param name="types">The all types in plugin.</param>
-		public PluginHandler(PluginDirectory directory, Type entryType, Type[] types)
+		public PluginHandler(PluginDirectory directory, object plugin, Type pluginType, Type[] types)
 		{
-			_plugin = Activator.CreateInstance(entryType);
-            _pluginType = _plugin.GetType();
+			_plugin = plugin;
+			_pluginType = pluginType;
 
-            foreach (var method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
+			foreach (var method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
 				var attribute = method.GetCustomAttribute<Attribute>();
 
@@ -124,7 +215,10 @@ namespace PluginAPI.Core
                 return;
 			}
 
-			foreach(var type in types)
+			_pluginDirectory = Path.Combine(directory.Plugins, PluginName);
+			_mainConfigPath = Path.Combine(_pluginDirectory, "config.yml");
+
+			foreach (var type in types)
 			{
 				if (!type.IsClass) continue;
 
@@ -138,10 +232,10 @@ namespace PluginAPI.Core
 				}
 			}
 
-            if (!Directory.Exists(Path.Combine(directory.Plugins, PluginName)))
+			if (!Directory.Exists(_pluginDirectory))
 			{
-                Directory.CreateDirectory(Path.Combine(directory.Plugins, PluginName));
-                Log.Info($"Created missing plugin directory for \"&2{PluginName}&r\".");
+                Directory.CreateDirectory(_pluginDirectory);
+                Log.Debug($"Created missing plugin directory for \"&2{PluginName}&r\".", Log.DebugMode);
             }
 
             foreach (var field in _pluginType.GetFields())
@@ -151,23 +245,7 @@ namespace PluginAPI.Core
                 switch (attribute)
 				{
 					case PluginConfig _:
-                        if (!File.Exists(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml")))
-                        {
-                            var defaultConfig = Activator.CreateInstance(field.FieldType);
-
-							field.SetValue(_plugin, defaultConfig);
-
-                            File.WriteAllText(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml"), YamlParser.Serializer.Serialize(defaultConfig));
-                            Log.Info($"Created missing config file for &2{PluginName}&r.");
-                        }
-                        else
-                        {
-                            var config = YamlParser.Deserializer.Deserialize(File.ReadAllText(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml")), field.FieldType);
-							field.SetValue(_plugin, config);
-							File.WriteAllText(Path.Combine(directory.Plugins, _entryInfo.Name, "config.yml"), YamlParser.Serializer.Serialize(config));
-
-							Log.Info($"Loaded config file for &2{PluginName}&r.");
-                        }
+						LoadConfig(_plugin, field.Name);
                         break;
 				}
 			}

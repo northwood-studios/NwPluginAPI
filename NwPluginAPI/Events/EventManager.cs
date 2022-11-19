@@ -336,7 +336,7 @@ namespace PluginAPI.Events
 
 						ev.RegisterInvoker(plugin, eventHandler, method);
 
-                        Log.Info($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!");
+                        Log.Debug($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
                         break;
 				}
 			}

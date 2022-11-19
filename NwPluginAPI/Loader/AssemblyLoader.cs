@@ -9,17 +9,35 @@ namespace PluginAPI.Loader
     using Core.Extensions;
     using Helpers;
     using Features;
-	using UnityEngine;
+	using Utils.ConfigHandler;
+	using GameCore;
+	using Log = Core.Log;
 
 	/// <summary>
 	/// Manages initialization of plugin system and loading of plugins.
 	/// </summary>
 	public static class AssemblyLoader
 	{
+		private static Assembly _mainAssembly;
+		
+		/// <summary>
+		/// Gets a main assembly of game.
+		/// </summary>		
+		public static Assembly MainAssembly
+		{
+			get
+			{
+				if (_mainAssembly == null) _mainAssembly = typeof(GameCore.Console).Assembly;
+				return _mainAssembly;
+			}
+		}
+
 		/// <summary>
 		/// Gets a list of all recognized and loaded plugins.
 		/// </summary>
 		public static Dictionary<Assembly, Dictionary<Type, PluginHandler>> Plugins { get; } = new Dictionary<Assembly, Dictionary<Type, PluginHandler>>();
+
+		internal static Dictionary<object, Assembly> PluginToAssembly { get; } = new Dictionary<object, Assembly>();
 
 		/// <summary>
 		/// Gets a list of all installed and enabled plugins.
@@ -51,6 +69,8 @@ namespace PluginAPI.Loader
 
 			if (StartupArgs.Args.Any(arg => string.Equals(arg, "-disableAnsiColors", StringComparison.OrdinalIgnoreCase)))
 				Log.DisableBetterColors = true;
+
+			Log.DebugMode = ConfigFile.ServerConfig.GetBool("pluginapi_debug");
 
 			Paths.Setup();
 			FactoryManager.Init();
@@ -94,9 +114,9 @@ namespace PluginAPI.Loader
 			Log.Info($"Loading &2{files.Length}&r plugins...");
 			int successes = 0;
 
-            foreach (string dependencyPath in files)
+			foreach (string pluginPath in files)
             {
-                if (!TryGetAssembly(dependencyPath, out Assembly assembly))
+                if (!TryGetAssembly(pluginPath, out Assembly assembly))
 					continue;
 
 				var types = assembly.GetTypes();
@@ -109,7 +129,23 @@ namespace PluginAPI.Loader
 
 					if (!Plugins[assembly].ContainsKey(entryType))
 					{
-						Plugins[assembly].Add(entryType, new PluginHandler(directory, entryType, types));
+						object plugin = null;
+						try
+						{
+							plugin = Activator.CreateInstance(entryType);
+						}
+						catch (Exception ex)
+						{
+							Log.Error($"Failed creating instance of plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r.\n{ex}", "Loader");
+							continue;
+						}
+
+						PluginToAssembly.Add(plugin, assembly);
+
+						Plugins[assembly].Add(entryType, new PluginHandler(directory, plugin, entryType, types)
+						{
+							PluginFilePath = pluginPath
+						});
 						successes++;
 					}
 				}

@@ -29,6 +29,15 @@
             Log.Info($"Registered events, config &2&b{PluginConfig.TestConfig}&B&r, register factory...");
             FactoryManager.RegisterPlayerFactory(this, new MyPlayerFactory());
             Log.Info("Registered player factory!");
+
+			var handler = PluginHandler.Get(this);
+
+			Log.Info(handler.PluginName);
+			Log.Info(handler.PluginFilePath);
+			Log.Info(handler.PluginDirectoryPath);
+
+			PluginConfig.TestConfig = "testValue";
+			handler.SaveConfig(this, nameof(PluginConfig));
         }
 
         [PluginEvent(ServerEventType.PlayerJoined)]
