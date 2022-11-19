@@ -1,0 +1,664 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Round
+  commentId: T:PluginAPI.Core.Round
+  id: Round
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Round.End
+  - PluginAPI.Core.Round.IsLobbyLocked
+  - PluginAPI.Core.Round.IsLocked
+  - PluginAPI.Core.Round.IsRoundStarted
+  - PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
+  - PluginAPI.Core.Round.RestartSilently
+  - PluginAPI.Core.Round.Start
+  langs:
+  - csharp
+  - vb
+  name: Round
+  nameWithType: Round
+  fullName: PluginAPI.Core.Round
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Round
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 6
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public static class Round
+    content.vb: Public Module Round
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: PluginAPI.Core.Round.IsRoundStarted
+  commentId: P:PluginAPI.Core.Round.IsRoundStarted
+  id: IsRoundStarted
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: IsRoundStarted
+  nameWithType: Round.IsRoundStarted
+  fullName: PluginAPI.Core.Round.IsRoundStarted
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsRoundStarted
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets a value indicating whether the round is started or not.\n"
+  example: []
+  syntax:
+    content: public static bool IsRoundStarted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsRoundStarted As Boolean
+  overload: PluginAPI.Core.Round.IsRoundStarted*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Round.IsLocked
+  commentId: P:PluginAPI.Core.Round.IsLocked
+  id: IsLocked
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: IsLocked
+  nameWithType: Round.IsLocked
+  fullName: PluginAPI.Core.Round.IsLocked
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsLocked
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 16
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets a value indicating whether the round is locked or not.\n"
+  example: []
+  syntax:
+    content: public static bool IsLocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsLocked As Boolean
+  overload: PluginAPI.Core.Round.IsLocked*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Round.IsLobbyLocked
+  commentId: P:PluginAPI.Core.Round.IsLobbyLocked
+  id: IsLobbyLocked
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: IsLobbyLocked
+  nameWithType: Round.IsLobbyLocked
+  fullName: PluginAPI.Core.Round.IsLobbyLocked
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsLobbyLocked
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 25
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets a value indicating whether the lobby is locked or not.\n"
+  example: []
+  syntax:
+    content: public static bool IsLobbyLocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsLobbyLocked As Boolean
+  overload: PluginAPI.Core.Round.IsLobbyLocked*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
+  commentId: M:PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
+  id: Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: Restart(Boolean, Boolean, ServerStatic.NextRoundAction)
+  nameWithType: Round.Restart(Boolean, Boolean, ServerStatic.NextRoundAction)
+  fullName: PluginAPI.Core.Round.Restart(System.Boolean, System.Boolean, ServerStatic.NextRoundAction)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Restart
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRestarts round.\n"
+  example: []
+  syntax:
+    content: public static void Restart(bool fastRestart = true, bool overrideRestartAction = false, ServerStatic.NextRoundAction restartAction = ServerStatic.NextRoundAction.Restart)
+    parameters:
+    - id: fastRestart
+      type: System.Boolean
+      description: Whether or not it fast restart is enabled.
+    - id: overrideRestartAction
+      type: System.Boolean
+      description: Overrides stop next round action.
+    - id: restartAction
+      type: ServerStatic.NextRoundAction
+      description: The restart action.
+    content.vb: Public Shared Sub Restart(fastRestart As Boolean = True, overrideRestartAction As Boolean = False, restartAction As ServerStatic.NextRoundAction = ServerStatic.NextRoundAction.Restart)
+  overload: PluginAPI.Core.Round.Restart*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Round.RestartSilently
+  commentId: M:PluginAPI.Core.Round.RestartSilently
+  id: RestartSilently
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: RestartSilently()
+  nameWithType: Round.RestartSilently()
+  fullName: PluginAPI.Core.Round.RestartSilently()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RestartSilently
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 51
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRestarts the round silently.\n"
+  example: []
+  syntax:
+    content: public static void RestartSilently()
+    content.vb: Public Shared Sub RestartSilently
+  overload: PluginAPI.Core.Round.RestartSilently*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Round.Start
+  commentId: M:PluginAPI.Core.Round.Start
+  id: Start
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: Round.Start()
+  fullName: PluginAPI.Core.Round.Start()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Start
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 56
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nStart the round.\n"
+  example: []
+  syntax:
+    content: public static void Start()
+    content.vb: Public Shared Sub Start
+  overload: PluginAPI.Core.Round.Start*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Round.End
+  commentId: M:PluginAPI.Core.Round.End
+  id: End
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: End()
+  nameWithType: Round.End()
+  fullName: PluginAPI.Core.Round.End()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: End
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 62
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nEnds current round.\n"
+  example: []
+  syntax:
+    content: public static bool End()
+    return:
+      type: System.Boolean
+      description: A <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> describing whether or not the round was successfully ended.
+    content.vb: Public Shared Function End As Boolean
+  overload: PluginAPI.Core.Round.End*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Round.IsRoundStarted*
+  commentId: Overload:PluginAPI.Core.Round.IsRoundStarted
+  name: IsRoundStarted
+  nameWithType: Round.IsRoundStarted
+  fullName: PluginAPI.Core.Round.IsRoundStarted
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Round.IsLocked*
+  commentId: Overload:PluginAPI.Core.Round.IsLocked
+  name: IsLocked
+  nameWithType: Round.IsLocked
+  fullName: PluginAPI.Core.Round.IsLocked
+- uid: PluginAPI.Core.Round.IsLobbyLocked*
+  commentId: Overload:PluginAPI.Core.Round.IsLobbyLocked
+  name: IsLobbyLocked
+  nameWithType: Round.IsLobbyLocked
+  fullName: PluginAPI.Core.Round.IsLobbyLocked
+- uid: PluginAPI.Core.Round.Restart*
+  commentId: Overload:PluginAPI.Core.Round.Restart
+  name: Restart
+  nameWithType: Round.Restart
+  fullName: PluginAPI.Core.Round.Restart
+- uid: ServerStatic.NextRoundAction
+  commentId: T:ServerStatic.NextRoundAction
+  isExternal: true
+  name: ServerStatic.NextRoundAction
+  nameWithType: ServerStatic.NextRoundAction
+  fullName: ServerStatic.NextRoundAction
+- uid: PluginAPI.Core.Round.RestartSilently*
+  commentId: Overload:PluginAPI.Core.Round.RestartSilently
+  name: RestartSilently
+  nameWithType: Round.RestartSilently
+  fullName: PluginAPI.Core.Round.RestartSilently
+- uid: PluginAPI.Core.Round.Start*
+  commentId: Overload:PluginAPI.Core.Round.Start
+  name: Start
+  nameWithType: Round.Start
+  fullName: PluginAPI.Core.Round.Start
+- uid: PluginAPI.Core.Round.End*
+  commentId: Overload:PluginAPI.Core.Round.End
+  name: End
+  nameWithType: Round.End
+  fullName: PluginAPI.Core.Round.End

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Extensions
+  commentId: N:PluginAPI.Core.Extensions
+  id: PluginAPI.Core.Extensions
+  children:
+  - PluginAPI.Core.Extensions.ReflectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Extensions
+  nameWithType: PluginAPI.Core.Extensions
+  fullName: PluginAPI.Core.Extensions
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Extensions.ReflectionExtensions
+  commentId: T:PluginAPI.Core.Extensions.ReflectionExtensions
+  name: ReflectionExtensions
+  nameWithType: ReflectionExtensions
+  fullName: PluginAPI.Core.Extensions.ReflectionExtensions

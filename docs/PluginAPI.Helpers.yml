@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Helpers
+  commentId: N:PluginAPI.Helpers
+  id: PluginAPI.Helpers
+  children:
+  - PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Helpers
+  nameWithType: PluginAPI.Helpers
+  fullName: PluginAPI.Helpers
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Helpers.Paths
+  commentId: T:PluginAPI.Helpers.Paths
+  name: Paths
+  nameWithType: Paths
+  fullName: PluginAPI.Helpers.Paths

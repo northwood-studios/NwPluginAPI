@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Helpers.Paths
+  commentId: T:PluginAPI.Helpers.Paths
+  id: Paths
+  parent: PluginAPI.Helpers
+  children:
+  - PluginAPI.Helpers.Paths.AppData
+  - PluginAPI.Helpers.Paths.Configs
+  - PluginAPI.Helpers.Paths.Dependencies
+  - PluginAPI.Helpers.Paths.Global
+  - PluginAPI.Helpers.Paths.GlobalPlugins
+  - PluginAPI.Helpers.Paths.LocalPlugins
+  - PluginAPI.Helpers.Paths.PluginAPI
+  - PluginAPI.Helpers.Paths.Plugins
+  - PluginAPI.Helpers.Paths.SecretLab
+  langs:
+  - csharp
+  - vb
+  name: Paths
+  nameWithType: Paths
+  fullName: PluginAPI.Helpers.Paths
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Paths
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nContains all important folder paths.\n"
+  example: []
+  syntax:
+    content: public static class Paths
+    content.vb: Public Module Paths
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: PluginAPI.Helpers.Paths.Global
+  commentId: P:PluginAPI.Helpers.Paths.Global
+  id: Global
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: Global
+  nameWithType: Paths.Global
+  fullName: PluginAPI.Helpers.Paths.Global
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Global
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 16
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the path to global config folder.\n"
+  example: []
+  syntax:
+    content: public static string Global { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Global As String
+  overload: PluginAPI.Helpers.Paths.Global*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.GlobalPlugins
+  commentId: P:PluginAPI.Helpers.Paths.GlobalPlugins
+  id: GlobalPlugins
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: GlobalPlugins
+  nameWithType: Paths.GlobalPlugins
+  fullName: PluginAPI.Helpers.Paths.GlobalPlugins
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GlobalPlugins
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 21
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the paths to global plugins and dependencies.\n"
+  example: []
+  syntax:
+    content: public static PluginDirectory GlobalPlugins { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Loader.Features.PluginDirectory
+    content.vb: Public Shared ReadOnly Property GlobalPlugins As PluginDirectory
+  overload: PluginAPI.Helpers.Paths.GlobalPlugins*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.LocalPlugins
+  commentId: P:PluginAPI.Helpers.Paths.LocalPlugins
+  id: LocalPlugins
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: LocalPlugins
+  nameWithType: Paths.LocalPlugins
+  fullName: PluginAPI.Helpers.Paths.LocalPlugins
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LocalPlugins
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 26
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the paths to this server port&apos;s plugins and dependencies.\n"
+  example: []
+  syntax:
+    content: public static PluginDirectory LocalPlugins { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Loader.Features.PluginDirectory
+    content.vb: Public Shared ReadOnly Property LocalPlugins As PluginDirectory
+  overload: PluginAPI.Helpers.Paths.LocalPlugins*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.Configs
+  commentId: P:PluginAPI.Helpers.Paths.Configs
+  id: Configs
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: Configs
+  nameWithType: Paths.Configs
+  fullName: PluginAPI.Helpers.Paths.Configs
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Configs
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the path to the server&apos;s config settings.\n"
+  example: []
+  syntax:
+    content: public static string Configs { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Configs As String
+  overload: PluginAPI.Helpers.Paths.Configs*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.AppData
+  commentId: P:PluginAPI.Helpers.Paths.AppData
+  id: AppData
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: AppData
+  nameWithType: Paths.AppData
+  fullName: PluginAPI.Helpers.Paths.AppData
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: AppData
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the path to the system&apos;s AppData folder.\n"
+  example: []
+  syntax:
+    content: public static string AppData { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property AppData As String
+  overload: PluginAPI.Helpers.Paths.AppData*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.SecretLab
+  commentId: P:PluginAPI.Helpers.Paths.SecretLab
+  id: SecretLab
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: SecretLab
+  nameWithType: Paths.SecretLab
+  fullName: PluginAPI.Helpers.Paths.SecretLab
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SecretLab
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 41
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the path to the &quot;Secret Laboratory&quot; folder, located inside AppData.\n"
+  example: []
+  syntax:
+    content: public static string SecretLab { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SecretLab As String
+  overload: PluginAPI.Helpers.Paths.SecretLab*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.PluginAPI
+  commentId: P:PluginAPI.Helpers.Paths.PluginAPI
+  id: PluginAPI
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI
+  nameWithType: Paths.PluginAPI
+  fullName: PluginAPI.Helpers.Paths.PluginAPI
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginAPI
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 46
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the path to the &quot;Plugin API&quot; folder, located inside the &quot;SCP Secret laboratory Dedicated Server&quot; folder.\n"
+  example: []
+  syntax:
+    content: public static string PluginAPI { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PluginAPI As String
+  overload: PluginAPI.Helpers.Paths.PluginAPI*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.Plugins
+  commentId: P:PluginAPI.Helpers.Paths.Plugins
+  id: Plugins
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: Plugins
+  nameWithType: Paths.Plugins
+  fullName: PluginAPI.Helpers.Paths.Plugins
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Plugins
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 51
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the path to the &quot;Plugins&quot; folder, located inside the &quot;Plugin API&quot; folder.\n"
+  example: []
+  syntax:
+    content: public static string Plugins { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Plugins As String
+  overload: PluginAPI.Helpers.Paths.Plugins*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Helpers.Paths.Dependencies
+  commentId: P:PluginAPI.Helpers.Paths.Dependencies
+  id: Dependencies
+  parent: PluginAPI.Helpers.Paths
+  langs:
+  - csharp
+  - vb
+  name: Dependencies
+  nameWithType: Paths.Dependencies
+  fullName: PluginAPI.Helpers.Paths.Dependencies
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Helpers/Paths.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Dependencies
+    path: ../NwPluginAPI/Helpers/Paths.cs
+    startLine: 56
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Helpers
+  summary: "\nGets the path to the &quot;Dependencies&quot; folder, located inside the &quot;Plugins&quot; folder.\n"
+  example: []
+  syntax:
+    content: public static string Dependencies { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Dependencies As String
+  overload: PluginAPI.Helpers.Paths.Dependencies*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: PluginAPI.Helpers
+  commentId: N:PluginAPI.Helpers
+  name: PluginAPI.Helpers
+  nameWithType: PluginAPI.Helpers
+  fullName: PluginAPI.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Helpers.Paths.Global*
+  commentId: Overload:PluginAPI.Helpers.Paths.Global
+  name: Global
+  nameWithType: Paths.Global
+  fullName: PluginAPI.Helpers.Paths.Global
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Helpers.Paths.GlobalPlugins*
+  commentId: Overload:PluginAPI.Helpers.Paths.GlobalPlugins
+  name: GlobalPlugins
+  nameWithType: Paths.GlobalPlugins
+  fullName: PluginAPI.Helpers.Paths.GlobalPlugins
+- uid: PluginAPI.Loader.Features.PluginDirectory
+  commentId: T:PluginAPI.Loader.Features.PluginDirectory
+  parent: PluginAPI.Loader.Features
+  name: PluginDirectory
+  nameWithType: PluginDirectory
+  fullName: PluginAPI.Loader.Features.PluginDirectory
+- uid: PluginAPI.Loader.Features
+  commentId: N:PluginAPI.Loader.Features
+  name: PluginAPI.Loader.Features
+  nameWithType: PluginAPI.Loader.Features
+  fullName: PluginAPI.Loader.Features
+- uid: PluginAPI.Helpers.Paths.LocalPlugins*
+  commentId: Overload:PluginAPI.Helpers.Paths.LocalPlugins
+  name: LocalPlugins
+  nameWithType: Paths.LocalPlugins
+  fullName: PluginAPI.Helpers.Paths.LocalPlugins
+- uid: PluginAPI.Helpers.Paths.Configs*
+  commentId: Overload:PluginAPI.Helpers.Paths.Configs
+  name: Configs
+  nameWithType: Paths.Configs
+  fullName: PluginAPI.Helpers.Paths.Configs
+- uid: PluginAPI.Helpers.Paths.AppData*
+  commentId: Overload:PluginAPI.Helpers.Paths.AppData
+  name: AppData
+  nameWithType: Paths.AppData
+  fullName: PluginAPI.Helpers.Paths.AppData
+- uid: PluginAPI.Helpers.Paths.SecretLab*
+  commentId: Overload:PluginAPI.Helpers.Paths.SecretLab
+  name: SecretLab
+  nameWithType: Paths.SecretLab
+  fullName: PluginAPI.Helpers.Paths.SecretLab
+- uid: PluginAPI.Helpers.Paths.PluginAPI*
+  commentId: Overload:PluginAPI.Helpers.Paths.PluginAPI
+  name: PluginAPI
+  nameWithType: Paths.PluginAPI
+  fullName: PluginAPI.Helpers.Paths.PluginAPI
+- uid: PluginAPI.Helpers.Paths.Plugins*
+  commentId: Overload:PluginAPI.Helpers.Paths.Plugins
+  name: Plugins
+  nameWithType: Paths.Plugins
+  fullName: PluginAPI.Helpers.Paths.Plugins
+- uid: PluginAPI.Helpers.Paths.Dependencies*
+  commentId: Overload:PluginAPI.Helpers.Paths.Dependencies
+  name: Dependencies
+  nameWithType: Paths.Dependencies
+  fullName: PluginAPI.Helpers.Paths.Dependencies

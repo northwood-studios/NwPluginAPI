@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Heavy.Rooms
+  commentId: N:PluginAPI.Core.Zones.Heavy.Rooms
+  id: PluginAPI.Core.Zones.Heavy.Rooms
+  children:
+  - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Zones.Heavy.Rooms
+  nameWithType: PluginAPI.Core.Zones.Heavy.Rooms
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  commentId: T:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  name: HczScp049
+  nameWithType: HczScp049
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049

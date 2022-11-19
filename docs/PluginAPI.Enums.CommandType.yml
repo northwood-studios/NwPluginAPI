@@ -1,0 +1,157 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Enums.CommandType
+  commentId: T:PluginAPI.Enums.CommandType
+  id: CommandType
+  parent: PluginAPI.Enums
+  children:
+  - PluginAPI.Enums.CommandType.Console
+  - PluginAPI.Enums.CommandType.GameConsole
+  - PluginAPI.Enums.CommandType.RemoteAdmin
+  langs:
+  - csharp
+  - vb
+  name: CommandType
+  nameWithType: CommandType
+  fullName: PluginAPI.Enums.CommandType
+  type: Enum
+  source:
+    remote:
+      path: NwPluginAPI/Enums/CommandType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CommandType
+    path: ../NwPluginAPI/Enums/CommandType.cs
+    startLine: 8
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nRepresents command types.\n"
+  example: []
+  syntax:
+    content: >-
+      [Flags]
+
+      public enum CommandType : byte
+    content.vb: >-
+      <Flags>
+
+      Public Enum CommandType As Byte
+  attributes:
+  - type: System.FlagsAttribute
+    ctor: System.FlagsAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PluginAPI.Enums.CommandType.Console
+  commentId: F:PluginAPI.Enums.CommandType.Console
+  id: Console
+  parent: PluginAPI.Enums.CommandType
+  langs:
+  - csharp
+  - vb
+  name: Console
+  nameWithType: CommandType.Console
+  fullName: PluginAPI.Enums.CommandType.Console
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/CommandType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Console
+    path: ../NwPluginAPI/Enums/CommandType.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Console = 1
+    return:
+      type: PluginAPI.Enums.CommandType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.CommandType.GameConsole
+  commentId: F:PluginAPI.Enums.CommandType.GameConsole
+  id: GameConsole
+  parent: PluginAPI.Enums.CommandType
+  langs:
+  - csharp
+  - vb
+  name: GameConsole
+  nameWithType: CommandType.GameConsole
+  fullName: PluginAPI.Enums.CommandType.GameConsole
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/CommandType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GameConsole
+    path: ../NwPluginAPI/Enums/CommandType.cs
+    startLine: 12
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: GameConsole = 2
+    return:
+      type: PluginAPI.Enums.CommandType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.CommandType.RemoteAdmin
+  commentId: F:PluginAPI.Enums.CommandType.RemoteAdmin
+  id: RemoteAdmin
+  parent: PluginAPI.Enums.CommandType
+  langs:
+  - csharp
+  - vb
+  name: RemoteAdmin
+  nameWithType: CommandType.RemoteAdmin
+  fullName: PluginAPI.Enums.CommandType.RemoteAdmin
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/CommandType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RemoteAdmin
+    path: ../NwPluginAPI/Enums/CommandType.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: RemoteAdmin = 4
+    return:
+      type: PluginAPI.Enums.CommandType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Enums.CommandType
+  commentId: T:PluginAPI.Enums.CommandType
+  parent: PluginAPI.Enums
+  name: CommandType
+  nameWithType: CommandType
+  fullName: PluginAPI.Enums.CommandType

@@ -1,0 +1,517 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  id: PlayerCheckReservedSlotCancellationData
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: PlayerCheckReservedSlotCancellationData
+  nameWithType: PlayerCheckReservedSlotCancellationData
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  type: Struct
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerCheckReservedSlotCancellationData
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 199
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRepresents reserved slot check event cancellation data.\n"
+  example: []
+  syntax:
+    content: 'public readonly struct PlayerCheckReservedSlotCancellationData : IEventCancellation'
+    content.vb: >-
+      Public Structure PlayerCheckReservedSlotCancellationData
+          Implements IEventCancellation
+  implements:
+  - PluginAPI.Events.IEventCancellation
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  commentId: P:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  id: IsCancelled
+  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  langs:
+  - csharp
+  - vb
+  name: IsCancelled
+  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsCancelled
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 202
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nDetermines whether event is cancelled.\n"
+  example: []
+  syntax:
+    content: public readonly bool IsCancelled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCancelled As Boolean
+  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled*
+  implements:
+  - PluginAPI.Events.IEventCancellation.IsCancelled
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  id: HasReservedSlot
+  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  langs:
+  - csharp
+  - vb
+  name: HasReservedSlot
+  nameWithType: PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: HasReservedSlot
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 205
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public readonly bool HasReservedSlot
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly HasReservedSlot As Boolean
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  id: LeaveUnchanged
+  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  langs:
+  - csharp
+  - vb
+  name: LeaveUnchanged()
+  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LeaveUnchanged
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 217
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nDoesn&apos;t override the reserved slot check.\n"
+  example: []
+  syntax:
+    content: public static PlayerCheckReservedSlotCancellationData LeaveUnchanged()
+    return:
+      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+      description: The <xref href="PluginAPI.Events.PlayerCheckReservedSlotCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function LeaveUnchanged As PlayerCheckReservedSlotCancellationData
+  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  id: Override(System.Boolean)
+  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  langs:
+  - csharp
+  - vb
+  name: Override(Boolean)
+  nameWithType: PlayerCheckReservedSlotCancellationData.Override(Boolean)
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Override
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 225
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nOverrides a reserved slot check.\n"
+  example: []
+  syntax:
+    content: public static PlayerCheckReservedSlotCancellationData Override(bool hasReservedSlot)
+    parameters:
+    - id: hasReservedSlot
+      type: System.Boolean
+      description: Indicating whether or not the player has a reserved slot.
+    return:
+      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+      description: The <xref href="PluginAPI.Events.PlayerCheckReservedSlotCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Override(hasReservedSlot As Boolean) As PlayerCheckReservedSlotCancellationData
+  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: PluginAPI.Events.IEventCancellation
+  commentId: T:PluginAPI.Events.IEventCancellation
+  parent: PluginAPI.Events
+  name: IEventCancellation
+  nameWithType: IEventCancellation
+  fullName: PluginAPI.Events.IEventCancellation
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled*
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  name: IsCancelled
+  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+- uid: PluginAPI.Events.IEventCancellation.IsCancelled
+  commentId: P:PluginAPI.Events.IEventCancellation.IsCancelled
+  parent: PluginAPI.Events.IEventCancellation
+  name: IsCancelled
+  nameWithType: IEventCancellation.IsCancelled
+  fullName: PluginAPI.Events.IEventCancellation.IsCancelled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  parent: PluginAPI.Events
+  name: PlayerCheckReservedSlotCancellationData
+  nameWithType: PlayerCheckReservedSlotCancellationData
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged*
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  name: LeaveUnchanged
+  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
+  name: Override
+  nameWithType: PlayerCheckReservedSlotCancellationData.Override
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override

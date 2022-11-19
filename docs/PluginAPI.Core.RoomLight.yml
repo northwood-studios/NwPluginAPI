@@ -1,0 +1,639 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.RoomLight
+  commentId: T:PluginAPI.Core.RoomLight
+  id: RoomLight
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.RoomLight.#ctor(FlickerableLightController)
+  - PluginAPI.Core.RoomLight.DefaultColor
+  - PluginAPI.Core.RoomLight.FlickerLights(System.Single)
+  - PluginAPI.Core.RoomLight.IsEnabled
+  - PluginAPI.Core.RoomLight.LightColor
+  - PluginAPI.Core.RoomLight.LightIntensity
+  langs:
+  - csharp
+  - vb
+  name: RoomLight
+  nameWithType: RoomLight
+  fullName: PluginAPI.Core.RoomLight
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoomLight
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 7
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRepresents a room&apos;s light.\n"
+  example: []
+  syntax:
+    content: public class RoomLight
+    content.vb: Public Class RoomLight
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.RoomLight.IsEnabled
+  commentId: P:PluginAPI.Core.RoomLight.IsEnabled
+  id: IsEnabled
+  parent: PluginAPI.Core.RoomLight
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: RoomLight.IsEnabled
+  fullName: PluginAPI.Core.RoomLight.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsEnabled
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 21
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the light in room is enabled.\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsEnabled As Boolean
+  overload: PluginAPI.Core.RoomLight.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.RoomLight.LightColor
+  commentId: P:PluginAPI.Core.RoomLight.LightColor
+  id: LightColor
+  parent: PluginAPI.Core.RoomLight
+  langs:
+  - csharp
+  - vb
+  name: LightColor
+  nameWithType: RoomLight.LightColor
+  fullName: PluginAPI.Core.RoomLight.LightColor
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LightColor
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the color of the lights.\n"
+  example: []
+  syntax:
+    content: public Color LightColor { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public Property LightColor As Color
+  overload: PluginAPI.Core.RoomLight.LightColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.RoomLight.DefaultColor
+  commentId: P:PluginAPI.Core.RoomLight.DefaultColor
+  id: DefaultColor
+  parent: PluginAPI.Core.RoomLight
+  langs:
+  - csharp
+  - vb
+  name: DefaultColor
+  nameWithType: RoomLight.DefaultColor
+  fullName: PluginAPI.Core.RoomLight.DefaultColor
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DefaultColor
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 55
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the default color of lights.\n"
+  example: []
+  syntax:
+    content: public Color DefaultColor { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public ReadOnly Property DefaultColor As Color
+  overload: PluginAPI.Core.RoomLight.DefaultColor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.RoomLight.LightIntensity
+  commentId: P:PluginAPI.Core.RoomLight.LightIntensity
+  id: LightIntensity
+  parent: PluginAPI.Core.RoomLight
+  langs:
+  - csharp
+  - vb
+  name: LightIntensity
+  nameWithType: RoomLight.LightIntensity
+  fullName: PluginAPI.Core.RoomLight.LightIntensity
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LightIntensity
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 67
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets lightning intensity in room.\n"
+  example: []
+  syntax:
+    content: public float LightIntensity { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property LightIntensity As Single
+  overload: PluginAPI.Core.RoomLight.LightIntensity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.RoomLight.FlickerLights(System.Single)
+  commentId: M:PluginAPI.Core.RoomLight.FlickerLights(System.Single)
+  id: FlickerLights(System.Single)
+  parent: PluginAPI.Core.RoomLight
+  langs:
+  - csharp
+  - vb
+  name: FlickerLights(Single)
+  nameWithType: RoomLight.FlickerLights(Single)
+  fullName: PluginAPI.Core.RoomLight.FlickerLights(System.Single)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: FlickerLights
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 84
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nFlickers the lights.\n"
+  example: []
+  syntax:
+    content: public void FlickerLights(float duration)
+    parameters:
+    - id: duration
+      type: System.Single
+      description: The durtaion of flicker.
+    content.vb: Public Sub FlickerLights(duration As Single)
+  overload: PluginAPI.Core.RoomLight.FlickerLights*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.RoomLight.#ctor(FlickerableLightController)
+  commentId: M:PluginAPI.Core.RoomLight.#ctor(FlickerableLightController)
+  id: '#ctor(FlickerableLightController)'
+  parent: PluginAPI.Core.RoomLight
+  langs:
+  - csharp
+  - vb
+  name: RoomLight(FlickerableLightController)
+  nameWithType: RoomLight.RoomLight(FlickerableLightController)
+  fullName: PluginAPI.Core.RoomLight.RoomLight(FlickerableLightController)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 93
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.RoomLight\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public RoomLight(FlickerableLightController lightController)
+    parameters:
+    - id: lightController
+      type: FlickerableLightController
+      description: The light controller for room.
+    content.vb: Public Sub New(lightController As FlickerableLightController)
+  overload: PluginAPI.Core.RoomLight.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.RoomLight.IsEnabled*
+  commentId: Overload:PluginAPI.Core.RoomLight.IsEnabled
+  name: IsEnabled
+  nameWithType: RoomLight.IsEnabled
+  fullName: PluginAPI.Core.RoomLight.IsEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.RoomLight.LightColor*
+  commentId: Overload:PluginAPI.Core.RoomLight.LightColor
+  name: LightColor
+  nameWithType: RoomLight.LightColor
+  fullName: PluginAPI.Core.RoomLight.LightColor
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: PluginAPI.Core.RoomLight.DefaultColor*
+  commentId: Overload:PluginAPI.Core.RoomLight.DefaultColor
+  name: DefaultColor
+  nameWithType: RoomLight.DefaultColor
+  fullName: PluginAPI.Core.RoomLight.DefaultColor
+- uid: PluginAPI.Core.RoomLight.LightIntensity*
+  commentId: Overload:PluginAPI.Core.RoomLight.LightIntensity
+  name: LightIntensity
+  nameWithType: RoomLight.LightIntensity
+  fullName: PluginAPI.Core.RoomLight.LightIntensity
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Core.RoomLight.FlickerLights*
+  commentId: Overload:PluginAPI.Core.RoomLight.FlickerLights
+  name: FlickerLights
+  nameWithType: RoomLight.FlickerLights
+  fullName: PluginAPI.Core.RoomLight.FlickerLights
+- uid: PluginAPI.Core.RoomLight
+  commentId: T:PluginAPI.Core.RoomLight
+  parent: PluginAPI.Core
+  name: RoomLight
+  nameWithType: RoomLight
+  fullName: PluginAPI.Core.RoomLight
+- uid: PluginAPI.Core.RoomLight.#ctor*
+  commentId: Overload:PluginAPI.Core.RoomLight.#ctor
+  name: RoomLight
+  nameWithType: RoomLight.RoomLight
+  fullName: PluginAPI.Core.RoomLight.RoomLight
+- uid: FlickerableLightController
+  commentId: T:FlickerableLightController
+  isExternal: true
+  name: FlickerableLightController
+  nameWithType: FlickerableLightController
+  fullName: FlickerableLightController

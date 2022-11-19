@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Items
+  commentId: N:PluginAPI.Core.Items
+  id: PluginAPI.Core.Items
+  children:
+  - PluginAPI.Core.Items.Item
+  - PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Items
+  nameWithType: PluginAPI.Core.Items
+  fullName: PluginAPI.Core.Items
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Items.Item
+  commentId: T:PluginAPI.Core.Items.Item
+  name: Item
+  nameWithType: Item
+  fullName: PluginAPI.Core.Items.Item
+- uid: PluginAPI.Core.Items.ItemPickup
+  commentId: T:PluginAPI.Core.Items.ItemPickup
+  parent: PluginAPI.Core.Items
+  name: ItemPickup
+  nameWithType: ItemPickup
+  fullName: PluginAPI.Core.Items.ItemPickup
+- uid: PluginAPI.Core.Items
+  commentId: N:PluginAPI.Core.Items
+  name: PluginAPI.Core.Items
+  nameWithType: PluginAPI.Core.Items
+  fullName: PluginAPI.Core.Items

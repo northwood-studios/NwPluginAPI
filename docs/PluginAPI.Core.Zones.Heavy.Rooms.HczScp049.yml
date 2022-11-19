@@ -1,0 +1,795 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  commentId: T:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  id: HczScp049
+  parent: PluginAPI.Core.Zones.Heavy.Rooms
+  children:
+  - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
+  - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
+  - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights
+  langs:
+  - csharp
+  - vb
+  name: HczScp049
+  nameWithType: HczScp049
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: HczScp049
+    path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy.Rooms
+  summary: "\nRepresents SCP-049&apos;s room.\n"
+  example: []
+  syntax:
+    content: 'public class HczScp049 : HczRoom'
+    content.vb: >-
+      Public Class HczScp049
+          Inherits HczRoom
+  inheritance:
+  - System.Object
+  - PluginAPI.Core.Zones.FacilityRoom
+  - PluginAPI.Core.Zones.Heavy.HczRoom
+  inheritedMembers:
+  - PluginAPI.Core.Zones.Heavy.HczRoom.Generator
+  - PluginAPI.Core.Zones.FacilityRoom.Zone
+  - PluginAPI.Core.Zones.FacilityRoom.Lights
+  - PluginAPI.Core.Zones.FacilityRoom.Identifier
+  - PluginAPI.Core.Zones.FacilityRoom.Transform
+  - PluginAPI.Core.Zones.FacilityRoom.GameObject
+  - PluginAPI.Core.Zones.FacilityRoom.Position
+  - PluginAPI.Core.Zones.FacilityRoom.Rotation
+  - PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  - PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1({T}@,System.Boolean,System.Boolean)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights
+  commentId: P:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights
+  id: RoomLights
+  parent: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  langs:
+  - csharp
+  - vb
+  name: RoomLights
+  nameWithType: HczScp049.RoomLights
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoomLights
+    path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+    startLine: 20
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy.Rooms
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Zones.Heavy.Rooms.HczScp049\" data-throw-if-not-resolved=\"false\"></xref>&apos;s lights.\n"
+  example: []
+  syntax:
+    content: public static RoomLight RoomLights { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.RoomLight
+    content.vb: Public Shared ReadOnly Property RoomLights As RoomLight
+  overload: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
+  commentId: P:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
+  id: RoomIdentifier
+  parent: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  langs:
+  - csharp
+  - vb
+  name: RoomIdentifier
+  nameWithType: HczScp049.RoomIdentifier
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoomIdentifier
+    path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+    startLine: 25
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy.Rooms
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Zones.Heavy.Rooms.HczScp049\" data-throw-if-not-resolved=\"false\"></xref>&apos;s <xref href=\"MapGeneration.RoomIdentifier\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static RoomIdentifier RoomIdentifier { get; }
+    parameters: []
+    return:
+      type: MapGeneration.RoomIdentifier
+    content.vb: Public Shared ReadOnly Property RoomIdentifier As RoomIdentifier
+  overload: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)'
+  parent: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  langs:
+  - csharp
+  - vb
+  name: HczScp049(HeavyZone, RoomIdentifier)
+  nameWithType: HczScp049.HczScp049(HeavyZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.HczScp049(PluginAPI.Core.Zones.HeavyZone, MapGeneration.RoomIdentifier)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy.Rooms
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Zones.Heavy.Rooms.HczScp049\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public HczScp049(HeavyZone zone, RoomIdentifier room)
+    parameters:
+    - id: zone
+      type: PluginAPI.Core.Zones.HeavyZone
+      description: The zone type.
+    - id: room
+      type: MapGeneration.RoomIdentifier
+      description: The room identifier.
+    content.vb: Public Sub New(zone As HeavyZone, room As RoomIdentifier)
+  overload: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Zones.Heavy.Rooms
+  commentId: N:PluginAPI.Core.Zones.Heavy.Rooms
+  name: PluginAPI.Core.Zones.Heavy.Rooms
+  nameWithType: PluginAPI.Core.Zones.Heavy.Rooms
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Core.Zones.FacilityRoom
+  commentId: T:PluginAPI.Core.Zones.FacilityRoom
+  parent: PluginAPI.Core.Zones
+  name: FacilityRoom
+  nameWithType: FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom
+- uid: PluginAPI.Core.Zones.Heavy.HczRoom
+  commentId: T:PluginAPI.Core.Zones.Heavy.HczRoom
+  parent: PluginAPI.Core.Zones.Heavy
+  name: HczRoom
+  nameWithType: HczRoom
+  fullName: PluginAPI.Core.Zones.Heavy.HczRoom
+- uid: PluginAPI.Core.Zones.Heavy.HczRoom.Generator
+  commentId: P:PluginAPI.Core.Zones.Heavy.HczRoom.Generator
+  parent: PluginAPI.Core.Zones.Heavy.HczRoom
+  name: Generator
+  nameWithType: HczRoom.Generator
+  fullName: PluginAPI.Core.Zones.Heavy.HczRoom.Generator
+- uid: PluginAPI.Core.Zones.FacilityRoom.Zone
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Zone
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Zone
+  nameWithType: FacilityRoom.Zone
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Zone
+- uid: PluginAPI.Core.Zones.FacilityRoom.Lights
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Lights
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Lights
+  nameWithType: FacilityRoom.Lights
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Lights
+- uid: PluginAPI.Core.Zones.FacilityRoom.Identifier
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Identifier
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Identifier
+  nameWithType: FacilityRoom.Identifier
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Identifier
+- uid: PluginAPI.Core.Zones.FacilityRoom.Transform
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Transform
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Transform
+  nameWithType: FacilityRoom.Transform
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Transform
+- uid: PluginAPI.Core.Zones.FacilityRoom.GameObject
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.GameObject
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: GameObject
+  nameWithType: FacilityRoom.GameObject
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GameObject
+- uid: PluginAPI.Core.Zones.FacilityRoom.Position
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Position
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Position
+  nameWithType: FacilityRoom.Position
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Position
+- uid: PluginAPI.Core.Zones.FacilityRoom.Rotation
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Rotation
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Rotation
+  nameWithType: FacilityRoom.Rotation
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Rotation
+- uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  isExternal: true
+  name: GetComponent<T>(Boolean, Boolean)
+  nameWithType: FacilityRoom.GetComponent<T>(Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent<T>(System.Boolean, System.Boolean)
+  nameWithType.vb: FacilityRoom.GetComponent(Of T)(Boolean, Boolean)
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.GetComponent(Of T)(System.Boolean, System.Boolean)
+  name.vb: GetComponent(Of T)(Boolean, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+    name: GetComponent<T>
+    nameWithType: FacilityRoom.GetComponent<T>
+    fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+    name: GetComponent(Of T)
+    nameWithType: FacilityRoom.GetComponent(Of T)
+    fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1({T}@,System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  definition: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  name: TryGetComponent<T>(T, Boolean, Boolean)
+  nameWithType: FacilityRoom.TryGetComponent<T>(T, Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>(T, System.Boolean, System.Boolean)
+  nameWithType.vb: FacilityRoom.TryGetComponent(Of T)(T, Boolean, Boolean)
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)(T, System.Boolean, System.Boolean)
+  name.vb: TryGetComponent(Of T)(T, Boolean, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent<T>
+    nameWithType: FacilityRoom.TryGetComponent<T>
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent(Of T)
+    nameWithType: FacilityRoom.TryGetComponent(Of T)
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Zones
+  commentId: N:PluginAPI.Core.Zones
+  name: PluginAPI.Core.Zones
+  nameWithType: PluginAPI.Core.Zones
+  fullName: PluginAPI.Core.Zones
+- uid: PluginAPI.Core.Zones.Heavy
+  commentId: N:PluginAPI.Core.Zones.Heavy
+  name: PluginAPI.Core.Zones.Heavy
+  nameWithType: PluginAPI.Core.Zones.Heavy
+  fullName: PluginAPI.Core.Zones.Heavy
+- uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  isExternal: true
+  name: TryGetComponent<T>(T, Boolean, Boolean)
+  nameWithType: FacilityRoom.TryGetComponent<T>(T, Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>(T, System.Boolean, System.Boolean)
+  nameWithType.vb: FacilityRoom.TryGetComponent(Of T)(T, Boolean, Boolean)
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)(T, System.Boolean, System.Boolean)
+  name.vb: TryGetComponent(Of T)(T, Boolean, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent<T>
+    nameWithType: FacilityRoom.TryGetComponent<T>
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent(Of T)
+    nameWithType: FacilityRoom.TryGetComponent(Of T)
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  commentId: T:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+  name: HczScp049
+  nameWithType: HczScp049
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights
+  name: RoomLights
+  nameWithType: HczScp049.RoomLights
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights
+- uid: PluginAPI.Core.RoomLight
+  commentId: T:PluginAPI.Core.RoomLight
+  parent: PluginAPI.Core
+  name: RoomLight
+  nameWithType: RoomLight
+  fullName: PluginAPI.Core.RoomLight
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
+  isExternal: true
+  name: RoomIdentifier
+  nameWithType: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
+  name: RoomIdentifier
+  nameWithType: HczScp049.RoomIdentifier
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor
+  name: HczScp049
+  nameWithType: HczScp049.HczScp049
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.HczScp049
+- uid: PluginAPI.Core.Zones.HeavyZone
+  commentId: T:PluginAPI.Core.Zones.HeavyZone
+  parent: PluginAPI.Core.Zones
+  name: HeavyZone
+  nameWithType: HeavyZone
+  fullName: PluginAPI.Core.Zones.HeavyZone

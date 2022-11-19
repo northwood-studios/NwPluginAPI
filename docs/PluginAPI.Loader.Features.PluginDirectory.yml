@@ -1,0 +1,458 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Loader.Features.PluginDirectory
+  commentId: T:PluginAPI.Loader.Features.PluginDirectory
+  id: PluginDirectory
+  parent: PluginAPI.Loader.Features
+  children:
+  - PluginAPI.Loader.Features.PluginDirectory.#ctor(System.String)
+  - PluginAPI.Loader.Features.PluginDirectory.Dependencies
+  - PluginAPI.Loader.Features.PluginDirectory.Plugins
+  langs:
+  - csharp
+  - vb
+  name: PluginDirectory
+  nameWithType: PluginDirectory
+  fullName: PluginAPI.Loader.Features.PluginDirectory
+  type: Struct
+  source:
+    remote:
+      path: NwPluginAPI/Loader/Features/PluginDirectory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginDirectory
+    path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
+    startLine: 7
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Loader.Features
+  summary: "\nContains the paths containing plugins and dependencies.\n"
+  example: []
+  syntax:
+    content: public struct PluginDirectory
+    content.vb: Public Structure PluginDirectory
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: PluginAPI.Loader.Features.PluginDirectory.#ctor(System.String)
+  commentId: M:PluginAPI.Loader.Features.PluginDirectory.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: PluginAPI.Loader.Features.PluginDirectory
+  langs:
+  - csharp
+  - vb
+  name: PluginDirectory(String)
+  nameWithType: PluginDirectory.PluginDirectory(String)
+  fullName: PluginAPI.Loader.Features.PluginDirectory.PluginDirectory(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Loader/Features/PluginDirectory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Loader.Features
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Loader.Features.PluginDirectory\" data-throw-if-not-resolved=\"false\"></xref> struct.\n"
+  example: []
+  syntax:
+    content: public PluginDirectory(string containingFolder)
+    parameters:
+    - id: containingFolder
+      type: System.String
+      description: The folder on which the &quot;plugins&quot; folder is stored.
+    content.vb: Public Sub New(containingFolder As String)
+  overload: PluginAPI.Loader.Features.PluginDirectory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Loader.Features.PluginDirectory.Dependencies
+  commentId: P:PluginAPI.Loader.Features.PluginDirectory.Dependencies
+  id: Dependencies
+  parent: PluginAPI.Loader.Features.PluginDirectory
+  langs:
+  - csharp
+  - vb
+  name: Dependencies
+  nameWithType: PluginDirectory.Dependencies
+  fullName: PluginAPI.Loader.Features.PluginDirectory.Dependencies
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Loader/Features/PluginDirectory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Dependencies
+    path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
+    startLine: 23
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Loader.Features
+  summary: "\nGets or sets the dependencies folder.\n"
+  example: []
+  syntax:
+    content: public string Dependencies { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Dependencies As String
+  overload: PluginAPI.Loader.Features.PluginDirectory.Dependencies*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Loader.Features.PluginDirectory.Plugins
+  commentId: P:PluginAPI.Loader.Features.PluginDirectory.Plugins
+  id: Plugins
+  parent: PluginAPI.Loader.Features.PluginDirectory
+  langs:
+  - csharp
+  - vb
+  name: Plugins
+  nameWithType: PluginDirectory.Plugins
+  fullName: PluginAPI.Loader.Features.PluginDirectory.Plugins
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Loader/Features/PluginDirectory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Plugins
+    path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
+    startLine: 28
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Loader.Features
+  summary: "\nGets or sets the plugins folder.\n"
+  example: []
+  syntax:
+    content: public string Plugins { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Plugins As String
+  overload: PluginAPI.Loader.Features.PluginDirectory.Plugins*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Loader.Features
+  commentId: N:PluginAPI.Loader.Features
+  name: PluginAPI.Loader.Features
+  nameWithType: PluginAPI.Loader.Features
+  fullName: PluginAPI.Loader.Features
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Loader.Features.PluginDirectory
+  commentId: T:PluginAPI.Loader.Features.PluginDirectory
+  parent: PluginAPI.Loader.Features
+  name: PluginDirectory
+  nameWithType: PluginDirectory
+  fullName: PluginAPI.Loader.Features.PluginDirectory
+- uid: PluginAPI.Loader.Features.PluginDirectory.#ctor*
+  commentId: Overload:PluginAPI.Loader.Features.PluginDirectory.#ctor
+  name: PluginDirectory
+  nameWithType: PluginDirectory.PluginDirectory
+  fullName: PluginAPI.Loader.Features.PluginDirectory.PluginDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Loader.Features.PluginDirectory.Dependencies*
+  commentId: Overload:PluginAPI.Loader.Features.PluginDirectory.Dependencies
+  name: Dependencies
+  nameWithType: PluginDirectory.Dependencies
+  fullName: PluginAPI.Loader.Features.PluginDirectory.Dependencies
+- uid: PluginAPI.Loader.Features.PluginDirectory.Plugins*
+  commentId: Overload:PluginAPI.Loader.Features.PluginDirectory.Plugins
+  name: Plugins
+  nameWithType: PluginDirectory.Plugins
+  fullName: PluginAPI.Loader.Features.PluginDirectory.Plugins

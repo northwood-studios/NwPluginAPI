@@ -1,0 +1,721 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.PlayerSharedStorage
+  commentId: T:PluginAPI.Core.PlayerSharedStorage
+  id: PlayerSharedStorage
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers
+  - PluginAPI.Core.PlayerSharedStorage.DamageBlacklist
+  - PluginAPI.Core.PlayerSharedStorage.DamageWhitelist
+  - PluginAPI.Core.PlayerSharedStorage.StoredComponents
+  langs:
+  - csharp
+  - vb
+  name: PlayerSharedStorage
+  nameWithType: PlayerSharedStorage
+  fullName: PluginAPI.Core.PlayerSharedStorage
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerSharedStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerSharedStorage
+    path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRepresents shared storage between all player classes.\n"
+  example: []
+  syntax:
+    content: public class PlayerSharedStorage
+    content.vb: Public Class PlayerSharedStorage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.PlayerSharedStorage.StoredComponents
+  commentId: P:PluginAPI.Core.PlayerSharedStorage.StoredComponents
+  id: StoredComponents
+  parent: PluginAPI.Core.PlayerSharedStorage
+  langs:
+  - csharp
+  - vb
+  name: StoredComponents
+  nameWithType: PlayerSharedStorage.StoredComponents
+  fullName: PluginAPI.Core.PlayerSharedStorage.StoredComponents
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerSharedStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: StoredComponents
+    path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets stored components.\n"
+  example: []
+  syntax:
+    content: public Dictionary<Type, MonoBehaviour> StoredComponents { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,UnityEngine.MonoBehaviour}
+    content.vb: Public ReadOnly Property StoredComponents As Dictionary(Of Type, MonoBehaviour)
+  overload: PluginAPI.Core.PlayerSharedStorage.StoredComponents*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers
+  commentId: P:PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers
+  id: CanReceiveDamageFromPlayers
+  parent: PluginAPI.Core.PlayerSharedStorage
+  langs:
+  - csharp
+  - vb
+  name: CanReceiveDamageFromPlayers
+  nameWithType: PlayerSharedStorage.CanReceiveDamageFromPlayers
+  fullName: PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerSharedStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CanReceiveDamageFromPlayers
+    path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
+    startLine: 45
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not player can receive damage from players.\n"
+  example: []
+  syntax:
+    content: public bool CanReceiveDamageFromPlayers { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CanReceiveDamageFromPlayers As Boolean
+  overload: PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PlayerSharedStorage.DamageBlacklist
+  commentId: P:PluginAPI.Core.PlayerSharedStorage.DamageBlacklist
+  id: DamageBlacklist
+  parent: PluginAPI.Core.PlayerSharedStorage
+  langs:
+  - csharp
+  - vb
+  name: DamageBlacklist
+  nameWithType: PlayerSharedStorage.DamageBlacklist
+  fullName: PluginAPI.Core.PlayerSharedStorage.DamageBlacklist
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerSharedStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DamageBlacklist
+    path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
+    startLine: 50
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets a list of players which can&apos;t damage this player.\n"
+  example: []
+  syntax:
+    content: public List<Player> DamageBlacklist { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Player}
+    content.vb: Public ReadOnly Property DamageBlacklist As List(Of Player)
+  overload: PluginAPI.Core.PlayerSharedStorage.DamageBlacklist*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PlayerSharedStorage.DamageWhitelist
+  commentId: P:PluginAPI.Core.PlayerSharedStorage.DamageWhitelist
+  id: DamageWhitelist
+  parent: PluginAPI.Core.PlayerSharedStorage
+  langs:
+  - csharp
+  - vb
+  name: DamageWhitelist
+  nameWithType: PlayerSharedStorage.DamageWhitelist
+  fullName: PluginAPI.Core.PlayerSharedStorage.DamageWhitelist
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerSharedStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DamageWhitelist
+    path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
+    startLine: 55
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets a list of players which can damage this player.\n"
+  example: []
+  syntax:
+    content: public List<Player> DamageWhitelist { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Player}
+    content.vb: Public ReadOnly Property DamageWhitelist As List(Of Player)
+  overload: PluginAPI.Core.PlayerSharedStorage.DamageWhitelist*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.PlayerSharedStorage.StoredComponents*
+  commentId: Overload:PluginAPI.Core.PlayerSharedStorage.StoredComponents
+  name: StoredComponents
+  nameWithType: PlayerSharedStorage.StoredComponents
+  fullName: PluginAPI.Core.PlayerSharedStorage.StoredComponents
+- uid: System.Collections.Generic.Dictionary{System.Type,UnityEngine.MonoBehaviour}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,UnityEngine.MonoBehaviour}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Type, MonoBehaviour>
+  nameWithType: Dictionary<Type, MonoBehaviour>
+  fullName: System.Collections.Generic.Dictionary<System.Type, UnityEngine.MonoBehaviour>
+  nameWithType.vb: Dictionary(Of Type, MonoBehaviour)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, UnityEngine.MonoBehaviour)
+  name.vb: Dictionary(Of Type, MonoBehaviour)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: UnityEngine.MonoBehaviour
+    name: MonoBehaviour
+    nameWithType: MonoBehaviour
+    fullName: UnityEngine.MonoBehaviour
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: UnityEngine.MonoBehaviour
+    name: MonoBehaviour
+    nameWithType: MonoBehaviour
+    fullName: UnityEngine.MonoBehaviour
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers*
+  commentId: Overload:PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers
+  name: CanReceiveDamageFromPlayers
+  nameWithType: PlayerSharedStorage.CanReceiveDamageFromPlayers
+  fullName: PluginAPI.Core.PlayerSharedStorage.CanReceiveDamageFromPlayers
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.PlayerSharedStorage.DamageBlacklist*
+  commentId: Overload:PluginAPI.Core.PlayerSharedStorage.DamageBlacklist
+  name: DamageBlacklist
+  nameWithType: PlayerSharedStorage.DamageBlacklist
+  fullName: PluginAPI.Core.PlayerSharedStorage.DamageBlacklist
+- uid: System.Collections.Generic.List{PluginAPI.Core.Player}
+  commentId: T:System.Collections.Generic.List{PluginAPI.Core.Player}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Player>
+  nameWithType: List<Player>
+  fullName: System.Collections.Generic.List<PluginAPI.Core.Player>
+  nameWithType.vb: List(Of Player)
+  fullName.vb: System.Collections.Generic.List(Of PluginAPI.Core.Player)
+  name.vb: List(Of Player)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.PlayerSharedStorage.DamageWhitelist*
+  commentId: Overload:PluginAPI.Core.PlayerSharedStorage.DamageWhitelist
+  name: DamageWhitelist
+  nameWithType: PlayerSharedStorage.DamageWhitelist
+  fullName: PluginAPI.Core.PlayerSharedStorage.DamageWhitelist

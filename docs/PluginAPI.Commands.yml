@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Commands
+  commentId: N:PluginAPI.Commands
+  id: PluginAPI.Commands
+  children:
+  - PluginAPI.Commands.Command
+  - PluginAPI.Commands.CommandsManager
+  - PluginAPI.Commands.ListCommand
+  - PluginAPI.Commands.PluginsCommand
+  - PluginAPI.Commands.ReloadCommmand
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Commands
+  nameWithType: PluginAPI.Commands
+  fullName: PluginAPI.Commands
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Commands.Command
+  commentId: T:PluginAPI.Commands.Command
+  name: Command
+  nameWithType: Command
+  fullName: PluginAPI.Commands.Command
+- uid: PluginAPI.Commands.CommandsManager
+  commentId: T:PluginAPI.Commands.CommandsManager
+  name: CommandsManager
+  nameWithType: CommandsManager
+  fullName: PluginAPI.Commands.CommandsManager
+- uid: PluginAPI.Commands.ListCommand
+  commentId: T:PluginAPI.Commands.ListCommand
+  name: ListCommand
+  nameWithType: ListCommand
+  fullName: PluginAPI.Commands.ListCommand
+- uid: PluginAPI.Commands.PluginsCommand
+  commentId: T:PluginAPI.Commands.PluginsCommand
+  parent: PluginAPI.Commands
+  name: PluginsCommand
+  nameWithType: PluginsCommand
+  fullName: PluginAPI.Commands.PluginsCommand
+- uid: PluginAPI.Commands.ReloadCommmand
+  commentId: T:PluginAPI.Commands.ReloadCommmand
+  name: ReloadCommmand
+  nameWithType: ReloadCommmand
+  fullName: PluginAPI.Commands.ReloadCommmand
+- uid: PluginAPI.Commands
+  commentId: N:PluginAPI.Commands
+  name: PluginAPI.Commands
+  nameWithType: PluginAPI.Commands
+  fullName: PluginAPI.Commands

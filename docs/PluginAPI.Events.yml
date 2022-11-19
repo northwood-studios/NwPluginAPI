@@ -1,0 +1,66 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  id: PluginAPI.Events
+  children:
+  - PluginAPI.Events.Event
+  - PluginAPI.Events.EventInvokeLocation
+  - PluginAPI.Events.EventManager
+  - PluginAPI.Events.EventParameter
+  - PluginAPI.Events.IEventCancellation
+  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  - PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Events.Event
+  commentId: T:PluginAPI.Events.Event
+  name: Event
+  nameWithType: Event
+  fullName: PluginAPI.Events.Event
+- uid: PluginAPI.Events.EventInvokeLocation
+  commentId: T:PluginAPI.Events.EventInvokeLocation
+  name: EventInvokeLocation
+  nameWithType: EventInvokeLocation
+  fullName: PluginAPI.Events.EventInvokeLocation
+- uid: PluginAPI.Events.EventManager
+  commentId: T:PluginAPI.Events.EventManager
+  name: EventManager
+  nameWithType: EventManager
+  fullName: PluginAPI.Events.EventManager
+- uid: PluginAPI.Events.EventParameter
+  commentId: T:PluginAPI.Events.EventParameter
+  name: EventParameter
+  nameWithType: EventParameter
+  fullName: PluginAPI.Events.EventParameter
+- uid: PluginAPI.Events.IEventCancellation
+  commentId: T:PluginAPI.Events.IEventCancellation
+  parent: PluginAPI.Events
+  name: IEventCancellation
+  nameWithType: IEventCancellation
+  fullName: PluginAPI.Events.IEventCancellation
+- uid: PluginAPI.Events.PreauthCancellationData
+  commentId: T:PluginAPI.Events.PreauthCancellationData
+  parent: PluginAPI.Events
+  name: PreauthCancellationData
+  nameWithType: PreauthCancellationData
+  fullName: PluginAPI.Events.PreauthCancellationData
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  parent: PluginAPI.Events
+  name: PlayerCheckReservedSlotCancellationData
+  nameWithType: PlayerCheckReservedSlotCancellationData
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events

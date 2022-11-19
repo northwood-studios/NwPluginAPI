@@ -1,0 +1,719 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Log
+  commentId: T:PluginAPI.Core.Log
+  id: Log
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Log.Debug(System.String,System.String)
+  - PluginAPI.Core.Log.DisableBetterColors
+  - PluginAPI.Core.Log.Error(System.String,System.String)
+  - PluginAPI.Core.Log.FormatText(System.String,System.String,System.Boolean)
+  - PluginAPI.Core.Log.Info(System.String,System.String)
+  - PluginAPI.Core.Log.Raw(System.String,System.String)
+  - PluginAPI.Core.Log.UnityEditor
+  - PluginAPI.Core.Log.Warning(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Log
+  nameWithType: Log
+  fullName: PluginAPI.Core.Log
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Log
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 9
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nLogger for plugin system.\n"
+  example: []
+  syntax:
+    content: public static class Log
+    content.vb: Public Module Log
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: PluginAPI.Core.Log.DisableBetterColors
+  commentId: F:PluginAPI.Core.Log.DisableBetterColors
+  id: DisableBetterColors
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: DisableBetterColors
+  nameWithType: Log.DisableBetterColors
+  fullName: PluginAPI.Core.Log.DisableBetterColors
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DisableBetterColors
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 16
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nWhether or not to disable custom colors from log messages.\n"
+  example: []
+  syntax:
+    content: public static bool DisableBetterColors
+    return:
+      type: System.Boolean
+    content.vb: Public Shared DisableBetterColors As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Log.UnityEditor
+  commentId: F:PluginAPI.Core.Log.UnityEditor
+  id: UnityEditor
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: UnityEditor
+  nameWithType: Log.UnityEditor
+  fullName: PluginAPI.Core.Log.UnityEditor
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: UnityEditor
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 21
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nWhether or not its running in the unity editor.\n"
+  example: []
+  syntax:
+    content: public static bool UnityEditor
+    return:
+      type: System.Boolean
+    content.vb: Public Shared UnityEditor As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Log.Debug(System.String,System.String)
+  commentId: M:PluginAPI.Core.Log.Debug(System.String,System.String)
+  id: Debug(System.String,System.String)
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: Debug(String, String)
+  nameWithType: Log.Debug(String, String)
+  fullName: PluginAPI.Core.Log.Debug(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Debug
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 28
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends a debug message.\n"
+  example: []
+  syntax:
+    content: public static void Debug(string message, string prefix = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message.
+    - id: prefix
+      type: System.String
+      description: The prefix of message.
+    content.vb: Public Shared Sub Debug(message As String, prefix As String = Nothing)
+  overload: PluginAPI.Core.Log.Debug*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Log.Info(System.String,System.String)
+  commentId: M:PluginAPI.Core.Log.Info(System.String,System.String)
+  id: Info(System.String,System.String)
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: Info(String, String)
+  nameWithType: Log.Info(String, String)
+  fullName: PluginAPI.Core.Log.Info(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Info
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends a info message.\n"
+  example: []
+  syntax:
+    content: public static void Info(string message, string prefix = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message.
+    - id: prefix
+      type: System.String
+      description: The prefix of message.
+    content.vb: Public Shared Sub Info(message As String, prefix As String = Nothing)
+  overload: PluginAPI.Core.Log.Info*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Log.Warning(System.String,System.String)
+  commentId: M:PluginAPI.Core.Log.Warning(System.String,System.String)
+  id: Warning(System.String,System.String)
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: Warning(String, String)
+  nameWithType: Log.Warning(String, String)
+  fullName: PluginAPI.Core.Log.Warning(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Warning
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 42
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends a warning message.\n"
+  example: []
+  syntax:
+    content: public static void Warning(string message, string prefix = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message.
+    - id: prefix
+      type: System.String
+      description: The prefix of message.
+    content.vb: Public Shared Sub Warning(message As String, prefix As String = Nothing)
+  overload: PluginAPI.Core.Log.Warning*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Log.Error(System.String,System.String)
+  commentId: M:PluginAPI.Core.Log.Error(System.String,System.String)
+  id: Error(System.String,System.String)
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: Error(String, String)
+  nameWithType: Log.Error(String, String)
+  fullName: PluginAPI.Core.Log.Error(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Error
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 49
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends a error message.\n"
+  example: []
+  syntax:
+    content: public static void Error(string message, string prefix = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message.
+    - id: prefix
+      type: System.String
+      description: The prefix of message.
+    content.vb: Public Shared Sub Error(message As String, prefix As String = Nothing)
+  overload: PluginAPI.Core.Log.Error*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Log.Raw(System.String,System.String)
+  commentId: M:PluginAPI.Core.Log.Raw(System.String,System.String)
+  id: Raw(System.String,System.String)
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: Raw(String, String)
+  nameWithType: Log.Raw(String, String)
+  fullName: PluginAPI.Core.Log.Raw(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Raw
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 56
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends a raw message.\n"
+  example: []
+  syntax:
+    content: public static void Raw(string message, string prefix = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message.
+    - id: prefix
+      type: System.String
+      description: The prefix of message.
+    content.vb: Public Shared Sub Raw(message As String, prefix As String = Nothing)
+  overload: PluginAPI.Core.Log.Raw*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Log.FormatText(System.String,System.String,System.Boolean)
+  commentId: M:PluginAPI.Core.Log.FormatText(System.String,System.String,System.Boolean)
+  id: FormatText(System.String,System.String,System.Boolean)
+  parent: PluginAPI.Core.Log
+  langs:
+  - csharp
+  - vb
+  name: FormatText(String, String, Boolean)
+  nameWithType: Log.FormatText(String, String, Boolean)
+  fullName: PluginAPI.Core.Log.FormatText(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Log.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: FormatText
+    path: ../NwPluginAPI/Core/Log.cs
+    startLine: 73
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nConverts a raw message with color tags to formatted message.\n"
+  example: []
+  syntax:
+    content: public static string FormatText(string message, string defaultColor = null, bool unityRichText = false)
+    parameters:
+    - id: message
+      type: System.String
+      description: The raw message.
+    - id: defaultColor
+      type: System.String
+      description: The default color of message.
+    - id: unityRichText
+      type: System.Boolean
+      description: If its unity richtext or ansi colors.
+    return:
+      type: System.String
+      description: Formatted message with colors.
+    content.vb: Public Shared Function FormatText(message As String, defaultColor As String = Nothing, unityRichText As Boolean = False) As String
+  overload: PluginAPI.Core.Log.FormatText*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Log.Debug*
+  commentId: Overload:PluginAPI.Core.Log.Debug
+  name: Debug
+  nameWithType: Log.Debug
+  fullName: PluginAPI.Core.Log.Debug
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Core.Log.Info*
+  commentId: Overload:PluginAPI.Core.Log.Info
+  name: Info
+  nameWithType: Log.Info
+  fullName: PluginAPI.Core.Log.Info
+- uid: PluginAPI.Core.Log.Warning*
+  commentId: Overload:PluginAPI.Core.Log.Warning
+  name: Warning
+  nameWithType: Log.Warning
+  fullName: PluginAPI.Core.Log.Warning
+- uid: PluginAPI.Core.Log.Error*
+  commentId: Overload:PluginAPI.Core.Log.Error
+  name: Error
+  nameWithType: Log.Error
+  fullName: PluginAPI.Core.Log.Error
+- uid: PluginAPI.Core.Log.Raw*
+  commentId: Overload:PluginAPI.Core.Log.Raw
+  name: Raw
+  nameWithType: Log.Raw
+  fullName: PluginAPI.Core.Log.Raw
+- uid: PluginAPI.Core.Log.FormatText*
+  commentId: Overload:PluginAPI.Core.Log.FormatText
+  name: FormatText
+  nameWithType: Log.FormatText
+  fullName: PluginAPI.Core.Log.FormatText

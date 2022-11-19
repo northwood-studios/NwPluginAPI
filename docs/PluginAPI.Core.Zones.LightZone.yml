@@ -1,0 +1,1045 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.LightZone
+  commentId: T:PluginAPI.Core.Zones.LightZone
+  id: LightZone
+  parent: PluginAPI.Core.Zones
+  children:
+  - PluginAPI.Core.Zones.LightZone.#ctor
+  - PluginAPI.Core.Zones.LightZone.Doors
+  - PluginAPI.Core.Zones.LightZone.GetRooms``1
+  - PluginAPI.Core.Zones.LightZone.IsDecontaminated
+  - PluginAPI.Core.Zones.LightZone.Rooms
+  - PluginAPI.Core.Zones.LightZone.StartDecontamination
+  - PluginAPI.Core.Zones.LightZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  - PluginAPI.Core.Zones.LightZone.ZoneType
+  langs:
+  - csharp
+  - vb
+  name: LightZone
+  nameWithType: LightZone
+  fullName: PluginAPI.Core.Zones.LightZone
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LightZone
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nRepresents the light containment zone.\n"
+  example: []
+  syntax:
+    content: 'public class LightZone : FacilityZone'
+    content.vb: >-
+      Public Class LightZone
+          Inherits FacilityZone
+  inheritance:
+  - System.Object
+  - PluginAPI.Core.Zones.FacilityZone
+  inheritedMembers:
+  - PluginAPI.Core.Zones.FacilityZone.GetRooms
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Zones.LightZone.ZoneType
+  commentId: P:PluginAPI.Core.Zones.LightZone.ZoneType
+  id: ZoneType
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: ZoneType
+  nameWithType: LightZone.ZoneType
+  fullName: PluginAPI.Core.Zones.LightZone.ZoneType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ZoneType
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 19
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets the zone type.\n"
+  example: []
+  syntax:
+    content: public override FacilityZone ZoneType { get; }
+    parameters: []
+    return:
+      type: MapGeneration.FacilityZone
+    content.vb: Public Overrides ReadOnly Property ZoneType As FacilityZone
+  overridden: PluginAPI.Core.Zones.FacilityZone.ZoneType
+  overload: PluginAPI.Core.Zones.LightZone.ZoneType*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.LightZone.GetRooms``1
+  commentId: M:PluginAPI.Core.Zones.LightZone.GetRooms``1
+  id: GetRooms``1
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: GetRooms<T>()
+  nameWithType: LightZone.GetRooms<T>()
+  fullName: PluginAPI.Core.Zones.LightZone.GetRooms<T>()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetRooms
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 22
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets all rooms of specific type.\n"
+  example: []
+  syntax:
+    content: >-
+      public override List<T> GetRooms<T>()
+          where T : FacilityRoom
+    typeParameters:
+    - id: T
+      description: The tyep of rooms.
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: List of all rooms.
+    content.vb: Public Overrides Function GetRooms(Of T As FacilityRoom) As List(Of T)
+  overridden: PluginAPI.Core.Zones.FacilityZone.GetRooms``1
+  overload: PluginAPI.Core.Zones.LightZone.GetRooms*
+  nameWithType.vb: LightZone.GetRooms(Of T)()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: PluginAPI.Core.Zones.LightZone.GetRooms(Of T)()
+  name.vb: GetRooms(Of T)()
+- uid: PluginAPI.Core.Zones.LightZone.Rooms
+  commentId: P:PluginAPI.Core.Zones.LightZone.Rooms
+  id: Rooms
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: Rooms
+  nameWithType: LightZone.Rooms
+  fullName: PluginAPI.Core.Zones.LightZone.Rooms
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rooms
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 27
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets all rooms in light zone.\n"
+  example: []
+  syntax:
+    content: public static List<LczRoom> Rooms { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Zones.Light.LczRoom}
+    content.vb: Public Shared ReadOnly Property Rooms As List(Of LczRoom)
+  overload: PluginAPI.Core.Zones.LightZone.Rooms*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.LightZone.Doors
+  commentId: P:PluginAPI.Core.Zones.LightZone.Doors
+  id: Doors
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: Doors
+  nameWithType: LightZone.Doors
+  fullName: PluginAPI.Core.Zones.LightZone.Doors
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Doors
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets all doors in surface zone.\n"
+  example: []
+  syntax:
+    content: public static List<FacilityDoor> Doors { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+    content.vb: Public Shared ReadOnly Property Doors As List(Of FacilityDoor)
+  overload: PluginAPI.Core.Zones.LightZone.Doors*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.LightZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  commentId: M:PluginAPI.Core.Zones.LightZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  id: TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: TryGetRoom(RoomIdentifier, out FacilityRoom)
+  nameWithType: LightZone.TryGetRoom(RoomIdentifier, out FacilityRoom)
+  fullName: PluginAPI.Core.Zones.LightZone.TryGetRoom(MapGeneration.RoomIdentifier, out PluginAPI.Core.Zones.FacilityRoom)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGetRoom
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets surface room from room identifier.\n"
+  example: []
+  syntax:
+    content: public override bool TryGetRoom(RoomIdentifier roomIdentity, out FacilityRoom room)
+    parameters:
+    - id: roomIdentity
+      type: MapGeneration.RoomIdentifier
+      description: The room identifier.
+    - id: room
+      type: PluginAPI.Core.Zones.FacilityRoom
+      description: The facility room.
+    return:
+      type: System.Boolean
+      description: Whether or not the room was found.
+    content.vb: Public Overrides Function TryGetRoom(roomIdentity As RoomIdentifier, ByRef room As FacilityRoom) As Boolean
+  overridden: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  overload: PluginAPI.Core.Zones.LightZone.TryGetRoom*
+  nameWithType.vb: LightZone.TryGetRoom(RoomIdentifier, ByRef FacilityRoom)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: PluginAPI.Core.Zones.LightZone.TryGetRoom(MapGeneration.RoomIdentifier, ByRef PluginAPI.Core.Zones.FacilityRoom)
+  name.vb: TryGetRoom(RoomIdentifier, ByRef FacilityRoom)
+- uid: PluginAPI.Core.Zones.LightZone.IsDecontaminated
+  commentId: P:PluginAPI.Core.Zones.LightZone.IsDecontaminated
+  id: IsDecontaminated
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: IsDecontaminated
+  nameWithType: LightZone.IsDecontaminated
+  fullName: PluginAPI.Core.Zones.LightZone.IsDecontaminated
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsDecontaminated
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 62
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nChecks whether or not the zone has already been decontaminated.\n"
+  example: []
+  syntax:
+    content: public static bool IsDecontaminated { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsDecontaminated As Boolean
+  overload: PluginAPI.Core.Zones.LightZone.IsDecontaminated*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.LightZone.StartDecontamination
+  commentId: M:PluginAPI.Core.Zones.LightZone.StartDecontamination
+  id: StartDecontamination
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: StartDecontamination()
+  nameWithType: LightZone.StartDecontamination()
+  fullName: PluginAPI.Core.Zones.LightZone.StartDecontamination()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: StartDecontamination
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 67
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nStarts decontamination.\n"
+  example: []
+  syntax:
+    content: public static void StartDecontamination()
+    content.vb: Public Shared Sub StartDecontamination
+  overload: PluginAPI.Core.Zones.LightZone.StartDecontamination*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Zones.LightZone.#ctor
+  commentId: M:PluginAPI.Core.Zones.LightZone.#ctor
+  id: '#ctor'
+  parent: PluginAPI.Core.Zones.LightZone
+  langs:
+  - csharp
+  - vb
+  name: LightZone()
+  nameWithType: LightZone.LightZone()
+  fullName: PluginAPI.Core.Zones.LightZone.LightZone()
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/LightZone.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Zones/LightZone.cs
+    startLine: 76
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Zones.LightZone\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LightZone()
+    content.vb: Public Sub New
+  overload: PluginAPI.Core.Zones.LightZone.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Zones
+  commentId: N:PluginAPI.Core.Zones
+  name: PluginAPI.Core.Zones
+  nameWithType: PluginAPI.Core.Zones
+  fullName: PluginAPI.Core.Zones
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Core.Zones.FacilityZone
+  commentId: T:PluginAPI.Core.Zones.FacilityZone
+  parent: PluginAPI.Core.Zones
+  name: FacilityZone
+  nameWithType: FacilityZone
+  fullName: PluginAPI.Core.Zones.FacilityZone
+- uid: PluginAPI.Core.Zones.FacilityZone.GetRooms
+  commentId: M:PluginAPI.Core.Zones.FacilityZone.GetRooms
+  parent: PluginAPI.Core.Zones.FacilityZone
+  name: GetRooms()
+  nameWithType: FacilityZone.GetRooms()
+  fullName: PluginAPI.Core.Zones.FacilityZone.GetRooms()
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityZone.GetRooms
+    name: GetRooms
+    nameWithType: FacilityZone.GetRooms
+    fullName: PluginAPI.Core.Zones.FacilityZone.GetRooms
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityZone.GetRooms
+    name: GetRooms
+    nameWithType: FacilityZone.GetRooms
+    fullName: PluginAPI.Core.Zones.FacilityZone.GetRooms
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Zones.FacilityZone.ZoneType
+  commentId: P:PluginAPI.Core.Zones.FacilityZone.ZoneType
+  parent: PluginAPI.Core.Zones.FacilityZone
+  name: ZoneType
+  nameWithType: FacilityZone.ZoneType
+  fullName: PluginAPI.Core.Zones.FacilityZone.ZoneType
+- uid: PluginAPI.Core.Zones.LightZone.ZoneType*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.ZoneType
+  name: ZoneType
+  nameWithType: LightZone.ZoneType
+  fullName: PluginAPI.Core.Zones.LightZone.ZoneType
+- uid: MapGeneration.FacilityZone
+  commentId: T:MapGeneration.FacilityZone
+  parent: MapGeneration
+  isExternal: true
+  name: FacilityZone
+  nameWithType: FacilityZone
+  fullName: MapGeneration.FacilityZone
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
+- uid: PluginAPI.Core.Zones.FacilityZone.GetRooms``1
+  commentId: M:PluginAPI.Core.Zones.FacilityZone.GetRooms``1
+  parent: PluginAPI.Core.Zones.FacilityZone
+  name: GetRooms<T>()
+  nameWithType: FacilityZone.GetRooms<T>()
+  fullName: PluginAPI.Core.Zones.FacilityZone.GetRooms<T>()
+  nameWithType.vb: FacilityZone.GetRooms(Of T)()
+  fullName.vb: PluginAPI.Core.Zones.FacilityZone.GetRooms(Of T)()
+  name.vb: GetRooms(Of T)()
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityZone.GetRooms``1
+    name: GetRooms<T>
+    nameWithType: FacilityZone.GetRooms<T>
+    fullName: PluginAPI.Core.Zones.FacilityZone.GetRooms<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityZone.GetRooms``1
+    name: GetRooms(Of T)
+    nameWithType: FacilityZone.GetRooms(Of T)
+    fullName: PluginAPI.Core.Zones.FacilityZone.GetRooms(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.LightZone.GetRooms*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.GetRooms
+  name: GetRooms
+  nameWithType: LightZone.GetRooms
+  fullName: PluginAPI.Core.Zones.LightZone.GetRooms
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.Zones.LightZone.Rooms*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.Rooms
+  name: Rooms
+  nameWithType: LightZone.Rooms
+  fullName: PluginAPI.Core.Zones.LightZone.Rooms
+- uid: System.Collections.Generic.List{PluginAPI.Core.Zones.Light.LczRoom}
+  commentId: T:System.Collections.Generic.List{PluginAPI.Core.Zones.Light.LczRoom}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<LczRoom>
+  nameWithType: List<LczRoom>
+  fullName: System.Collections.Generic.List<PluginAPI.Core.Zones.Light.LczRoom>
+  nameWithType.vb: List(Of LczRoom)
+  fullName.vb: System.Collections.Generic.List(Of PluginAPI.Core.Zones.Light.LczRoom)
+  name.vb: List(Of LczRoom)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PluginAPI.Core.Zones.Light.LczRoom
+    name: LczRoom
+    nameWithType: LczRoom
+    fullName: PluginAPI.Core.Zones.Light.LczRoom
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PluginAPI.Core.Zones.Light.LczRoom
+    name: LczRoom
+    nameWithType: LczRoom
+    fullName: PluginAPI.Core.Zones.Light.LczRoom
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.LightZone.Doors*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.Doors
+  name: Doors
+  nameWithType: LightZone.Doors
+  fullName: PluginAPI.Core.Zones.LightZone.Doors
+- uid: System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+  commentId: T:System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FacilityDoor>
+  nameWithType: List<FacilityDoor>
+  fullName: System.Collections.Generic.List<PluginAPI.Core.Doors.FacilityDoor>
+  nameWithType.vb: List(Of FacilityDoor)
+  fullName.vb: System.Collections.Generic.List(Of PluginAPI.Core.Doors.FacilityDoor)
+  name.vb: List(Of FacilityDoor)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PluginAPI.Core.Doors.FacilityDoor
+    name: FacilityDoor
+    nameWithType: FacilityDoor
+    fullName: PluginAPI.Core.Doors.FacilityDoor
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PluginAPI.Core.Doors.FacilityDoor
+    name: FacilityDoor
+    nameWithType: FacilityDoor
+    fullName: PluginAPI.Core.Doors.FacilityDoor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  commentId: M:PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  parent: PluginAPI.Core.Zones.FacilityZone
+  isExternal: true
+  name: TryGetRoom(RoomIdentifier, FacilityRoom)
+  nameWithType: FacilityZone.TryGetRoom(RoomIdentifier, FacilityRoom)
+  fullName: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier, PluginAPI.Core.Zones.FacilityRoom)
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+    name: TryGetRoom
+    nameWithType: FacilityZone.TryGetRoom
+    fullName: PluginAPI.Core.Zones.FacilityZone.TryGetRoom
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MapGeneration.RoomIdentifier
+    name: RoomIdentifier
+    nameWithType: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: PluginAPI.Core.Zones.FacilityRoom
+    name: FacilityRoom
+    nameWithType: FacilityRoom
+    fullName: PluginAPI.Core.Zones.FacilityRoom
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+    name: TryGetRoom
+    nameWithType: FacilityZone.TryGetRoom
+    fullName: PluginAPI.Core.Zones.FacilityZone.TryGetRoom
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MapGeneration.RoomIdentifier
+    name: RoomIdentifier
+    nameWithType: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: PluginAPI.Core.Zones.FacilityRoom
+    name: FacilityRoom
+    nameWithType: FacilityRoom
+    fullName: PluginAPI.Core.Zones.FacilityRoom
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.LightZone.TryGetRoom*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.TryGetRoom
+  name: TryGetRoom
+  nameWithType: LightZone.TryGetRoom
+  fullName: PluginAPI.Core.Zones.LightZone.TryGetRoom
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
+  isExternal: true
+  name: RoomIdentifier
+  nameWithType: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: PluginAPI.Core.Zones.FacilityRoom
+  commentId: T:PluginAPI.Core.Zones.FacilityRoom
+  parent: PluginAPI.Core.Zones
+  name: FacilityRoom
+  nameWithType: FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Zones.LightZone.IsDecontaminated*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.IsDecontaminated
+  name: IsDecontaminated
+  nameWithType: LightZone.IsDecontaminated
+  fullName: PluginAPI.Core.Zones.LightZone.IsDecontaminated
+- uid: PluginAPI.Core.Zones.LightZone.StartDecontamination*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.StartDecontamination
+  name: StartDecontamination
+  nameWithType: LightZone.StartDecontamination
+  fullName: PluginAPI.Core.Zones.LightZone.StartDecontamination
+- uid: PluginAPI.Core.Zones.LightZone
+  commentId: T:PluginAPI.Core.Zones.LightZone
+  parent: PluginAPI.Core.Zones
+  name: LightZone
+  nameWithType: LightZone
+  fullName: PluginAPI.Core.Zones.LightZone
+- uid: PluginAPI.Core.Zones.LightZone.#ctor*
+  commentId: Overload:PluginAPI.Core.Zones.LightZone.#ctor
+  name: LightZone
+  nameWithType: LightZone.LightZone
+  fullName: PluginAPI.Core.Zones.LightZone.LightZone

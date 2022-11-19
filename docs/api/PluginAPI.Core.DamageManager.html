@@ -12,7 +12,7 @@
      | Nw Plugin API ">
       <meta name="generator" content="docfx 2.59.4.0">
       
-      <link rel="shortcut icon" href="../images/nw_logo.png">
+      <link rel="shortcut icon" href="../images/favicon.ico">
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
@@ -34,7 +34,7 @@
 
             
             <a class="brand" href="../index.html">
-              <img src="../images/nw_logo.png" alt="Nw Plugin API" class="logomark">
+              <img src="../images/logo.jpg" alt="Nw Plugin API" class="logomark">
               <span class="brand-title">Nw Plugin API</span>
             </a>        </div>
 
@@ -48,10 +48,10 @@
                       <div class="mobile-hide">
                         
                         <a class="brand" href="../index.html">
-                          <img src="../images/nw_logo.png" alt="Nw Plugin API" class="logomark">
+                          <img src="../images/logo.jpg" alt="Nw Plugin API" class="logomark">
                           <span class="brand-title">Nw Plugin API</span>
                         </a>  </div>
-
+                    
                       <div class="sidesearch">
                         <form id="search" role="search" class="search">
                             <i class="bi bi-search search-icon"></i>
@@ -68,8 +68,8 @@
                         </div>
                 </div>
                 <div class="footer">
+                  Nw Plugin API
                   
-                  <strong><a href='https://dotnet.github.io/docfx/'>DocFX</a> + <a href='https://www.singulink.com'>Singulink</a> = ♥</strong>
                 </div>            </nav>
 
             <main class="main-panel">
@@ -96,7 +96,7 @@
   
   <h1 id="PluginAPI_Core_DamageManager" data-uid="PluginAPI.Core.DamageManager" class="text-break">Class DamageManager
   </h1>
-  <div class="markdown level0 summary"><p>The damage manager for player.</p>
+  <div class="markdown level0 summary"><p>Manages damage for a player.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -145,7 +145,7 @@
   </span>
   <a id="PluginAPI_Core_DamageManager__ctor_" data-uid="PluginAPI.Core.DamageManager.#ctor*"></a>
   <h4 id="PluginAPI_Core_DamageManager__ctor_PluginAPI_Core_Player_" data-uid="PluginAPI.Core.DamageManager.#ctor(PluginAPI.Core.Player)">DamageManager(Player)</h4>
-  <div class="markdown level1 summary"><p>Constructor for damage manager.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PluginAPI.Core.DamageManager.html">DamageManager</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -181,7 +181,7 @@
   </span>
   <a id="PluginAPI_Core_DamageManager_CanReceiveDamageFromPlayers_" data-uid="PluginAPI.Core.DamageManager.CanReceiveDamageFromPlayers*"></a>
   <h4 id="PluginAPI_Core_DamageManager_CanReceiveDamageFromPlayers" data-uid="PluginAPI.Core.DamageManager.CanReceiveDamageFromPlayers">CanReceiveDamageFromPlayers</h4>
-  <div class="markdown level1 summary"><p>Gets or sets if player can receive damage from players.</p>
+  <div class="markdown level1 summary"><p>Gets or sets whether or not player can receive damage from other players.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -212,7 +212,7 @@
   </span>
   <a id="PluginAPI_Core_DamageManager_DamageBlacklist_" data-uid="PluginAPI.Core.DamageManager.DamageBlacklist*"></a>
   <h4 id="PluginAPI_Core_DamageManager_DamageBlacklist" data-uid="PluginAPI.Core.DamageManager.DamageBlacklist">DamageBlacklist</h4>
-  <div class="markdown level1 summary"><p>Player in this list cant damage this player.</p>
+  <div class="markdown level1 summary"><p>Gets a list of players who can&apos;t damage this player.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -243,7 +243,7 @@
   </span>
   <a id="PluginAPI_Core_DamageManager_DamageWhitelist_" data-uid="PluginAPI.Core.DamageManager.DamageWhitelist*"></a>
   <h4 id="PluginAPI_Core_DamageManager_DamageWhitelist" data-uid="PluginAPI.Core.DamageManager.DamageWhitelist">DamageWhitelist</h4>
-  <div class="markdown level1 summary"><p>Player in this list will be able to damage this player.</p>
+  <div class="markdown level1 summary"><p>Gets a list of players who can to damage this player.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -312,7 +312,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>If damage is successful.</p>
+        <td><p>Whether or not damaging was successful.</p>
 </td>
       </tr>
     </tbody>
@@ -380,7 +380,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>If damage is successful.</p>
+        <td><p>Whether or not damaging was successful.</p>
 </td>
       </tr>
     </tbody>
@@ -442,7 +442,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td><p>If damage is successful.</p>
+        <td><p>Whether or not damaging was successful..</p>
 </td>
       </tr>
     </tbody>
@@ -451,7 +451,7 @@
                 </div>
 
                 <div class="copyright-footer">
-                    <span>&#169; Northwood Studios. All rights reserved.</span>
+                    <span>Northwood Studios @ 2022. All rights reserved.</span>
                 </div>
             </main>
         </div>

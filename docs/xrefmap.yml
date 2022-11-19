@@ -2263,19 +2263,6 @@ references:
   isSpec: "True"
   fullName: PluginAPI.Core.Player.AddAmmo
   nameWithType: Player.AddAmmo
-- uid: PluginAPI.Core.Player.AddItem(ItemType)
-  name: AddItem(ItemType)
-  href: api/PluginAPI.Core.Player.html#PluginAPI_Core_Player_AddItem_ItemType_
-  commentId: M:PluginAPI.Core.Player.AddItem(ItemType)
-  fullName: PluginAPI.Core.Player.AddItem(ItemType)
-  nameWithType: Player.AddItem(ItemType)
-- uid: PluginAPI.Core.Player.AddItem*
-  name: AddItem
-  href: api/PluginAPI.Core.Player.html#PluginAPI_Core_Player_AddItem_
-  commentId: Overload:PluginAPI.Core.Player.AddItem
-  isSpec: "True"
-  fullName: PluginAPI.Core.Player.AddItem
-  nameWithType: Player.AddItem
 - uid: PluginAPI.Core.Player.ArtificialHealth
   name: ArtificialHealth
   href: api/PluginAPI.Core.Player.html#PluginAPI_Core_Player_ArtificialHealth
@@ -5322,19 +5309,6 @@ references:
   isSpec: "True"
   fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.LczScp914
   nameWithType: LczScp914.LczScp914
-- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.Gate
-  name: Gate
-  href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_Gate
-  commentId: P:PluginAPI.Core.Zones.Light.Rooms.LczScp914.Gate
-  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.Gate
-  nameWithType: LczScp914.Gate
-- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.Gate*
-  name: Gate
-  href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_Gate_
-  commentId: Overload:PluginAPI.Core.Zones.Light.Rooms.LczScp914.Gate
-  isSpec: "True"
-  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.Gate
-  nameWithType: LczScp914.Gate
 - uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.IntakeChamber
   name: IntakeChamber
   href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_IntakeChamber
@@ -5361,32 +5335,6 @@ references:
   isSpec: "True"
   fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.OutputChamber
   nameWithType: LczScp914.OutputChamber
-- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomIdentifier
-  name: RoomIdentifier
-  href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_RoomIdentifier
-  commentId: P:PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomIdentifier
-  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomIdentifier
-  nameWithType: LczScp914.RoomIdentifier
-- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomIdentifier*
-  name: RoomIdentifier
-  href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_RoomIdentifier_
-  commentId: Overload:PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomIdentifier
-  isSpec: "True"
-  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomIdentifier
-  nameWithType: LczScp914.RoomIdentifier
-- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomLights
-  name: RoomLights
-  href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_RoomLights
-  commentId: P:PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomLights
-  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomLights
-  nameWithType: LczScp914.RoomLights
-- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomLights*
-  name: RoomLights
-  href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_RoomLights_
-  commentId: Overload:PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomLights
-  isSpec: "True"
-  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.RoomLights
-  nameWithType: LczScp914.RoomLights
 - uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.Start
   name: Start()
   href: api/PluginAPI.Core.Zones.Light.Rooms.LczScp914.html#PluginAPI_Core_Zones_Light_Rooms_LczScp914_Start
@@ -5541,19 +5489,19 @@ references:
   isSpec: "True"
   fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.PocketDimension
   nameWithType: PocketDimension.PocketDimension
-- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccesable
-  name: IsAccesable
-  href: api/PluginAPI.Core.Zones.Pocket.PocketDimension.html#PluginAPI_Core_Zones_Pocket_PocketDimension_IsAccesable
-  commentId: P:PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccesable
-  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccesable
-  nameWithType: PocketDimension.IsAccesable
-- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccesable*
-  name: IsAccesable
-  href: api/PluginAPI.Core.Zones.Pocket.PocketDimension.html#PluginAPI_Core_Zones_Pocket_PocketDimension_IsAccesable_
-  commentId: Overload:PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccesable
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  name: IsAccessible
+  href: api/PluginAPI.Core.Zones.Pocket.PocketDimension.html#PluginAPI_Core_Zones_Pocket_PocketDimension_IsAccessible
+  commentId: P:PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  nameWithType: PocketDimension.IsAccessible
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible*
+  name: IsAccessible
+  href: api/PluginAPI.Core.Zones.Pocket.PocketDimension.html#PluginAPI_Core_Zones_Pocket_PocketDimension_IsAccessible_
+  commentId: Overload:PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
   isSpec: "True"
-  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccesable
-  nameWithType: PocketDimension.IsAccesable
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  nameWithType: PocketDimension.IsAccessible
 - uid: PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
   name: Logic
   href: api/PluginAPI.Core.Zones.Pocket.PocketDimension.html#PluginAPI_Core_Zones_Pocket_PocketDimension_Logic
@@ -5784,19 +5732,6 @@ references:
   commentId: T:PluginAPI.Core.Zones.UnknownZone
   fullName: PluginAPI.Core.Zones.UnknownZone
   nameWithType: UnknownZone
-- uid: PluginAPI.Core.Zones.UnknownZone.ZoneType
-  name: ZoneType
-  href: api/PluginAPI.Core.Zones.UnknownZone.html#PluginAPI_Core_Zones_UnknownZone_ZoneType
-  commentId: P:PluginAPI.Core.Zones.UnknownZone.ZoneType
-  fullName: PluginAPI.Core.Zones.UnknownZone.ZoneType
-  nameWithType: UnknownZone.ZoneType
-- uid: PluginAPI.Core.Zones.UnknownZone.ZoneType*
-  name: ZoneType
-  href: api/PluginAPI.Core.Zones.UnknownZone.html#PluginAPI_Core_Zones_UnknownZone_ZoneType_
-  commentId: Overload:PluginAPI.Core.Zones.UnknownZone.ZoneType
-  isSpec: "True"
-  fullName: PluginAPI.Core.Zones.UnknownZone.ZoneType
-  nameWithType: UnknownZone.ZoneType
 - uid: PluginAPI.Enums
   name: PluginAPI.Enums
   href: api/PluginAPI.Enums.html
@@ -6559,6 +6494,57 @@ references:
   isSpec: "True"
   fullName: PluginAPI.Events.IEventCancellation.IsCancelled
   nameWithType: IEventCancellation.IsCancelled
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  name: PlayerCheckReservedSlotCancellationData
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html
+  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  nameWithType: PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  name: HasReservedSlot
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html#PluginAPI_Events_PlayerCheckReservedSlotCancellationData_HasReservedSlot
+  commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
+  nameWithType: PlayerCheckReservedSlotCancellationData.HasReservedSlot
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  name: IsCancelled
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html#PluginAPI_Events_PlayerCheckReservedSlotCancellationData_IsCancelled
+  commentId: P:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled*
+  name: IsCancelled
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html#PluginAPI_Events_PlayerCheckReservedSlotCancellationData_IsCancelled_
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  isSpec: "True"
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  name: LeaveUnchanged()
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html#PluginAPI_Events_PlayerCheckReservedSlotCancellationData_LeaveUnchanged
+  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
+  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged*
+  name: LeaveUnchanged
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html#PluginAPI_Events_PlayerCheckReservedSlotCancellationData_LeaveUnchanged_
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  isSpec: "True"
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  name: Override(Boolean)
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html#PluginAPI_Events_PlayerCheckReservedSlotCancellationData_Override_System_Boolean_
+  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  nameWithType: PlayerCheckReservedSlotCancellationData.Override(Boolean)
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
+  name: Override
+  href: api/PluginAPI.Events.PlayerCheckReservedSlotCancellationData.html#PluginAPI_Events_PlayerCheckReservedSlotCancellationData_Override_
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
+  isSpec: "True"
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
+  nameWithType: PlayerCheckReservedSlotCancellationData.Override
 - uid: PluginAPI.Events.PreauthCancellationData
   name: PreauthCancellationData
   href: api/PluginAPI.Events.PreauthCancellationData.html

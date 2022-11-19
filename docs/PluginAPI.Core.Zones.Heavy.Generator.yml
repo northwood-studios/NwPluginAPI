@@ -1,0 +1,866 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Heavy.Generator
+  commentId: T:PluginAPI.Core.Zones.Heavy.Generator
+  id: Generator
+  parent: PluginAPI.Core.Zones.Heavy
+  children:
+  - PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)
+  - PluginAPI.Core.Zones.Heavy.Generator.GameObject
+  - PluginAPI.Core.Zones.Heavy.Generator.IsActivating
+  - PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady
+  - PluginAPI.Core.Zones.Heavy.Generator.IsEngaged
+  - PluginAPI.Core.Zones.Heavy.Generator.OriginalObject
+  - PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound
+  - PluginAPI.Core.Zones.Heavy.Generator.Position
+  - PluginAPI.Core.Zones.Heavy.Generator.Room
+  - PluginAPI.Core.Zones.Heavy.Generator.Rotation
+  - PluginAPI.Core.Zones.Heavy.Generator.Transform
+  langs:
+  - csharp
+  - vb
+  name: Generator
+  nameWithType: Generator
+  fullName: PluginAPI.Core.Zones.Heavy.Generator
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Generator
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 8
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nRepresents an generator.\n"
+  example: []
+  syntax:
+    content: public class Generator
+    content.vb: Public Class Generator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Zones.Heavy.Generator.OriginalObject
+  commentId: F:PluginAPI.Core.Zones.Heavy.Generator.OriginalObject
+  id: OriginalObject
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: OriginalObject
+  nameWithType: Generator.OriginalObject
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.OriginalObject
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OriginalObject
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nThe base-game object.\n"
+  example: []
+  syntax:
+    content: public readonly Scp079Generator OriginalObject
+    return:
+      type: MapGeneration.Distributors.Scp079Generator
+    content.vb: Public ReadOnly OriginalObject As Scp079Generator
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Generator.Room
+  commentId: F:PluginAPI.Core.Zones.Heavy.Generator.Room
+  id: Room
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: Room
+  nameWithType: Generator.Room
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Room
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Room
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 18
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nThe room the generator is in.\n"
+  example: []
+  syntax:
+    content: public readonly HczRoom Room
+    return:
+      type: PluginAPI.Core.Zones.Heavy.HczRoom
+    content.vb: Public ReadOnly Room As HczRoom
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Generator.IsActivating
+  commentId: P:PluginAPI.Core.Zones.Heavy.Generator.IsActivating
+  id: IsActivating
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: IsActivating
+  nameWithType: Generator.IsActivating
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.IsActivating
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsActivating
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 54
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nGets or sets whether or not the generator is activating.\n"
+  example: []
+  syntax:
+    content: public bool IsActivating { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsActivating As Boolean
+  overload: PluginAPI.Core.Zones.Heavy.Generator.IsActivating*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady
+  commentId: P:PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady
+  id: IsActivationReady
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: IsActivationReady
+  nameWithType: Generator.IsActivationReady
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsActivationReady
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 64
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nGets whether or not the generator is activation-ready.\n"
+  example: []
+  syntax:
+    content: public bool IsActivationReady { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsActivationReady As Boolean
+  overload: PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Generator.IsEngaged
+  commentId: P:PluginAPI.Core.Zones.Heavy.Generator.IsEngaged
+  id: IsEngaged
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: IsEngaged
+  nameWithType: Generator.IsEngaged
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.IsEngaged
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsEngaged
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 69
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nGets or sets whether or not the generator is engaged (active).\n"
+  example: []
+  syntax:
+    content: public bool IsEngaged { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsEngaged As Boolean
+  overload: PluginAPI.Core.Zones.Heavy.Generator.IsEngaged*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Zones.Heavy.Generator.Transform
+  commentId: P:PluginAPI.Core.Zones.Heavy.Generator.Transform
+  id: Transform
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: Generator.Transform
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Transform
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Transform
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 114
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nGets the generator&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Transform Transform { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public ReadOnly Property Transform As Transform
+  overload: PluginAPI.Core.Zones.Heavy.Generator.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Generator.GameObject
+  commentId: P:PluginAPI.Core.Zones.Heavy.Generator.GameObject
+  id: GameObject
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: Generator.GameObject
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.GameObject
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GameObject
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 119
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nGets the generator&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public GameObject GameObject { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ReadOnly Property GameObject As GameObject
+  overload: PluginAPI.Core.Zones.Heavy.Generator.GameObject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Generator.Position
+  commentId: P:PluginAPI.Core.Zones.Heavy.Generator.Position
+  id: Position
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Generator.Position
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Position
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Position
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 124
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nGets the generator&apos;s position.\n"
+  example: []
+  syntax:
+    content: public Vector3 Position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Position As Vector3
+  overload: PluginAPI.Core.Zones.Heavy.Generator.Position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Generator.Rotation
+  commentId: P:PluginAPI.Core.Zones.Heavy.Generator.Rotation
+  id: Rotation
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: Generator.Rotation
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Rotation
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rotation
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 129
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nGets the generator rotation.\n"
+  example: []
+  syntax:
+    content: public Quaternion Rotation { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Public ReadOnly Property Rotation As Quaternion
+  overload: PluginAPI.Core.Zones.Heavy.Generator.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound
+  commentId: M:PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound
+  id: PlayDeniedSound
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: PlayDeniedSound()
+  nameWithType: Generator.PlayDeniedSound()
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayDeniedSound
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 134
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nPlays the generator&apos;s denied sound.\n"
+  example: []
+  syntax:
+    content: public void PlayDeniedSound()
+    content.vb: Public Sub PlayDeniedSound
+  overload: PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)
+  commentId: M:PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)
+  id: '#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)'
+  parent: PluginAPI.Core.Zones.Heavy.Generator
+  langs:
+  - csharp
+  - vb
+  name: Generator(HczRoom, Scp079Generator)
+  nameWithType: Generator.Generator(HczRoom, Scp079Generator)
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Generator(PluginAPI.Core.Zones.Heavy.HczRoom, MapGeneration.Distributors.Scp079Generator)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
+    startLine: 144
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Zones.Heavy.Generator\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public Generator(HczRoom room, Scp079Generator generator)
+    parameters:
+    - id: room
+      type: PluginAPI.Core.Zones.Heavy.HczRoom
+      description: The room the generator is in.
+    - id: generator
+      type: MapGeneration.Distributors.Scp079Generator
+      description: The base-game generator.
+    content.vb: Public Sub New(room As HczRoom, generator As Scp079Generator)
+  overload: PluginAPI.Core.Zones.Heavy.Generator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Zones.Heavy
+  commentId: N:PluginAPI.Core.Zones.Heavy
+  name: PluginAPI.Core.Zones.Heavy
+  nameWithType: PluginAPI.Core.Zones.Heavy
+  fullName: PluginAPI.Core.Zones.Heavy
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MapGeneration.Distributors.Scp079Generator
+  commentId: T:MapGeneration.Distributors.Scp079Generator
+  parent: MapGeneration.Distributors
+  isExternal: true
+  name: Scp079Generator
+  nameWithType: Scp079Generator
+  fullName: MapGeneration.Distributors.Scp079Generator
+- uid: MapGeneration.Distributors
+  commentId: N:MapGeneration.Distributors
+  isExternal: true
+  name: MapGeneration.Distributors
+  nameWithType: MapGeneration.Distributors
+  fullName: MapGeneration.Distributors
+- uid: PluginAPI.Core.Zones.Heavy.HczRoom
+  commentId: T:PluginAPI.Core.Zones.Heavy.HczRoom
+  parent: PluginAPI.Core.Zones.Heavy
+  name: HczRoom
+  nameWithType: HczRoom
+  fullName: PluginAPI.Core.Zones.Heavy.HczRoom
+- uid: PluginAPI.Core.Zones.Heavy.Generator.IsActivating*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.IsActivating
+  name: IsActivating
+  nameWithType: Generator.IsActivating
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.IsActivating
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady
+  name: IsActivationReady
+  nameWithType: Generator.IsActivationReady
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady
+- uid: PluginAPI.Core.Zones.Heavy.Generator.IsEngaged*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.IsEngaged
+  name: IsEngaged
+  nameWithType: Generator.IsEngaged
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.IsEngaged
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: PluginAPI.Core.Zones.Heavy.Generator.Transform*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.Transform
+  name: Transform
+  nameWithType: Generator.Transform
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: PluginAPI.Core.Zones.Heavy.Generator.GameObject*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.GameObject
+  name: GameObject
+  nameWithType: Generator.GameObject
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.GameObject
+- uid: PluginAPI.Core.Zones.Heavy.Generator.Position*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.Position
+  name: Position
+  nameWithType: Generator.Position
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: PluginAPI.Core.Zones.Heavy.Generator.Rotation*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.Rotation
+  name: Rotation
+  nameWithType: Generator.Rotation
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Rotation
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound
+  name: PlayDeniedSound
+  nameWithType: Generator.PlayDeniedSound
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound
+- uid: PluginAPI.Core.Zones.Heavy.Generator
+  commentId: T:PluginAPI.Core.Zones.Heavy.Generator
+  parent: PluginAPI.Core.Zones.Heavy
+  name: Generator
+  nameWithType: Generator
+  fullName: PluginAPI.Core.Zones.Heavy.Generator
+- uid: PluginAPI.Core.Zones.Heavy.Generator.#ctor*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.#ctor
+  name: Generator
+  nameWithType: Generator.Generator
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Generator

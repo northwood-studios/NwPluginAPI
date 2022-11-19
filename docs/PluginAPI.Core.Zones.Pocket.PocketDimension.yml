@@ -1,0 +1,978 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension
+  commentId: T:PluginAPI.Core.Zones.Pocket.PocketDimension
+  id: PocketDimension
+  parent: PluginAPI.Core.Zones.Pocket
+  children:
+  - PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)
+  - PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  - PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
+  - PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports
+  - PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports
+  - PluginAPI.Core.Zones.Pocket.PocketDimension.Zone
+  langs:
+  - csharp
+  - vb
+  name: PocketDimension
+  nameWithType: PocketDimension
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PocketDimension
+    path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Pocket
+  summary: "\nRepresents the pocket dimension.\n"
+  example: []
+  syntax:
+    content: 'public class PocketDimension : FacilityRoom'
+    content.vb: >-
+      Public Class PocketDimension
+          Inherits FacilityRoom
+  inheritance:
+  - System.Object
+  - PluginAPI.Core.Zones.FacilityRoom
+  inheritedMembers:
+  - PluginAPI.Core.Zones.FacilityRoom.Lights
+  - PluginAPI.Core.Zones.FacilityRoom.Identifier
+  - PluginAPI.Core.Zones.FacilityRoom.Transform
+  - PluginAPI.Core.Zones.FacilityRoom.GameObject
+  - PluginAPI.Core.Zones.FacilityRoom.Position
+  - PluginAPI.Core.Zones.FacilityRoom.Rotation
+  - PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  - PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1({T}@,System.Boolean,System.Boolean)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.Zone
+  commentId: F:PluginAPI.Core.Zones.Pocket.PocketDimension.Zone
+  id: Zone
+  parent: PluginAPI.Core.Zones.Pocket.PocketDimension
+  langs:
+  - csharp
+  - vb
+  name: Zone
+  nameWithType: PocketDimension.Zone
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.Zone
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Zone
+    path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+    startLine: 15
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Pocket
+  summary: "\nThe zone the pocket dimension is in.\n"
+  example: []
+  syntax:
+    content: public readonly UnknownZone Zone
+    return:
+      type: PluginAPI.Core.Zones.UnknownZone
+    content.vb: Public ReadOnly Zone As UnknownZone
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports
+  commentId: P:PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports
+  id: Teleports
+  parent: PluginAPI.Core.Zones.Pocket.PocketDimension
+  langs:
+  - csharp
+  - vb
+  name: Teleports
+  nameWithType: PocketDimension.Teleports
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Teleports
+    path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+    startLine: 23
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Pocket
+  summary: "\nGets the pocket dimension teleports.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<PocketDimensionTeleport> Teleports { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{PocketDimensionTeleport}
+    content.vb: Public ReadOnly Property Teleports As IEnumerable(Of PocketDimensionTeleport)
+  overload: PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
+  commentId: P:PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
+  id: Logic
+  parent: PluginAPI.Core.Zones.Pocket.PocketDimension
+  langs:
+  - csharp
+  - vb
+  name: Logic
+  nameWithType: PocketDimension.Logic
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Logic
+    path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+    startLine: 28
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Pocket
+  summary: "\nGets the pocket dimension&apos;s <xref href=\"PluginAPI.Core.Zones.Pocket.PocketDimensionLogic\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static PocketDimensionLogic Logic { get; set; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+    content.vb: Public Shared Property Logic As PocketDimensionLogic
+  overload: PluginAPI.Core.Zones.Pocket.PocketDimension.Logic*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  commentId: P:PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  id: IsAccessible
+  parent: PluginAPI.Core.Zones.Pocket.PocketDimension
+  langs:
+  - csharp
+  - vb
+  name: IsAccessible
+  nameWithType: PocketDimension.IsAccessible
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsAccessible
+    path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Pocket
+  summary: "\nGets or sets whether or not the pocket dimension is accessible.\n"
+  example: []
+  syntax:
+    content: public static bool IsAccessible { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsAccessible As Boolean
+  overload: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports
+  commentId: M:PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports
+  id: ShuffleTeleports
+  parent: PluginAPI.Core.Zones.Pocket.PocketDimension
+  langs:
+  - csharp
+  - vb
+  name: ShuffleTeleports()
+  nameWithType: PocketDimension.ShuffleTeleports()
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ShuffleTeleports
+    path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Pocket
+  summary: "\nShuffles the pocket dimension&apos;s teleports.\n"
+  example: []
+  syntax:
+    content: public void ShuffleTeleports()
+    content.vb: Public Sub ShuffleTeleports
+  overload: PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)'
+  parent: PluginAPI.Core.Zones.Pocket.PocketDimension
+  langs:
+  - csharp
+  - vb
+  name: PocketDimension(UnknownZone, RoomIdentifier)
+  nameWithType: PocketDimension.PocketDimension(UnknownZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.PocketDimension(PluginAPI.Core.Zones.UnknownZone, MapGeneration.RoomIdentifier)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
+    startLine: 48
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Pocket
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Zones.Pocket.PocketDimension\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public PocketDimension(UnknownZone zone, RoomIdentifier room)
+    parameters:
+    - id: zone
+      type: PluginAPI.Core.Zones.UnknownZone
+      description: The zone type.
+    - id: room
+      type: MapGeneration.RoomIdentifier
+      description: The room identifier.
+    content.vb: Public Sub New(zone As UnknownZone, room As RoomIdentifier)
+  overload: PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Zones.Pocket
+  commentId: N:PluginAPI.Core.Zones.Pocket
+  name: PluginAPI.Core.Zones.Pocket
+  nameWithType: PluginAPI.Core.Zones.Pocket
+  fullName: PluginAPI.Core.Zones.Pocket
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Core.Zones.FacilityRoom
+  commentId: T:PluginAPI.Core.Zones.FacilityRoom
+  parent: PluginAPI.Core.Zones
+  name: FacilityRoom
+  nameWithType: FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom
+- uid: PluginAPI.Core.Zones.FacilityRoom.Lights
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Lights
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Lights
+  nameWithType: FacilityRoom.Lights
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Lights
+- uid: PluginAPI.Core.Zones.FacilityRoom.Identifier
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Identifier
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Identifier
+  nameWithType: FacilityRoom.Identifier
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Identifier
+- uid: PluginAPI.Core.Zones.FacilityRoom.Transform
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Transform
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Transform
+  nameWithType: FacilityRoom.Transform
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Transform
+- uid: PluginAPI.Core.Zones.FacilityRoom.GameObject
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.GameObject
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: GameObject
+  nameWithType: FacilityRoom.GameObject
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GameObject
+- uid: PluginAPI.Core.Zones.FacilityRoom.Position
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Position
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Position
+  nameWithType: FacilityRoom.Position
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Position
+- uid: PluginAPI.Core.Zones.FacilityRoom.Rotation
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Rotation
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  name: Rotation
+  nameWithType: FacilityRoom.Rotation
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Rotation
+- uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  isExternal: true
+  name: GetComponent<T>(Boolean, Boolean)
+  nameWithType: FacilityRoom.GetComponent<T>(Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent<T>(System.Boolean, System.Boolean)
+  nameWithType.vb: FacilityRoom.GetComponent(Of T)(Boolean, Boolean)
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.GetComponent(Of T)(System.Boolean, System.Boolean)
+  name.vb: GetComponent(Of T)(Boolean, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+    name: GetComponent<T>
+    nameWithType: FacilityRoom.GetComponent<T>
+    fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+    name: GetComponent(Of T)
+    nameWithType: FacilityRoom.GetComponent(Of T)
+    fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1({T}@,System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  definition: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  name: TryGetComponent<T>(T, Boolean, Boolean)
+  nameWithType: FacilityRoom.TryGetComponent<T>(T, Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>(T, System.Boolean, System.Boolean)
+  nameWithType.vb: FacilityRoom.TryGetComponent(Of T)(T, Boolean, Boolean)
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)(T, System.Boolean, System.Boolean)
+  name.vb: TryGetComponent(Of T)(T, Boolean, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent<T>
+    nameWithType: FacilityRoom.TryGetComponent<T>
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent(Of T)
+    nameWithType: FacilityRoom.TryGetComponent(Of T)
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Zones
+  commentId: N:PluginAPI.Core.Zones
+  name: PluginAPI.Core.Zones
+  nameWithType: PluginAPI.Core.Zones
+  fullName: PluginAPI.Core.Zones
+- uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  isExternal: true
+  name: TryGetComponent<T>(T, Boolean, Boolean)
+  nameWithType: FacilityRoom.TryGetComponent<T>(T, Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>(T, System.Boolean, System.Boolean)
+  nameWithType.vb: FacilityRoom.TryGetComponent(Of T)(T, Boolean, Boolean)
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)(T, System.Boolean, System.Boolean)
+  name.vb: TryGetComponent(Of T)(T, Boolean, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent<T>
+    nameWithType: FacilityRoom.TryGetComponent<T>
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+    name: TryGetComponent(Of T)
+    nameWithType: FacilityRoom.TryGetComponent(Of T)
+    fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Zones.UnknownZone
+  commentId: T:PluginAPI.Core.Zones.UnknownZone
+  parent: PluginAPI.Core.Zones
+  name: UnknownZone
+  nameWithType: UnknownZone
+  fullName: PluginAPI.Core.Zones.UnknownZone
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports*
+  commentId: Overload:PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports
+  name: Teleports
+  nameWithType: PocketDimension.Teleports
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.Teleports
+- uid: System.Collections.Generic.IEnumerable{PocketDimensionTeleport}
+  commentId: T:System.Collections.Generic.IEnumerable{PocketDimensionTeleport}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<PocketDimensionTeleport>
+  nameWithType: IEnumerable<PocketDimensionTeleport>
+  fullName: System.Collections.Generic.IEnumerable<PocketDimensionTeleport>
+  nameWithType.vb: IEnumerable(Of PocketDimensionTeleport)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of PocketDimensionTeleport)
+  name.vb: IEnumerable(Of PocketDimensionTeleport)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PocketDimensionTeleport
+    name: PocketDimensionTeleport
+    nameWithType: PocketDimensionTeleport
+    fullName: PocketDimensionTeleport
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PocketDimensionTeleport
+    name: PocketDimensionTeleport
+    nameWithType: PocketDimensionTeleport
+    fullName: PocketDimensionTeleport
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+  commentId: T:PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+  parent: PluginAPI.Core.Zones.Pocket
+  name: PocketDimensionLogic
+  nameWithType: PocketDimensionLogic
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.Logic*
+  commentId: Overload:PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
+  name: Logic
+  nameWithType: PocketDimension.Logic
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible*
+  commentId: Overload:PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+  name: IsAccessible
+  nameWithType: PocketDimension.IsAccessible
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports*
+  commentId: Overload:PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports
+  name: ShuffleTeleports
+  nameWithType: PocketDimension.ShuffleTeleports
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension
+  commentId: T:PluginAPI.Core.Zones.Pocket.PocketDimension
+  parent: PluginAPI.Core.Zones.Pocket
+  name: PocketDimension
+  nameWithType: PocketDimension
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor*
+  commentId: Overload:PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor
+  name: PocketDimension
+  nameWithType: PocketDimension.PocketDimension
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.PocketDimension
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
+  isExternal: true
+  name: RoomIdentifier
+  nameWithType: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration

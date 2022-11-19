@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Interfaces.IEntity
+  commentId: T:PluginAPI.Core.Interfaces.IEntity
+  id: IEntity
+  parent: PluginAPI.Core.Interfaces
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IEntity
+  nameWithType: IEntity
+  fullName: PluginAPI.Core.Interfaces.IEntity
+  type: Interface
+  source:
+    remote:
+      path: NwPluginAPI/Core/Interfaces/IEntity.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IEntity
+    path: ../NwPluginAPI/Core/Interfaces/IEntity.cs
+    startLine: 5
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Interfaces
+  summary: "\nDefines an entity.\n"
+  example: []
+  syntax:
+    content: public interface IEntity
+    content.vb: Public Interface IEntity
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: PluginAPI.Core.Interfaces
+  commentId: N:PluginAPI.Core.Interfaces
+  name: PluginAPI.Core.Interfaces
+  nameWithType: PluginAPI.Core.Interfaces
+  fullName: PluginAPI.Core.Interfaces

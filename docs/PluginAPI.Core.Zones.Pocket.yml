@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Pocket
+  commentId: N:PluginAPI.Core.Zones.Pocket
+  id: PluginAPI.Core.Zones.Pocket
+  children:
+  - PluginAPI.Core.Zones.Pocket.PocketDimension
+  - PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Zones.Pocket
+  nameWithType: PluginAPI.Core.Zones.Pocket
+  fullName: PluginAPI.Core.Zones.Pocket
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension
+  commentId: T:PluginAPI.Core.Zones.Pocket.PocketDimension
+  parent: PluginAPI.Core.Zones.Pocket
+  name: PocketDimension
+  nameWithType: PocketDimension
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+  commentId: T:PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+  parent: PluginAPI.Core.Zones.Pocket
+  name: PocketDimensionLogic
+  nameWithType: PocketDimensionLogic
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+- uid: PluginAPI.Core.Zones.Pocket
+  commentId: N:PluginAPI.Core.Zones.Pocket
+  name: PluginAPI.Core.Zones.Pocket
+  nameWithType: PluginAPI.Core.Zones.Pocket
+  fullName: PluginAPI.Core.Zones.Pocket

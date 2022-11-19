@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Doors
+  commentId: N:PluginAPI.Core.Doors
+  id: PluginAPI.Core.Doors
+  children:
+  - PluginAPI.Core.Doors.FacilityBreakableDoor
+  - PluginAPI.Core.Doors.FacilityDoor
+  - PluginAPI.Core.Doors.FacilityGate
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Doors
+  nameWithType: PluginAPI.Core.Doors
+  fullName: PluginAPI.Core.Doors
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Doors.FacilityBreakableDoor
+  commentId: T:PluginAPI.Core.Doors.FacilityBreakableDoor
+  name: FacilityBreakableDoor
+  nameWithType: FacilityBreakableDoor
+  fullName: PluginAPI.Core.Doors.FacilityBreakableDoor
+- uid: PluginAPI.Core.Doors.FacilityDoor
+  commentId: T:PluginAPI.Core.Doors.FacilityDoor
+  parent: PluginAPI.Core.Doors
+  name: FacilityDoor
+  nameWithType: FacilityDoor
+  fullName: PluginAPI.Core.Doors.FacilityDoor
+- uid: PluginAPI.Core.Doors.FacilityGate
+  commentId: T:PluginAPI.Core.Doors.FacilityGate
+  name: FacilityGate
+  nameWithType: FacilityGate
+  fullName: PluginAPI.Core.Doors.FacilityGate
+- uid: PluginAPI.Core.Doors
+  commentId: N:PluginAPI.Core.Doors
+  name: PluginAPI.Core.Doors
+  nameWithType: PluginAPI.Core.Doors
+  fullName: PluginAPI.Core.Doors

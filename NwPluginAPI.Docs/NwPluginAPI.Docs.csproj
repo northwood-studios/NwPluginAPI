@@ -66,7 +66,8 @@
     <None Include="toc.yml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\nw_logo.jpg" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\logo.jpg" />
     <Content Include="templates\singulinkfx\styles\config.css" />
     <Content Include="templates\singulinkfx\styles\discord.css" />
     <Content Include="templates\singulinkfx\styles\down-arrow.svg" />
