@@ -18,6 +18,6 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="parameters">The parameters.</param>
 		/// <returns>The return value.</returns>
-		public object Invoke(List<object> parameters) => Method.Invoke(Target, parameters.ToArray());
+		public object Invoke(object[] parameters) => Method.Invoke(Target, parameters);
 	}
 }
