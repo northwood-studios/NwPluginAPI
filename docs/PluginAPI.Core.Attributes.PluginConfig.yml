@@ -4,7 +4,10 @@ items:
   commentId: T:PluginAPI.Core.Attributes.PluginConfig
   id: PluginConfig
   parent: PluginAPI.Core.Attributes
-  children: []
+  children:
+  - PluginAPI.Core.Attributes.PluginConfig.#ctor
+  - PluginAPI.Core.Attributes.PluginConfig.#ctor(System.String)
+  - PluginAPI.Core.Attributes.PluginConfig.ConfigPath
   langs:
   - csharp
   - vb
@@ -104,6 +107,104 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: PluginAPI.Core.Attributes.PluginConfig.ConfigPath
+  commentId: P:PluginAPI.Core.Attributes.PluginConfig.ConfigPath
+  id: ConfigPath
+  parent: PluginAPI.Core.Attributes.PluginConfig
+  langs:
+  - csharp
+  - vb
+  name: ConfigPath
+  nameWithType: PluginConfig.ConfigPath
+  fullName: PluginAPI.Core.Attributes.PluginConfig.ConfigPath
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Attributes/PluginConfig.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ConfigPath
+    path: ../NwPluginAPI/Core/Attributes/PluginConfig.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Attributes
+  syntax:
+    content: public string ConfigPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ConfigPath As String
+  overload: PluginAPI.Core.Attributes.PluginConfig.ConfigPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Attributes.PluginConfig.#ctor
+  commentId: M:PluginAPI.Core.Attributes.PluginConfig.#ctor
+  id: '#ctor'
+  parent: PluginAPI.Core.Attributes.PluginConfig
+  langs:
+  - csharp
+  - vb
+  name: PluginConfig()
+  nameWithType: PluginConfig.PluginConfig()
+  fullName: PluginAPI.Core.Attributes.PluginConfig.PluginConfig()
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Attributes/PluginConfig.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Attributes/PluginConfig.cs
+    startLine: 12
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Attributes
+  syntax:
+    content: public PluginConfig()
+    content.vb: Public Sub New
+  overload: PluginAPI.Core.Attributes.PluginConfig.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Attributes.PluginConfig.#ctor(System.String)
+  commentId: M:PluginAPI.Core.Attributes.PluginConfig.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: PluginAPI.Core.Attributes.PluginConfig
+  langs:
+  - csharp
+  - vb
+  name: PluginConfig(String)
+  nameWithType: PluginConfig.PluginConfig(String)
+  fullName: PluginAPI.Core.Attributes.PluginConfig.PluginConfig(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Attributes/PluginConfig.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Attributes/PluginConfig.cs
+    startLine: 14
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Attributes
+  syntax:
+    content: public PluginConfig(string configPath)
+    parameters:
+    - id: configPath
+      type: System.String
+    content.vb: Public Sub New(configPath As String)
+  overload: PluginAPI.Core.Attributes.PluginConfig.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: PluginAPI.Core.Attributes
   commentId: N:PluginAPI.Core.Attributes
@@ -2833,3 +2934,20 @@ references:
   name: System.Runtime.InteropServices
   nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
+- uid: PluginAPI.Core.Attributes.PluginConfig.ConfigPath*
+  commentId: Overload:PluginAPI.Core.Attributes.PluginConfig.ConfigPath
+  name: ConfigPath
+  nameWithType: PluginConfig.ConfigPath
+  fullName: PluginAPI.Core.Attributes.PluginConfig.ConfigPath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Core.Attributes.PluginConfig.#ctor*
+  commentId: Overload:PluginAPI.Core.Attributes.PluginConfig.#ctor
+  name: PluginConfig
+  nameWithType: PluginConfig.PluginConfig
+  fullName: PluginAPI.Core.Attributes.PluginConfig.PluginConfig

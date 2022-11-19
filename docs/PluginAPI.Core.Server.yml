@@ -100,6 +100,7 @@ items:
   - PluginAPI.Core.Player.IsOverwatchEnabled
   - PluginAPI.Core.Player.PlayerInfo
   - PluginAPI.Core.Player.CurrentItem
+  - PluginAPI.Core.Player.IsDisarmed
   - PluginAPI.Core.Player.IsMuted
   - PluginAPI.Core.Player.IsIntercomMuted
   - PluginAPI.Core.Player.IsUsingVoiceChat
@@ -113,6 +114,7 @@ items:
   - PluginAPI.Core.Player.IsAlive
   - PluginAPI.Core.Player.IsReady
   - PluginAPI.Core.Player.IsServer
+  - PluginAPI.Core.Player.DisarmedBy
   - PluginAPI.Core.Player.Connection
   - PluginAPI.Core.Player.Camera
   - PluginAPI.Core.Player.TemporaryData
@@ -2158,6 +2160,12 @@ references:
   name: CurrentItem
   nameWithType: Player.CurrentItem
   fullName: PluginAPI.Core.Player.CurrentItem
+- uid: PluginAPI.Core.Player.IsDisarmed
+  commentId: P:PluginAPI.Core.Player.IsDisarmed
+  parent: PluginAPI.Core.Player
+  name: IsDisarmed
+  nameWithType: Player.IsDisarmed
+  fullName: PluginAPI.Core.Player.IsDisarmed
 - uid: PluginAPI.Core.Player.IsMuted
   commentId: P:PluginAPI.Core.Player.IsMuted
   parent: PluginAPI.Core.Player
@@ -2236,6 +2244,12 @@ references:
   name: IsServer
   nameWithType: Player.IsServer
   fullName: PluginAPI.Core.Player.IsServer
+- uid: PluginAPI.Core.Player.DisarmedBy
+  commentId: P:PluginAPI.Core.Player.DisarmedBy
+  parent: PluginAPI.Core.Player
+  name: DisarmedBy
+  nameWithType: Player.DisarmedBy
+  fullName: PluginAPI.Core.Player.DisarmedBy
 - uid: PluginAPI.Core.Player.Connection
   commentId: P:PluginAPI.Core.Player.Connection
   parent: PluginAPI.Core.Player

@@ -8,6 +8,7 @@ items:
   - PluginAPI.Events.Event.#ctor(PluginAPI.Events.EventParameter[])
   - PluginAPI.Events.Event.Invokers
   - PluginAPI.Events.Event.Parameters
+  - PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
   - PluginAPI.Events.Event.RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
   langs:
   - csharp
@@ -23,7 +24,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Event
     path: ../NwPluginAPI/Events/Event.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -66,7 +67,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Invokers
     path: ../NwPluginAPI/Events/Event.cs
-    startLine: 11
+    startLine: 26
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -99,7 +100,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Parameters
     path: ../NwPluginAPI/Events/Event.cs
-    startLine: 13
+    startLine: 28
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -132,7 +133,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Events/Event.cs
-    startLine: 19
+    startLine: 34
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -153,6 +154,46 @@ items:
   - Public
   fullName.vb: PluginAPI.Events.Event.Event(PluginAPI.Events.EventParameter())
   name.vb: Event(EventParameter())
+- uid: PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
+  commentId: M:PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
+  id: RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
+  parent: PluginAPI.Events.Event
+  langs:
+  - csharp
+  - vb
+  name: RegenerateParameters(EventInvokeLocation, Object[])
+  nameWithType: Event.RegenerateParameters(EventInvokeLocation, Object[])
+  fullName: PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation, System.Object[])
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/Event.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RegenerateParameters
+    path: ../NwPluginAPI/Events/Event.cs
+    startLine: 46
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public object[] RegenerateParameters(EventInvokeLocation invoker, object[] parameters)
+    parameters:
+    - id: invoker
+      type: PluginAPI.Events.EventInvokeLocation
+    - id: parameters
+      type: System.Object[]
+    return:
+      type: System.Object[]
+    content.vb: Public Function RegenerateParameters(invoker As EventInvokeLocation, parameters As Object()) As Object()
+  overload: PluginAPI.Events.Event.RegenerateParameters*
+  nameWithType.vb: Event.RegenerateParameters(EventInvokeLocation, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation, System.Object())
+  name.vb: RegenerateParameters(EventInvokeLocation, Object())
 - uid: PluginAPI.Events.Event.RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
   commentId: M:PluginAPI.Events.Event.RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
   id: RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
@@ -171,7 +212,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterInvoker
     path: ../NwPluginAPI/Events/Event.cs
-    startLine: 30
+    startLine: 66
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -664,6 +705,43 @@ references:
   name: Event
   nameWithType: Event.Event
   fullName: PluginAPI.Events.Event.Event
+- uid: PluginAPI.Events.Event.RegenerateParameters*
+  commentId: Overload:PluginAPI.Events.Event.RegenerateParameters
+  name: RegenerateParameters
+  nameWithType: Event.RegenerateParameters
+  fullName: PluginAPI.Events.Event.RegenerateParameters
+- uid: PluginAPI.Events.EventInvokeLocation
+  commentId: T:PluginAPI.Events.EventInvokeLocation
+  parent: PluginAPI.Events
+  name: EventInvokeLocation
+  nameWithType: EventInvokeLocation
+  fullName: PluginAPI.Events.EventInvokeLocation
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: PluginAPI.Events.Event.RegisterInvoker*
   commentId: Overload:PluginAPI.Events.Event.RegisterInvoker
   name: RegisterInvoker

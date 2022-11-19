@@ -17,6 +17,7 @@ items:
   - PluginAPI.Core.Player.CurrentItem
   - PluginAPI.Core.Player.CustomInfo
   - PluginAPI.Core.Player.DamageManager
+  - PluginAPI.Core.Player.DisarmedBy
   - PluginAPI.Core.Player.Disconnect(System.String)
   - PluginAPI.Core.Player.DisplayNickname
   - PluginAPI.Core.Player.DoNotTrack
@@ -42,6 +43,7 @@ items:
   - PluginAPI.Core.Player.IpAddress
   - PluginAPI.Core.Player.IsAlive
   - PluginAPI.Core.Player.IsBypassEnabled
+  - PluginAPI.Core.Player.IsDisarmed
   - PluginAPI.Core.Player.IsGlobalModerator
   - PluginAPI.Core.Player.IsGodModeEnabled
   - PluginAPI.Core.Player.IsHuman
@@ -108,7 +110,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Player
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -161,7 +163,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -200,7 +202,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetPlayers
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 42
+    startLine: 45
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -243,7 +245,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -291,7 +293,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 91
+    startLine: 94
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -337,7 +339,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 101
+    startLine: 104
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -386,7 +388,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 130
+    startLine: 133
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -432,7 +434,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 140
+    startLine: 143
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -481,7 +483,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 163
+    startLine: 166
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -527,7 +529,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 173
+    startLine: 176
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -576,7 +578,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetByName
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 196
+    startLine: 199
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -622,7 +624,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetByName
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 206
+    startLine: 209
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -671,7 +673,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 241
+    startLine: 244
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -717,7 +719,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 251
+    startLine: 254
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -766,7 +768,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 275
+    startLine: 278
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -812,7 +814,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 285
+    startLine: 288
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -861,7 +863,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 315
+    startLine: 318
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -907,7 +909,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 325
+    startLine: 328
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -956,7 +958,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReferenceHub
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 349
+    startLine: 352
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -995,7 +997,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 354
+    startLine: 357
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1034,7 +1036,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: NetworkId
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 359
+    startLine: 362
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1071,7 +1073,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerId
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 364
+    startLine: 367
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1108,7 +1110,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Nickname
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 369
+    startLine: 372
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1145,7 +1147,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisplayNickname
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 374
+    startLine: 377
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1182,7 +1184,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UserId
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 383
+    startLine: 386
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1219,7 +1221,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IpAddress
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 388
+    startLine: 391
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1256,7 +1258,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Role
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 393
+    startLine: 396
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1293,7 +1295,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CustomInfo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 402
+    startLine: 405
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1330,7 +1332,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Health
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 411
+    startLine: 414
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1367,7 +1369,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxHealth
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 420
+    startLine: 423
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1404,7 +1406,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ArtificialHealth
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 425
+    startLine: 428
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1441,7 +1443,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxArtificalHealth
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 434
+    startLine: 437
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1478,7 +1480,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RemoteAdminAccess
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 439
+    startLine: 442
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1515,7 +1517,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DoNotTrack
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 444
+    startLine: 447
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1552,7 +1554,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsOverwatchEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 449
+    startLine: 452
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1589,7 +1591,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInfo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 458
+    startLine: 461
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1626,7 +1628,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CurrentItem
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 463
+    startLine: 466
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1639,6 +1641,43 @@ items:
       type: InventorySystem.Items.ItemBase
     content.vb: Public Property CurrentItem As ItemBase
   overload: PluginAPI.Core.Player.CurrentItem*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IsDisarmed
+  commentId: P:PluginAPI.Core.Player.IsDisarmed
+  id: IsDisarmed
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsDisarmed
+  nameWithType: Player.IsDisarmed
+  fullName: PluginAPI.Core.Player.IsDisarmed
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsDisarmed
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 481
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player is disarmed.\n"
+  example: []
+  syntax:
+    content: public bool IsDisarmed { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDisarmed As Boolean
+  overload: PluginAPI.Core.Player.IsDisarmed*
   modifiers.csharp:
   - public
   - get
@@ -1663,7 +1702,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsMuted
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 478
+    startLine: 502
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1700,7 +1739,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsIntercomMuted
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 483
+    startLine: 507
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1737,7 +1776,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsUsingVoiceChat
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 488
+    startLine: 512
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1774,7 +1813,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsGlobalModerator
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 493
+    startLine: 517
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1811,7 +1850,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsNorthwoodStaff
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 498
+    startLine: 522
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1848,7 +1887,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsBypassEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 503
+    startLine: 527
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1885,7 +1924,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsGodModeEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 512
+    startLine: 536
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1922,7 +1961,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsNoclipEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 521
+    startLine: 545
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1959,7 +1998,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsInventoryFull
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 530
+    startLine: 554
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1996,7 +2035,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsHuman
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 535
+    startLine: 559
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2033,7 +2072,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsAlive
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 540
+    startLine: 564
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2070,7 +2109,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsReady
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 545
+    startLine: 569
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2107,7 +2146,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsServer
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 550
+    startLine: 574
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2128,6 +2167,43 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: PluginAPI.Core.Player.DisarmedBy
+  commentId: P:PluginAPI.Core.Player.DisarmedBy
+  id: DisarmedBy
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: DisarmedBy
+  nameWithType: Player.DisarmedBy
+  fullName: PluginAPI.Core.Player.DisarmedBy
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DisarmedBy
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 579
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the disarmer of that player.\n"
+  example: []
+  syntax:
+    content: public Player DisarmedBy { get; set; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Property DisarmedBy As Player
+  overload: PluginAPI.Core.Player.DisarmedBy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: PluginAPI.Core.Player.Connection
   commentId: P:PluginAPI.Core.Player.Connection
   id: Connection
@@ -2146,7 +2222,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Connection
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 555
+    startLine: 600
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2183,7 +2259,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Camera
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 560
+    startLine: 605
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2220,7 +2296,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TemporaryData
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 565
+    startLine: 610
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2259,7 +2335,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EffectsManager
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 570
+    startLine: 615
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2296,7 +2372,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageManager
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 575
+    startLine: 620
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2333,7 +2409,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 580
+    startLine: 625
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2370,7 +2446,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 589
+    startLine: 634
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2407,7 +2483,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 605
+    startLine: 650
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2443,7 +2519,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 647
+    startLine: 692
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2488,7 +2564,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 657
+    startLine: 702
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2520,7 +2596,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SendConsoleMessage
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 664
+    startLine: 709
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2559,7 +2635,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Ban
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 673
+    startLine: 718
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2604,7 +2680,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Ban
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 681
+    startLine: 726
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2646,7 +2722,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Kick
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 688
+    startLine: 733
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2685,7 +2761,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Kick
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 694
+    startLine: 739
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2721,7 +2797,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Mute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 699
+    startLine: 744
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2756,7 +2832,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Unmute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 711
+    startLine: 756
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2792,7 +2868,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IntercomMute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 722
+    startLine: 767
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2827,7 +2903,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IntercomUnmute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 734
+    startLine: 779
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2863,7 +2939,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AddAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 747
+    startLine: 792
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2902,7 +2978,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SetAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 754
+    startLine: 799
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2941,7 +3017,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 761
+    startLine: 806
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2980,7 +3056,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DropAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 770
+    startLine: 815
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3025,7 +3101,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DropEverything
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 775
+    startLine: 820
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3057,7 +3133,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Heal
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 781
+    startLine: 826
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3093,7 +3169,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SetRole
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 788
+    startLine: 833
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3132,7 +3208,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Disconnect
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 794
+    startLine: 839
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3168,7 +3244,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReceiveHint
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 801
+    startLine: 846
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3207,7 +3283,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReceiveHint
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 809
+    startLine: 854
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3252,7 +3328,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReceiveHitMarker
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 815
+    startLine: 860
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3288,7 +3364,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetStatModule
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 822
+    startLine: 867
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3331,7 +3407,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RedirectToServer
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 828
+    startLine: 873
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3367,7 +3443,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Reconnect
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 835
+    startLine: 880
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3406,7 +3482,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnStart
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 838
+    startLine: 883
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3442,7 +3518,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 841
+    startLine: 886
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3478,7 +3554,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnUpdate
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 844
+    startLine: 889
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3514,7 +3590,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnLateUpdate
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 847
+    startLine: 892
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3550,7 +3626,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnFixedUpdate
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 850
+    startLine: 895
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3586,7 +3662,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 854
+    startLine: 899
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3632,7 +3708,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 861
+    startLine: 906
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -4508,6 +4584,11 @@ references:
   name: InventorySystem.Items
   nameWithType: InventorySystem.Items
   fullName: InventorySystem.Items
+- uid: PluginAPI.Core.Player.IsDisarmed*
+  commentId: Overload:PluginAPI.Core.Player.IsDisarmed
+  name: IsDisarmed
+  nameWithType: Player.IsDisarmed
+  fullName: PluginAPI.Core.Player.IsDisarmed
 - uid: PluginAPI.Core.Player.IsMuted*
   commentId: Overload:PluginAPI.Core.Player.IsMuted
   name: IsMuted
@@ -4579,6 +4660,11 @@ references:
   name: IsServer
   nameWithType: IPlayer.IsServer
   fullName: PluginAPI.Core.Interfaces.IPlayer.IsServer
+- uid: PluginAPI.Core.Player.DisarmedBy*
+  commentId: Overload:PluginAPI.Core.Player.DisarmedBy
+  name: DisarmedBy
+  nameWithType: Player.DisarmedBy
+  fullName: PluginAPI.Core.Player.DisarmedBy
 - uid: PluginAPI.Core.Player.Connection*
   commentId: Overload:PluginAPI.Core.Player.Connection
   name: Connection

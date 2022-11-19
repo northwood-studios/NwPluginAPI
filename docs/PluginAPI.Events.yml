@@ -28,6 +28,7 @@ references:
   fullName: PluginAPI.Events.Event
 - uid: PluginAPI.Events.EventInvokeLocation
   commentId: T:PluginAPI.Events.EventInvokeLocation
+  parent: PluginAPI.Events
   name: EventInvokeLocation
   nameWithType: EventInvokeLocation
   fullName: PluginAPI.Events.EventInvokeLocation

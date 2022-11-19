@@ -5,7 +5,7 @@ items:
   id: EventInvokeLocation
   parent: PluginAPI.Events
   children:
-  - PluginAPI.Events.EventInvokeLocation.Invoke(System.Collections.Generic.List{System.Object})
+  - PluginAPI.Events.EventInvokeLocation.Invoke(System.Object[])
   - PluginAPI.Events.EventInvokeLocation.Method
   - PluginAPI.Events.EventInvokeLocation.Plugin
   - PluginAPI.Events.EventInvokeLocation.Target
@@ -141,16 +141,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: PluginAPI.Events.EventInvokeLocation.Invoke(System.Collections.Generic.List{System.Object})
-  commentId: M:PluginAPI.Events.EventInvokeLocation.Invoke(System.Collections.Generic.List{System.Object})
-  id: Invoke(System.Collections.Generic.List{System.Object})
+- uid: PluginAPI.Events.EventInvokeLocation.Invoke(System.Object[])
+  commentId: M:PluginAPI.Events.EventInvokeLocation.Invoke(System.Object[])
+  id: Invoke(System.Object[])
   parent: PluginAPI.Events.EventInvokeLocation
   langs:
   - csharp
   - vb
-  name: Invoke(List<Object>)
-  nameWithType: EventInvokeLocation.Invoke(List<Object>)
-  fullName: PluginAPI.Events.EventInvokeLocation.Invoke(System.Collections.Generic.List<System.Object>)
+  name: Invoke(Object[])
+  nameWithType: EventInvokeLocation.Invoke(Object[])
+  fullName: PluginAPI.Events.EventInvokeLocation.Invoke(System.Object[])
   type: Method
   source:
     remote:
@@ -166,23 +166,23 @@ items:
   summary: "\nInvokes the handler.\n"
   example: []
   syntax:
-    content: public object Invoke(List<object> parameters)
+    content: public object Invoke(object[] parameters)
     parameters:
     - id: parameters
-      type: System.Collections.Generic.List{System.Object}
+      type: System.Object[]
       description: The parameters.
     return:
       type: System.Object
       description: The return value.
-    content.vb: Public Function Invoke(parameters As List(Of Object)) As Object
+    content.vb: Public Function Invoke(parameters As Object()) As Object
   overload: PluginAPI.Events.EventInvokeLocation.Invoke*
-  nameWithType.vb: EventInvokeLocation.Invoke(List(Of Object))
+  nameWithType.vb: EventInvokeLocation.Invoke(Object())
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: PluginAPI.Events.EventInvokeLocation.Invoke(System.Collections.Generic.List(Of System.Object))
-  name.vb: Invoke(List(Of Object))
+  fullName.vb: PluginAPI.Events.EventInvokeLocation.Invoke(System.Object())
+  name.vb: Invoke(Object())
 references:
 - uid: PluginAPI.Events
   commentId: N:PluginAPI.Events
@@ -506,92 +506,29 @@ references:
   name: Invoke
   nameWithType: EventInvokeLocation.Invoke
   fullName: PluginAPI.Events.EventInvokeLocation.Invoke
-- uid: System.Collections.Generic.List{System.Object}
-  commentId: T:System.Collections.Generic.List{System.Object}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  name: List<Object>
-  nameWithType: List<Object>
-  fullName: System.Collections.Generic.List<System.Object>
-  nameWithType.vb: List(Of Object)
-  fullName.vb: System.Collections.Generic.List(Of System.Object)
-  name.vb: List(Of Object)
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
   - uid: System.Object
     name: Object
     nameWithType: Object
     fullName: System.Object
     isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
   - uid: System.Object
     name: Object
     nameWithType: Object
     fullName: System.Object
     isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
+  - name: ()
+    nameWithType: ()
+    fullName: ()
