@@ -1,0 +1,58 @@
+name: Publish Docs
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+      
+env:
+  DEPOT_DOWNLOADER_VERSION: 2.4.7 
+  SL_REFERENCES: D:\a\NwPluginAPI\SCPSL_REFERENCES\SCPSL_Data\Managed
+  UNITY_REFERENCES: D:\a\NwPluginAPI\SCPSL_REFERENCES\SCPSL_Data\Managed
+      
+jobs:
+  publish_docs:
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+          - name: Setup .NET
+            uses: actions/setup-dotnet@v2
+            with:
+              dotnet-version: 6.0.x
+      - name: Download depot downloader
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path D:\a\NwPluginAPI
+          New-Item -ItemType Directory -Force -Path D:\a\NwPluginAPI\DepotDownloader
+          Invoke-WebRequest -Uri "https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_${{ env.DEPOT_DOWNLOADER_VERSION }}/depotdownloader-${{ env.DEPOT_DOWNLOADER_VERSION }}.zip" -OutFile "D:\a\NwPluginAPI\depotdownloader.zip"
+          Expand-Archive -Path D:\a\NwPluginAPI\depotdownloader.zip -PassThru -DestinationPath D:\a\NwPluginAPI/DepotDownloader
+      - name: Download SCPSL references.
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path D:\a\NwPluginAPI\SCPSL_REFERENCES
+          Start-Process -NoNewWindow -Wait -FilePath "D:\a\NwPluginAPI\DepotDownloader\DepotDownloader.exe" -WorkingDirectory "D:\a\NwPluginAPI\DepotDownloader" -ArgumentList '-app 996560','-beta nightly','-betapassword ${{ secrets.NIGHTLYPASSWORD }}','-dir D:\a\NwPluginAPI\SCPSL_REFERENCES','-filelist "${{ github.workspace }}\download-files.txt"'
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Download Docfx
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install docfx --pre
+      - name: Run Docfx
+        env:
+          SL_REFERENCES: D:\a\NwPluginAPI\SCPSL_REFERENCES\SCPSL_Data\Managed
+          UNITY_REFERENCES: D:\a\NwPluginAPI\SCPSL_REFERENCES\SCPSL_Data\Managed
+        run: docfx NwPluginAPI\docfx.json
+      - name: Publish
+        if: github.event_name == 'push' && success() #Only publishes on push to master -> you dont want prs generating docs until merged
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: gh-pages
+          build_dir: .website
+          keep_history: true
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
