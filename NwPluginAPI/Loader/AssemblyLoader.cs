@@ -114,10 +114,27 @@ namespace PluginAPI.Loader
 			Log.Info($"Loading &2{files.Length}&r plugins...");
 			int successes = 0;
 
+			var loadedAssemblies = AppDomain.CurrentDomain
+				.GetAssemblies()
+				.Select(x => 
+					$"{x.GetName().Name}&r v&6{x.GetName().Version.ToString(3)}");
+
 			foreach (string pluginPath in files)
             {
                 if (!TryGetAssembly(pluginPath, out Assembly assembly))
 					continue;
+
+				var missingDependencies = assembly
+					.GetReferencedAssemblies()
+					.Select(x => 
+						$"{x.Name}&r v&6{x.Version.ToString(3)}")
+					.Where(x => !loadedAssemblies.Contains(x)).ToArray();
+
+				if (missingDependencies.Length != 0)
+				{
+					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}", "Loader");
+					continue;
+				}
 
 				var types = assembly.GetTypes();
 
