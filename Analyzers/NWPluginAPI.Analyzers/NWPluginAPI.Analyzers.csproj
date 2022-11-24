@@ -1,30 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <IsPackable>false</IsPackable>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		
+		<IncludeBuildOutput>false</IncludeBuildOutput>
 
-	<SignAssembly>False</SignAssembly>
-
-	<PackageId>Northwood.PluginAPI.Analyzers</PackageId>
-	<Authors>Northwood Studios</Authors>
-	<Company>Northwood Studio</Company>
-	<Product>PluginAPI.Analyzers</Product>
-	<Description>Roslyn analyzers for PluginAPI.</Description>
-	<PackageProjectUrl>https://github.com/northwood-studios/NwPluginAPI/tree/master/Analyzers/NWPluginAPI.Analyzers</PackageProjectUrl>
-	<PackageIcon>nw_logo.jpg</PackageIcon>
-	<PackageReadmeFile>README.md</PackageReadmeFile>
-	<RepositoryUrl>https://github.com/northwood-studios/NwPluginAPI</RepositoryUrl>
-	<RepositoryType>git</RepositoryType>
-	<PackageTags>pluginapi,scpsl</PackageTags>
-	<NeutralLanguage>en</NeutralLanguage>
-	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<Title>Northwood.PluginAPI.Analyzers</Title>
-	<Copyright>Copyright by Hubert Moszka Northwood, 2022</Copyright>
-	<PackageVersion>12.0.0-beta3</PackageVersion>
-  </PropertyGroup>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<PackageId>Northwood.PluginAPI.Analyzers</PackageId>
+		<PackageVersion>12.0.0-beta9</PackageVersion>
+		<Authors>Northwood Studios</Authors>
+		<Company>Northwood Studio</Company>
+		<Product>PluginAPI.Analyzers</Product>
+		<Description>Roslyn analyzers for PluginAPI.</Description>
+		<PackageProjectUrl>https://github.com/northwood-studios/NwPluginAPI/tree/master/Analyzers/NWPluginAPI.Analyzers</PackageProjectUrl>
+		<PackageIcon>nw_logo.jpg</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/northwood-studios/NwPluginAPI</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>pluginapi,scpsl</PackageTags>
+		<NeutralLanguage>en</NeutralLanguage>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		
+		<Title>Northwood.PluginAPI.Analyzers</Title>
+		<Copyright>Copyright by Hubert Moszka Northwood, 2022</Copyright>
+		<BaseOutputPath></BaseOutputPath>
+		<PackAsTool>False</PackAsTool>
+	</PropertyGroup>
 	
   <ItemGroup>
 	  <None Include="..\..\README.md" Pack="True" PackagePath="\" />
@@ -35,13 +40,14 @@
   </ItemGroup>
 	
   <ItemGroup>
-	<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.3.1" />
+	<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.3.1" PrivateAssets="all" />
 	<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.9.8" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.3.1" />
+	<PackageReference Update="NETStandard.Library" PrivateAssets="all" />
   </ItemGroup>
-	
-  <ItemGroup>
-    <Folder Include="Properties\" />
-    <Folder Include="Resources\" />
-  </ItemGroup>
+
+	<ItemGroup>
+		<None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="tools" />
+		<None Include="$(OutputPath)\$(AssemblyName).dll"  CopyToOutputDirectory="Always" Pack="true" PackagePath="tools/analyzers/dotnet/cs" Visible="false" />
+	</ItemGroup>
 </Project>

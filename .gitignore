@@ -262,3 +262,4 @@ paket-files/
 __pycache__/
 *.pyc
 /NwPluginAPI.Docs/_site
+/Analyzers/NWPluginAPI.Analyzers/tools/analyzers/dotnet/cs/NwPluginAPI.Analyzers.dll
