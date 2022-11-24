@@ -28,12 +28,6 @@ namespace PluginAPI.Events
 	/// </summary>
 	public static class EventManager
 	{
-		private class IndexInfo
-		{
-			public int Index;
-			public Type Type;
-		}
-
 		/// <summary>
 		/// Contains all registered event handlers.
 		/// </summary>
@@ -167,7 +161,8 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(int), "readerStartPosition")) },
 			{ ServerEventType.PlayerReceiveEffect, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
-				new EventParameter(typeof(StatusEffectBase), "effect")) },
+				new EventParameter(typeof(StatusEffectBase), "effect"),
+				new EventParameter(typeof(float), "duration")) },
 			{ ServerEventType.PlayerReloadWeapon, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Firearm), "firearm")) },
@@ -342,13 +337,13 @@ namespace PluginAPI.Events
 
 						ev.RegisterInvoker(plugin, eventHandler, method);
 
-                        Log.Info($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!");
+                        Log.Debug($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
                         break;
 				}
 			}
         }
 
-		private static PlayerFactory GetPlayerFactory(EventInvokeLocation ev)
+		internal static PlayerFactory GetPlayerFactory(EventInvokeLocation ev)
 		{
             if (!FactoryManager.PlayerFactories.TryGetValue(ev.Plugin, out PlayerFactory pFactory))
 	            pFactory = FactoryManager.PlayerFactories[typeof(EventManager)];
@@ -390,28 +385,6 @@ namespace PluginAPI.Events
 					break;
 			}
 
-            var constructEventParameters = new List<object>();
-			var indexesToRegenerate = new List<IndexInfo>();
-			
-			for (int x = 0; x < ev.Parameters.Length; x++)
-			{
-				var paramType = ev.Parameters[x].BaseType;
-
-				if (args[x] == null)
-				{
-					constructEventParameters.Add(null);
-					continue;
-				}
-
-                if (paramType == typeof(IPlayer))
-				{
-					indexesToRegenerate.Add(new IndexInfo { Index = x, Type = paramType });
-					constructEventParameters.Add(null);
-                }
-				else
-					constructEventParameters.Add(args[x]);
-            }
-
 			bool isBool = typeof(T) == typeof(bool);
 			bool cancelled = false;
 
@@ -423,20 +396,15 @@ namespace PluginAPI.Events
 			}
 			else cancellation = default;
 
+
 			foreach(var plugin in ev.Invokers.Values)
 			{
 				foreach(var invoker in plugin)
 				{
-					foreach (var index in indexesToRegenerate)
-					{
-						if (index.Type == typeof(IPlayer))
-							constructEventParameters[index.Index] = GetPlayerFactory(invoker).GetOrAdd((IGameComponent)args[index.Index]);
-					}
-
 					object result;
 					try
 					{
-						result = invoker.Invoke(constructEventParameters);
+						result = invoker.Invoke(ev.RegenerateParameters(invoker, args));
 					}
 					catch (Exception ex)
 					{

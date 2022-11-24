@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Interfaces.IGameComponent
+  commentId: T:PluginAPI.Core.Interfaces.IGameComponent
+  id: IGameComponent
+  parent: PluginAPI.Core.Interfaces
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IGameComponent
+  nameWithType: IGameComponent
+  fullName: PluginAPI.Core.Interfaces.IGameComponent
+  type: Interface
+  source:
+    remote:
+      path: NwPluginAPI/Core/Interfaces/IGameComponent.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IGameComponent
+    path: ../NwPluginAPI/Core/Interfaces/IGameComponent.cs
+    startLine: 5
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Interfaces
+  summary: "\nDefines a game component.\n"
+  example: []
+  syntax:
+    content: public interface IGameComponent
+    content.vb: Public Interface IGameComponent
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: PluginAPI.Core.Interfaces
+  commentId: N:PluginAPI.Core.Interfaces
+  name: PluginAPI.Core.Interfaces
+  nameWithType: PluginAPI.Core.Interfaces
+  fullName: PluginAPI.Core.Interfaces

@@ -1,0 +1,643 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Facility
+  commentId: T:PluginAPI.Core.Facility
+  id: Facility
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Facility.Doors
+  - PluginAPI.Core.Facility.Rooms
+  - PluginAPI.Core.Facility.TurnOffAllLights
+  - PluginAPI.Core.Facility.TurnOnAllLights
+  langs:
+  - csharp
+  - vb
+  name: Facility
+  nameWithType: Facility
+  fullName: PluginAPI.Core.Facility
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Facility.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Facility
+    path: ../NwPluginAPI/Core/Facility.cs
+    startLine: 16
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRepresents the facility.\n"
+  example: []
+  syntax:
+    content: public class Facility
+    content.vb: Public Class Facility
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Facility.Rooms
+  commentId: P:PluginAPI.Core.Facility.Rooms
+  id: Rooms
+  parent: PluginAPI.Core.Facility
+  langs:
+  - csharp
+  - vb
+  name: Rooms
+  nameWithType: Facility.Rooms
+  fullName: PluginAPI.Core.Facility.Rooms
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Facility.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rooms
+    path: ../NwPluginAPI/Core/Facility.cs
+    startLine: 151
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets all rooms in facility.\n"
+  example: []
+  syntax:
+    content: public static List<FacilityRoom> Rooms { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Zones.FacilityRoom}
+    content.vb: Public Shared ReadOnly Property Rooms As List(Of FacilityRoom)
+  overload: PluginAPI.Core.Facility.Rooms*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Facility.Doors
+  commentId: P:PluginAPI.Core.Facility.Doors
+  id: Doors
+  parent: PluginAPI.Core.Facility
+  langs:
+  - csharp
+  - vb
+  name: Doors
+  nameWithType: Facility.Doors
+  fullName: PluginAPI.Core.Facility.Doors
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Facility.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Doors
+    path: ../NwPluginAPI/Core/Facility.cs
+    startLine: 156
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets all doors in facility.\n"
+  example: []
+  syntax:
+    content: public static List<FacilityDoor> Doors { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+    content.vb: Public Shared ReadOnly Property Doors As List(Of FacilityDoor)
+  overload: PluginAPI.Core.Facility.Doors*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Facility.TurnOnAllLights
+  commentId: M:PluginAPI.Core.Facility.TurnOnAllLights
+  id: TurnOnAllLights
+  parent: PluginAPI.Core.Facility
+  langs:
+  - csharp
+  - vb
+  name: TurnOnAllLights()
+  nameWithType: Facility.TurnOnAllLights()
+  fullName: PluginAPI.Core.Facility.TurnOnAllLights()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Facility.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TurnOnAllLights
+    path: ../NwPluginAPI/Core/Facility.cs
+    startLine: 161
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nTurns on all lights in facility.\n"
+  example: []
+  syntax:
+    content: public static void TurnOnAllLights()
+    content.vb: Public Shared Sub TurnOnAllLights
+  overload: PluginAPI.Core.Facility.TurnOnAllLights*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Facility.TurnOffAllLights
+  commentId: M:PluginAPI.Core.Facility.TurnOffAllLights
+  id: TurnOffAllLights
+  parent: PluginAPI.Core.Facility
+  langs:
+  - csharp
+  - vb
+  name: TurnOffAllLights()
+  nameWithType: Facility.TurnOffAllLights()
+  fullName: PluginAPI.Core.Facility.TurnOffAllLights()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Facility.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TurnOffAllLights
+    path: ../NwPluginAPI/Core/Facility.cs
+    startLine: 169
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nTurns off all lights in facility.\n"
+  example: []
+  syntax:
+    content: public static void TurnOffAllLights()
+    content.vb: Public Shared Sub TurnOffAllLights
+  overload: PluginAPI.Core.Facility.TurnOffAllLights*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Facility.Rooms*
+  commentId: Overload:PluginAPI.Core.Facility.Rooms
+  name: Rooms
+  nameWithType: Facility.Rooms
+  fullName: PluginAPI.Core.Facility.Rooms
+- uid: System.Collections.Generic.List{PluginAPI.Core.Zones.FacilityRoom}
+  commentId: T:System.Collections.Generic.List{PluginAPI.Core.Zones.FacilityRoom}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FacilityRoom>
+  nameWithType: List<FacilityRoom>
+  fullName: System.Collections.Generic.List<PluginAPI.Core.Zones.FacilityRoom>
+  nameWithType.vb: List(Of FacilityRoom)
+  fullName.vb: System.Collections.Generic.List(Of PluginAPI.Core.Zones.FacilityRoom)
+  name.vb: List(Of FacilityRoom)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PluginAPI.Core.Zones.FacilityRoom
+    name: FacilityRoom
+    nameWithType: FacilityRoom
+    fullName: PluginAPI.Core.Zones.FacilityRoom
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PluginAPI.Core.Zones.FacilityRoom
+    name: FacilityRoom
+    nameWithType: FacilityRoom
+    fullName: PluginAPI.Core.Zones.FacilityRoom
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.Facility.Doors*
+  commentId: Overload:PluginAPI.Core.Facility.Doors
+  name: Doors
+  nameWithType: Facility.Doors
+  fullName: PluginAPI.Core.Facility.Doors
+- uid: System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+  commentId: T:System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FacilityDoor>
+  nameWithType: List<FacilityDoor>
+  fullName: System.Collections.Generic.List<PluginAPI.Core.Doors.FacilityDoor>
+  nameWithType.vb: List(Of FacilityDoor)
+  fullName.vb: System.Collections.Generic.List(Of PluginAPI.Core.Doors.FacilityDoor)
+  name.vb: List(Of FacilityDoor)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PluginAPI.Core.Doors.FacilityDoor
+    name: FacilityDoor
+    nameWithType: FacilityDoor
+    fullName: PluginAPI.Core.Doors.FacilityDoor
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PluginAPI.Core.Doors.FacilityDoor
+    name: FacilityDoor
+    nameWithType: FacilityDoor
+    fullName: PluginAPI.Core.Doors.FacilityDoor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Facility.TurnOnAllLights*
+  commentId: Overload:PluginAPI.Core.Facility.TurnOnAllLights
+  name: TurnOnAllLights
+  nameWithType: Facility.TurnOnAllLights
+  fullName: PluginAPI.Core.Facility.TurnOnAllLights
+- uid: PluginAPI.Core.Facility.TurnOffAllLights*
+  commentId: Overload:PluginAPI.Core.Facility.TurnOffAllLights
+  name: TurnOffAllLights
+  nameWithType: Facility.TurnOffAllLights
+  fullName: PluginAPI.Core.Facility.TurnOffAllLights

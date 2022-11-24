@@ -3,14 +3,13 @@ namespace PluginAPI.Core
 	using System;
 	using System.Reflection;
 	using Enums;
+	using PluginAPI.Loader;
 
 	/// <summary>
 	/// Logger for plugin system.
 	/// </summary>
 	public static class Log
 	{
-		private static Assembly _mainAssembly;
-
 		/// <summary>
 		/// Whether or not to disable custom colors from log messages.
 		/// </summary>
@@ -22,11 +21,33 @@ namespace PluginAPI.Core
 		public static bool UnityEditor;
 
 		/// <summary>
+		/// Whether or not to enable debug mode in logs.
+		/// </summary>
+		public static bool DebugMode;
+
+		/// <summary>
 		/// Sends a debug message.
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="prefix">The prefix of message.</param>
-		public static void Debug(string message, string prefix = null) => ConsoleWrite(Assembly.GetCallingAssembly(), prefix, LogType.Debug, message);
+		public static void Debug(string message, string prefix = null)
+		{
+			Assembly callingAssembly = Assembly.GetCallingAssembly();
+			if (callingAssembly == AssemblyLoader.MainAssembly && !DebugMode) return;
+
+			ConsoleWrite(callingAssembly, prefix, LogType.Debug, message);
+		}
+
+		/// <summary>
+		/// Sends a debug message.
+		/// </summary>
+		/// <param name="message">The message.</param>
+		/// <param name="debugEnabled">If debug message should be send.</param>
+		/// <param name="prefix">The prefix of message.</param>
+		public static void Debug(string message, bool debugEnabled, string prefix = null)
+		{
+			if (debugEnabled) Debug(message, prefix);
+		}
 
 		/// <summary>
 		/// Sends a info message.
@@ -241,10 +262,8 @@ namespace PluginAPI.Core
 
 		private static void ConsoleWrite(Assembly assembly, string prefix, LogType type, string message)
 		{
-			if (_mainAssembly == null) _mainAssembly = typeof(GameCore.Console).Assembly;
-
 			if (string.IsNullOrEmpty(prefix) && type != LogType.Raw)
-				prefix = assembly == _mainAssembly ? "PluginAPI" : assembly.GetName().Name;
+				prefix = assembly == AssemblyLoader.MainAssembly ? "PluginAPI" : assembly.GetName().Name;
 
 			switch (type)
 			{

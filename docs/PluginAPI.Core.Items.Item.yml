@@ -1,0 +1,950 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Items.Item
+  commentId: T:PluginAPI.Core.Items.Item
+  id: Item
+  parent: PluginAPI.Core.Items
+  children:
+  - PluginAPI.Core.Items.Item.Category
+  - PluginAPI.Core.Items.Item.CurrentOwner
+  - PluginAPI.Core.Items.Item.GameObject
+  - PluginAPI.Core.Items.Item.OriginalObject
+  - PluginAPI.Core.Items.Item.Position
+  - PluginAPI.Core.Items.Item.Rotation
+  - PluginAPI.Core.Items.Item.Serial
+  - PluginAPI.Core.Items.Item.ThrowSettings
+  - PluginAPI.Core.Items.Item.TierFlags
+  - PluginAPI.Core.Items.Item.Transform
+  - PluginAPI.Core.Items.Item.Type
+  - PluginAPI.Core.Items.Item.Weight
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: Item
+  fullName: PluginAPI.Core.Items.Item
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Item
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nRepresents an item.\n"
+  example: []
+  syntax:
+    content: public class Item
+    content.vb: Public Class Item
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Items.Item.OriginalObject
+  commentId: F:PluginAPI.Core.Items.Item.OriginalObject
+  id: OriginalObject
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: OriginalObject
+  nameWithType: Item.OriginalObject
+  fullName: PluginAPI.Core.Items.Item.OriginalObject
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OriginalObject
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 17
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nThe base-game object.\n"
+  example: []
+  syntax:
+    content: public readonly ItemBase OriginalObject
+    return:
+      type: InventorySystem.Items.ItemBase
+    content.vb: Public ReadOnly OriginalObject As ItemBase
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.Type
+  commentId: P:PluginAPI.Core.Items.Item.Type
+  id: Type
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Item.Type
+  fullName: PluginAPI.Core.Items.Item.Type
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Type
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 22
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s <xref href=\"ItemType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ItemType Type { get; }
+    parameters: []
+    return:
+      type: ItemType
+    content.vb: Public ReadOnly Property Type As ItemType
+  overload: PluginAPI.Core.Items.Item.Type*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.Category
+  commentId: P:PluginAPI.Core.Items.Item.Category
+  id: Category
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: Item.Category
+  fullName: PluginAPI.Core.Items.Item.Category
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Category
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 27
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s <xref href=\"ItemCategory\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ItemCategory Category { get; }
+    parameters: []
+    return:
+      type: ItemCategory
+    content.vb: Public ReadOnly Property Category As ItemCategory
+  overload: PluginAPI.Core.Items.Item.Category*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.TierFlags
+  commentId: P:PluginAPI.Core.Items.Item.TierFlags
+  id: TierFlags
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: TierFlags
+  nameWithType: Item.TierFlags
+  fullName: PluginAPI.Core.Items.Item.TierFlags
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TierFlags
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s <xref href=\"ItemTierFlags\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ItemTierFlags TierFlags { get; }
+    parameters: []
+    return:
+      type: ItemTierFlags
+    content.vb: Public ReadOnly Property TierFlags As ItemTierFlags
+  overload: PluginAPI.Core.Items.Item.TierFlags*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.ThrowSettings
+  commentId: P:PluginAPI.Core.Items.Item.ThrowSettings
+  id: ThrowSettings
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: ThrowSettings
+  nameWithType: Item.ThrowSettings
+  fullName: PluginAPI.Core.Items.Item.ThrowSettings
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ThrowSettings
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s <xref href=\"InventorySystem.Items.ItemThrowSettings\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ItemThrowSettings ThrowSettings { get; }
+    parameters: []
+    return:
+      type: InventorySystem.Items.ItemThrowSettings
+    content.vb: Public ReadOnly Property ThrowSettings As ItemThrowSettings
+  overload: PluginAPI.Core.Items.Item.ThrowSettings*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.CurrentOwner
+  commentId: P:PluginAPI.Core.Items.Item.CurrentOwner
+  id: CurrentOwner
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: CurrentOwner
+  nameWithType: Item.CurrentOwner
+  fullName: PluginAPI.Core.Items.Item.CurrentOwner
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CurrentOwner
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 42
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s current owner.\n"
+  example: []
+  syntax:
+    content: public Player CurrentOwner { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property CurrentOwner As Player
+  overload: PluginAPI.Core.Items.Item.CurrentOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.Serial
+  commentId: P:PluginAPI.Core.Items.Item.Serial
+  id: Serial
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Serial
+  nameWithType: Item.Serial
+  fullName: PluginAPI.Core.Items.Item.Serial
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Serial
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 47
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s serial.\n"
+  example: []
+  syntax:
+    content: public ushort Serial { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property Serial As UShort
+  overload: PluginAPI.Core.Items.Item.Serial*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.Weight
+  commentId: P:PluginAPI.Core.Items.Item.Weight
+  id: Weight
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Weight
+  nameWithType: Item.Weight
+  fullName: PluginAPI.Core.Items.Item.Weight
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Weight
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 52
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s weight.\n"
+  example: []
+  syntax:
+    content: public float Weight { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Weight As Single
+  overload: PluginAPI.Core.Items.Item.Weight*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.Transform
+  commentId: P:PluginAPI.Core.Items.Item.Transform
+  id: Transform
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: Item.Transform
+  fullName: PluginAPI.Core.Items.Item.Transform
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Transform
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 57
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Transform Transform { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public ReadOnly Property Transform As Transform
+  overload: PluginAPI.Core.Items.Item.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.GameObject
+  commentId: P:PluginAPI.Core.Items.Item.GameObject
+  id: GameObject
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: Item.GameObject
+  fullName: PluginAPI.Core.Items.Item.GameObject
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GameObject
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 62
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public GameObject GameObject { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ReadOnly Property GameObject As GameObject
+  overload: PluginAPI.Core.Items.Item.GameObject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.Position
+  commentId: P:PluginAPI.Core.Items.Item.Position
+  id: Position
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Item.Position
+  fullName: PluginAPI.Core.Items.Item.Position
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Position
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 67
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the item&apos;s position.\n"
+  example: []
+  syntax:
+    content: public Vector3 Position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Position As Vector3
+  overload: PluginAPI.Core.Items.Item.Position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.Item.Rotation
+  commentId: P:PluginAPI.Core.Items.Item.Rotation
+  id: Rotation
+  parent: PluginAPI.Core.Items.Item
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: Item.Rotation
+  fullName: PluginAPI.Core.Items.Item.Rotation
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/Item.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rotation
+    path: ../NwPluginAPI/Core/Items/Item.cs
+    startLine: 72
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the items rotation.\n"
+  example: []
+  syntax:
+    content: public Quaternion Rotation { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Public ReadOnly Property Rotation As Quaternion
+  overload: PluginAPI.Core.Items.Item.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: PluginAPI.Core.Items
+  commentId: N:PluginAPI.Core.Items
+  name: PluginAPI.Core.Items
+  nameWithType: PluginAPI.Core.Items
+  fullName: PluginAPI.Core.Items
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InventorySystem.Items.ItemBase
+  commentId: T:InventorySystem.Items.ItemBase
+  parent: InventorySystem.Items
+  isExternal: true
+  name: ItemBase
+  nameWithType: ItemBase
+  fullName: InventorySystem.Items.ItemBase
+- uid: InventorySystem.Items
+  commentId: N:InventorySystem.Items
+  isExternal: true
+  name: InventorySystem.Items
+  nameWithType: InventorySystem.Items
+  fullName: InventorySystem.Items
+- uid: ItemType
+  commentId: T:ItemType
+  isExternal: true
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
+- uid: PluginAPI.Core.Items.Item.Type*
+  commentId: Overload:PluginAPI.Core.Items.Item.Type
+  name: Type
+  nameWithType: Item.Type
+  fullName: PluginAPI.Core.Items.Item.Type
+- uid: ItemCategory
+  commentId: T:ItemCategory
+  isExternal: true
+  name: ItemCategory
+  nameWithType: ItemCategory
+  fullName: ItemCategory
+- uid: PluginAPI.Core.Items.Item.Category*
+  commentId: Overload:PluginAPI.Core.Items.Item.Category
+  name: Category
+  nameWithType: Item.Category
+  fullName: PluginAPI.Core.Items.Item.Category
+- uid: ItemTierFlags
+  commentId: T:ItemTierFlags
+  isExternal: true
+  name: ItemTierFlags
+  nameWithType: ItemTierFlags
+  fullName: ItemTierFlags
+- uid: PluginAPI.Core.Items.Item.TierFlags*
+  commentId: Overload:PluginAPI.Core.Items.Item.TierFlags
+  name: TierFlags
+  nameWithType: Item.TierFlags
+  fullName: PluginAPI.Core.Items.Item.TierFlags
+- uid: InventorySystem.Items.ItemThrowSettings
+  commentId: T:InventorySystem.Items.ItemThrowSettings
+  parent: InventorySystem.Items
+  isExternal: true
+  name: ItemThrowSettings
+  nameWithType: ItemThrowSettings
+  fullName: InventorySystem.Items.ItemThrowSettings
+- uid: PluginAPI.Core.Items.Item.ThrowSettings*
+  commentId: Overload:PluginAPI.Core.Items.Item.ThrowSettings
+  name: ThrowSettings
+  nameWithType: Item.ThrowSettings
+  fullName: PluginAPI.Core.Items.Item.ThrowSettings
+- uid: PluginAPI.Core.Items.Item.CurrentOwner*
+  commentId: Overload:PluginAPI.Core.Items.Item.CurrentOwner
+  name: CurrentOwner
+  nameWithType: Item.CurrentOwner
+  fullName: PluginAPI.Core.Items.Item.CurrentOwner
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Core.Items.Item.Serial*
+  commentId: Overload:PluginAPI.Core.Items.Item.Serial
+  name: Serial
+  nameWithType: Item.Serial
+  fullName: PluginAPI.Core.Items.Item.Serial
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: PluginAPI.Core.Items.Item.Weight*
+  commentId: Overload:PluginAPI.Core.Items.Item.Weight
+  name: Weight
+  nameWithType: Item.Weight
+  fullName: PluginAPI.Core.Items.Item.Weight
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: PluginAPI.Core.Items.Item.Transform*
+  commentId: Overload:PluginAPI.Core.Items.Item.Transform
+  name: Transform
+  nameWithType: Item.Transform
+  fullName: PluginAPI.Core.Items.Item.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: PluginAPI.Core.Items.Item.GameObject*
+  commentId: Overload:PluginAPI.Core.Items.Item.GameObject
+  name: GameObject
+  nameWithType: Item.GameObject
+  fullName: PluginAPI.Core.Items.Item.GameObject
+- uid: PluginAPI.Core.Items.Item.Position*
+  commentId: Overload:PluginAPI.Core.Items.Item.Position
+  name: Position
+  nameWithType: Item.Position
+  fullName: PluginAPI.Core.Items.Item.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: PluginAPI.Core.Items.Item.Rotation*
+  commentId: Overload:PluginAPI.Core.Items.Item.Rotation
+  name: Rotation
+  nameWithType: Item.Rotation
+  fullName: PluginAPI.Core.Items.Item.Rotation
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion

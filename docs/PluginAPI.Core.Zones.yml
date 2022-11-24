@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones
+  commentId: N:PluginAPI.Core.Zones
+  id: PluginAPI.Core.Zones
+  children:
+  - PluginAPI.Core.Zones.EntranceZone
+  - PluginAPI.Core.Zones.FacilityRoom
+  - PluginAPI.Core.Zones.FacilityZone
+  - PluginAPI.Core.Zones.HeavyZone
+  - PluginAPI.Core.Zones.LightZone
+  - PluginAPI.Core.Zones.Surface
+  - PluginAPI.Core.Zones.SurfaceZone
+  - PluginAPI.Core.Zones.UnknownZone
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Zones
+  nameWithType: PluginAPI.Core.Zones
+  fullName: PluginAPI.Core.Zones
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Zones.EntranceZone
+  commentId: T:PluginAPI.Core.Zones.EntranceZone
+  parent: PluginAPI.Core.Zones
+  name: EntranceZone
+  nameWithType: EntranceZone
+  fullName: PluginAPI.Core.Zones.EntranceZone
+- uid: PluginAPI.Core.Zones.FacilityRoom
+  commentId: T:PluginAPI.Core.Zones.FacilityRoom
+  parent: PluginAPI.Core.Zones
+  name: FacilityRoom
+  nameWithType: FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom
+- uid: PluginAPI.Core.Zones.FacilityZone
+  commentId: T:PluginAPI.Core.Zones.FacilityZone
+  parent: PluginAPI.Core.Zones
+  name: FacilityZone
+  nameWithType: FacilityZone
+  fullName: PluginAPI.Core.Zones.FacilityZone
+- uid: PluginAPI.Core.Zones.HeavyZone
+  commentId: T:PluginAPI.Core.Zones.HeavyZone
+  parent: PluginAPI.Core.Zones
+  name: HeavyZone
+  nameWithType: HeavyZone
+  fullName: PluginAPI.Core.Zones.HeavyZone
+- uid: PluginAPI.Core.Zones.LightZone
+  commentId: T:PluginAPI.Core.Zones.LightZone
+  parent: PluginAPI.Core.Zones
+  name: LightZone
+  nameWithType: LightZone
+  fullName: PluginAPI.Core.Zones.LightZone
+- uid: PluginAPI.Core.Zones.SurfaceZone
+  commentId: T:PluginAPI.Core.Zones.SurfaceZone
+  parent: PluginAPI.Core.Zones
+  name: SurfaceZone
+  nameWithType: SurfaceZone
+  fullName: PluginAPI.Core.Zones.SurfaceZone
+- uid: PluginAPI.Core.Zones.Surface
+  commentId: T:PluginAPI.Core.Zones.Surface
+  name: Surface
+  nameWithType: Surface
+  fullName: PluginAPI.Core.Zones.Surface
+- uid: PluginAPI.Core.Zones.UnknownZone
+  commentId: T:PluginAPI.Core.Zones.UnknownZone
+  parent: PluginAPI.Core.Zones
+  name: UnknownZone
+  nameWithType: UnknownZone
+  fullName: PluginAPI.Core.Zones.UnknownZone
+- uid: PluginAPI.Core.Zones
+  commentId: N:PluginAPI.Core.Zones
+  name: PluginAPI.Core.Zones
+  nameWithType: PluginAPI.Core.Zones
+  fullName: PluginAPI.Core.Zones

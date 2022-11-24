@@ -1,0 +1,866 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.FacilityRoom
+  commentId: T:PluginAPI.Core.Zones.FacilityRoom
+  id: FacilityRoom
+  parent: PluginAPI.Core.Zones
+  children:
+  - PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)
+  - PluginAPI.Core.Zones.FacilityRoom.GameObject
+  - PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  - PluginAPI.Core.Zones.FacilityRoom.Identifier
+  - PluginAPI.Core.Zones.FacilityRoom.Lights
+  - PluginAPI.Core.Zones.FacilityRoom.Position
+  - PluginAPI.Core.Zones.FacilityRoom.Rotation
+  - PluginAPI.Core.Zones.FacilityRoom.Transform
+  - PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  - PluginAPI.Core.Zones.FacilityRoom.Zone
+  langs:
+  - csharp
+  - vb
+  name: FacilityRoom
+  nameWithType: FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: FacilityRoom
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nRepresents a room.\n"
+  example: []
+  syntax:
+    content: public class FacilityRoom
+    content.vb: Public Class FacilityRoom
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - PluginAPI.Core.Zones.Entrance.EzRoom
+  - PluginAPI.Core.Zones.Heavy.HczRoom
+  - PluginAPI.Core.Zones.Light.LczRoom
+  - PluginAPI.Core.Zones.Pocket.PocketDimension
+  - PluginAPI.Core.Zones.Surface
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Zones.FacilityRoom.Zone
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Zone
+  id: Zone
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: Zone
+  nameWithType: FacilityRoom.Zone
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Zone
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Zone
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 21
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets the zone type.\n"
+  example: []
+  syntax:
+    content: public readonly FacilityZone Zone
+    return:
+      type: PluginAPI.Core.Zones.FacilityZone
+    content.vb: Public ReadOnly Zone As FacilityZone
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.FacilityRoom.Lights
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Lights
+  id: Lights
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: Lights
+  nameWithType: FacilityRoom.Lights
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Lights
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Lights
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 26
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets the lights controller.\n"
+  example: []
+  syntax:
+    content: public readonly RoomLight Lights
+    return:
+      type: PluginAPI.Core.RoomLight
+    content.vb: Public ReadOnly Lights As RoomLight
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.FacilityRoom.Identifier
+  commentId: F:PluginAPI.Core.Zones.FacilityRoom.Identifier
+  id: Identifier
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: Identifier
+  nameWithType: FacilityRoom.Identifier
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Identifier
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Identifier
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets the room identifier.\n"
+  example: []
+  syntax:
+    content: public readonly RoomIdentifier Identifier
+    return:
+      type: MapGeneration.RoomIdentifier
+    content.vb: Public ReadOnly Identifier As RoomIdentifier
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.FacilityRoom.Transform
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Transform
+  id: Transform
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: FacilityRoom.Transform
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Transform
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Transform
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets the room&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Transform Transform { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public ReadOnly Property Transform As Transform
+  overload: PluginAPI.Core.Zones.FacilityRoom.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.FacilityRoom.GameObject
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.GameObject
+  id: GameObject
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: FacilityRoom.GameObject
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GameObject
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GameObject
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 41
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets room&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public GameObject GameObject { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ReadOnly Property GameObject As GameObject
+  overload: PluginAPI.Core.Zones.FacilityRoom.GameObject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.FacilityRoom.Position
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Position
+  id: Position
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: FacilityRoom.Position
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Position
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Position
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 46
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets room&apos;s position.\n"
+  example: []
+  syntax:
+    content: public Vector3 Position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Position As Vector3
+  overload: PluginAPI.Core.Zones.FacilityRoom.Position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.FacilityRoom.Rotation
+  commentId: P:PluginAPI.Core.Zones.FacilityRoom.Rotation
+  id: Rotation
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: FacilityRoom.Rotation
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Rotation
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rotation
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 51
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nGets room&apos;s rotation.\n"
+  example: []
+  syntax:
+    content: public Quaternion Rotation { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Public ReadOnly Property Rotation As Quaternion
+  overload: PluginAPI.Core.Zones.FacilityRoom.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
+  id: GetComponent``1(System.Boolean,System.Boolean)
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: GetComponent<T>(Boolean, Boolean)
+  nameWithType: FacilityRoom.GetComponent<T>(Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent<T>(System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetComponent
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 55
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  example: []
+  syntax:
+    content: >-
+      public T GetComponent<T>(bool globalSearch = false, bool childSearch = false)
+          where T : MonoBehaviour
+    parameters:
+    - id: globalSearch
+      type: System.Boolean
+    - id: childSearch
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetComponent(Of T As MonoBehaviour)(globalSearch As Boolean = False, childSearch As Boolean = False) As T
+  overload: PluginAPI.Core.Zones.FacilityRoom.GetComponent*
+  nameWithType.vb: FacilityRoom.GetComponent(Of T)(Boolean, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.GetComponent(Of T)(System.Boolean, System.Boolean)
+  name.vb: GetComponent(Of T)(Boolean, Boolean)
+- uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  id: TryGetComponent``1(``0@,System.Boolean,System.Boolean)
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: TryGetComponent<T>(out T, Boolean, Boolean)
+  nameWithType: FacilityRoom.TryGetComponent<T>(out T, Boolean, Boolean)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent<T>(out T, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGetComponent
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 88
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  example: []
+  syntax:
+    content: >-
+      public bool TryGetComponent<T>(out T component, bool globalSearch = false, bool childSearch = false)
+          where T : MonoBehaviour
+    parameters:
+    - id: component
+      type: '{T}'
+    - id: globalSearch
+      type: System.Boolean
+    - id: childSearch
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetComponent(Of T As MonoBehaviour)(ByRef component As T, globalSearch As Boolean = False, childSearch As Boolean = False) As Boolean
+  overload: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent*
+  nameWithType.vb: FacilityRoom.TryGetComponent(Of T)(ByRef T, Boolean, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)(ByRef T, System.Boolean, System.Boolean)
+  name.vb: TryGetComponent(Of T)(ByRef T, Boolean, Boolean)
+- uid: PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)'
+  parent: PluginAPI.Core.Zones.FacilityRoom
+  langs:
+  - csharp
+  - vb
+  name: FacilityRoom(FacilityZone, RoomIdentifier)
+  nameWithType: FacilityRoom.FacilityRoom(FacilityZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.FacilityRoom(PluginAPI.Core.Zones.FacilityZone, MapGeneration.RoomIdentifier)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/FacilityRoom.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
+    startLine: 144
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Zones.FacilityRoom\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public FacilityRoom(FacilityZone zone, RoomIdentifier room)
+    parameters:
+    - id: zone
+      type: PluginAPI.Core.Zones.FacilityZone
+      description: The zone type.
+    - id: room
+      type: MapGeneration.RoomIdentifier
+      description: The room identifier.
+    content.vb: Public Sub New(zone As FacilityZone, room As RoomIdentifier)
+  overload: PluginAPI.Core.Zones.FacilityRoom.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Zones
+  commentId: N:PluginAPI.Core.Zones
+  name: PluginAPI.Core.Zones
+  nameWithType: PluginAPI.Core.Zones
+  fullName: PluginAPI.Core.Zones
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Zones.FacilityZone
+  commentId: T:PluginAPI.Core.Zones.FacilityZone
+  parent: PluginAPI.Core.Zones
+  name: FacilityZone
+  nameWithType: FacilityZone
+  fullName: PluginAPI.Core.Zones.FacilityZone
+- uid: PluginAPI.Core.RoomLight
+  commentId: T:PluginAPI.Core.RoomLight
+  parent: PluginAPI.Core
+  name: RoomLight
+  nameWithType: RoomLight
+  fullName: PluginAPI.Core.RoomLight
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
+  isExternal: true
+  name: RoomIdentifier
+  nameWithType: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: PluginAPI.Core.Zones.FacilityRoom.Transform*
+  commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.Transform
+  name: Transform
+  nameWithType: FacilityRoom.Transform
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: PluginAPI.Core.Zones.FacilityRoom.GameObject*
+  commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.GameObject
+  name: GameObject
+  nameWithType: FacilityRoom.GameObject
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GameObject
+- uid: PluginAPI.Core.Zones.FacilityRoom.Position*
+  commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.Position
+  name: Position
+  nameWithType: FacilityRoom.Position
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: PluginAPI.Core.Zones.FacilityRoom.Rotation*
+  commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.Rotation
+  name: Rotation
+  nameWithType: FacilityRoom.Rotation
+  fullName: PluginAPI.Core.Zones.FacilityRoom.Rotation
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent*
+  commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.GetComponent
+  name: GetComponent
+  nameWithType: FacilityRoom.GetComponent
+  fullName: PluginAPI.Core.Zones.FacilityRoom.GetComponent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent*
+  commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.TryGetComponent
+  name: TryGetComponent
+  nameWithType: FacilityRoom.TryGetComponent
+  fullName: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent
+- uid: PluginAPI.Core.Zones.FacilityRoom
+  commentId: T:PluginAPI.Core.Zones.FacilityRoom
+  parent: PluginAPI.Core.Zones
+  name: FacilityRoom
+  nameWithType: FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom
+- uid: PluginAPI.Core.Zones.FacilityRoom.#ctor*
+  commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.#ctor
+  name: FacilityRoom
+  nameWithType: FacilityRoom.FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom.FacilityRoom

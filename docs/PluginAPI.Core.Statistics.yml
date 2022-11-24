@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Statistics
+  commentId: T:PluginAPI.Core.Statistics
+  id: Statistics
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Statistics.CurrentRound
+  - PluginAPI.Core.Statistics.FastestEndedRound
+  - PluginAPI.Core.Statistics.PeakPlayers
+  - PluginAPI.Core.Statistics.TotalConnectedPlayers
+  - PluginAPI.Core.Statistics.TotalRejectedConnections
+  - PluginAPI.Core.Statistics.TotalRoundrestarts
+  langs:
+  - csharp
+  - vb
+  name: Statistics
+  nameWithType: Statistics
+  fullName: PluginAPI.Core.Statistics
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Statistics
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nStatistics of current server session.\n"
+  example: []
+  syntax:
+    content: public static class Statistics
+    content.vb: Public Module Statistics
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: PluginAPI.Core.Statistics.TotalConnectedPlayers
+  commentId: P:PluginAPI.Core.Statistics.TotalConnectedPlayers
+  id: TotalConnectedPlayers
+  parent: PluginAPI.Core.Statistics
+  langs:
+  - csharp
+  - vb
+  name: TotalConnectedPlayers
+  nameWithType: Statistics.TotalConnectedPlayers
+  fullName: PluginAPI.Core.Statistics.TotalConnectedPlayers
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalConnectedPlayers
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 15
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount of time a player connected to the server successfully.\n"
+  example: []
+  syntax:
+    content: public static int TotalConnectedPlayers { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property TotalConnectedPlayers As Integer
+  overload: PluginAPI.Core.Statistics.TotalConnectedPlayers*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.TotalRejectedConnections
+  commentId: P:PluginAPI.Core.Statistics.TotalRejectedConnections
+  id: TotalRejectedConnections
+  parent: PluginAPI.Core.Statistics
+  langs:
+  - csharp
+  - vb
+  name: TotalRejectedConnections
+  nameWithType: Statistics.TotalRejectedConnections
+  fullName: PluginAPI.Core.Statistics.TotalRejectedConnections
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalRejectedConnections
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 20
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount of time a player&apos;s connecting to the server was rejected.\n"
+  example: []
+  syntax:
+    content: public static int TotalRejectedConnections { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property TotalRejectedConnections As Integer
+  overload: PluginAPI.Core.Statistics.TotalRejectedConnections*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.PeakPlayers
+  commentId: F:PluginAPI.Core.Statistics.PeakPlayers
+  id: PeakPlayers
+  parent: PluginAPI.Core.Statistics
+  langs:
+  - csharp
+  - vb
+  name: PeakPlayers
+  nameWithType: Statistics.PeakPlayers
+  fullName: PluginAPI.Core.Statistics.PeakPlayers
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PeakPlayers
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 25
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nInformation about timestamp and amount of peak players.\n"
+  example: []
+  syntax:
+    content: public static Statistics.Peak PeakPlayers
+    return:
+      type: PluginAPI.Core.Statistics.Peak
+    content.vb: Public Shared PeakPlayers As Statistics.Peak
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Statistics.TotalRoundrestarts
+  commentId: P:PluginAPI.Core.Statistics.TotalRoundrestarts
+  id: TotalRoundrestarts
+  parent: PluginAPI.Core.Statistics
+  langs:
+  - csharp
+  - vb
+  name: TotalRoundrestarts
+  nameWithType: Statistics.TotalRoundrestarts
+  fullName: PluginAPI.Core.Statistics.TotalRoundrestarts
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalRoundrestarts
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 30
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nThe amount of times the server restarted round in this session.\n"
+  example: []
+  syntax:
+    content: public static int TotalRoundrestarts { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property TotalRoundrestarts As Integer
+  overload: PluginAPI.Core.Statistics.TotalRoundrestarts*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.FastestEndedRound
+  commentId: F:PluginAPI.Core.Statistics.FastestEndedRound
+  id: FastestEndedRound
+  parent: PluginAPI.Core.Statistics
+  langs:
+  - csharp
+  - vb
+  name: FastestEndedRound
+  nameWithType: Statistics.FastestEndedRound
+  fullName: PluginAPI.Core.Statistics.FastestEndedRound
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: FastestEndedRound
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nInformation about fastest round.\n"
+  example: []
+  syntax:
+    content: public static Statistics.FastestRound FastestEndedRound
+    return:
+      type: PluginAPI.Core.Statistics.FastestRound
+    content.vb: Public Shared FastestEndedRound As Statistics.FastestRound
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Statistics.CurrentRound
+  commentId: F:PluginAPI.Core.Statistics.CurrentRound
+  id: CurrentRound
+  parent: PluginAPI.Core.Statistics
+  langs:
+  - csharp
+  - vb
+  name: CurrentRound
+  nameWithType: Statistics.CurrentRound
+  fullName: PluginAPI.Core.Statistics.CurrentRound
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CurrentRound
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nStatistics related to current round.\n"
+  example: []
+  syntax:
+    content: public static readonly Statistics.Round CurrentRound
+    return:
+      type: PluginAPI.Core.Statistics.Round
+    content.vb: Public Shared ReadOnly CurrentRound As Statistics.Round
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Statistics.TotalConnectedPlayers*
+  commentId: Overload:PluginAPI.Core.Statistics.TotalConnectedPlayers
+  name: TotalConnectedPlayers
+  nameWithType: Statistics.TotalConnectedPlayers
+  fullName: PluginAPI.Core.Statistics.TotalConnectedPlayers
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PluginAPI.Core.Statistics.TotalRejectedConnections*
+  commentId: Overload:PluginAPI.Core.Statistics.TotalRejectedConnections
+  name: TotalRejectedConnections
+  nameWithType: Statistics.TotalRejectedConnections
+  fullName: PluginAPI.Core.Statistics.TotalRejectedConnections
+- uid: PluginAPI.Core.Statistics.Peak
+  commentId: T:PluginAPI.Core.Statistics.Peak
+  parent: PluginAPI.Core
+  name: Statistics.Peak
+  nameWithType: Statistics.Peak
+  fullName: PluginAPI.Core.Statistics.Peak
+- uid: PluginAPI.Core.Statistics.TotalRoundrestarts*
+  commentId: Overload:PluginAPI.Core.Statistics.TotalRoundrestarts
+  name: TotalRoundrestarts
+  nameWithType: Statistics.TotalRoundrestarts
+  fullName: PluginAPI.Core.Statistics.TotalRoundrestarts
+- uid: PluginAPI.Core.Statistics.FastestRound
+  commentId: T:PluginAPI.Core.Statistics.FastestRound
+  parent: PluginAPI.Core
+  name: Statistics.FastestRound
+  nameWithType: Statistics.FastestRound
+  fullName: PluginAPI.Core.Statistics.FastestRound
+- uid: PluginAPI.Core.Statistics.Round
+  commentId: T:PluginAPI.Core.Statistics.Round
+  parent: PluginAPI.Core
+  name: Statistics.Round
+  nameWithType: Statistics.Round
+  fullName: PluginAPI.Core.Statistics.Round

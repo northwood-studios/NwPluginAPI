@@ -1,0 +1,1035 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Items.ItemPickup
+  commentId: T:PluginAPI.Core.Items.ItemPickup
+  id: ItemPickup
+  parent: PluginAPI.Core.Items
+  children:
+  - PluginAPI.Core.Items.ItemPickup.Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
+  - PluginAPI.Core.Items.ItemPickup.Destroy
+  - PluginAPI.Core.Items.ItemPickup.GameObject
+  - PluginAPI.Core.Items.ItemPickup.IsLocked
+  - PluginAPI.Core.Items.ItemPickup.LastOwner
+  - PluginAPI.Core.Items.ItemPickup.OriginalObject
+  - PluginAPI.Core.Items.ItemPickup.Position
+  - PluginAPI.Core.Items.ItemPickup.Rigidbody
+  - PluginAPI.Core.Items.ItemPickup.Rotation
+  - PluginAPI.Core.Items.ItemPickup.Serial
+  - PluginAPI.Core.Items.ItemPickup.Spawn
+  - PluginAPI.Core.Items.ItemPickup.Transform
+  - PluginAPI.Core.Items.ItemPickup.Type
+  - PluginAPI.Core.Items.ItemPickup.Weight
+  langs:
+  - csharp
+  - vb
+  name: ItemPickup
+  nameWithType: ItemPickup
+  fullName: PluginAPI.Core.Items.ItemPickup
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ItemPickup
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  syntax:
+    content: public class ItemPickup
+    content.vb: Public Class ItemPickup
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Items.ItemPickup.OriginalObject
+  commentId: F:PluginAPI.Core.Items.ItemPickup.OriginalObject
+  id: OriginalObject
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: OriginalObject
+  nameWithType: ItemPickup.OriginalObject
+  fullName: PluginAPI.Core.Items.ItemPickup.OriginalObject
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OriginalObject
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 17
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nThe base-game object.\n"
+  example: []
+  syntax:
+    content: public readonly ItemPickupBase OriginalObject
+    return:
+      type: InventorySystem.Items.Pickups.ItemPickupBase
+    content.vb: Public ReadOnly OriginalObject As ItemPickupBase
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.Type
+  commentId: P:PluginAPI.Core.Items.ItemPickup.Type
+  id: Type
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: ItemPickup.Type
+  fullName: PluginAPI.Core.Items.ItemPickup.Type
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Type
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 22
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s <xref href=\"ItemType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ItemType Type { get; }
+    parameters: []
+    return:
+      type: ItemType
+    content.vb: Public ReadOnly Property Type As ItemType
+  overload: PluginAPI.Core.Items.ItemPickup.Type*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.LastOwner
+  commentId: P:PluginAPI.Core.Items.ItemPickup.LastOwner
+  id: LastOwner
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: LastOwner
+  nameWithType: ItemPickup.LastOwner
+  fullName: PluginAPI.Core.Items.ItemPickup.LastOwner
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LastOwner
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 27
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s previous owner.\n"
+  example: []
+  syntax:
+    content: public Player LastOwner { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property LastOwner As Player
+  overload: PluginAPI.Core.Items.ItemPickup.LastOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.Serial
+  commentId: P:PluginAPI.Core.Items.ItemPickup.Serial
+  id: Serial
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Serial
+  nameWithType: ItemPickup.Serial
+  fullName: PluginAPI.Core.Items.ItemPickup.Serial
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Serial
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s serial.\n"
+  example: []
+  syntax:
+    content: public ushort Serial { get; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public ReadOnly Property Serial As UShort
+  overload: PluginAPI.Core.Items.ItemPickup.Serial*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.Weight
+  commentId: P:PluginAPI.Core.Items.ItemPickup.Weight
+  id: Weight
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Weight
+  nameWithType: ItemPickup.Weight
+  fullName: PluginAPI.Core.Items.ItemPickup.Weight
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Weight
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets or sets the pickup&apos;s weight.\n"
+  example: []
+  syntax:
+    content: public float Weight { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Weight As Single
+  overload: PluginAPI.Core.Items.ItemPickup.Weight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Items.ItemPickup.IsLocked
+  commentId: P:PluginAPI.Core.Items.ItemPickup.IsLocked
+  id: IsLocked
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: IsLocked
+  nameWithType: ItemPickup.IsLocked
+  fullName: PluginAPI.Core.Items.ItemPickup.IsLocked
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsLocked
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 46
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets or sets whether or not the pickup is locked.\n"
+  example: []
+  syntax:
+    content: public bool IsLocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsLocked As Boolean
+  overload: PluginAPI.Core.Items.ItemPickup.IsLocked*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Items.ItemPickup.Rigidbody
+  commentId: P:PluginAPI.Core.Items.ItemPickup.Rigidbody
+  id: Rigidbody
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Rigidbody
+  nameWithType: ItemPickup.Rigidbody
+  fullName: PluginAPI.Core.Items.ItemPickup.Rigidbody
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rigidbody
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 55
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s <xref href=\"UnityEngine.Rigidbody\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Rigidbody Rigidbody { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Rigidbody
+    content.vb: Public ReadOnly Property Rigidbody As Rigidbody
+  overload: PluginAPI.Core.Items.ItemPickup.Rigidbody*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.Transform
+  commentId: P:PluginAPI.Core.Items.ItemPickup.Transform
+  id: Transform
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: ItemPickup.Transform
+  fullName: PluginAPI.Core.Items.ItemPickup.Transform
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Transform
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 60
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s <xref href=\"UnityEngine.Rigidbody\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Transform Transform { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public ReadOnly Property Transform As Transform
+  overload: PluginAPI.Core.Items.ItemPickup.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.GameObject
+  commentId: P:PluginAPI.Core.Items.ItemPickup.GameObject
+  id: GameObject
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: ItemPickup.GameObject
+  fullName: PluginAPI.Core.Items.ItemPickup.GameObject
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GameObject
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 65
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public GameObject GameObject { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ReadOnly Property GameObject As GameObject
+  overload: PluginAPI.Core.Items.ItemPickup.GameObject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.Position
+  commentId: P:PluginAPI.Core.Items.ItemPickup.Position
+  id: Position
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: ItemPickup.Position
+  fullName: PluginAPI.Core.Items.ItemPickup.Position
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Position
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 70
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s position.\n"
+  example: []
+  syntax:
+    content: public Vector3 Position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Position As Vector3
+  overload: PluginAPI.Core.Items.ItemPickup.Position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.Rotation
+  commentId: P:PluginAPI.Core.Items.ItemPickup.Rotation
+  id: Rotation
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: ItemPickup.Rotation
+  fullName: PluginAPI.Core.Items.ItemPickup.Rotation
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rotation
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 75
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nGets the pickup&apos;s rotation.\n"
+  example: []
+  syntax:
+    content: public Quaternion Rotation { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Public ReadOnly Property Rotation As Quaternion
+  overload: PluginAPI.Core.Items.ItemPickup.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Items.ItemPickup.Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
+  commentId: M:PluginAPI.Core.Items.ItemPickup.Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
+  id: Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Create(ItemType, Vector3, Quaternion)
+  nameWithType: ItemPickup.Create(ItemType, Vector3, Quaternion)
+  fullName: PluginAPI.Core.Items.ItemPickup.Create(ItemType, UnityEngine.Vector3, UnityEngine.Quaternion)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Create
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 102
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nCreates a new <xref href=\"PluginAPI.Core.Items.ItemPickup\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static ItemPickup Create(ItemType item, Vector3 position, Quaternion rotation)
+    parameters:
+    - id: item
+      type: ItemType
+      description: The <xref href="ItemType" data-throw-if-not-resolved="false"></xref>.
+    - id: position
+      type: UnityEngine.Vector3
+      description: The position.
+    - id: rotation
+      type: UnityEngine.Quaternion
+      description: The rotation.
+    return:
+      type: PluginAPI.Core.Items.ItemPickup
+      description: The created <xref href="PluginAPI.Core.Items.ItemPickup" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Create(item As ItemType, position As Vector3, rotation As Quaternion) As ItemPickup
+  overload: PluginAPI.Core.Items.ItemPickup.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Items.ItemPickup.Spawn
+  commentId: M:PluginAPI.Core.Items.ItemPickup.Spawn
+  id: Spawn
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Spawn()
+  nameWithType: ItemPickup.Spawn()
+  fullName: PluginAPI.Core.Items.ItemPickup.Spawn()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Spawn
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 119
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nSpawns the pickup.\n"
+  example: []
+  syntax:
+    content: public void Spawn()
+    content.vb: Public Sub Spawn
+  overload: PluginAPI.Core.Items.ItemPickup.Spawn*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Items.ItemPickup.Destroy
+  commentId: M:PluginAPI.Core.Items.ItemPickup.Destroy
+  id: Destroy
+  parent: PluginAPI.Core.Items.ItemPickup
+  langs:
+  - csharp
+  - vb
+  name: Destroy()
+  nameWithType: ItemPickup.Destroy()
+  fullName: PluginAPI.Core.Items.ItemPickup.Destroy()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Items/ItemPickup.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Destroy
+    path: ../NwPluginAPI/Core/Items/ItemPickup.cs
+    startLine: 128
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Items
+  summary: "\nDestroys the pickup.\n"
+  example: []
+  syntax:
+    content: public void Destroy()
+    content.vb: Public Sub Destroy
+  overload: PluginAPI.Core.Items.ItemPickup.Destroy*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Items
+  commentId: N:PluginAPI.Core.Items
+  name: PluginAPI.Core.Items
+  nameWithType: PluginAPI.Core.Items
+  fullName: PluginAPI.Core.Items
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InventorySystem.Items.Pickups.ItemPickupBase
+  commentId: T:InventorySystem.Items.Pickups.ItemPickupBase
+  parent: InventorySystem.Items.Pickups
+  isExternal: true
+  name: ItemPickupBase
+  nameWithType: ItemPickupBase
+  fullName: InventorySystem.Items.Pickups.ItemPickupBase
+- uid: InventorySystem.Items.Pickups
+  commentId: N:InventorySystem.Items.Pickups
+  isExternal: true
+  name: InventorySystem.Items.Pickups
+  nameWithType: InventorySystem.Items.Pickups
+  fullName: InventorySystem.Items.Pickups
+- uid: ItemType
+  commentId: T:ItemType
+  isExternal: true
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
+- uid: PluginAPI.Core.Items.ItemPickup.Type*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Type
+  name: Type
+  nameWithType: ItemPickup.Type
+  fullName: PluginAPI.Core.Items.ItemPickup.Type
+- uid: PluginAPI.Core.Items.ItemPickup.LastOwner*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.LastOwner
+  name: LastOwner
+  nameWithType: ItemPickup.LastOwner
+  fullName: PluginAPI.Core.Items.ItemPickup.LastOwner
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Core.Items.ItemPickup.Serial*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Serial
+  name: Serial
+  nameWithType: ItemPickup.Serial
+  fullName: PluginAPI.Core.Items.ItemPickup.Serial
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: PluginAPI.Core.Items.ItemPickup.Weight*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Weight
+  name: Weight
+  nameWithType: ItemPickup.Weight
+  fullName: PluginAPI.Core.Items.ItemPickup.Weight
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Core.Items.ItemPickup.IsLocked*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.IsLocked
+  name: IsLocked
+  nameWithType: ItemPickup.IsLocked
+  fullName: PluginAPI.Core.Items.ItemPickup.IsLocked
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: UnityEngine.Rigidbody
+  commentId: T:UnityEngine.Rigidbody
+  parent: UnityEngine
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: UnityEngine.Rigidbody
+- uid: PluginAPI.Core.Items.ItemPickup.Rigidbody*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Rigidbody
+  name: Rigidbody
+  nameWithType: ItemPickup.Rigidbody
+  fullName: PluginAPI.Core.Items.ItemPickup.Rigidbody
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: PluginAPI.Core.Items.ItemPickup.Transform*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Transform
+  name: Transform
+  nameWithType: ItemPickup.Transform
+  fullName: PluginAPI.Core.Items.ItemPickup.Transform
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: PluginAPI.Core.Items.ItemPickup.GameObject*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.GameObject
+  name: GameObject
+  nameWithType: ItemPickup.GameObject
+  fullName: PluginAPI.Core.Items.ItemPickup.GameObject
+- uid: PluginAPI.Core.Items.ItemPickup.Position*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Position
+  name: Position
+  nameWithType: ItemPickup.Position
+  fullName: PluginAPI.Core.Items.ItemPickup.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: PluginAPI.Core.Items.ItemPickup.Rotation*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Rotation
+  name: Rotation
+  nameWithType: ItemPickup.Rotation
+  fullName: PluginAPI.Core.Items.ItemPickup.Rotation
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: PluginAPI.Core.Items.ItemPickup
+  commentId: T:PluginAPI.Core.Items.ItemPickup
+  parent: PluginAPI.Core.Items
+  name: ItemPickup
+  nameWithType: ItemPickup
+  fullName: PluginAPI.Core.Items.ItemPickup
+- uid: PluginAPI.Core.Items.ItemPickup.Create*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Create
+  name: Create
+  nameWithType: ItemPickup.Create
+  fullName: PluginAPI.Core.Items.ItemPickup.Create
+- uid: PluginAPI.Core.Items.ItemPickup.Spawn*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Spawn
+  name: Spawn
+  nameWithType: ItemPickup.Spawn
+  fullName: PluginAPI.Core.Items.ItemPickup.Spawn
+- uid: PluginAPI.Core.Items.ItemPickup.Destroy*
+  commentId: Overload:PluginAPI.Core.Items.ItemPickup.Destroy
+  name: Destroy
+  nameWithType: ItemPickup.Destroy
+  fullName: PluginAPI.Core.Items.ItemPickup.Destroy

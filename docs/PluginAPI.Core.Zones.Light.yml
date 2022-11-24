@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Light
+  commentId: N:PluginAPI.Core.Zones.Light
+  id: PluginAPI.Core.Zones.Light
+  children:
+  - PluginAPI.Core.Zones.Light.LczRoom
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Zones.Light
+  nameWithType: PluginAPI.Core.Zones.Light
+  fullName: PluginAPI.Core.Zones.Light
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Zones.Light.LczRoom
+  commentId: T:PluginAPI.Core.Zones.Light.LczRoom
+  parent: PluginAPI.Core.Zones.Light
+  name: LczRoom
+  nameWithType: LczRoom
+  fullName: PluginAPI.Core.Zones.Light.LczRoom
+- uid: PluginAPI.Core.Zones.Light
+  commentId: N:PluginAPI.Core.Zones.Light
+  name: PluginAPI.Core.Zones.Light
+  nameWithType: PluginAPI.Core.Zones.Light
+  fullName: PluginAPI.Core.Zones.Light

@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  id: PluginAPI.Enums
+  children:
+  - PluginAPI.Enums.CommandType
+  - PluginAPI.Enums.LoadPriority
+  - PluginAPI.Enums.LogType
+  - PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Enums.CommandType
+  commentId: T:PluginAPI.Enums.CommandType
+  parent: PluginAPI.Enums
+  name: CommandType
+  nameWithType: CommandType
+  fullName: PluginAPI.Enums.CommandType
+- uid: PluginAPI.Enums.LoadPriority
+  commentId: T:PluginAPI.Enums.LoadPriority
+  parent: PluginAPI.Enums
+  name: LoadPriority
+  nameWithType: LoadPriority
+  fullName: PluginAPI.Enums.LoadPriority
+- uid: PluginAPI.Enums.LogType
+  commentId: T:PluginAPI.Enums.LogType
+  parent: PluginAPI.Enums
+  name: LogType
+  nameWithType: LogType
+  fullName: PluginAPI.Enums.LogType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums

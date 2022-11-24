@@ -1,0 +1,1165 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Doors.FacilityDoor
+  commentId: T:PluginAPI.Core.Doors.FacilityDoor
+  id: FacilityDoor
+  parent: PluginAPI.Core.Doors
+  children:
+  - PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)
+  - PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+  - PluginAPI.Core.Doors.FacilityDoor.Count
+  - PluginAPI.Core.Doors.FacilityDoor.GameObject
+  - PluginAPI.Core.Doors.FacilityDoor.IsLocked
+  - PluginAPI.Core.Doors.FacilityDoor.IsOpened
+  - PluginAPI.Core.Doors.FacilityDoor.List
+  - PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  - PluginAPI.Core.Doors.FacilityDoor.LockReason
+  - PluginAPI.Core.Doors.FacilityDoor.OriginalObject
+  - PluginAPI.Core.Doors.FacilityDoor.Permissions
+  - PluginAPI.Core.Doors.FacilityDoor.Position
+  - PluginAPI.Core.Doors.FacilityDoor.Room
+  - PluginAPI.Core.Doors.FacilityDoor.Rotation
+  - PluginAPI.Core.Doors.FacilityDoor.Transform
+  langs:
+  - csharp
+  - vb
+  name: FacilityDoor
+  nameWithType: FacilityDoor
+  fullName: PluginAPI.Core.Doors.FacilityDoor
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: FacilityDoor
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nRepresents a door.\n"
+  example: []
+  syntax:
+    content: public class FacilityDoor
+    content.vb: Public Class FacilityDoor
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - PluginAPI.Core.Doors.FacilityBreakableDoor
+  - PluginAPI.Core.Doors.FacilityGate
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Doors.FacilityDoor.List
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.List
+  id: List
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: List
+  nameWithType: FacilityDoor.List
+  fullName: PluginAPI.Core.Doors.FacilityDoor.List
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: List
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 16
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets a list of all the <xref href=\"PluginAPI.Core.Doors.FacilityDoor\" data-throw-if-not-resolved=\"false\"></xref>s.\n"
+  example: []
+  syntax:
+    content: public static List<FacilityDoor> List { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+    content.vb: Public Shared ReadOnly Property List As List(Of FacilityDoor)
+  overload: PluginAPI.Core.Doors.FacilityDoor.List*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.Count
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.Count
+  id: Count
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: FacilityDoor.Count
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Count
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Count
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 21
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets the total amount of doors.\n"
+  example: []
+  syntax:
+    content: public static int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Count As Integer
+  overload: PluginAPI.Core.Doors.FacilityDoor.Count*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.OriginalObject
+  commentId: F:PluginAPI.Core.Doors.FacilityDoor.OriginalObject
+  id: OriginalObject
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: OriginalObject
+  nameWithType: FacilityDoor.OriginalObject
+  fullName: PluginAPI.Core.Doors.FacilityDoor.OriginalObject
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OriginalObject
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 26
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nThe base-game object.\n"
+  example: []
+  syntax:
+    content: public readonly DoorVariant OriginalObject
+    return:
+      type: Interactables.Interobjects.DoorUtils.DoorVariant
+    content.vb: Public ReadOnly OriginalObject As DoorVariant
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.Room
+  commentId: F:PluginAPI.Core.Doors.FacilityDoor.Room
+  id: Room
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Room
+  nameWithType: FacilityDoor.Room
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Room
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Room
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nThe <xref href=\"PluginAPI.Core.Zones.FacilityRoom\" data-throw-if-not-resolved=\"false\"></xref> the door is in.\n"
+  example: []
+  syntax:
+    content: public readonly FacilityRoom Room
+    return:
+      type: PluginAPI.Core.Zones.FacilityRoom
+    content.vb: Public ReadOnly Room As FacilityRoom
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.IsOpened
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.IsOpened
+  id: IsOpened
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: IsOpened
+  nameWithType: FacilityDoor.IsOpened
+  fullName: PluginAPI.Core.Doors.FacilityDoor.IsOpened
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsOpened
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets or sets whether or not the door is open.\n"
+  example: []
+  syntax:
+    content: public bool IsOpened { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsOpened As Boolean
+  overload: PluginAPI.Core.Doors.FacilityDoor.IsOpened*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Doors.FacilityDoor.IsLocked
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.IsLocked
+  id: IsLocked
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: IsLocked
+  nameWithType: FacilityDoor.IsLocked
+  fullName: PluginAPI.Core.Doors.FacilityDoor.IsLocked
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsLocked
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 45
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets or sets whether or not the door is locked.\n"
+  example: []
+  syntax:
+    content: public bool IsLocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsLocked As Boolean
+  overload: PluginAPI.Core.Doors.FacilityDoor.IsLocked*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Doors.FacilityDoor.LockReason
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.LockReason
+  id: LockReason
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: LockReason
+  nameWithType: FacilityDoor.LockReason
+  fullName: PluginAPI.Core.Doors.FacilityDoor.LockReason
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LockReason
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 54
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets or sets the door&apos;s <xref href=\"Interactables.Interobjects.DoorUtils.DoorLockReason\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public DoorLockReason LockReason { get; set; }
+    parameters: []
+    return:
+      type: Interactables.Interobjects.DoorUtils.DoorLockReason
+    content.vb: Public Property LockReason As DoorLockReason
+  overload: PluginAPI.Core.Doors.FacilityDoor.LockReason*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Doors.FacilityDoor.Permissions
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.Permissions
+  id: Permissions
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Permissions
+  nameWithType: FacilityDoor.Permissions
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Permissions
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Permissions
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 63
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets or sets the required <xref href=\"Interactables.Interobjects.DoorUtils.KeycardPermissions\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public KeycardPermissions Permissions { get; set; }
+    parameters: []
+    return:
+      type: Interactables.Interobjects.DoorUtils.KeycardPermissions
+    content.vb: Public Property Permissions As KeycardPermissions
+  overload: PluginAPI.Core.Doors.FacilityDoor.Permissions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+  id: Bypass2176
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Bypass2176
+  nameWithType: FacilityDoor.Bypass2176
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Bypass2176
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 72
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets or sets whether or not the door will bypass 2176.\n"
+  example: []
+  syntax:
+    content: public bool Bypass2176 { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Bypass2176 As Boolean
+  overload: PluginAPI.Core.Doors.FacilityDoor.Bypass2176*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Doors.FacilityDoor.Transform
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.Transform
+  id: Transform
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: FacilityDoor.Transform
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Transform
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Transform
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 81
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets the door&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Transform Transform { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public ReadOnly Property Transform As Transform
+  overload: PluginAPI.Core.Doors.FacilityDoor.Transform*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.GameObject
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.GameObject
+  id: GameObject
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: FacilityDoor.GameObject
+  fullName: PluginAPI.Core.Doors.FacilityDoor.GameObject
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GameObject
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 86
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets the door&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public GameObject GameObject { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ReadOnly Property GameObject As GameObject
+  overload: PluginAPI.Core.Doors.FacilityDoor.GameObject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.Position
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.Position
+  id: Position
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: FacilityDoor.Position
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Position
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Position
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 91
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets the door&apos;s position.\n"
+  example: []
+  syntax:
+    content: public Vector3 Position { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public ReadOnly Property Position As Vector3
+  overload: PluginAPI.Core.Doors.FacilityDoor.Position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.Rotation
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.Rotation
+  id: Rotation
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: FacilityDoor.Rotation
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Rotation
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rotation
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 96
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nGets the door&apos;s rotation.\n"
+  example: []
+  syntax:
+    content: public Quaternion Rotation { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Quaternion
+    content.vb: Public ReadOnly Property Rotation As Quaternion
+  overload: PluginAPI.Core.Doors.FacilityDoor.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  id: Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: Lock(DoorLockReason, Boolean)
+  nameWithType: FacilityDoor.Lock(DoorLockReason, Boolean)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Lock
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 103
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nLocks the door.\n"
+  example: []
+  syntax:
+    content: public void Lock(DoorLockReason reason, bool enabled)
+    parameters:
+    - id: reason
+      type: Interactables.Interobjects.DoorUtils.DoorLockReason
+      description: The reason.
+    - id: enabled
+      type: System.Boolean
+      description: Whether or not the door lock reason is new.
+    content.vb: Public Sub Lock(reason As DoorLockReason, enabled As Boolean)
+  overload: PluginAPI.Core.Doors.FacilityDoor.Lock*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)
+  id: '#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)'
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  langs:
+  - csharp
+  - vb
+  name: FacilityDoor(FacilityRoom, DoorVariant)
+  nameWithType: FacilityDoor.FacilityDoor(FacilityRoom, DoorVariant)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.FacilityDoor(PluginAPI.Core.Zones.FacilityRoom, Interactables.Interobjects.DoorUtils.DoorVariant)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Doors/FacilityDoor.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
+    startLine: 110
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Doors
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Doors.FacilityDoor\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public FacilityDoor(FacilityRoom room, DoorVariant door)
+    parameters:
+    - id: room
+      type: PluginAPI.Core.Zones.FacilityRoom
+      description: The room the door is in.
+    - id: door
+      type: Interactables.Interobjects.DoorUtils.DoorVariant
+      description: THe base-game door.
+    content.vb: Public Sub New(room As FacilityRoom, door As DoorVariant)
+  overload: PluginAPI.Core.Doors.FacilityDoor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Doors
+  commentId: N:PluginAPI.Core.Doors
+  name: PluginAPI.Core.Doors
+  nameWithType: PluginAPI.Core.Doors
+  fullName: PluginAPI.Core.Doors
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Doors.FacilityDoor
+  commentId: T:PluginAPI.Core.Doors.FacilityDoor
+  parent: PluginAPI.Core.Doors
+  name: FacilityDoor
+  nameWithType: FacilityDoor
+  fullName: PluginAPI.Core.Doors.FacilityDoor
+- uid: PluginAPI.Core.Doors.FacilityDoor.List*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.List
+  name: List
+  nameWithType: FacilityDoor.List
+  fullName: PluginAPI.Core.Doors.FacilityDoor.List
+- uid: System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+  commentId: T:System.Collections.Generic.List{PluginAPI.Core.Doors.FacilityDoor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FacilityDoor>
+  nameWithType: List<FacilityDoor>
+  fullName: System.Collections.Generic.List<PluginAPI.Core.Doors.FacilityDoor>
+  nameWithType.vb: List(Of FacilityDoor)
+  fullName.vb: System.Collections.Generic.List(Of PluginAPI.Core.Doors.FacilityDoor)
+  name.vb: List(Of FacilityDoor)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PluginAPI.Core.Doors.FacilityDoor
+    name: FacilityDoor
+    nameWithType: FacilityDoor
+    fullName: PluginAPI.Core.Doors.FacilityDoor
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PluginAPI.Core.Doors.FacilityDoor
+    name: FacilityDoor
+    nameWithType: FacilityDoor
+    fullName: PluginAPI.Core.Doors.FacilityDoor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.Doors.FacilityDoor.Count*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Count
+  name: Count
+  nameWithType: FacilityDoor.Count
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Interactables.Interobjects.DoorUtils.DoorVariant
+  commentId: T:Interactables.Interobjects.DoorUtils.DoorVariant
+  parent: Interactables.Interobjects.DoorUtils
+  isExternal: true
+  name: DoorVariant
+  nameWithType: DoorVariant
+  fullName: Interactables.Interobjects.DoorUtils.DoorVariant
+- uid: Interactables.Interobjects.DoorUtils
+  commentId: N:Interactables.Interobjects.DoorUtils
+  isExternal: true
+  name: Interactables.Interobjects.DoorUtils
+  nameWithType: Interactables.Interobjects.DoorUtils
+  fullName: Interactables.Interobjects.DoorUtils
+- uid: PluginAPI.Core.Zones.FacilityRoom
+  commentId: T:PluginAPI.Core.Zones.FacilityRoom
+  parent: PluginAPI.Core.Zones
+  name: FacilityRoom
+  nameWithType: FacilityRoom
+  fullName: PluginAPI.Core.Zones.FacilityRoom
+- uid: PluginAPI.Core.Zones
+  commentId: N:PluginAPI.Core.Zones
+  name: PluginAPI.Core.Zones
+  nameWithType: PluginAPI.Core.Zones
+  fullName: PluginAPI.Core.Zones
+- uid: PluginAPI.Core.Doors.FacilityDoor.IsOpened*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.IsOpened
+  name: IsOpened
+  nameWithType: FacilityDoor.IsOpened
+  fullName: PluginAPI.Core.Doors.FacilityDoor.IsOpened
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Doors.FacilityDoor.IsLocked*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.IsLocked
+  name: IsLocked
+  nameWithType: FacilityDoor.IsLocked
+  fullName: PluginAPI.Core.Doors.FacilityDoor.IsLocked
+- uid: Interactables.Interobjects.DoorUtils.DoorLockReason
+  commentId: T:Interactables.Interobjects.DoorUtils.DoorLockReason
+  parent: Interactables.Interobjects.DoorUtils
+  isExternal: true
+  name: DoorLockReason
+  nameWithType: DoorLockReason
+  fullName: Interactables.Interobjects.DoorUtils.DoorLockReason
+- uid: PluginAPI.Core.Doors.FacilityDoor.LockReason*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.LockReason
+  name: LockReason
+  nameWithType: FacilityDoor.LockReason
+  fullName: PluginAPI.Core.Doors.FacilityDoor.LockReason
+- uid: Interactables.Interobjects.DoorUtils.KeycardPermissions
+  commentId: T:Interactables.Interobjects.DoorUtils.KeycardPermissions
+  parent: Interactables.Interobjects.DoorUtils
+  isExternal: true
+  name: KeycardPermissions
+  nameWithType: KeycardPermissions
+  fullName: Interactables.Interobjects.DoorUtils.KeycardPermissions
+- uid: PluginAPI.Core.Doors.FacilityDoor.Permissions*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Permissions
+  name: Permissions
+  nameWithType: FacilityDoor.Permissions
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Permissions
+- uid: PluginAPI.Core.Doors.FacilityDoor.Bypass2176*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+  name: Bypass2176
+  nameWithType: FacilityDoor.Bypass2176
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: PluginAPI.Core.Doors.FacilityDoor.Transform*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Transform
+  name: Transform
+  nameWithType: FacilityDoor.Transform
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: PluginAPI.Core.Doors.FacilityDoor.GameObject*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.GameObject
+  name: GameObject
+  nameWithType: FacilityDoor.GameObject
+  fullName: PluginAPI.Core.Doors.FacilityDoor.GameObject
+- uid: PluginAPI.Core.Doors.FacilityDoor.Position*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Position
+  name: Position
+  nameWithType: FacilityDoor.Position
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: PluginAPI.Core.Doors.FacilityDoor.Rotation*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Rotation
+  name: Rotation
+  nameWithType: FacilityDoor.Rotation
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Rotation
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
+  isExternal: true
+  name: Quaternion
+  nameWithType: Quaternion
+  fullName: UnityEngine.Quaternion
+- uid: PluginAPI.Core.Doors.FacilityDoor.Lock*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Lock
+  name: Lock
+  nameWithType: FacilityDoor.Lock
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock
+- uid: PluginAPI.Core.Doors.FacilityDoor.#ctor*
+  commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.#ctor
+  name: FacilityDoor
+  nameWithType: FacilityDoor.FacilityDoor
+  fullName: PluginAPI.Core.Doors.FacilityDoor.FacilityDoor

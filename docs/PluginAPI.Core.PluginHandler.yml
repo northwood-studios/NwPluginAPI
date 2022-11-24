@@ -1,0 +1,1014 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.PluginHandler
+  commentId: T:PluginAPI.Core.PluginHandler
+  id: PluginHandler
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.PluginHandler.#ctor(PluginAPI.Loader.Features.PluginDirectory,System.Object,System.Type,System.Type[])
+  - PluginAPI.Core.PluginHandler.Get(System.Object)
+  - PluginAPI.Core.PluginHandler.Load
+  - PluginAPI.Core.PluginHandler.LoadConfig(System.Object,System.String)
+  - PluginAPI.Core.PluginHandler.LoadDefaultConfig(System.Object,System.String)
+  - PluginAPI.Core.PluginHandler.MainConfigPath
+  - PluginAPI.Core.PluginHandler.PluginAuthor
+  - PluginAPI.Core.PluginHandler.PluginDescription
+  - PluginAPI.Core.PluginHandler.PluginDirectoryPath
+  - PluginAPI.Core.PluginHandler.PluginFilePath
+  - PluginAPI.Core.PluginHandler.PluginName
+  - PluginAPI.Core.PluginHandler.PluginVersion
+  - PluginAPI.Core.PluginHandler.SaveConfig(System.Object,System.String)
+  - PluginAPI.Core.PluginHandler.Unload
+  langs:
+  - csharp
+  - vb
+  name: PluginHandler
+  nameWithType: PluginHandler
+  fullName: PluginAPI.Core.PluginHandler
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginHandler
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 18
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nHandles a plugin.\n"
+  example: []
+  syntax:
+    content: public class PluginHandler
+    content.vb: Public Class PluginHandler
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.PluginHandler.Get(System.Object)
+  commentId: M:PluginAPI.Core.PluginHandler.Get(System.Object)
+  id: Get(System.Object)
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: Get(Object)
+  nameWithType: PluginHandler.Get(Object)
+  fullName: PluginAPI.Core.PluginHandler.Get(System.Object)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 39
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets plugin handler.\n"
+  example: []
+  syntax:
+    content: public static PluginHandler Get(object plugin)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The plugin.
+    return:
+      type: PluginAPI.Core.PluginHandler
+      description: The Plugin handler.
+    content.vb: Public Shared Function Get(plugin As Object) As PluginHandler
+  overload: PluginAPI.Core.PluginHandler.Get*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.PluginHandler.PluginName
+  commentId: P:PluginAPI.Core.PluginHandler.PluginName
+  id: PluginName
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: PluginName
+  nameWithType: PluginHandler.PluginName
+  fullName: PluginAPI.Core.PluginHandler.PluginName
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginName
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 53
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the name of the plugin.\n"
+  example: []
+  syntax:
+    content: public string PluginName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PluginName As String
+  overload: PluginAPI.Core.PluginHandler.PluginName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PluginHandler.PluginVersion
+  commentId: P:PluginAPI.Core.PluginHandler.PluginVersion
+  id: PluginVersion
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: PluginVersion
+  nameWithType: PluginHandler.PluginVersion
+  fullName: PluginAPI.Core.PluginHandler.PluginVersion
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginVersion
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 58
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the version of the plugin.\n"
+  example: []
+  syntax:
+    content: public string PluginVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PluginVersion As String
+  overload: PluginAPI.Core.PluginHandler.PluginVersion*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PluginHandler.PluginDescription
+  commentId: P:PluginAPI.Core.PluginHandler.PluginDescription
+  id: PluginDescription
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: PluginDescription
+  nameWithType: PluginHandler.PluginDescription
+  fullName: PluginAPI.Core.PluginHandler.PluginDescription
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginDescription
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 63
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the description of the plugin.\n"
+  example: []
+  syntax:
+    content: public string PluginDescription { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PluginDescription As String
+  overload: PluginAPI.Core.PluginHandler.PluginDescription*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PluginHandler.PluginAuthor
+  commentId: P:PluginAPI.Core.PluginHandler.PluginAuthor
+  id: PluginAuthor
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: PluginAuthor
+  nameWithType: PluginHandler.PluginAuthor
+  fullName: PluginAPI.Core.PluginHandler.PluginAuthor
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginAuthor
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 68
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the author of the plugin.\n"
+  example: []
+  syntax:
+    content: public string PluginAuthor { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PluginAuthor As String
+  overload: PluginAPI.Core.PluginHandler.PluginAuthor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PluginHandler.PluginFilePath
+  commentId: P:PluginAPI.Core.PluginHandler.PluginFilePath
+  id: PluginFilePath
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: PluginFilePath
+  nameWithType: PluginHandler.PluginFilePath
+  fullName: PluginAPI.Core.PluginHandler.PluginFilePath
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginFilePath
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 73
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the path of plugin file. ( default name: pluginName.dll )\n"
+  example: []
+  syntax:
+    content: public string PluginFilePath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PluginFilePath As String
+  overload: PluginAPI.Core.PluginHandler.PluginFilePath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PluginHandler.PluginDirectoryPath
+  commentId: P:PluginAPI.Core.PluginHandler.PluginDirectoryPath
+  id: PluginDirectoryPath
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: PluginDirectoryPath
+  nameWithType: PluginHandler.PluginDirectoryPath
+  fullName: PluginAPI.Core.PluginHandler.PluginDirectoryPath
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PluginDirectoryPath
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 78
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the path of plugin directory.\n"
+  example: []
+  syntax:
+    content: public string PluginDirectoryPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PluginDirectoryPath As String
+  overload: PluginAPI.Core.PluginHandler.PluginDirectoryPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PluginHandler.MainConfigPath
+  commentId: P:PluginAPI.Core.PluginHandler.MainConfigPath
+  id: MainConfigPath
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: MainConfigPath
+  nameWithType: PluginHandler.MainConfigPath
+  fullName: PluginAPI.Core.PluginHandler.MainConfigPath
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: MainConfigPath
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 83
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the path of main plugin config. ( default name: config.yml )\n"
+  example: []
+  syntax:
+    content: public string MainConfigPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property MainConfigPath As String
+  overload: PluginAPI.Core.PluginHandler.MainConfigPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.PluginHandler.Unload
+  commentId: M:PluginAPI.Core.PluginHandler.Unload
+  id: Unload
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: Unload()
+  nameWithType: PluginHandler.Unload()
+  fullName: PluginAPI.Core.PluginHandler.Unload()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Unload
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 88
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nUnloads the plugin.\n"
+  example: []
+  syntax:
+    content: public void Unload()
+    content.vb: Public Sub Unload
+  overload: PluginAPI.Core.PluginHandler.Unload*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PluginHandler.Load
+  commentId: M:PluginAPI.Core.PluginHandler.Load
+  id: Load
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: Load()
+  nameWithType: PluginHandler.Load()
+  fullName: PluginAPI.Core.PluginHandler.Load()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Load
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 109
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nLoads the plugin.\n"
+  example: []
+  syntax:
+    content: public void Load()
+    content.vb: Public Sub Load
+  overload: PluginAPI.Core.PluginHandler.Load*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PluginHandler.LoadConfig(System.Object,System.String)
+  commentId: M:PluginAPI.Core.PluginHandler.LoadConfig(System.Object,System.String)
+  id: LoadConfig(System.Object,System.String)
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig(Object, String)
+  nameWithType: PluginHandler.LoadConfig(Object, String)
+  fullName: PluginAPI.Core.PluginHandler.LoadConfig(System.Object, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LoadConfig
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 132
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nLoads the plugin config.\n"
+  example: []
+  syntax:
+    content: public void LoadConfig(object plugin, string configField)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The class location of config field.
+    - id: configField
+      type: System.String
+      description: The name of config field.
+    content.vb: Public Sub LoadConfig(plugin As Object, configField As String)
+  overload: PluginAPI.Core.PluginHandler.LoadConfig*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PluginHandler.LoadDefaultConfig(System.Object,System.String)
+  commentId: M:PluginAPI.Core.PluginHandler.LoadDefaultConfig(System.Object,System.String)
+  id: LoadDefaultConfig(System.Object,System.String)
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadDefaultConfig(Object, String)
+  nameWithType: PluginHandler.LoadDefaultConfig(Object, String)
+  fullName: PluginAPI.Core.PluginHandler.LoadDefaultConfig(System.Object, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LoadDefaultConfig
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 164
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nLoads the default plugin config.\n"
+  example: []
+  syntax:
+    content: public void LoadDefaultConfig(object plugin, string configField)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The class location of config field.
+    - id: configField
+      type: System.String
+      description: The name of config field.
+    content.vb: Public Sub LoadDefaultConfig(plugin As Object, configField As String)
+  overload: PluginAPI.Core.PluginHandler.LoadDefaultConfig*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PluginHandler.SaveConfig(System.Object,System.String)
+  commentId: M:PluginAPI.Core.PluginHandler.SaveConfig(System.Object,System.String)
+  id: SaveConfig(System.Object,System.String)
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: SaveConfig(Object, String)
+  nameWithType: PluginHandler.SaveConfig(Object, String)
+  fullName: PluginAPI.Core.PluginHandler.SaveConfig(System.Object, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SaveConfig
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 188
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSaves the plugin config.\n"
+  example: []
+  syntax:
+    content: public void SaveConfig(object plugin, string configField)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The class location of config field.
+    - id: configField
+      type: System.String
+      description: The name of config field.
+    content.vb: Public Sub SaveConfig(plugin As Object, configField As String)
+  overload: PluginAPI.Core.PluginHandler.SaveConfig*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PluginHandler.#ctor(PluginAPI.Loader.Features.PluginDirectory,System.Object,System.Type,System.Type[])
+  commentId: M:PluginAPI.Core.PluginHandler.#ctor(PluginAPI.Loader.Features.PluginDirectory,System.Object,System.Type,System.Type[])
+  id: '#ctor(PluginAPI.Loader.Features.PluginDirectory,System.Object,System.Type,System.Type[])'
+  parent: PluginAPI.Core.PluginHandler
+  langs:
+  - csharp
+  - vb
+  name: PluginHandler(PluginDirectory, Object, Type, Type[])
+  nameWithType: PluginHandler.PluginHandler(PluginDirectory, Object, Type, Type[])
+  fullName: PluginAPI.Core.PluginHandler.PluginHandler(PluginAPI.Loader.Features.PluginDirectory, System.Object, System.Type, System.Type[])
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/PluginHandler.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/PluginHandler.cs
+    startLine: 213
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.PluginHandler\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public PluginHandler(PluginDirectory directory, object plugin, Type pluginType, Type[] types)
+    parameters:
+    - id: directory
+      type: PluginAPI.Loader.Features.PluginDirectory
+      description: The directory of plugin.
+    - id: plugin
+      type: System.Object
+      description: The plugin object.
+    - id: pluginType
+      type: System.Type
+      description: The type of plugin.
+    - id: types
+      type: System.Type[]
+      description: The all types in plugin.
+    content.vb: Public Sub New(directory As PluginDirectory, plugin As Object, pluginType As Type, types As Type())
+  overload: PluginAPI.Core.PluginHandler.#ctor*
+  nameWithType.vb: PluginHandler.PluginHandler(PluginDirectory, Object, Type, Type())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.PluginHandler.PluginHandler(PluginAPI.Loader.Features.PluginDirectory, System.Object, System.Type, System.Type())
+  name.vb: PluginHandler(PluginDirectory, Object, Type, Type())
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.PluginHandler.Get*
+  commentId: Overload:PluginAPI.Core.PluginHandler.Get
+  name: Get
+  nameWithType: PluginHandler.Get
+  fullName: PluginAPI.Core.PluginHandler.Get
+- uid: PluginAPI.Core.PluginHandler
+  commentId: T:PluginAPI.Core.PluginHandler
+  parent: PluginAPI.Core
+  name: PluginHandler
+  nameWithType: PluginHandler
+  fullName: PluginAPI.Core.PluginHandler
+- uid: PluginAPI.Core.PluginHandler.PluginName*
+  commentId: Overload:PluginAPI.Core.PluginHandler.PluginName
+  name: PluginName
+  nameWithType: PluginHandler.PluginName
+  fullName: PluginAPI.Core.PluginHandler.PluginName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Core.PluginHandler.PluginVersion*
+  commentId: Overload:PluginAPI.Core.PluginHandler.PluginVersion
+  name: PluginVersion
+  nameWithType: PluginHandler.PluginVersion
+  fullName: PluginAPI.Core.PluginHandler.PluginVersion
+- uid: PluginAPI.Core.PluginHandler.PluginDescription*
+  commentId: Overload:PluginAPI.Core.PluginHandler.PluginDescription
+  name: PluginDescription
+  nameWithType: PluginHandler.PluginDescription
+  fullName: PluginAPI.Core.PluginHandler.PluginDescription
+- uid: PluginAPI.Core.PluginHandler.PluginAuthor*
+  commentId: Overload:PluginAPI.Core.PluginHandler.PluginAuthor
+  name: PluginAuthor
+  nameWithType: PluginHandler.PluginAuthor
+  fullName: PluginAPI.Core.PluginHandler.PluginAuthor
+- uid: PluginAPI.Core.PluginHandler.PluginFilePath*
+  commentId: Overload:PluginAPI.Core.PluginHandler.PluginFilePath
+  name: PluginFilePath
+  nameWithType: PluginHandler.PluginFilePath
+  fullName: PluginAPI.Core.PluginHandler.PluginFilePath
+- uid: PluginAPI.Core.PluginHandler.PluginDirectoryPath*
+  commentId: Overload:PluginAPI.Core.PluginHandler.PluginDirectoryPath
+  name: PluginDirectoryPath
+  nameWithType: PluginHandler.PluginDirectoryPath
+  fullName: PluginAPI.Core.PluginHandler.PluginDirectoryPath
+- uid: PluginAPI.Core.PluginHandler.MainConfigPath*
+  commentId: Overload:PluginAPI.Core.PluginHandler.MainConfigPath
+  name: MainConfigPath
+  nameWithType: PluginHandler.MainConfigPath
+  fullName: PluginAPI.Core.PluginHandler.MainConfigPath
+- uid: PluginAPI.Core.PluginHandler.Unload*
+  commentId: Overload:PluginAPI.Core.PluginHandler.Unload
+  name: Unload
+  nameWithType: PluginHandler.Unload
+  fullName: PluginAPI.Core.PluginHandler.Unload
+- uid: PluginAPI.Core.PluginHandler.Load*
+  commentId: Overload:PluginAPI.Core.PluginHandler.Load
+  name: Load
+  nameWithType: PluginHandler.Load
+  fullName: PluginAPI.Core.PluginHandler.Load
+- uid: PluginAPI.Core.PluginHandler.LoadConfig*
+  commentId: Overload:PluginAPI.Core.PluginHandler.LoadConfig
+  name: LoadConfig
+  nameWithType: PluginHandler.LoadConfig
+  fullName: PluginAPI.Core.PluginHandler.LoadConfig
+- uid: PluginAPI.Core.PluginHandler.LoadDefaultConfig*
+  commentId: Overload:PluginAPI.Core.PluginHandler.LoadDefaultConfig
+  name: LoadDefaultConfig
+  nameWithType: PluginHandler.LoadDefaultConfig
+  fullName: PluginAPI.Core.PluginHandler.LoadDefaultConfig
+- uid: PluginAPI.Core.PluginHandler.SaveConfig*
+  commentId: Overload:PluginAPI.Core.PluginHandler.SaveConfig
+  name: SaveConfig
+  nameWithType: PluginHandler.SaveConfig
+  fullName: PluginAPI.Core.PluginHandler.SaveConfig
+- uid: PluginAPI.Core.PluginHandler.#ctor*
+  commentId: Overload:PluginAPI.Core.PluginHandler.#ctor
+  name: PluginHandler
+  nameWithType: PluginHandler.PluginHandler
+  fullName: PluginAPI.Core.PluginHandler.PluginHandler
+- uid: PluginAPI.Loader.Features.PluginDirectory
+  commentId: T:PluginAPI.Loader.Features.PluginDirectory
+  parent: PluginAPI.Loader.Features
+  name: PluginDirectory
+  nameWithType: PluginDirectory
+  fullName: PluginAPI.Loader.Features.PluginDirectory
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Type[]
+  isExternal: true
+  name: Type[]
+  nameWithType: Type[]
+  fullName: System.Type[]
+  nameWithType.vb: Type()
+  fullName.vb: System.Type()
+  name.vb: Type()
+  spec.csharp:
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PluginAPI.Loader.Features
+  commentId: N:PluginAPI.Loader.Features
+  name: PluginAPI.Loader.Features
+  nameWithType: PluginAPI.Loader.Features
+  fullName: PluginAPI.Loader.Features

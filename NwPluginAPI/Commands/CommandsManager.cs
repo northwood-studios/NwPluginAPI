@@ -74,7 +74,7 @@
 				QueryProcessor.DotCommandHandler.RegisterCommand(command.Object);
 
 			commands.Add(command.Object.Command, command);
-			Log.Info($"&7[{_commandHandlerToName[commandHandler]}&7]&r Registered command &6{command.Object.Command}&r in plugin &6{handler.PluginName}&r!");
+			Log.Debug($"&7[{_commandHandlerToName[commandHandler]}&7]&r Registered command &6{command.Object.Command}&r in plugin &6{handler.PluginName}&r!", Log.DebugMode);
 			return true;
 		}
 	}

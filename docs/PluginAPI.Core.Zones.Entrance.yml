@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Entrance
+  commentId: N:PluginAPI.Core.Zones.Entrance
+  id: PluginAPI.Core.Zones.Entrance
+  children:
+  - PluginAPI.Core.Zones.Entrance.EzRoom
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Zones.Entrance
+  nameWithType: PluginAPI.Core.Zones.Entrance
+  fullName: PluginAPI.Core.Zones.Entrance
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Zones.Entrance.EzRoom
+  commentId: T:PluginAPI.Core.Zones.Entrance.EzRoom
+  name: EzRoom
+  nameWithType: EzRoom
+  fullName: PluginAPI.Core.Zones.Entrance.EzRoom

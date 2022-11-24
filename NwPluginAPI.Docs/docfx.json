@@ -1,0 +1,77 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+            "files": [
+                "*.csproj"
+            ],
+            "cwd": ".",
+            "exclude": [
+                "**/obj/**",
+                "**/bin/**",
+                "_site/**"
+            ],
+            "src": "../NwPluginAPI"
+        }
+      ],
+      "dest": "../docs"
+    }
+  ],
+    "build": {
+      "globalMetadata": {
+        "_appTitle": "Nw Plugin API",
+        "_appName": "Nw Plugin API",
+        "_appLogoPath": "images/logo.jpg",
+        "_appFaviconPath": "images/favicon.ico",
+        "_appFooter": "Nw Plugin API",
+        "_copyrightFooter": "Northwood Studios @ 2022. All rights reserved.",
+        "_enableSearch": true,
+        "_enableNewTab": true
+      },
+        "template": [ "default", "templates/singulinkfx" ],
+        "content": [
+            {
+                "files": [
+                    "api/**.yml"
+                ],
+                "cwd": "obj"
+            },
+            {
+                "files": [
+                    "api/*.md",
+                    "articles/**.md",
+                    "toc.yml",
+                    "*.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [
+                    "images/**"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "dest": "../docs"
+    }
+}

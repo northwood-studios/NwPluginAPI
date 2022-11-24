@@ -1,0 +1,487 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Statistics.FastestRound
+  commentId: T:PluginAPI.Core.Statistics.FastestRound
+  id: Statistics.FastestRound
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Statistics.FastestRound.Duration
+  - PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+  - PluginAPI.Core.Statistics.FastestRound.Timestamp
+  langs:
+  - csharp
+  - vb
+  name: Statistics.FastestRound
+  nameWithType: Statistics.FastestRound
+  fullName: PluginAPI.Core.Statistics.FastestRound
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: FastestRound
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 45
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRepresents a fastest round.\n"
+  example: []
+  syntax:
+    content: public class FastestRound
+    content.vb: Public Class FastestRound
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+  commentId: P:PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+  id: LeadingTeam
+  parent: PluginAPI.Core.Statistics.FastestRound
+  langs:
+  - csharp
+  - vb
+  name: LeadingTeam
+  nameWithType: Statistics.FastestRound.LeadingTeam
+  fullName: PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LeadingTeam
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 47
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public RoundSummary.LeadingTeam LeadingTeam { get; }
+    parameters: []
+    return:
+      type: RoundSummary.LeadingTeam
+    content.vb: Public ReadOnly Property LeadingTeam As RoundSummary.LeadingTeam
+  overload: PluginAPI.Core.Statistics.FastestRound.LeadingTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.FastestRound.Duration
+  commentId: P:PluginAPI.Core.Statistics.FastestRound.Duration
+  id: Duration
+  parent: PluginAPI.Core.Statistics.FastestRound
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: Statistics.FastestRound.Duration
+  fullName: PluginAPI.Core.Statistics.FastestRound.Duration
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Duration
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 48
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public TimeSpan Duration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public ReadOnly Property Duration As TimeSpan
+  overload: PluginAPI.Core.Statistics.FastestRound.Duration*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.FastestRound.Timestamp
+  commentId: P:PluginAPI.Core.Statistics.FastestRound.Timestamp
+  id: Timestamp
+  parent: PluginAPI.Core.Statistics.FastestRound
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: Statistics.FastestRound.Timestamp
+  fullName: PluginAPI.Core.Statistics.FastestRound.Timestamp
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Timestamp
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 49
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public DateTime Timestamp { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property Timestamp As Date
+  overload: PluginAPI.Core.Statistics.FastestRound.Timestamp*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Statistics.FastestRound.LeadingTeam*
+  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+  name: LeadingTeam
+  nameWithType: Statistics.FastestRound.LeadingTeam
+  fullName: PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+- uid: RoundSummary.LeadingTeam
+  commentId: T:RoundSummary.LeadingTeam
+  isExternal: true
+  name: RoundSummary.LeadingTeam
+  nameWithType: RoundSummary.LeadingTeam
+  fullName: RoundSummary.LeadingTeam
+- uid: PluginAPI.Core.Statistics.FastestRound.Duration*
+  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.Duration
+  name: Duration
+  nameWithType: Statistics.FastestRound.Duration
+  fullName: PluginAPI.Core.Statistics.FastestRound.Duration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: PluginAPI.Core.Statistics.FastestRound.Timestamp*
+  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.Timestamp
+  name: Timestamp
+  nameWithType: Statistics.FastestRound.Timestamp
+  fullName: PluginAPI.Core.Statistics.FastestRound.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime

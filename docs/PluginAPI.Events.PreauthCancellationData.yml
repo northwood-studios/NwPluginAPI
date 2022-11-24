@@ -1,0 +1,923 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PreauthCancellationData
+  commentId: T:PluginAPI.Events.PreauthCancellationData
+  id: PreauthCancellationData
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PreauthCancellationData.Accept
+  - PluginAPI.Events.PreauthCancellationData.GenerateWriter(System.Boolean@)
+  - PluginAPI.Events.PreauthCancellationData.HandledManually
+  - PluginAPI.Events.PreauthCancellationData.IsCancelled
+  - PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
+  - PluginAPI.Events.PreauthCancellationData.Reject(RejectionReason,System.Boolean)
+  - PluginAPI.Events.PreauthCancellationData.Reject(System.String,System.Boolean)
+  - PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String,System.DateTime,System.Boolean)
+  - PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String,System.Int64,System.Boolean)
+  - PluginAPI.Events.PreauthCancellationData.RejectDelay(System.Byte,System.Boolean)
+  - PluginAPI.Events.PreauthCancellationData.RejectRedirect(System.UInt16,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: PreauthCancellationData
+  nameWithType: PreauthCancellationData
+  fullName: PluginAPI.Events.PreauthCancellationData
+  type: Struct
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PreauthCancellationData
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 19
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRepresents preauth event cancellation data.\n"
+  example: []
+  syntax:
+    content: 'public readonly struct PreauthCancellationData : IEventCancellation'
+    content.vb: >-
+      Public Structure PreauthCancellationData
+          Implements IEventCancellation
+  implements:
+  - PluginAPI.Events.IEventCancellation
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: PluginAPI.Events.PreauthCancellationData.IsCancelled
+  commentId: P:PluginAPI.Events.PreauthCancellationData.IsCancelled
+  id: IsCancelled
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: IsCancelled
+  nameWithType: PreauthCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PreauthCancellationData.IsCancelled
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsCancelled
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 22
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nDetermines whether event is cancelled.\n"
+  example: []
+  syntax:
+    content: public readonly bool IsCancelled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCancelled As Boolean
+  overload: PluginAPI.Events.PreauthCancellationData.IsCancelled*
+  implements:
+  - PluginAPI.Events.IEventCancellation.IsCancelled
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PreauthCancellationData.RejectDelay(System.Byte,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.RejectDelay(System.Byte,System.Boolean)
+  id: RejectDelay(System.Byte,System.Boolean)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: RejectDelay(Byte, Boolean)
+  nameWithType: PreauthCancellationData.RejectDelay(Byte, Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.RejectDelay(System.Byte, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RejectDelay
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nDelays the connection.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData RejectDelay(byte seconds, bool isForced)
+    parameters:
+    - id: seconds
+      type: System.Byte
+      description: The delay in seconds.
+    - id: isForced
+      type: System.Boolean
+      description: Indicates whether or not the player has to be rejected forcefully.
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function RejectDelay(seconds As Byte, isForced As Boolean) As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.RejectDelay*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.RejectRedirect(System.UInt16,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.RejectRedirect(System.UInt16,System.Boolean)
+  id: RejectRedirect(System.UInt16,System.Boolean)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: RejectRedirect(UInt16, Boolean)
+  nameWithType: PreauthCancellationData.RejectRedirect(UInt16, Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.RejectRedirect(System.UInt16, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RejectRedirect
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 54
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRejects the player and redirects them to another server port.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData RejectRedirect(ushort port, bool isForced)
+    parameters:
+    - id: port
+      type: System.UInt16
+      description: The new server port.
+    - id: isForced
+      type: System.Boolean
+      description: Indicates whether or not the player has to be rejected forcefully.
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function RejectRedirect(port As UShort, isForced As Boolean) As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.RejectRedirect*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String,System.DateTime,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String,System.DateTime,System.Boolean)
+  id: RejectBanned(System.String,System.DateTime,System.Boolean)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: RejectBanned(String, DateTime, Boolean)
+  nameWithType: PreauthCancellationData.RejectBanned(String, DateTime, Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String, System.DateTime, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RejectBanned
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 63
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRejects a player who&apos;s trying to authenticate.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData RejectBanned(string banReason, DateTime expiration, bool isForced)
+    parameters:
+    - id: banReason
+      type: System.String
+      description: The ban reason.
+    - id: expiration
+      type: System.DateTime
+      description: The ban expiration time.
+    - id: isForced
+      type: System.Boolean
+      description: Indicates whether or not the player has to be rejected forcefully.
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function RejectBanned(banReason As String, expiration As Date, isForced As Boolean) As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.RejectBanned*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String,System.Int64,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String,System.Int64,System.Boolean)
+  id: RejectBanned(System.String,System.Int64,System.Boolean)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: RejectBanned(String, Int64, Boolean)
+  nameWithType: PreauthCancellationData.RejectBanned(String, Int64, Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String, System.Int64, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RejectBanned
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 74
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRejects a player who&apos;s trying to authenticate.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData RejectBanned(string banReason, long expiration, bool isForced)
+    parameters:
+    - id: banReason
+      type: System.String
+      description: The ban reason.
+    - id: expiration
+      type: System.Int64
+      description: The ban expiration time in .NET Ticks.
+    - id: isForced
+      type: System.Boolean
+      description: Indicates whether or not the player has to be rejected forcefully.
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function RejectBanned(banReason As String, expiration As Long, isForced As Boolean) As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.RejectBanned*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.Reject(System.String,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.Reject(System.String,System.Boolean)
+  id: Reject(System.String,System.Boolean)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: Reject(String, Boolean)
+  nameWithType: PreauthCancellationData.Reject(String, Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.Reject(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Reject
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 88
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRejects a player who&apos;s trying to authenticate.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData Reject(string customReason, bool isForced)
+    parameters:
+    - id: customReason
+      type: System.String
+      description: The custom rejection reason.
+    - id: isForced
+      type: System.Boolean
+      description: Indicates whether the player has to be rejected forcefully or not.
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Reject(customReason As String, isForced As Boolean) As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.Reject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.Reject(RejectionReason,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.Reject(RejectionReason,System.Boolean)
+  id: Reject(RejectionReason,System.Boolean)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: Reject(RejectionReason, Boolean)
+  nameWithType: PreauthCancellationData.Reject(RejectionReason, Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.Reject(RejectionReason, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Reject
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 102
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRejects a player who&apos;s trying to authenticate.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData Reject(RejectionReason reason, bool isForced)
+    parameters:
+    - id: reason
+      type: RejectionReason
+      description: Rejection reason.
+    - id: isForced
+      type: System.Boolean
+      description: Indicates whether or not the player has to be rejected forcefully.
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Reject(reason As RejectionReason, isForced As Boolean) As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.Reject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
+  id: Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: Reject(NetDataWriter, Boolean)
+  nameWithType: PreauthCancellationData.Reject(NetDataWriter, Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Reject
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 123
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRejects a player who&apos;s trying to authenticate.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData Reject(NetDataWriter writer, bool isForced)
+    parameters:
+    - id: writer
+      type: LiteNetLib.Utils.NetDataWriter
+      description: The <xref href="LiteNetLib.Utils.NetDataWriter" data-throw-if-not-resolved="false"></xref> instance.
+    - id: isForced
+      type: System.Boolean
+      description: Indicates whether or not the player has to be rejected forcefully or not.
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Reject(writer As NetDataWriter, isForced As Boolean) As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.Reject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.Accept
+  commentId: M:PluginAPI.Events.PreauthCancellationData.Accept
+  id: Accept
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: Accept()
+  nameWithType: PreauthCancellationData.Accept()
+  fullName: PluginAPI.Events.PreauthCancellationData.Accept()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Accept
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 129
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nAccepts the connection.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData Accept()
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function Accept As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.Accept*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.HandledManually
+  commentId: M:PluginAPI.Events.PreauthCancellationData.HandledManually
+  id: HandledManually
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: HandledManually()
+  nameWithType: PreauthCancellationData.HandledManually()
+  fullName: PluginAPI.Events.PreauthCancellationData.HandledManually()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: HandledManually
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 136
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nHandles the connection manually.\n"
+  example: []
+  syntax:
+    content: public static PreauthCancellationData HandledManually()
+    return:
+      type: PluginAPI.Events.PreauthCancellationData
+      description: The <xref href="PluginAPI.Events.PreauthCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function HandledManually As PreauthCancellationData
+  overload: PluginAPI.Events.PreauthCancellationData.HandledManually*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PreauthCancellationData.GenerateWriter(System.Boolean@)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.GenerateWriter(System.Boolean@)
+  id: GenerateWriter(System.Boolean@)
+  parent: PluginAPI.Events.PreauthCancellationData
+  langs:
+  - csharp
+  - vb
+  name: GenerateWriter(out Boolean)
+  nameWithType: PreauthCancellationData.GenerateWriter(out Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.GenerateWriter(out System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GenerateWriter
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 159
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nGenerates a network writer for the rejection packet.\n"
+  example: []
+  syntax:
+    content: public readonly NetDataWriter GenerateWriter(out bool forced)
+    parameters:
+    - id: forced
+      type: System.Boolean
+      description: Indicates whether or not the rejection is forced.
+    return:
+      type: LiteNetLib.Utils.NetDataWriter
+      description: The generated network writer.
+    content.vb: Public Function GenerateWriter(ByRef forced As Boolean) As NetDataWriter
+  overload: PluginAPI.Events.PreauthCancellationData.GenerateWriter*
+  nameWithType.vb: PreauthCancellationData.GenerateWriter(ByRef Boolean)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Events.PreauthCancellationData.GenerateWriter(ByRef System.Boolean)
+  name.vb: GenerateWriter(ByRef Boolean)
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: PluginAPI.Events.IEventCancellation
+  commentId: T:PluginAPI.Events.IEventCancellation
+  parent: PluginAPI.Events
+  name: IEventCancellation
+  nameWithType: IEventCancellation
+  fullName: PluginAPI.Events.IEventCancellation
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PreauthCancellationData.IsCancelled*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.IsCancelled
+  name: IsCancelled
+  nameWithType: PreauthCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PreauthCancellationData.IsCancelled
+- uid: PluginAPI.Events.IEventCancellation.IsCancelled
+  commentId: P:PluginAPI.Events.IEventCancellation.IsCancelled
+  parent: PluginAPI.Events.IEventCancellation
+  name: IsCancelled
+  nameWithType: IEventCancellation.IsCancelled
+  fullName: PluginAPI.Events.IEventCancellation.IsCancelled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Events.PreauthCancellationData
+  commentId: T:PluginAPI.Events.PreauthCancellationData
+  parent: PluginAPI.Events
+  name: PreauthCancellationData
+  nameWithType: PreauthCancellationData
+  fullName: PluginAPI.Events.PreauthCancellationData
+- uid: PluginAPI.Events.PreauthCancellationData.RejectDelay*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.RejectDelay
+  name: RejectDelay
+  nameWithType: PreauthCancellationData.RejectDelay
+  fullName: PluginAPI.Events.PreauthCancellationData.RejectDelay
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: PluginAPI.Events.PreauthCancellationData.RejectRedirect*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.RejectRedirect
+  name: RejectRedirect
+  nameWithType: PreauthCancellationData.RejectRedirect
+  fullName: PluginAPI.Events.PreauthCancellationData.RejectRedirect
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: PluginAPI.Events.PreauthCancellationData.RejectBanned*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.RejectBanned
+  name: RejectBanned
+  nameWithType: PreauthCancellationData.RejectBanned
+  fullName: PluginAPI.Events.PreauthCancellationData.RejectBanned
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: PluginAPI.Events.PreauthCancellationData.Reject*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.Reject
+  name: Reject
+  nameWithType: PreauthCancellationData.Reject
+  fullName: PluginAPI.Events.PreauthCancellationData.Reject
+- uid: RejectionReason
+  commentId: T:RejectionReason
+  isExternal: true
+  name: RejectionReason
+  nameWithType: RejectionReason
+  fullName: RejectionReason
+- uid: LiteNetLib.Utils.NetDataWriter
+  commentId: T:LiteNetLib.Utils.NetDataWriter
+  parent: LiteNetLib.Utils
+  isExternal: true
+  name: NetDataWriter
+  nameWithType: NetDataWriter
+  fullName: LiteNetLib.Utils.NetDataWriter
+- uid: LiteNetLib.Utils
+  commentId: N:LiteNetLib.Utils
+  isExternal: true
+  name: LiteNetLib.Utils
+  nameWithType: LiteNetLib.Utils
+  fullName: LiteNetLib.Utils
+- uid: PluginAPI.Events.PreauthCancellationData.Accept*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.Accept
+  name: Accept
+  nameWithType: PreauthCancellationData.Accept
+  fullName: PluginAPI.Events.PreauthCancellationData.Accept
+- uid: PluginAPI.Events.PreauthCancellationData.HandledManually*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.HandledManually
+  name: HandledManually
+  nameWithType: PreauthCancellationData.HandledManually
+  fullName: PluginAPI.Events.PreauthCancellationData.HandledManually
+- uid: PluginAPI.Events.PreauthCancellationData.GenerateWriter*
+  commentId: Overload:PluginAPI.Events.PreauthCancellationData.GenerateWriter
+  name: GenerateWriter
+  nameWithType: PreauthCancellationData.GenerateWriter
+  fullName: PluginAPI.Events.PreauthCancellationData.GenerateWriter

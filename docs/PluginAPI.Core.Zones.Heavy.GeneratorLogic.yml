@@ -1,0 +1,612 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  commentId: T:PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  id: GeneratorLogic
+  parent: PluginAPI.Core.Zones.Heavy
+  children:
+  - PluginAPI.Core.Zones.Heavy.GeneratorLogic.#ctor(PluginAPI.Core.Zones.Heavy.Generator)
+  - PluginAPI.Core.Zones.Heavy.GeneratorLogic.Generator
+  - PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy
+  - PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate
+  - PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction(PluginAPI.Core.Player)
+  - PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate
+  langs:
+  - csharp
+  - vb
+  name: GeneratorLogic
+  nameWithType: GeneratorLogic
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GeneratorLogic
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+    startLine: 5
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nHandles a generator&apos;s logic.\n"
+  example: []
+  syntax:
+    content: public class GeneratorLogic
+    content.vb: Public Class GeneratorLogic
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.Generator
+  commentId: F:PluginAPI.Core.Zones.Heavy.GeneratorLogic.Generator
+  id: Generator
+  parent: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  langs:
+  - csharp
+  - vb
+  name: Generator
+  nameWithType: GeneratorLogic.Generator
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.Generator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Generator
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nThe generator.\n"
+  example: []
+  syntax:
+    content: public readonly Generator Generator
+    return:
+      type: PluginAPI.Core.Zones.Heavy.Generator
+    content.vb: Public ReadOnly Generator As Generator
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate
+  commentId: M:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate
+  id: OnUpdate
+  parent: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: GeneratorLogic.OnUpdate()
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnUpdate
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+    startLine: 12
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  syntax:
+    content: public virtual bool OnUpdate()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function OnUpdate As Boolean
+  overload: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate
+  commentId: M:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate
+  id: OnLateUpdate
+  parent: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  langs:
+  - csharp
+  - vb
+  name: OnLateUpdate()
+  nameWithType: GeneratorLogic.OnLateUpdate()
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnLateUpdate
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+    startLine: 14
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  syntax:
+    content: public virtual bool OnLateUpdate()
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function OnLateUpdate As Boolean
+  overload: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction(PluginAPI.Core.Player)
+  commentId: M:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction(PluginAPI.Core.Player)
+  id: OnPlayerInteraction(PluginAPI.Core.Player)
+  parent: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  langs:
+  - csharp
+  - vb
+  name: OnPlayerInteraction(Player)
+  nameWithType: GeneratorLogic.OnPlayerInteraction(Player)
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction(PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnPlayerInteraction
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+    startLine: 16
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  syntax:
+    content: public virtual bool OnPlayerInteraction(Player plr)
+    parameters:
+    - id: plr
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Function OnPlayerInteraction(plr As Player) As Boolean
+  overload: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy
+  commentId: M:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy
+  id: OnDestroy
+  parent: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: GeneratorLogic.OnDestroy()
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnDestroy
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+    startLine: 18
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  syntax:
+    content: public virtual void OnDestroy()
+    content.vb: Public Overridable Sub OnDestroy
+  overload: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.#ctor(PluginAPI.Core.Zones.Heavy.Generator)
+  commentId: M:PluginAPI.Core.Zones.Heavy.GeneratorLogic.#ctor(PluginAPI.Core.Zones.Heavy.Generator)
+  id: '#ctor(PluginAPI.Core.Zones.Heavy.Generator)'
+  parent: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  langs:
+  - csharp
+  - vb
+  name: GeneratorLogic(Generator)
+  nameWithType: GeneratorLogic.GeneratorLogic(Generator)
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.GeneratorLogic(PluginAPI.Core.Zones.Heavy.Generator)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
+    startLine: 24
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Zones.Heavy
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Zones.Heavy.GeneratorLogic\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public GeneratorLogic(Generator generator)
+    parameters:
+    - id: generator
+      type: PluginAPI.Core.Zones.Heavy.Generator
+      description: The generator.
+    content.vb: Public Sub New(generator As Generator)
+  overload: PluginAPI.Core.Zones.Heavy.GeneratorLogic.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core.Zones.Heavy
+  commentId: N:PluginAPI.Core.Zones.Heavy
+  name: PluginAPI.Core.Zones.Heavy
+  nameWithType: PluginAPI.Core.Zones.Heavy
+  fullName: PluginAPI.Core.Zones.Heavy
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Zones.Heavy.Generator
+  commentId: T:PluginAPI.Core.Zones.Heavy.Generator
+  parent: PluginAPI.Core.Zones.Heavy
+  name: Generator
+  nameWithType: Generator
+  fullName: PluginAPI.Core.Zones.Heavy.Generator
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate
+  name: OnUpdate
+  nameWithType: GeneratorLogic.OnUpdate
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnUpdate
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate
+  name: OnLateUpdate
+  nameWithType: GeneratorLogic.OnLateUpdate
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnLateUpdate
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction
+  name: OnPlayerInteraction
+  nameWithType: GeneratorLogic.OnPlayerInteraction
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnPlayerInteraction
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy
+  name: OnDestroy
+  nameWithType: GeneratorLogic.OnDestroy
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.OnDestroy
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  commentId: T:PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  name: GeneratorLogic
+  nameWithType: GeneratorLogic
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic.#ctor*
+  commentId: Overload:PluginAPI.Core.Zones.Heavy.GeneratorLogic.#ctor
+  name: GeneratorLogic
+  nameWithType: GeneratorLogic.GeneratorLogic
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic.GeneratorLogic

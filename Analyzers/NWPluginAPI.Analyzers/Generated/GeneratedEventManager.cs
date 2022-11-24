@@ -151,7 +151,8 @@ public static class EventManager
 			new EventParameter("System.Int32", false, "readerStartPosition")) },
 		{ 40, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("CustomPlayerEffects.StatusEffectBase", false, "effect")) },
+			new EventParameter("CustomPlayerEffects.StatusEffectBase", false, "effect"),
+			new EventParameter("System.Single", false, "duration")) },
 		{ 41, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("InventorySystem.Items.Firearms.Firearm", false, "firearm")) },

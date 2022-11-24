@@ -1,0 +1,751 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Warhead
+  commentId: T:PluginAPI.Core.Warhead
+  id: Warhead
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Warhead.Detonate
+  - PluginAPI.Core.Warhead.DetonationTime
+  - PluginAPI.Core.Warhead.IsDetonated
+  - PluginAPI.Core.Warhead.IsDetonationInProgress
+  - PluginAPI.Core.Warhead.LeverStatus
+  - PluginAPI.Core.Warhead.Shake
+  - PluginAPI.Core.Warhead.Start(System.Boolean,System.Boolean)
+  - PluginAPI.Core.Warhead.Stop
+  - PluginAPI.Core.Warhead.WarheadUnlocked
+  langs:
+  - csharp
+  - vb
+  name: Warhead
+  nameWithType: Warhead
+  fullName: PluginAPI.Core.Warhead
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Warhead
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 5
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nManages the warhead.\n"
+  example: []
+  syntax:
+    content: public static class Warhead
+    content.vb: Public Module Warhead
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: PluginAPI.Core.Warhead.LeverStatus
+  commentId: P:PluginAPI.Core.Warhead.LeverStatus
+  id: LeverStatus
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: LeverStatus
+  nameWithType: Warhead.LeverStatus
+  fullName: PluginAPI.Core.Warhead.LeverStatus
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LeverStatus
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets a value indicating whether or not the lever in the warhead room is enabled.\n"
+  example: []
+  syntax:
+    content: public static bool LeverStatus { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property LeverStatus As Boolean
+  overload: PluginAPI.Core.Warhead.LeverStatus*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Warhead.WarheadUnlocked
+  commentId: P:PluginAPI.Core.Warhead.WarheadUnlocked
+  id: WarheadUnlocked
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: WarheadUnlocked
+  nameWithType: Warhead.WarheadUnlocked
+  fullName: PluginAPI.Core.Warhead.WarheadUnlocked
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: WarheadUnlocked
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 19
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets a value indicating whether or not the button in outside nuke panel is unlocked.\n"
+  example: []
+  syntax:
+    content: public static bool WarheadUnlocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property WarheadUnlocked As Boolean
+  overload: PluginAPI.Core.Warhead.WarheadUnlocked*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Warhead.IsDetonated
+  commentId: P:PluginAPI.Core.Warhead.IsDetonated
+  id: IsDetonated
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: IsDetonated
+  nameWithType: Warhead.IsDetonated
+  fullName: PluginAPI.Core.Warhead.IsDetonated
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsDetonated
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 28
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets a value indicating whether or not the warhead is detonated.\n"
+  example: []
+  syntax:
+    content: public static bool IsDetonated { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsDetonated As Boolean
+  overload: PluginAPI.Core.Warhead.IsDetonated*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Warhead.IsDetonationInProgress
+  commentId: P:PluginAPI.Core.Warhead.IsDetonationInProgress
+  id: IsDetonationInProgress
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: IsDetonationInProgress
+  nameWithType: Warhead.IsDetonationInProgress
+  fullName: PluginAPI.Core.Warhead.IsDetonationInProgress
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsDetonationInProgress
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets a value indicating whether or not the warhead detonation is in progress.\n"
+  example: []
+  syntax:
+    content: public static bool IsDetonationInProgress { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsDetonationInProgress As Boolean
+  overload: PluginAPI.Core.Warhead.IsDetonationInProgress*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Warhead.DetonationTime
+  commentId: P:PluginAPI.Core.Warhead.DetonationTime
+  id: DetonationTime
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: DetonationTime
+  nameWithType: Warhead.DetonationTime
+  fullName: PluginAPI.Core.Warhead.DetonationTime
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DetonationTime
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets a time of detonation.\n"
+  example: []
+  syntax:
+    content: public static float DetonationTime { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared Property DetonationTime As Single
+  overload: PluginAPI.Core.Warhead.DetonationTime*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Warhead.Start(System.Boolean,System.Boolean)
+  commentId: M:PluginAPI.Core.Warhead.Start(System.Boolean,System.Boolean)
+  id: Start(System.Boolean,System.Boolean)
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: Start(Boolean, Boolean)
+  nameWithType: Warhead.Start(Boolean, Boolean)
+  fullName: PluginAPI.Core.Warhead.Start(System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Start
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 50
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nStarts the detonation countdown.\n"
+  example: []
+  syntax:
+    content: public static void Start(bool isAutomatic = true, bool suppressSubtitles = false)
+    parameters:
+    - id: isAutomatic
+      type: System.Boolean
+      description: Determines whether the detonation is automatic.
+    - id: suppressSubtitles
+      type: System.Boolean
+      description: Determines whether subtitles should be suppressed.
+    content.vb: Public Shared Sub Start(isAutomatic As Boolean = True, suppressSubtitles As Boolean = False)
+  overload: PluginAPI.Core.Warhead.Start*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Warhead.Stop
+  commentId: M:PluginAPI.Core.Warhead.Stop
+  id: Stop
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Warhead.Stop()
+  fullName: PluginAPI.Core.Warhead.Stop()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Stop
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 59
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nStops the detonation countdown.\n"
+  example: []
+  syntax:
+    content: public static void Stop()
+    content.vb: Public Shared Sub Stop
+  overload: PluginAPI.Core.Warhead.Stop*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Warhead.Detonate
+  commentId: M:PluginAPI.Core.Warhead.Detonate
+  id: Detonate
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: Detonate()
+  nameWithType: Warhead.Detonate()
+  fullName: PluginAPI.Core.Warhead.Detonate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Detonate
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 64
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nDetonate warhead.\n"
+  example: []
+  syntax:
+    content: public static void Detonate()
+    content.vb: Public Shared Sub Detonate
+  overload: PluginAPI.Core.Warhead.Detonate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Warhead.Shake
+  commentId: M:PluginAPI.Core.Warhead.Shake
+  id: Shake
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: Shake()
+  nameWithType: Warhead.Shake()
+  fullName: PluginAPI.Core.Warhead.Shake()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Shake
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 71
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nShow the shake effect to all players.\n"
+  example: []
+  syntax:
+    content: public static void Shake()
+    content.vb: Public Shared Sub Shake
+  overload: PluginAPI.Core.Warhead.Shake*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Warhead.LeverStatus*
+  commentId: Overload:PluginAPI.Core.Warhead.LeverStatus
+  name: LeverStatus
+  nameWithType: Warhead.LeverStatus
+  fullName: PluginAPI.Core.Warhead.LeverStatus
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.Warhead.WarheadUnlocked*
+  commentId: Overload:PluginAPI.Core.Warhead.WarheadUnlocked
+  name: WarheadUnlocked
+  nameWithType: Warhead.WarheadUnlocked
+  fullName: PluginAPI.Core.Warhead.WarheadUnlocked
+- uid: PluginAPI.Core.Warhead.IsDetonated*
+  commentId: Overload:PluginAPI.Core.Warhead.IsDetonated
+  name: IsDetonated
+  nameWithType: Warhead.IsDetonated
+  fullName: PluginAPI.Core.Warhead.IsDetonated
+- uid: PluginAPI.Core.Warhead.IsDetonationInProgress*
+  commentId: Overload:PluginAPI.Core.Warhead.IsDetonationInProgress
+  name: IsDetonationInProgress
+  nameWithType: Warhead.IsDetonationInProgress
+  fullName: PluginAPI.Core.Warhead.IsDetonationInProgress
+- uid: PluginAPI.Core.Warhead.DetonationTime*
+  commentId: Overload:PluginAPI.Core.Warhead.DetonationTime
+  name: DetonationTime
+  nameWithType: Warhead.DetonationTime
+  fullName: PluginAPI.Core.Warhead.DetonationTime
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Core.Warhead.Start*
+  commentId: Overload:PluginAPI.Core.Warhead.Start
+  name: Start
+  nameWithType: Warhead.Start
+  fullName: PluginAPI.Core.Warhead.Start
+- uid: PluginAPI.Core.Warhead.Stop*
+  commentId: Overload:PluginAPI.Core.Warhead.Stop
+  name: Stop
+  nameWithType: Warhead.Stop
+  fullName: PluginAPI.Core.Warhead.Stop
+- uid: PluginAPI.Core.Warhead.Detonate*
+  commentId: Overload:PluginAPI.Core.Warhead.Detonate
+  name: Detonate
+  nameWithType: Warhead.Detonate
+  fullName: PluginAPI.Core.Warhead.Detonate
+- uid: PluginAPI.Core.Warhead.Shake*
+  commentId: Overload:PluginAPI.Core.Warhead.Shake
+  name: Shake
+  nameWithType: Warhead.Shake
+  fullName: PluginAPI.Core.Warhead.Shake

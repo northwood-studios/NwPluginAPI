@@ -1,0 +1,213 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Enums.LogType
+  commentId: T:PluginAPI.Enums.LogType
+  id: LogType
+  parent: PluginAPI.Enums
+  children:
+  - PluginAPI.Enums.LogType.Debug
+  - PluginAPI.Enums.LogType.Error
+  - PluginAPI.Enums.LogType.Info
+  - PluginAPI.Enums.LogType.Raw
+  - PluginAPI.Enums.LogType.Warning
+  langs:
+  - csharp
+  - vb
+  name: LogType
+  nameWithType: LogType
+  fullName: PluginAPI.Enums.LogType
+  type: Enum
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LogType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LogType
+    path: ../NwPluginAPI/Enums/LogType.cs
+    startLine: 5
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nRepresents log types.\n"
+  example: []
+  syntax:
+    content: 'public enum LogType : byte'
+    content.vb: Public Enum LogType As Byte
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PluginAPI.Enums.LogType.Info
+  commentId: F:PluginAPI.Enums.LogType.Info
+  id: Info
+  parent: PluginAPI.Enums.LogType
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: LogType.Info
+  fullName: PluginAPI.Enums.LogType.Info
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LogType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Info
+    path: ../NwPluginAPI/Enums/LogType.cs
+    startLine: 7
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Info = 0
+    return:
+      type: PluginAPI.Enums.LogType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.LogType.Warning
+  commentId: F:PluginAPI.Enums.LogType.Warning
+  id: Warning
+  parent: PluginAPI.Enums.LogType
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: LogType.Warning
+  fullName: PluginAPI.Enums.LogType.Warning
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LogType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Warning
+    path: ../NwPluginAPI/Enums/LogType.cs
+    startLine: 8
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Warning = 1
+    return:
+      type: PluginAPI.Enums.LogType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.LogType.Error
+  commentId: F:PluginAPI.Enums.LogType.Error
+  id: Error
+  parent: PluginAPI.Enums.LogType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: LogType.Error
+  fullName: PluginAPI.Enums.LogType.Error
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LogType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Error
+    path: ../NwPluginAPI/Enums/LogType.cs
+    startLine: 9
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Error = 2
+    return:
+      type: PluginAPI.Enums.LogType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.LogType.Debug
+  commentId: F:PluginAPI.Enums.LogType.Debug
+  id: Debug
+  parent: PluginAPI.Enums.LogType
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: LogType.Debug
+  fullName: PluginAPI.Enums.LogType.Debug
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LogType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Debug
+    path: ../NwPluginAPI/Enums/LogType.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Debug = 3
+    return:
+      type: PluginAPI.Enums.LogType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.LogType.Raw
+  commentId: F:PluginAPI.Enums.LogType.Raw
+  id: Raw
+  parent: PluginAPI.Enums.LogType
+  langs:
+  - csharp
+  - vb
+  name: Raw
+  nameWithType: LogType.Raw
+  fullName: PluginAPI.Enums.LogType.Raw
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LogType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Raw
+    path: ../NwPluginAPI/Enums/LogType.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Raw = 4
+    return:
+      type: PluginAPI.Enums.LogType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Enums.LogType
+  commentId: T:PluginAPI.Enums.LogType
+  parent: PluginAPI.Enums
+  name: LogType
+  nameWithType: LogType
+  fullName: PluginAPI.Enums.LogType

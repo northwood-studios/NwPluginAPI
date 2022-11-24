@@ -1,0 +1,899 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Factories.Factory`1
+  commentId: T:PluginAPI.Core.Factories.Factory`1
+  id: Factory`1
+  parent: PluginAPI.Core.Factories
+  children:
+  - PluginAPI.Core.Factories.Factory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  - PluginAPI.Core.Factories.Factory`1.Get
+  - PluginAPI.Core.Factories.Factory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  langs:
+  - csharp
+  - vb
+  name: Factory<T>
+  nameWithType: Factory<T>
+  fullName: PluginAPI.Core.Factories.Factory<T>
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Factories/Factory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Factory
+    path: ../NwPluginAPI/Core/Factories/Factory.cs
+    startLine: 9
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Factories
+  summary: "\nFactory for entities.\n"
+  example: []
+  syntax:
+    content: 'public class Factory<T> : IEntityFactory<T> where T : IEntity'
+    typeParameters:
+    - id: T
+      description: The entity type.
+    content.vb: >-
+      Public Class Factory(Of T As IEntity)
+          Implements IEntityFactory(Of T)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - PluginAPI.Core.Factories.PlayerFactory
+  implements:
+  - PluginAPI.Core.Factories.IEntityFactory{{T}}
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: Factory(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T)
+  name.vb: Factory(Of T)
+- uid: PluginAPI.Core.Factories.Factory`1.Get
+  commentId: M:PluginAPI.Core.Factories.Factory`1.Get
+  id: Get
+  parent: PluginAPI.Core.Factories.Factory`1
+  langs:
+  - csharp
+  - vb
+  name: Get()
+  nameWithType: Factory<T>.Get()
+  fullName: PluginAPI.Core.Factories.Factory<T>.Get()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Factories/Factory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Factories/Factory.cs
+    startLine: 17
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Factories
+  summary: "\nGets all entities stored in factory.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<T> Get()
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: List of all entities.
+    content.vb: Public Function Get As IEnumerable(Of T)
+  overload: PluginAPI.Core.Factories.Factory`1.Get*
+  implements:
+  - PluginAPI.Core.Factories.IEntityFactory{{T}}.Get
+  nameWithType.vb: Factory(Of T).Get()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).Get()
+- uid: PluginAPI.Core.Factories.Factory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Factories.Factory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  id: Create(PluginAPI.Core.Interfaces.IGameComponent)
+  parent: PluginAPI.Core.Factories.Factory`1
+  langs:
+  - csharp
+  - vb
+  name: Create(IGameComponent)
+  nameWithType: Factory<T>.Create(IGameComponent)
+  fullName: PluginAPI.Core.Factories.Factory<T>.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Factories/Factory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Create
+    path: ../NwPluginAPI/Core/Factories/Factory.cs
+    startLine: 24
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Factories
+  summary: "\nCreates new entity.\n"
+  example: []
+  syntax:
+    content: public virtual T Create(IGameComponent component)
+    parameters:
+    - id: component
+      type: PluginAPI.Core.Interfaces.IGameComponent
+      description: The game component
+    return:
+      type: '{T}'
+      description: Entity.
+    content.vb: Public Overridable Function Create(component As IGameComponent) As T
+  overload: PluginAPI.Core.Factories.Factory`1.Create*
+  implements:
+  - PluginAPI.Core.Factories.IEntityFactory{{T}}.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  nameWithType.vb: Factory(Of T).Create(IGameComponent)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).Create(PluginAPI.Core.Interfaces.IGameComponent)
+- uid: PluginAPI.Core.Factories.Factory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Factories.Factory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  id: GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  parent: PluginAPI.Core.Factories.Factory`1
+  langs:
+  - csharp
+  - vb
+  name: GetOrAdd(IGameComponent)
+  nameWithType: Factory<T>.GetOrAdd(IGameComponent)
+  fullName: PluginAPI.Core.Factories.Factory<T>.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Factories/Factory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetOrAdd
+    path: ../NwPluginAPI/Core/Factories/Factory.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Factories
+  summary: "\nGets entity from factory.\n"
+  example: []
+  syntax:
+    content: public T GetOrAdd(IGameComponent component)
+    parameters:
+    - id: component
+      type: PluginAPI.Core.Interfaces.IGameComponent
+      description: The game component.
+    return:
+      type: '{T}'
+      description: Entity.
+    content.vb: Public Function GetOrAdd(component As IGameComponent) As T
+  overload: PluginAPI.Core.Factories.Factory`1.GetOrAdd*
+  implements:
+  - PluginAPI.Core.Factories.IEntityFactory{{T}}.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  nameWithType.vb: Factory(Of T).GetOrAdd(IGameComponent)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+references:
+- uid: PluginAPI.Core.Factories
+  commentId: N:PluginAPI.Core.Factories
+  name: PluginAPI.Core.Factories
+  nameWithType: PluginAPI.Core.Factories
+  fullName: PluginAPI.Core.Factories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Core.Factories.IEntityFactory{{T}}
+  commentId: T:PluginAPI.Core.Factories.IEntityFactory{`0}
+  parent: PluginAPI.Core.Factories
+  definition: PluginAPI.Core.Factories.IEntityFactory`1
+  name: IEntityFactory<T>
+  nameWithType: IEntityFactory<T>
+  fullName: PluginAPI.Core.Factories.IEntityFactory<T>
+  nameWithType.vb: IEntityFactory(Of T)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of T)
+  name.vb: IEntityFactory(Of T)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: PluginAPI.Core.Factories.IEntityFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: PluginAPI.Core.Factories.IEntityFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Factories.IEntityFactory`1
+  commentId: T:PluginAPI.Core.Factories.IEntityFactory`1
+  name: IEntityFactory<TEntity>
+  nameWithType: IEntityFactory<TEntity>
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>
+  nameWithType.vb: IEntityFactory(Of TEntity)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity)
+  name.vb: IEntityFactory(Of TEntity)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: PluginAPI.Core.Factories.IEntityFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: PluginAPI.Core.Factories.IEntityFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Factories.Factory`1.Get*
+  commentId: Overload:PluginAPI.Core.Factories.Factory`1.Get
+  name: Get
+  nameWithType: Factory<T>.Get
+  fullName: PluginAPI.Core.Factories.Factory<T>.Get
+  nameWithType.vb: Factory(Of T).Get
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).Get
+- uid: PluginAPI.Core.Factories.IEntityFactory{{T}}.Get
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory{`0}.Get
+  parent: PluginAPI.Core.Factories.IEntityFactory{{T}}
+  definition: PluginAPI.Core.Factories.IEntityFactory`1.Get
+  name: Get()
+  nameWithType: IEntityFactory<T>.Get()
+  fullName: PluginAPI.Core.Factories.IEntityFactory<T>.Get()
+  nameWithType.vb: IEntityFactory(Of T).Get()
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of T).Get()
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Get
+    name: Get
+    nameWithType: IEntityFactory<T>.Get
+    fullName: PluginAPI.Core.Factories.IEntityFactory<T>.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Get
+    name: Get
+    nameWithType: IEntityFactory(Of T).Get
+    fullName: PluginAPI.Core.Factories.IEntityFactory(Of T).Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Factories.IEntityFactory`1.Get
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.Get
+  name: Get()
+  nameWithType: IEntityFactory<TEntity>.Get()
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.Get()
+  nameWithType.vb: IEntityFactory(Of TEntity).Get()
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).Get()
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Get
+    name: Get
+    nameWithType: IEntityFactory<TEntity>.Get
+    fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Get
+    name: Get
+    nameWithType: IEntityFactory(Of TEntity).Get
+    fullName: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.Factories.Factory`1.Create*
+  commentId: Overload:PluginAPI.Core.Factories.Factory`1.Create
+  name: Create
+  nameWithType: Factory<T>.Create
+  fullName: PluginAPI.Core.Factories.Factory<T>.Create
+  nameWithType.vb: Factory(Of T).Create
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).Create
+- uid: PluginAPI.Core.Factories.IEntityFactory{{T}}.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory{`0}.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  parent: PluginAPI.Core.Factories.IEntityFactory{{T}}
+  definition: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  name: Create(IGameComponent)
+  nameWithType: IEntityFactory<T>.Create(IGameComponent)
+  fullName: PluginAPI.Core.Factories.IEntityFactory<T>.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  nameWithType.vb: IEntityFactory(Of T).Create(IGameComponent)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of T).Create(PluginAPI.Core.Interfaces.IGameComponent)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+    name: Create
+    nameWithType: IEntityFactory<T>.Create
+    fullName: PluginAPI.Core.Factories.IEntityFactory<T>.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+    name: Create
+    nameWithType: IEntityFactory(Of T).Create
+    fullName: PluginAPI.Core.Factories.IEntityFactory(Of T).Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Interfaces.IGameComponent
+  commentId: T:PluginAPI.Core.Interfaces.IGameComponent
+  parent: PluginAPI.Core.Interfaces
+  name: IGameComponent
+  nameWithType: IGameComponent
+  fullName: PluginAPI.Core.Interfaces.IGameComponent
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  name: Create(IGameComponent)
+  nameWithType: IEntityFactory<TEntity>.Create(IGameComponent)
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  nameWithType.vb: IEntityFactory(Of TEntity).Create(IGameComponent)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).Create(PluginAPI.Core.Interfaces.IGameComponent)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+    name: Create
+    nameWithType: IEntityFactory<TEntity>.Create
+    fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+    name: Create
+    nameWithType: IEntityFactory(Of TEntity).Create
+    fullName: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Interfaces
+  commentId: N:PluginAPI.Core.Interfaces
+  name: PluginAPI.Core.Interfaces
+  nameWithType: PluginAPI.Core.Interfaces
+  fullName: PluginAPI.Core.Interfaces
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: PluginAPI.Core.Factories.Factory`1.GetOrAdd*
+  commentId: Overload:PluginAPI.Core.Factories.Factory`1.GetOrAdd
+  name: GetOrAdd
+  nameWithType: Factory<T>.GetOrAdd
+  fullName: PluginAPI.Core.Factories.Factory<T>.GetOrAdd
+  nameWithType.vb: Factory(Of T).GetOrAdd
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).GetOrAdd
+- uid: PluginAPI.Core.Factories.IEntityFactory{{T}}.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory{`0}.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  parent: PluginAPI.Core.Factories.IEntityFactory{{T}}
+  definition: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  name: GetOrAdd(IGameComponent)
+  nameWithType: IEntityFactory<T>.GetOrAdd(IGameComponent)
+  fullName: PluginAPI.Core.Factories.IEntityFactory<T>.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  nameWithType.vb: IEntityFactory(Of T).GetOrAdd(IGameComponent)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of T).GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+    name: GetOrAdd
+    nameWithType: IEntityFactory<T>.GetOrAdd
+    fullName: PluginAPI.Core.Factories.IEntityFactory<T>.GetOrAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+    name: GetOrAdd
+    nameWithType: IEntityFactory(Of T).GetOrAdd
+    fullName: PluginAPI.Core.Factories.IEntityFactory(Of T).GetOrAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  name: GetOrAdd(IGameComponent)
+  nameWithType: IEntityFactory<TEntity>.GetOrAdd(IGameComponent)
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  nameWithType.vb: IEntityFactory(Of TEntity).GetOrAdd(IGameComponent)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+    name: GetOrAdd
+    nameWithType: IEntityFactory<TEntity>.GetOrAdd
+    fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.GetOrAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+    name: GetOrAdd
+    nameWithType: IEntityFactory(Of TEntity).GetOrAdd
+    fullName: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).GetOrAdd
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )

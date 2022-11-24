@@ -1,0 +1,663 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.PlayerInfo
+  commentId: T:PluginAPI.Core.PlayerInfo
+  id: PlayerInfo
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.PlayerInfo.#ctor(PluginAPI.Core.Player)
+  - PluginAPI.Core.PlayerInfo.IsBadgeHidden
+  - PluginAPI.Core.PlayerInfo.IsCustomInfoHidden
+  - PluginAPI.Core.PlayerInfo.IsNicknameHidden
+  - PluginAPI.Core.PlayerInfo.IsPowerStatusHidden
+  - PluginAPI.Core.PlayerInfo.IsRoleHidden
+  - PluginAPI.Core.PlayerInfo.IsUnitNameHidden
+  langs:
+  - csharp
+  - vb
+  name: PlayerInfo
+  nameWithType: PlayerInfo
+  fullName: PluginAPI.Core.PlayerInfo
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerInfo
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 5
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nPlayer info.\n"
+  example: []
+  syntax:
+    content: public class PlayerInfo
+    content.vb: Public Class PlayerInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.PlayerInfo.#ctor(PluginAPI.Core.Player)
+  commentId: M:PluginAPI.Core.PlayerInfo.#ctor(PluginAPI.Core.Player)
+  id: '#ctor(PluginAPI.Core.Player)'
+  parent: PluginAPI.Core.PlayerInfo
+  langs:
+  - csharp
+  - vb
+  name: PlayerInfo(Player)
+  nameWithType: PlayerInfo.PlayerInfo(Player)
+  fullName: PluginAPI.Core.PlayerInfo.PlayerInfo(PluginAPI.Core.Player)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.PlayerInfo\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public PlayerInfo(Player plr)
+    parameters:
+    - id: plr
+      type: PluginAPI.Core.Player
+      description: The player.
+    content.vb: Public Sub New(plr As Player)
+  overload: PluginAPI.Core.PlayerInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PlayerInfo.IsNicknameHidden
+  commentId: P:PluginAPI.Core.PlayerInfo.IsNicknameHidden
+  id: IsNicknameHidden
+  parent: PluginAPI.Core.PlayerInfo
+  langs:
+  - csharp
+  - vb
+  name: IsNicknameHidden
+  nameWithType: PlayerInfo.IsNicknameHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsNicknameHidden
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsNicknameHidden
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 18
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player&apos;s nickname is hidden in their player info.\n"
+  example: []
+  syntax:
+    content: public bool IsNicknameHidden { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsNicknameHidden As Boolean
+  overload: PluginAPI.Core.PlayerInfo.IsNicknameHidden*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PlayerInfo.IsBadgeHidden
+  commentId: P:PluginAPI.Core.PlayerInfo.IsBadgeHidden
+  id: IsBadgeHidden
+  parent: PluginAPI.Core.PlayerInfo
+  langs:
+  - csharp
+  - vb
+  name: IsBadgeHidden
+  nameWithType: PlayerInfo.IsBadgeHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsBadgeHidden
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsBadgeHidden
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player&apos;s badge is hidden in their player info.\n"
+  example: []
+  syntax:
+    content: public bool IsBadgeHidden { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsBadgeHidden As Boolean
+  overload: PluginAPI.Core.PlayerInfo.IsBadgeHidden*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PlayerInfo.IsCustomInfoHidden
+  commentId: P:PluginAPI.Core.PlayerInfo.IsCustomInfoHidden
+  id: IsCustomInfoHidden
+  parent: PluginAPI.Core.PlayerInfo
+  langs:
+  - csharp
+  - vb
+  name: IsCustomInfoHidden
+  nameWithType: PlayerInfo.IsCustomInfoHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsCustomInfoHidden
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsCustomInfoHidden
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 48
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player&apos;s custom info is hidden in their player info.\n"
+  example: []
+  syntax:
+    content: public bool IsCustomInfoHidden { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsCustomInfoHidden As Boolean
+  overload: PluginAPI.Core.PlayerInfo.IsCustomInfoHidden*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PlayerInfo.IsPowerStatusHidden
+  commentId: P:PluginAPI.Core.PlayerInfo.IsPowerStatusHidden
+  id: IsPowerStatusHidden
+  parent: PluginAPI.Core.PlayerInfo
+  langs:
+  - csharp
+  - vb
+  name: IsPowerStatusHidden
+  nameWithType: PlayerInfo.IsPowerStatusHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsPowerStatusHidden
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsPowerStatusHidden
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 63
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player&apos;s power status is hidden in their player info.\n"
+  example: []
+  syntax:
+    content: public bool IsPowerStatusHidden { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPowerStatusHidden As Boolean
+  overload: PluginAPI.Core.PlayerInfo.IsPowerStatusHidden*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PlayerInfo.IsRoleHidden
+  commentId: P:PluginAPI.Core.PlayerInfo.IsRoleHidden
+  id: IsRoleHidden
+  parent: PluginAPI.Core.PlayerInfo
+  langs:
+  - csharp
+  - vb
+  name: IsRoleHidden
+  nameWithType: PlayerInfo.IsRoleHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsRoleHidden
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsRoleHidden
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 78
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player&apos;s role is hidden in their player info.\n"
+  example: []
+  syntax:
+    content: public bool IsRoleHidden { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsRoleHidden As Boolean
+  overload: PluginAPI.Core.PlayerInfo.IsRoleHidden*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.PlayerInfo.IsUnitNameHidden
+  commentId: P:PluginAPI.Core.PlayerInfo.IsUnitNameHidden
+  id: IsUnitNameHidden
+  parent: PluginAPI.Core.PlayerInfo
+  langs:
+  - csharp
+  - vb
+  name: IsUnitNameHidden
+  nameWithType: PlayerInfo.IsUnitNameHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsUnitNameHidden
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/PlayerInfo.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsUnitNameHidden
+    path: ../NwPluginAPI/Core/PlayerInfo.cs
+    startLine: 93
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player&apos;s unit name is hidden in their player info.\n"
+  example: []
+  syntax:
+    content: public bool IsUnitNameHidden { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsUnitNameHidden As Boolean
+  overload: PluginAPI.Core.PlayerInfo.IsUnitNameHidden*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.PlayerInfo
+  commentId: T:PluginAPI.Core.PlayerInfo
+  parent: PluginAPI.Core
+  name: PlayerInfo
+  nameWithType: PlayerInfo
+  fullName: PluginAPI.Core.PlayerInfo
+- uid: PluginAPI.Core.PlayerInfo.#ctor*
+  commentId: Overload:PluginAPI.Core.PlayerInfo.#ctor
+  name: PlayerInfo
+  nameWithType: PlayerInfo.PlayerInfo
+  fullName: PluginAPI.Core.PlayerInfo.PlayerInfo
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core.PlayerInfo.IsNicknameHidden*
+  commentId: Overload:PluginAPI.Core.PlayerInfo.IsNicknameHidden
+  name: IsNicknameHidden
+  nameWithType: PlayerInfo.IsNicknameHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsNicknameHidden
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Core.PlayerInfo.IsBadgeHidden*
+  commentId: Overload:PluginAPI.Core.PlayerInfo.IsBadgeHidden
+  name: IsBadgeHidden
+  nameWithType: PlayerInfo.IsBadgeHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsBadgeHidden
+- uid: PluginAPI.Core.PlayerInfo.IsCustomInfoHidden*
+  commentId: Overload:PluginAPI.Core.PlayerInfo.IsCustomInfoHidden
+  name: IsCustomInfoHidden
+  nameWithType: PlayerInfo.IsCustomInfoHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsCustomInfoHidden
+- uid: PluginAPI.Core.PlayerInfo.IsPowerStatusHidden*
+  commentId: Overload:PluginAPI.Core.PlayerInfo.IsPowerStatusHidden
+  name: IsPowerStatusHidden
+  nameWithType: PlayerInfo.IsPowerStatusHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsPowerStatusHidden
+- uid: PluginAPI.Core.PlayerInfo.IsRoleHidden*
+  commentId: Overload:PluginAPI.Core.PlayerInfo.IsRoleHidden
+  name: IsRoleHidden
+  nameWithType: PlayerInfo.IsRoleHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsRoleHidden
+- uid: PluginAPI.Core.PlayerInfo.IsUnitNameHidden*
+  commentId: Overload:PluginAPI.Core.PlayerInfo.IsUnitNameHidden
+  name: IsUnitNameHidden
+  nameWithType: PlayerInfo.IsUnitNameHidden
+  fullName: PluginAPI.Core.PlayerInfo.IsUnitNameHidden

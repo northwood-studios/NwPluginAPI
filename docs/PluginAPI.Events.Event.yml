@@ -1,0 +1,769 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.Event
+  commentId: T:PluginAPI.Events.Event
+  id: Event
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.Event.#ctor(PluginAPI.Events.EventParameter[])
+  - PluginAPI.Events.Event.Invokers
+  - PluginAPI.Events.Event.Parameters
+  - PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
+  - PluginAPI.Events.Event.RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
+  langs:
+  - csharp
+  - vb
+  name: Event
+  nameWithType: Event
+  fullName: PluginAPI.Events.Event
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Event.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Event
+    path: ../NwPluginAPI/Events/Event.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRepresents an event.\n"
+  example: []
+  syntax:
+    content: public class Event
+    content.vb: Public Class Event
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.Event.Invokers
+  commentId: F:PluginAPI.Events.Event.Invokers
+  id: Invokers
+  parent: PluginAPI.Events.Event
+  langs:
+  - csharp
+  - vb
+  name: Invokers
+  nameWithType: Event.Invokers
+  fullName: PluginAPI.Events.Event.Invokers
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/Event.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Invokers
+    path: ../NwPluginAPI/Events/Event.cs
+    startLine: 26
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public readonly Dictionary<Type, List<EventInvokeLocation>> Invokers
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{PluginAPI.Events.EventInvokeLocation}}
+    content.vb: Public ReadOnly Invokers As Dictionary(Of Type, List(Of EventInvokeLocation))
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Event.Parameters
+  commentId: F:PluginAPI.Events.Event.Parameters
+  id: Parameters
+  parent: PluginAPI.Events.Event
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: Event.Parameters
+  fullName: PluginAPI.Events.Event.Parameters
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/Event.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Parameters
+    path: ../NwPluginAPI/Events/Event.cs
+    startLine: 28
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public readonly EventParameter[] Parameters
+    return:
+      type: PluginAPI.Events.EventParameter[]
+    content.vb: Public ReadOnly Parameters As EventParameter()
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Event.#ctor(PluginAPI.Events.EventParameter[])
+  commentId: M:PluginAPI.Events.Event.#ctor(PluginAPI.Events.EventParameter[])
+  id: '#ctor(PluginAPI.Events.EventParameter[])'
+  parent: PluginAPI.Events.Event
+  langs:
+  - csharp
+  - vb
+  name: Event(EventParameter[])
+  nameWithType: Event.Event(EventParameter[])
+  fullName: PluginAPI.Events.Event.Event(PluginAPI.Events.EventParameter[])
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Event.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Event.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Events.Event\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public Event(params EventParameter[] parameters)
+    parameters:
+    - id: parameters
+      type: PluginAPI.Events.EventParameter[]
+      description: The parameters.
+    content.vb: Public Sub New(ParamArray parameters As EventParameter())
+  overload: PluginAPI.Events.Event.#ctor*
+  nameWithType.vb: Event.Event(EventParameter())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Events.Event.Event(PluginAPI.Events.EventParameter())
+  name.vb: Event(EventParameter())
+- uid: PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
+  commentId: M:PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
+  id: RegenerateParameters(PluginAPI.Events.EventInvokeLocation,System.Object[])
+  parent: PluginAPI.Events.Event
+  langs:
+  - csharp
+  - vb
+  name: RegenerateParameters(EventInvokeLocation, Object[])
+  nameWithType: Event.RegenerateParameters(EventInvokeLocation, Object[])
+  fullName: PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation, System.Object[])
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/Event.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RegenerateParameters
+    path: ../NwPluginAPI/Events/Event.cs
+    startLine: 46
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public object[] RegenerateParameters(EventInvokeLocation invoker, object[] parameters)
+    parameters:
+    - id: invoker
+      type: PluginAPI.Events.EventInvokeLocation
+    - id: parameters
+      type: System.Object[]
+    return:
+      type: System.Object[]
+    content.vb: Public Function RegenerateParameters(invoker As EventInvokeLocation, parameters As Object()) As Object()
+  overload: PluginAPI.Events.Event.RegenerateParameters*
+  nameWithType.vb: Event.RegenerateParameters(EventInvokeLocation, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Events.Event.RegenerateParameters(PluginAPI.Events.EventInvokeLocation, System.Object())
+  name.vb: RegenerateParameters(EventInvokeLocation, Object())
+- uid: PluginAPI.Events.Event.RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
+  commentId: M:PluginAPI.Events.Event.RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
+  id: RegisterInvoker(System.Type,System.Object,System.Reflection.MethodInfo)
+  parent: PluginAPI.Events.Event
+  langs:
+  - csharp
+  - vb
+  name: RegisterInvoker(Type, Object, MethodInfo)
+  nameWithType: Event.RegisterInvoker(Type, Object, MethodInfo)
+  fullName: PluginAPI.Events.Event.RegisterInvoker(System.Type, System.Object, System.Reflection.MethodInfo)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/Event.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RegisterInvoker
+    path: ../NwPluginAPI/Events/Event.cs
+    startLine: 72
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRegisters a event handler.\n"
+  example: []
+  syntax:
+    content: public void RegisterInvoker(Type plugin, object handle, MethodInfo method)
+    parameters:
+    - id: plugin
+      type: System.Type
+      description: The plugin of the handler.
+    - id: handle
+      type: System.Object
+      description: The handle.
+    - id: method
+      type: System.Reflection.MethodInfo
+      description: The method.
+    content.vb: Public Sub RegisterInvoker(plugin As Type, handle As Object, method As MethodInfo)
+  overload: PluginAPI.Events.Event.RegisterInvoker*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{PluginAPI.Events.EventInvokeLocation}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{PluginAPI.Events.EventInvokeLocation}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Type, List<EventInvokeLocation>>
+  nameWithType: Dictionary<Type, List<EventInvokeLocation>>
+  fullName: System.Collections.Generic.Dictionary<System.Type, System.Collections.Generic.List<PluginAPI.Events.EventInvokeLocation>>
+  nameWithType.vb: Dictionary(Of Type, List(Of EventInvokeLocation))
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, System.Collections.Generic.List(Of PluginAPI.Events.EventInvokeLocation))
+  name.vb: Dictionary(Of Type, List(Of EventInvokeLocation))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PluginAPI.Events.EventInvokeLocation
+    name: EventInvokeLocation
+    nameWithType: EventInvokeLocation
+    fullName: PluginAPI.Events.EventInvokeLocation
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PluginAPI.Events.EventInvokeLocation
+    name: EventInvokeLocation
+    nameWithType: EventInvokeLocation
+    fullName: PluginAPI.Events.EventInvokeLocation
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Events.EventParameter[]
+  isExternal: true
+  name: EventParameter[]
+  nameWithType: EventParameter[]
+  fullName: PluginAPI.Events.EventParameter[]
+  nameWithType.vb: EventParameter()
+  fullName.vb: PluginAPI.Events.EventParameter()
+  name.vb: EventParameter()
+  spec.csharp:
+  - uid: PluginAPI.Events.EventParameter
+    name: EventParameter
+    nameWithType: EventParameter
+    fullName: PluginAPI.Events.EventParameter
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: PluginAPI.Events.EventParameter
+    name: EventParameter
+    nameWithType: EventParameter
+    fullName: PluginAPI.Events.EventParameter
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PluginAPI.Events.Event
+  commentId: T:PluginAPI.Events.Event
+  name: Event
+  nameWithType: Event
+  fullName: PluginAPI.Events.Event
+- uid: PluginAPI.Events.Event.#ctor*
+  commentId: Overload:PluginAPI.Events.Event.#ctor
+  name: Event
+  nameWithType: Event.Event
+  fullName: PluginAPI.Events.Event.Event
+- uid: PluginAPI.Events.Event.RegenerateParameters*
+  commentId: Overload:PluginAPI.Events.Event.RegenerateParameters
+  name: RegenerateParameters
+  nameWithType: Event.RegenerateParameters
+  fullName: PluginAPI.Events.Event.RegenerateParameters
+- uid: PluginAPI.Events.EventInvokeLocation
+  commentId: T:PluginAPI.Events.EventInvokeLocation
+  parent: PluginAPI.Events
+  name: EventInvokeLocation
+  nameWithType: EventInvokeLocation
+  fullName: PluginAPI.Events.EventInvokeLocation
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PluginAPI.Events.Event.RegisterInvoker*
+  commentId: Overload:PluginAPI.Events.Event.RegisterInvoker
+  name: RegisterInvoker
+  nameWithType: Event.RegisterInvoker
+  fullName: PluginAPI.Events.Event.RegisterInvoker
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Reflection.MethodInfo
+  commentId: T:System.Reflection.MethodInfo
+  parent: System.Reflection
+  isExternal: true
+  name: MethodInfo
+  nameWithType: MethodInfo
+  fullName: System.Reflection.MethodInfo
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection

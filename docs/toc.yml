@@ -1,0 +1,219 @@
+### YamlMime:TableOfContent
+- uid: PluginAPI.Commands
+  name: PluginAPI.Commands
+  items:
+  - uid: PluginAPI.Commands.Command
+    name: Command
+  - uid: PluginAPI.Commands.CommandsManager
+    name: CommandsManager
+  - uid: PluginAPI.Commands.ListCommand
+    name: ListCommand
+  - uid: PluginAPI.Commands.PluginsCommand
+    name: PluginsCommand
+  - uid: PluginAPI.Commands.ReloadCommmand
+    name: ReloadCommmand
+- uid: PluginAPI.Core
+  name: PluginAPI.Core
+  items:
+  - uid: PluginAPI.Core.Cassie
+    name: Cassie
+  - uid: PluginAPI.Core.DamageManager
+    name: DamageManager
+  - uid: PluginAPI.Core.DataStorage
+    name: DataStorage
+  - uid: PluginAPI.Core.EffectsManager
+    name: EffectsManager
+  - uid: PluginAPI.Core.Facility
+    name: Facility
+  - uid: PluginAPI.Core.FactoryManager
+    name: FactoryManager
+  - uid: PluginAPI.Core.Log
+    name: Log
+  - uid: PluginAPI.Core.Map
+    name: Map
+  - uid: PluginAPI.Core.Player
+    name: Player
+  - uid: PluginAPI.Core.PlayerExtensions
+    name: PlayerExtensions
+  - uid: PluginAPI.Core.PlayerInfo
+    name: PlayerInfo
+  - uid: PluginAPI.Core.PlayerSharedStorage
+    name: PlayerSharedStorage
+  - uid: PluginAPI.Core.PluginHandler
+    name: PluginHandler
+  - uid: PluginAPI.Core.Respawn
+    name: Respawn
+  - uid: PluginAPI.Core.RoomLight
+    name: RoomLight
+  - uid: PluginAPI.Core.Round
+    name: Round
+  - uid: PluginAPI.Core.Server
+    name: Server
+  - uid: PluginAPI.Core.Statistics
+    name: Statistics
+  - uid: PluginAPI.Core.Statistics.FastestRound
+    name: Statistics.FastestRound
+  - uid: PluginAPI.Core.Statistics.Peak
+    name: Statistics.Peak
+  - uid: PluginAPI.Core.Statistics.Round
+    name: Statistics.Round
+  - uid: PluginAPI.Core.Warhead
+    name: Warhead
+- uid: PluginAPI.Core.Attributes
+  name: PluginAPI.Core.Attributes
+  items:
+  - uid: PluginAPI.Core.Attributes.PluginCommand
+    name: PluginCommand
+  - uid: PluginAPI.Core.Attributes.PluginCommandAliases
+    name: PluginCommandAliases
+  - uid: PluginAPI.Core.Attributes.PluginConfig
+    name: PluginConfig
+  - uid: PluginAPI.Core.Attributes.PluginEntryPoint
+    name: PluginEntryPoint
+  - uid: PluginAPI.Core.Attributes.PluginEvent
+    name: PluginEvent
+  - uid: PluginAPI.Core.Attributes.PluginReload
+    name: PluginReload
+  - uid: PluginAPI.Core.Attributes.PluginUnload
+    name: PluginUnload
+- uid: PluginAPI.Core.Doors
+  name: PluginAPI.Core.Doors
+  items:
+  - uid: PluginAPI.Core.Doors.FacilityBreakableDoor
+    name: FacilityBreakableDoor
+  - uid: PluginAPI.Core.Doors.FacilityDoor
+    name: FacilityDoor
+  - uid: PluginAPI.Core.Doors.FacilityGate
+    name: FacilityGate
+- uid: PluginAPI.Core.Extensions
+  name: PluginAPI.Core.Extensions
+  items:
+  - uid: PluginAPI.Core.Extensions.ReflectionExtensions
+    name: ReflectionExtensions
+- uid: PluginAPI.Core.Factories
+  name: PluginAPI.Core.Factories
+  items:
+  - uid: PluginAPI.Core.Factories.Factory`1
+    name: Factory<T>
+    name.vb: Factory(Of T)
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1
+    name: IEntityFactory<TEntity>
+    name.vb: IEntityFactory(Of TEntity)
+  - uid: PluginAPI.Core.Factories.PlayerFactory
+    name: PlayerFactory
+- uid: PluginAPI.Core.Interfaces
+  name: PluginAPI.Core.Interfaces
+  items:
+  - uid: PluginAPI.Core.Interfaces.IEntity
+    name: IEntity
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+  - uid: PluginAPI.Core.Interfaces.IGameItem
+    name: IGameItem
+  - uid: PluginAPI.Core.Interfaces.IPlayer
+    name: IPlayer
+- uid: PluginAPI.Core.Items
+  name: PluginAPI.Core.Items
+  items:
+  - uid: PluginAPI.Core.Items.Item
+    name: Item
+  - uid: PluginAPI.Core.Items.ItemPickup
+    name: ItemPickup
+- uid: PluginAPI.Core.Zones
+  name: PluginAPI.Core.Zones
+  items:
+  - uid: PluginAPI.Core.Zones.EntranceZone
+    name: EntranceZone
+  - uid: PluginAPI.Core.Zones.FacilityRoom
+    name: FacilityRoom
+  - uid: PluginAPI.Core.Zones.FacilityZone
+    name: FacilityZone
+  - uid: PluginAPI.Core.Zones.HeavyZone
+    name: HeavyZone
+  - uid: PluginAPI.Core.Zones.LightZone
+    name: LightZone
+  - uid: PluginAPI.Core.Zones.Surface
+    name: Surface
+  - uid: PluginAPI.Core.Zones.SurfaceZone
+    name: SurfaceZone
+  - uid: PluginAPI.Core.Zones.UnknownZone
+    name: UnknownZone
+- uid: PluginAPI.Core.Zones.Entrance
+  name: PluginAPI.Core.Zones.Entrance
+  items:
+  - uid: PluginAPI.Core.Zones.Entrance.EzRoom
+    name: EzRoom
+- uid: PluginAPI.Core.Zones.Heavy
+  name: PluginAPI.Core.Zones.Heavy
+  items:
+  - uid: PluginAPI.Core.Zones.Heavy.Generator
+    name: Generator
+  - uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+    name: GeneratorLogic
+  - uid: PluginAPI.Core.Zones.Heavy.HczRoom
+    name: HczRoom
+- uid: PluginAPI.Core.Zones.Heavy.Rooms
+  name: PluginAPI.Core.Zones.Heavy.Rooms
+  items:
+  - uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
+    name: HczScp049
+- uid: PluginAPI.Core.Zones.Light
+  name: PluginAPI.Core.Zones.Light
+  items:
+  - uid: PluginAPI.Core.Zones.Light.LczRoom
+    name: LczRoom
+- uid: PluginAPI.Core.Zones.Light.Rooms
+  name: PluginAPI.Core.Zones.Light.Rooms
+  items:
+  - uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914
+    name: LczScp914
+- uid: PluginAPI.Core.Zones.Pocket
+  name: PluginAPI.Core.Zones.Pocket
+  items:
+  - uid: PluginAPI.Core.Zones.Pocket.PocketDimension
+    name: PocketDimension
+  - uid: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
+    name: PocketDimensionLogic
+- uid: PluginAPI.Enums
+  name: PluginAPI.Enums
+  items:
+  - uid: PluginAPI.Enums.CommandType
+    name: CommandType
+  - uid: PluginAPI.Enums.LoadPriority
+    name: LoadPriority
+  - uid: PluginAPI.Enums.LogType
+    name: LogType
+  - uid: PluginAPI.Enums.ServerEventType
+    name: ServerEventType
+- uid: PluginAPI.Events
+  name: PluginAPI.Events
+  items:
+  - uid: PluginAPI.Events.Event
+    name: Event
+  - uid: PluginAPI.Events.EventInvokeLocation
+    name: EventInvokeLocation
+  - uid: PluginAPI.Events.EventManager
+    name: EventManager
+  - uid: PluginAPI.Events.EventParameter
+    name: EventParameter
+  - uid: PluginAPI.Events.IEventCancellation
+    name: IEventCancellation
+  - uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+    name: PlayerCheckReservedSlotCancellationData
+  - uid: PluginAPI.Events.PreauthCancellationData
+    name: PreauthCancellationData
+- uid: PluginAPI.Helpers
+  name: PluginAPI.Helpers
+  items:
+  - uid: PluginAPI.Helpers.Paths
+    name: Paths
+- uid: PluginAPI.Loader
+  name: PluginAPI.Loader
+  items:
+  - uid: PluginAPI.Loader.AssemblyLoader
+    name: AssemblyLoader
+- uid: PluginAPI.Loader.Features
+  name: PluginAPI.Loader.Features
+  items:
+  - uid: PluginAPI.Loader.Features.PluginDirectory
+    name: PluginDirectory

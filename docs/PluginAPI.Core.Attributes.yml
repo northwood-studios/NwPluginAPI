@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Attributes
+  commentId: N:PluginAPI.Core.Attributes
+  id: PluginAPI.Core.Attributes
+  children:
+  - PluginAPI.Core.Attributes.PluginCommand
+  - PluginAPI.Core.Attributes.PluginCommandAliases
+  - PluginAPI.Core.Attributes.PluginConfig
+  - PluginAPI.Core.Attributes.PluginEntryPoint
+  - PluginAPI.Core.Attributes.PluginEvent
+  - PluginAPI.Core.Attributes.PluginReload
+  - PluginAPI.Core.Attributes.PluginUnload
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Attributes
+  nameWithType: PluginAPI.Core.Attributes
+  fullName: PluginAPI.Core.Attributes
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Attributes.PluginCommand
+  commentId: T:PluginAPI.Core.Attributes.PluginCommand
+  name: PluginCommand
+  nameWithType: PluginCommand
+  fullName: PluginAPI.Core.Attributes.PluginCommand
+- uid: PluginAPI.Core.Attributes.PluginCommandAliases
+  commentId: T:PluginAPI.Core.Attributes.PluginCommandAliases
+  name: PluginCommandAliases
+  nameWithType: PluginCommandAliases
+  fullName: PluginAPI.Core.Attributes.PluginCommandAliases
+- uid: PluginAPI.Core.Attributes.PluginConfig
+  commentId: T:PluginAPI.Core.Attributes.PluginConfig
+  name: PluginConfig
+  nameWithType: PluginConfig
+  fullName: PluginAPI.Core.Attributes.PluginConfig
+- uid: PluginAPI.Core.Attributes.PluginEntryPoint
+  commentId: T:PluginAPI.Core.Attributes.PluginEntryPoint
+  name: PluginEntryPoint
+  nameWithType: PluginEntryPoint
+  fullName: PluginAPI.Core.Attributes.PluginEntryPoint
+- uid: PluginAPI.Core.Attributes.PluginEvent
+  commentId: T:PluginAPI.Core.Attributes.PluginEvent
+  name: PluginEvent
+  nameWithType: PluginEvent
+  fullName: PluginAPI.Core.Attributes.PluginEvent
+- uid: PluginAPI.Core.Attributes.PluginReload
+  commentId: T:PluginAPI.Core.Attributes.PluginReload
+  name: PluginReload
+  nameWithType: PluginReload
+  fullName: PluginAPI.Core.Attributes.PluginReload
+- uid: PluginAPI.Core.Attributes.PluginUnload
+  commentId: T:PluginAPI.Core.Attributes.PluginUnload
+  name: PluginUnload
+  nameWithType: PluginUnload
+  fullName: PluginAPI.Core.Attributes.PluginUnload

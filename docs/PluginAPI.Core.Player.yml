@@ -1,0 +1,5251 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  id: Player
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Player.#ctor(PluginAPI.Core.Interfaces.IGameComponent)
+  - PluginAPI.Core.Player.AddAmmo(ItemType,System.UInt16)
+  - PluginAPI.Core.Player.ArtificialHealth
+  - PluginAPI.Core.Player.Ban(PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64)
+  - PluginAPI.Core.Player.Ban(System.String,System.Int64)
+  - PluginAPI.Core.Player.Camera
+  - PluginAPI.Core.Player.ClearBroadcasts
+  - PluginAPI.Core.Player.Connection
+  - PluginAPI.Core.Player.Count
+  - PluginAPI.Core.Player.CurrentItem
+  - PluginAPI.Core.Player.CustomInfo
+  - PluginAPI.Core.Player.DamageManager
+  - PluginAPI.Core.Player.DisarmedBy
+  - PluginAPI.Core.Player.Disconnect(System.String)
+  - PluginAPI.Core.Player.DisplayNickname
+  - PluginAPI.Core.Player.DoNotTrack
+  - PluginAPI.Core.Player.DropAmmo(ItemType,System.UInt16,System.Boolean)
+  - PluginAPI.Core.Player.DropEverything
+  - PluginAPI.Core.Player.EffectsManager
+  - PluginAPI.Core.Player.GameObject
+  - PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
+  - PluginAPI.Core.Player.Get``1(ReferenceHub)
+  - PluginAPI.Core.Player.Get``1(System.Int32)
+  - PluginAPI.Core.Player.Get``1(System.String)
+  - PluginAPI.Core.Player.Get``1(System.UInt32)
+  - PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
+  - PluginAPI.Core.Player.GetAmmo(ItemType)
+  - PluginAPI.Core.Player.GetByName``1(System.String)
+  - PluginAPI.Core.Player.GetComponent``1(System.Boolean)
+  - PluginAPI.Core.Player.GetPlayers``1
+  - PluginAPI.Core.Player.GetStatModule``1
+  - PluginAPI.Core.Player.Heal(System.Single)
+  - PluginAPI.Core.Player.Health
+  - PluginAPI.Core.Player.IntercomMute(System.Boolean)
+  - PluginAPI.Core.Player.IntercomUnmute(System.Boolean)
+  - PluginAPI.Core.Player.IpAddress
+  - PluginAPI.Core.Player.IsAlive
+  - PluginAPI.Core.Player.IsBypassEnabled
+  - PluginAPI.Core.Player.IsDisarmed
+  - PluginAPI.Core.Player.IsGlobalModerator
+  - PluginAPI.Core.Player.IsGodModeEnabled
+  - PluginAPI.Core.Player.IsHuman
+  - PluginAPI.Core.Player.IsIntercomMuted
+  - PluginAPI.Core.Player.IsInventoryFull
+  - PluginAPI.Core.Player.IsMuted
+  - PluginAPI.Core.Player.IsNoclipEnabled
+  - PluginAPI.Core.Player.IsNorthwoodStaff
+  - PluginAPI.Core.Player.IsOverwatchEnabled
+  - PluginAPI.Core.Player.IsReady
+  - PluginAPI.Core.Player.IsServer
+  - PluginAPI.Core.Player.IsUsingVoiceChat
+  - PluginAPI.Core.Player.Kick(PluginAPI.Core.Interfaces.IPlayer,System.String)
+  - PluginAPI.Core.Player.Kick(System.String)
+  - PluginAPI.Core.Player.MaxArtificalHealth
+  - PluginAPI.Core.Player.MaxHealth
+  - PluginAPI.Core.Player.Mute(System.Boolean)
+  - PluginAPI.Core.Player.NetworkId
+  - PluginAPI.Core.Player.Nickname
+  - PluginAPI.Core.Player.OnDestroy
+  - PluginAPI.Core.Player.OnFixedUpdate
+  - PluginAPI.Core.Player.OnLateUpdate
+  - PluginAPI.Core.Player.OnStart
+  - PluginAPI.Core.Player.OnUpdate
+  - PluginAPI.Core.Player.PlayerId
+  - PluginAPI.Core.Player.PlayerInfo
+  - PluginAPI.Core.Player.Position
+  - PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+  - PluginAPI.Core.Player.ReceiveHint(System.String,System.Single)
+  - PluginAPI.Core.Player.ReceiveHitMarker(System.Single)
+  - PluginAPI.Core.Player.Reconnect(System.Single,System.Boolean)
+  - PluginAPI.Core.Player.RedirectToServer(System.UInt16)
+  - PluginAPI.Core.Player.ReferenceHub
+  - PluginAPI.Core.Player.RemoteAdminAccess
+  - PluginAPI.Core.Player.Role
+  - PluginAPI.Core.Player.Rotation
+  - PluginAPI.Core.Player.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
+  - PluginAPI.Core.Player.SendConsoleMessage(System.String,System.String)
+  - PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
+  - PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  - PluginAPI.Core.Player.TemporaryData
+  - PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  - PluginAPI.Core.Player.TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
+  - PluginAPI.Core.Player.TryGet``1(ReferenceHub,``0@)
+  - PluginAPI.Core.Player.TryGet``1(System.Int32,``0@)
+  - PluginAPI.Core.Player.TryGet``1(System.String,``0@)
+  - PluginAPI.Core.Player.TryGet``1(System.UInt32,``0@)
+  - PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  - PluginAPI.Core.Player.TryGetByName``1(System.String,``0@)
+  - PluginAPI.Core.Player.TryGetComponent``1(``0@,System.Boolean)
+  - PluginAPI.Core.Player.Unmute(System.Boolean)
+  - PluginAPI.Core.Player.UserId
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 26
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRepresents a player connected to server.\n"
+  example: []
+  syntax:
+    content: 'public class Player : IPlayer, IEntity'
+    content.vb: >-
+      Public Class Player
+          Implements IPlayer, IEntity
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - PluginAPI.Core.Server
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer
+  - PluginAPI.Core.Interfaces.IEntity
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  extensionMethods:
+  - PluginAPI.Core.Player.PluginAPI.Core.PlayerExtensions.GetAmmoLimit(ItemType)
+  - PluginAPI.Core.Player.PluginAPI.Core.PlayerExtensions.GetCategoryLimit(ItemCategory)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Player.Count
+  commentId: P:PluginAPI.Core.Player.Count
+  id: Count
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: Player.Count
+  fullName: PluginAPI.Core.Player.Count
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Count
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the amount of online players.\n"
+  example: []
+  syntax:
+    content: public static int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property Count As Integer
+  overload: PluginAPI.Core.Player.Count*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Player.GetPlayers``1
+  commentId: M:PluginAPI.Core.Player.GetPlayers``1
+  id: GetPlayers``1
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GetPlayers<T>()
+  nameWithType: Player.GetPlayers<T>()
+  fullName: PluginAPI.Core.Player.GetPlayers<T>()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetPlayers
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 45
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets all players.\n"
+  example: []
+  syntax:
+    content: >-
+      public static List<T> GetPlayers<T>()
+          where T : IPlayer
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Public Shared Function GetPlayers(Of T As IPlayer) As List(Of T)
+  overload: PluginAPI.Core.Player.GetPlayers*
+  nameWithType.vb: Player.GetPlayers(Of T)()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.GetPlayers(Of T)()
+  name.vb: GetPlayers(Of T)()
+- uid: PluginAPI.Core.Player.TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
+  id: TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(IGameComponent, out T)
+  nameWithType: Player.TryGet<T>(IGameComponent, out T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(PluginAPI.Core.Interfaces.IGameComponent, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 71
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"PluginAPI.Core.Interfaces.IGameComponent\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGet<T>(IGameComponent component, out T player)
+          where T : IPlayer
+    parameters:
+    - id: component
+      type: PluginAPI.Core.Interfaces.IGameComponent
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryGet(Of T As IPlayer)(component As IGameComponent, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Of T)(IGameComponent, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(PluginAPI.Core.Interfaces.IGameComponent, ByRef T)
+  name.vb: TryGet(Of T)(IGameComponent, ByRef T)
+- uid: PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
+  commentId: M:PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
+  id: Get``1(UnityEngine.GameObject)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get<T>(GameObject)
+  nameWithType: Player.Get<T>(GameObject)
+  fullName: PluginAPI.Core.Player.Get<T>(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 94
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T Get<T>(GameObject gameObject)
+          where T : IPlayer
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Get(Of T As IPlayer)(gameObject As GameObject) As T
+  overload: PluginAPI.Core.Player.Get*
+  nameWithType.vb: Player.Get(Of T)(GameObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(UnityEngine.GameObject)
+  name.vb: Get(Of T)(GameObject)
+- uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  id: TryGet``1(UnityEngine.GameObject,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(GameObject, out T)
+  nameWithType: Player.TryGet<T>(GameObject, out T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(UnityEngine.GameObject, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 104
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGet<T>(GameObject gameObject, out T player)
+          where T : IPlayer
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(Of T As IPlayer)(gameObject As GameObject, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Of T)(GameObject, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(UnityEngine.GameObject, ByRef T)
+  name.vb: TryGet(Of T)(GameObject, ByRef T)
+- uid: PluginAPI.Core.Player.Get``1(ReferenceHub)
+  commentId: M:PluginAPI.Core.Player.Get``1(ReferenceHub)
+  id: Get``1(ReferenceHub)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get<T>(ReferenceHub)
+  nameWithType: Player.Get<T>(ReferenceHub)
+  fullName: PluginAPI.Core.Player.Get<T>(ReferenceHub)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 133
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"ReferenceHub\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T Get<T>(ReferenceHub hub)
+          where T : IPlayer
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Get(Of T As IPlayer)(hub As ReferenceHub) As T
+  overload: PluginAPI.Core.Player.Get*
+  nameWithType.vb: Player.Get(Of T)(ReferenceHub)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(ReferenceHub)
+  name.vb: Get(Of T)(ReferenceHub)
+- uid: PluginAPI.Core.Player.TryGet``1(ReferenceHub,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(ReferenceHub,``0@)
+  id: TryGet``1(ReferenceHub,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(ReferenceHub, out T)
+  nameWithType: Player.TryGet<T>(ReferenceHub, out T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(ReferenceHub, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 143
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"ReferenceHub\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGet<T>(ReferenceHub hub, out T player)
+          where T : IPlayer
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(Of T As IPlayer)(hub As ReferenceHub, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Of T)(ReferenceHub, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(ReferenceHub, ByRef T)
+  name.vb: TryGet(Of T)(ReferenceHub, ByRef T)
+- uid: PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
+  commentId: M:PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
+  id: Get``1(Mirror.NetworkIdentity)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get<T>(NetworkIdentity)
+  nameWithType: Player.Get<T>(NetworkIdentity)
+  fullName: PluginAPI.Core.Player.Get<T>(Mirror.NetworkIdentity)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 166
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"Mirror.NetworkIdentity\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T Get<T>(NetworkIdentity netIdentity)
+          where T : IPlayer
+    parameters:
+    - id: netIdentity
+      type: Mirror.NetworkIdentity
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Get(Of T As IPlayer)(netIdentity As NetworkIdentity) As T
+  overload: PluginAPI.Core.Player.Get*
+  nameWithType.vb: Player.Get(Of T)(NetworkIdentity)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(Mirror.NetworkIdentity)
+  name.vb: Get(Of T)(NetworkIdentity)
+- uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  id: TryGet``1(Mirror.NetworkIdentity,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(NetworkIdentity, out T)
+  nameWithType: Player.TryGet<T>(NetworkIdentity, out T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(Mirror.NetworkIdentity, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 176
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"Mirror.NetworkIdentity\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGet<T>(NetworkIdentity netIdentity, out T player)
+          where T : IPlayer
+    parameters:
+    - id: netIdentity
+      type: Mirror.NetworkIdentity
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(Of T As IPlayer)(netIdentity As NetworkIdentity, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Of T)(NetworkIdentity, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(Mirror.NetworkIdentity, ByRef T)
+  name.vb: TryGet(Of T)(NetworkIdentity, ByRef T)
+- uid: PluginAPI.Core.Player.GetByName``1(System.String)
+  commentId: M:PluginAPI.Core.Player.GetByName``1(System.String)
+  id: GetByName``1(System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GetByName<T>(String)
+  nameWithType: Player.GetByName<T>(String)
+  fullName: PluginAPI.Core.Player.GetByName<T>(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetByName
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 199
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their name.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T GetByName<T>(string name)
+          where T : IPlayer
+    parameters:
+    - id: name
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function GetByName(Of T As IPlayer)(name As String) As T
+  overload: PluginAPI.Core.Player.GetByName*
+  nameWithType.vb: Player.GetByName(Of T)(String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.GetByName(Of T)(System.String)
+  name.vb: GetByName(Of T)(String)
+- uid: PluginAPI.Core.Player.TryGetByName``1(System.String,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGetByName``1(System.String,``0@)
+  id: TryGetByName``1(System.String,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGetByName<T>(String, out T)
+  nameWithType: Player.TryGetByName<T>(String, out T)
+  fullName: PluginAPI.Core.Player.TryGetByName<T>(System.String, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGetByName
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 209
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their name.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGetByName<T>(string name, out T player)
+          where T : IPlayer
+    parameters:
+    - id: name
+      type: System.String
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGetByName(Of T As IPlayer)(name As String, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGetByName*
+  nameWithType.vb: Player.TryGetByName(Of T)(String, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGetByName(Of T)(System.String, ByRef T)
+  name.vb: TryGetByName(Of T)(String, ByRef T)
+- uid: PluginAPI.Core.Player.Get``1(System.Int32)
+  commentId: M:PluginAPI.Core.Player.Get``1(System.Int32)
+  id: Get``1(System.Int32)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get<T>(Int32)
+  nameWithType: Player.Get<T>(Int32)
+  fullName: PluginAPI.Core.Player.Get<T>(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 244
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their player id.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T Get<T>(int playerId)
+          where T : IPlayer
+    parameters:
+    - id: playerId
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Get(Of T As IPlayer)(playerId As Integer) As T
+  overload: PluginAPI.Core.Player.Get*
+  nameWithType.vb: Player.Get(Of T)(Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(System.Int32)
+  name.vb: Get(Of T)(Int32)
+- uid: PluginAPI.Core.Player.TryGet``1(System.Int32,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(System.Int32,``0@)
+  id: TryGet``1(System.Int32,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(Int32, out T)
+  nameWithType: Player.TryGet<T>(Int32, out T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(System.Int32, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 254
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their player id.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGet<T>(int playerId, out T player)
+          where T : IPlayer
+    parameters:
+    - id: playerId
+      type: System.Int32
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(Of T As IPlayer)(playerId As Integer, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Of T)(Int32, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(System.Int32, ByRef T)
+  name.vb: TryGet(Of T)(Int32, ByRef T)
+- uid: PluginAPI.Core.Player.Get``1(System.String)
+  commentId: M:PluginAPI.Core.Player.Get``1(System.String)
+  id: Get``1(System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get<T>(String)
+  nameWithType: Player.Get<T>(String)
+  fullName: PluginAPI.Core.Player.Get<T>(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 278
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their user id.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T Get<T>(string userId)
+          where T : IPlayer
+    parameters:
+    - id: userId
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Get(Of T As IPlayer)(userId As String) As T
+  overload: PluginAPI.Core.Player.Get*
+  nameWithType.vb: Player.Get(Of T)(String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(System.String)
+  name.vb: Get(Of T)(String)
+- uid: PluginAPI.Core.Player.TryGet``1(System.String,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(System.String,``0@)
+  id: TryGet``1(System.String,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(String, out T)
+  nameWithType: Player.TryGet<T>(String, out T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(System.String, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 288
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their user id.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGet<T>(string userId, out T player)
+          where T : IPlayer
+    parameters:
+    - id: userId
+      type: System.String
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(Of T As IPlayer)(userId As String, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Of T)(String, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(System.String, ByRef T)
+  name.vb: TryGet(Of T)(String, ByRef T)
+- uid: PluginAPI.Core.Player.Get``1(System.UInt32)
+  commentId: M:PluginAPI.Core.Player.Get``1(System.UInt32)
+  id: Get``1(System.UInt32)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get<T>(UInt32)
+  nameWithType: Player.Get<T>(UInt32)
+  fullName: PluginAPI.Core.Player.Get<T>(System.UInt32)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 318
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their network id.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T Get<T>(uint networkId)
+          where T : IPlayer
+    parameters:
+    - id: networkId
+      type: System.UInt32
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function Get(Of T As IPlayer)(networkId As UInteger) As T
+  overload: PluginAPI.Core.Player.Get*
+  nameWithType.vb: Player.Get(Of T)(UInt32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(System.UInt32)
+  name.vb: Get(Of T)(UInt32)
+- uid: PluginAPI.Core.Player.TryGet``1(System.UInt32,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(System.UInt32,``0@)
+  id: TryGet``1(System.UInt32,``0@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(UInt32, out T)
+  nameWithType: Player.TryGet<T>(UInt32, out T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(System.UInt32, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 328
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their network id.\n"
+  example: []
+  syntax:
+    content: >-
+      public static bool TryGet<T>(uint networkId, out T player)
+          where T : IPlayer
+    parameters:
+    - id: networkId
+      type: System.UInt32
+    - id: player
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(Of T As IPlayer)(networkId As UInteger, ByRef player As T) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Of T)(UInt32, ByRef T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(System.UInt32, ByRef T)
+  name.vb: TryGet(Of T)(UInt32, ByRef T)
+- uid: PluginAPI.Core.Player.ReferenceHub
+  commentId: P:PluginAPI.Core.Player.ReferenceHub
+  id: ReferenceHub
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: ReferenceHub
+  nameWithType: Player.ReferenceHub
+  fullName: PluginAPI.Core.Player.ReferenceHub
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ReferenceHub
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 352
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s <xref href=\"ReferenceHub\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ReferenceHub ReferenceHub { get; }
+    parameters: []
+    return:
+      type: ReferenceHub
+    content.vb: Public ReadOnly Property ReferenceHub As ReferenceHub
+  overload: PluginAPI.Core.Player.ReferenceHub*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.ReferenceHub
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.GameObject
+  commentId: P:PluginAPI.Core.Player.GameObject
+  id: GameObject
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: Player.GameObject
+  fullName: PluginAPI.Core.Player.GameObject
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GameObject
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 357
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public GameObject GameObject { get; }
+    parameters: []
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public ReadOnly Property GameObject As GameObject
+  overload: PluginAPI.Core.Player.GameObject*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.GameObject
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.NetworkId
+  commentId: P:PluginAPI.Core.Player.NetworkId
+  id: NetworkId
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: NetworkId
+  nameWithType: Player.NetworkId
+  fullName: PluginAPI.Core.Player.NetworkId
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: NetworkId
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 362
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s network id.\n"
+  example: []
+  syntax:
+    content: public uint NetworkId { get; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public ReadOnly Property NetworkId As UInteger
+  overload: PluginAPI.Core.Player.NetworkId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.PlayerId
+  commentId: P:PluginAPI.Core.Player.PlayerId
+  id: PlayerId
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: PlayerId
+  nameWithType: Player.PlayerId
+  fullName: PluginAPI.Core.Player.PlayerId
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerId
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 367
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s unique id per round.\n"
+  example: []
+  syntax:
+    content: public int PlayerId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PlayerId As Integer
+  overload: PluginAPI.Core.Player.PlayerId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.Nickname
+  commentId: P:PluginAPI.Core.Player.Nickname
+  id: Nickname
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Nickname
+  nameWithType: Player.Nickname
+  fullName: PluginAPI.Core.Player.Nickname
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Nickname
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 372
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s name.\n"
+  example: []
+  syntax:
+    content: public string Nickname { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Nickname As String
+  overload: PluginAPI.Core.Player.Nickname*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.DisplayNickname
+  commentId: P:PluginAPI.Core.Player.DisplayNickname
+  id: DisplayNickname
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: DisplayNickname
+  nameWithType: Player.DisplayNickname
+  fullName: PluginAPI.Core.Player.DisplayNickname
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DisplayNickname
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 377
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the player&apos;s display name.\n"
+  example: []
+  syntax:
+    content: public string DisplayNickname { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DisplayNickname As String
+  overload: PluginAPI.Core.Player.DisplayNickname*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.UserId
+  commentId: P:PluginAPI.Core.Player.UserId
+  id: UserId
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: Player.UserId
+  fullName: PluginAPI.Core.Player.UserId
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: UserId
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 386
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s user id.\n"
+  example: []
+  syntax:
+    content: public string UserId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property UserId As String
+  overload: PluginAPI.Core.Player.UserId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IpAddress
+  commentId: P:PluginAPI.Core.Player.IpAddress
+  id: IpAddress
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IpAddress
+  nameWithType: Player.IpAddress
+  fullName: PluginAPI.Core.Player.IpAddress
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IpAddress
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 391
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s ip address.\n"
+  example: []
+  syntax:
+    content: public string IpAddress { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property IpAddress As String
+  overload: PluginAPI.Core.Player.IpAddress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.Role
+  commentId: P:PluginAPI.Core.Player.Role
+  id: Role
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Role
+  nameWithType: Player.Role
+  fullName: PluginAPI.Core.Player.Role
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Role
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 396
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the player&apos;s current role.\n"
+  example: []
+  syntax:
+    content: public RoleTypeId Role { get; set; }
+    parameters: []
+    return:
+      type: PlayerRoles.RoleTypeId
+    content.vb: Public Property Role As RoleTypeId
+  overload: PluginAPI.Core.Player.Role*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.CustomInfo
+  commentId: P:PluginAPI.Core.Player.CustomInfo
+  id: CustomInfo
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: CustomInfo
+  nameWithType: Player.CustomInfo
+  fullName: PluginAPI.Core.Player.CustomInfo
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CustomInfo
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 405
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the player&apos;s custom info.\n"
+  example: []
+  syntax:
+    content: public string CustomInfo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomInfo As String
+  overload: PluginAPI.Core.Player.CustomInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Health
+  commentId: P:PluginAPI.Core.Player.Health
+  id: Health
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Health
+  nameWithType: Player.Health
+  fullName: PluginAPI.Core.Player.Health
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Health
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 414
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the player&apos;s current health;\n"
+  example: []
+  syntax:
+    content: public float Health { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Health As Single
+  overload: PluginAPI.Core.Player.Health*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.MaxHealth
+  commentId: P:PluginAPI.Core.Player.MaxHealth
+  id: MaxHealth
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: MaxHealth
+  nameWithType: Player.MaxHealth
+  fullName: PluginAPI.Core.Player.MaxHealth
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: MaxHealth
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 423
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s current maximum health;\n"
+  example: []
+  syntax:
+    content: public float MaxHealth { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MaxHealth As Single
+  overload: PluginAPI.Core.Player.MaxHealth*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.ArtificialHealth
+  commentId: P:PluginAPI.Core.Player.ArtificialHealth
+  id: ArtificialHealth
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: ArtificialHealth
+  nameWithType: Player.ArtificialHealth
+  fullName: PluginAPI.Core.Player.ArtificialHealth
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ArtificialHealth
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 428
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the player&apos;s current artificial health;\n"
+  example: []
+  syntax:
+    content: public float ArtificialHealth { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property ArtificialHealth As Single
+  overload: PluginAPI.Core.Player.ArtificialHealth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.MaxArtificalHealth
+  commentId: P:PluginAPI.Core.Player.MaxArtificalHealth
+  id: MaxArtificalHealth
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: MaxArtificalHealth
+  nameWithType: Player.MaxArtificalHealth
+  fullName: PluginAPI.Core.Player.MaxArtificalHealth
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: MaxArtificalHealth
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 437
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s current maximum artifical health.\n"
+  example: []
+  syntax:
+    content: public float MaxArtificalHealth { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property MaxArtificalHealth As Single
+  overload: PluginAPI.Core.Player.MaxArtificalHealth*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.RemoteAdminAccess
+  commentId: P:PluginAPI.Core.Player.RemoteAdminAccess
+  id: RemoteAdminAccess
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: RemoteAdminAccess
+  nameWithType: Player.RemoteAdminAccess
+  fullName: PluginAPI.Core.Player.RemoteAdminAccess
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RemoteAdminAccess
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 442
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player has remoteadmin access. \n"
+  example: []
+  syntax:
+    content: public bool RemoteAdminAccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RemoteAdminAccess As Boolean
+  overload: PluginAPI.Core.Player.RemoteAdminAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.DoNotTrack
+  commentId: P:PluginAPI.Core.Player.DoNotTrack
+  id: DoNotTrack
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: DoNotTrack
+  nameWithType: Player.DoNotTrack
+  fullName: PluginAPI.Core.Player.DoNotTrack
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DoNotTrack
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 447
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets if the player has DoNotTrack enabled.\n"
+  example: []
+  syntax:
+    content: public bool DoNotTrack { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property DoNotTrack As Boolean
+  overload: PluginAPI.Core.Player.DoNotTrack*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsOverwatchEnabled
+  commentId: P:PluginAPI.Core.Player.IsOverwatchEnabled
+  id: IsOverwatchEnabled
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsOverwatchEnabled
+  nameWithType: Player.IsOverwatchEnabled
+  fullName: PluginAPI.Core.Player.IsOverwatchEnabled
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsOverwatchEnabled
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 452
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether ot not the player has overwatch enabled.\n"
+  example: []
+  syntax:
+    content: public bool IsOverwatchEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsOverwatchEnabled As Boolean
+  overload: PluginAPI.Core.Player.IsOverwatchEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.PlayerInfo
+  commentId: P:PluginAPI.Core.Player.PlayerInfo
+  id: PlayerInfo
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: PlayerInfo
+  nameWithType: Player.PlayerInfo
+  fullName: PluginAPI.Core.Player.PlayerInfo
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerInfo
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 461
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nPlayer info displayed while looking at the player.\n"
+  example: []
+  syntax:
+    content: public PlayerInfo PlayerInfo { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.PlayerInfo
+    content.vb: Public ReadOnly Property PlayerInfo As PlayerInfo
+  overload: PluginAPI.Core.Player.PlayerInfo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.CurrentItem
+  commentId: P:PluginAPI.Core.Player.CurrentItem
+  id: CurrentItem
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: CurrentItem
+  nameWithType: Player.CurrentItem
+  fullName: PluginAPI.Core.Player.CurrentItem
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CurrentItem
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 466
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the item in the player&apos;s hand, returns the default value if empty.\n"
+  example: []
+  syntax:
+    content: public ItemBase CurrentItem { get; set; }
+    parameters: []
+    return:
+      type: InventorySystem.Items.ItemBase
+    content.vb: Public Property CurrentItem As ItemBase
+  overload: PluginAPI.Core.Player.CurrentItem*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IsDisarmed
+  commentId: P:PluginAPI.Core.Player.IsDisarmed
+  id: IsDisarmed
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsDisarmed
+  nameWithType: Player.IsDisarmed
+  fullName: PluginAPI.Core.Player.IsDisarmed
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsDisarmed
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 481
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether or not the player is disarmed.\n"
+  example: []
+  syntax:
+    content: public bool IsDisarmed { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDisarmed As Boolean
+  overload: PluginAPI.Core.Player.IsDisarmed*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IsMuted
+  commentId: P:PluginAPI.Core.Player.IsMuted
+  id: IsMuted
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsMuted
+  nameWithType: Player.IsMuted
+  fullName: PluginAPI.Core.Player.IsMuted
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsMuted
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 502
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is muted.\n"
+  example: []
+  syntax:
+    content: public bool IsMuted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMuted As Boolean
+  overload: PluginAPI.Core.Player.IsMuted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsIntercomMuted
+  commentId: P:PluginAPI.Core.Player.IsIntercomMuted
+  id: IsIntercomMuted
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsIntercomMuted
+  nameWithType: Player.IsIntercomMuted
+  fullName: PluginAPI.Core.Player.IsIntercomMuted
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsIntercomMuted
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 507
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is muted at intercom.\n"
+  example: []
+  syntax:
+    content: public bool IsIntercomMuted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIntercomMuted As Boolean
+  overload: PluginAPI.Core.Player.IsIntercomMuted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsUsingVoiceChat
+  commentId: P:PluginAPI.Core.Player.IsUsingVoiceChat
+  id: IsUsingVoiceChat
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsUsingVoiceChat
+  nameWithType: Player.IsUsingVoiceChat
+  fullName: PluginAPI.Core.Player.IsUsingVoiceChat
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsUsingVoiceChat
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 512
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is using voicechat.\n"
+  example: []
+  syntax:
+    content: public bool IsUsingVoiceChat { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUsingVoiceChat As Boolean
+  overload: PluginAPI.Core.Player.IsUsingVoiceChat*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsGlobalModerator
+  commentId: P:PluginAPI.Core.Player.IsGlobalModerator
+  id: IsGlobalModerator
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsGlobalModerator
+  nameWithType: Player.IsGlobalModerator
+  fullName: PluginAPI.Core.Player.IsGlobalModerator
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsGlobalModerator
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 517
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is global moderator.\n"
+  example: []
+  syntax:
+    content: public bool IsGlobalModerator { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGlobalModerator As Boolean
+  overload: PluginAPI.Core.Player.IsGlobalModerator*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsNorthwoodStaff
+  commentId: P:PluginAPI.Core.Player.IsNorthwoodStaff
+  id: IsNorthwoodStaff
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsNorthwoodStaff
+  nameWithType: Player.IsNorthwoodStaff
+  fullName: PluginAPI.Core.Player.IsNorthwoodStaff
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsNorthwoodStaff
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 522
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is northwood staff.\n"
+  example: []
+  syntax:
+    content: public bool IsNorthwoodStaff { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNorthwoodStaff As Boolean
+  overload: PluginAPI.Core.Player.IsNorthwoodStaff*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsBypassEnabled
+  commentId: P:PluginAPI.Core.Player.IsBypassEnabled
+  id: IsBypassEnabled
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsBypassEnabled
+  nameWithType: Player.IsBypassEnabled
+  fullName: PluginAPI.Core.Player.IsBypassEnabled
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsBypassEnabled
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 527
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player has bypass mode.\n"
+  example: []
+  syntax:
+    content: public bool IsBypassEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsBypassEnabled As Boolean
+  overload: PluginAPI.Core.Player.IsBypassEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IsGodModeEnabled
+  commentId: P:PluginAPI.Core.Player.IsGodModeEnabled
+  id: IsGodModeEnabled
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsGodModeEnabled
+  nameWithType: Player.IsGodModeEnabled
+  fullName: PluginAPI.Core.Player.IsGodModeEnabled
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsGodModeEnabled
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 536
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player has god mode enabled.\n"
+  example: []
+  syntax:
+    content: public bool IsGodModeEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsGodModeEnabled As Boolean
+  overload: PluginAPI.Core.Player.IsGodModeEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IsNoclipEnabled
+  commentId: P:PluginAPI.Core.Player.IsNoclipEnabled
+  id: IsNoclipEnabled
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsNoclipEnabled
+  nameWithType: Player.IsNoclipEnabled
+  fullName: PluginAPI.Core.Player.IsNoclipEnabled
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsNoclipEnabled
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 545
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player has noclip enabled.\n"
+  example: []
+  syntax:
+    content: public bool IsNoclipEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsNoclipEnabled As Boolean
+  overload: PluginAPI.Core.Player.IsNoclipEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IsInventoryFull
+  commentId: P:PluginAPI.Core.Player.IsInventoryFull
+  id: IsInventoryFull
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsInventoryFull
+  nameWithType: Player.IsInventoryFull
+  fullName: PluginAPI.Core.Player.IsInventoryFull
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsInventoryFull
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 554
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player&apos;s inventory is full.\n"
+  example: []
+  syntax:
+    content: public bool IsInventoryFull { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInventoryFull As Boolean
+  overload: PluginAPI.Core.Player.IsInventoryFull*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsHuman
+  commentId: P:PluginAPI.Core.Player.IsHuman
+  id: IsHuman
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsHuman
+  nameWithType: Player.IsHuman
+  fullName: PluginAPI.Core.Player.IsHuman
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsHuman
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 559
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is human.\n"
+  example: []
+  syntax:
+    content: public bool IsHuman { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHuman As Boolean
+  overload: PluginAPI.Core.Player.IsHuman*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsAlive
+  commentId: P:PluginAPI.Core.Player.IsAlive
+  id: IsAlive
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsAlive
+  nameWithType: Player.IsAlive
+  fullName: PluginAPI.Core.Player.IsAlive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsAlive
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 564
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is alive\n"
+  example: []
+  syntax:
+    content: public bool IsAlive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAlive As Boolean
+  overload: PluginAPI.Core.Player.IsAlive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsReady
+  commentId: P:PluginAPI.Core.Player.IsReady
+  id: IsReady
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsReady
+  nameWithType: Player.IsReady
+  fullName: PluginAPI.Core.Player.IsReady
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsReady
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 569
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is properly connected to server.\n"
+  example: []
+  syntax:
+    content: public bool IsReady { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReady As Boolean
+  overload: PluginAPI.Core.Player.IsReady*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.IsServer
+  commentId: P:PluginAPI.Core.Player.IsServer
+  id: IsServer
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IsServer
+  nameWithType: Player.IsServer
+  fullName: PluginAPI.Core.Player.IsServer
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsServer
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 574
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets whether or not the player is the dedicated server.\n"
+  example: []
+  syntax:
+    content: public bool IsServer { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsServer As Boolean
+  overload: PluginAPI.Core.Player.IsServer*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.IsServer
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.DisarmedBy
+  commentId: P:PluginAPI.Core.Player.DisarmedBy
+  id: DisarmedBy
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: DisarmedBy
+  nameWithType: Player.DisarmedBy
+  fullName: PluginAPI.Core.Player.DisarmedBy
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DisarmedBy
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 579
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the disarmer of that player.\n"
+  example: []
+  syntax:
+    content: public Player DisarmedBy { get; set; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Property DisarmedBy As Player
+  overload: PluginAPI.Core.Player.DisarmedBy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Connection
+  commentId: P:PluginAPI.Core.Player.Connection
+  id: Connection
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Connection
+  nameWithType: Player.Connection
+  fullName: PluginAPI.Core.Player.Connection
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Connection
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 600
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s network connection.\n"
+  example: []
+  syntax:
+    content: public NetworkConnection Connection { get; }
+    parameters: []
+    return:
+      type: Mirror.NetworkConnection
+    content.vb: Public ReadOnly Property Connection As NetworkConnection
+  overload: PluginAPI.Core.Player.Connection*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.Camera
+  commentId: P:PluginAPI.Core.Player.Camera
+  id: Camera
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Camera
+  nameWithType: Player.Camera
+  fullName: PluginAPI.Core.Player.Camera
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Camera
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 605
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the player&apos;s camera transform.\n"
+  example: []
+  syntax:
+    content: public Transform Camera { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Transform
+    content.vb: Public ReadOnly Property Camera As Transform
+  overload: PluginAPI.Core.Player.Camera*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.TemporaryData
+  commentId: P:PluginAPI.Core.Player.TemporaryData
+  id: TemporaryData
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TemporaryData
+  nameWithType: Player.TemporaryData
+  fullName: PluginAPI.Core.Player.TemporaryData
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TemporaryData
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 610
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nThe <xref href=\"PluginAPI.Core.DataStorage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public DataStorage TemporaryData { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.DataStorage
+    content.vb: Public ReadOnly Property TemporaryData As DataStorage
+  overload: PluginAPI.Core.Player.TemporaryData*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.TemporaryData
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.EffectsManager
+  commentId: P:PluginAPI.Core.Player.EffectsManager
+  id: EffectsManager
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: EffectsManager
+  nameWithType: Player.EffectsManager
+  fullName: PluginAPI.Core.Player.EffectsManager
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: EffectsManager
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 615
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nThe <xref href=\"PluginAPI.Core.EffectsManager\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public EffectsManager EffectsManager { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.EffectsManager
+    content.vb: Public ReadOnly Property EffectsManager As EffectsManager
+  overload: PluginAPI.Core.Player.EffectsManager*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.DamageManager
+  commentId: P:PluginAPI.Core.Player.DamageManager
+  id: DamageManager
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: DamageManager
+  nameWithType: Player.DamageManager
+  fullName: PluginAPI.Core.Player.DamageManager
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DamageManager
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 620
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nThe <xref href=\"PluginAPI.Core.DamageManager\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public DamageManager DamageManager { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.DamageManager
+    content.vb: Public ReadOnly Property DamageManager As DamageManager
+  overload: PluginAPI.Core.Player.DamageManager*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Player.Position
+  commentId: P:PluginAPI.Core.Player.Position
+  id: Position
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Player.Position
+  fullName: PluginAPI.Core.Player.Position
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Position
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 625
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the player&apos;s position.\n"
+  example: []
+  syntax:
+    content: public Vector3 Position { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Property Position As Vector3
+  overload: PluginAPI.Core.Player.Position*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Rotation
+  commentId: P:PluginAPI.Core.Player.Rotation
+  id: Rotation
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: Player.Rotation
+  fullName: PluginAPI.Core.Player.Rotation
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Rotation
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 634
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets player&apos;s rotation.\n"
+  example: []
+  syntax:
+    content: public Vector3 Rotation { get; set; }
+    parameters: []
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public Property Rotation As Vector3
+  overload: PluginAPI.Core.Player.Rotation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.#ctor(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Player.#ctor(PluginAPI.Core.Interfaces.IGameComponent)
+  id: '#ctor(PluginAPI.Core.Interfaces.IGameComponent)'
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Player(IGameComponent)
+  nameWithType: Player.Player(IGameComponent)
+  fullName: PluginAPI.Core.Player.Player(PluginAPI.Core.Interfaces.IGameComponent)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 650
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public Player(IGameComponent component)
+    parameters:
+    - id: component
+      type: PluginAPI.Core.Interfaces.IGameComponent
+      description: The game component.
+    content.vb: Public Sub New(component As IGameComponent)
+  overload: PluginAPI.Core.Player.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
+  commentId: M:PluginAPI.Core.Player.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
+  id: SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: SendBroadcast(String, UInt16, Broadcast.BroadcastFlags, Boolean)
+  nameWithType: Player.SendBroadcast(String, UInt16, Broadcast.BroadcastFlags, Boolean)
+  fullName: PluginAPI.Core.Player.SendBroadcast(System.String, System.UInt16, Broadcast.BroadcastFlags, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SendBroadcast
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 692
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends a broadcast to the player.\n"
+  example: []
+  syntax:
+    content: public void SendBroadcast(string message, ushort duration, Broadcast.BroadcastFlags type = Broadcast.BroadcastFlags.Normal, bool shouldClearPrevious = false)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to be broadcasted.
+    - id: duration
+      type: System.UInt16
+      description: The broadcast duration.
+    - id: type
+      type: Broadcast.BroadcastFlags
+      description: The broadcast type.
+    - id: shouldClearPrevious
+      type: System.Boolean
+      description: Whether or not it should clear previous broadcasts.
+    content.vb: Public Sub SendBroadcast(message As String, duration As UShort, type As Broadcast.BroadcastFlags = Broadcast.BroadcastFlags.Normal, shouldClearPrevious As Boolean = False)
+  overload: PluginAPI.Core.Player.SendBroadcast*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.ClearBroadcasts
+  commentId: M:PluginAPI.Core.Player.ClearBroadcasts
+  id: ClearBroadcasts
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: ClearBroadcasts()
+  nameWithType: Player.ClearBroadcasts()
+  fullName: PluginAPI.Core.Player.ClearBroadcasts()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ClearBroadcasts
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 702
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nClears displayed broadcast(s).\n"
+  example: []
+  syntax:
+    content: public void ClearBroadcasts()
+    content.vb: Public Sub ClearBroadcasts
+  overload: PluginAPI.Core.Player.ClearBroadcasts*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.SendConsoleMessage(System.String,System.String)
+  commentId: M:PluginAPI.Core.Player.SendConsoleMessage(System.String,System.String)
+  id: SendConsoleMessage(System.String,System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: SendConsoleMessage(String, String)
+  nameWithType: Player.SendConsoleMessage(String, String)
+  fullName: PluginAPI.Core.Player.SendConsoleMessage(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SendConsoleMessage
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 709
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends a console message to the player&apos;s console.\n"
+  example: []
+  syntax:
+    content: public void SendConsoleMessage(string message, string color = "green")
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to be sent.
+    - id: color
+      type: System.String
+      description: The message color.
+    content.vb: Public Sub SendConsoleMessage(message As String, color As String = "green")
+  overload: PluginAPI.Core.Player.SendConsoleMessage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Ban(PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64)
+  commentId: M:PluginAPI.Core.Player.Ban(PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64)
+  id: Ban(PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Ban(IPlayer, String, Int64)
+  nameWithType: Player.Ban(IPlayer, String, Int64)
+  fullName: PluginAPI.Core.Player.Ban(PluginAPI.Core.Interfaces.IPlayer, System.String, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Ban
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 718
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nBans the player from the server.\n"
+  example: []
+  syntax:
+    content: public bool Ban(IPlayer issuer, string reason, long duration)
+    parameters:
+    - id: issuer
+      type: PluginAPI.Core.Interfaces.IPlayer
+      description: The player which issued ban.
+    - id: reason
+      type: System.String
+      description: The reason of ban.
+    - id: duration
+      type: System.Int64
+      description: The duration of ban in seconds.
+    return:
+      type: System.Boolean
+      description: If ban is successful.
+    content.vb: Public Function Ban(issuer As IPlayer, reason As String, duration As Long) As Boolean
+  overload: PluginAPI.Core.Player.Ban*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Ban(System.String,System.Int64)
+  commentId: M:PluginAPI.Core.Player.Ban(System.String,System.Int64)
+  id: Ban(System.String,System.Int64)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Ban(String, Int64)
+  nameWithType: Player.Ban(String, Int64)
+  fullName: PluginAPI.Core.Player.Ban(System.String, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Ban
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 726
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nBans the player from the server.\n"
+  example: []
+  syntax:
+    content: public bool Ban(string reason, long duration)
+    parameters:
+    - id: reason
+      type: System.String
+      description: The reason of ban.
+    - id: duration
+      type: System.Int64
+      description: The duration of ban in seconds.
+    return:
+      type: System.Boolean
+      description: If ban is successful.
+    content.vb: Public Function Ban(reason As String, duration As Long) As Boolean
+  overload: PluginAPI.Core.Player.Ban*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Kick(PluginAPI.Core.Interfaces.IPlayer,System.String)
+  commentId: M:PluginAPI.Core.Player.Kick(PluginAPI.Core.Interfaces.IPlayer,System.String)
+  id: Kick(PluginAPI.Core.Interfaces.IPlayer,System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Kick(IPlayer, String)
+  nameWithType: Player.Kick(IPlayer, String)
+  fullName: PluginAPI.Core.Player.Kick(PluginAPI.Core.Interfaces.IPlayer, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Kick
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 733
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nKicks the player from the server.\n"
+  example: []
+  syntax:
+    content: public void Kick(IPlayer issuer, string reason)
+    parameters:
+    - id: issuer
+      type: PluginAPI.Core.Interfaces.IPlayer
+      description: The player which issued kick.
+    - id: reason
+      type: System.String
+      description: The reason of kick.
+    content.vb: Public Sub Kick(issuer As IPlayer, reason As String)
+  overload: PluginAPI.Core.Player.Kick*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Kick(System.String)
+  commentId: M:PluginAPI.Core.Player.Kick(System.String)
+  id: Kick(System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Kick(String)
+  nameWithType: Player.Kick(String)
+  fullName: PluginAPI.Core.Player.Kick(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Kick
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 739
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nKicks the player from the server.\n"
+  example: []
+  syntax:
+    content: public void Kick(string reason)
+    parameters:
+    - id: reason
+      type: System.String
+      description: The reason of kick.
+    content.vb: Public Sub Kick(reason As String)
+  overload: PluginAPI.Core.Player.Kick*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Mute(System.Boolean)
+  commentId: M:PluginAPI.Core.Player.Mute(System.Boolean)
+  id: Mute(System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Mute(Boolean)
+  nameWithType: Player.Mute(Boolean)
+  fullName: PluginAPI.Core.Player.Mute(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Mute
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 744
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nIssue a mute to a player, prevents them from using voicechat.\n"
+  example: []
+  syntax:
+    content: public void Mute(bool isTemporary = true)
+    parameters:
+    - id: isTemporary
+      type: System.Boolean
+    content.vb: Public Sub Mute(isTemporary As Boolean = True)
+  overload: PluginAPI.Core.Player.Mute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Unmute(System.Boolean)
+  commentId: M:PluginAPI.Core.Player.Unmute(System.Boolean)
+  id: Unmute(System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Unmute(Boolean)
+  nameWithType: Player.Unmute(Boolean)
+  fullName: PluginAPI.Core.Player.Unmute(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Unmute
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 756
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRevoke a player&apos;s mute, allowing them to use voicechat again.\n"
+  example: []
+  syntax:
+    content: public void Unmute(bool revokeMute)
+    parameters:
+    - id: revokeMute
+      type: System.Boolean
+      description: If set to true, this player&apos;s <xref href="PluginAPI.Core.Player.UserId" data-throw-if-not-resolved="false"></xref> will be removed from the mute file.
+    content.vb: Public Sub Unmute(revokeMute As Boolean)
+  overload: PluginAPI.Core.Player.Unmute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IntercomMute(System.Boolean)
+  commentId: M:PluginAPI.Core.Player.IntercomMute(System.Boolean)
+  id: IntercomMute(System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IntercomMute(Boolean)
+  nameWithType: Player.IntercomMute(Boolean)
+  fullName: PluginAPI.Core.Player.IntercomMute(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IntercomMute
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 767
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nIssue a mute to a player, preventing them from using intercom.\n"
+  example: []
+  syntax:
+    content: public void IntercomMute(bool isTemporary = false)
+    parameters:
+    - id: isTemporary
+      type: System.Boolean
+    content.vb: Public Sub IntercomMute(isTemporary As Boolean = False)
+  overload: PluginAPI.Core.Player.IntercomMute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.IntercomUnmute(System.Boolean)
+  commentId: M:PluginAPI.Core.Player.IntercomUnmute(System.Boolean)
+  id: IntercomUnmute(System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: IntercomUnmute(Boolean)
+  nameWithType: Player.IntercomUnmute(Boolean)
+  fullName: PluginAPI.Core.Player.IntercomUnmute(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IntercomUnmute
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 779
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRevoke a player&apos;s mute, allowing them to use intercom again.\n"
+  example: []
+  syntax:
+    content: public void IntercomUnmute(bool revokeMute)
+    parameters:
+    - id: revokeMute
+      type: System.Boolean
+      description: Whether or not this player&apos;s <xref href="PluginAPI.Core.Player.UserId" data-throw-if-not-resolved="false"></xref> will be removed from the mute file.
+    content.vb: Public Sub IntercomUnmute(revokeMute As Boolean)
+  overload: PluginAPI.Core.Player.IntercomUnmute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.AddAmmo(ItemType,System.UInt16)
+  commentId: M:PluginAPI.Core.Player.AddAmmo(ItemType,System.UInt16)
+  id: AddAmmo(ItemType,System.UInt16)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: AddAmmo(ItemType, UInt16)
+  nameWithType: Player.AddAmmo(ItemType, UInt16)
+  fullName: PluginAPI.Core.Player.AddAmmo(ItemType, System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: AddAmmo
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 792
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nAdds ammo of specific item type.\n"
+  example: []
+  syntax:
+    content: public void AddAmmo(ItemType item, ushort amount)
+    parameters:
+    - id: item
+      type: ItemType
+      description: The type of ammo.
+    - id: amount
+      type: System.UInt16
+      description: The amount of ammo.
+    content.vb: Public Sub AddAmmo(item As ItemType, amount As UShort)
+  overload: PluginAPI.Core.Player.AddAmmo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
+  commentId: M:PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
+  id: SetAmmo(ItemType,System.UInt16)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: SetAmmo(ItemType, UInt16)
+  nameWithType: Player.SetAmmo(ItemType, UInt16)
+  fullName: PluginAPI.Core.Player.SetAmmo(ItemType, System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SetAmmo
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 799
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSets the ammo amount of a specific ammo type.\n"
+  example: []
+  syntax:
+    content: public void SetAmmo(ItemType item, ushort amount)
+    parameters:
+    - id: item
+      type: ItemType
+      description: The type of ammo
+    - id: amount
+      type: System.UInt16
+      description: The amount of ammo.
+    content.vb: Public Sub SetAmmo(item As ItemType, amount As UShort)
+  overload: PluginAPI.Core.Player.SetAmmo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.GetAmmo(ItemType)
+  commentId: M:PluginAPI.Core.Player.GetAmmo(ItemType)
+  id: GetAmmo(ItemType)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GetAmmo(ItemType)
+  nameWithType: Player.GetAmmo(ItemType)
+  fullName: PluginAPI.Core.Player.GetAmmo(ItemType)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetAmmo
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 806
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets ammo amount of specific ammo type.\n"
+  example: []
+  syntax:
+    content: public ushort GetAmmo(ItemType item)
+    parameters:
+    - id: item
+      type: ItemType
+      description: The type of ammo.
+    return:
+      type: System.UInt16
+      description: The amount of ammo which the player has.
+    content.vb: Public Function GetAmmo(item As ItemType) As UShort
+  overload: PluginAPI.Core.Player.GetAmmo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.DropAmmo(ItemType,System.UInt16,System.Boolean)
+  commentId: M:PluginAPI.Core.Player.DropAmmo(ItemType,System.UInt16,System.Boolean)
+  id: DropAmmo(ItemType,System.UInt16,System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: DropAmmo(ItemType, UInt16, Boolean)
+  nameWithType: Player.DropAmmo(ItemType, UInt16, Boolean)
+  fullName: PluginAPI.Core.Player.DropAmmo(ItemType, System.UInt16, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DropAmmo
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 815
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nDrops ammo.\n"
+  example: []
+  syntax:
+    content: public bool DropAmmo(ItemType item, ushort amount, bool checkMinimals = false)
+    parameters:
+    - id: item
+      type: ItemType
+      description: The type of ammo.
+    - id: amount
+      type: System.UInt16
+      description: The amount of ammo which will be dropped.
+    - id: checkMinimals
+      type: System.Boolean
+      description: Will prevent dropping small amounts of ammo.
+    return:
+      type: System.Boolean
+      description: Whether or not the player dropped the ammo successfully.
+    content.vb: Public Function DropAmmo(item As ItemType, amount As UShort, checkMinimals As Boolean = False) As Boolean
+  overload: PluginAPI.Core.Player.DropAmmo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.DropEverything
+  commentId: M:PluginAPI.Core.Player.DropEverything
+  id: DropEverything
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: DropEverything()
+  nameWithType: Player.DropEverything()
+  fullName: PluginAPI.Core.Player.DropEverything()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DropEverything
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 820
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nDrops all items including ammo.\n"
+  example: []
+  syntax:
+    content: public void DropEverything()
+    content.vb: Public Sub DropEverything
+  overload: PluginAPI.Core.Player.DropEverything*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Heal(System.Single)
+  commentId: M:PluginAPI.Core.Player.Heal(System.Single)
+  id: Heal(System.Single)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Heal(Single)
+  nameWithType: Player.Heal(Single)
+  fullName: PluginAPI.Core.Player.Heal(System.Single)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Heal
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 826
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nHeals the player.\n"
+  example: []
+  syntax:
+    content: public void Heal(float amount)
+    parameters:
+    - id: amount
+      type: System.Single
+      description: The amount of health to heal.
+    content.vb: Public Sub Heal(amount As Single)
+  overload: PluginAPI.Core.Player.Heal*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  commentId: M:PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  id: SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: SetRole(RoleTypeId, RoleChangeReason)
+  nameWithType: Player.SetRole(RoleTypeId, RoleChangeReason)
+  fullName: PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId, PlayerRoles.RoleChangeReason)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SetRole
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 833
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSets the players role.\n"
+  example: []
+  syntax:
+    content: public void SetRole(RoleTypeId newRole, RoleChangeReason reason = RoleChangeReason.RemoteAdmin)
+    parameters:
+    - id: newRole
+      type: PlayerRoles.RoleTypeId
+      description: The <xref href="PlayerRoles.RoleTypeId" data-throw-if-not-resolved="false"></xref> which will be set.
+    - id: reason
+      type: PlayerRoles.RoleChangeReason
+      description: The <xref href="PlayerRoles.RoleChangeReason" data-throw-if-not-resolved="false"></xref> of role change.
+    content.vb: Public Sub SetRole(newRole As RoleTypeId, reason As RoleChangeReason = RoleChangeReason.RemoteAdmin)
+  overload: PluginAPI.Core.Player.SetRole*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Disconnect(System.String)
+  commentId: M:PluginAPI.Core.Player.Disconnect(System.String)
+  id: Disconnect(System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Disconnect(String)
+  nameWithType: Player.Disconnect(String)
+  fullName: PluginAPI.Core.Player.Disconnect(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Disconnect
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 839
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nDisconnects the player from the server.\n"
+  example: []
+  syntax:
+    content: public void Disconnect(string reason = null)
+    parameters:
+    - id: reason
+      type: System.String
+      description: The reason.
+    content.vb: Public Sub Disconnect(reason As String = Nothing)
+  overload: PluginAPI.Core.Player.Disconnect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.ReceiveHint(System.String,System.Single)
+  commentId: M:PluginAPI.Core.Player.ReceiveHint(System.String,System.Single)
+  id: ReceiveHint(System.String,System.Single)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: ReceiveHint(String, Single)
+  nameWithType: Player.ReceiveHint(String, Single)
+  fullName: PluginAPI.Core.Player.ReceiveHint(System.String, System.Single)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ReceiveHint
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 846
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends the player a hint text.\n"
+  example: []
+  syntax:
+    content: public void ReceiveHint(string text, float duration = 3F)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text which will be displayed.
+    - id: duration
+      type: System.Single
+      description: The duration of which the text will be visible.
+    content.vb: Public Sub ReceiveHint(text As String, duration As Single = 3F)
+  overload: PluginAPI.Core.Player.ReceiveHint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+  commentId: M:PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+  id: ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: ReceiveHint(String, HintEffect[], Single)
+  nameWithType: Player.ReceiveHint(String, HintEffect[], Single)
+  fullName: PluginAPI.Core.Player.ReceiveHint(System.String, Hints.HintEffect[], System.Single)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ReceiveHint
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 854
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends the player a hint text with effects.\n"
+  example: []
+  syntax:
+    content: public void ReceiveHint(string text, HintEffect[] effects, float duration = 3F)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text which will be displayed.
+    - id: effects
+      type: Hints.HintEffect[]
+      description: The effects of text.
+    - id: duration
+      type: System.Single
+      description: The duration of which the text will be visible.
+    content.vb: Public Sub ReceiveHint(text As String, effects As HintEffect(), duration As Single = 3F)
+  overload: PluginAPI.Core.Player.ReceiveHint*
+  nameWithType.vb: Player.ReceiveHint(String, HintEffect(), Single)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Player.ReceiveHint(System.String, Hints.HintEffect(), System.Single)
+  name.vb: ReceiveHint(String, HintEffect(), Single)
+- uid: PluginAPI.Core.Player.ReceiveHitMarker(System.Single)
+  commentId: M:PluginAPI.Core.Player.ReceiveHitMarker(System.Single)
+  id: ReceiveHitMarker(System.Single)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: ReceiveHitMarker(Single)
+  nameWithType: Player.ReceiveHitMarker(Single)
+  fullName: PluginAPI.Core.Player.ReceiveHitMarker(System.Single)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ReceiveHitMarker
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 860
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nSends the player a hit marker.\n"
+  example: []
+  syntax:
+    content: public void ReceiveHitMarker(float size = 1F)
+    parameters:
+    - id: size
+      type: System.Single
+      description: The size of hit marker.
+    content.vb: Public Sub ReceiveHitMarker(size As Single = 1F)
+  overload: PluginAPI.Core.Player.ReceiveHitMarker*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.GetStatModule``1
+  commentId: M:PluginAPI.Core.Player.GetStatModule``1
+  id: GetStatModule``1
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GetStatModule<T>()
+  nameWithType: Player.GetStatModule<T>()
+  fullName: PluginAPI.Core.Player.GetStatModule<T>()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetStatModule
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 867
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the stats module.\n"
+  example: []
+  syntax:
+    content: >-
+      public T GetStatModule<T>()
+          where T : StatBase
+    typeParameters:
+    - id: T
+      description: The type of the stat module.
+    return:
+      type: '{T}'
+      description: The stat module.
+    content.vb: Public Function GetStatModule(Of T As StatBase) As T
+  overload: PluginAPI.Core.Player.GetStatModule*
+  nameWithType.vb: Player.GetStatModule(Of T)()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Player.GetStatModule(Of T)()
+  name.vb: GetStatModule(Of T)()
+- uid: PluginAPI.Core.Player.RedirectToServer(System.UInt16)
+  commentId: M:PluginAPI.Core.Player.RedirectToServer(System.UInt16)
+  id: RedirectToServer(System.UInt16)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: RedirectToServer(UInt16)
+  nameWithType: Player.RedirectToServer(UInt16)
+  fullName: PluginAPI.Core.Player.RedirectToServer(System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RedirectToServer
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 873
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRedirects player connection to a target server port.\n"
+  example: []
+  syntax:
+    content: public void RedirectToServer(ushort port)
+    parameters:
+    - id: port
+      type: System.UInt16
+      description: The port of the target server.
+    content.vb: Public Sub RedirectToServer(port As UShort)
+  overload: PluginAPI.Core.Player.RedirectToServer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Reconnect(System.Single,System.Boolean)
+  commentId: M:PluginAPI.Core.Player.Reconnect(System.Single,System.Boolean)
+  id: Reconnect(System.Single,System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Reconnect(Single, Boolean)
+  nameWithType: Player.Reconnect(Single, Boolean)
+  fullName: PluginAPI.Core.Player.Reconnect(System.Single, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Reconnect
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 880
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nTells the player to reconnect to the server.\n"
+  example: []
+  syntax:
+    content: public void Reconnect(float delay = 3F, bool isFastRestart = false)
+    parameters:
+    - id: delay
+      type: System.Single
+      description: The delay when client will reconnect to server.
+    - id: isFastRestart
+      type: System.Boolean
+      description: Whether or not fast restart is enabled.
+    content.vb: Public Sub Reconnect(delay As Single = 3F, isFastRestart As Boolean = False)
+  overload: PluginAPI.Core.Player.Reconnect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.OnStart
+  commentId: M:PluginAPI.Core.Player.OnStart
+  id: OnStart
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: OnStart()
+  nameWithType: Player.OnStart()
+  fullName: PluginAPI.Core.Player.OnStart()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnStart
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 883
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nExecuted when player object is created.\n"
+  example: []
+  syntax:
+    content: public virtual void OnStart()
+    content.vb: Public Overridable Sub OnStart
+  overload: PluginAPI.Core.Player.OnStart*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.OnStart
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Player.OnDestroy
+  commentId: M:PluginAPI.Core.Player.OnDestroy
+  id: OnDestroy
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: Player.OnDestroy()
+  fullName: PluginAPI.Core.Player.OnDestroy()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnDestroy
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 886
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nExecuted when player object is destroyed.\n"
+  example: []
+  syntax:
+    content: public virtual void OnDestroy()
+    content.vb: Public Overridable Sub OnDestroy
+  overload: PluginAPI.Core.Player.OnDestroy*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.OnDestroy
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Player.OnUpdate
+  commentId: M:PluginAPI.Core.Player.OnUpdate
+  id: OnUpdate
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: Player.OnUpdate()
+  fullName: PluginAPI.Core.Player.OnUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnUpdate
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 889
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nExecuted every frame.\n"
+  example: []
+  syntax:
+    content: public virtual void OnUpdate()
+    content.vb: Public Overridable Sub OnUpdate
+  overload: PluginAPI.Core.Player.OnUpdate*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.OnUpdate
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Player.OnLateUpdate
+  commentId: M:PluginAPI.Core.Player.OnLateUpdate
+  id: OnLateUpdate
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: OnLateUpdate()
+  nameWithType: Player.OnLateUpdate()
+  fullName: PluginAPI.Core.Player.OnLateUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnLateUpdate
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 892
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nExecuted after all OnUpdate functions have been called.\n"
+  example: []
+  syntax:
+    content: public virtual void OnLateUpdate()
+    content.vb: Public Overridable Sub OnLateUpdate
+  overload: PluginAPI.Core.Player.OnLateUpdate*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Player.OnFixedUpdate
+  commentId: M:PluginAPI.Core.Player.OnFixedUpdate
+  id: OnFixedUpdate
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: OnFixedUpdate()
+  nameWithType: Player.OnFixedUpdate()
+  fullName: PluginAPI.Core.Player.OnFixedUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnFixedUpdate
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 895
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nExecuted with the frequency of the physics system.\n<remarks>Unity&apos;s physics engine runs at 50hz by default.</remarks>\n"
+  example: []
+  syntax:
+    content: public virtual void OnFixedUpdate()
+    content.vb: Public Overridable Sub OnFixedUpdate
+  overload: PluginAPI.Core.Player.OnFixedUpdate*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: PluginAPI.Core.Player.GetComponent``1(System.Boolean)
+  commentId: M:PluginAPI.Core.Player.GetComponent``1(System.Boolean)
+  id: GetComponent``1(System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GetComponent<T>(Boolean)
+  nameWithType: Player.GetComponent<T>(Boolean)
+  fullName: PluginAPI.Core.Player.GetComponent<T>(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetComponent
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 899
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"UnityEngine.MonoBehaviour\" data-throw-if-not-resolved=\"false\"></xref> and caches it.\n"
+  example: []
+  syntax:
+    content: >-
+      public T GetComponent<T>(bool globalSearch = false)
+          where T : MonoBehaviour
+    parameters:
+    - id: globalSearch
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function GetComponent(Of T As MonoBehaviour)(globalSearch As Boolean = False) As T
+  overload: PluginAPI.Core.Player.GetComponent*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.GetComponent``1(System.Boolean)
+  nameWithType.vb: Player.GetComponent(Of T)(Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Player.GetComponent(Of T)(System.Boolean)
+  name.vb: GetComponent(Of T)(Boolean)
+- uid: PluginAPI.Core.Player.TryGetComponent``1(``0@,System.Boolean)
+  commentId: M:PluginAPI.Core.Player.TryGetComponent``1(``0@,System.Boolean)
+  id: TryGetComponent``1(``0@,System.Boolean)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGetComponent<T>(out T, Boolean)
+  nameWithType: Player.TryGetComponent<T>(out T, Boolean)
+  fullName: PluginAPI.Core.Player.TryGetComponent<T>(out T, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGetComponent
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 906
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"UnityEngine.MonoBehaviour\" data-throw-if-not-resolved=\"false\"></xref> and caches it.\n"
+  example: []
+  syntax:
+    content: >-
+      public bool TryGetComponent<T>(out T component, bool globalSearch = false)
+          where T : MonoBehaviour
+    parameters:
+    - id: component
+      type: '{T}'
+    - id: globalSearch
+      type: System.Boolean
+    typeParameters:
+    - id: T
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryGetComponent(Of T As MonoBehaviour)(ByRef component As T, globalSearch As Boolean = False) As Boolean
+  overload: PluginAPI.Core.Player.TryGetComponent*
+  implements:
+  - PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1({T}@,System.Boolean)
+  nameWithType.vb: Player.TryGetComponent(Of T)(ByRef T, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.Player.TryGetComponent(Of T)(ByRef T, System.Boolean)
+  name.vb: TryGetComponent(Of T)(ByRef T, Boolean)
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Core.Interfaces.IPlayer
+  commentId: T:PluginAPI.Core.Interfaces.IPlayer
+  parent: PluginAPI.Core.Interfaces
+  name: IPlayer
+  nameWithType: IPlayer
+  fullName: PluginAPI.Core.Interfaces.IPlayer
+- uid: PluginAPI.Core.Interfaces.IEntity
+  commentId: T:PluginAPI.Core.Interfaces.IEntity
+  parent: PluginAPI.Core.Interfaces
+  name: IEntity
+  nameWithType: IEntity
+  fullName: PluginAPI.Core.Interfaces.IEntity
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.PluginAPI.Core.PlayerExtensions.GetAmmoLimit(ItemType)
+  commentId: M:PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  parent: PluginAPI.Core.PlayerExtensions
+  definition: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  name: GetAmmoLimit(ItemType)
+  nameWithType: PlayerExtensions.GetAmmoLimit(ItemType)
+  fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(ItemType)
+  spec.csharp:
+  - uid: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(ItemType)
+    name: GetAmmoLimit
+    nameWithType: PlayerExtensions.GetAmmoLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(ItemType)
+    name: GetAmmoLimit
+    nameWithType: PlayerExtensions.GetAmmoLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.PluginAPI.Core.PlayerExtensions.GetCategoryLimit(ItemCategory)
+  commentId: M:PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  parent: PluginAPI.Core.PlayerExtensions
+  definition: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  name: GetCategoryLimit(ItemCategory)
+  nameWithType: PlayerExtensions.GetCategoryLimit(ItemCategory)
+  fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(ItemCategory)
+  spec.csharp:
+  - uid: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(ItemCategory)
+    name: GetCategoryLimit
+    nameWithType: PlayerExtensions.GetCategoryLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: ItemCategory
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(ItemCategory)
+    name: GetCategoryLimit
+    nameWithType: PlayerExtensions.GetCategoryLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: ItemCategory
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Interfaces
+  commentId: N:PluginAPI.Core.Interfaces
+  name: PluginAPI.Core.Interfaces
+  nameWithType: PluginAPI.Core.Interfaces
+  fullName: PluginAPI.Core.Interfaces
+- uid: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  commentId: M:PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  isExternal: true
+  name: GetAmmoLimit(Player, ItemType)
+  nameWithType: PlayerExtensions.GetAmmoLimit(Player, ItemType)
+  fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player, ItemType)
+  spec.csharp:
+  - uid: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+    name: GetAmmoLimit
+    nameWithType: PlayerExtensions.GetAmmoLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+    name: GetAmmoLimit
+    nameWithType: PlayerExtensions.GetAmmoLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.PlayerExtensions
+  commentId: T:PluginAPI.Core.PlayerExtensions
+  parent: PluginAPI.Core
+  name: PlayerExtensions
+  nameWithType: PlayerExtensions
+  fullName: PluginAPI.Core.PlayerExtensions
+- uid: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  commentId: M:PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  isExternal: true
+  name: GetCategoryLimit(Player, ItemCategory)
+  nameWithType: PlayerExtensions.GetCategoryLimit(Player, ItemCategory)
+  fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player, ItemCategory)
+  spec.csharp:
+  - uid: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+    name: GetCategoryLimit
+    nameWithType: PlayerExtensions.GetCategoryLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: ItemCategory
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+    name: GetCategoryLimit
+    nameWithType: PlayerExtensions.GetCategoryLimit
+    fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: ItemCategory
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.Count*
+  commentId: Overload:PluginAPI.Core.Player.Count
+  name: Count
+  nameWithType: Player.Count
+  fullName: PluginAPI.Core.Player.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PluginAPI.Core.Player.GetPlayers*
+  commentId: Overload:PluginAPI.Core.Player.GetPlayers
+  name: GetPlayers
+  nameWithType: Player.GetPlayers
+  fullName: PluginAPI.Core.Player.GetPlayers
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core.Interfaces.IGameComponent
+  commentId: T:PluginAPI.Core.Interfaces.IGameComponent
+  parent: PluginAPI.Core.Interfaces
+  name: IGameComponent
+  nameWithType: IGameComponent
+  fullName: PluginAPI.Core.Interfaces.IGameComponent
+- uid: PluginAPI.Core.Player.TryGet*
+  commentId: Overload:PluginAPI.Core.Player.TryGet
+  name: TryGet
+  nameWithType: Player.TryGet
+  fullName: PluginAPI.Core.Player.TryGet
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: PluginAPI.Core.Player.Get*
+  commentId: Overload:PluginAPI.Core.Player.Get
+  name: Get
+  nameWithType: Player.Get
+  fullName: PluginAPI.Core.Player.Get
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub
+- uid: Mirror.NetworkIdentity
+  commentId: T:Mirror.NetworkIdentity
+  parent: Mirror
+  isExternal: true
+  name: NetworkIdentity
+  nameWithType: NetworkIdentity
+  fullName: Mirror.NetworkIdentity
+- uid: Mirror
+  commentId: N:Mirror
+  isExternal: true
+  name: Mirror
+  nameWithType: Mirror
+  fullName: Mirror
+- uid: PluginAPI.Core.Player.GetByName*
+  commentId: Overload:PluginAPI.Core.Player.GetByName
+  name: GetByName
+  nameWithType: Player.GetByName
+  fullName: PluginAPI.Core.Player.GetByName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Core.Player.TryGetByName*
+  commentId: Overload:PluginAPI.Core.Player.TryGetByName
+  name: TryGetByName
+  nameWithType: Player.TryGetByName
+  fullName: PluginAPI.Core.Player.TryGetByName
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: PluginAPI.Core.Player.ReferenceHub*
+  commentId: Overload:PluginAPI.Core.Player.ReferenceHub
+  name: ReferenceHub
+  nameWithType: Player.ReferenceHub
+  fullName: PluginAPI.Core.Player.ReferenceHub
+- uid: PluginAPI.Core.Interfaces.IPlayer.ReferenceHub
+  commentId: P:PluginAPI.Core.Interfaces.IPlayer.ReferenceHub
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: ReferenceHub
+  nameWithType: IPlayer.ReferenceHub
+  fullName: PluginAPI.Core.Interfaces.IPlayer.ReferenceHub
+- uid: PluginAPI.Core.Player.GameObject*
+  commentId: Overload:PluginAPI.Core.Player.GameObject
+  name: GameObject
+  nameWithType: Player.GameObject
+  fullName: PluginAPI.Core.Player.GameObject
+- uid: PluginAPI.Core.Interfaces.IPlayer.GameObject
+  commentId: P:PluginAPI.Core.Interfaces.IPlayer.GameObject
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: GameObject
+  nameWithType: IPlayer.GameObject
+  fullName: PluginAPI.Core.Interfaces.IPlayer.GameObject
+- uid: PluginAPI.Core.Player.NetworkId*
+  commentId: Overload:PluginAPI.Core.Player.NetworkId
+  name: NetworkId
+  nameWithType: Player.NetworkId
+  fullName: PluginAPI.Core.Player.NetworkId
+- uid: PluginAPI.Core.Player.PlayerId*
+  commentId: Overload:PluginAPI.Core.Player.PlayerId
+  name: PlayerId
+  nameWithType: Player.PlayerId
+  fullName: PluginAPI.Core.Player.PlayerId
+- uid: PluginAPI.Core.Player.Nickname*
+  commentId: Overload:PluginAPI.Core.Player.Nickname
+  name: Nickname
+  nameWithType: Player.Nickname
+  fullName: PluginAPI.Core.Player.Nickname
+- uid: PluginAPI.Core.Player.DisplayNickname*
+  commentId: Overload:PluginAPI.Core.Player.DisplayNickname
+  name: DisplayNickname
+  nameWithType: Player.DisplayNickname
+  fullName: PluginAPI.Core.Player.DisplayNickname
+- uid: PluginAPI.Core.Player.UserId*
+  commentId: Overload:PluginAPI.Core.Player.UserId
+  name: UserId
+  nameWithType: Player.UserId
+  fullName: PluginAPI.Core.Player.UserId
+- uid: PluginAPI.Core.Player.IpAddress*
+  commentId: Overload:PluginAPI.Core.Player.IpAddress
+  name: IpAddress
+  nameWithType: Player.IpAddress
+  fullName: PluginAPI.Core.Player.IpAddress
+- uid: PluginAPI.Core.Player.Role*
+  commentId: Overload:PluginAPI.Core.Player.Role
+  name: Role
+  nameWithType: Player.Role
+  fullName: PluginAPI.Core.Player.Role
+- uid: PlayerRoles.RoleTypeId
+  commentId: T:PlayerRoles.RoleTypeId
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleTypeId
+  nameWithType: RoleTypeId
+  fullName: PlayerRoles.RoleTypeId
+- uid: PlayerRoles
+  commentId: N:PlayerRoles
+  isExternal: true
+  name: PlayerRoles
+  nameWithType: PlayerRoles
+  fullName: PlayerRoles
+- uid: PluginAPI.Core.Player.CustomInfo*
+  commentId: Overload:PluginAPI.Core.Player.CustomInfo
+  name: CustomInfo
+  nameWithType: Player.CustomInfo
+  fullName: PluginAPI.Core.Player.CustomInfo
+- uid: PluginAPI.Core.Player.Health*
+  commentId: Overload:PluginAPI.Core.Player.Health
+  name: Health
+  nameWithType: Player.Health
+  fullName: PluginAPI.Core.Player.Health
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Core.Player.MaxHealth*
+  commentId: Overload:PluginAPI.Core.Player.MaxHealth
+  name: MaxHealth
+  nameWithType: Player.MaxHealth
+  fullName: PluginAPI.Core.Player.MaxHealth
+- uid: PluginAPI.Core.Player.ArtificialHealth*
+  commentId: Overload:PluginAPI.Core.Player.ArtificialHealth
+  name: ArtificialHealth
+  nameWithType: Player.ArtificialHealth
+  fullName: PluginAPI.Core.Player.ArtificialHealth
+- uid: PluginAPI.Core.Player.MaxArtificalHealth*
+  commentId: Overload:PluginAPI.Core.Player.MaxArtificalHealth
+  name: MaxArtificalHealth
+  nameWithType: Player.MaxArtificalHealth
+  fullName: PluginAPI.Core.Player.MaxArtificalHealth
+- uid: PluginAPI.Core.Player.RemoteAdminAccess*
+  commentId: Overload:PluginAPI.Core.Player.RemoteAdminAccess
+  name: RemoteAdminAccess
+  nameWithType: Player.RemoteAdminAccess
+  fullName: PluginAPI.Core.Player.RemoteAdminAccess
+- uid: PluginAPI.Core.Player.DoNotTrack*
+  commentId: Overload:PluginAPI.Core.Player.DoNotTrack
+  name: DoNotTrack
+  nameWithType: Player.DoNotTrack
+  fullName: PluginAPI.Core.Player.DoNotTrack
+- uid: PluginAPI.Core.Player.IsOverwatchEnabled*
+  commentId: Overload:PluginAPI.Core.Player.IsOverwatchEnabled
+  name: IsOverwatchEnabled
+  nameWithType: Player.IsOverwatchEnabled
+  fullName: PluginAPI.Core.Player.IsOverwatchEnabled
+- uid: PluginAPI.Core.Player.PlayerInfo*
+  commentId: Overload:PluginAPI.Core.Player.PlayerInfo
+  name: PlayerInfo
+  nameWithType: Player.PlayerInfo
+  fullName: PluginAPI.Core.Player.PlayerInfo
+- uid: PluginAPI.Core.PlayerInfo
+  commentId: T:PluginAPI.Core.PlayerInfo
+  parent: PluginAPI.Core
+  name: PlayerInfo
+  nameWithType: PlayerInfo
+  fullName: PluginAPI.Core.PlayerInfo
+- uid: PluginAPI.Core.Player.CurrentItem*
+  commentId: Overload:PluginAPI.Core.Player.CurrentItem
+  name: CurrentItem
+  nameWithType: Player.CurrentItem
+  fullName: PluginAPI.Core.Player.CurrentItem
+- uid: InventorySystem.Items.ItemBase
+  commentId: T:InventorySystem.Items.ItemBase
+  parent: InventorySystem.Items
+  isExternal: true
+  name: ItemBase
+  nameWithType: ItemBase
+  fullName: InventorySystem.Items.ItemBase
+- uid: InventorySystem.Items
+  commentId: N:InventorySystem.Items
+  isExternal: true
+  name: InventorySystem.Items
+  nameWithType: InventorySystem.Items
+  fullName: InventorySystem.Items
+- uid: PluginAPI.Core.Player.IsDisarmed*
+  commentId: Overload:PluginAPI.Core.Player.IsDisarmed
+  name: IsDisarmed
+  nameWithType: Player.IsDisarmed
+  fullName: PluginAPI.Core.Player.IsDisarmed
+- uid: PluginAPI.Core.Player.IsMuted*
+  commentId: Overload:PluginAPI.Core.Player.IsMuted
+  name: IsMuted
+  nameWithType: Player.IsMuted
+  fullName: PluginAPI.Core.Player.IsMuted
+- uid: PluginAPI.Core.Player.IsIntercomMuted*
+  commentId: Overload:PluginAPI.Core.Player.IsIntercomMuted
+  name: IsIntercomMuted
+  nameWithType: Player.IsIntercomMuted
+  fullName: PluginAPI.Core.Player.IsIntercomMuted
+- uid: PluginAPI.Core.Player.IsUsingVoiceChat*
+  commentId: Overload:PluginAPI.Core.Player.IsUsingVoiceChat
+  name: IsUsingVoiceChat
+  nameWithType: Player.IsUsingVoiceChat
+  fullName: PluginAPI.Core.Player.IsUsingVoiceChat
+- uid: PluginAPI.Core.Player.IsGlobalModerator*
+  commentId: Overload:PluginAPI.Core.Player.IsGlobalModerator
+  name: IsGlobalModerator
+  nameWithType: Player.IsGlobalModerator
+  fullName: PluginAPI.Core.Player.IsGlobalModerator
+- uid: PluginAPI.Core.Player.IsNorthwoodStaff*
+  commentId: Overload:PluginAPI.Core.Player.IsNorthwoodStaff
+  name: IsNorthwoodStaff
+  nameWithType: Player.IsNorthwoodStaff
+  fullName: PluginAPI.Core.Player.IsNorthwoodStaff
+- uid: PluginAPI.Core.Player.IsBypassEnabled*
+  commentId: Overload:PluginAPI.Core.Player.IsBypassEnabled
+  name: IsBypassEnabled
+  nameWithType: Player.IsBypassEnabled
+  fullName: PluginAPI.Core.Player.IsBypassEnabled
+- uid: PluginAPI.Core.Player.IsGodModeEnabled*
+  commentId: Overload:PluginAPI.Core.Player.IsGodModeEnabled
+  name: IsGodModeEnabled
+  nameWithType: Player.IsGodModeEnabled
+  fullName: PluginAPI.Core.Player.IsGodModeEnabled
+- uid: PluginAPI.Core.Player.IsNoclipEnabled*
+  commentId: Overload:PluginAPI.Core.Player.IsNoclipEnabled
+  name: IsNoclipEnabled
+  nameWithType: Player.IsNoclipEnabled
+  fullName: PluginAPI.Core.Player.IsNoclipEnabled
+- uid: PluginAPI.Core.Player.IsInventoryFull*
+  commentId: Overload:PluginAPI.Core.Player.IsInventoryFull
+  name: IsInventoryFull
+  nameWithType: Player.IsInventoryFull
+  fullName: PluginAPI.Core.Player.IsInventoryFull
+- uid: PluginAPI.Core.Player.IsHuman*
+  commentId: Overload:PluginAPI.Core.Player.IsHuman
+  name: IsHuman
+  nameWithType: Player.IsHuman
+  fullName: PluginAPI.Core.Player.IsHuman
+- uid: PluginAPI.Core.Player.IsAlive*
+  commentId: Overload:PluginAPI.Core.Player.IsAlive
+  name: IsAlive
+  nameWithType: Player.IsAlive
+  fullName: PluginAPI.Core.Player.IsAlive
+- uid: PluginAPI.Core.Player.IsReady*
+  commentId: Overload:PluginAPI.Core.Player.IsReady
+  name: IsReady
+  nameWithType: Player.IsReady
+  fullName: PluginAPI.Core.Player.IsReady
+- uid: PluginAPI.Core.Player.IsServer*
+  commentId: Overload:PluginAPI.Core.Player.IsServer
+  name: IsServer
+  nameWithType: Player.IsServer
+  fullName: PluginAPI.Core.Player.IsServer
+- uid: PluginAPI.Core.Interfaces.IPlayer.IsServer
+  commentId: P:PluginAPI.Core.Interfaces.IPlayer.IsServer
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: IsServer
+  nameWithType: IPlayer.IsServer
+  fullName: PluginAPI.Core.Interfaces.IPlayer.IsServer
+- uid: PluginAPI.Core.Player.DisarmedBy*
+  commentId: Overload:PluginAPI.Core.Player.DisarmedBy
+  name: DisarmedBy
+  nameWithType: Player.DisarmedBy
+  fullName: PluginAPI.Core.Player.DisarmedBy
+- uid: PluginAPI.Core.Player.Connection*
+  commentId: Overload:PluginAPI.Core.Player.Connection
+  name: Connection
+  nameWithType: Player.Connection
+  fullName: PluginAPI.Core.Player.Connection
+- uid: Mirror.NetworkConnection
+  commentId: T:Mirror.NetworkConnection
+  parent: Mirror
+  isExternal: true
+  name: NetworkConnection
+  nameWithType: NetworkConnection
+  fullName: Mirror.NetworkConnection
+- uid: PluginAPI.Core.Player.Camera*
+  commentId: Overload:PluginAPI.Core.Player.Camera
+  name: Camera
+  nameWithType: Player.Camera
+  fullName: PluginAPI.Core.Player.Camera
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
+- uid: PluginAPI.Core.DataStorage
+  commentId: T:PluginAPI.Core.DataStorage
+  parent: PluginAPI.Core
+  name: DataStorage
+  nameWithType: DataStorage
+  fullName: PluginAPI.Core.DataStorage
+- uid: PluginAPI.Core.Player.TemporaryData*
+  commentId: Overload:PluginAPI.Core.Player.TemporaryData
+  name: TemporaryData
+  nameWithType: Player.TemporaryData
+  fullName: PluginAPI.Core.Player.TemporaryData
+- uid: PluginAPI.Core.Interfaces.IPlayer.TemporaryData
+  commentId: P:PluginAPI.Core.Interfaces.IPlayer.TemporaryData
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: TemporaryData
+  nameWithType: IPlayer.TemporaryData
+  fullName: PluginAPI.Core.Interfaces.IPlayer.TemporaryData
+- uid: PluginAPI.Core.EffectsManager
+  commentId: T:PluginAPI.Core.EffectsManager
+  parent: PluginAPI.Core
+  name: EffectsManager
+  nameWithType: EffectsManager
+  fullName: PluginAPI.Core.EffectsManager
+- uid: PluginAPI.Core.Player.EffectsManager*
+  commentId: Overload:PluginAPI.Core.Player.EffectsManager
+  name: EffectsManager
+  nameWithType: Player.EffectsManager
+  fullName: PluginAPI.Core.Player.EffectsManager
+- uid: PluginAPI.Core.DamageManager
+  commentId: T:PluginAPI.Core.DamageManager
+  parent: PluginAPI.Core
+  name: DamageManager
+  nameWithType: DamageManager
+  fullName: PluginAPI.Core.DamageManager
+- uid: PluginAPI.Core.Player.DamageManager*
+  commentId: Overload:PluginAPI.Core.Player.DamageManager
+  name: DamageManager
+  nameWithType: Player.DamageManager
+  fullName: PluginAPI.Core.Player.DamageManager
+- uid: PluginAPI.Core.Player.Position*
+  commentId: Overload:PluginAPI.Core.Player.Position
+  name: Position
+  nameWithType: Player.Position
+  fullName: PluginAPI.Core.Player.Position
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: PluginAPI.Core.Player.Rotation*
+  commentId: Overload:PluginAPI.Core.Player.Rotation
+  name: Rotation
+  nameWithType: Player.Rotation
+  fullName: PluginAPI.Core.Player.Rotation
+- uid: PluginAPI.Core.Player.#ctor*
+  commentId: Overload:PluginAPI.Core.Player.#ctor
+  name: Player
+  nameWithType: Player.Player
+  fullName: PluginAPI.Core.Player.Player
+- uid: PluginAPI.Core.Player.SendBroadcast*
+  commentId: Overload:PluginAPI.Core.Player.SendBroadcast
+  name: SendBroadcast
+  nameWithType: Player.SendBroadcast
+  fullName: PluginAPI.Core.Player.SendBroadcast
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: Broadcast.BroadcastFlags
+  commentId: T:Broadcast.BroadcastFlags
+  isExternal: true
+  name: Broadcast.BroadcastFlags
+  nameWithType: Broadcast.BroadcastFlags
+  fullName: Broadcast.BroadcastFlags
+- uid: PluginAPI.Core.Player.ClearBroadcasts*
+  commentId: Overload:PluginAPI.Core.Player.ClearBroadcasts
+  name: ClearBroadcasts
+  nameWithType: Player.ClearBroadcasts
+  fullName: PluginAPI.Core.Player.ClearBroadcasts
+- uid: PluginAPI.Core.Player.SendConsoleMessage*
+  commentId: Overload:PluginAPI.Core.Player.SendConsoleMessage
+  name: SendConsoleMessage
+  nameWithType: Player.SendConsoleMessage
+  fullName: PluginAPI.Core.Player.SendConsoleMessage
+- uid: PluginAPI.Core.Player.Ban*
+  commentId: Overload:PluginAPI.Core.Player.Ban
+  name: Ban
+  nameWithType: Player.Ban
+  fullName: PluginAPI.Core.Player.Ban
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: PluginAPI.Core.Player.Kick*
+  commentId: Overload:PluginAPI.Core.Player.Kick
+  name: Kick
+  nameWithType: Player.Kick
+  fullName: PluginAPI.Core.Player.Kick
+- uid: PluginAPI.Core.Player.Mute*
+  commentId: Overload:PluginAPI.Core.Player.Mute
+  name: Mute
+  nameWithType: Player.Mute
+  fullName: PluginAPI.Core.Player.Mute
+- uid: PluginAPI.Core.Player.UserId
+  commentId: P:PluginAPI.Core.Player.UserId
+  parent: PluginAPI.Core.Player
+  name: UserId
+  nameWithType: Player.UserId
+  fullName: PluginAPI.Core.Player.UserId
+- uid: PluginAPI.Core.Player.Unmute*
+  commentId: Overload:PluginAPI.Core.Player.Unmute
+  name: Unmute
+  nameWithType: Player.Unmute
+  fullName: PluginAPI.Core.Player.Unmute
+- uid: PluginAPI.Core.Player.IntercomMute*
+  commentId: Overload:PluginAPI.Core.Player.IntercomMute
+  name: IntercomMute
+  nameWithType: Player.IntercomMute
+  fullName: PluginAPI.Core.Player.IntercomMute
+- uid: PluginAPI.Core.Player.IntercomUnmute*
+  commentId: Overload:PluginAPI.Core.Player.IntercomUnmute
+  name: IntercomUnmute
+  nameWithType: Player.IntercomUnmute
+  fullName: PluginAPI.Core.Player.IntercomUnmute
+- uid: PluginAPI.Core.Player.AddAmmo*
+  commentId: Overload:PluginAPI.Core.Player.AddAmmo
+  name: AddAmmo
+  nameWithType: Player.AddAmmo
+  fullName: PluginAPI.Core.Player.AddAmmo
+- uid: ItemType
+  commentId: T:ItemType
+  isExternal: true
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
+- uid: PluginAPI.Core.Player.SetAmmo*
+  commentId: Overload:PluginAPI.Core.Player.SetAmmo
+  name: SetAmmo
+  nameWithType: Player.SetAmmo
+  fullName: PluginAPI.Core.Player.SetAmmo
+- uid: PluginAPI.Core.Player.GetAmmo*
+  commentId: Overload:PluginAPI.Core.Player.GetAmmo
+  name: GetAmmo
+  nameWithType: Player.GetAmmo
+  fullName: PluginAPI.Core.Player.GetAmmo
+- uid: PluginAPI.Core.Player.DropAmmo*
+  commentId: Overload:PluginAPI.Core.Player.DropAmmo
+  name: DropAmmo
+  nameWithType: Player.DropAmmo
+  fullName: PluginAPI.Core.Player.DropAmmo
+- uid: PluginAPI.Core.Player.DropEverything*
+  commentId: Overload:PluginAPI.Core.Player.DropEverything
+  name: DropEverything
+  nameWithType: Player.DropEverything
+  fullName: PluginAPI.Core.Player.DropEverything
+- uid: PluginAPI.Core.Player.Heal*
+  commentId: Overload:PluginAPI.Core.Player.Heal
+  name: Heal
+  nameWithType: Player.Heal
+  fullName: PluginAPI.Core.Player.Heal
+- uid: PlayerRoles.RoleChangeReason
+  commentId: T:PlayerRoles.RoleChangeReason
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleChangeReason
+  nameWithType: RoleChangeReason
+  fullName: PlayerRoles.RoleChangeReason
+- uid: PluginAPI.Core.Player.SetRole*
+  commentId: Overload:PluginAPI.Core.Player.SetRole
+  name: SetRole
+  nameWithType: Player.SetRole
+  fullName: PluginAPI.Core.Player.SetRole
+- uid: PluginAPI.Core.Player.Disconnect*
+  commentId: Overload:PluginAPI.Core.Player.Disconnect
+  name: Disconnect
+  nameWithType: Player.Disconnect
+  fullName: PluginAPI.Core.Player.Disconnect
+- uid: PluginAPI.Core.Player.ReceiveHint*
+  commentId: Overload:PluginAPI.Core.Player.ReceiveHint
+  name: ReceiveHint
+  nameWithType: Player.ReceiveHint
+  fullName: PluginAPI.Core.Player.ReceiveHint
+- uid: Hints.HintEffect[]
+  isExternal: true
+  name: HintEffect[]
+  nameWithType: HintEffect[]
+  fullName: Hints.HintEffect[]
+  nameWithType.vb: HintEffect()
+  fullName.vb: Hints.HintEffect()
+  name.vb: HintEffect()
+  spec.csharp:
+  - uid: Hints.HintEffect
+    name: HintEffect
+    nameWithType: HintEffect
+    fullName: Hints.HintEffect
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Hints.HintEffect
+    name: HintEffect
+    nameWithType: HintEffect
+    fullName: Hints.HintEffect
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PluginAPI.Core.Player.ReceiveHitMarker*
+  commentId: Overload:PluginAPI.Core.Player.ReceiveHitMarker
+  name: ReceiveHitMarker
+  nameWithType: Player.ReceiveHitMarker
+  fullName: PluginAPI.Core.Player.ReceiveHitMarker
+- uid: PluginAPI.Core.Player.GetStatModule*
+  commentId: Overload:PluginAPI.Core.Player.GetStatModule
+  name: GetStatModule
+  nameWithType: Player.GetStatModule
+  fullName: PluginAPI.Core.Player.GetStatModule
+- uid: PluginAPI.Core.Player.RedirectToServer*
+  commentId: Overload:PluginAPI.Core.Player.RedirectToServer
+  name: RedirectToServer
+  nameWithType: Player.RedirectToServer
+  fullName: PluginAPI.Core.Player.RedirectToServer
+- uid: PluginAPI.Core.Player.Reconnect*
+  commentId: Overload:PluginAPI.Core.Player.Reconnect
+  name: Reconnect
+  nameWithType: Player.Reconnect
+  fullName: PluginAPI.Core.Player.Reconnect
+- uid: PluginAPI.Core.Player.OnStart*
+  commentId: Overload:PluginAPI.Core.Player.OnStart
+  name: OnStart
+  nameWithType: Player.OnStart
+  fullName: PluginAPI.Core.Player.OnStart
+- uid: PluginAPI.Core.Interfaces.IPlayer.OnStart
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.OnStart
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: OnStart()
+  nameWithType: IPlayer.OnStart()
+  fullName: PluginAPI.Core.Interfaces.IPlayer.OnStart()
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnStart
+    name: OnStart
+    nameWithType: IPlayer.OnStart
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnStart
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnStart
+    name: OnStart
+    nameWithType: IPlayer.OnStart
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnStart
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.OnDestroy*
+  commentId: Overload:PluginAPI.Core.Player.OnDestroy
+  name: OnDestroy
+  nameWithType: Player.OnDestroy
+  fullName: PluginAPI.Core.Player.OnDestroy
+- uid: PluginAPI.Core.Interfaces.IPlayer.OnDestroy
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.OnDestroy
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: OnDestroy()
+  nameWithType: IPlayer.OnDestroy()
+  fullName: PluginAPI.Core.Interfaces.IPlayer.OnDestroy()
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnDestroy
+    name: OnDestroy
+    nameWithType: IPlayer.OnDestroy
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnDestroy
+    name: OnDestroy
+    nameWithType: IPlayer.OnDestroy
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.OnUpdate*
+  commentId: Overload:PluginAPI.Core.Player.OnUpdate
+  name: OnUpdate
+  nameWithType: Player.OnUpdate
+  fullName: PluginAPI.Core.Player.OnUpdate
+- uid: PluginAPI.Core.Interfaces.IPlayer.OnUpdate
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.OnUpdate
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: OnUpdate()
+  nameWithType: IPlayer.OnUpdate()
+  fullName: PluginAPI.Core.Interfaces.IPlayer.OnUpdate()
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnUpdate
+    name: OnUpdate
+    nameWithType: IPlayer.OnUpdate
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnUpdate
+    name: OnUpdate
+    nameWithType: IPlayer.OnUpdate
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.OnLateUpdate*
+  commentId: Overload:PluginAPI.Core.Player.OnLateUpdate
+  name: OnLateUpdate
+  nameWithType: Player.OnLateUpdate
+  fullName: PluginAPI.Core.Player.OnLateUpdate
+- uid: PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: OnLateUpdate()
+  nameWithType: IPlayer.OnLateUpdate()
+  fullName: PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate()
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate
+    name: OnLateUpdate
+    nameWithType: IPlayer.OnLateUpdate
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate
+    name: OnLateUpdate
+    nameWithType: IPlayer.OnLateUpdate
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnLateUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.OnFixedUpdate*
+  commentId: Overload:PluginAPI.Core.Player.OnFixedUpdate
+  name: OnFixedUpdate
+  nameWithType: Player.OnFixedUpdate
+  fullName: PluginAPI.Core.Player.OnFixedUpdate
+- uid: PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  name: OnFixedUpdate()
+  nameWithType: IPlayer.OnFixedUpdate()
+  fullName: PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate()
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
+    name: OnFixedUpdate
+    nameWithType: IPlayer.OnFixedUpdate
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
+    name: OnFixedUpdate
+    nameWithType: IPlayer.OnFixedUpdate
+    fullName: PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.GetComponent*
+  commentId: Overload:PluginAPI.Core.Player.GetComponent
+  name: GetComponent
+  nameWithType: Player.GetComponent
+  fullName: PluginAPI.Core.Player.GetComponent
+- uid: PluginAPI.Core.Interfaces.IPlayer.GetComponent``1(System.Boolean)
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.GetComponent``1(System.Boolean)
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  isExternal: true
+  name: GetComponent<T>(Boolean)
+  nameWithType: IPlayer.GetComponent<T>(Boolean)
+  fullName: PluginAPI.Core.Interfaces.IPlayer.GetComponent<T>(System.Boolean)
+  nameWithType.vb: IPlayer.GetComponent(Of T)(Boolean)
+  fullName.vb: PluginAPI.Core.Interfaces.IPlayer.GetComponent(Of T)(System.Boolean)
+  name.vb: GetComponent(Of T)(Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.GetComponent``1(System.Boolean)
+    name: GetComponent<T>
+    nameWithType: IPlayer.GetComponent<T>
+    fullName: PluginAPI.Core.Interfaces.IPlayer.GetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.GetComponent``1(System.Boolean)
+    name: GetComponent(Of T)
+    nameWithType: IPlayer.GetComponent(Of T)
+    fullName: PluginAPI.Core.Interfaces.IPlayer.GetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.TryGetComponent*
+  commentId: Overload:PluginAPI.Core.Player.TryGetComponent
+  name: TryGetComponent
+  nameWithType: Player.TryGetComponent
+  fullName: PluginAPI.Core.Player.TryGetComponent
+- uid: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1({T}@,System.Boolean)
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+  parent: PluginAPI.Core.Interfaces.IPlayer
+  definition: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+  name: TryGetComponent<T>(T, Boolean)
+  nameWithType: IPlayer.TryGetComponent<T>(T, Boolean)
+  fullName: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent<T>(T, System.Boolean)
+  nameWithType.vb: IPlayer.TryGetComponent(Of T)(T, Boolean)
+  fullName.vb: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent(Of T)(T, System.Boolean)
+  name.vb: TryGetComponent(Of T)(T, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+    name: TryGetComponent<T>
+    nameWithType: IPlayer.TryGetComponent<T>
+    fullName: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+    name: TryGetComponent(Of T)
+    nameWithType: IPlayer.TryGetComponent(Of T)
+    fullName: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+  commentId: M:PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+  isExternal: true
+  name: TryGetComponent<T>(T, Boolean)
+  nameWithType: IPlayer.TryGetComponent<T>(T, Boolean)
+  fullName: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent<T>(T, System.Boolean)
+  nameWithType.vb: IPlayer.TryGetComponent(Of T)(T, Boolean)
+  fullName.vb: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent(Of T)(T, System.Boolean)
+  name.vb: TryGetComponent(Of T)(T, Boolean)
+  spec.csharp:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+    name: TryGetComponent<T>
+    nameWithType: IPlayer.TryGetComponent<T>
+    fullName: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent``1(``0@,System.Boolean)
+    name: TryGetComponent(Of T)
+    nameWithType: IPlayer.TryGetComponent(Of T)
+    fullName: PluginAPI.Core.Interfaces.IPlayer.TryGetComponent(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

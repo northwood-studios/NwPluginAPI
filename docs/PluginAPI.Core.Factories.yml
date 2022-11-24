@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Factories
+  commentId: N:PluginAPI.Core.Factories
+  id: PluginAPI.Core.Factories
+  children:
+  - PluginAPI.Core.Factories.Factory`1
+  - PluginAPI.Core.Factories.IEntityFactory`1
+  - PluginAPI.Core.Factories.PlayerFactory
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Factories
+  nameWithType: PluginAPI.Core.Factories
+  fullName: PluginAPI.Core.Factories
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Factories.Factory`1
+  commentId: T:PluginAPI.Core.Factories.Factory`1
+  name: Factory<T>
+  nameWithType: Factory<T>
+  fullName: PluginAPI.Core.Factories.Factory<T>
+  nameWithType.vb: Factory(Of T)
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T)
+  name.vb: Factory(Of T)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.Factory`1
+    name: Factory
+    nameWithType: Factory
+    fullName: PluginAPI.Core.Factories.Factory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.Factory`1
+    name: Factory
+    nameWithType: Factory
+    fullName: PluginAPI.Core.Factories.Factory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Factories.IEntityFactory`1
+  commentId: T:PluginAPI.Core.Factories.IEntityFactory`1
+  name: IEntityFactory<TEntity>
+  nameWithType: IEntityFactory<TEntity>
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>
+  nameWithType.vb: IEntityFactory(Of TEntity)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity)
+  name.vb: IEntityFactory(Of TEntity)
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: PluginAPI.Core.Factories.IEntityFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.IEntityFactory`1
+    name: IEntityFactory
+    nameWithType: IEntityFactory
+    fullName: PluginAPI.Core.Factories.IEntityFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Factories.PlayerFactory
+  commentId: T:PluginAPI.Core.Factories.PlayerFactory
+  parent: PluginAPI.Core.Factories
+  name: PlayerFactory
+  nameWithType: PlayerFactory
+  fullName: PluginAPI.Core.Factories.PlayerFactory
+- uid: PluginAPI.Core.Factories
+  commentId: N:PluginAPI.Core.Factories
+  name: PluginAPI.Core.Factories
+  nameWithType: PluginAPI.Core.Factories
+  fullName: PluginAPI.Core.Factories

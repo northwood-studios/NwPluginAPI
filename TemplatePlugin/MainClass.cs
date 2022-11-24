@@ -15,6 +15,8 @@
 	using PluginAPI.Enums;
 	using PluginAPI.Events;
 	using System;
+	using System.Collections.Generic;
+	using TemplatePlugin.Configs;
 	using TemplatePlugin.Factory;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 
@@ -26,9 +28,21 @@
             Log.Info("Loaded plugin, register events...");
             EventManager.RegisterEvents(this);
 			EventManager.RegisterEvents<EventHandlers>(this);
-            Log.Info($"Registered events, config &2&b{PluginConfig.TestConfig}&B&r, register factory...");
+            Log.Info($"Registered events, config &2&b{PluginConfig.IntValue}&B&r, register factory...");
             FactoryManager.RegisterPlayerFactory(this, new MyPlayerFactory());
             Log.Info("Registered player factory!");
+
+			var handler = PluginHandler.Get(this);
+
+			Log.Info(handler.PluginName);
+			Log.Info(handler.PluginFilePath);
+			Log.Info(handler.PluginDirectoryPath);
+
+			PluginConfig.StringValue = "test Value";
+			handler.SaveConfig(this, nameof(PluginConfig));
+
+			AnotherConfig.TestList = new List<string>() { "Template0" };
+			handler.SaveConfig(this, nameof(AnotherConfig));
         }
 
         [PluginEvent(ServerEventType.PlayerJoined)]
@@ -216,12 +230,12 @@
         }
 
         [PluginEvent(ServerEventType.PlayerDamage)]
-        void OnPlayerDamage(MyPlayer plr, MyPlayer target, DamageHandlerBase damageHandler)
+        void OnPlayerDamage(MyPlayer player, MyPlayer attacker, DamageHandlerBase damageHandler)
         {
-            if (target == null)
-                Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) got damaged, cause {damageHandler}.");
+            if (attacker == null)
+                Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler}.");
             else
-                Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) damaged &6{target.Nickname}&r (&6{target.UserId}&r), cause {damageHandler}.");
+                Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}.");
         }
 
         [PluginEvent(ServerEventType.PlayerKicked)]
@@ -262,7 +276,7 @@
 		}
 
         [PluginEvent(ServerEventType.PlayerReceiveEffect)]
-        void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect)
+        void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect, float duration)
         {
             Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) received effect &6{effect}&r.");
         }
@@ -422,6 +436,9 @@
         }
 
         [PluginConfig]
-        public Config PluginConfig;
+        public MainConfig PluginConfig;
+
+		[PluginConfig("configs/another-config.yml")]
+		public AnotherConfig AnotherConfig;
     }
 }

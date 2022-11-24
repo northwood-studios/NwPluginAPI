@@ -480,7 +480,7 @@ namespace PluginAPI.Enums
 		WaitingForPlayers = 60,
 
 		/// <summary>
-		/// Executed when warhead is started.
+		/// Event executed when warhead is started.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="bool"/> isAutomatic, <see cref="IPlayer"/> player.
@@ -488,7 +488,7 @@ namespace PluginAPI.Enums
 		WarheadStart = 61,
 
 		/// <summary>
-		/// Executed when warhead is stopped.
+		/// Event executed when warhead is stopped.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player.
@@ -496,12 +496,12 @@ namespace PluginAPI.Enums
 		WarheadStop = 62,
 
 		/// <summary>
-		/// Executed when warhead detonates.
+		/// Event executed when warhead detonates.
 		/// </summary>
 		WarheadDetonation = 63,
 
 		/// <summary>
-		/// Executed when player is muted.
+		/// Event executed when player is muted.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isIntercom.
@@ -509,7 +509,7 @@ namespace PluginAPI.Enums
 		PlayerMuted = 64,
 
 		/// <summary>
-		/// Executed when player is unmuted.
+		/// Event executed when player is unmuted.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isIntercom.
@@ -517,7 +517,7 @@ namespace PluginAPI.Enums
 		PlayerUnmuted = 65,
 
 		/// <summary>
-		/// Executed when joining to server for reserved slot verification.
+		/// Event executed when joining to server for reserved slot verification.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="string"/> userId, <see cref="bool"/> hasReservedSlot.
@@ -525,7 +525,7 @@ namespace PluginAPI.Enums
 		PlayerCheckReservedSlot = 66,
 
 		/// <summary>
-		/// Executed when using remoteadmin command.
+		/// Event executed when using remoteadmin command.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="bool"/> arguments.
@@ -533,7 +533,7 @@ namespace PluginAPI.Enums
 		PlayerRemoteAdminCommand = 67,
 
 		/// <summary>
-		/// Executed when using game console command.
+		/// Event executed when using game console command.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="bool"/> arguments.
@@ -541,7 +541,7 @@ namespace PluginAPI.Enums
 		PlayerGameConsoleCommand = 68,
 
 		/// <summary>
-		/// Executed when using console command.
+		/// Event executed when using console command.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="string"/> command, <see cref="bool"/> arguments.
@@ -549,7 +549,7 @@ namespace PluginAPI.Enums
 		ConsoleCommand = 69,
 
 		/// <summary>
-		/// Executed when selecting next team to spawn.
+		/// Event executed when selecting next team to spawn.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="SpawnableTeamType"/> team.
@@ -558,7 +558,7 @@ namespace PluginAPI.Enums
 		TeamRespawnSelected = 70,
 
 		/// <summary>
-		/// Executed when spawning next team.
+		/// Event executed when spawning next team.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="SpawnableTeamType"/> team.

@@ -1,0 +1,476 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.PlayerExtensions
+  commentId: T:PluginAPI.Core.PlayerExtensions
+  id: PlayerExtensions
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  - PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  langs:
+  - csharp
+  - vb
+  name: PlayerExtensions
+  nameWithType: PlayerExtensions
+  fullName: PluginAPI.Core.PlayerExtensions
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Extensions/PlayerExtensions.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerExtensions
+    path: ../NwPluginAPI/Core/Extensions/PlayerExtensions.cs
+    startLine: 7
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nPlayer-related extensions.\n"
+  example: []
+  syntax:
+    content: public static class PlayerExtensions
+    content.vb: Public Module PlayerExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  commentId: M:PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  id: GetAmmoLimit(PluginAPI.Core.Player,ItemType)
+  isExtensionMethod: true
+  parent: PluginAPI.Core.PlayerExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAmmoLimit(Player, ItemType)
+  nameWithType: PlayerExtensions.GetAmmoLimit(Player, ItemType)
+  fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit(PluginAPI.Core.Player, ItemType)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Extensions/PlayerExtensions.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetAmmoLimit
+    path: ../NwPluginAPI/Core/Extensions/PlayerExtensions.cs
+    startLine: 14
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets ammo limit for certain item type.\n"
+  example: []
+  syntax:
+    content: public static int GetAmmoLimit(this Player plr, ItemType type)
+    parameters:
+    - id: plr
+      type: PluginAPI.Core.Player
+    - id: type
+      type: ItemType
+      description: The type of item.
+    return:
+      type: System.Int32
+      description: Maximum amount of ammo which player can have.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetAmmoLimit(plr As Player, type As ItemType) As Integer
+  overload: PluginAPI.Core.PlayerExtensions.GetAmmoLimit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  commentId: M:PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  id: GetCategoryLimit(PluginAPI.Core.Player,ItemCategory)
+  isExtensionMethod: true
+  parent: PluginAPI.Core.PlayerExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetCategoryLimit(Player, ItemCategory)
+  nameWithType: PlayerExtensions.GetCategoryLimit(Player, ItemCategory)
+  fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit(PluginAPI.Core.Player, ItemCategory)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Extensions/PlayerExtensions.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetCategoryLimit
+    path: ../NwPluginAPI/Core/Extensions/PlayerExtensions.cs
+    startLine: 21
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets maximum amount of items which certain category can give including armor west on player.\n"
+  example: []
+  syntax:
+    content: public static int GetCategoryLimit(this Player plr, ItemCategory category)
+    parameters:
+    - id: plr
+      type: PluginAPI.Core.Player
+    - id: category
+      type: ItemCategory
+      description: The item category.
+    return:
+      type: System.Int32
+      description: Maximum amount of items which player can hold.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetCategoryLimit(plr As Player, category As ItemCategory) As Integer
+  overload: PluginAPI.Core.PlayerExtensions.GetCategoryLimit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.PlayerExtensions.GetAmmoLimit*
+  commentId: Overload:PluginAPI.Core.PlayerExtensions.GetAmmoLimit
+  name: GetAmmoLimit
+  nameWithType: PlayerExtensions.GetAmmoLimit
+  fullName: PluginAPI.Core.PlayerExtensions.GetAmmoLimit
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: ItemType
+  commentId: T:ItemType
+  isExternal: true
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PluginAPI.Core.PlayerExtensions.GetCategoryLimit*
+  commentId: Overload:PluginAPI.Core.PlayerExtensions.GetCategoryLimit
+  name: GetCategoryLimit
+  nameWithType: PlayerExtensions.GetCategoryLimit
+  fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit
+- uid: ItemCategory
+  commentId: T:ItemCategory
+  isExternal: true
+  name: ItemCategory
+  nameWithType: ItemCategory
+  fullName: ItemCategory

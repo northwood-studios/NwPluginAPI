@@ -1,0 +1,711 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Statistics.Round
+  commentId: T:PluginAPI.Core.Statistics.Round
+  id: Statistics.Round
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.Statistics.Round.Duration
+  - PluginAPI.Core.Statistics.Round.ScpsAlive
+  - PluginAPI.Core.Statistics.Round.StartTimestamp
+  - PluginAPI.Core.Statistics.Round.TotalEscapedClassD
+  - PluginAPI.Core.Statistics.Round.TotalEscapedScientists
+  - PluginAPI.Core.Statistics.Round.TotalKilledPlayers
+  - PluginAPI.Core.Statistics.Round.TotalScp0492Made
+  - PluginAPI.Core.Statistics.Round.TotalScpKills
+  langs:
+  - csharp
+  - vb
+  name: Statistics.Round
+  nameWithType: Statistics.Round
+  fullName: PluginAPI.Core.Statistics.Round
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Round
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 64
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRepresents a round.\n"
+  example: []
+  syntax:
+    content: public class Round
+    content.vb: Public Class Round
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.Statistics.Round.Duration
+  commentId: P:PluginAPI.Core.Statistics.Round.Duration
+  id: Duration
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: Statistics.Round.Duration
+  fullName: PluginAPI.Core.Statistics.Round.Duration
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Duration
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 69
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the duration of the current round.\n"
+  example: []
+  syntax:
+    content: public static TimeSpan Duration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Shared ReadOnly Property Duration As TimeSpan
+  overload: PluginAPI.Core.Statistics.Round.Duration*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.StartTimestamp
+  commentId: P:PluginAPI.Core.Statistics.Round.StartTimestamp
+  id: StartTimestamp
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: StartTimestamp
+  nameWithType: Statistics.Round.StartTimestamp
+  fullName: PluginAPI.Core.Statistics.Round.StartTimestamp
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: StartTimestamp
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 74
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the current round&apos;s starting timestamp.\n"
+  example: []
+  syntax:
+    content: public DateTime StartTimestamp { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property StartTimestamp As Date
+  overload: PluginAPI.Core.Statistics.Round.StartTimestamp*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.TotalKilledPlayers
+  commentId: P:PluginAPI.Core.Statistics.Round.TotalKilledPlayers
+  id: TotalKilledPlayers
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: TotalKilledPlayers
+  nameWithType: Statistics.Round.TotalKilledPlayers
+  fullName: PluginAPI.Core.Statistics.Round.TotalKilledPlayers
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalKilledPlayers
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 79
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount of players deaths.\n"
+  example: []
+  syntax:
+    content: public int TotalKilledPlayers { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalKilledPlayers As Integer
+  overload: PluginAPI.Core.Statistics.Round.TotalKilledPlayers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.TotalScpKills
+  commentId: P:PluginAPI.Core.Statistics.Round.TotalScpKills
+  id: TotalScpKills
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: TotalScpKills
+  nameWithType: Statistics.Round.TotalScpKills
+  fullName: PluginAPI.Core.Statistics.Round.TotalScpKills
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalScpKills
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 84
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount of kills made by SCPs.\n"
+  example: []
+  syntax:
+    content: public int TotalScpKills { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalScpKills As Integer
+  overload: PluginAPI.Core.Statistics.Round.TotalScpKills*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.TotalScp0492Made
+  commentId: P:PluginAPI.Core.Statistics.Round.TotalScp0492Made
+  id: TotalScp0492Made
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: TotalScp0492Made
+  nameWithType: Statistics.Round.TotalScp0492Made
+  fullName: PluginAPI.Core.Statistics.Round.TotalScp0492Made
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalScp0492Made
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 89
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount Scp049-2s created.\n"
+  example: []
+  syntax:
+    content: public int TotalScp0492Made { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalScp0492Made As Integer
+  overload: PluginAPI.Core.Statistics.Round.TotalScp0492Made*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.TotalEscapedClassD
+  commentId: P:PluginAPI.Core.Statistics.Round.TotalEscapedClassD
+  id: TotalEscapedClassD
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: TotalEscapedClassD
+  nameWithType: Statistics.Round.TotalEscapedClassD
+  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedClassD
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalEscapedClassD
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 94
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount Class-Ds who have escaped.\n"
+  example: []
+  syntax:
+    content: public int TotalEscapedClassD { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalEscapedClassD As Integer
+  overload: PluginAPI.Core.Statistics.Round.TotalEscapedClassD*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.TotalEscapedScientists
+  commentId: P:PluginAPI.Core.Statistics.Round.TotalEscapedScientists
+  id: TotalEscapedScientists
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: TotalEscapedScientists
+  nameWithType: Statistics.Round.TotalEscapedScientists
+  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedScientists
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TotalEscapedScientists
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 99
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount Scientists who have escaped.\n"
+  example: []
+  syntax:
+    content: public int TotalEscapedScientists { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalEscapedScientists As Integer
+  overload: PluginAPI.Core.Statistics.Round.TotalEscapedScientists*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ScpsAlive
+  commentId: P:PluginAPI.Core.Statistics.Round.ScpsAlive
+  id: ScpsAlive
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ScpsAlive
+  nameWithType: Statistics.Round.ScpsAlive
+  fullName: PluginAPI.Core.Statistics.Round.ScpsAlive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ScpsAlive
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 104
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount of SCPs alive.\n"
+  example: []
+  syntax:
+    content: public int ScpsAlive { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ScpsAlive As Integer
+  overload: PluginAPI.Core.Statistics.Round.ScpsAlive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Core.Statistics.Round.Duration*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.Duration
+  name: Duration
+  nameWithType: Statistics.Round.Duration
+  fullName: PluginAPI.Core.Statistics.Round.Duration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: PluginAPI.Core.Statistics.Round.StartTimestamp*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.StartTimestamp
+  name: StartTimestamp
+  nameWithType: Statistics.Round.StartTimestamp
+  fullName: PluginAPI.Core.Statistics.Round.StartTimestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: PluginAPI.Core.Statistics.Round.TotalKilledPlayers*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalKilledPlayers
+  name: TotalKilledPlayers
+  nameWithType: Statistics.Round.TotalKilledPlayers
+  fullName: PluginAPI.Core.Statistics.Round.TotalKilledPlayers
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PluginAPI.Core.Statistics.Round.TotalScpKills*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalScpKills
+  name: TotalScpKills
+  nameWithType: Statistics.Round.TotalScpKills
+  fullName: PluginAPI.Core.Statistics.Round.TotalScpKills
+- uid: PluginAPI.Core.Statistics.Round.TotalScp0492Made*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalScp0492Made
+  name: TotalScp0492Made
+  nameWithType: Statistics.Round.TotalScp0492Made
+  fullName: PluginAPI.Core.Statistics.Round.TotalScp0492Made
+- uid: PluginAPI.Core.Statistics.Round.TotalEscapedClassD*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalEscapedClassD
+  name: TotalEscapedClassD
+  nameWithType: Statistics.Round.TotalEscapedClassD
+  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedClassD
+- uid: PluginAPI.Core.Statistics.Round.TotalEscapedScientists*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalEscapedScientists
+  name: TotalEscapedScientists
+  nameWithType: Statistics.Round.TotalEscapedScientists
+  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedScientists
+- uid: PluginAPI.Core.Statistics.Round.ScpsAlive*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ScpsAlive
+  name: ScpsAlive
+  nameWithType: Statistics.Round.ScpsAlive
+  fullName: PluginAPI.Core.Statistics.Round.ScpsAlive

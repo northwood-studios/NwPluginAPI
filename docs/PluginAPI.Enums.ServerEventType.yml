@@ -1,0 +1,2781 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  id: ServerEventType
+  parent: PluginAPI.Enums
+  children:
+  - PluginAPI.Enums.ServerEventType.ConsoleCommand
+  - PluginAPI.Enums.ServerEventType.GeneratorActivated
+  - PluginAPI.Enums.ServerEventType.GrenadeExploded
+  - PluginAPI.Enums.ServerEventType.ItemSpawned
+  - PluginAPI.Enums.ServerEventType.LczDecontaminationAnnouncement
+  - PluginAPI.Enums.ServerEventType.LczDecontaminationStart
+  - PluginAPI.Enums.ServerEventType.MapGenerated
+  - PluginAPI.Enums.ServerEventType.PlaceBlood
+  - PluginAPI.Enums.ServerEventType.PlaceBulletHole
+  - PluginAPI.Enums.ServerEventType.PlayerActivateGenerator
+  - PluginAPI.Enums.ServerEventType.PlayerAimWeapon
+  - PluginAPI.Enums.ServerEventType.PlayerBanned
+  - PluginAPI.Enums.ServerEventType.PlayerCancelUsingItem
+  - PluginAPI.Enums.ServerEventType.PlayerChangeItem
+  - PluginAPI.Enums.ServerEventType.PlayerChangeRadioRange
+  - PluginAPI.Enums.ServerEventType.PlayerChangeRole
+  - PluginAPI.Enums.ServerEventType.PlayerChangeSpectator
+  - PluginAPI.Enums.ServerEventType.PlayerCheaterReport
+  - PluginAPI.Enums.ServerEventType.PlayerCheckReservedSlot
+  - PluginAPI.Enums.ServerEventType.PlayerCloseGenerator
+  - PluginAPI.Enums.ServerEventType.PlayerDamage
+  - PluginAPI.Enums.ServerEventType.PlayerDamagedShootingTarget
+  - PluginAPI.Enums.ServerEventType.PlayerDamagedWindow
+  - PluginAPI.Enums.ServerEventType.PlayerDeactivatedGenerator
+  - PluginAPI.Enums.ServerEventType.PlayerDeath
+  - PluginAPI.Enums.ServerEventType.PlayerDropAmmo
+  - PluginAPI.Enums.ServerEventType.PlayerDropItem
+  - PluginAPI.Enums.ServerEventType.PlayerDryfireWeapon
+  - PluginAPI.Enums.ServerEventType.PlayerEscape
+  - PluginAPI.Enums.ServerEventType.PlayerGameConsoleCommand
+  - PluginAPI.Enums.ServerEventType.PlayerHandcuff
+  - PluginAPI.Enums.ServerEventType.PlayerInteractElevator
+  - PluginAPI.Enums.ServerEventType.PlayerInteractLocker
+  - PluginAPI.Enums.ServerEventType.PlayerInteractScp330
+  - PluginAPI.Enums.ServerEventType.PlayerInteractShootingTarget
+  - PluginAPI.Enums.ServerEventType.PlayerJoined
+  - PluginAPI.Enums.ServerEventType.PlayerKicked
+  - PluginAPI.Enums.ServerEventType.PlayerLeft
+  - PluginAPI.Enums.ServerEventType.PlayerMakeNoise
+  - PluginAPI.Enums.ServerEventType.PlayerMuted
+  - PluginAPI.Enums.ServerEventType.PlayerOpenGenerator
+  - PluginAPI.Enums.ServerEventType.PlayerPickupAmmo
+  - PluginAPI.Enums.ServerEventType.PlayerPickupArmor
+  - PluginAPI.Enums.ServerEventType.PlayerPickupScp330
+  - PluginAPI.Enums.ServerEventType.PlayerPreauth
+  - PluginAPI.Enums.ServerEventType.PlayerReceiveEffect
+  - PluginAPI.Enums.ServerEventType.PlayerReloadWeapon
+  - PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
+  - PluginAPI.Enums.ServerEventType.PlayerRemoveHandcuffs
+  - PluginAPI.Enums.ServerEventType.PlayerReport
+  - PluginAPI.Enums.ServerEventType.PlayerSearchedPickup
+  - PluginAPI.Enums.ServerEventType.PlayerSearchPickup
+  - PluginAPI.Enums.ServerEventType.PlayerShotWeapon
+  - PluginAPI.Enums.ServerEventType.PlayerSpawn
+  - PluginAPI.Enums.ServerEventType.PlayerThrowItem
+  - PluginAPI.Enums.ServerEventType.PlayerToggleFlashlight
+  - PluginAPI.Enums.ServerEventType.PlayerUnloadWeapon
+  - PluginAPI.Enums.ServerEventType.PlayerUnlockGenerator
+  - PluginAPI.Enums.ServerEventType.PlayerUnmuted
+  - PluginAPI.Enums.ServerEventType.PlayerUsedItem
+  - PluginAPI.Enums.ServerEventType.PlayerUseHotkey
+  - PluginAPI.Enums.ServerEventType.PlayerUseItem
+  - PluginAPI.Enums.ServerEventType.RagdollSpawn
+  - PluginAPI.Enums.ServerEventType.RoundEnd
+  - PluginAPI.Enums.ServerEventType.RoundRestart
+  - PluginAPI.Enums.ServerEventType.RoundStart
+  - PluginAPI.Enums.ServerEventType.TeamRespawn
+  - PluginAPI.Enums.ServerEventType.TeamRespawnSelected
+  - PluginAPI.Enums.ServerEventType.WaitingForPlayers
+  - PluginAPI.Enums.ServerEventType.WarheadDetonation
+  - PluginAPI.Enums.ServerEventType.WarheadStart
+  - PluginAPI.Enums.ServerEventType.WarheadStop
+  langs:
+  - csharp
+  - vb
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+  type: Enum
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ServerEventType
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 15
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nRepresents server event types.\n"
+  example: []
+  syntax:
+    content: public enum ServerEventType
+    content.vb: Public Enum ServerEventType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PluginAPI.Enums.ServerEventType.PlayerJoined
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerJoined
+  id: PlayerJoined
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerJoined
+  nameWithType: ServerEventType.PlayerJoined
+  fullName: PluginAPI.Enums.ServerEventType.PlayerJoined
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerJoined
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 23
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player is verified.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerJoined = 0
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerLeft
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerLeft
+  id: PlayerLeft
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerLeft
+  nameWithType: ServerEventType.PlayerLeft
+  fullName: PluginAPI.Enums.ServerEventType.PlayerLeft
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerLeft
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player object is destroyed.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerLeft = 1
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDeath
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDeath
+  id: PlayerDeath
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDeath
+  nameWithType: ServerEventType.PlayerDeath
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDeath
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDeath
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 39
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player dies.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> attacker, <xref href=\"PlayerStatsSystem.DamageHandlerBase\" data-throw-if-not-resolved=\"false\"></xref> damageHandler.\n"
+  example: []
+  syntax:
+    content: PlayerDeath = 2
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.LczDecontaminationStart
+  commentId: F:PluginAPI.Enums.ServerEventType.LczDecontaminationStart
+  id: LczDecontaminationStart
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: LczDecontaminationStart
+  nameWithType: ServerEventType.LczDecontaminationStart
+  fullName: PluginAPI.Enums.ServerEventType.LczDecontaminationStart
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LczDecontaminationStart
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 44
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when decontamination in LCZ starts.\n"
+  example: []
+  syntax:
+    content: LczDecontaminationStart = 3
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.LczDecontaminationAnnouncement
+  commentId: F:PluginAPI.Enums.ServerEventType.LczDecontaminationAnnouncement
+  id: LczDecontaminationAnnouncement
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: LczDecontaminationAnnouncement
+  nameWithType: ServerEventType.LczDecontaminationAnnouncement
+  fullName: PluginAPI.Enums.ServerEventType.LczDecontaminationAnnouncement
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LczDecontaminationAnnouncement
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 52
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when information about decontamination is annoucement.\n"
+  remarks: "\nParameters: <xref href=\"System.Int32\" data-throw-if-not-resolved=\"false\"></xref> announcement type.\n"
+  example: []
+  syntax:
+    content: LczDecontaminationAnnouncement = 4
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.MapGenerated
+  commentId: F:PluginAPI.Enums.ServerEventType.MapGenerated
+  id: MapGenerated
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: MapGenerated
+  nameWithType: ServerEventType.MapGenerated
+  fullName: PluginAPI.Enums.ServerEventType.MapGenerated
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: MapGenerated
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 57
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when map generates.\n"
+  example: []
+  syntax:
+    content: MapGenerated = 5
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.GrenadeExploded
+  commentId: F:PluginAPI.Enums.ServerEventType.GrenadeExploded
+  id: GrenadeExploded
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: GrenadeExploded
+  nameWithType: ServerEventType.GrenadeExploded
+  fullName: PluginAPI.Enums.ServerEventType.GrenadeExploded
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GrenadeExploded
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 65
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when grenade explodes.\n"
+  remarks: "\nParameters: <xref href=\"InventorySystem.Items.Pickups.ItemPickupBase\" data-throw-if-not-resolved=\"false\"></xref> pickup.\n"
+  example: []
+  syntax:
+    content: GrenadeExploded = 6
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.ItemSpawned
+  commentId: F:PluginAPI.Enums.ServerEventType.ItemSpawned
+  id: ItemSpawned
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: ItemSpawned
+  nameWithType: ServerEventType.ItemSpawned
+  fullName: PluginAPI.Enums.ServerEventType.ItemSpawned
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ItemSpawned
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 73
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when item is spawned while generation of map.\n"
+  remarks: "\nParameters: <xref href=\"ItemType\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: ItemSpawned = 7
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.GeneratorActivated
+  commentId: F:PluginAPI.Enums.ServerEventType.GeneratorActivated
+  id: GeneratorActivated
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: GeneratorActivated
+  nameWithType: ServerEventType.GeneratorActivated
+  fullName: PluginAPI.Enums.ServerEventType.GeneratorActivated
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GeneratorActivated
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 81
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when generator activates.\n"
+  remarks: "\nParameters: <see cref=\"!:Generator\"></see> generator.\n"
+  example: []
+  syntax:
+    content: GeneratorActivated = 8
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlaceBlood
+  commentId: F:PluginAPI.Enums.ServerEventType.PlaceBlood
+  id: PlaceBlood
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlaceBlood
+  nameWithType: ServerEventType.PlaceBlood
+  fullName: PluginAPI.Enums.ServerEventType.PlaceBlood
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlaceBlood
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 86
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when blood is placed.\n"
+  example: []
+  syntax:
+    content: PlaceBlood = 9
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlaceBulletHole
+  commentId: F:PluginAPI.Enums.ServerEventType.PlaceBulletHole
+  id: PlaceBulletHole
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlaceBulletHole
+  nameWithType: ServerEventType.PlaceBulletHole
+  fullName: PluginAPI.Enums.ServerEventType.PlaceBulletHole
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlaceBulletHole
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 91
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when bullet hole is placed.\n"
+  example: []
+  syntax:
+    content: PlaceBulletHole = 10
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerActivateGenerator
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerActivateGenerator
+  id: PlayerActivateGenerator
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerActivateGenerator
+  nameWithType: ServerEventType.PlayerActivateGenerator
+  fullName: PluginAPI.Enums.ServerEventType.PlayerActivateGenerator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerActivateGenerator
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 99
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player activated generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  example: []
+  syntax:
+    content: PlayerActivateGenerator = 11
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerAimWeapon
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerAimWeapon
+  id: PlayerAimWeapon
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerAimWeapon
+  nameWithType: ServerEventType.PlayerAimWeapon
+  fullName: PluginAPI.Enums.ServerEventType.PlayerAimWeapon
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerAimWeapon
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 107
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player aims weapon\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> weapon, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> isAiming.\n"
+  example: []
+  syntax:
+    content: PlayerAimWeapon = 12
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerBanned
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerBanned
+  id: PlayerBanned
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerBanned
+  nameWithType: ServerEventType.PlayerBanned
+  fullName: PluginAPI.Enums.ServerEventType.PlayerBanned
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerBanned
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 115
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player gets banned.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> issuer, ref <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> reason, ref <xref href=\"System.Int64\" data-throw-if-not-resolved=\"false\"></xref> duration.\n"
+  example: []
+  syntax:
+    content: PlayerBanned = 13
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerCancelUsingItem
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerCancelUsingItem
+  id: PlayerCancelUsingItem
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerCancelUsingItem
+  nameWithType: ServerEventType.PlayerCancelUsingItem
+  fullName: PluginAPI.Enums.ServerEventType.PlayerCancelUsingItem
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerCancelUsingItem
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 123
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player cancels using item.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Usables.UsableItem\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerCancelUsingItem = 14
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerChangeItem
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerChangeItem
+  id: PlayerChangeItem
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeItem
+  nameWithType: ServerEventType.PlayerChangeItem
+  fullName: PluginAPI.Enums.ServerEventType.PlayerChangeItem
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerChangeItem
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 131
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player changes current item.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.UInt16\" data-throw-if-not-resolved=\"false\"></xref> oldItem, <xref href=\"System.UInt16\" data-throw-if-not-resolved=\"false\"></xref> newItem.\n"
+  example: []
+  syntax:
+    content: PlayerChangeItem = 15
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerChangeRadioRange
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerChangeRadioRange
+  id: PlayerChangeRadioRange
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeRadioRange
+  nameWithType: ServerEventType.PlayerChangeRadioRange
+  fullName: PluginAPI.Enums.ServerEventType.PlayerChangeRadioRange
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerChangeRadioRange
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 139
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: PlayerChangeRadioRange = 16
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerChangeSpectator
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerChangeSpectator
+  id: PlayerChangeSpectator
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeSpectator
+  nameWithType: ServerEventType.PlayerChangeSpectator
+  fullName: PluginAPI.Enums.ServerEventType.PlayerChangeSpectator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerChangeSpectator
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 147
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player changes spectating player.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> oldTarget, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> newTarget.\n"
+  example: []
+  syntax:
+    content: PlayerChangeSpectator = 17
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerCloseGenerator
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerCloseGenerator
+  id: PlayerCloseGenerator
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerCloseGenerator
+  nameWithType: ServerEventType.PlayerCloseGenerator
+  fullName: PluginAPI.Enums.ServerEventType.PlayerCloseGenerator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerCloseGenerator
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 155
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player closes generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  example: []
+  syntax:
+    content: PlayerCloseGenerator = 18
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDamagedShootingTarget
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDamagedShootingTarget
+  id: PlayerDamagedShootingTarget
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDamagedShootingTarget
+  nameWithType: ServerEventType.PlayerDamagedShootingTarget
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDamagedShootingTarget
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDamagedShootingTarget
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 163
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player damages shooting target.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"AdminToys.ShootingTarget\" data-throw-if-not-resolved=\"false\"></xref> target, <xref href=\"PlayerStatsSystem.DamageHandlerBase\" data-throw-if-not-resolved=\"false\"></xref> damageHandler, <xref href=\"System.Single\" data-throw-if-not-resolved=\"false\"></xref> damageAmount.\n"
+  example: []
+  syntax:
+    content: PlayerDamagedShootingTarget = 19
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDamagedWindow
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDamagedWindow
+  id: PlayerDamagedWindow
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDamagedWindow
+  nameWithType: ServerEventType.PlayerDamagedWindow
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDamagedWindow
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDamagedWindow
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 171
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player damages window.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"BreakableWindow\" data-throw-if-not-resolved=\"false\"></xref> window, <xref href=\"PlayerStatsSystem.DamageHandlerBase\" data-throw-if-not-resolved=\"false\"></xref> damageHandler, <xref href=\"System.Single\" data-throw-if-not-resolved=\"false\"></xref> damageAmount.\n"
+  example: []
+  syntax:
+    content: PlayerDamagedWindow = 20
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDeactivatedGenerator
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDeactivatedGenerator
+  id: PlayerDeactivatedGenerator
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDeactivatedGenerator
+  nameWithType: ServerEventType.PlayerDeactivatedGenerator
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDeactivatedGenerator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDeactivatedGenerator
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 179
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player deactivates generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  example: []
+  syntax:
+    content: PlayerDeactivatedGenerator = 21
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDropAmmo
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDropAmmo
+  id: PlayerDropAmmo
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDropAmmo
+  nameWithType: ServerEventType.PlayerDropAmmo
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDropAmmo
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDropAmmo
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 187
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player drops ammo.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"ItemType\" data-throw-if-not-resolved=\"false\"></xref> type. <xref href=\"System.Int32\" data-throw-if-not-resolved=\"false\"></xref> amount.\n"
+  example: []
+  syntax:
+    content: PlayerDropAmmo = 22
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDropItem
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDropItem
+  id: PlayerDropItem
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDropItem
+  nameWithType: ServerEventType.PlayerDropItem
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDropItem
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDropItem
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 195
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player drops item.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerDropItem = 23
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDryfireWeapon
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDryfireWeapon
+  id: PlayerDryfireWeapon
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDryfireWeapon
+  nameWithType: ServerEventType.PlayerDryfireWeapon
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDryfireWeapon
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDryfireWeapon
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 203
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player dryfires weapon.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> weapon.\n"
+  example: []
+  syntax:
+    content: PlayerDryfireWeapon = 24
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerEscape
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerEscape
+  id: PlayerEscape
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerEscape
+  nameWithType: ServerEventType.PlayerEscape
+  fullName: PluginAPI.Enums.ServerEventType.PlayerEscape
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerEscape
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 211
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player escapes.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PlayerRoles.RoleTypeId\" data-throw-if-not-resolved=\"false\"></xref> newClass.\n"
+  example: []
+  syntax:
+    content: PlayerEscape = 25
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerHandcuff
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerHandcuff
+  id: PlayerHandcuff
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerHandcuff
+  nameWithType: ServerEventType.PlayerHandcuff
+  fullName: PluginAPI.Enums.ServerEventType.PlayerHandcuff
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerHandcuff
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 219
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player handcuffs other player.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> target.\n"
+  example: []
+  syntax:
+    content: PlayerHandcuff = 26
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerRemoveHandcuffs
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerRemoveHandcuffs
+  id: PlayerRemoveHandcuffs
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerRemoveHandcuffs
+  nameWithType: ServerEventType.PlayerRemoveHandcuffs
+  fullName: PluginAPI.Enums.ServerEventType.PlayerRemoveHandcuffs
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerRemoveHandcuffs
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 227
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player removes handcuffs from other player.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> target.\n"
+  example: []
+  syntax:
+    content: PlayerRemoveHandcuffs = 27
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerDamage
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerDamage
+  id: PlayerDamage
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerDamage
+  nameWithType: ServerEventType.PlayerDamage
+  fullName: PluginAPI.Enums.ServerEventType.PlayerDamage
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDamage
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 235
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player damages someone.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> target, <xref href=\"PlayerStatsSystem.DamageHandlerBase\" data-throw-if-not-resolved=\"false\"></xref> damageHandler.\n"
+  example: []
+  syntax:
+    content: PlayerDamage = 28
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerInteractElevator
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerInteractElevator
+  id: PlayerInteractElevator
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerInteractElevator
+  nameWithType: ServerEventType.PlayerInteractElevator
+  fullName: PluginAPI.Enums.ServerEventType.PlayerInteractElevator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerInteractElevator
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 243
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player interacts with elevator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerInteractElevator = 29
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerInteractLocker
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerInteractLocker
+  id: PlayerInteractLocker
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerInteractLocker
+  nameWithType: ServerEventType.PlayerInteractLocker
+  fullName: PluginAPI.Enums.ServerEventType.PlayerInteractLocker
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerInteractLocker
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 251
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player interacts with locker.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerInteractLocker = 30
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerInteractScp330
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerInteractScp330
+  id: PlayerInteractScp330
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerInteractScp330
+  nameWithType: ServerEventType.PlayerInteractScp330
+  fullName: PluginAPI.Enums.ServerEventType.PlayerInteractScp330
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerInteractScp330
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 259
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player interacts with SCP330.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerInteractScp330 = 31
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerInteractShootingTarget
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerInteractShootingTarget
+  id: PlayerInteractShootingTarget
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerInteractShootingTarget
+  nameWithType: ServerEventType.PlayerInteractShootingTarget
+  fullName: PluginAPI.Enums.ServerEventType.PlayerInteractShootingTarget
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerInteractShootingTarget
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 267
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player interacts with shooting target.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerInteractShootingTarget = 32
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerKicked
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerKicked
+  id: PlayerKicked
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerKicked
+  nameWithType: ServerEventType.PlayerKicked
+  fullName: PluginAPI.Enums.ServerEventType.PlayerKicked
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerKicked
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 275
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player gets kicked from server.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerKicked = 33
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerMakeNoise
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerMakeNoise
+  id: PlayerMakeNoise
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerMakeNoise
+  nameWithType: ServerEventType.PlayerMakeNoise
+  fullName: PluginAPI.Enums.ServerEventType.PlayerMakeNoise
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerMakeNoise
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 283
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player makes noise.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerMakeNoise = 34
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerOpenGenerator
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerOpenGenerator
+  id: PlayerOpenGenerator
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerOpenGenerator
+  nameWithType: ServerEventType.PlayerOpenGenerator
+  fullName: PluginAPI.Enums.ServerEventType.PlayerOpenGenerator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerOpenGenerator
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 291
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player opens generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  example: []
+  syntax:
+    content: PlayerOpenGenerator = 35
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerPickupAmmo
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerPickupAmmo
+  id: PlayerPickupAmmo
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerPickupAmmo
+  nameWithType: ServerEventType.PlayerPickupAmmo
+  fullName: PluginAPI.Enums.ServerEventType.PlayerPickupAmmo
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerPickupAmmo
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 299
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player pickups ammo.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Pickups.ItemPickupBase\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerPickupAmmo = 36
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerPickupArmor
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerPickupArmor
+  id: PlayerPickupArmor
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerPickupArmor
+  nameWithType: ServerEventType.PlayerPickupArmor
+  fullName: PluginAPI.Enums.ServerEventType.PlayerPickupArmor
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerPickupArmor
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 307
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player pickups armor.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Pickups.ItemPickupBase\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerPickupArmor = 37
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerPickupScp330
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerPickupScp330
+  id: PlayerPickupScp330
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerPickupScp330
+  nameWithType: ServerEventType.PlayerPickupScp330
+  fullName: PluginAPI.Enums.ServerEventType.PlayerPickupScp330
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerPickupScp330
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 315
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player pickups SCP330.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Pickups.ItemPickupBase\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerPickupScp330 = 38
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerPreauth
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerPreauth
+  id: PlayerPreauth
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerPreauth
+  nameWithType: ServerEventType.PlayerPreauth
+  fullName: PluginAPI.Enums.ServerEventType.PlayerPreauth
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerPreauth
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 323
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player preauths.\n"
+  remarks: "\nParameters: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> userid, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> ipAddress, <xref href=\"System.Int64\" data-throw-if-not-resolved=\"false\"></xref> expiration, <xref href=\"CentralAuthPreauthFlags\" data-throw-if-not-resolved=\"false\"></xref> flags, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> country, <see cref=\"!:byte[]\"></see> signature.\n"
+  example: []
+  syntax:
+    content: PlayerPreauth = 39
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerReceiveEffect
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerReceiveEffect
+  id: PlayerReceiveEffect
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerReceiveEffect
+  nameWithType: ServerEventType.PlayerReceiveEffect
+  fullName: PluginAPI.Enums.ServerEventType.PlayerReceiveEffect
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerReceiveEffect
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 331
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player receives effect.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:PlayerEffect\"></see> effect.\n"
+  example: []
+  syntax:
+    content: PlayerReceiveEffect = 40
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerReloadWeapon
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerReloadWeapon
+  id: PlayerReloadWeapon
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerReloadWeapon
+  nameWithType: ServerEventType.PlayerReloadWeapon
+  fullName: PluginAPI.Enums.ServerEventType.PlayerReloadWeapon
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerReloadWeapon
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 339
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player reloads weapon.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Firearms.Firearm\" data-throw-if-not-resolved=\"false\"></xref> weapon.\n"
+  example: []
+  syntax:
+    content: PlayerReloadWeapon = 41
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerChangeRole
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerChangeRole
+  id: PlayerChangeRole
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeRole
+  nameWithType: ServerEventType.PlayerChangeRole
+  fullName: PluginAPI.Enums.ServerEventType.PlayerChangeRole
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerChangeRole
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 347
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player changes role.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PlayerRoles.PlayerRoleBase\" data-throw-if-not-resolved=\"false\"></xref> oldRole, <xref href=\"PlayerRoles.RoleTypeId\" data-throw-if-not-resolved=\"false\"></xref> newRole, <xref href=\"PlayerRoles.RoleChangeReason\" data-throw-if-not-resolved=\"false\"></xref> reason.\n"
+  example: []
+  syntax:
+    content: PlayerChangeRole = 42
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerSearchPickup
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerSearchPickup
+  id: PlayerSearchPickup
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerSearchPickup
+  nameWithType: ServerEventType.PlayerSearchPickup
+  fullName: PluginAPI.Enums.ServerEventType.PlayerSearchPickup
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerSearchPickup
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 355
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player searches pickup.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Pickups.ItemPickupBase\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerSearchPickup = 43
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerSearchedPickup
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerSearchedPickup
+  id: PlayerSearchedPickup
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerSearchedPickup
+  nameWithType: ServerEventType.PlayerSearchedPickup
+  fullName: PluginAPI.Enums.ServerEventType.PlayerSearchedPickup
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerSearchedPickup
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 363
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player searched pickup.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Pickups.ItemPickupBase\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerSearchedPickup = 44
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerShotWeapon
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerShotWeapon
+  id: PlayerShotWeapon
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerShotWeapon
+  nameWithType: ServerEventType.PlayerShotWeapon
+  fullName: PluginAPI.Enums.ServerEventType.PlayerShotWeapon
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerShotWeapon
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 371
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player shots weapon.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"InventorySystem.Items.Firearms.Firearm\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerShotWeapon = 45
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerSpawn
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerSpawn
+  id: PlayerSpawn
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerSpawn
+  nameWithType: ServerEventType.PlayerSpawn
+  fullName: PluginAPI.Enums.ServerEventType.PlayerSpawn
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerSpawn
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 379
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player spawns.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PlayerRoles.RoleTypeId\" data-throw-if-not-resolved=\"false\"></xref> role.\n"
+  example: []
+  syntax:
+    content: PlayerSpawn = 46
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.RagdollSpawn
+  commentId: F:PluginAPI.Enums.ServerEventType.RagdollSpawn
+  id: RagdollSpawn
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: RagdollSpawn
+  nameWithType: ServerEventType.RagdollSpawn
+  fullName: PluginAPI.Enums.ServerEventType.RagdollSpawn
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RagdollSpawn
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 387
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when ragdoll spawns.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PlayerRoles.IRagdollRole\" data-throw-if-not-resolved=\"false\"></xref> ragdoll, <xref href=\"PlayerStatsSystem.DamageHandlerBase\" data-throw-if-not-resolved=\"false\"></xref> damageHandler.\n"
+  example: []
+  syntax:
+    content: RagdollSpawn = 47
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerThrowItem
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerThrowItem
+  id: PlayerThrowItem
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerThrowItem
+  nameWithType: ServerEventType.PlayerThrowItem
+  fullName: PluginAPI.Enums.ServerEventType.PlayerThrowItem
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerThrowItem
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 395
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player throws item.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerThrowItem = 48
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerToggleFlashlight
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerToggleFlashlight
+  id: PlayerToggleFlashlight
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerToggleFlashlight
+  nameWithType: ServerEventType.PlayerToggleFlashlight
+  fullName: PluginAPI.Enums.ServerEventType.PlayerToggleFlashlight
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerToggleFlashlight
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 403
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player toggles flashlight.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> item, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> isToggled.\n"
+  example: []
+  syntax:
+    content: PlayerToggleFlashlight = 49
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerUnloadWeapon
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerUnloadWeapon
+  id: PlayerUnloadWeapon
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerUnloadWeapon
+  nameWithType: ServerEventType.PlayerUnloadWeapon
+  fullName: PluginAPI.Enums.ServerEventType.PlayerUnloadWeapon
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerUnloadWeapon
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 411
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player unloads weapon.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> weapon.\n"
+  example: []
+  syntax:
+    content: PlayerUnloadWeapon = 50
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerUnlockGenerator
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerUnlockGenerator
+  id: PlayerUnlockGenerator
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerUnlockGenerator
+  nameWithType: ServerEventType.PlayerUnlockGenerator
+  fullName: PluginAPI.Enums.ServerEventType.PlayerUnlockGenerator
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerUnlockGenerator
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 419
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player unlocks generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  example: []
+  syntax:
+    content: PlayerUnlockGenerator = 51
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerUsedItem
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerUsedItem
+  id: PlayerUsedItem
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerUsedItem
+  nameWithType: ServerEventType.PlayerUsedItem
+  fullName: PluginAPI.Enums.ServerEventType.PlayerUsedItem
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerUsedItem
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 427
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player used item.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerUsedItem = 52
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerUseHotkey
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerUseHotkey
+  id: PlayerUseHotkey
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerUseHotkey
+  nameWithType: ServerEventType.PlayerUseHotkey
+  fullName: PluginAPI.Enums.ServerEventType.PlayerUseHotkey
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerUseHotkey
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 435
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player uses hotkey.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"ActionName\" data-throw-if-not-resolved=\"false\"></xref> hotkey.\n"
+  example: []
+  syntax:
+    content: PlayerUseHotkey = 53
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerUseItem
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerUseItem
+  id: PlayerUseItem
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerUseItem
+  nameWithType: ServerEventType.PlayerUseItem
+  fullName: PluginAPI.Enums.ServerEventType.PlayerUseItem
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerUseItem
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 443
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player starts using item.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Items.Item\" data-throw-if-not-resolved=\"false\"></xref> item.\n"
+  example: []
+  syntax:
+    content: PlayerUseItem = 54
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerReport
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerReport
+  id: PlayerReport
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerReport
+  nameWithType: ServerEventType.PlayerReport
+  fullName: PluginAPI.Enums.ServerEventType.PlayerReport
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerReport
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 451
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player reports someone for breaking server rules.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> target, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> reason.\n"
+  example: []
+  syntax:
+    content: PlayerReport = 55
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerCheaterReport
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerCheaterReport
+  id: PlayerCheaterReport
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerCheaterReport
+  nameWithType: ServerEventType.PlayerCheaterReport
+  fullName: PluginAPI.Enums.ServerEventType.PlayerCheaterReport
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerCheaterReport
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 459
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player reports someone for cheating.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> target, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> reason.\n"
+  example: []
+  syntax:
+    content: PlayerCheaterReport = 56
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.RoundEnd
+  commentId: F:PluginAPI.Enums.ServerEventType.RoundEnd
+  id: RoundEnd
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: RoundEnd
+  nameWithType: ServerEventType.RoundEnd
+  fullName: PluginAPI.Enums.ServerEventType.RoundEnd
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoundEnd
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 464
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when round ended.\n"
+  example: []
+  syntax:
+    content: RoundEnd = 57
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.RoundRestart
+  commentId: F:PluginAPI.Enums.ServerEventType.RoundRestart
+  id: RoundRestart
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: RoundRestart
+  nameWithType: ServerEventType.RoundRestart
+  fullName: PluginAPI.Enums.ServerEventType.RoundRestart
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoundRestart
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 469
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when round restarts.\n"
+  example: []
+  syntax:
+    content: RoundRestart = 58
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.RoundStart
+  commentId: F:PluginAPI.Enums.ServerEventType.RoundStart
+  id: RoundStart
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: RoundStart
+  nameWithType: ServerEventType.RoundStart
+  fullName: PluginAPI.Enums.ServerEventType.RoundStart
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoundStart
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 474
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when round starts.\n"
+  example: []
+  syntax:
+    content: RoundStart = 59
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.WaitingForPlayers
+  commentId: F:PluginAPI.Enums.ServerEventType.WaitingForPlayers
+  id: WaitingForPlayers
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: WaitingForPlayers
+  nameWithType: ServerEventType.WaitingForPlayers
+  fullName: PluginAPI.Enums.ServerEventType.WaitingForPlayers
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: WaitingForPlayers
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 479
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when server waits for players.\n"
+  example: []
+  syntax:
+    content: WaitingForPlayers = 60
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.WarheadStart
+  commentId: F:PluginAPI.Enums.ServerEventType.WarheadStart
+  id: WarheadStart
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: WarheadStart
+  nameWithType: ServerEventType.WarheadStart
+  fullName: PluginAPI.Enums.ServerEventType.WarheadStart
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: WarheadStart
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 487
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when warhead is started.\n"
+  remarks: "\nParameters: <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> isAutomatic, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: WarheadStart = 61
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.WarheadStop
+  commentId: F:PluginAPI.Enums.ServerEventType.WarheadStop
+  id: WarheadStop
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: WarheadStop
+  nameWithType: ServerEventType.WarheadStop
+  fullName: PluginAPI.Enums.ServerEventType.WarheadStop
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: WarheadStop
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 495
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when warhead is stopped.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: WarheadStop = 62
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.WarheadDetonation
+  commentId: F:PluginAPI.Enums.ServerEventType.WarheadDetonation
+  id: WarheadDetonation
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: WarheadDetonation
+  nameWithType: ServerEventType.WarheadDetonation
+  fullName: PluginAPI.Enums.ServerEventType.WarheadDetonation
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: WarheadDetonation
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 500
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when warhead detonates.\n"
+  example: []
+  syntax:
+    content: WarheadDetonation = 63
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerMuted
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerMuted
+  id: PlayerMuted
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerMuted
+  nameWithType: ServerEventType.PlayerMuted
+  fullName: PluginAPI.Enums.ServerEventType.PlayerMuted
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerMuted
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 508
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when player is muted.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> isIntercom.\n"
+  example: []
+  syntax:
+    content: PlayerMuted = 64
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerUnmuted
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerUnmuted
+  id: PlayerUnmuted
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerUnmuted
+  nameWithType: ServerEventType.PlayerUnmuted
+  fullName: PluginAPI.Enums.ServerEventType.PlayerUnmuted
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerUnmuted
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 516
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when player is unmuted.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> isIntercom.\n"
+  example: []
+  syntax:
+    content: PlayerUnmuted = 65
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerCheckReservedSlot
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerCheckReservedSlot
+  id: PlayerCheckReservedSlot
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerCheckReservedSlot
+  nameWithType: ServerEventType.PlayerCheckReservedSlot
+  fullName: PluginAPI.Enums.ServerEventType.PlayerCheckReservedSlot
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerCheckReservedSlot
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 524
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when joining to server for reserved slot verification.\n"
+  remarks: "\nParameters: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> userId, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> hasReservedSlot.\n"
+  example: []
+  syntax:
+    content: PlayerCheckReservedSlot = 66
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
+  id: PlayerRemoteAdminCommand
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerRemoteAdminCommand
+  nameWithType: ServerEventType.PlayerRemoteAdminCommand
+  fullName: PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerRemoteAdminCommand
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 532
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when using remoteadmin command.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> arguments.\n"
+  example: []
+  syntax:
+    content: PlayerRemoteAdminCommand = 67
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerGameConsoleCommand
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerGameConsoleCommand
+  id: PlayerGameConsoleCommand
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerGameConsoleCommand
+  nameWithType: ServerEventType.PlayerGameConsoleCommand
+  fullName: PluginAPI.Enums.ServerEventType.PlayerGameConsoleCommand
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerGameConsoleCommand
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 540
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when using game console command.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> arguments.\n"
+  example: []
+  syntax:
+    content: PlayerGameConsoleCommand = 68
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.ConsoleCommand
+  commentId: F:PluginAPI.Enums.ServerEventType.ConsoleCommand
+  id: ConsoleCommand
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: ConsoleCommand
+  nameWithType: ServerEventType.ConsoleCommand
+  fullName: PluginAPI.Enums.ServerEventType.ConsoleCommand
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ConsoleCommand
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 548
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when using console command.\n"
+  remarks: "\nParameters: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> arguments.\n"
+  example: []
+  syntax:
+    content: ConsoleCommand = 69
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.TeamRespawnSelected
+  commentId: F:PluginAPI.Enums.ServerEventType.TeamRespawnSelected
+  id: TeamRespawnSelected
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: TeamRespawnSelected
+  nameWithType: ServerEventType.TeamRespawnSelected
+  fullName: PluginAPI.Enums.ServerEventType.TeamRespawnSelected
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TeamRespawnSelected
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 557
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when selecting next team to spawn.\n"
+  remarks: "\nParameters: <xref href=\"Respawning.SpawnableTeamType\" data-throw-if-not-resolved=\"false\"></xref> team.\n"
+  example: []
+  syntax:
+    content: TeamRespawnSelected = 70
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.TeamRespawn
+  commentId: F:PluginAPI.Enums.ServerEventType.TeamRespawn
+  id: TeamRespawn
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: TeamRespawn
+  nameWithType: ServerEventType.TeamRespawn
+  fullName: PluginAPI.Enums.ServerEventType.TeamRespawn
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TeamRespawn
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 565
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nEvent executed when spawning next team.\n"
+  remarks: "\nParameters: <xref href=\"Respawning.SpawnableTeamType\" data-throw-if-not-resolved=\"false\"></xref> team.\n"
+  example: []
+  syntax:
+    content: TeamRespawn = 71
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Core.Interfaces.IPlayer
+  commentId: T:PluginAPI.Core.Interfaces.IPlayer
+  parent: PluginAPI.Core.Interfaces
+  name: IPlayer
+  nameWithType: IPlayer
+  fullName: PluginAPI.Core.Interfaces.IPlayer
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Core.Interfaces
+  commentId: N:PluginAPI.Core.Interfaces
+  name: PluginAPI.Core.Interfaces
+  nameWithType: PluginAPI.Core.Interfaces
+  fullName: PluginAPI.Core.Interfaces
+- uid: PlayerStatsSystem.DamageHandlerBase
+  commentId: T:PlayerStatsSystem.DamageHandlerBase
+  parent: PlayerStatsSystem
+  isExternal: true
+  name: DamageHandlerBase
+  nameWithType: DamageHandlerBase
+  fullName: PlayerStatsSystem.DamageHandlerBase
+- uid: PlayerStatsSystem
+  commentId: N:PlayerStatsSystem
+  isExternal: true
+  name: PlayerStatsSystem
+  nameWithType: PlayerStatsSystem
+  fullName: PlayerStatsSystem
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: InventorySystem.Items.Pickups.ItemPickupBase
+  commentId: T:InventorySystem.Items.Pickups.ItemPickupBase
+  parent: InventorySystem.Items.Pickups
+  isExternal: true
+  name: ItemPickupBase
+  nameWithType: ItemPickupBase
+  fullName: InventorySystem.Items.Pickups.ItemPickupBase
+- uid: InventorySystem.Items.Pickups
+  commentId: N:InventorySystem.Items.Pickups
+  isExternal: true
+  name: InventorySystem.Items.Pickups
+  nameWithType: InventorySystem.Items.Pickups
+  fullName: InventorySystem.Items.Pickups
+- uid: ItemType
+  commentId: T:ItemType
+  isExternal: true
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
+- uid: PluginAPI.Core.Items.Item
+  commentId: T:PluginAPI.Core.Items.Item
+  name: Item
+  nameWithType: Item
+  fullName: PluginAPI.Core.Items.Item
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: InventorySystem.Items.Usables.UsableItem
+  commentId: T:InventorySystem.Items.Usables.UsableItem
+  isExternal: true
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: AdminToys.ShootingTarget
+  commentId: T:AdminToys.ShootingTarget
+  isExternal: true
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: BreakableWindow
+  commentId: T:BreakableWindow
+  isExternal: true
+- uid: PlayerRoles.RoleTypeId
+  commentId: T:PlayerRoles.RoleTypeId
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleTypeId
+  nameWithType: RoleTypeId
+  fullName: PlayerRoles.RoleTypeId
+- uid: PlayerRoles
+  commentId: N:PlayerRoles
+  isExternal: true
+  name: PlayerRoles
+  nameWithType: PlayerRoles
+  fullName: PlayerRoles
+- uid: CentralAuthPreauthFlags
+  commentId: T:CentralAuthPreauthFlags
+  isExternal: true
+- uid: InventorySystem.Items.Firearms.Firearm
+  commentId: T:InventorySystem.Items.Firearms.Firearm
+  isExternal: true
+- uid: PlayerRoles.PlayerRoleBase
+  commentId: T:PlayerRoles.PlayerRoleBase
+  isExternal: true
+- uid: PlayerRoles.RoleChangeReason
+  commentId: T:PlayerRoles.RoleChangeReason
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleChangeReason
+  nameWithType: RoleChangeReason
+  fullName: PlayerRoles.RoleChangeReason
+- uid: PlayerRoles.IRagdollRole
+  commentId: T:PlayerRoles.IRagdollRole
+  isExternal: true
+- uid: ActionName
+  commentId: T:ActionName
+  isExternal: true
+- uid: Respawning.SpawnableTeamType
+  commentId: T:Respawning.SpawnableTeamType
+  parent: Respawning
+  isExternal: true
+  name: SpawnableTeamType
+  nameWithType: SpawnableTeamType
+  fullName: Respawning.SpawnableTeamType
+- uid: Respawning
+  commentId: N:Respawning
+  isExternal: true
+  name: Respawning
+  nameWithType: Respawning
+  fullName: Respawning

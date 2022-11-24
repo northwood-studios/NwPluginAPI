@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NwPluginAPI.Analyzers", "An
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NwPluginAPI.Analyzers.Generator", "Analyzers\NwPluginAPI.Analyzers.Generator\NwPluginAPI.Analyzers.Generator.csproj", "{9638A1ED-142B-4487-8DAA-A24E1F42E04C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NwPluginAPI.Docs", "NwPluginAPI.Docs\NwPluginAPI.Docs.csproj", "{3D50BC79-9168-47F3-9805-E0D7502916DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{9638A1ED-142B-4487-8DAA-A24E1F42E04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9638A1ED-142B-4487-8DAA-A24E1F42E04C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9638A1ED-142B-4487-8DAA-A24E1F42E04C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D50BC79-9168-47F3-9805-E0D7502916DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D50BC79-9168-47F3-9805-E0D7502916DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D50BC79-9168-47F3-9805-E0D7502916DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D50BC79-9168-47F3-9805-E0D7502916DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

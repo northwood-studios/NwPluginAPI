@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.Zones.Heavy
+  commentId: N:PluginAPI.Core.Zones.Heavy
+  id: PluginAPI.Core.Zones.Heavy
+  children:
+  - PluginAPI.Core.Zones.Heavy.Generator
+  - PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  - PluginAPI.Core.Zones.Heavy.HczRoom
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Core.Zones.Heavy
+  nameWithType: PluginAPI.Core.Zones.Heavy
+  fullName: PluginAPI.Core.Zones.Heavy
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Core.Zones.Heavy.Generator
+  commentId: T:PluginAPI.Core.Zones.Heavy.Generator
+  parent: PluginAPI.Core.Zones.Heavy
+  name: Generator
+  nameWithType: Generator
+  fullName: PluginAPI.Core.Zones.Heavy.Generator
+- uid: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  commentId: T:PluginAPI.Core.Zones.Heavy.GeneratorLogic
+  name: GeneratorLogic
+  nameWithType: GeneratorLogic
+  fullName: PluginAPI.Core.Zones.Heavy.GeneratorLogic
+- uid: PluginAPI.Core.Zones.Heavy.HczRoom
+  commentId: T:PluginAPI.Core.Zones.Heavy.HczRoom
+  parent: PluginAPI.Core.Zones.Heavy
+  name: HczRoom
+  nameWithType: HczRoom
+  fullName: PluginAPI.Core.Zones.Heavy.HczRoom
+- uid: PluginAPI.Core.Zones.Heavy
+  commentId: N:PluginAPI.Core.Zones.Heavy
+  name: PluginAPI.Core.Zones.Heavy
+  nameWithType: PluginAPI.Core.Zones.Heavy
+  fullName: PluginAPI.Core.Zones.Heavy

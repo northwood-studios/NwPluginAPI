@@ -1,0 +1,867 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Core.DataStorage
+  commentId: T:PluginAPI.Core.DataStorage
+  id: DataStorage
+  parent: PluginAPI.Core
+  children:
+  - PluginAPI.Core.DataStorage.Add``1(System.String,``0)
+  - PluginAPI.Core.DataStorage.Clear
+  - PluginAPI.Core.DataStorage.Contains(System.String)
+  - PluginAPI.Core.DataStorage.Get``1(System.String)
+  - PluginAPI.Core.DataStorage.Override``1(System.String,``0)
+  - PluginAPI.Core.DataStorage.Remove(System.String)
+  - PluginAPI.Core.DataStorage.StoredData
+  - PluginAPI.Core.DataStorage.TryGet``1(System.String,``0@)
+  langs:
+  - csharp
+  - vb
+  name: DataStorage
+  nameWithType: DataStorage
+  fullName: PluginAPI.Core.DataStorage
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DataStorage
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 8
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nManages a player&apos;s temporary data storage.\n"
+  example: []
+  syntax:
+    content: public class DataStorage
+    content.vb: Public Class DataStorage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Core.DataStorage.StoredData
+  commentId: F:PluginAPI.Core.DataStorage.StoredData
+  id: StoredData
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: StoredData
+  nameWithType: DataStorage.StoredData
+  fullName: PluginAPI.Core.DataStorage.StoredData
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: StoredData
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nStored temporary data.\n"
+  example: []
+  syntax:
+    content: public readonly Dictionary<string, object> StoredData
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public ReadOnly StoredData As Dictionary(Of String, Object)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.DataStorage.Clear
+  commentId: M:PluginAPI.Core.DataStorage.Clear
+  id: Clear
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: DataStorage.Clear()
+  fullName: PluginAPI.Core.DataStorage.Clear()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Clear
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 18
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nClears stored data.\n"
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+  overload: PluginAPI.Core.DataStorage.Clear*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.DataStorage.TryGet``1(System.String,``0@)
+  commentId: M:PluginAPI.Core.DataStorage.TryGet``1(System.String,``0@)
+  id: TryGet``1(System.String,``0@)
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: TryGet<T>(String, out T)
+  nameWithType: DataStorage.TryGet<T>(String, out T)
+  fullName: PluginAPI.Core.DataStorage.TryGet<T>(System.String, out T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 27
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets data from storage.\n"
+  example: []
+  syntax:
+    content: >-
+      public bool TryGet<T>(string dataName, out T data)
+          where T : class, IComparable
+    parameters:
+    - id: dataName
+      type: System.String
+      description: The data name.
+    - id: data
+      type: '{T}'
+      description: The output value.
+    typeParameters:
+    - id: T
+      description: The type of data.
+    return:
+      type: System.Boolean
+      description: Whether or not data was previously stored.
+    content.vb: Public Function TryGet(Of T As {Class, IComparable})(dataName As String, ByRef data As T) As Boolean
+  overload: PluginAPI.Core.DataStorage.TryGet*
+  nameWithType.vb: DataStorage.TryGet(Of T)(String, ByRef T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.DataStorage.TryGet(Of T)(System.String, ByRef T)
+  name.vb: TryGet(Of T)(String, ByRef T)
+- uid: PluginAPI.Core.DataStorage.Get``1(System.String)
+  commentId: M:PluginAPI.Core.DataStorage.Get``1(System.String)
+  id: Get``1(System.String)
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: Get<T>(String)
+  nameWithType: DataStorage.Get<T>(String)
+  fullName: PluginAPI.Core.DataStorage.Get<T>(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 45
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets data from storage.\n"
+  example: []
+  syntax:
+    content: >-
+      public T Get<T>(string dataName)
+          where T : class, IComparable
+    parameters:
+    - id: dataName
+      type: System.String
+      description: The data name.
+    typeParameters:
+    - id: T
+      description: The type of data
+    return:
+      type: '{T}'
+      description: The output value.
+    content.vb: Public Function Get(Of T As {Class, IComparable})(dataName As String) As T
+  overload: PluginAPI.Core.DataStorage.Get*
+  nameWithType.vb: DataStorage.Get(Of T)(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.DataStorage.Get(Of T)(System.String)
+  name.vb: Get(Of T)(String)
+- uid: PluginAPI.Core.DataStorage.Add``1(System.String,``0)
+  commentId: M:PluginAPI.Core.DataStorage.Add``1(System.String,``0)
+  id: Add``1(System.String,``0)
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: Add<T>(String, T)
+  nameWithType: DataStorage.Add<T>(String, T)
+  fullName: PluginAPI.Core.DataStorage.Add<T>(System.String, T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Add
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 60
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nAdds new data name to storage.\n"
+  example: []
+  syntax:
+    content: >-
+      public bool Add<T>(string dataName, T data)
+          where T : class, IComparable
+    parameters:
+    - id: dataName
+      type: System.String
+      description: The data name.
+    - id: data
+      type: '{T}'
+      description: The object of data.
+    typeParameters:
+    - id: T
+      description: The type of data.
+    return:
+      type: System.Boolean
+      description: Whether or not data had not been previously stored.
+    content.vb: Public Function Add(Of T As {Class, IComparable})(dataName As String, data As T) As Boolean
+  overload: PluginAPI.Core.DataStorage.Add*
+  nameWithType.vb: DataStorage.Add(Of T)(String, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.DataStorage.Add(Of T)(System.String, T)
+  name.vb: Add(Of T)(String, T)
+- uid: PluginAPI.Core.DataStorage.Override``1(System.String,``0)
+  commentId: M:PluginAPI.Core.DataStorage.Override``1(System.String,``0)
+  id: Override``1(System.String,``0)
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: Override<T>(String, T)
+  nameWithType: DataStorage.Override<T>(String, T)
+  fullName: PluginAPI.Core.DataStorage.Override<T>(System.String, T)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Override
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 74
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nOverrides existing data in storage.\n"
+  example: []
+  syntax:
+    content: >-
+      public void Override<T>(string dataName, T data)
+          where T : class, IComparable
+    parameters:
+    - id: dataName
+      type: System.String
+      description: The data name.
+    - id: data
+      type: '{T}'
+      description: The object of data.
+    typeParameters:
+    - id: T
+      description: The type of data.
+    content.vb: Public Sub Override(Of T As {Class, IComparable})(dataName As String, data As T)
+  overload: PluginAPI.Core.DataStorage.Override*
+  nameWithType.vb: DataStorage.Override(Of T)(String, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Core.DataStorage.Override(Of T)(System.String, T)
+  name.vb: Override(Of T)(String, T)
+- uid: PluginAPI.Core.DataStorage.Contains(System.String)
+  commentId: M:PluginAPI.Core.DataStorage.Contains(System.String)
+  id: Contains(System.String)
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: Contains(String)
+  nameWithType: DataStorage.Contains(String)
+  fullName: PluginAPI.Core.DataStorage.Contains(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Contains
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 90
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nChecks if data name is already stored.\n"
+  example: []
+  syntax:
+    content: public bool Contains(string dataName)
+    parameters:
+    - id: dataName
+      type: System.String
+      description: The data name.
+    return:
+      type: System.Boolean
+      description: Whether or not the data is exists.
+    content.vb: Public Function Contains(dataName As String) As Boolean
+  overload: PluginAPI.Core.DataStorage.Contains*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.DataStorage.Remove(System.String)
+  commentId: M:PluginAPI.Core.DataStorage.Remove(System.String)
+  id: Remove(System.String)
+  parent: PluginAPI.Core.DataStorage
+  langs:
+  - csharp
+  - vb
+  name: Remove(String)
+  nameWithType: DataStorage.Remove(String)
+  fullName: PluginAPI.Core.DataStorage.Remove(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/DataStorage.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Remove
+    path: ../NwPluginAPI/Core/DataStorage.cs
+    startLine: 97
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nRemoves data from storage.\n"
+  example: []
+  syntax:
+    content: public bool Remove(string dataName)
+    parameters:
+    - id: dataName
+      type: System.String
+      description: The data name.
+    return:
+      type: System.Boolean
+      description: Whether or not data removal was successful
+    content.vb: Public Function Remove(dataName As String) As Boolean
+  overload: PluginAPI.Core.DataStorage.Remove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: PluginAPI.Core.DataStorage.Clear*
+  commentId: Overload:PluginAPI.Core.DataStorage.Clear
+  name: Clear
+  nameWithType: DataStorage.Clear
+  fullName: PluginAPI.Core.DataStorage.Clear
+- uid: PluginAPI.Core.DataStorage.TryGet*
+  commentId: Overload:PluginAPI.Core.DataStorage.TryGet
+  name: TryGet
+  nameWithType: DataStorage.TryGet
+  fullName: PluginAPI.Core.DataStorage.TryGet
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: PluginAPI.Core.DataStorage.Get*
+  commentId: Overload:PluginAPI.Core.DataStorage.Get
+  name: Get
+  nameWithType: DataStorage.Get
+  fullName: PluginAPI.Core.DataStorage.Get
+- uid: PluginAPI.Core.DataStorage.Add*
+  commentId: Overload:PluginAPI.Core.DataStorage.Add
+  name: Add
+  nameWithType: DataStorage.Add
+  fullName: PluginAPI.Core.DataStorage.Add
+- uid: PluginAPI.Core.DataStorage.Override*
+  commentId: Overload:PluginAPI.Core.DataStorage.Override
+  name: Override
+  nameWithType: DataStorage.Override
+  fullName: PluginAPI.Core.DataStorage.Override
+- uid: PluginAPI.Core.DataStorage.Contains*
+  commentId: Overload:PluginAPI.Core.DataStorage.Contains
+  name: Contains
+  nameWithType: DataStorage.Contains
+  fullName: PluginAPI.Core.DataStorage.Contains
+- uid: PluginAPI.Core.DataStorage.Remove*
+  commentId: Overload:PluginAPI.Core.DataStorage.Remove
+  name: Remove
+  nameWithType: DataStorage.Remove
+  fullName: PluginAPI.Core.DataStorage.Remove
