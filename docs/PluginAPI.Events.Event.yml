@@ -212,7 +212,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterInvoker
     path: ../NwPluginAPI/Events/Event.cs
-    startLine: 66
+    startLine: 72
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events

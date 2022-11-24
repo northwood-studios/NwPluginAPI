@@ -230,12 +230,12 @@
         }
 
         [PluginEvent(ServerEventType.PlayerDamage)]
-        void OnPlayerDamage(MyPlayer plr, MyPlayer target, DamageHandlerBase damageHandler)
+        void OnPlayerDamage(MyPlayer player, MyPlayer attacker, DamageHandlerBase damageHandler)
         {
-            if (target == null)
-                Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) got damaged, cause {damageHandler}.");
+            if (attacker == null)
+                Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler}.");
             else
-                Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) damaged &6{target.Nickname}&r (&6{target.UserId}&r), cause {damageHandler}.");
+                Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}.");
         }
 
         [PluginEvent(ServerEventType.PlayerKicked)]
@@ -276,7 +276,7 @@
 		}
 
         [PluginEvent(ServerEventType.PlayerReceiveEffect)]
-        void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect)
+        void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect, float duration)
         {
             Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) received effect &6{effect}&r.");
         }

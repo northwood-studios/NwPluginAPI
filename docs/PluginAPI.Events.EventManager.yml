@@ -106,7 +106,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 279
+    startLine: 280
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -144,7 +144,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 289
+    startLine: 290
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -189,7 +189,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 305
+    startLine: 306
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -230,7 +230,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 358
+    startLine: 359
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -277,7 +277,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 367
+    startLine: 368
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events

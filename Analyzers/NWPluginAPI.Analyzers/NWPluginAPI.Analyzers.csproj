@@ -3,7 +3,11 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		
-		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<PlatformTarget>x64</PlatformTarget>
+		<OutputType>Library</OutputType>
+
+		<Configurations>Release</Configurations>
+		<Platforms>AnyCPU</Platforms>
 
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	</PropertyGroup>
@@ -48,6 +52,9 @@
 
 	<ItemGroup>
 		<None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="tools" />
-		<None Include="$(OutputPath)\$(AssemblyName).dll"  CopyToOutputDirectory="Always" Pack="true" PackagePath="tools/analyzers/dotnet/cs" Visible="false" />
 	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy /y &quot;$(TargetPath)&quot; &quot;$(SolutionDir)\Analyzers\NwPluginAPI.Analyzers\tools\analyzers\dotnet\cs&quot;" />
+	</Target>
 </Project>

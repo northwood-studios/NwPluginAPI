@@ -50,6 +50,12 @@ namespace PluginAPI.Events
 
 			foreach (var index in IndexesToRegenerate)
 			{
+				if (parameters[index.Index] == null)
+				{
+					regeneratedParameters[index.Index] = null;
+					continue;
+				}
+
 				if (index.Type == typeof(IPlayer))
 					regeneratedParameters[index.Index] = EventManager.GetPlayerFactory(invoker).GetOrAdd((IGameComponent)parameters[index.Index]);
 			}

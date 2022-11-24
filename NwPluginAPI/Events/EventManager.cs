@@ -161,7 +161,8 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(int), "readerStartPosition")) },
 			{ ServerEventType.PlayerReceiveEffect, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
-				new EventParameter(typeof(StatusEffectBase), "effect")) },
+				new EventParameter(typeof(StatusEffectBase), "effect"),
+				new EventParameter(typeof(float), "duration")) },
 			{ ServerEventType.PlayerReloadWeapon, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Firearm), "firearm")) },
