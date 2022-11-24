@@ -494,11 +494,6 @@
     "title": "Namespace PluginAPI.Loader | Nw Plugin API",
     "keywords": "Namespace PluginAPI.Loader Classes AssemblyLoader Manages initialization of plugin system and loading of plugins."
   },
-  "articles/intro.html": {
-    "href": "articles/intro.html",
-    "title": "Add your introductions here! | Nw Plugin API",
-    "keywords": "Add your introductions here!"
-  },
   "index.html": {
     "href": "index.html",
     "title": "| Nw Plugin API",
