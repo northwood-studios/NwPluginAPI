@@ -29,8 +29,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginHandler
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 18
@@ -72,8 +72,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 39
@@ -113,8 +113,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginName
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 53
@@ -150,8 +150,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginVersion
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 58
@@ -187,8 +187,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginDescription
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 63
@@ -224,8 +224,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginAuthor
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 68
@@ -261,8 +261,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginFilePath
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 73
@@ -298,8 +298,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginDirectoryPath
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 78
@@ -335,8 +335,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: MainConfigPath
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 83
@@ -372,8 +372,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Unload
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 88
@@ -404,8 +404,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Load
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 109
@@ -436,8 +436,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LoadConfig
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 132
@@ -475,8 +475,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LoadDefaultConfig
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 164
@@ -514,8 +514,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SaveConfig
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 188
@@ -553,8 +553,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 213

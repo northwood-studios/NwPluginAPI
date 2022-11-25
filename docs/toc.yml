@@ -1,4 +1,9 @@
 ### YamlMime:TableOfContent
+- uid: PluginAPI
+  name: PluginAPI
+  items:
+  - uid: PluginAPI.PluginApiVersion
+    name: PluginApiVersion
 - uid: PluginAPI.Commands
   name: PluginAPI.Commands
   items:

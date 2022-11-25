@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Facility
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 16
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 151
@@ -101,8 +101,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 156
@@ -140,8 +140,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TurnOnAllLights
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 161
@@ -174,8 +174,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TurnOffAllLights
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 169

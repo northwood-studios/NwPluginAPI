@@ -1,4 +1,5 @@
 {
+  "PluginAPI": "PluginAPI.yml",
   "PluginAPI.Commands": "PluginAPI.Commands.yml",
   "PluginAPI.Commands.Command": "PluginAPI.Commands.Command.yml",
   "PluginAPI.Commands.Command.Object": "PluginAPI.Commands.Command.yml",
@@ -665,5 +666,8 @@
   "PluginAPI.Loader.Features.PluginDirectory": "PluginAPI.Loader.Features.PluginDirectory.yml",
   "PluginAPI.Loader.Features.PluginDirectory.#ctor(System.String)": "PluginAPI.Loader.Features.PluginDirectory.yml",
   "PluginAPI.Loader.Features.PluginDirectory.Dependencies": "PluginAPI.Loader.Features.PluginDirectory.yml",
-  "PluginAPI.Loader.Features.PluginDirectory.Plugins": "PluginAPI.Loader.Features.PluginDirectory.yml"
+  "PluginAPI.Loader.Features.PluginDirectory.Plugins": "PluginAPI.Loader.Features.PluginDirectory.yml",
+  "PluginAPI.PluginApiVersion": "PluginAPI.PluginApiVersion.yml",
+  "PluginAPI.PluginApiVersion.Version": "PluginAPI.PluginApiVersion.yml",
+  "PluginAPI.PluginApiVersion.VersionString": "PluginAPI.PluginApiVersion.yml"
 }

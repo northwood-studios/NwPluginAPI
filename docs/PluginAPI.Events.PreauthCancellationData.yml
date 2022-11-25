@@ -26,8 +26,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PreauthCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 19
@@ -71,8 +71,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 22
@@ -111,8 +111,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RejectDelay
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 40
@@ -155,8 +155,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RejectRedirect
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 54
@@ -199,8 +199,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RejectBanned
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 63
@@ -246,8 +246,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RejectBanned
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 74
@@ -293,8 +293,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Reject
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 88
@@ -337,8 +337,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Reject
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 102
@@ -381,8 +381,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Reject
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 123
@@ -425,8 +425,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Accept
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 129
@@ -462,8 +462,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: HandledManually
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 136
@@ -499,8 +499,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GenerateWriter
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 159

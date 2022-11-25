@@ -23,8 +23,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Round
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 64
@@ -66,8 +66,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 69
@@ -105,8 +105,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: StartTimestamp
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 74
@@ -142,8 +142,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TotalKilledPlayers
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 79
@@ -179,8 +179,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TotalScpKills
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 84
@@ -216,8 +216,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TotalScp0492Made
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 89
@@ -253,8 +253,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TotalEscapedClassD
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 94
@@ -290,8 +290,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TotalEscapedScientists
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 99
@@ -327,8 +327,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ScpsAlive
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 104

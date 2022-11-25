@@ -1,34 +1,33 @@
 ### YamlMime:ManagedReference
 items:
-- uid: PluginAPI.Core.Map
-  commentId: T:PluginAPI.Core.Map
-  id: Map
-  parent: PluginAPI.Core
+- uid: PluginAPI.PluginApiVersion
+  commentId: T:PluginAPI.PluginApiVersion
+  id: PluginApiVersion
+  parent: PluginAPI
   children:
-  - PluginAPI.Core.Map.Seed
+  - PluginAPI.PluginApiVersion.Version
+  - PluginAPI.PluginApiVersion.VersionString
   langs:
   - csharp
   - vb
-  name: Map
-  nameWithType: Map
-  fullName: PluginAPI.Core.Map
+  name: PluginApiVersion
+  nameWithType: PluginApiVersion
+  fullName: PluginAPI.PluginApiVersion
   type: Class
   source:
     remote:
-      path: NwPluginAPI/Core/Map.cs
+      path: NwPluginAPI/PluginApiVersion.cs
       branch: master
       repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Map
-    path: ../NwPluginAPI/Core/Map.cs
-    startLine: 5
+    id: PluginApiVersion
+    path: ../NwPluginAPI/PluginApiVersion.cs
+    startLine: 2
   assemblies:
   - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nA set of tools to easily handle the in-game map.\n"
-  example: []
+  namespace: PluginAPI
   syntax:
-    content: public static class Map
-    content.vb: Public Module Map
+    content: public static class PluginApiVersion
+    content.vb: Public Module PluginApiVersion
   inheritance:
   - System.Object
   inheritedMembers:
@@ -46,51 +45,78 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: PluginAPI.Core.Map.Seed
-  commentId: P:PluginAPI.Core.Map.Seed
-  id: Seed
-  parent: PluginAPI.Core.Map
+- uid: PluginAPI.PluginApiVersion.Version
+  commentId: F:PluginAPI.PluginApiVersion.Version
+  id: Version
+  parent: PluginAPI.PluginApiVersion
   langs:
   - csharp
   - vb
-  name: Seed
-  nameWithType: Map.Seed
-  fullName: PluginAPI.Core.Map.Seed
-  type: Property
+  name: Version
+  nameWithType: PluginApiVersion.Version
+  fullName: PluginAPI.PluginApiVersion.Version
+  type: Field
   source:
     remote:
-      path: NwPluginAPI/Core/Map.cs
+      path: NwPluginAPI/PluginApiVersion.cs
       branch: master
       repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Seed
-    path: ../NwPluginAPI/Core/Map.cs
-    startLine: 10
+    id: Version
+    path: ../NwPluginAPI/PluginApiVersion.cs
+    startLine: 4
   assemblies:
   - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nGets the current seed of the map.\n"
-  example: []
+  namespace: PluginAPI
   syntax:
-    content: public static int Seed { get; }
-    parameters: []
+    content: public const string Version = "12.0.0"
     return:
-      type: System.Int32
-    content.vb: Public Shared ReadOnly Property Seed As Integer
-  overload: PluginAPI.Core.Map.Seed*
+      type: System.String
+    content.vb: Public Const Version As String = "12.0.0"
   modifiers.csharp:
   - public
-  - static
-  - get
+  - const
   modifiers.vb:
   - Public
-  - Shared
-  - ReadOnly
+  - Const
+- uid: PluginAPI.PluginApiVersion.VersionString
+  commentId: F:PluginAPI.PluginApiVersion.VersionString
+  id: VersionString
+  parent: PluginAPI.PluginApiVersion
+  langs:
+  - csharp
+  - vb
+  name: VersionString
+  nameWithType: PluginApiVersion.VersionString
+  fullName: PluginAPI.PluginApiVersion.VersionString
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/PluginApiVersion.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: VersionString
+    path: ../NwPluginAPI/PluginApiVersion.cs
+    startLine: 5
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI
+  syntax:
+    content: public const string VersionString = "12.0.0-beta8"
+    return:
+      type: System.String
+    content.vb: Public Const VersionString As String = "12.0.0-beta8"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 references:
-- uid: PluginAPI.Core
-  commentId: N:PluginAPI.Core
-  name: PluginAPI.Core
-  nameWithType: PluginAPI.Core
-  fullName: PluginAPI.Core
+- uid: PluginAPI
+  commentId: N:PluginAPI
+  name: PluginAPI
+  nameWithType: PluginAPI
+  fullName: PluginAPI
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -383,15 +409,10 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: PluginAPI.Core.Map.Seed*
-  commentId: Overload:PluginAPI.Core.Map.Seed
-  name: Seed
-  nameWithType: Map.Seed
-  fullName: PluginAPI.Core.Map.Seed
-- uid: System.Int32
-  commentId: T:System.Int32
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
+  name: String
+  nameWithType: String
+  fullName: System.String

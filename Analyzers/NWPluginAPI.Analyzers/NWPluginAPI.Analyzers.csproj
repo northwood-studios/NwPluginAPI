@@ -14,7 +14,7 @@
 	
 	<PropertyGroup>
 		<PackageId>Northwood.PluginAPI.Analyzers</PackageId>
-		<PackageVersion>12.0.0-beta9</PackageVersion>
+		<PackageVersion>12.0.0-beta8</PackageVersion>
 		<Authors>Northwood Studios</Authors>
 		<Company>Northwood Studio</Company>
 		<Product>PluginAPI.Analyzers</Product>
@@ -35,12 +35,17 @@
 		<PackAsTool>False</PackAsTool>
 	</PropertyGroup>
 	
+	<PropertyGroup>
+		<!-- Disable automatic generation of version attribute -->
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+	</PropertyGroup>
+	
   <ItemGroup>
 	  <None Include="..\..\README.md" Pack="True" PackagePath="\" />
 	  <None Include="..\..\LICENSE" Pack="True" PackagePath="\" />
 	  <None Include="..\..\NwPluginAPI\Resources\nw_logo.jpg" Pack="True" PackagePath="\" />
-	  <None Include="..\..\NwPluginAPI\Properties\VersionInfo.cs" Pack="True" PackagePath="\Properties\" />
-	  <None Include="..\..\NwPluginAPI\PluginApiVersion.cs" Pack="True" PackagePath="\" />
   </ItemGroup>
 	
   <ItemGroup>
@@ -52,6 +57,10 @@
 
 	<ItemGroup>
 		<None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="tools" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\NwPluginAPI\NwPluginAPI.csproj" />
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">

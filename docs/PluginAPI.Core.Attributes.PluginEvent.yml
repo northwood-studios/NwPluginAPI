@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEvent.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginEvent
     path: ../NwPluginAPI/Core/Attributes/PluginEvent.cs
     startLine: 8
@@ -120,8 +120,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEvent.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: EventType
     path: ../NwPluginAPI/Core/Attributes/PluginEvent.cs
     startLine: 11
@@ -155,8 +155,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEvent.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Attributes/PluginEvent.cs
     startLine: 17

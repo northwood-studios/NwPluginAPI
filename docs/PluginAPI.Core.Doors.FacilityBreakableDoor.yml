@@ -24,8 +24,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: FacilityBreakableDoor
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 12
@@ -81,8 +81,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 17
@@ -120,8 +120,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 21
@@ -159,8 +159,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 26
@@ -194,8 +194,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Health
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 31
@@ -231,8 +231,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: MaxHealth
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 40
@@ -268,8 +268,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IgnoredDamageSources
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 49
@@ -305,8 +305,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsDestroyed
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 58
@@ -342,8 +342,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Destroy
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 63
@@ -374,8 +374,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 77

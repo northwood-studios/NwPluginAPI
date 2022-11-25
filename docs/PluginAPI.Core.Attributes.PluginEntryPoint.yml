@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginEntryPoint
     path: ../NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
     startLine: 8
@@ -123,8 +123,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Name
     path: ../NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
     startLine: 11
@@ -158,8 +158,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Version
     path: ../NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
     startLine: 12
@@ -193,8 +193,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
     startLine: 13
@@ -228,8 +228,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Author
     path: ../NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
     startLine: 14
@@ -263,8 +263,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Attributes/PluginEntryPoint.cs
     startLine: 23

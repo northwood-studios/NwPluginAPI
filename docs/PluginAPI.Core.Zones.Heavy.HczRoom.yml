@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: HczRoom
     path: ../NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
     startLine: 5
@@ -72,8 +72,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Generator
     path: ../NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
     startLine: 7
@@ -107,8 +107,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
     startLine: 14

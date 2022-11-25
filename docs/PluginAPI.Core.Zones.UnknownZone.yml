@@ -15,8 +15,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/UnknownZone.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnknownZone
     path: ../NwPluginAPI/Core/Zones/UnknownZone.cs
     startLine: 5

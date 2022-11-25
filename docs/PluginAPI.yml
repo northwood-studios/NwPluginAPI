@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI
+  commentId: N:PluginAPI
+  id: PluginAPI
+  children:
+  - PluginAPI.PluginApiVersion
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI
+  nameWithType: PluginAPI
+  fullName: PluginAPI
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.PluginApiVersion
+  commentId: T:PluginAPI.PluginApiVersion
+  name: PluginApiVersion
+  nameWithType: PluginApiVersion
+  fullName: PluginAPI.PluginApiVersion
