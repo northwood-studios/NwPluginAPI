@@ -2,4 +2,6 @@
 
 Official server-side plugin system for SCP: Secret Laboratory game.
 
+**Documentation can be found [here](https://northwood-studios.github.io/NwPluginAPI/).**
+
 # API will be released in SCP:SL version 12.0.0
