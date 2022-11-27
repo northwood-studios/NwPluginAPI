@@ -130,7 +130,7 @@ namespace PluginAPI.Loader
                 {
 	                types = assembly.GetTypes();
                 }
-                catch
+                catch (Exception e)
                 {
 	                var missingDependencies = assembly
 		                .GetReferencedAssemblies()
@@ -143,6 +143,8 @@ namespace PluginAPI.Loader
 		                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}", "Loader");
 		                continue;
 	                }
+	                
+	                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, {e.ToString()}");
 	                continue;
                 }
 
