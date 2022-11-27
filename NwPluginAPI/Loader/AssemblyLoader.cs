@@ -124,19 +124,27 @@ namespace PluginAPI.Loader
                 if (!TryGetAssembly(pluginPath, out Assembly assembly))
 					continue;
 
-				var missingDependencies = assembly
-					.GetReferencedAssemblies()
-					.Select(x => 
-						$"{x.Name}&r v&6{x.Version.ToString(3)}")
-					.Where(x => !loadedAssemblies.Contains(x)).ToArray();
+                Type[] types = null;
 
-				if (missingDependencies.Length != 0)
-				{
-					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}", "Loader");
-					continue;
-				}
+                try
+                {
+	                types = assembly.GetTypes();
+                }
+                catch
+                {
+	                var missingDependencies = assembly
+		                .GetReferencedAssemblies()
+		                .Select(x => 
+			                $"{x.Name}&r v&6{x.Version.ToString(3)}")
+		                .Where(x => !loadedAssemblies.Contains(x)).ToArray();
 
-				var types = assembly.GetTypes();
+	                if (missingDependencies.Length != 0)
+	                {
+		                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}", "Loader");
+		                continue;
+	                }
+	                continue;
+                }
 
 				foreach (var entryType in types)
 				{
