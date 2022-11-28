@@ -240,6 +240,10 @@ namespace PluginAPI.Loader
 			return false;
 		}
 		
+		/// <summary>
+		/// Attempts to load Embedded assemblies (compressed) from the target
+		/// </summary>
+		/// <param name="target">Assembly to check for embedded assemblies</param>
 		private static void ResolveAssemblyEmbeddedResources(Assembly target)
 		{
 			Log.Debug($"Attempting to load embedded resources for {target.FullName}", Log.DebugMode);
