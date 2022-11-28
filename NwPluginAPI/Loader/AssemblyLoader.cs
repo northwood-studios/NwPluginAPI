@@ -1,5 +1,6 @@
 namespace PluginAPI.Loader
 {
+	using System.IO.Compression;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -126,21 +127,23 @@ namespace PluginAPI.Loader
 
                 Type[] types = null;
 
+                var missingDependencies = assembly
+	                .GetReferencedAssemblies()
+	                .Select(x => 
+		                $"{x.Name}&r v&6{x.Version.ToString(3)}")
+	                .Where(x => !loadedAssemblies.Contains(x)).ToArray();
+                
                 try
                 {
+	                if (missingDependencies.Length != 0)
+		                ResolveAssemblyEmbeddedResources(assembly);
 	                types = assembly.GetTypes();
                 }
                 catch (Exception e)
                 {
-	                var missingDependencies = assembly
-		                .GetReferencedAssemblies()
-		                .Select(x => 
-			                $"{x.Name}&r v&6{x.Version.ToString(3)}")
-		                .Where(x => !loadedAssemblies.Contains(x)).ToArray();
-
 	                if (missingDependencies.Length != 0)
 	                {
-		                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}", "Loader");
+		                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}\n\n{e}", "Loader");
 		                continue;
 	                }
 	                
@@ -235,6 +238,53 @@ namespace PluginAPI.Loader
 
 			assembly = null;
 			return false;
+		}
+		
+		private static void ResolveAssemblyEmbeddedResources(Assembly target)
+		{
+			Log.Debug($"Attempting to load embedded resources for {target.FullName}", Log.DebugMode);
+
+			
+			var resourceNames = target.GetManifestResourceNames();
+			foreach (var name in resourceNames)
+			{
+				Log.Debug($"Found {name}", Log.DebugMode);
+				if (name.EndsWith(".dll"))
+				{
+					using (MemoryStream stream = new MemoryStream())
+					{
+						Log.Debug($"Loading {name}", Log.DebugMode);
+						var dataStream = target.GetManifestResourceStream(name);
+						if (dataStream == null)
+						{
+							Log.Error($"Unable to resolve {name} Stream was null");
+							continue;
+						}
+
+						dataStream.CopyTo(stream);
+						Assembly.Load(stream.ToArray());
+						Log.Debug($"Loaded {name}", Log.DebugMode);
+					}
+				}
+				else if (name.EndsWith(".dll.compressed"))
+				{
+					var dataStream = target.GetManifestResourceStream(name);
+					if (dataStream == null)
+					{
+						Log.Error($"Unable to resolve {name} Stream was null");
+						continue;
+					}
+
+					using (DeflateStream stream = new DeflateStream(dataStream, CompressionMode.Decompress))
+					using (MemoryStream memStream = new MemoryStream())
+					{
+						Log.Debug($"Loading {name}", Log.DebugMode);
+						stream.CopyTo(memStream);
+						Assembly.Load(memStream.ToArray());
+						Log.Debug($"Loaded {name}", Log.DebugMode);
+					}
+				}
+			}
 		}
 	}
 }
