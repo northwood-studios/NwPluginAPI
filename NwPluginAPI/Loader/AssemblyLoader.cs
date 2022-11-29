@@ -270,7 +270,7 @@ namespace PluginAPI.Loader
 						Log.Debug($"Loaded {name}", Log.DebugMode);
 					}
 				}
-				else if (name.EndsWith(".dll.compressed"))
+				else if (name.EndsWith(".dll.compressed", StringComparison.OrdinalIgnoreCase))
 				{
 					var dataStream = target.GetManifestResourceStream(name);
 					if (dataStream == null)
