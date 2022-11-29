@@ -253,7 +253,7 @@ namespace PluginAPI.Loader
 			foreach (var name in resourceNames)
 			{
 				Log.Debug($"Found {name}", Log.DebugMode);
-				if (name.EndsWith(".dll"))
+				if (name.EndsWith(".dll", StringComparison.OrdinalIgnoreCase))
 				{
 					using (MemoryStream stream = new MemoryStream())
 					{
