@@ -880,6 +880,27 @@ namespace PluginAPI.Core
 		/// <param name="isFastRestart">Whether or not fast restart is enabled.</param>
 		public void Reconnect(float delay = 3f, bool isFastRestart = false) => Connection.Send(new RoundRestartMessage(isFastRestart ? RoundRestartType.FastRestart : RoundRestartType.FullRestart, delay, 0, true, false));
 
+		/// <summary>
+		/// Deals damage to the player.
+		/// </summary>
+		/// <param name="reason">The reason for the damage.</param>
+		/// <param name="damage">Amount of the damge.</param>
+		/// <param name="cassieAnnouncement">The cassie announcement to make upon death.</param>
+		public void Hurt(string reason, float damage, string cassieAnnouncement ="")
+		{
+			ReferenceHub.playerStats.DealDamage(new CustomReasonDamageHandler(reason, damage, cassieAnnouncement));
+		}
+
+		/// <summary>
+		/// Kills the player.
+		/// </summary>
+		/// <param name="reason">The reason for the kill</param>
+		/// <param name="cassieAnnouncement">The cassie announcement to make upon death.</param>
+		public void Kill(string reason, string cassieAnnouncement = "")
+		{
+			ReferenceHub.playerStats.KillPlayer(new CustomReasonDamageHandler(reason, float.MaxValue, cassieAnnouncement));
+		}
+
         /// <inheritdoc/>
         public virtual void OnStart() { }
 
