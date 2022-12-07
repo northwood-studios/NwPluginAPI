@@ -3,6 +3,7 @@ namespace PluginAPI.Core
 	using System;
 	using System.Reflection;
 	using Enums;
+	using GameCore;
 	using PluginAPI.Loader;
 
 	/// <summary>
@@ -23,7 +24,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Whether or not to enable debug mode in logs.
 		/// </summary>
-		public static bool DebugMode;
+		public static bool DebugMode => ConfigFile.ServerConfig.GetBool("pluginapi_debug");
 
 		/// <summary>
 		/// Sends a debug message.

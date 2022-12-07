@@ -564,5 +564,47 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="SpawnableTeamType"/> team.
 		/// </remarks>
 		TeamRespawn = 71,
+
+		/// TODO PARAMS
+
+		/// <summary>
+		/// Event executed when SCP-106 tries to teleport.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="SpawnableTeamType"/> team.
+		/// </remarks>
+		Scp106Teleport = 72,
+
+		/// <summary>
+		/// Event executed when SCP-106 tries to create portal.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="SpawnableTeamType"/> team.
+		/// </remarks>
+		Scp106CreatePortal = 73,
+
+		/// <summary>
+		/// Event executed when SCP-106 tries to teleport player to pocket dimension.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="SpawnableTeamType"/> team.
+		/// </remarks>
+		PlayerEnterPocketDimension = 74,
+
+		/// <summary>
+		/// Event executed when player tries to escape from pocket dimension.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="SpawnableTeamType"/> team.
+		/// </remarks>
+		PlayerExitPocketDimension = 75,
+
+		/// <summary>
+		/// Event executed when player tries to throw grenade.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="SpawnableTeamType"/> team.
+		/// </remarks>
+		PlayerThrowGrenade = 76,
 	}
 }

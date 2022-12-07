@@ -22,9 +22,13 @@
 
 	public class MainClass
     {
+		public static MainClass Singleton { get; private set; }
+
+		[PluginPriority(LoadPriority.Highest)]
         [PluginEntryPoint("Template Plugin", "1.0.0", "Just a template plugin.", "Northwood")]
         void LoadPlugin()
         {
+			Singleton = this;
             Log.Info("Loaded plugin, register events...");
             EventManager.RegisterEvents(this);
 			EventManager.RegisterEvents<EventHandlers>(this);

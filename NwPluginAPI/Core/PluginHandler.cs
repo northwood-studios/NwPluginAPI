@@ -8,6 +8,7 @@ namespace PluginAPI.Core
 	using CommandSystem;
 	using Loader.Features;
 	using PluginAPI.Commands;
+	using PluginAPI.Enums;
 	using PluginAPI.Loader;
 	using Serialization;
 	using Directory = System.IO.Directory;
@@ -47,6 +48,11 @@ namespace PluginAPI.Core
 
 			return handler;
 		}
+
+		/// <summary>
+		/// Gets the loading priority.
+		/// </summary>
+		public LoadPriority LoadPriority { get; private set; } = LoadPriority.Highest;
 
 		/// <summary>
 		/// Gets the name of the plugin.
@@ -218,19 +224,22 @@ namespace PluginAPI.Core
 
 			foreach (var method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
-				var attribute = method.GetCustomAttribute<Attribute>();
-
-				switch (attribute)
+				foreach(var attribute in method.GetCustomAttributes<Attribute>())
 				{
-					case PluginEntryPoint pluginEntryPoint:
-                        _entryPoint = method;
-                        _entryInfo = pluginEntryPoint;
-                        break;
-					
-					case PluginUnload _:
-                        _onUnload = method;
-                        break;
-                }
+					switch (attribute)
+					{
+						case PluginPriority priority:
+							LoadPriority = priority.Priority;
+							break;
+						case PluginEntryPoint pluginEntryPoint:
+							_entryPoint = method;
+							_entryInfo = pluginEntryPoint;
+							break;
+						case PluginUnload _:
+							_onUnload = method;
+							break;
+					}
+				}
 			}
 
 			if (_entryInfo == null)
@@ -264,13 +273,14 @@ namespace PluginAPI.Core
 
             foreach (var field in _pluginType.GetFields())
 			{
-                var attribute = field.GetCustomAttribute<Attribute>();
-
-                switch (attribute)
+				foreach(var attribute in field.GetCustomAttributes<Attribute>())
 				{
-					case PluginConfig _:
-						LoadConfig(_plugin, field.Name);
-                        break;
+					switch (attribute)
+					{
+						case PluginConfig _:
+							LoadConfig(_plugin, field.Name);
+							break;
+					}
 				}
 			}
 		}

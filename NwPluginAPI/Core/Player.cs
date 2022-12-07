@@ -35,15 +35,20 @@ namespace PluginAPI.Core
         /// <summary>
         /// Gets the amount of online players.
         /// </summary>
-        public static int Count => ReferenceHub.AllHubs.Count;
-        #endregion
+        public static int Count => GetPlayers<Player>().Count;
+		#endregion
 
-        #region Static Methods
+		#region Static Methods
 
-        /// <summary>
-        /// Gets all players.
-        /// </summary>
-        public static List<T> GetPlayers<T>() where T : IPlayer
+		/// <summary>
+		/// Gets all players.
+		/// </summary>
+		public static List<Player> GetPlayers() => GetPlayers<Player>();
+
+		/// <summary>
+		/// Gets all players.
+		/// </summary>
+		public static List<T> GetPlayers<T>() where T : IPlayer
 		{
             if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
             {
@@ -55,21 +60,25 @@ namespace PluginAPI.Core
                 return (List<T>)Enumerable.Empty<T>();
             }
 
+			List<T> players= new List<T>();
 			foreach (var hub in ReferenceHub.AllHubs)
 			{
 				if (hub.isServer) continue;
-				factory.GetOrAdd(hub);
+				players.Add((T)factory.GetOrAdd(hub));
 			}
 
-			return factory.Get()
-				.Cast<T>()
-				.ToList();
+			return players;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
-        /// </summary>
-        public static bool TryGet<T>(IGameComponent component, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
+		/// </summary>
+		public static bool TryGet(IGameComponent component, out Player player) => TryGet<Player>(component, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
+		/// </summary>
+		public static bool TryGet<T>(IGameComponent component, out T player) where T : IPlayer
         {
             if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
             {
@@ -87,22 +96,33 @@ namespace PluginAPI.Core
             return true;
         }
 
-        #region Get player from gameobject.
+		#region Get player from gameobject.
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
-        /// </summary>
-        public static T Get<T>(GameObject gameObject) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
+		/// </summary>
+		public static Player Get(GameObject gameObject) => Get<Player>(gameObject);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
+		/// </summary>
+		public static T Get<T>(GameObject gameObject) where T : IPlayer
         {
 			TryGet(gameObject, out T player);
             return player;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
-        /// </summary>
-        /// <returns>Whether or not a player was found.</returns>
-        public static bool TryGet<T>(GameObject gameObject, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(GameObject gameObject, out Player player) => TryGet<Player>(gameObject, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(GameObject gameObject, out T player) where T : IPlayer
         {
 			if (gameObject == null)
 			{
@@ -125,23 +145,35 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
         }
-        #endregion
+		#endregion
 
-        #region Get player from reference hub.
-        /// <summary>
-        /// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
-        /// </summary>
-        public static T Get<T>(ReferenceHub hub) where T : IPlayer
+		#region Get player from reference hub.
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
+		/// </summary>
+		public static Player Get(ReferenceHub hub) => Get<Player>(hub);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
+		/// </summary>
+		public static T Get<T>(ReferenceHub hub) where T : IPlayer
         {
 			TryGet(hub, out T player);
             return player;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
-        /// </summary>
-        /// <returns>Whether or not a player was found.</returns>
-        public static bool TryGet<T>(ReferenceHub hub, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(ReferenceHub hub, out Player player) => TryGet<Player>(hub, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(ReferenceHub hub, out T player) where T : IPlayer
         {
             if (hub == null)
             {
@@ -158,23 +190,35 @@ namespace PluginAPI.Core
 			player = plr;
             return true;
         }
-        #endregion
+		#endregion
 
-        #region Get player from network identity.
-        /// <summary>
-        /// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
-        /// </summary>
-        public static T Get<T>(NetworkIdentity netIdentity) where T : IPlayer
+		#region Get player from network identity.
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
+		/// </summary>
+		public static Player Get(NetworkIdentity netIdentity) => Get<Player>(netIdentity);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
+		/// </summary>
+		public static T Get<T>(NetworkIdentity netIdentity) where T : IPlayer
 		{
 			TryGet(netIdentity, out T player);
 			return player;
 		}
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
-        /// </summary>
-        /// <returns>Whether or not a player was found.</returns>
-        public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(NetworkIdentity netIdentity, out Player player) => TryGet<Player>(netIdentity, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : IPlayer
         {
             if (netIdentity == null)
             {
@@ -190,24 +234,35 @@ namespace PluginAPI.Core
 
             return true;
         }
-        #endregion
+		#endregion
 
-        #region Get player from name.
+		#region Get player from name.
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their name.
-        /// </summary>
-        public static T GetByName<T>(string name) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their name.
+		/// </summary>
+		public static Player GetByName(string name) => GetByName<Player>(name);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their name.
+		/// </summary>
+		public static T GetByName<T>(string name) where T : IPlayer
         {
 			TryGetByName(name, out T player);
 			return player;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their name.
-        /// </summary>
-        /// <returns>Whether or not a player was found.</returns>
-        public static bool TryGetByName<T>(string name, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their name.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGetByName(string name, out Player player) => TryGetByName<Player>(name, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their name.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGetByName<T>(string name, out T player) where T : IPlayer
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -235,24 +290,35 @@ namespace PluginAPI.Core
 			player = plr;
             return true;
         }
-        #endregion
+		#endregion
 
-        #region Get player from player id.
+		#region Get player from player id.
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their player id.
-        /// </summary>
-        public static T Get<T>(int playerId) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their player id.
+		/// </summary>
+		public static Player Get(int playerId) => Get<Player>(playerId);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their player id.
+		/// </summary>
+		public static T Get<T>(int playerId) where T : IPlayer
         {
 			TryGet(playerId, out T player);
             return player;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their player id.
-        /// </summary>
-        /// <returns>Whether or not a player was found.</returns>
-        public static bool TryGet<T>(int playerId, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their player id.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(int playerId, out Player player) => TryGet<Player>(playerId, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their player id.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(int playerId, out T player) where T : IPlayer
         {
             if (!PlayersIds.TryGetValue(playerId, out IGameComponent component))
             {
@@ -269,24 +335,35 @@ namespace PluginAPI.Core
 			player = plr;
             return true;
         }
-        #endregion
+		#endregion
 
-        #region Get player from userid.
+		#region Get player from userid.
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their user id.
-        /// </summary>
-        public static T Get<T>(string userId) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their user id.
+		/// </summary>
+		public static Player Get(string userId) => Get<Player>(userId);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their user id.
+		/// </summary>
+		public static T Get<T>(string userId) where T : IPlayer
         {
 			TryGet(userId, out T player);
             return player;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their user id.
-        /// </summary>
-        /// <returns>Whether or not a player was found.</returns>
-        public static bool TryGet<T>(string userId, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their user id.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(string userId, out Player player) => TryGet<Player>(userId, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their user id.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(string userId, out T player) where T : IPlayer
         {
             if (string.IsNullOrEmpty(userId))
             {
@@ -309,24 +386,35 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
         }
-        #endregion
+		#endregion
 
-        #region Get player from network id.
+		#region Get player from network id.
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their network id.
-        /// </summary>
-        public static T Get<T>(uint networkId) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their network id.
+		/// </summary>
+		public static Player Get(uint networkId) => Get<Player>(networkId);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their network id.
+		/// </summary>
+		public static T Get<T>(uint networkId) where T : IPlayer
         {
 			TryGet(networkId, out T player);
             return player;
         }
 
-        /// <summary>
-        /// Gets the <see cref="Player"/> by their network id.
-        /// </summary>
-        /// <returns>Whether or not a player was found.</returns>
-        public static bool TryGet<T>(uint networkId, out T player) where T : IPlayer
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their network id.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(uint networkId, out Player player) => TryGet<Player>(networkId, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> by their network id.
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(uint networkId, out T player) where T : IPlayer
         {
             if (!ReferenceHub.TryGetHubNetID(networkId, out ReferenceHub hub))
 			{
