@@ -24,7 +24,7 @@ namespace PluginAPI.Core
 	/// <summary>
 	/// Represents a player connected to server.
 	/// </summary>
-	public class Player : IPlayer
+	public class Player : IPlayer, IGameComponent
     {
         #region Static Internal Variables
         internal static Dictionary<int, IGameComponent> PlayersIds = new Dictionary<int, IGameComponent>();
