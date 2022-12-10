@@ -39,7 +39,7 @@ namespace PluginAPI.Core
 		public static float DetonationTime
 		{
 			get => AlphaWarheadController.TimeUntilDetonation;
-			set => Server.Instance.GetComponent<AlphaWarheadController>().ForceTime(value);
+			set => AlphaWarheadController.Singleton.ForceTime(value);
 		}
 
 		#region Detonation
@@ -50,8 +50,8 @@ namespace PluginAPI.Core
 		/// <param name="suppressSubtitles">Determines whether subtitles should be suppressed.</param>
 		public static void Start(bool isAutomatic = true, bool suppressSubtitles = false)
 		{
-			Server.Instance.GetComponent<AlphaWarheadController>().InstantPrepare();
-			Server.Instance.GetComponent<AlphaWarheadController>().StartDetonation(isAutomatic, suppressSubtitles);
+			AlphaWarheadController.Singleton.InstantPrepare();
+			AlphaWarheadController.Singleton.StartDetonation(isAutomatic, suppressSubtitles);
 		}
 
 		/// <summary>
