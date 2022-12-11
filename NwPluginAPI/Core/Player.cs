@@ -889,15 +889,6 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Kills the player with specified damage handler base.
-		/// </summary>
-		/// <param name="dhb">The damage handler base for the kill</param>
-		public void Kill(DamageHandlerBase dhb)
-		{
-			ReferenceHub.playerStats.KillPlayer(dhb);
-		}
-
-		/// <summary>
 		/// Kills the player with specified reason and CASSIE announcement.
 		/// </summary>
 		/// <param name="reason">The reason for the kill</param>
