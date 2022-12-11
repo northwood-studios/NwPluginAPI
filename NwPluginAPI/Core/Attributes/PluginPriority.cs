@@ -9,13 +9,22 @@
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 	public class PluginPriority : Attribute
 	{
-		public LoadPriority Priority { get; }
+		public byte Priority { get; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginPriority"/> class.
 		/// </summary>
 		/// <param name="priority">The <see cref="LoadPriority"/>.</param>
 		public PluginPriority(LoadPriority priority)
+		{
+			Priority = (byte)priority;
+		}
+		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="PluginPriority"/> class.
+		/// </summary>
+		/// <param name="priority">The <see cref="LoadPriority"/>.</param>
+		public PluginPriority(byte priority)
 		{
 			Priority = priority;
 		}
