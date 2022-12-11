@@ -879,17 +879,36 @@ namespace PluginAPI.Core
 		/// <param name="delay">The delay when client will reconnect to server.</param>
 		/// <param name="isFastRestart">Whether or not fast restart is enabled.</param>
 		public void Reconnect(float delay = 3f, bool isFastRestart = false) => Connection.Send(new RoundRestartMessage(isFastRestart ? RoundRestartType.FastRestart : RoundRestartType.FullRestart, delay, 0, true, false));
-
+		
 		/// <summary>
 		/// Kills the player.
 		/// </summary>
 		public void Kill()
 		{
-			ReferenceHub.playerStats.KillPlayer(new UniversalDamageHandler(StandardDamageHandler.KillValue, DeathTranslations.Unknown));
+			ReferenceHub.playerStats.DealDamage(new UniversalDamageHandler(StandardDamageHandler.KillValue, DeathTranslations.Unknown));
 		}
 
-        /// <inheritdoc/>
-        public virtual void OnStart() { }
+		/// <summary>
+		/// Kills the player with specified damage handler base.
+		/// </summary>
+		/// <param name="dhb">The damage handler base for the kill</param>
+		public void Kill(DamageHandlerBase dhb)
+		{
+			ReferenceHub.playerStats.DealDamage(dhb);
+		}
+
+		/// <summary>
+		/// Kills the player with specified reason and CASSIE announcement.
+		/// </summary>
+		/// <param name="reason">The reason for the kill</param>
+		/// <param name="cassieAnnouncement">The cassie announcement to make upon death.</param>
+		public void Kill(string reason, string cassieAnnouncement = "")
+		{
+			ReferenceHub.playerStats.DealDamage(new CustomReasonDamageHandler(reason, -1f, cassieAnnouncement));
+		}
+
+		/// <inheritdoc/>
+		public virtual void OnStart() { }
 
         /// <inheritdoc/>
         public virtual void OnDestroy() { }
