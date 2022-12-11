@@ -879,7 +879,7 @@ namespace PluginAPI.Core
 		/// <param name="delay">The delay when client will reconnect to server.</param>
 		/// <param name="isFastRestart">Whether or not fast restart is enabled.</param>
 		public void Reconnect(float delay = 3f, bool isFastRestart = false) => Connection.Send(new RoundRestartMessage(isFastRestart ? RoundRestartType.FastRestart : RoundRestartType.FullRestart, delay, 0, true, false));
-		
+
 		/// <summary>
 		/// Kills the player.
 		/// </summary>
@@ -894,7 +894,7 @@ namespace PluginAPI.Core
 		/// <param name="dhb">The damage handler base for the kill</param>
 		public void Kill(DamageHandlerBase dhb)
 		{
-			ReferenceHub.playerStats.DealDamage(dhb);
+			ReferenceHub.playerStats.KillPlayer(dhb);
 		}
 
 		/// <summary>
