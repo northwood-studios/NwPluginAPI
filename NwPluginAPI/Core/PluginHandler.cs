@@ -52,7 +52,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the loading priority.
 		/// </summary>
-		public LoadPriority LoadPriority { get; private set; } = LoadPriority.Highest;
+		public byte LoadPriority { get; } = 128;
 
 		/// <summary>
 		/// Gets the name of the plugin.
