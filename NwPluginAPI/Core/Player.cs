@@ -885,7 +885,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="reason">The reason for the kill</param>
 		/// <param name="cassieAnnouncement">The cassie announcement to make upon death.</param>
-		public void Kill(string reason, string cassieAnnouncement = "")
+		public void Kill()
 		{
 			ReferenceHub.playerStats.KillPlayer(new UniversalDamageHandler(StandardDamageHandler.KillValue, DeathTranslations.Unknown));
 		}
