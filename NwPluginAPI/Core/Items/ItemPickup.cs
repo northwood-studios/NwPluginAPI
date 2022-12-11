@@ -85,11 +85,10 @@ namespace PluginAPI.Core.Items
 			return newItem;
 		}
 
-		internal static bool Remove(ItemPickupBase item)
+		public static bool Remove(ItemPickupBase item)
 		{
 			if (!CachedItems.TryGetValue(item.Info.Serial, out ItemPickup it)) return false;
 
-			Debug.Log($"Remove ITEM PICKUP " + it.Type);
 			return CachedItems.Remove(item.Info.Serial);
 		}
 
@@ -131,10 +130,9 @@ namespace PluginAPI.Core.Items
 			OriginalObject.DestroySelf();
 		}
 
-		internal ItemPickup(ItemPickupBase item)
+		public ItemPickup(ItemPickupBase item)
 		{
 			OriginalObject = item;
-			Debug.Log($"Create new PICKUP " + Type);
 		}
 	}
 }

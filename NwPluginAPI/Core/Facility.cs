@@ -27,7 +27,7 @@ namespace PluginAPI.Core
 			{ typeof(UnknownZone), MapGeneration.FacilityZone.Other },
 		};
 
-		internal static FacilityRoom GetRoom(RoomIdentifier roomIdentity)
+		public static FacilityRoom GetRoom(RoomIdentifier roomIdentity)
 		{
 			if (roomIdentity == null) return null;
 
@@ -99,7 +99,7 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-		internal static void RegisterDoors(FacilityRoom room, DoorVariant[] doors)
+		public static void RegisterDoors(FacilityRoom room, DoorVariant[] doors)
 		{
 			foreach (var door in doors)
 				RegisterDoor(room, door);
@@ -121,7 +121,7 @@ namespace PluginAPI.Core
 			}
 		}
 
-		internal static void RegisterDoor(DoorSpawnpoint spawnpoint, DoorVariant door)
+		public static void RegisterDoor(DoorSpawnpoint spawnpoint, DoorVariant door)
 		{
 			var roomIdentity = FindRoomIdentifier(spawnpoint.transform);
 			if (roomIdentity == null) return;
@@ -141,7 +141,7 @@ namespace PluginAPI.Core
 			return null;
 		}
 
-		internal static void Reset()
+		public static void Reset()
 		{
 			Zones.Clear();
 		}

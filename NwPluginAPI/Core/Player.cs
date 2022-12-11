@@ -20,6 +20,9 @@ namespace PluginAPI.Core
 	using InventorySystem.Disarming;
 	using static InventorySystem.Disarming.DisarmedPlayers;
 	using Utils.Networking;
+	using Mirror.LiteNetLib4Mirror;
+	using Footprinting;
+	using RemoteAdmin.Communication;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -28,14 +31,29 @@ namespace PluginAPI.Core
     {
         #region Static Internal Variables
         internal static Dictionary<int, IGameComponent> PlayersIds = new Dictionary<int, IGameComponent>();
-        internal static Dictionary<string, IGameComponent> PlayersUserIds = new Dictionary<string, IGameComponent>();
-        #endregion
+        public static Dictionary<string, IGameComponent> PlayersUserIds = new Dictionary<string, IGameComponent>();
+		#endregion
 
-        #region Static Parameters
-        /// <summary>
-        /// Gets the amount of online players.
-        /// </summary>
-        public static int Count => GetPlayers<Player>().Count;
+		#region Static Parameters
+
+		/// <summary>
+		/// Gets the amount of online players.
+		/// </summary>
+		public static int Count => ReferenceHub.AllHubs.Count(x => 
+			!x.isLocalPlayer &&
+			x.Mode == ClientInstanceMode.ReadyClient &&
+			!string.IsNullOrEmpty(x.characterClassManager.UserId));
+
+		/// <summary>
+		/// Gets the amount of not verified players
+		/// </summary>
+		public static int NonVerifiedCount => ConnectionsCount - Count;
+
+		/// <summary>
+		/// Gets the amount of connected players.
+		/// </summary>
+		public static int ConnectionsCount => LiteNetLib4MirrorCore.Host.ConnectedPeersCount;
+
 		#endregion
 
 		#region Static Methods
@@ -51,23 +69,20 @@ namespace PluginAPI.Core
 		public static List<T> GetPlayers<T>() where T : IPlayer
 		{
             if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
-            {
                 return (List<T>)Enumerable.Empty<T>();
-            }
 
             if (!FactoryManager.PlayerFactories.TryGetValue(plugin, out PlayerFactory factory))
-            {
                 return (List<T>)Enumerable.Empty<T>();
-            }
 
-			List<T> players= new List<T>();
 			foreach (var hub in ReferenceHub.AllHubs)
 			{
 				if (hub.isServer) continue;
-				players.Add((T)factory.GetOrAdd(hub));
+				factory.AddIfNotExists(hub);
 			}
 
-			return players;
+			return factory.Entities.Values
+				.Cast<T>()
+				.ToList();
         }
 
 		/// <summary>
@@ -765,7 +780,7 @@ namespace PluginAPI.Core
 		{
 			PlayerSharedStorage.DestroyStorage(this);
 			PlayersIds.Remove(PlayerId);
-			if (UserId != null)
+			if (!string.IsNullOrEmpty(UserId))
 				PlayersUserIds.Remove(UserId);
 		}
 		#endregion
@@ -968,8 +983,46 @@ namespace PluginAPI.Core
 		/// <param name="isFastRestart">Whether or not fast restart is enabled.</param>
 		public void Reconnect(float delay = 3f, bool isFastRestart = false) => Connection.Send(new RoundRestartMessage(isFastRestart ? RoundRestartType.FastRestart : RoundRestartType.FullRestart, delay, 0, true, false));
 
-        /// <inheritdoc/>
-        public virtual void OnStart() { }
+		/// <summary>
+		/// Kills the player.
+		/// </summary>
+		public void Kill() => Damage(new UniversalDamageHandler(StandardDamageHandler.KillValue, DeathTranslations.Unknown));
+
+		/// <summary>
+		/// Kills the player.
+		/// </summary>
+		/// <param name="reason">The reason for the kill</param>
+		/// <param name="cassieAnnouncement">The cassie announcement to make upon death.</param>
+		public void Kill(string reason, string cassieAnnouncement = "") => Damage(new CustomReasonDamageHandler(reason, StandardDamageHandler.KillValue, cassieAnnouncement));
+
+		/// <summary>
+		/// Damages player with custom reason.
+		/// </summary>
+		/// <param name="amount">The amount of damage.</param>
+		/// <param name="reason">The reason of damage.</param>
+		/// <param name="cassieAnnouncement">The cassie announcement send after death.</param>
+		/// <returns>Whether or not damaging was successful..</returns>
+		public bool Damage(float amount, string reason, string cassieAnnouncement = "") => Damage(new CustomReasonDamageHandler(reason, amount, cassieAnnouncement));
+
+		/// <summary>
+		/// Damages player with explosion force.
+		/// </summary>
+		/// <param name="amount">The amount of damage.</param>
+		/// <param name="attacker">The player which attacked</param>
+		/// <param name="force">The force of explosion.</param>
+		/// <param name="armorPenetration">The amount of armor penetration.</param>
+		/// <returns>Whether or not damaging was successful.</returns>
+		public bool Damage(float amount, Player attacker, Vector3 force = default, int armorPenetration = 0) => Damage(new ExplosionDamageHandler(new Footprint(attacker.ReferenceHub), force, amount, armorPenetration));
+
+		/// <summary>
+		/// Damages player.
+		/// </summary>
+		/// <param name="damageHandlerBase">The damage handler base.</param>
+		/// <returns>Whether or not damaging was successful.</returns>
+		public bool Damage(DamageHandlerBase damageHandlerBase) => ReferenceHub.playerStats.DealDamage(damageHandlerBase);
+
+		/// <inheritdoc/>
+		public virtual void OnStart() { }
 
         /// <inheritdoc/>
         public virtual void OnDestroy() { }

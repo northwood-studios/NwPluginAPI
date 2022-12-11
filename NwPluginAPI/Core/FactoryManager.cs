@@ -18,7 +18,7 @@
 
         internal static readonly Dictionary<Type, Type> FactoryTypes = new Dictionary<Type, Type>()
         {
-            { typeof(PlayerFactory), typeof(EventManager) },
+            { typeof(Player), typeof(EventManager) },
         };
 
 		/// <summary>

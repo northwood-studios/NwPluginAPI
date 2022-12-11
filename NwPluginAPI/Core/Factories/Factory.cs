@@ -32,13 +32,23 @@
         public T GetOrAdd(IGameComponent component)
         {
             if (Entities.TryGetValue(component, out T entity))
-            {
                 return entity;
-            }
 
             var ent = Create(component);
             Entities.Add(component, ent);
             return ent;
         }
+
+		/// <summary>
+		/// Adds missing entity if not exists.
+		/// </summary>
+		/// <param name="component">The game component.</param>
+		public void AddIfNotExists(IGameComponent component)
+		{
+			if (Entities.ContainsKey(component)) return;
+
+			var ent = Create(component);
+			Entities.Add(component, ent);
+		}
     }
 }

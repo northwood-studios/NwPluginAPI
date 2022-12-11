@@ -42,6 +42,20 @@
 			Log.Info(handler.PluginFilePath);
 			Log.Info(handler.PluginDirectoryPath);
 
+			List<string> modules = new List<string>()
+			{
+				"something1",
+			};
+
+			foreach(var module in modules)
+			{
+				if (!PluginConfig.DictionaryValue.ContainsKey(module))
+				{
+					PluginConfig.DictionaryValue.Add(module, "yes");
+					handler.SaveConfig(this, nameof(PluginConfig));
+				}
+			}
+
 			PluginConfig.StringValue = "test Value";
 			handler.SaveConfig(this, nameof(PluginConfig));
 

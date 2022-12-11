@@ -3,6 +3,7 @@
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
 	using PluginAPI.Core.Interfaces;
+	using PluginAPI.Enums;
 	using PluginAPI.Events;
 
 	public class MyPlayer : Player
@@ -16,10 +17,12 @@
 
         public string Test => "TestValue";
 
-		[PluginEvent(PluginAPI.Enums.ServerEventType.ConsoleCommand)]
-		public void OnConsole(string cmd, string[] args)
+		[PluginEvent(ServerEventType.PlayerRemoteAdminCommand)]
+		public void OnRaCommand(MyPlayer plr, string cmd, string[] args)
 		{
-			Log.Info($"{cmd}");
+			if (plr != this) return;
+
+			Log.Info($" [MyPlayer] Player {plr.Nickname} executed command {cmd}");
 		}
 
 		public override void OnDestroy()

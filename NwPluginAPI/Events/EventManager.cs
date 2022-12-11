@@ -23,6 +23,12 @@ namespace PluginAPI.Events
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 	using Respawning;
 	using PluginAPI.Loader;
+	using InventorySystem.Items.ThrowableProjectiles;
+	using System.Numerics;
+	using PlayerRoles.PlayableScps.Scp173;
+	using PlayerRoles.PlayableScps.Scp079;
+	using MapGeneration;
+	using Interactables.Interobjects.DoorUtils;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -128,7 +134,10 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerInteractElevator, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.PlayerInteractLocker, new Event(
-				new EventParameter(typeof(IPlayer), "player")) },
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Locker), "locker"),
+				new EventParameter(typeof(byte), "colliderId"),
+				new EventParameter(typeof(bool), "canOpen")) },
 			{ ServerEventType.PlayerInteractScp330, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.PlayerInteractShootingTarget, new Event(
@@ -252,6 +261,90 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(SpawnableTeamType), "team")) },
 			{ ServerEventType.TeamRespawnSelected, new Event(
 				new EventParameter(typeof(SpawnableTeamType), "team")) },
+			{ ServerEventType.Scp106Stalking, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "activated")) },
+			{ ServerEventType.PlayerEnterPocketDimension, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.PlayerExitPocketDimension, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "isSuccessful")) },
+			{ ServerEventType.PlayerThrowProjectile, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(ThrowableItem), "item"),
+				new EventParameter(typeof(float), "forceAmount"),
+				new EventParameter(typeof(float), "upwardsFactor"),
+				new EventParameter(typeof(Vector3), "torque"),
+				new EventParameter(typeof(Vector3), "velocity")) },
+			{ ServerEventType.Scp914Activate, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp914KnobChange, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp914UpgradeInventory, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(ItemBase), "item")) },
+			{ ServerEventType.Scp914UpgradePickup, new Event(
+				new EventParameter(typeof(ItemPickupBase), "item")) },
+			{ ServerEventType.Scp173PlaySound, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Scp173AudioPlayer.Scp173SoundId), "soundId")) },
+			{ ServerEventType.Scp173BreakneckSpeeds, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "activate")) },
+			{ ServerEventType.Scp173NewObserver, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target")) },
+			{ ServerEventType.Scp173SnapPlayer, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target")) },
+			{ ServerEventType.Scp939CreateAmnesticCloud, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp939Lunge, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp939Attack, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IDestructible), "target")) },
+			{ ServerEventType.Scp079GainExperience, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(int), "amount"),
+				new EventParameter(typeof(Scp079HudTranslation), "reason")) },
+			{ ServerEventType.Scp079LevelUpTier, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(int), "tier")) },
+			{ ServerEventType.Scp079UseTesla, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(TeslaGate), "tesla")) },
+			{ ServerEventType.Scp079LockdownRoom, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(RoomIdentifier), "room")) },
+			{ ServerEventType.Scp079CancelRoomLockdown, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(RoomIdentifier), "room")) },
+			{ ServerEventType.Scp079LockDoor, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(DoorVariant), "door")) },
+			{ ServerEventType.Scp079UnlockDoor, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(DoorVariant), "door")) },
+			{ ServerEventType.Scp079BlackoutZone, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(FacilityZone), "zone")) },
+			{ ServerEventType.Scp079BlackoutRoom, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(RoomIdentifier), "room")) },
+			{ ServerEventType.Scp049ResurrectBody, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target"),
+				new EventParameter(typeof(Ragdoll), "body")) },
+			{ ServerEventType.Scp049StartResurrectingBody, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target"),
+				new EventParameter(typeof(Ragdoll), "body"),
+				new EventParameter(typeof(bool), "canResurrct")) },
+			{ ServerEventType.PlayerInteractDoor, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(DoorVariant), "door"),
+				new EventParameter(typeof(bool), "canOpen")) },
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
@@ -483,17 +576,6 @@ namespace PluginAPI.Events
 			{
 				Log.Error($"Event &6{type}&r is not registered in manager! ( create issue on github )");
 				return default;
-			}
-
-			switch (type)
-			{
-				case ServerEventType.PlayerJoined:
-					if (!(args[0] is IGameComponent component)) break;
-
-					if (!Player.TryGet(component, out Player plr)) break;
-
-					Player.PlayersUserIds.Add(plr.UserId, component);
-					break;
 			}
 
 			bool isBool = typeof(T) == typeof(bool);

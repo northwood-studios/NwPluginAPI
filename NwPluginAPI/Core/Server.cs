@@ -12,19 +12,29 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class Server : Player
 	{
+		private static bool _isInitialized;
+
+		/// <summary>
+		/// Initializes server instance.
+		/// </summary>
+		public static void Init()
+		{
+			if (_isInitialized) return;
+
+			_isInitialized = true;
+			Instance = new Server(ReferenceHub.HostHub);
+		}
+
 		/// <summary>
 		/// The <see cref="Server"/> instance.
 		/// </summary>
-		public static Server Instance { get; private set; }
+		public static Server Instance { get; internal set; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Server"/> class.
 		/// </summary>
 		/// <param name="hub">The hub of server.</param>
-		public Server(IGameComponent hub) : base(hub)
-		{
-			Instance = this;
-		}
+		public Server(IGameComponent hub) : base(hub) { }
 
 		/// <summary>
 		/// Gets the Ip address of the server.

@@ -156,7 +156,17 @@ namespace PluginAPI.Core
 			}
 			else
 			{
-				var config = YamlParser.Deserializer.Deserialize(File.ReadAllText(targetPath), field.FieldType);
+				object config;
+				try
+				{
+					config = YamlParser.Deserializer.Deserialize(File.ReadAllText(targetPath), field.FieldType);
+				}
+				catch(Exception ex)
+				{
+					Log.Error($"Failed deserializing config file for &2{PluginName}&r,\n{ex}");
+					return;
+				}
+
 				field.SetValue(plugin, config);
 				File.WriteAllText(targetPath, YamlParser.Serializer.Serialize(config));
 
