@@ -8,9 +8,14 @@ items:
   - PluginAPI.Events.EventManager.Events
   - PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
   - PluginAPI.Events.EventManager.ExecuteEvent``1(PluginAPI.Enums.ServerEventType,System.Object[])
+  - PluginAPI.Events.EventManager.RegisterAllEvents(System.Object)
   - PluginAPI.Events.EventManager.RegisterEvents(System.Object)
   - PluginAPI.Events.EventManager.RegisterEvents(System.Object,System.Object)
   - PluginAPI.Events.EventManager.RegisterEvents``1(System.Object)
+  - PluginAPI.Events.EventManager.UnregisterAllEvents(System.Object)
+  - PluginAPI.Events.EventManager.UnregisterEvents(System.Object)
+  - PluginAPI.Events.EventManager.UnregisterEvents(System.Object,System.Object)
+  - PluginAPI.Events.EventManager.UnregisterEvents``1(System.Object)
   langs:
   - csharp
   - vb
@@ -21,11 +26,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EventManager
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 28
+    startLine: 35
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -65,11 +70,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Events
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 38
+    startLine: 45
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -88,6 +93,82 @@ items:
   - Public
   - Shared
   - ReadOnly
+- uid: PluginAPI.Events.EventManager.RegisterAllEvents(System.Object)
+  commentId: M:PluginAPI.Events.EventManager.RegisterAllEvents(System.Object)
+  id: RegisterAllEvents(System.Object)
+  parent: PluginAPI.Events.EventManager
+  langs:
+  - csharp
+  - vb
+  name: RegisterAllEvents(Object)
+  nameWithType: EventManager.RegisterAllEvents(Object)
+  fullName: PluginAPI.Events.EventManager.RegisterAllEvents(System.Object)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventManager.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RegisterAllEvents
+    path: ../NwPluginAPI/Events/EventManager.cs
+    startLine: 374
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRegisters all events in plugin.\n"
+  example: []
+  syntax:
+    content: public static void RegisterAllEvents(object plugin)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The object of plugin.
+    content.vb: Public Shared Sub RegisterAllEvents(plugin As Object)
+  overload: PluginAPI.Events.EventManager.RegisterAllEvents*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.EventManager.UnregisterAllEvents(System.Object)
+  commentId: M:PluginAPI.Events.EventManager.UnregisterAllEvents(System.Object)
+  id: UnregisterAllEvents(System.Object)
+  parent: PluginAPI.Events.EventManager
+  langs:
+  - csharp
+  - vb
+  name: UnregisterAllEvents(Object)
+  nameWithType: EventManager.UnregisterAllEvents(Object)
+  fullName: PluginAPI.Events.EventManager.UnregisterAllEvents(System.Object)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventManager.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: UnregisterAllEvents
+    path: ../NwPluginAPI/Events/EventManager.cs
+    startLine: 413
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nRegisters all events in plugin.\n"
+  example: []
+  syntax:
+    content: public static void UnregisterAllEvents(object plugin)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The object of plugin.
+    content.vb: Public Shared Sub UnregisterAllEvents(plugin As Object)
+  overload: PluginAPI.Events.EventManager.UnregisterAllEvents*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Events.EventManager.RegisterEvents(System.Object)
   commentId: M:PluginAPI.Events.EventManager.RegisterEvents(System.Object)
   id: RegisterEvents(System.Object)
@@ -102,11 +183,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 280
+    startLine: 432
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -120,6 +201,44 @@ items:
       description: The object of plugin.
     content.vb: Public Shared Sub RegisterEvents(plugin As Object)
   overload: PluginAPI.Events.EventManager.RegisterEvents*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.EventManager.UnregisterEvents(System.Object)
+  commentId: M:PluginAPI.Events.EventManager.UnregisterEvents(System.Object)
+  id: UnregisterEvents(System.Object)
+  parent: PluginAPI.Events.EventManager
+  langs:
+  - csharp
+  - vb
+  name: UnregisterEvents(Object)
+  nameWithType: EventManager.UnregisterEvents(Object)
+  fullName: PluginAPI.Events.EventManager.UnregisterEvents(System.Object)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventManager.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: UnregisterEvents
+    path: ../NwPluginAPI/Events/EventManager.cs
+    startLine: 442
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nUnregisters events in plugin.\n"
+  example: []
+  syntax:
+    content: public static void UnregisterEvents(object plugin)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The object of plugin.
+    content.vb: Public Shared Sub UnregisterEvents(plugin As Object)
+  overload: PluginAPI.Events.EventManager.UnregisterEvents*
   modifiers.csharp:
   - public
   - static
@@ -140,11 +259,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 290
+    startLine: 452
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -171,6 +290,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Events.EventManager.RegisterEvents(Of T)(System.Object)
   name.vb: RegisterEvents(Of T)(Object)
+- uid: PluginAPI.Events.EventManager.UnregisterEvents``1(System.Object)
+  commentId: M:PluginAPI.Events.EventManager.UnregisterEvents``1(System.Object)
+  id: UnregisterEvents``1(System.Object)
+  parent: PluginAPI.Events.EventManager
+  langs:
+  - csharp
+  - vb
+  name: UnregisterEvents<T>(Object)
+  nameWithType: EventManager.UnregisterEvents<T>(Object)
+  fullName: PluginAPI.Events.EventManager.UnregisterEvents<T>(System.Object)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventManager.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: UnregisterEvents
+    path: ../NwPluginAPI/Events/EventManager.cs
+    startLine: 467
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nUnregisters events in type of plugin.\n"
+  example: []
+  syntax:
+    content: >-
+      public static void UnregisterEvents<T>(object plugin)
+          where T : class
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The object of plugin.
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub UnregisterEvents(Of T As Class)(plugin As Object)
+  overload: PluginAPI.Events.EventManager.UnregisterEvents*
+  nameWithType.vb: EventManager.UnregisterEvents(Of T)(Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Events.EventManager.UnregisterEvents(Of T)(System.Object)
+  name.vb: UnregisterEvents(Of T)(Object)
 - uid: PluginAPI.Events.EventManager.RegisterEvents(System.Object,System.Object)
   commentId: M:PluginAPI.Events.EventManager.RegisterEvents(System.Object,System.Object)
   id: RegisterEvents(System.Object,System.Object)
@@ -185,11 +349,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 306
+    startLine: 479
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -212,6 +376,47 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: PluginAPI.Events.EventManager.UnregisterEvents(System.Object,System.Object)
+  commentId: M:PluginAPI.Events.EventManager.UnregisterEvents(System.Object,System.Object)
+  id: UnregisterEvents(System.Object,System.Object)
+  parent: PluginAPI.Events.EventManager
+  langs:
+  - csharp
+  - vb
+  name: UnregisterEvents(Object, Object)
+  nameWithType: EventManager.UnregisterEvents(Object, Object)
+  fullName: PluginAPI.Events.EventManager.UnregisterEvents(System.Object, System.Object)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventManager.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: UnregisterEvents
+    path: ../NwPluginAPI/Events/EventManager.cs
+    startLine: 486
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nUnregisters events in type of plugin.\n"
+  example: []
+  syntax:
+    content: public static void UnregisterEvents(object plugin, object eventHandler)
+    parameters:
+    - id: plugin
+      type: System.Object
+      description: The object of plugin.
+    - id: eventHandler
+      type: System.Object
+      description: The event handler.
+    content.vb: Public Shared Sub UnregisterEvents(plugin As Object, eventHandler As Object)
+  overload: PluginAPI.Events.EventManager.UnregisterEvents*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
   commentId: M:PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
   id: ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
@@ -226,11 +431,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 359
+    startLine: 563
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -273,11 +478,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 368
+    startLine: 572
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -721,11 +926,26 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: PluginAPI.Events.EventManager.RegisterAllEvents*
+  commentId: Overload:PluginAPI.Events.EventManager.RegisterAllEvents
+  name: RegisterAllEvents
+  nameWithType: EventManager.RegisterAllEvents
+  fullName: PluginAPI.Events.EventManager.RegisterAllEvents
+- uid: PluginAPI.Events.EventManager.UnregisterAllEvents*
+  commentId: Overload:PluginAPI.Events.EventManager.UnregisterAllEvents
+  name: UnregisterAllEvents
+  nameWithType: EventManager.UnregisterAllEvents
+  fullName: PluginAPI.Events.EventManager.UnregisterAllEvents
 - uid: PluginAPI.Events.EventManager.RegisterEvents*
   commentId: Overload:PluginAPI.Events.EventManager.RegisterEvents
   name: RegisterEvents
   nameWithType: EventManager.RegisterEvents
   fullName: PluginAPI.Events.EventManager.RegisterEvents
+- uid: PluginAPI.Events.EventManager.UnregisterEvents*
+  commentId: Overload:PluginAPI.Events.EventManager.UnregisterEvents
+  name: UnregisterEvents
+  nameWithType: EventManager.UnregisterEvents
+  fullName: PluginAPI.Events.EventManager.UnregisterEvents
 - uid: PluginAPI.Events.EventManager.ExecuteEvent*
   commentId: Overload:PluginAPI.Events.EventManager.ExecuteEvent
   name: ExecuteEvent

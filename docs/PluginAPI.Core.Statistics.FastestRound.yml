@@ -5,6 +5,7 @@ items:
   id: Statistics.FastestRound
   parent: PluginAPI.Core
   children:
+  - PluginAPI.Core.Statistics.FastestRound.#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)
   - PluginAPI.Core.Statistics.FastestRound.Duration
   - PluginAPI.Core.Statistics.FastestRound.LeadingTeam
   - PluginAPI.Core.Statistics.FastestRound.Timestamp
@@ -18,11 +19,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FastestRound
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -47,6 +48,43 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: PluginAPI.Core.Statistics.FastestRound.#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)
+  commentId: M:PluginAPI.Core.Statistics.FastestRound.#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)
+  id: '#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)'
+  parent: PluginAPI.Core.Statistics.FastestRound
+  langs:
+  - csharp
+  - vb
+  name: FastestRound(RoundSummary.LeadingTeam, TimeSpan, DateTime)
+  nameWithType: Statistics.FastestRound.FastestRound(RoundSummary.LeadingTeam, TimeSpan, DateTime)
+  fullName: PluginAPI.Core.Statistics.FastestRound.FastestRound(RoundSummary.LeadingTeam, System.TimeSpan, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 48
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public FastestRound(RoundSummary.LeadingTeam leadingTeam, TimeSpan duration, DateTime timestamp)
+    parameters:
+    - id: leadingTeam
+      type: RoundSummary.LeadingTeam
+    - id: duration
+      type: System.TimeSpan
+    - id: timestamp
+      type: System.DateTime
+    content.vb: Public Sub New(leadingTeam As RoundSummary.LeadingTeam, duration As TimeSpan, timestamp As Date)
+  overload: PluginAPI.Core.Statistics.FastestRound.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: PluginAPI.Core.Statistics.FastestRound.LeadingTeam
   commentId: P:PluginAPI.Core.Statistics.FastestRound.LeadingTeam
   id: LeadingTeam
@@ -61,11 +99,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeadingTeam
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 47
+    startLine: 55
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -96,11 +134,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 48
+    startLine: 56
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -131,11 +169,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Timestamp
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 49
+    startLine: 57
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -450,22 +488,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: PluginAPI.Core.Statistics.FastestRound.LeadingTeam*
-  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.LeadingTeam
-  name: LeadingTeam
-  nameWithType: Statistics.FastestRound.LeadingTeam
-  fullName: PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+- uid: PluginAPI.Core.Statistics.FastestRound.#ctor*
+  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.#ctor
+  name: FastestRound
+  nameWithType: Statistics.FastestRound.FastestRound
+  fullName: PluginAPI.Core.Statistics.FastestRound.FastestRound
 - uid: RoundSummary.LeadingTeam
   commentId: T:RoundSummary.LeadingTeam
   isExternal: true
   name: RoundSummary.LeadingTeam
   nameWithType: RoundSummary.LeadingTeam
   fullName: RoundSummary.LeadingTeam
-- uid: PluginAPI.Core.Statistics.FastestRound.Duration*
-  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.Duration
-  name: Duration
-  nameWithType: Statistics.FastestRound.Duration
-  fullName: PluginAPI.Core.Statistics.FastestRound.Duration
 - uid: System.TimeSpan
   commentId: T:System.TimeSpan
   parent: System
@@ -473,11 +506,6 @@ references:
   name: TimeSpan
   nameWithType: TimeSpan
   fullName: System.TimeSpan
-- uid: PluginAPI.Core.Statistics.FastestRound.Timestamp*
-  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.Timestamp
-  name: Timestamp
-  nameWithType: Statistics.FastestRound.Timestamp
-  fullName: PluginAPI.Core.Statistics.FastestRound.Timestamp
 - uid: System.DateTime
   commentId: T:System.DateTime
   parent: System
@@ -485,3 +513,18 @@ references:
   name: DateTime
   nameWithType: DateTime
   fullName: System.DateTime
+- uid: PluginAPI.Core.Statistics.FastestRound.LeadingTeam*
+  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+  name: LeadingTeam
+  nameWithType: Statistics.FastestRound.LeadingTeam
+  fullName: PluginAPI.Core.Statistics.FastestRound.LeadingTeam
+- uid: PluginAPI.Core.Statistics.FastestRound.Duration*
+  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.Duration
+  name: Duration
+  nameWithType: Statistics.FastestRound.Duration
+  fullName: PluginAPI.Core.Statistics.FastestRound.Duration
+- uid: PluginAPI.Core.Statistics.FastestRound.Timestamp*
+  commentId: Overload:PluginAPI.Core.Statistics.FastestRound.Timestamp
+  name: Timestamp
+  nameWithType: Statistics.FastestRound.Timestamp
+  fullName: PluginAPI.Core.Statistics.FastestRound.Timestamp

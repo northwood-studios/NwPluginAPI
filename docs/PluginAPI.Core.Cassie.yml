@@ -25,8 +25,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Cassie
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 12
@@ -69,8 +69,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsSpeaking
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 18
@@ -108,8 +108,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: VoiceLines
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 23
@@ -147,8 +147,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Message
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 36
@@ -194,8 +194,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GlitchyMessage
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 44
@@ -238,8 +238,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Clear
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 50
@@ -272,8 +272,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CalculateDuration
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 58
@@ -315,8 +315,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConvertTeam
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 65
@@ -358,8 +358,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConvertNumber
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 71
@@ -398,8 +398,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsValid
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 77
@@ -438,8 +438,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScpTermination
     path: ../NwPluginAPI/Core/Cassie.cs
     startLine: 85

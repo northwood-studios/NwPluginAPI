@@ -22,8 +22,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Round
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 6
@@ -64,8 +64,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsRoundStarted
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 11
@@ -103,8 +103,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 16
@@ -142,8 +142,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLobbyLocked
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 25
@@ -181,8 +181,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 37
@@ -225,8 +225,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RestartSilently
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 51
@@ -259,8 +259,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 56
@@ -293,8 +293,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: End
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 62

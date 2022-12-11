@@ -26,8 +26,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IPlayer
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 7
@@ -61,8 +61,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsServer
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 12
@@ -96,8 +96,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReferenceHub
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 17
@@ -131,8 +131,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 22
@@ -166,8 +166,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TemporaryData
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 27
@@ -201,8 +201,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnStart
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 32
@@ -229,8 +229,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 37
@@ -257,8 +257,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnUpdate
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 42
@@ -285,8 +285,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnLateUpdate
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 47
@@ -313,8 +313,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnFixedUpdate
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 53
@@ -341,8 +341,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 58
@@ -381,8 +381,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 63

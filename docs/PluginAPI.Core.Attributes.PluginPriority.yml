@@ -1,41 +1,42 @@
 ### YamlMime:ManagedReference
 items:
-- uid: PluginAPI.Core.Attributes.PluginCommandAliases
-  commentId: T:PluginAPI.Core.Attributes.PluginCommandAliases
-  id: PluginCommandAliases
+- uid: PluginAPI.Core.Attributes.PluginPriority
+  commentId: T:PluginAPI.Core.Attributes.PluginPriority
+  id: PluginPriority
   parent: PluginAPI.Core.Attributes
   children:
-  - PluginAPI.Core.Attributes.PluginCommandAliases.#ctor(System.String[])
-  - PluginAPI.Core.Attributes.PluginCommandAliases.Aliases
+  - PluginAPI.Core.Attributes.PluginPriority.#ctor(PluginAPI.Enums.LoadPriority)
+  - PluginAPI.Core.Attributes.PluginPriority.#ctor(System.Byte)
+  - PluginAPI.Core.Attributes.PluginPriority.Priority
   langs:
   - csharp
   - vb
-  name: PluginCommandAliases
-  nameWithType: PluginCommandAliases
-  fullName: PluginAPI.Core.Attributes.PluginCommandAliases
+  name: PluginPriority
+  nameWithType: PluginPriority
+  fullName: PluginAPI.Core.Attributes.PluginPriority
   type: Class
   source:
     remote:
-      path: NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
+      path: NwPluginAPI/Core/Attributes/PluginPriority.cs
       branch: dev
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: PluginCommandAliases
-    path: ../NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
-    startLine: 7
+    id: PluginPriority
+    path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
+    startLine: 8
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Attributes
-  summary: "\nMarks aliases to existing commands.\n"
+  summary: "\nMarks a priority for plugin load.\n"
   example: []
   syntax:
     content: >-
       [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 
-      public class PluginCommandAliases : Attribute, _Attribute
+      public class PluginPriority : Attribute, _Attribute
     content.vb: >-
       <AttributeUsage(AttributeTargets.Method, AllowMultiple:=False)>
 
-      Public Class PluginCommandAliases
+      Public Class PluginPriority
           Inherits Attribute
           Implements _Attribute
   inheritance:
@@ -106,80 +107,113 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: PluginAPI.Core.Attributes.PluginCommandAliases.Aliases
-  commentId: P:PluginAPI.Core.Attributes.PluginCommandAliases.Aliases
-  id: Aliases
-  parent: PluginAPI.Core.Attributes.PluginCommandAliases
+- uid: PluginAPI.Core.Attributes.PluginPriority.Priority
+  commentId: P:PluginAPI.Core.Attributes.PluginPriority.Priority
+  id: Priority
+  parent: PluginAPI.Core.Attributes.PluginPriority
   langs:
   - csharp
   - vb
-  name: Aliases
-  nameWithType: PluginCommandAliases.Aliases
-  fullName: PluginAPI.Core.Attributes.PluginCommandAliases.Aliases
+  name: Priority
+  nameWithType: PluginPriority.Priority
+  fullName: PluginAPI.Core.Attributes.PluginPriority.Priority
   type: Property
   source:
     remote:
-      path: NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
+      path: NwPluginAPI/Core/Attributes/PluginPriority.cs
       branch: dev
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: Aliases
-    path: ../NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
-    startLine: 10
+    id: Priority
+    path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
+    startLine: 11
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Attributes
   syntax:
-    content: public string[] Aliases { get; set; }
+    content: public byte Priority { get; }
     parameters: []
     return:
-      type: System.String[]
-    content.vb: Public Property Aliases As String()
-  overload: PluginAPI.Core.Attributes.PluginCommandAliases.Aliases*
+      type: System.Byte
+    content.vb: Public ReadOnly Property Priority As Byte
+  overload: PluginAPI.Core.Attributes.PluginPriority.Priority*
   modifiers.csharp:
   - public
   - get
-  - set
   modifiers.vb:
   - Public
-- uid: PluginAPI.Core.Attributes.PluginCommandAliases.#ctor(System.String[])
-  commentId: M:PluginAPI.Core.Attributes.PluginCommandAliases.#ctor(System.String[])
-  id: '#ctor(System.String[])'
-  parent: PluginAPI.Core.Attributes.PluginCommandAliases
+  - ReadOnly
+- uid: PluginAPI.Core.Attributes.PluginPriority.#ctor(PluginAPI.Enums.LoadPriority)
+  commentId: M:PluginAPI.Core.Attributes.PluginPriority.#ctor(PluginAPI.Enums.LoadPriority)
+  id: '#ctor(PluginAPI.Enums.LoadPriority)'
+  parent: PluginAPI.Core.Attributes.PluginPriority
   langs:
   - csharp
   - vb
-  name: PluginCommandAliases(String[])
-  nameWithType: PluginCommandAliases.PluginCommandAliases(String[])
-  fullName: PluginAPI.Core.Attributes.PluginCommandAliases.PluginCommandAliases(System.String[])
+  name: PluginPriority(LoadPriority)
+  nameWithType: PluginPriority.PluginPriority(LoadPriority)
+  fullName: PluginAPI.Core.Attributes.PluginPriority.PluginPriority(PluginAPI.Enums.LoadPriority)
   type: Constructor
   source:
     remote:
-      path: NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
+      path: NwPluginAPI/Core/Attributes/PluginPriority.cs
       branch: dev
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
-    path: ../NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
-    startLine: 16
+    path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
+    startLine: 17
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Attributes
-  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Attributes.PluginCommandAliases\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Attributes.PluginPriority\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
-    content: public PluginCommandAliases(string[] aliases)
+    content: public PluginPriority(LoadPriority priority)
     parameters:
-    - id: aliases
-      type: System.String[]
-      description: The commands aliases.
-    content.vb: Public Sub New(aliases As String())
-  overload: PluginAPI.Core.Attributes.PluginCommandAliases.#ctor*
-  nameWithType.vb: PluginCommandAliases.PluginCommandAliases(String())
+    - id: priority
+      type: PluginAPI.Enums.LoadPriority
+      description: The <xref href="PluginAPI.Enums.LoadPriority" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(priority As LoadPriority)
+  overload: PluginAPI.Core.Attributes.PluginPriority.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: PluginAPI.Core.Attributes.PluginCommandAliases.PluginCommandAliases(System.String())
-  name.vb: PluginCommandAliases(String())
+- uid: PluginAPI.Core.Attributes.PluginPriority.#ctor(System.Byte)
+  commentId: M:PluginAPI.Core.Attributes.PluginPriority.#ctor(System.Byte)
+  id: '#ctor(System.Byte)'
+  parent: PluginAPI.Core.Attributes.PluginPriority
+  langs:
+  - csharp
+  - vb
+  name: PluginPriority(Byte)
+  nameWithType: PluginPriority.PluginPriority(Byte)
+  fullName: PluginAPI.Core.Attributes.PluginPriority.PluginPriority(System.Byte)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Attributes/PluginPriority.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
+    startLine: 26
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Attributes
+  summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.Attributes.PluginPriority\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public PluginPriority(byte priority)
+    parameters:
+    - id: priority
+      type: System.Byte
+      description: The <xref href="PluginAPI.Enums.LoadPriority" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(priority As Byte)
+  overload: PluginAPI.Core.Attributes.PluginPriority.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: PluginAPI.Core.Attributes
   commentId: N:PluginAPI.Core.Attributes
@@ -2909,44 +2943,36 @@ references:
   name: System.Runtime.InteropServices
   nameWithType: System.Runtime.InteropServices
   fullName: System.Runtime.InteropServices
-- uid: PluginAPI.Core.Attributes.PluginCommandAliases.Aliases*
-  commentId: Overload:PluginAPI.Core.Attributes.PluginCommandAliases.Aliases
-  name: Aliases
-  nameWithType: PluginCommandAliases.Aliases
-  fullName: PluginAPI.Core.Attributes.PluginCommandAliases.Aliases
-- uid: System.String[]
+- uid: PluginAPI.Core.Attributes.PluginPriority.Priority*
+  commentId: Overload:PluginAPI.Core.Attributes.PluginPriority.Priority
+  name: Priority
+  nameWithType: PluginPriority.Priority
+  fullName: PluginAPI.Core.Attributes.PluginPriority.Priority
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
   isExternal: true
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: PluginAPI.Core.Attributes.PluginCommandAliases
-  commentId: T:PluginAPI.Core.Attributes.PluginCommandAliases
-  name: PluginCommandAliases
-  nameWithType: PluginCommandAliases
-  fullName: PluginAPI.Core.Attributes.PluginCommandAliases
-- uid: PluginAPI.Core.Attributes.PluginCommandAliases.#ctor*
-  commentId: Overload:PluginAPI.Core.Attributes.PluginCommandAliases.#ctor
-  name: PluginCommandAliases
-  nameWithType: PluginCommandAliases.PluginCommandAliases
-  fullName: PluginAPI.Core.Attributes.PluginCommandAliases.PluginCommandAliases
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: PluginAPI.Core.Attributes.PluginPriority
+  commentId: T:PluginAPI.Core.Attributes.PluginPriority
+  name: PluginPriority
+  nameWithType: PluginPriority
+  fullName: PluginAPI.Core.Attributes.PluginPriority
+- uid: PluginAPI.Enums.LoadPriority
+  commentId: T:PluginAPI.Enums.LoadPriority
+  parent: PluginAPI.Enums
+  name: LoadPriority
+  nameWithType: LoadPriority
+  fullName: PluginAPI.Enums.LoadPriority
+- uid: PluginAPI.Core.Attributes.PluginPriority.#ctor*
+  commentId: Overload:PluginAPI.Core.Attributes.PluginPriority.#ctor
+  name: PluginPriority
+  nameWithType: PluginPriority.PluginPriority
+  fullName: PluginAPI.Core.Attributes.PluginPriority.PluginPriority
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums

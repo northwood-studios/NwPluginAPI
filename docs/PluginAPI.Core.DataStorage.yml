@@ -23,8 +23,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DataStorage
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 8
@@ -66,8 +66,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: StoredData
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 13
@@ -101,8 +101,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Clear
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 18
@@ -133,8 +133,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 27
@@ -183,8 +183,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 45
@@ -230,8 +230,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Add
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 60
@@ -280,8 +280,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Override
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 74
@@ -327,8 +327,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Contains
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 90
@@ -366,8 +366,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DataStorage.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Remove
     path: ../NwPluginAPI/Core/DataStorage.cs
     startLine: 97

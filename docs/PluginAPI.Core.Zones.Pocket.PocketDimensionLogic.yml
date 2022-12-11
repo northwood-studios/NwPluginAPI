@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PocketDimensionLogic
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 7
@@ -63,8 +63,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PocketDimension
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 12
@@ -98,8 +98,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnPlayerEnteredPortal
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 14
@@ -137,8 +137,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnPlayerEnteredPD
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 19
@@ -176,8 +176,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 24
@@ -208,8 +208,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 33

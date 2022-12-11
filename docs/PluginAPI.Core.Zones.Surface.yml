@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Surface/Surface.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Surface
     path: ../NwPluginAPI/Core/Zones/Surface/Surface.cs
     startLine: 7
@@ -71,8 +71,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Surface/Surface.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/Surface/Surface.cs
     startLine: 12
@@ -106,8 +106,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Surface/Surface.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Surface/Surface.cs
     startLine: 19

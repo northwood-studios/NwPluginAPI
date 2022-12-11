@@ -794,7 +794,7 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="Ragdoll"/> body, <see cref="bool"/> canResurrect. 
 		/// </remarks>
-		Scp049StartResurrectingBody = 97,
+		Scp049StartResurrectingBody = 98,
 
 		/// <summary>
 		/// Event executed when player tries to interact with door.

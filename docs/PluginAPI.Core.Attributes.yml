@@ -9,6 +9,7 @@ items:
   - PluginAPI.Core.Attributes.PluginConfig
   - PluginAPI.Core.Attributes.PluginEntryPoint
   - PluginAPI.Core.Attributes.PluginEvent
+  - PluginAPI.Core.Attributes.PluginPriority
   - PluginAPI.Core.Attributes.PluginReload
   - PluginAPI.Core.Attributes.PluginUnload
   langs:
@@ -46,6 +47,11 @@ references:
   name: PluginEvent
   nameWithType: PluginEvent
   fullName: PluginAPI.Core.Attributes.PluginEvent
+- uid: PluginAPI.Core.Attributes.PluginPriority
+  commentId: T:PluginAPI.Core.Attributes.PluginPriority
+  name: PluginPriority
+  nameWithType: PluginPriority
+  fullName: PluginAPI.Core.Attributes.PluginPriority
 - uid: PluginAPI.Core.Attributes.PluginReload
   commentId: T:PluginAPI.Core.Attributes.PluginReload
   name: PluginReload

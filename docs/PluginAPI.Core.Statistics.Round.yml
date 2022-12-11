@@ -5,14 +5,30 @@ items:
   id: Statistics.Round
   parent: PluginAPI.Core
   children:
+  - PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive
+  - PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead
+  - PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart
+  - PluginAPI.Core.Statistics.Round.ClassDAlive
+  - PluginAPI.Core.Statistics.Round.ClassDDead
+  - PluginAPI.Core.Statistics.Round.ClassDEscaped
+  - PluginAPI.Core.Statistics.Round.ClassDStart
   - PluginAPI.Core.Statistics.Round.Duration
+  - PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive
+  - PluginAPI.Core.Statistics.Round.MtfAndGuardsDead
+  - PluginAPI.Core.Statistics.Round.MtfAndGuardsStart
+  - PluginAPI.Core.Statistics.Round.ScientistsAlive
+  - PluginAPI.Core.Statistics.Round.ScientistsDead
+  - PluginAPI.Core.Statistics.Round.ScientistsEscaped
+  - PluginAPI.Core.Statistics.Round.ScientistsStart
   - PluginAPI.Core.Statistics.Round.ScpsAlive
+  - PluginAPI.Core.Statistics.Round.ScpsDead
+  - PluginAPI.Core.Statistics.Round.ScpsStart
   - PluginAPI.Core.Statistics.Round.StartTimestamp
-  - PluginAPI.Core.Statistics.Round.TotalEscapedClassD
-  - PluginAPI.Core.Statistics.Round.TotalEscapedScientists
   - PluginAPI.Core.Statistics.Round.TotalKilledPlayers
-  - PluginAPI.Core.Statistics.Round.TotalScp0492Made
   - PluginAPI.Core.Statistics.Round.TotalScpKills
+  - PluginAPI.Core.Statistics.Round.WarheadKills
+  - PluginAPI.Core.Statistics.Round.ZombiesAlive
+  - PluginAPI.Core.Statistics.Round.ZombiesChanged
   langs:
   - csharp
   - vb
@@ -23,11 +39,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Round
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 64
+    startLine: 78
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -66,11 +82,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 69
+    startLine: 83
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -105,11 +121,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: StartTimestamp
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 74
+    startLine: 88
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -142,11 +158,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TotalKilledPlayers
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 79
+    startLine: 93
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -159,6 +175,570 @@ items:
       type: System.Int32
     content.vb: Public ReadOnly Property TotalKilledPlayers As Integer
   overload: PluginAPI.Core.Statistics.Round.TotalKilledPlayers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ClassDStart
+  commentId: P:PluginAPI.Core.Statistics.Round.ClassDStart
+  id: ClassDStart
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ClassDStart
+  nameWithType: Statistics.Round.ClassDStart
+  fullName: PluginAPI.Core.Statistics.Round.ClassDStart
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ClassDStart
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 95
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ClassDStart { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ClassDStart As Integer
+  overload: PluginAPI.Core.Statistics.Round.ClassDStart*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ClassDDead
+  commentId: P:PluginAPI.Core.Statistics.Round.ClassDDead
+  id: ClassDDead
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ClassDDead
+  nameWithType: Statistics.Round.ClassDDead
+  fullName: PluginAPI.Core.Statistics.Round.ClassDDead
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ClassDDead
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 96
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ClassDDead { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ClassDDead As Integer
+  overload: PluginAPI.Core.Statistics.Round.ClassDDead*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ClassDEscaped
+  commentId: P:PluginAPI.Core.Statistics.Round.ClassDEscaped
+  id: ClassDEscaped
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ClassDEscaped
+  nameWithType: Statistics.Round.ClassDEscaped
+  fullName: PluginAPI.Core.Statistics.Round.ClassDEscaped
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ClassDEscaped
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 101
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount Class-Ds who have escaped.\n"
+  example: []
+  syntax:
+    content: public int ClassDEscaped { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ClassDEscaped As Integer
+  overload: PluginAPI.Core.Statistics.Round.ClassDEscaped*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ClassDAlive
+  commentId: P:PluginAPI.Core.Statistics.Round.ClassDAlive
+  id: ClassDAlive
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ClassDAlive
+  nameWithType: Statistics.Round.ClassDAlive
+  fullName: PluginAPI.Core.Statistics.Round.ClassDAlive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ClassDAlive
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 102
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ClassDAlive { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ClassDAlive As Integer
+  overload: PluginAPI.Core.Statistics.Round.ClassDAlive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Statistics.Round.ScientistsStart
+  commentId: P:PluginAPI.Core.Statistics.Round.ScientistsStart
+  id: ScientistsStart
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ScientistsStart
+  nameWithType: Statistics.Round.ScientistsStart
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsStart
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ScientistsStart
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 103
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ScientistsStart { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ScientistsStart As Integer
+  overload: PluginAPI.Core.Statistics.Round.ScientistsStart*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ScientistsDead
+  commentId: P:PluginAPI.Core.Statistics.Round.ScientistsDead
+  id: ScientistsDead
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ScientistsDead
+  nameWithType: Statistics.Round.ScientistsDead
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsDead
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ScientistsDead
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 104
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ScientistsDead { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ScientistsDead As Integer
+  overload: PluginAPI.Core.Statistics.Round.ScientistsDead*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ScientistsEscaped
+  commentId: P:PluginAPI.Core.Statistics.Round.ScientistsEscaped
+  id: ScientistsEscaped
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ScientistsEscaped
+  nameWithType: Statistics.Round.ScientistsEscaped
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsEscaped
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ScientistsEscaped
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 109
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount Scientists who have escaped.\n"
+  example: []
+  syntax:
+    content: public int ScientistsEscaped { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ScientistsEscaped As Integer
+  overload: PluginAPI.Core.Statistics.Round.ScientistsEscaped*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ScientistsAlive
+  commentId: P:PluginAPI.Core.Statistics.Round.ScientistsAlive
+  id: ScientistsAlive
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ScientistsAlive
+  nameWithType: Statistics.Round.ScientistsAlive
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsAlive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ScientistsAlive
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 110
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ScientistsAlive { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ScientistsAlive As Integer
+  overload: PluginAPI.Core.Statistics.Round.ScientistsAlive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart
+  commentId: P:PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart
+  id: ChaosInsurgencyStart
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ChaosInsurgencyStart
+  nameWithType: Statistics.Round.ChaosInsurgencyStart
+  fullName: PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ChaosInsurgencyStart
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 111
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ChaosInsurgencyStart { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ChaosInsurgencyStart As Integer
+  overload: PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead
+  commentId: P:PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead
+  id: ChaosInsurgencyDead
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ChaosInsurgencyDead
+  nameWithType: Statistics.Round.ChaosInsurgencyDead
+  fullName: PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ChaosInsurgencyDead
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 112
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ChaosInsurgencyDead { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ChaosInsurgencyDead As Integer
+  overload: PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive
+  commentId: P:PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive
+  id: ChaosInsurgencyAlive
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ChaosInsurgencyAlive
+  nameWithType: Statistics.Round.ChaosInsurgencyAlive
+  fullName: PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ChaosInsurgencyAlive
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 113
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ChaosInsurgencyAlive { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ChaosInsurgencyAlive As Integer
+  overload: PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Statistics.Round.MtfAndGuardsStart
+  commentId: P:PluginAPI.Core.Statistics.Round.MtfAndGuardsStart
+  id: MtfAndGuardsStart
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: MtfAndGuardsStart
+  nameWithType: Statistics.Round.MtfAndGuardsStart
+  fullName: PluginAPI.Core.Statistics.Round.MtfAndGuardsStart
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: MtfAndGuardsStart
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 114
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int MtfAndGuardsStart { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MtfAndGuardsStart As Integer
+  overload: PluginAPI.Core.Statistics.Round.MtfAndGuardsStart*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.MtfAndGuardsDead
+  commentId: P:PluginAPI.Core.Statistics.Round.MtfAndGuardsDead
+  id: MtfAndGuardsDead
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: MtfAndGuardsDead
+  nameWithType: Statistics.Round.MtfAndGuardsDead
+  fullName: PluginAPI.Core.Statistics.Round.MtfAndGuardsDead
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: MtfAndGuardsDead
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 115
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int MtfAndGuardsDead { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MtfAndGuardsDead As Integer
+  overload: PluginAPI.Core.Statistics.Round.MtfAndGuardsDead*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive
+  commentId: P:PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive
+  id: MtfAndGuardsAlive
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: MtfAndGuardsAlive
+  nameWithType: Statistics.Round.MtfAndGuardsAlive
+  fullName: PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: MtfAndGuardsAlive
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 116
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int MtfAndGuardsAlive { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MtfAndGuardsAlive As Integer
+  overload: PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Statistics.Round.ScpsStart
+  commentId: P:PluginAPI.Core.Statistics.Round.ScpsStart
+  id: ScpsStart
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ScpsStart
+  nameWithType: Statistics.Round.ScpsStart
+  fullName: PluginAPI.Core.Statistics.Round.ScpsStart
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ScpsStart
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 117
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ScpsStart { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ScpsStart As Integer
+  overload: PluginAPI.Core.Statistics.Round.ScpsStart*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.ScpsDead
+  commentId: P:PluginAPI.Core.Statistics.Round.ScpsDead
+  id: ScpsDead
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ScpsDead
+  nameWithType: Statistics.Round.ScpsDead
+  fullName: PluginAPI.Core.Statistics.Round.ScpsDead
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ScpsDead
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 118
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ScpsDead { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ScpsDead As Integer
+  overload: PluginAPI.Core.Statistics.Round.ScpsDead*
   modifiers.csharp:
   - public
   - get
@@ -179,11 +759,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TotalScpKills
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 84
+    startLine: 123
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -196,117 +776,6 @@ items:
       type: System.Int32
     content.vb: Public ReadOnly Property TotalScpKills As Integer
   overload: PluginAPI.Core.Statistics.Round.TotalScpKills*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: PluginAPI.Core.Statistics.Round.TotalScp0492Made
-  commentId: P:PluginAPI.Core.Statistics.Round.TotalScp0492Made
-  id: TotalScp0492Made
-  parent: PluginAPI.Core.Statistics.Round
-  langs:
-  - csharp
-  - vb
-  name: TotalScp0492Made
-  nameWithType: Statistics.Round.TotalScp0492Made
-  fullName: PluginAPI.Core.Statistics.Round.TotalScp0492Made
-  type: Property
-  source:
-    remote:
-      path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: TotalScp0492Made
-    path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 89
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nGets the total amount Scp049-2s created.\n"
-  example: []
-  syntax:
-    content: public int TotalScp0492Made { get; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public ReadOnly Property TotalScp0492Made As Integer
-  overload: PluginAPI.Core.Statistics.Round.TotalScp0492Made*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: PluginAPI.Core.Statistics.Round.TotalEscapedClassD
-  commentId: P:PluginAPI.Core.Statistics.Round.TotalEscapedClassD
-  id: TotalEscapedClassD
-  parent: PluginAPI.Core.Statistics.Round
-  langs:
-  - csharp
-  - vb
-  name: TotalEscapedClassD
-  nameWithType: Statistics.Round.TotalEscapedClassD
-  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedClassD
-  type: Property
-  source:
-    remote:
-      path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: TotalEscapedClassD
-    path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 94
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nGets the total amount Class-Ds who have escaped.\n"
-  example: []
-  syntax:
-    content: public int TotalEscapedClassD { get; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public ReadOnly Property TotalEscapedClassD As Integer
-  overload: PluginAPI.Core.Statistics.Round.TotalEscapedClassD*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: PluginAPI.Core.Statistics.Round.TotalEscapedScientists
-  commentId: P:PluginAPI.Core.Statistics.Round.TotalEscapedScientists
-  id: TotalEscapedScientists
-  parent: PluginAPI.Core.Statistics.Round
-  langs:
-  - csharp
-  - vb
-  name: TotalEscapedScientists
-  nameWithType: Statistics.Round.TotalEscapedScientists
-  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedScientists
-  type: Property
-  source:
-    remote:
-      path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: TotalEscapedScientists
-    path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 99
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nGets the total amount Scientists who have escaped.\n"
-  example: []
-  syntax:
-    content: public int TotalEscapedScientists { get; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public ReadOnly Property TotalEscapedScientists As Integer
-  overload: PluginAPI.Core.Statistics.Round.TotalEscapedScientists*
   modifiers.csharp:
   - public
   - get
@@ -327,29 +796,136 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScpsAlive
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 104
+    startLine: 128
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
   summary: "\nGets the total amount of SCPs alive.\n"
   example: []
   syntax:
-    content: public int ScpsAlive { get; }
+    content: public int ScpsAlive { get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public ReadOnly Property ScpsAlive As Integer
+    content.vb: Public Property ScpsAlive As Integer
   overload: PluginAPI.Core.Statistics.Round.ScpsAlive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Statistics.Round.ZombiesAlive
+  commentId: P:PluginAPI.Core.Statistics.Round.ZombiesAlive
+  id: ZombiesAlive
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ZombiesAlive
+  nameWithType: Statistics.Round.ZombiesAlive
+  fullName: PluginAPI.Core.Statistics.Round.ZombiesAlive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ZombiesAlive
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 129
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int ZombiesAlive { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ZombiesAlive As Integer
+  overload: PluginAPI.Core.Statistics.Round.ZombiesAlive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Statistics.Round.ZombiesChanged
+  commentId: P:PluginAPI.Core.Statistics.Round.ZombiesChanged
+  id: ZombiesChanged
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: ZombiesChanged
+  nameWithType: Statistics.Round.ZombiesChanged
+  fullName: PluginAPI.Core.Statistics.Round.ZombiesChanged
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ZombiesChanged
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 134
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the total amount Scp049-2s created.\n"
+  example: []
+  syntax:
+    content: public int ZombiesChanged { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ZombiesChanged As Integer
+  overload: PluginAPI.Core.Statistics.Round.ZombiesChanged*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: PluginAPI.Core.Statistics.Round.WarheadKills
+  commentId: P:PluginAPI.Core.Statistics.Round.WarheadKills
+  id: WarheadKills
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: WarheadKills
+  nameWithType: Statistics.Round.WarheadKills
+  fullName: PluginAPI.Core.Statistics.Round.WarheadKills
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: WarheadKills
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 135
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public int WarheadKills { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property WarheadKills As Integer
+  overload: PluginAPI.Core.Statistics.Round.WarheadKills*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: PluginAPI.Core
   commentId: N:PluginAPI.Core
@@ -684,28 +1260,108 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: PluginAPI.Core.Statistics.Round.ClassDStart*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ClassDStart
+  name: ClassDStart
+  nameWithType: Statistics.Round.ClassDStart
+  fullName: PluginAPI.Core.Statistics.Round.ClassDStart
+- uid: PluginAPI.Core.Statistics.Round.ClassDDead*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ClassDDead
+  name: ClassDDead
+  nameWithType: Statistics.Round.ClassDDead
+  fullName: PluginAPI.Core.Statistics.Round.ClassDDead
+- uid: PluginAPI.Core.Statistics.Round.ClassDEscaped*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ClassDEscaped
+  name: ClassDEscaped
+  nameWithType: Statistics.Round.ClassDEscaped
+  fullName: PluginAPI.Core.Statistics.Round.ClassDEscaped
+- uid: PluginAPI.Core.Statistics.Round.ClassDAlive*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ClassDAlive
+  name: ClassDAlive
+  nameWithType: Statistics.Round.ClassDAlive
+  fullName: PluginAPI.Core.Statistics.Round.ClassDAlive
+- uid: PluginAPI.Core.Statistics.Round.ScientistsStart*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ScientistsStart
+  name: ScientistsStart
+  nameWithType: Statistics.Round.ScientistsStart
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsStart
+- uid: PluginAPI.Core.Statistics.Round.ScientistsDead*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ScientistsDead
+  name: ScientistsDead
+  nameWithType: Statistics.Round.ScientistsDead
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsDead
+- uid: PluginAPI.Core.Statistics.Round.ScientistsEscaped*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ScientistsEscaped
+  name: ScientistsEscaped
+  nameWithType: Statistics.Round.ScientistsEscaped
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsEscaped
+- uid: PluginAPI.Core.Statistics.Round.ScientistsAlive*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ScientistsAlive
+  name: ScientistsAlive
+  nameWithType: Statistics.Round.ScientistsAlive
+  fullName: PluginAPI.Core.Statistics.Round.ScientistsAlive
+- uid: PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart
+  name: ChaosInsurgencyStart
+  nameWithType: Statistics.Round.ChaosInsurgencyStart
+  fullName: PluginAPI.Core.Statistics.Round.ChaosInsurgencyStart
+- uid: PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead
+  name: ChaosInsurgencyDead
+  nameWithType: Statistics.Round.ChaosInsurgencyDead
+  fullName: PluginAPI.Core.Statistics.Round.ChaosInsurgencyDead
+- uid: PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive
+  name: ChaosInsurgencyAlive
+  nameWithType: Statistics.Round.ChaosInsurgencyAlive
+  fullName: PluginAPI.Core.Statistics.Round.ChaosInsurgencyAlive
+- uid: PluginAPI.Core.Statistics.Round.MtfAndGuardsStart*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.MtfAndGuardsStart
+  name: MtfAndGuardsStart
+  nameWithType: Statistics.Round.MtfAndGuardsStart
+  fullName: PluginAPI.Core.Statistics.Round.MtfAndGuardsStart
+- uid: PluginAPI.Core.Statistics.Round.MtfAndGuardsDead*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.MtfAndGuardsDead
+  name: MtfAndGuardsDead
+  nameWithType: Statistics.Round.MtfAndGuardsDead
+  fullName: PluginAPI.Core.Statistics.Round.MtfAndGuardsDead
+- uid: PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive
+  name: MtfAndGuardsAlive
+  nameWithType: Statistics.Round.MtfAndGuardsAlive
+  fullName: PluginAPI.Core.Statistics.Round.MtfAndGuardsAlive
+- uid: PluginAPI.Core.Statistics.Round.ScpsStart*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ScpsStart
+  name: ScpsStart
+  nameWithType: Statistics.Round.ScpsStart
+  fullName: PluginAPI.Core.Statistics.Round.ScpsStart
+- uid: PluginAPI.Core.Statistics.Round.ScpsDead*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ScpsDead
+  name: ScpsDead
+  nameWithType: Statistics.Round.ScpsDead
+  fullName: PluginAPI.Core.Statistics.Round.ScpsDead
 - uid: PluginAPI.Core.Statistics.Round.TotalScpKills*
   commentId: Overload:PluginAPI.Core.Statistics.Round.TotalScpKills
   name: TotalScpKills
   nameWithType: Statistics.Round.TotalScpKills
   fullName: PluginAPI.Core.Statistics.Round.TotalScpKills
-- uid: PluginAPI.Core.Statistics.Round.TotalScp0492Made*
-  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalScp0492Made
-  name: TotalScp0492Made
-  nameWithType: Statistics.Round.TotalScp0492Made
-  fullName: PluginAPI.Core.Statistics.Round.TotalScp0492Made
-- uid: PluginAPI.Core.Statistics.Round.TotalEscapedClassD*
-  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalEscapedClassD
-  name: TotalEscapedClassD
-  nameWithType: Statistics.Round.TotalEscapedClassD
-  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedClassD
-- uid: PluginAPI.Core.Statistics.Round.TotalEscapedScientists*
-  commentId: Overload:PluginAPI.Core.Statistics.Round.TotalEscapedScientists
-  name: TotalEscapedScientists
-  nameWithType: Statistics.Round.TotalEscapedScientists
-  fullName: PluginAPI.Core.Statistics.Round.TotalEscapedScientists
 - uid: PluginAPI.Core.Statistics.Round.ScpsAlive*
   commentId: Overload:PluginAPI.Core.Statistics.Round.ScpsAlive
   name: ScpsAlive
   nameWithType: Statistics.Round.ScpsAlive
   fullName: PluginAPI.Core.Statistics.Round.ScpsAlive
+- uid: PluginAPI.Core.Statistics.Round.ZombiesAlive*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ZombiesAlive
+  name: ZombiesAlive
+  nameWithType: Statistics.Round.ZombiesAlive
+  fullName: PluginAPI.Core.Statistics.Round.ZombiesAlive
+- uid: PluginAPI.Core.Statistics.Round.ZombiesChanged*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.ZombiesChanged
+  name: ZombiesChanged
+  nameWithType: Statistics.Round.ZombiesChanged
+  fullName: PluginAPI.Core.Statistics.Round.ZombiesChanged
+- uid: PluginAPI.Core.Statistics.Round.WarheadKills*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.WarheadKills
+  name: WarheadKills
+  nameWithType: Statistics.Round.WarheadKills
+  fullName: PluginAPI.Core.Statistics.Round.WarheadKills
