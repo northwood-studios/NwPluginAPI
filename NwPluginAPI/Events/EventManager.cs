@@ -24,11 +24,11 @@ namespace PluginAPI.Events
 	using Respawning;
 	using PluginAPI.Loader;
 	using InventorySystem.Items.ThrowableProjectiles;
-	using System.Numerics;
 	using PlayerRoles.PlayableScps.Scp173;
 	using PlayerRoles.PlayableScps.Scp079;
 	using MapGeneration;
 	using Interactables.Interobjects.DoorUtils;
+	using UnityEngine;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -285,9 +285,14 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(ItemBase), "item")) },
 			{ ServerEventType.Scp914UpgradePickup, new Event(
 				new EventParameter(typeof(ItemPickupBase), "item")) },
+			{ ServerEventType.Scp106TeleportPlayer, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target")) },
 			{ ServerEventType.Scp173PlaySound, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Scp173AudioPlayer.Scp173SoundId), "soundId")) },
+			{ ServerEventType.Scp173CreateTantrum, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.Scp173BreakneckSpeeds, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(bool), "activate")) },
