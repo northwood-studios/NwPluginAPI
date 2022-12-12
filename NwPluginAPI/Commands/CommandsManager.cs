@@ -104,8 +104,11 @@
 						Dictionary<string, Command> parentHandlerRegisteredCommands = _registeredCommands[parentCommandHandlerType];
 						// the type referenced in the CommandHandler is a command in itself, it SHOULD extend "ParentCommand".
 						Command parentCommandInstance = parentHandlerRegisteredCommands.Values.FirstOrDefault(x => x.Object.GetType() == commandHandler);
-						ParentCommand parentCommand = parentCommandInstance.Object as ParentCommand;
-						parentCommand?.RegisterCommand(activatedCommand);
+						if (parentCommandHandlerType != null)
+						{
+							ParentCommand parentCommand = parentCommandInstance.Object as ParentCommand;
+							parentCommand?.RegisterCommand(activatedCommand);
+						}
 					}
 				}
 			}
