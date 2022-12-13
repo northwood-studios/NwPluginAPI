@@ -30,7 +30,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Northwood.PluginAPI</Title>
 		<Copyright>Copyright by Hubert Moszka Northwood, 2022</Copyright>
-		<PackageVersion>12.0.0-beta9</PackageVersion>
+		<PackageVersion>12.0.0-beta10</PackageVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
