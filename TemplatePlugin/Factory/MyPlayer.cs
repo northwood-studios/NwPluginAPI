@@ -22,7 +22,7 @@
 		{
 			if (plr != this) return;
 
-			Log.Info($" [MyPlayer] Player {plr.Nickname} executed command {cmd}");
+			Log.Info($" [&4MyPlayer&r] Player {plr.Nickname} executed command {cmd}");
 		}
 
 		public override void OnDestroy()

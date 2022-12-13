@@ -1,6 +1,5 @@
 ﻿namespace TemplatePlugin
 {
-	using CommandSystem;
 	using Interactables.Interobjects.DoorUtils;
 	using InventorySystem.Items;
 	using InventorySystem.Items.Pickups;
@@ -8,12 +7,11 @@
 	using MapGeneration;
 	using PlayerRoles.PlayableScps.Scp079;
 	using PlayerRoles.PlayableScps.Scp173;
-	using PlayerRoles.Voice;
+	using PlayerRoles.PlayableScps.Scp939;
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
 	using PluginAPI.Enums;
 	using Respawning;
-	using Scp914;
 	using TemplatePlugin.Factory;
 	using UnityEngine;
 
@@ -160,7 +158,7 @@
 		[PluginEvent(ServerEventType.Scp173NewObserver)]
 		public void OnScp173NewObserver(MyPlayer player, MyPlayer target)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-173 sees new target &6{target.Nickname}&r (&6{target.UserId}&r)");
+			//Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-173 sees new target &6{target.Nickname}&r (&6{target.UserId}&r)");
 		}
 
 		[PluginEvent(ServerEventType.Scp173SnapPlayer)]
@@ -182,9 +180,9 @@
 		}
 
 		[PluginEvent(ServerEventType.Scp939Lunge)]
-		public void OnScp939Lunge(MyPlayer player)
+		public void OnScp939Lunge(MyPlayer player, Scp939LungeState state)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-939 started lunge!");
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) lunge state is &2{state}&r playing as SCP-939!");
 		}
 
 		[PluginEvent(ServerEventType.Scp939Attack)]
@@ -206,7 +204,7 @@
 		[PluginEvent(ServerEventType.Scp079LevelUpTier)]
 		public void OnScp079LevelUpTier(MyPlayer player, int tier)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-079 leveled up to tier &2{tier+1}&r!");
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-079 leveled up to tier &2{tier}&r!");
 		}
 
 		[PluginEvent(ServerEventType.Scp079UseTesla)]
@@ -260,7 +258,13 @@
 		[PluginEvent(ServerEventType.Scp049StartResurrectingBody)]
 		public void OnScp049StartResurrectingBody(MyPlayer player, MyPlayer target, Ragdoll body, bool canResurrect)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-049 tried resurrecting body of &6{target.Nickname}&r (&6{target.UserId}&r), ragdoll with class &2{body.Info.RoleType}&r but it {(canResurrect ? "failed" : "succeded")}!");
+			//Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-049 tried resurrecting body of &6{target.Nickname}&r (&6{target.UserId}&r), ragdoll with class &2{body.Info.RoleType}&r but it {(canResurrect ? "failed" : "succeded")}!");
+		}
+
+		[PluginEvent(ServerEventType.Scp106TeleportPlayer)]
+		public void OnScp106TeleportPlayer(MyPlayer player, MyPlayer target)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) teleported player &6{target.Nickname}&r (&6{target.UserId}&r) to pocket dimension as SCP-106");
 		}
 	}
 }

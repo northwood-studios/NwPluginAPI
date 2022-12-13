@@ -29,6 +29,7 @@ namespace PluginAPI.Events
 	using MapGeneration;
 	using Interactables.Interobjects.DoorUtils;
 	using UnityEngine;
+	using PlayerRoles.PlayableScps.Scp939;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -305,7 +306,8 @@ namespace PluginAPI.Events
 			{ ServerEventType.Scp939CreateAmnesticCloud, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.Scp939Lunge, new Event(
-				new EventParameter(typeof(IPlayer), "player")) },
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Scp939LungeState), "state")) },
 			{ ServerEventType.Scp939Attack, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IDestructible), "target")) },

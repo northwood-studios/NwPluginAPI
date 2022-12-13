@@ -257,8 +257,8 @@ public static class EventManager
 			new EventParameter("InventorySystem.Items.ThrowableProjectiles.ThrowableItem", false, "item"),
 			new EventParameter("System.Single", false, "forceAmount"),
 			new EventParameter("System.Single", false, "upwardsFactor"),
-			new EventParameter("System.Numerics.Vector3", false, "torque"),
-			new EventParameter("System.Numerics.Vector3", false, "velocity")) },
+			new EventParameter("UnityEngine.Vector3", false, "torque"),
+			new EventParameter("UnityEngine.Vector3", false, "velocity")) },
 		{ 77, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
 		{ 78, new Event(
@@ -268,9 +268,14 @@ public static class EventManager
 			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
 		{ 80, new Event(
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "item")) },
+		{ 81, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target")) },
 		{ 82, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer+Scp173SoundId", false, "soundId")) },
+		{ 83, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
 		{ 84, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("System.Boolean", false, "activate")) },
@@ -283,7 +288,8 @@ public static class EventManager
 		{ 86, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
 		{ 87, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.PlayableScps.Scp939.Scp939LungeState", false, "state")) },
 		{ 88, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("IDestructible", false, "target")) },

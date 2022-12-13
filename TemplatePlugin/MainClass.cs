@@ -68,8 +68,6 @@
         {
             Log.Info($"Player &6{player.UserId}&r joined this server with &1{player.Test}&4");
 
-			Log.Info($"Server.Instance is {(Server.Instance == null ? "null" : "not null")} )");
-
             foreach(var plr in Player.GetPlayers())
             {
                 Log.Info($"Player online &6{plr.Nickname}&r, role &6{plr.Role}&r");

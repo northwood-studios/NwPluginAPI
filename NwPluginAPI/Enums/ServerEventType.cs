@@ -4,6 +4,7 @@ namespace PluginAPI.Enums
 	using PlayerRoles;
 	using PlayerRoles.PlayableScps.Scp173;
 	using PlayerRoles.PlayableScps.Scp079;
+	using PlayerRoles.PlayableScps.Scp939;
 	using AdminToys;
 	using PlayerStatsSystem;
 	using Core.Items;
@@ -696,7 +697,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-939 tries to lunge.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp939LungeState"/> state. 
 		/// </remarks>
 		Scp939Lunge = 87,
 
