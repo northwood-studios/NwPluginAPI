@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCheckReservedSlotCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 199
@@ -64,8 +64,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 202
@@ -104,8 +104,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: HasReservedSlot
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 205
@@ -137,8 +137,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeaveUnchanged
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 217
@@ -174,8 +174,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Override
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 225

@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LoadPriority
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 5
@@ -39,94 +39,30 @@ items:
   modifiers.vb:
   - Public
   - Enum
-- uid: PluginAPI.Enums.LoadPriority.Lowest
-  commentId: F:PluginAPI.Enums.LoadPriority.Lowest
-  id: Lowest
+- uid: PluginAPI.Enums.LoadPriority.Highest
+  commentId: F:PluginAPI.Enums.LoadPriority.Highest
+  id: Highest
   parent: PluginAPI.Enums.LoadPriority
   langs:
   - csharp
   - vb
-  name: Lowest
-  nameWithType: LoadPriority.Lowest
-  fullName: PluginAPI.Enums.LoadPriority.Lowest
+  name: Highest
+  nameWithType: LoadPriority.Highest
+  fullName: PluginAPI.Enums.LoadPriority.Highest
   type: Field
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Lowest
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Highest
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 7
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   syntax:
-    content: Lowest = 0
-    return:
-      type: PluginAPI.Enums.LoadPriority
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
-- uid: PluginAPI.Enums.LoadPriority.Low
-  commentId: F:PluginAPI.Enums.LoadPriority.Low
-  id: Low
-  parent: PluginAPI.Enums.LoadPriority
-  langs:
-  - csharp
-  - vb
-  name: Low
-  nameWithType: LoadPriority.Low
-  fullName: PluginAPI.Enums.LoadPriority.Low
-  type: Field
-  source:
-    remote:
-      path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Low
-    path: ../NwPluginAPI/Enums/LoadPriority.cs
-    startLine: 8
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Enums
-  syntax:
-    content: Low = 1
-    return:
-      type: PluginAPI.Enums.LoadPriority
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
-- uid: PluginAPI.Enums.LoadPriority.Medium
-  commentId: F:PluginAPI.Enums.LoadPriority.Medium
-  id: Medium
-  parent: PluginAPI.Enums.LoadPriority
-  langs:
-  - csharp
-  - vb
-  name: Medium
-  nameWithType: LoadPriority.Medium
-  fullName: PluginAPI.Enums.LoadPriority.Medium
-  type: Field
-  source:
-    remote:
-      path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Medium
-    path: ../NwPluginAPI/Enums/LoadPriority.cs
-    startLine: 9
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Enums
-  syntax:
-    content: Medium = 2
+    content: Highest = 64
     return:
       type: PluginAPI.Enums.LoadPriority
   modifiers.csharp:
@@ -149,16 +85,16 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: High
     path: ../NwPluginAPI/Enums/LoadPriority.cs
-    startLine: 10
+    startLine: 8
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   syntax:
-    content: High = 3
+    content: High = 96
     return:
       type: PluginAPI.Enums.LoadPriority
   modifiers.csharp:
@@ -167,30 +103,94 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: PluginAPI.Enums.LoadPriority.Highest
-  commentId: F:PluginAPI.Enums.LoadPriority.Highest
-  id: Highest
+- uid: PluginAPI.Enums.LoadPriority.Medium
+  commentId: F:PluginAPI.Enums.LoadPriority.Medium
+  id: Medium
   parent: PluginAPI.Enums.LoadPriority
   langs:
   - csharp
   - vb
-  name: Highest
-  nameWithType: LoadPriority.Highest
-  fullName: PluginAPI.Enums.LoadPriority.Highest
+  name: Medium
+  nameWithType: LoadPriority.Medium
+  fullName: PluginAPI.Enums.LoadPriority.Medium
   type: Field
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Highest
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Medium
+    path: ../NwPluginAPI/Enums/LoadPriority.cs
+    startLine: 9
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Medium = 128
+    return:
+      type: PluginAPI.Enums.LoadPriority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.LoadPriority.Low
+  commentId: F:PluginAPI.Enums.LoadPriority.Low
+  id: Low
+  parent: PluginAPI.Enums.LoadPriority
+  langs:
+  - csharp
+  - vb
+  name: Low
+  nameWithType: LoadPriority.Low
+  fullName: PluginAPI.Enums.LoadPriority.Low
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LoadPriority.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Low
+    path: ../NwPluginAPI/Enums/LoadPriority.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Low = 160
+    return:
+      type: PluginAPI.Enums.LoadPriority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.LoadPriority.Lowest
+  commentId: F:PluginAPI.Enums.LoadPriority.Lowest
+  id: Lowest
+  parent: PluginAPI.Enums.LoadPriority
+  langs:
+  - csharp
+  - vb
+  name: Lowest
+  nameWithType: LoadPriority.Lowest
+  fullName: PluginAPI.Enums.LoadPriority.Lowest
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/LoadPriority.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Lowest
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 11
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   syntax:
-    content: Highest = 4
+    content: Lowest = 192
     return:
       type: PluginAPI.Enums.LoadPriority
   modifiers.csharp:

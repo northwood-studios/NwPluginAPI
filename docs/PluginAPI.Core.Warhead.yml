@@ -24,8 +24,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Warhead
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 5
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeverStatus
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 10
@@ -107,8 +107,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadUnlocked
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 19
@@ -146,8 +146,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsDetonated
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 28
@@ -185,8 +185,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsDetonationInProgress
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 33
@@ -224,8 +224,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DetonationTime
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 38
@@ -263,8 +263,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 50
@@ -304,8 +304,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Stop
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 59
@@ -338,8 +338,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Detonate
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 64
@@ -372,8 +372,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shake
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 71

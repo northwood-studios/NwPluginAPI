@@ -15,9 +15,6 @@
         /// </summary>
         /// <param name="component">The <see cref="IGameComponent"/>.</param>
         /// <returns>The created <see cref="IPlayer"/>.</returns>
-        public override IPlayer Create(IGameComponent component)
-        {
-	        return ReferenceEquals(component, ReferenceHub.HostHub) ? new Server(component) : new Player(component);
-        }
-    }
+        public override IPlayer Create(IGameComponent component) => new Player(component);
+	}
 }

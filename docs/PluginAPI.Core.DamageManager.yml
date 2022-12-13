@@ -7,9 +7,6 @@ items:
   children:
   - PluginAPI.Core.DamageManager.#ctor(PluginAPI.Core.Player)
   - PluginAPI.Core.DamageManager.CanReceiveDamageFromPlayers
-  - PluginAPI.Core.DamageManager.Damage(PlayerStatsSystem.DamageHandlerBase)
-  - PluginAPI.Core.DamageManager.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
-  - PluginAPI.Core.DamageManager.Damage(System.Single,System.String,System.String)
   - PluginAPI.Core.DamageManager.DamageBlacklist
   - PluginAPI.Core.DamageManager.DamageWhitelist
   langs:
@@ -22,8 +19,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageManager
     path: ../NwPluginAPI/Core/DamageManager.cs
     startLine: 10
@@ -65,8 +62,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CanReceiveDamageFromPlayers
     path: ../NwPluginAPI/Core/DamageManager.cs
     startLine: 17
@@ -102,8 +99,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageBlacklist
     path: ../NwPluginAPI/Core/DamageManager.cs
     startLine: 26
@@ -139,8 +136,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageWhitelist
     path: ../NwPluginAPI/Core/DamageManager.cs
     startLine: 31
@@ -176,8 +173,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/DamageManager.cs
     startLine: 37
@@ -194,138 +191,6 @@ items:
       description: The player.
     content.vb: Public Sub New(plr As Player)
   overload: PluginAPI.Core.DamageManager.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: PluginAPI.Core.DamageManager.Damage(System.Single,System.String,System.String)
-  commentId: M:PluginAPI.Core.DamageManager.Damage(System.Single,System.String,System.String)
-  id: Damage(System.Single,System.String,System.String)
-  parent: PluginAPI.Core.DamageManager
-  langs:
-  - csharp
-  - vb
-  name: Damage(Single, String, String)
-  nameWithType: DamageManager.Damage(Single, String, String)
-  fullName: PluginAPI.Core.DamageManager.Damage(System.Single, System.String, System.String)
-  type: Method
-  source:
-    remote:
-      path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Damage
-    path: ../NwPluginAPI/Core/DamageManager.cs
-    startLine: 46
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nDamages player with custom reason.\n"
-  example: []
-  syntax:
-    content: public bool Damage(float amount, string reason, string cassieAnnouncement = "")
-    parameters:
-    - id: amount
-      type: System.Single
-      description: The amount of damage.
-    - id: reason
-      type: System.String
-      description: The reason of damage.
-    - id: cassieAnnouncement
-      type: System.String
-      description: The cassie announcement send after death.
-    return:
-      type: System.Boolean
-      description: Whether or not damaging was successful..
-    content.vb: Public Function Damage(amount As Single, reason As String, cassieAnnouncement As String = "") As Boolean
-  overload: PluginAPI.Core.DamageManager.Damage*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: PluginAPI.Core.DamageManager.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
-  commentId: M:PluginAPI.Core.DamageManager.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
-  id: Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
-  parent: PluginAPI.Core.DamageManager
-  langs:
-  - csharp
-  - vb
-  name: Damage(Single, Player, Vector3, Int32)
-  nameWithType: DamageManager.Damage(Single, Player, Vector3, Int32)
-  fullName: PluginAPI.Core.DamageManager.Damage(System.Single, PluginAPI.Core.Player, UnityEngine.Vector3, System.Int32)
-  type: Method
-  source:
-    remote:
-      path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Damage
-    path: ../NwPluginAPI/Core/DamageManager.cs
-    startLine: 56
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nDamages player with explosion force.\n"
-  example: []
-  syntax:
-    content: public bool Damage(float amount, Player attacker, Vector3 force = default(Vector3), int armorPenetration = 0)
-    parameters:
-    - id: amount
-      type: System.Single
-      description: The amount of damage.
-    - id: attacker
-      type: PluginAPI.Core.Player
-      description: The player which attacked
-    - id: force
-      type: UnityEngine.Vector3
-      description: The force of explosion.
-    - id: armorPenetration
-      type: System.Int32
-      description: The amount of armor penetration.
-    return:
-      type: System.Boolean
-      description: Whether or not damaging was successful.
-    content.vb: Public Function Damage(amount As Single, attacker As Player, force As Vector3 = Nothing, armorPenetration As Integer = 0) As Boolean
-  overload: PluginAPI.Core.DamageManager.Damage*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: PluginAPI.Core.DamageManager.Damage(PlayerStatsSystem.DamageHandlerBase)
-  commentId: M:PluginAPI.Core.DamageManager.Damage(PlayerStatsSystem.DamageHandlerBase)
-  id: Damage(PlayerStatsSystem.DamageHandlerBase)
-  parent: PluginAPI.Core.DamageManager
-  langs:
-  - csharp
-  - vb
-  name: Damage(DamageHandlerBase)
-  nameWithType: DamageManager.Damage(DamageHandlerBase)
-  fullName: PluginAPI.Core.DamageManager.Damage(PlayerStatsSystem.DamageHandlerBase)
-  type: Method
-  source:
-    remote:
-      path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Damage
-    path: ../NwPluginAPI/Core/DamageManager.cs
-    startLine: 63
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nDamages player.\n"
-  example: []
-  syntax:
-    content: public bool Damage(DamageHandlerBase damageHandlerBase)
-    parameters:
-    - id: damageHandlerBase
-      type: PlayerStatsSystem.DamageHandlerBase
-      description: The damage handler base.
-    return:
-      type: System.Boolean
-      description: Whether or not damaging was successful.
-    content.vb: Public Function Damage(damageHandlerBase As DamageHandlerBase) As Boolean
-  overload: PluginAPI.Core.DamageManager.Damage*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -754,55 +619,3 @@ references:
   name: Player
   nameWithType: Player
   fullName: PluginAPI.Core.Player
-- uid: PluginAPI.Core.DamageManager.Damage*
-  commentId: Overload:PluginAPI.Core.DamageManager.Damage
-  name: Damage
-  nameWithType: DamageManager.Damage
-  fullName: PluginAPI.Core.DamageManager.Damage
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  name: Single
-  nameWithType: Single
-  fullName: System.Single
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: UnityEngine.Vector3
-  commentId: T:UnityEngine.Vector3
-  parent: UnityEngine
-  isExternal: true
-  name: Vector3
-  nameWithType: Vector3
-  fullName: UnityEngine.Vector3
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: UnityEngine
-  commentId: N:UnityEngine
-  isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
-- uid: PlayerStatsSystem.DamageHandlerBase
-  commentId: T:PlayerStatsSystem.DamageHandlerBase
-  parent: PlayerStatsSystem
-  isExternal: true
-  name: DamageHandlerBase
-  nameWithType: DamageHandlerBase
-  fullName: PlayerStatsSystem.DamageHandlerBase
-- uid: PlayerStatsSystem
-  commentId: N:PlayerStatsSystem
-  isExternal: true
-  name: PlayerStatsSystem
-  nameWithType: PlayerStatsSystem
-  fullName: PlayerStatsSystem

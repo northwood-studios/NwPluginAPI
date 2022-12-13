@@ -2,13 +2,21 @@ namespace PluginAPI.Enums
 {
 	using Core.Interfaces;
 	using PlayerRoles;
+	using PlayerRoles.PlayableScps.Scp173;
+	using PlayerRoles.PlayableScps.Scp079;
+	using PlayerRoles.PlayableScps.Scp939;
 	using AdminToys;
 	using PlayerStatsSystem;
 	using Core.Items;
+	using InventorySystem.Items;
 	using InventorySystem.Items.Usables;
 	using InventorySystem.Items.Firearms;
 	using InventorySystem.Items.Pickups;
+	using InventorySystem.Items.ThrowableProjectiles;
 	using Respawning;
+	using UnityEngine;
+	using MapGeneration;
+	using Interactables.Interobjects.DoorUtils;
 
 	/// <summary>
 	/// Represents server event types.
@@ -247,7 +255,7 @@ namespace PluginAPI.Enums
         /// Executed when player interacts with locker.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player.
+        /// Parameters: <see cref="IPlayer"/> player, <see cref="Locker"/> locker, <see cref="byte"/> colliderId, <see cref="bool"/> canAccess.
         /// </remarks>
         PlayerInteractLocker = 30,
 
@@ -528,7 +536,7 @@ namespace PluginAPI.Enums
 		/// Event executed when using remoteadmin command.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="bool"/> arguments.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments.
 		/// </remarks>
 		PlayerRemoteAdminCommand = 67,
 
@@ -536,7 +544,7 @@ namespace PluginAPI.Enums
 		/// Event executed when using game console command.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="bool"/> arguments.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments.
 		/// </remarks>
 		PlayerGameConsoleCommand = 68,
 
@@ -544,7 +552,7 @@ namespace PluginAPI.Enums
 		/// Event executed when using console command.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="string"/> command, <see cref="bool"/> arguments.
+		/// Parameters: <see cref="string"/> command, <see cref="string[]"/> arguments.
 		/// </remarks>
 		ConsoleCommand = 69,
 
@@ -564,5 +572,237 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="SpawnableTeamType"/> team.
 		/// </remarks>
 		TeamRespawn = 71,
+
+		/// <summary>
+		/// Event executed when SCP-106 tries to start/stop stalk mode.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> activate.
+		/// </remarks>
+		Scp106Stalking = 72,
+
+		/// <summary>
+		/// Event executed when player tries enter pocket dimension.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		PlayerEnterPocketDimension = 74,
+
+		/// <summary>
+		/// Event executed when player tries to escape from pocket dimension.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isSuccessful.
+		/// </remarks>
+		PlayerExitPocketDimension = 75,
+
+		/// <summary>
+		/// Event executed when player tries to throw projectile like grenades.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ThrowableItem"/> item, <see cref="float"/> forceAmount, <see cref="float"/> upwardsFactor, <see cref="Vector3"/> torque, <see cref="Vector3"/> velocity.
+		/// </remarks>
+		PlayerThrowProjectile = 76,
+
+		/// <summary>
+		/// Event executed when player tries to activate SCP 914.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		Scp914Activate = 77,
+
+		/// <summary>
+		/// Event executed when player tries to change SCP 914 knob.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		Scp914KnobChange = 78,
+
+		/// <summary>
+		/// Event executed when SCP 914 upgrades player inventory.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// </remarks>
+		Scp914UpgradeInventory = 79,
+
+		/// <summary>
+		/// Event executed when SCP 914 upgrades pickup.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="ItemPickupBase"/> item.
+		/// </remarks>
+		Scp914UpgradePickup = 80,
+
+		/// <summary>
+		/// Event executed when SCP-106 tries to teleport player.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target.
+		/// </remarks>
+		Scp106TeleportPlayer = 81,
+
+		/// <summary>
+		/// Event executed when SCP-173 tries to play sound.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp173AudioPlayer.Scp173SoundId"/> soundId.
+		/// </remarks>
+		Scp173PlaySound = 82,
+
+		/// <summary>
+		/// Event executed when SCP-173 tries to create tantrum.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		Scp173CreateTantrum = 83,
+
+		/// <summary>
+		/// Event executed when SCP-173 tries to start/stop brackneck speeds.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player <see cref="bool"/> activate. 
+		/// </remarks>
+		Scp173BreakneckSpeeds = 84,
+
+		/// <summary>
+		/// Event executed when SCP-173 is seen by player.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player <see cref="IPlayer"/> target. 
+		/// </remarks>
+		Scp173NewObserver = 85,
+
+		/// <summary>
+		/// Event executed when SCP-173 tries to snap player neck.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player <see cref="IPlayer"/> target. 
+		/// </remarks>
+		Scp173SnapPlayer = 100,
+
+		/// <summary>
+		/// Event executed when SCP-939 tries to create amnestic cloud.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player. 
+		/// </remarks>
+		Scp939CreateAmnesticCloud = 86,
+
+		/// <summary>
+		/// Event executed when SCP-939 tries to lunge.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp939LungeState"/> state. 
+		/// </remarks>
+		Scp939Lunge = 87,
+
+		/// <summary>
+		/// Event executed when SCP-939 tries to attack something.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IDestructible"/> target. 
+		/// </remarks>
+		Scp939Attack = 88,
+
+		/// <summary>
+		/// Event executed when SCP-079 gains experience.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="int"/> amount, <see cref="Scp079HudTranslation"/> reason. 
+		/// </remarks>
+		Scp079GainExperience = 89,
+
+		/// <summary>
+		/// Event executed when SCP-079 level ups to new tier.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="int"/> tier. 
+		/// </remarks>
+		Scp079LevelUpTier = 90,
+
+		/// <summary>
+		/// Event executed when SCP-079 tries to use tesla.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="TeslaGate"/> tesla. 
+		/// </remarks>
+		Scp079UseTesla = 91,
+
+		/// <summary>
+		/// Event executed when SCP-079 lockdowns room.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room. 
+		/// </remarks>
+		Scp079LockdownRoom = 92,
+
+		/// <summary>
+		/// Event executed when SCP-079 cancels room lockdown.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room. 
+		/// </remarks>
+		Scp079CancelRoomLockdown = 101,
+
+		/// <summary>
+		/// Event executed when SCP-079 locks door.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door. 
+		/// </remarks>
+		Scp079LockDoor = 93,
+
+		/// <summary>
+		/// Event executed when SCP-079 unlocks door.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door. 
+		/// </remarks>
+		Scp079UnlockDoor = 94,
+
+		/// <summary>
+		/// Event executed when SCP-079 blackouts zone.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="FacilityZone"/> zone. 
+		/// </remarks>
+		Scp079BlackoutZone = 95,
+
+		/// <summary>
+		/// Event executed when SCP-079 blackouts room.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room. 
+		/// </remarks>
+		Scp079BlackoutRoom = 96,
+
+		/// <summary>
+		/// Event executed when SCP-049 resurrects body.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="Ragdoll"/> body. 
+		/// </remarks>
+		Scp049ResurrectBody = 97,
+
+		/// <summary>
+		/// Event executed when SCP-049 starts resurrecting body.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="Ragdoll"/> body, <see cref="bool"/> canResurrect. 
+		/// </remarks>
+		Scp049StartResurrectingBody = 98,
+
+		/// <summary>
+		/// Event executed when player tries to interact with door.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door, <see cref="bool"/> canOpen. 
+		/// </remarks>
+		PlayerInteractDoor = 99,
 	}
 }

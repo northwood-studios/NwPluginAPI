@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityGate
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 12
@@ -77,8 +77,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 17
@@ -116,8 +116,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 22
@@ -155,8 +155,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 27
@@ -190,8 +190,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PryPositions
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 32
@@ -227,8 +227,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 39

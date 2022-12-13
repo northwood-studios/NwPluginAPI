@@ -5,10 +5,10 @@ namespace PluginAPI.Enums
 	/// </summary>
 	public enum LoadPriority : byte
 	{
-		Lowest = 0,
-		Low = 1,
-		Medium = 2,
-		High = 3,
-		Highest = 4
+		Highest = 64,
+		High = 96,
+		Medium = 128,
+		Low = 160,
+		Lowest = 192
 	}
 }

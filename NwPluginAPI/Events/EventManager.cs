@@ -22,6 +22,14 @@ namespace PluginAPI.Events
 	using Enums;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 	using Respawning;
+	using PluginAPI.Loader;
+	using InventorySystem.Items.ThrowableProjectiles;
+	using PlayerRoles.PlayableScps.Scp173;
+	using PlayerRoles.PlayableScps.Scp079;
+	using MapGeneration;
+	using Interactables.Interobjects.DoorUtils;
+	using UnityEngine;
+	using PlayerRoles.PlayableScps.Scp939;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -127,7 +135,10 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerInteractElevator, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.PlayerInteractLocker, new Event(
-				new EventParameter(typeof(IPlayer), "player")) },
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Locker), "locker"),
+				new EventParameter(typeof(byte), "colliderId"),
+				new EventParameter(typeof(bool), "canOpen")) },
 			{ ServerEventType.PlayerInteractScp330, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.PlayerInteractShootingTarget, new Event(
@@ -251,6 +262,96 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(SpawnableTeamType), "team")) },
 			{ ServerEventType.TeamRespawnSelected, new Event(
 				new EventParameter(typeof(SpawnableTeamType), "team")) },
+			{ ServerEventType.Scp106Stalking, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "activated")) },
+			{ ServerEventType.PlayerEnterPocketDimension, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.PlayerExitPocketDimension, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "isSuccessful")) },
+			{ ServerEventType.PlayerThrowProjectile, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(ThrowableItem), "item"),
+				new EventParameter(typeof(float), "forceAmount"),
+				new EventParameter(typeof(float), "upwardsFactor"),
+				new EventParameter(typeof(Vector3), "torque"),
+				new EventParameter(typeof(Vector3), "velocity")) },
+			{ ServerEventType.Scp914Activate, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp914KnobChange, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp914UpgradeInventory, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(ItemBase), "item")) },
+			{ ServerEventType.Scp914UpgradePickup, new Event(
+				new EventParameter(typeof(ItemPickupBase), "item")) },
+			{ ServerEventType.Scp106TeleportPlayer, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target")) },
+			{ ServerEventType.Scp173PlaySound, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Scp173AudioPlayer.Scp173SoundId), "soundId")) },
+			{ ServerEventType.Scp173CreateTantrum, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp173BreakneckSpeeds, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "activate")) },
+			{ ServerEventType.Scp173NewObserver, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target")) },
+			{ ServerEventType.Scp173SnapPlayer, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target")) },
+			{ ServerEventType.Scp939CreateAmnesticCloud, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.Scp939Lunge, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Scp939LungeState), "state")) },
+			{ ServerEventType.Scp939Attack, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IDestructible), "target")) },
+			{ ServerEventType.Scp079GainExperience, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(int), "amount"),
+				new EventParameter(typeof(Scp079HudTranslation), "reason")) },
+			{ ServerEventType.Scp079LevelUpTier, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(int), "tier")) },
+			{ ServerEventType.Scp079UseTesla, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(TeslaGate), "tesla")) },
+			{ ServerEventType.Scp079LockdownRoom, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(RoomIdentifier), "room")) },
+			{ ServerEventType.Scp079CancelRoomLockdown, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(RoomIdentifier), "room")) },
+			{ ServerEventType.Scp079LockDoor, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(DoorVariant), "door")) },
+			{ ServerEventType.Scp079UnlockDoor, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(DoorVariant), "door")) },
+			{ ServerEventType.Scp079BlackoutZone, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(FacilityZone), "zone")) },
+			{ ServerEventType.Scp079BlackoutRoom, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(RoomIdentifier), "room")) },
+			{ ServerEventType.Scp049ResurrectBody, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target"),
+				new EventParameter(typeof(Ragdoll), "body")) },
+			{ ServerEventType.Scp049StartResurrectingBody, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "target"),
+				new EventParameter(typeof(Ragdoll), "body"),
+				new EventParameter(typeof(bool), "canResurrct")) },
+			{ ServerEventType.PlayerInteractDoor, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(DoorVariant), "door"),
+				new EventParameter(typeof(bool), "canOpen")) },
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
@@ -275,6 +376,64 @@ namespace PluginAPI.Events
 		}
 
 		/// <summary>
+		/// Registers all events in plugin.
+		/// </summary>
+		/// <param name="plugin">The object of plugin.</param>
+		public static void RegisterAllEvents(object plugin)
+		{
+			Type pluginType = plugin.GetType();
+
+			if (!AssemblyLoader.PluginToAssembly.TryGetValue(plugin, out Assembly assembly)) return;
+			
+			foreach(var type in assembly.GetTypes().Where(x => x.IsClass))
+			{
+				bool foundEvents = false;
+				foreach (var method in type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
+				{
+					foreach (var attribute in method.GetCustomAttributes<Attribute>())
+					{
+						switch (attribute)
+						{
+							case PluginEvent _:
+								foundEvents = true;
+								break;
+						}
+					}
+				}
+
+				if (foundEvents)
+				{
+					if (!EventHandlers.TryGetValue(type, out object handler))
+					{
+						handler = Activator.CreateInstance(type);
+						EventHandlers.Add(type, handler);
+					}
+
+					RegisterEvents(plugin, handler);
+				}
+			}
+		}
+
+		/// <summary>
+		/// Registers all events in plugin.
+		/// </summary>
+		/// <param name="plugin">The object of plugin.</param>
+		public static void UnregisterAllEvents(object plugin)
+		{
+			Type pluginType = plugin.GetType();
+
+			foreach(var handler in Events
+				.SelectMany(x => 
+					x.Value.Invokers.Where(y => y.Key == pluginType))
+				.SelectMany(x => 
+					x.Value.Select(y => y.Target))
+				.Distinct())
+			{
+				UnregisterEvents(pluginType, handler);
+			}
+		}
+
+		/// <summary>
 		/// Registers events in plugin.
 		/// </summary>
 		/// <param name="plugin">The object of plugin.</param>
@@ -282,6 +441,16 @@ namespace PluginAPI.Events
 		{
 			Type type = plugin.GetType();
 			RegisterEvents(type, plugin);
+		}
+
+		/// <summary>
+		/// Unregisters events in plugin.
+		/// </summary>
+		/// <param name="plugin">The object of plugin.</param>
+		public static void UnregisterEvents(object plugin)
+		{
+			Type type = plugin.GetType();
+			UnregisterEvents(type, plugin);
 		}
 
 		/// <summary>
@@ -300,6 +469,17 @@ namespace PluginAPI.Events
 		}
 
 		/// <summary>
+		/// Unregisters events in type of plugin.
+		/// </summary>
+		/// <param name="plugin">The object of plugin.</param>
+		public static void UnregisterEvents<T>(object plugin) where T : class
+		{
+			if (!EventHandlers.TryGetValue(typeof(T), out object handler)) return;
+
+			RegisterEvents(plugin.GetType(), handler);
+		}
+
+		/// <summary>
 		/// Registers events in type of plugin.
 		/// </summary>
 		/// <param name="plugin">The object of plugin.</param>
@@ -307,41 +487,72 @@ namespace PluginAPI.Events
 		public static void RegisterEvents(object plugin, object eventHandler) => RegisterEvents(plugin.GetType(), eventHandler);
 
 		/// <summary>
+		/// Unregisters events in type of plugin.
+		/// </summary>
+		/// <param name="plugin">The object of plugin.</param>
+		/// <param name="eventHandler">The event handler.</param>
+		public static void UnregisterEvents(object plugin, object eventHandler) => UnregisterEvents(plugin.GetType(), eventHandler);
+
+
+		/// <summary>
 		/// Registers events in plugin.
-		/// </summary>>The o
-		/// <param name="plugin"bject of plugin.</param>
+		/// </summary>>
+		/// <param name="plugin">Object of plugin.</param>
 		/// <param name="eventHandler">The event handler.</param>
 		static void RegisterEvents(Type plugin, object eventHandler)
 		{
             foreach (var method in eventHandler.GetType().GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
-                var attribute = method.GetCustomAttribute<Attribute>();
-
-                switch (attribute)
+				foreach(var attribute in method.GetCustomAttributes<Attribute>())
 				{
-					case PluginEvent pluginEvent:
+					switch (attribute)
+					{
+						case PluginEvent pluginEvent:
 
-						if (!Events.TryGetValue(pluginEvent.EventType, out Event ev))
-						{
-							Log.Error($"Event &6{pluginEvent.EventType}&r is not registered in manager! ( create issue on github )");
-							continue;
-						}
+							if (!Events.TryGetValue(pluginEvent.EventType, out Event ev))
+							{
+								Log.Error($"Event &6{pluginEvent.EventType}&r is not registered in manager! ( create issue on github )");
+								continue;
+							}
 
-                        var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
+							var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
 
-						if (!ValidateEvent(eventParameters, ev.Parameters.Select(x => x.BaseType).ToArray()))
-						{
-                            Log.Error($"Event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", ev.Parameters.Select(p => p.BaseType.Name)))}.");
-                            continue;
-						}
+							if (!ValidateEvent(eventParameters, ev.Parameters.Select(x => x.BaseType).ToArray()))
+							{
+								Log.Error($"Event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", ev.Parameters.Select(p => p.BaseType.Name)))}.");
+								continue;
+							}
 
-						ev.RegisterInvoker(plugin, eventHandler, method);
+							ev.RegisterInvoker(plugin, eventHandler, method);
 
-                        Log.Debug($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
-                        break;
-				}
+							Log.Debug($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
+							break;
+					}
+				}          
 			}
         }
+
+		/// <summary>
+		/// Unregisters events in plugin.
+		/// </summary>>
+		/// <param name="plugin">Object of plugin.</param>
+		/// <param name="eventHandler">The event handler.</param>
+		static void UnregisterEvents(Type plugin, object eventHandler)
+		{
+			foreach(var ev in Events)
+			{
+				foreach(var invoker in ev.Value.Invokers)
+				{
+					foreach(var location in invoker.Value.ToArray())
+					{
+						if (location.Target != eventHandler) continue;
+
+						invoker.Value.Remove(location);
+						Log.Debug($"Unregistered event &6{location.Method.Name}&r (&6{ev.Key}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
+					}
+				}
+			}
+		}
 
 		internal static PlayerFactory GetPlayerFactory(EventInvokeLocation ev)
 		{
@@ -372,17 +583,6 @@ namespace PluginAPI.Events
 			{
 				Log.Error($"Event &6{type}&r is not registered in manager! ( create issue on github )");
 				return default;
-			}
-
-			switch (type)
-			{
-				case ServerEventType.PlayerJoined:
-					if (!(args[0] is IGameComponent component)) break;
-
-					if (!Player.TryGet(component, out Player plr)) break;
-
-					Player.PlayersUserIds.Add(plr.UserId, component);
-					break;
 			}
 
 			bool isBool = typeof(T) == typeof(bool);

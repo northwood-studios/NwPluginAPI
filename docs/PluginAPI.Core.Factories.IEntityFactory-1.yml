@@ -5,6 +5,7 @@ items:
   id: IEntityFactory`1
   parent: PluginAPI.Core.Factories
   children:
+  - PluginAPI.Core.Factories.IEntityFactory`1.AddIfNotExists(PluginAPI.Core.Interfaces.IGameComponent)
   - PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
   - PluginAPI.Core.Factories.IEntityFactory`1.Get
   - PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
@@ -18,8 +19,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IEntityFactory
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 10
@@ -60,8 +61,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 12
@@ -93,8 +94,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetOrAdd
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 13
@@ -112,6 +113,37 @@ items:
   overload: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd*
   nameWithType.vb: IEntityFactory(Of TEntity).GetOrAdd(IGameComponent)
   fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
+- uid: PluginAPI.Core.Factories.IEntityFactory`1.AddIfNotExists(PluginAPI.Core.Interfaces.IGameComponent)
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.AddIfNotExists(PluginAPI.Core.Interfaces.IGameComponent)
+  id: AddIfNotExists(PluginAPI.Core.Interfaces.IGameComponent)
+  parent: PluginAPI.Core.Factories.IEntityFactory`1
+  langs:
+  - csharp
+  - vb
+  name: AddIfNotExists(IGameComponent)
+  nameWithType: IEntityFactory<TEntity>.AddIfNotExists(IGameComponent)
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.AddIfNotExists(PluginAPI.Core.Interfaces.IGameComponent)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Factories/IEntityFactory.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: AddIfNotExists
+    path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
+    startLine: 14
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Factories
+  syntax:
+    content: void AddIfNotExists(IGameComponent component)
+    parameters:
+    - id: component
+      type: PluginAPI.Core.Interfaces.IGameComponent
+    content.vb: Sub AddIfNotExists(component As IGameComponent)
+  overload: PluginAPI.Core.Factories.IEntityFactory`1.AddIfNotExists*
+  nameWithType.vb: IEntityFactory(Of TEntity).AddIfNotExists(IGameComponent)
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).AddIfNotExists(PluginAPI.Core.Interfaces.IGameComponent)
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.Get
   commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.Get
   id: Get
@@ -126,11 +158,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -183,6 +215,13 @@ references:
   fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.GetOrAdd
   nameWithType.vb: IEntityFactory(Of TEntity).GetOrAdd
   fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).GetOrAdd
+- uid: PluginAPI.Core.Factories.IEntityFactory`1.AddIfNotExists*
+  commentId: Overload:PluginAPI.Core.Factories.IEntityFactory`1.AddIfNotExists
+  name: AddIfNotExists
+  nameWithType: IEntityFactory<TEntity>.AddIfNotExists
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.AddIfNotExists
+  nameWithType.vb: IEntityFactory(Of TEntity).AddIfNotExists
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).AddIfNotExists
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.Get*
   commentId: Overload:PluginAPI.Core.Factories.IEntityFactory`1.Get
   name: Get

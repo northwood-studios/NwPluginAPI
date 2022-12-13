@@ -22,9 +22,13 @@
 
 	public class MainClass
     {
+		public static MainClass Singleton { get; private set; }
+
+		[PluginPriority(LoadPriority.Highest)]
         [PluginEntryPoint("Template Plugin", "1.0.0", "Just a template plugin.", "Northwood")]
         void LoadPlugin()
         {
+			Singleton = this;
             Log.Info("Loaded plugin, register events...");
             EventManager.RegisterEvents(this);
 			EventManager.RegisterEvents<EventHandlers>(this);
@@ -38,6 +42,20 @@
 			Log.Info(handler.PluginFilePath);
 			Log.Info(handler.PluginDirectoryPath);
 
+			List<string> modules = new List<string>()
+			{
+				"something1",
+			};
+
+			foreach(var module in modules)
+			{
+				if (!PluginConfig.DictionaryValue.ContainsKey(module))
+				{
+					PluginConfig.DictionaryValue.Add(module, "yes");
+					handler.SaveConfig(this, nameof(PluginConfig));
+				}
+			}
+
 			PluginConfig.StringValue = "test Value";
 			handler.SaveConfig(this, nameof(PluginConfig));
 
@@ -50,7 +68,7 @@
         {
             Log.Info($"Player &6{player.UserId}&r joined this server with &1{player.Test}&4");
 
-            foreach(var plr in Player.GetPlayers<MyPlayer>())
+            foreach(var plr in Player.GetPlayers())
             {
                 Log.Info($"Player online &6{plr.Nickname}&r, role &6{plr.Role}&r");
             }
@@ -386,9 +404,9 @@
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractLocker)]
-		void OnInteractWithLocker(MyPlayer plr)
+		void OnInteractWithLocker(MyPlayer plr, Locker locker, byte colliderId, bool canAccess)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with locker.");
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) {(canAccess ? "interacted" : "failed to interact")} with locker and chamberId &2{colliderId}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractElevator)]
@@ -396,7 +414,6 @@
 		{
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with elevator.");
 		}
-
 
 		[PluginEvent(ServerEventType.PlayerInteractScp330)]
 		void OnInteractWithScp330(MyPlayer plr)

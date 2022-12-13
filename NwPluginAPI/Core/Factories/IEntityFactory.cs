@@ -12,6 +12,7 @@
     {
 	    TEntity Create(IGameComponent component);
         TEntity GetOrAdd(IGameComponent component);
+		void AddIfNotExists(IGameComponent component);
         IEnumerable<TEntity> Get();
     }
 }

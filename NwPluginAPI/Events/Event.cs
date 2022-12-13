@@ -46,7 +46,7 @@ namespace PluginAPI.Events
 
 		public object[] RegenerateParameters(EventInvokeLocation invoker, object[] parameters)
 		{
-			object[] regeneratedParameters = parameters;
+			object[] regeneratedParameters = parameters.ToArray();
 
 			foreach (var index in IndexesToRegenerate)
 			{

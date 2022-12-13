@@ -13,9 +13,13 @@ items:
   - PluginAPI.Core.Player.Camera
   - PluginAPI.Core.Player.ClearBroadcasts
   - PluginAPI.Core.Player.Connection
+  - PluginAPI.Core.Player.ConnectionsCount
   - PluginAPI.Core.Player.Count
   - PluginAPI.Core.Player.CurrentItem
   - PluginAPI.Core.Player.CustomInfo
+  - PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  - PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
+  - PluginAPI.Core.Player.Damage(System.Single,System.String,System.String)
   - PluginAPI.Core.Player.DamageManager
   - PluginAPI.Core.Player.DisarmedBy
   - PluginAPI.Core.Player.Disconnect(System.String)
@@ -25,6 +29,12 @@ items:
   - PluginAPI.Core.Player.DropEverything
   - PluginAPI.Core.Player.EffectsManager
   - PluginAPI.Core.Player.GameObject
+  - PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+  - PluginAPI.Core.Player.Get(ReferenceHub)
+  - PluginAPI.Core.Player.Get(System.Int32)
+  - PluginAPI.Core.Player.Get(System.String)
+  - PluginAPI.Core.Player.Get(System.UInt32)
+  - PluginAPI.Core.Player.Get(UnityEngine.GameObject)
   - PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
   - PluginAPI.Core.Player.Get``1(ReferenceHub)
   - PluginAPI.Core.Player.Get``1(System.Int32)
@@ -32,8 +42,10 @@ items:
   - PluginAPI.Core.Player.Get``1(System.UInt32)
   - PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
   - PluginAPI.Core.Player.GetAmmo(ItemType)
+  - PluginAPI.Core.Player.GetByName(System.String)
   - PluginAPI.Core.Player.GetByName``1(System.String)
   - PluginAPI.Core.Player.GetComponent``1(System.Boolean)
+  - PluginAPI.Core.Player.GetPlayers
   - PluginAPI.Core.Player.GetPlayers``1
   - PluginAPI.Core.Player.GetStatModule``1
   - PluginAPI.Core.Player.Heal(System.Single)
@@ -58,11 +70,14 @@ items:
   - PluginAPI.Core.Player.IsUsingVoiceChat
   - PluginAPI.Core.Player.Kick(PluginAPI.Core.Interfaces.IPlayer,System.String)
   - PluginAPI.Core.Player.Kick(System.String)
+  - PluginAPI.Core.Player.Kill
+  - PluginAPI.Core.Player.Kill(System.String,System.String)
   - PluginAPI.Core.Player.MaxArtificalHealth
   - PluginAPI.Core.Player.MaxHealth
   - PluginAPI.Core.Player.Mute(System.Boolean)
   - PluginAPI.Core.Player.NetworkId
   - PluginAPI.Core.Player.Nickname
+  - PluginAPI.Core.Player.NonVerifiedCount
   - PluginAPI.Core.Player.OnDestroy
   - PluginAPI.Core.Player.OnFixedUpdate
   - PluginAPI.Core.Player.OnLateUpdate
@@ -70,6 +85,7 @@ items:
   - PluginAPI.Core.Player.OnUpdate
   - PluginAPI.Core.Player.PlayerId
   - PluginAPI.Core.Player.PlayerInfo
+  - PluginAPI.Core.Player.PlayersUserIds
   - PluginAPI.Core.Player.Position
   - PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
   - PluginAPI.Core.Player.ReceiveHint(System.String,System.Single)
@@ -85,6 +101,13 @@ items:
   - PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
   - PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
   - PluginAPI.Core.Player.TemporaryData
+  - PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet(PluginAPI.Core.Interfaces.IGameComponent,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet(ReferenceHub,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet(System.Int32,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet(System.String,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet(System.UInt32,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
   - PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
   - PluginAPI.Core.Player.TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
   - PluginAPI.Core.Player.TryGet``1(ReferenceHub,``0@)
@@ -92,6 +115,7 @@ items:
   - PluginAPI.Core.Player.TryGet``1(System.String,``0@)
   - PluginAPI.Core.Player.TryGet``1(System.UInt32,``0@)
   - PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  - PluginAPI.Core.Player.TryGetByName(System.String,PluginAPI.Core.Player@)
   - PluginAPI.Core.Player.TryGetByName``1(System.String,``0@)
   - PluginAPI.Core.Player.TryGetComponent``1(``0@,System.Boolean)
   - PluginAPI.Core.Player.Unmute(System.Boolean)
@@ -106,11 +130,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Player
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -145,6 +169,39 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: PluginAPI.Core.Player.PlayersUserIds
+  commentId: F:PluginAPI.Core.Player.PlayersUserIds
+  id: PlayersUserIds
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: PlayersUserIds
+  nameWithType: Player.PlayersUserIds
+  fullName: PluginAPI.Core.Player.PlayersUserIds
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayersUserIds
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public static Dictionary<string, IGameComponent> PlayersUserIds
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,PluginAPI.Core.Interfaces.IGameComponent}
+    content.vb: Public Shared PlayersUserIds As Dictionary(Of String, IGameComponent)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.Count
   commentId: P:PluginAPI.Core.Player.Count
   id: Count
@@ -159,11 +216,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -184,6 +241,120 @@ items:
   - Public
   - Shared
   - ReadOnly
+- uid: PluginAPI.Core.Player.NonVerifiedCount
+  commentId: P:PluginAPI.Core.Player.NonVerifiedCount
+  id: NonVerifiedCount
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: NonVerifiedCount
+  nameWithType: Player.NonVerifiedCount
+  fullName: PluginAPI.Core.Player.NonVerifiedCount
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: NonVerifiedCount
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 49
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the amount of not verified players\n"
+  example: []
+  syntax:
+    content: public static int NonVerifiedCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property NonVerifiedCount As Integer
+  overload: PluginAPI.Core.Player.NonVerifiedCount*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Player.ConnectionsCount
+  commentId: P:PluginAPI.Core.Player.ConnectionsCount
+  id: ConnectionsCount
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: ConnectionsCount
+  nameWithType: Player.ConnectionsCount
+  fullName: PluginAPI.Core.Player.ConnectionsCount
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ConnectionsCount
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 54
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the amount of connected players.\n"
+  example: []
+  syntax:
+    content: public static int ConnectionsCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property ConnectionsCount As Integer
+  overload: PluginAPI.Core.Player.ConnectionsCount*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Player.GetPlayers
+  commentId: M:PluginAPI.Core.Player.GetPlayers
+  id: GetPlayers
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GetPlayers()
+  nameWithType: Player.GetPlayers()
+  fullName: PluginAPI.Core.Player.GetPlayers()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetPlayers
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 63
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets all players.\n"
+  example: []
+  syntax:
+    content: public static List<Player> GetPlayers()
+    return:
+      type: System.Collections.Generic.List{PluginAPI.Core.Player}
+    content.vb: Public Shared Function GetPlayers As List(Of Player)
+  overload: PluginAPI.Core.Player.GetPlayers*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.GetPlayers``1
   commentId: M:PluginAPI.Core.Player.GetPlayers``1
   id: GetPlayers``1
@@ -198,11 +369,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetPlayers
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 45
+    startLine: 68
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -227,6 +398,50 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.GetPlayers(Of T)()
   name.vb: GetPlayers(Of T)()
+- uid: PluginAPI.Core.Player.TryGet(PluginAPI.Core.Interfaces.IGameComponent,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(PluginAPI.Core.Interfaces.IGameComponent,PluginAPI.Core.Player@)
+  id: TryGet(PluginAPI.Core.Interfaces.IGameComponent,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet(IGameComponent, out Player)
+  nameWithType: Player.TryGet(IGameComponent, out Player)
+  fullName: PluginAPI.Core.Player.TryGet(PluginAPI.Core.Interfaces.IGameComponent, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 90
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"PluginAPI.Core.Interfaces.IGameComponent\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static bool TryGet(IGameComponent component, out Player player)
+    parameters:
+    - id: component
+      type: PluginAPI.Core.Interfaces.IGameComponent
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryGet(component As IGameComponent, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(IGameComponent, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(PluginAPI.Core.Interfaces.IGameComponent, ByRef PluginAPI.Core.Player)
+  name.vb: TryGet(IGameComponent, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
   commentId: M:PluginAPI.Core.Player.TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
   id: TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,``0@)
@@ -241,11 +456,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 71
+    startLine: 95
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -275,6 +490,45 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(PluginAPI.Core.Interfaces.IGameComponent, ByRef T)
   name.vb: TryGet(Of T)(IGameComponent, ByRef T)
+- uid: PluginAPI.Core.Player.Get(UnityEngine.GameObject)
+  commentId: M:PluginAPI.Core.Player.Get(UnityEngine.GameObject)
+  id: Get(UnityEngine.GameObject)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get(GameObject)
+  nameWithType: Player.Get(GameObject)
+  fullName: PluginAPI.Core.Player.Get(UnityEngine.GameObject)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 118
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static Player Get(GameObject gameObject)
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Shared Function Get(gameObject As GameObject) As Player
+  overload: PluginAPI.Core.Player.Get*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
   commentId: M:PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
   id: Get``1(UnityEngine.GameObject)
@@ -289,11 +543,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 94
+    startLine: 123
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -321,6 +575,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.Get(Of T)(UnityEngine.GameObject)
   name.vb: Get(Of T)(GameObject)
+- uid: PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
+  id: TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet(GameObject, out Player)
+  nameWithType: Player.TryGet(GameObject, out Player)
+  fullName: PluginAPI.Core.Player.TryGet(UnityEngine.GameObject, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 133
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static bool TryGet(GameObject gameObject, out Player player)
+    parameters:
+    - id: gameObject
+      type: UnityEngine.GameObject
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(gameObject As GameObject, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(GameObject, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(UnityEngine.GameObject, ByRef PluginAPI.Core.Player)
+  name.vb: TryGet(GameObject, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
   commentId: M:PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
   id: TryGet``1(UnityEngine.GameObject,``0@)
@@ -335,11 +634,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 104
+    startLine: 139
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -370,6 +669,45 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(UnityEngine.GameObject, ByRef T)
   name.vb: TryGet(Of T)(GameObject, ByRef T)
+- uid: PluginAPI.Core.Player.Get(ReferenceHub)
+  commentId: M:PluginAPI.Core.Player.Get(ReferenceHub)
+  id: Get(ReferenceHub)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get(ReferenceHub)
+  nameWithType: Player.Get(ReferenceHub)
+  fullName: PluginAPI.Core.Player.Get(ReferenceHub)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 169
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"ReferenceHub\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static Player Get(ReferenceHub hub)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Shared Function Get(hub As ReferenceHub) As Player
+  overload: PluginAPI.Core.Player.Get*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.Get``1(ReferenceHub)
   commentId: M:PluginAPI.Core.Player.Get``1(ReferenceHub)
   id: Get``1(ReferenceHub)
@@ -384,11 +722,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 133
+    startLine: 174
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -416,6 +754,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.Get(Of T)(ReferenceHub)
   name.vb: Get(Of T)(ReferenceHub)
+- uid: PluginAPI.Core.Player.TryGet(ReferenceHub,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(ReferenceHub,PluginAPI.Core.Player@)
+  id: TryGet(ReferenceHub,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet(ReferenceHub, out Player)
+  nameWithType: Player.TryGet(ReferenceHub, out Player)
+  fullName: PluginAPI.Core.Player.TryGet(ReferenceHub, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 184
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"ReferenceHub\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static bool TryGet(ReferenceHub hub, out Player player)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(hub As ReferenceHub, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(ReferenceHub, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(ReferenceHub, ByRef PluginAPI.Core.Player)
+  name.vb: TryGet(ReferenceHub, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGet``1(ReferenceHub,``0@)
   commentId: M:PluginAPI.Core.Player.TryGet``1(ReferenceHub,``0@)
   id: TryGet``1(ReferenceHub,``0@)
@@ -430,11 +813,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 143
+    startLine: 190
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -465,6 +848,45 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(ReferenceHub, ByRef T)
   name.vb: TryGet(Of T)(ReferenceHub, ByRef T)
+- uid: PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+  commentId: M:PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+  id: Get(Mirror.NetworkIdentity)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get(NetworkIdentity)
+  nameWithType: Player.Get(NetworkIdentity)
+  fullName: PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 214
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"Mirror.NetworkIdentity\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static Player Get(NetworkIdentity netIdentity)
+    parameters:
+    - id: netIdentity
+      type: Mirror.NetworkIdentity
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Shared Function Get(netIdentity As NetworkIdentity) As Player
+  overload: PluginAPI.Core.Player.Get*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
   commentId: M:PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
   id: Get``1(Mirror.NetworkIdentity)
@@ -479,11 +901,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 166
+    startLine: 219
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -511,6 +933,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.Get(Of T)(Mirror.NetworkIdentity)
   name.vb: Get(Of T)(NetworkIdentity)
+- uid: PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
+  id: TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet(NetworkIdentity, out Player)
+  nameWithType: Player.TryGet(NetworkIdentity, out Player)
+  fullName: PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 229
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> associated with the <xref href=\"Mirror.NetworkIdentity\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static bool TryGet(NetworkIdentity netIdentity, out Player player)
+    parameters:
+    - id: netIdentity
+      type: Mirror.NetworkIdentity
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(netIdentity As NetworkIdentity, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(NetworkIdentity, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity, ByRef PluginAPI.Core.Player)
+  name.vb: TryGet(NetworkIdentity, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
   commentId: M:PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
   id: TryGet``1(Mirror.NetworkIdentity,``0@)
@@ -525,11 +992,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 176
+    startLine: 235
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -560,6 +1027,45 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(Mirror.NetworkIdentity, ByRef T)
   name.vb: TryGet(Of T)(NetworkIdentity, ByRef T)
+- uid: PluginAPI.Core.Player.GetByName(System.String)
+  commentId: M:PluginAPI.Core.Player.GetByName(System.String)
+  id: GetByName(System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: GetByName(String)
+  nameWithType: Player.GetByName(String)
+  fullName: PluginAPI.Core.Player.GetByName(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: GetByName
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 258
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their name.\n"
+  example: []
+  syntax:
+    content: public static Player GetByName(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Shared Function GetByName(name As String) As Player
+  overload: PluginAPI.Core.Player.GetByName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.GetByName``1(System.String)
   commentId: M:PluginAPI.Core.Player.GetByName``1(System.String)
   id: GetByName``1(System.String)
@@ -574,11 +1080,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetByName
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 199
+    startLine: 263
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -606,6 +1112,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.GetByName(Of T)(System.String)
   name.vb: GetByName(Of T)(String)
+- uid: PluginAPI.Core.Player.TryGetByName(System.String,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGetByName(System.String,PluginAPI.Core.Player@)
+  id: TryGetByName(System.String,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGetByName(String, out Player)
+  nameWithType: Player.TryGetByName(String, out Player)
+  fullName: PluginAPI.Core.Player.TryGetByName(System.String, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGetByName
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 273
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their name.\n"
+  example: []
+  syntax:
+    content: public static bool TryGetByName(string name, out Player player)
+    parameters:
+    - id: name
+      type: System.String
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGetByName(name As String, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGetByName*
+  nameWithType.vb: Player.TryGetByName(String, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGetByName(System.String, ByRef PluginAPI.Core.Player)
+  name.vb: TryGetByName(String, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGetByName``1(System.String,``0@)
   commentId: M:PluginAPI.Core.Player.TryGetByName``1(System.String,``0@)
   id: TryGetByName``1(System.String,``0@)
@@ -620,11 +1171,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetByName
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 209
+    startLine: 279
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -655,6 +1206,45 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.TryGetByName(Of T)(System.String, ByRef T)
   name.vb: TryGetByName(Of T)(String, ByRef T)
+- uid: PluginAPI.Core.Player.Get(System.Int32)
+  commentId: M:PluginAPI.Core.Player.Get(System.Int32)
+  id: Get(System.Int32)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get(Int32)
+  nameWithType: Player.Get(Int32)
+  fullName: PluginAPI.Core.Player.Get(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 314
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their player id.\n"
+  example: []
+  syntax:
+    content: public static Player Get(int playerId)
+    parameters:
+    - id: playerId
+      type: System.Int32
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Shared Function Get(playerId As Integer) As Player
+  overload: PluginAPI.Core.Player.Get*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.Get``1(System.Int32)
   commentId: M:PluginAPI.Core.Player.Get``1(System.Int32)
   id: Get``1(System.Int32)
@@ -669,11 +1259,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 244
+    startLine: 319
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -701,6 +1291,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.Get(Of T)(System.Int32)
   name.vb: Get(Of T)(Int32)
+- uid: PluginAPI.Core.Player.TryGet(System.Int32,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(System.Int32,PluginAPI.Core.Player@)
+  id: TryGet(System.Int32,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet(Int32, out Player)
+  nameWithType: Player.TryGet(Int32, out Player)
+  fullName: PluginAPI.Core.Player.TryGet(System.Int32, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 329
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their player id.\n"
+  example: []
+  syntax:
+    content: public static bool TryGet(int playerId, out Player player)
+    parameters:
+    - id: playerId
+      type: System.Int32
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(playerId As Integer, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(Int32, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(System.Int32, ByRef PluginAPI.Core.Player)
+  name.vb: TryGet(Int32, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGet``1(System.Int32,``0@)
   commentId: M:PluginAPI.Core.Player.TryGet``1(System.Int32,``0@)
   id: TryGet``1(System.Int32,``0@)
@@ -715,11 +1350,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 254
+    startLine: 335
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -750,6 +1385,45 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(System.Int32, ByRef T)
   name.vb: TryGet(Of T)(Int32, ByRef T)
+- uid: PluginAPI.Core.Player.Get(System.String)
+  commentId: M:PluginAPI.Core.Player.Get(System.String)
+  id: Get(System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get(String)
+  nameWithType: Player.Get(String)
+  fullName: PluginAPI.Core.Player.Get(System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 359
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their user id.\n"
+  example: []
+  syntax:
+    content: public static Player Get(string userId)
+    parameters:
+    - id: userId
+      type: System.String
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Shared Function Get(userId As String) As Player
+  overload: PluginAPI.Core.Player.Get*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.Get``1(System.String)
   commentId: M:PluginAPI.Core.Player.Get``1(System.String)
   id: Get``1(System.String)
@@ -764,11 +1438,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 278
+    startLine: 364
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -796,6 +1470,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.Get(Of T)(System.String)
   name.vb: Get(Of T)(String)
+- uid: PluginAPI.Core.Player.TryGet(System.String,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(System.String,PluginAPI.Core.Player@)
+  id: TryGet(System.String,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet(String, out Player)
+  nameWithType: Player.TryGet(String, out Player)
+  fullName: PluginAPI.Core.Player.TryGet(System.String, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 374
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their user id.\n"
+  example: []
+  syntax:
+    content: public static bool TryGet(string userId, out Player player)
+    parameters:
+    - id: userId
+      type: System.String
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(userId As String, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(String, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(System.String, ByRef PluginAPI.Core.Player)
+  name.vb: TryGet(String, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGet``1(System.String,``0@)
   commentId: M:PluginAPI.Core.Player.TryGet``1(System.String,``0@)
   id: TryGet``1(System.String,``0@)
@@ -810,11 +1529,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 288
+    startLine: 380
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -845,6 +1564,45 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(System.String, ByRef T)
   name.vb: TryGet(Of T)(String, ByRef T)
+- uid: PluginAPI.Core.Player.Get(System.UInt32)
+  commentId: M:PluginAPI.Core.Player.Get(System.UInt32)
+  id: Get(System.UInt32)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Get(UInt32)
+  nameWithType: Player.Get(UInt32)
+  fullName: PluginAPI.Core.Player.Get(System.UInt32)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Get
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 410
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their network id.\n"
+  example: []
+  syntax:
+    content: public static Player Get(uint networkId)
+    parameters:
+    - id: networkId
+      type: System.UInt32
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public Shared Function Get(networkId As UInteger) As Player
+  overload: PluginAPI.Core.Player.Get*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Player.Get``1(System.UInt32)
   commentId: M:PluginAPI.Core.Player.Get``1(System.UInt32)
   id: Get``1(System.UInt32)
@@ -859,11 +1617,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 318
+    startLine: 415
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -891,6 +1649,51 @@ items:
   - Shared
   fullName.vb: PluginAPI.Core.Player.Get(Of T)(System.UInt32)
   name.vb: Get(Of T)(UInt32)
+- uid: PluginAPI.Core.Player.TryGet(System.UInt32,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(System.UInt32,PluginAPI.Core.Player@)
+  id: TryGet(System.UInt32,PluginAPI.Core.Player@)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: TryGet(UInt32, out Player)
+  nameWithType: Player.TryGet(UInt32, out Player)
+  fullName: PluginAPI.Core.Player.TryGet(System.UInt32, out PluginAPI.Core.Player)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TryGet
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 425
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref> by their network id.\n"
+  example: []
+  syntax:
+    content: public static bool TryGet(uint networkId, out Player player)
+    parameters:
+    - id: networkId
+      type: System.UInt32
+    - id: player
+      type: PluginAPI.Core.Player
+    return:
+      type: System.Boolean
+      description: Whether or not a player was found.
+    content.vb: Public Shared Function TryGet(networkId As UInteger, ByRef player As Player) As Boolean
+  overload: PluginAPI.Core.Player.TryGet*
+  nameWithType.vb: Player.TryGet(UInt32, ByRef Player)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: PluginAPI.Core.Player.TryGet(System.UInt32, ByRef PluginAPI.Core.Player)
+  name.vb: TryGet(UInt32, ByRef Player)
 - uid: PluginAPI.Core.Player.TryGet``1(System.UInt32,``0@)
   commentId: M:PluginAPI.Core.Player.TryGet``1(System.UInt32,``0@)
   id: TryGet``1(System.UInt32,``0@)
@@ -905,11 +1708,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 328
+    startLine: 431
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -954,11 +1757,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReferenceHub
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 352
+    startLine: 455
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -993,11 +1796,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 357
+    startLine: 460
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1032,11 +1835,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: NetworkId
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 362
+    startLine: 465
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1069,11 +1872,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerId
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 367
+    startLine: 470
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1106,11 +1909,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Nickname
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 372
+    startLine: 475
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1143,11 +1946,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisplayNickname
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 377
+    startLine: 480
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1180,11 +1983,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UserId
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 386
+    startLine: 489
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1217,11 +2020,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IpAddress
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 391
+    startLine: 494
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1254,11 +2057,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Role
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 396
+    startLine: 499
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1291,11 +2094,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CustomInfo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 405
+    startLine: 508
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1328,11 +2131,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Health
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 414
+    startLine: 517
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1365,11 +2168,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxHealth
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 423
+    startLine: 526
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1402,11 +2205,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ArtificialHealth
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 428
+    startLine: 531
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1439,11 +2242,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxArtificalHealth
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 437
+    startLine: 540
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1476,11 +2279,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RemoteAdminAccess
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 442
+    startLine: 545
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1513,11 +2316,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DoNotTrack
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 447
+    startLine: 550
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1550,11 +2353,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsOverwatchEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 452
+    startLine: 555
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1587,11 +2390,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInfo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 461
+    startLine: 564
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1624,11 +2427,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CurrentItem
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 466
+    startLine: 569
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1661,11 +2464,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsDisarmed
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 481
+    startLine: 584
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1698,11 +2501,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsMuted
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 502
+    startLine: 605
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1735,11 +2538,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsIntercomMuted
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 507
+    startLine: 610
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1772,11 +2575,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsUsingVoiceChat
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 512
+    startLine: 615
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1809,11 +2612,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsGlobalModerator
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 517
+    startLine: 620
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1846,11 +2649,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsNorthwoodStaff
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 522
+    startLine: 625
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1883,11 +2686,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsBypassEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 527
+    startLine: 630
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1920,11 +2723,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsGodModeEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 536
+    startLine: 639
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1957,11 +2760,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsNoclipEnabled
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 545
+    startLine: 648
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1994,11 +2797,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsInventoryFull
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 554
+    startLine: 657
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2031,11 +2834,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsHuman
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 559
+    startLine: 662
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2068,11 +2871,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsAlive
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 564
+    startLine: 667
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2105,11 +2908,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsReady
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 569
+    startLine: 672
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2142,11 +2945,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsServer
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 574
+    startLine: 677
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2181,11 +2984,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisarmedBy
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 579
+    startLine: 682
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2218,11 +3021,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Connection
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 600
+    startLine: 703
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2255,11 +3058,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Camera
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 605
+    startLine: 708
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2292,11 +3095,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TemporaryData
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 610
+    startLine: 713
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2331,11 +3134,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EffectsManager
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 615
+    startLine: 718
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2368,11 +3171,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageManager
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 620
+    startLine: 723
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2405,11 +3208,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 625
+    startLine: 728
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2442,11 +3245,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 634
+    startLine: 737
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2479,11 +3282,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 650
+    startLine: 753
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2515,11 +3318,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 692
+    startLine: 795
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2560,11 +3363,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 702
+    startLine: 805
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2592,11 +3395,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SendConsoleMessage
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 709
+    startLine: 812
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2631,11 +3434,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Ban
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 718
+    startLine: 821
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2676,11 +3479,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Ban
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 726
+    startLine: 829
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2718,11 +3521,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Kick
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 733
+    startLine: 836
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2757,11 +3560,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Kick
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 739
+    startLine: 842
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2793,11 +3596,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Mute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 744
+    startLine: 847
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2828,11 +3631,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Unmute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 756
+    startLine: 859
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2864,11 +3667,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IntercomMute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 767
+    startLine: 870
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2899,11 +3702,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IntercomUnmute
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 779
+    startLine: 882
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2935,11 +3738,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AddAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 792
+    startLine: 895
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2974,11 +3777,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SetAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 799
+    startLine: 902
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3013,11 +3816,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 806
+    startLine: 909
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3052,11 +3855,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DropAmmo
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 815
+    startLine: 918
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3097,11 +3900,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DropEverything
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 820
+    startLine: 923
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3129,11 +3932,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Heal
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 826
+    startLine: 929
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3165,11 +3968,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SetRole
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 833
+    startLine: 936
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3204,11 +4007,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Disconnect
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 839
+    startLine: 942
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3240,11 +4043,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReceiveHint
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 846
+    startLine: 949
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3279,11 +4082,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReceiveHint
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 854
+    startLine: 957
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3324,11 +4127,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReceiveHitMarker
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 860
+    startLine: 963
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3360,11 +4163,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetStatModule
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 867
+    startLine: 970
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3403,11 +4206,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RedirectToServer
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 873
+    startLine: 976
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3439,11 +4242,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Reconnect
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 880
+    startLine: 983
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3464,6 +4267,209 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: PluginAPI.Core.Player.Kill
+  commentId: M:PluginAPI.Core.Player.Kill
+  id: Kill
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Kill()
+  nameWithType: Player.Kill()
+  fullName: PluginAPI.Core.Player.Kill()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Kill
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 988
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nKills the player.\n"
+  example: []
+  syntax:
+    content: public void Kill()
+    content.vb: Public Sub Kill
+  overload: PluginAPI.Core.Player.Kill*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Kill(System.String,System.String)
+  commentId: M:PluginAPI.Core.Player.Kill(System.String,System.String)
+  id: Kill(System.String,System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Kill(String, String)
+  nameWithType: Player.Kill(String, String)
+  fullName: PluginAPI.Core.Player.Kill(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Kill
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 995
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nKills the player.\n"
+  example: []
+  syntax:
+    content: public void Kill(string reason, string cassieAnnouncement = "")
+    parameters:
+    - id: reason
+      type: System.String
+      description: The reason for the kill
+    - id: cassieAnnouncement
+      type: System.String
+      description: The cassie announcement to make upon death.
+    content.vb: Public Sub Kill(reason As String, cassieAnnouncement As String = "")
+  overload: PluginAPI.Core.Player.Kill*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Damage(System.Single,System.String,System.String)
+  commentId: M:PluginAPI.Core.Player.Damage(System.Single,System.String,System.String)
+  id: Damage(System.Single,System.String,System.String)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Damage(Single, String, String)
+  nameWithType: Player.Damage(Single, String, String)
+  fullName: PluginAPI.Core.Player.Damage(System.Single, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Damage
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 1004
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nDamages player with custom reason.\n"
+  example: []
+  syntax:
+    content: public bool Damage(float amount, string reason, string cassieAnnouncement = "")
+    parameters:
+    - id: amount
+      type: System.Single
+      description: The amount of damage.
+    - id: reason
+      type: System.String
+      description: The reason of damage.
+    - id: cassieAnnouncement
+      type: System.String
+      description: The cassie announcement send after death.
+    return:
+      type: System.Boolean
+      description: Whether or not damaging was successful..
+    content.vb: Public Function Damage(amount As Single, reason As String, cassieAnnouncement As String = "") As Boolean
+  overload: PluginAPI.Core.Player.Damage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
+  commentId: M:PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
+  id: Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Damage(Single, Player, Vector3, Int32)
+  nameWithType: Player.Damage(Single, Player, Vector3, Int32)
+  fullName: PluginAPI.Core.Player.Damage(System.Single, PluginAPI.Core.Player, UnityEngine.Vector3, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Damage
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 1014
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nDamages player with explosion force.\n"
+  example: []
+  syntax:
+    content: public bool Damage(float amount, Player attacker, Vector3 force = default(Vector3), int armorPenetration = 0)
+    parameters:
+    - id: amount
+      type: System.Single
+      description: The amount of damage.
+    - id: attacker
+      type: PluginAPI.Core.Player
+      description: The player which attacked
+    - id: force
+      type: UnityEngine.Vector3
+      description: The force of explosion.
+    - id: armorPenetration
+      type: System.Int32
+      description: The amount of armor penetration.
+    return:
+      type: System.Boolean
+      description: Whether or not damaging was successful.
+    content.vb: Public Function Damage(amount As Single, attacker As Player, force As Vector3 = Nothing, armorPenetration As Integer = 0) As Boolean
+  overload: PluginAPI.Core.Player.Damage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  commentId: M:PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  id: Damage(PlayerStatsSystem.DamageHandlerBase)
+  parent: PluginAPI.Core.Player
+  langs:
+  - csharp
+  - vb
+  name: Damage(DamageHandlerBase)
+  nameWithType: Player.Damage(DamageHandlerBase)
+  fullName: PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Player.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Damage
+    path: ../NwPluginAPI/Core/Player.cs
+    startLine: 1021
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nDamages player.\n"
+  example: []
+  syntax:
+    content: public bool Damage(DamageHandlerBase damageHandlerBase)
+    parameters:
+    - id: damageHandlerBase
+      type: PlayerStatsSystem.DamageHandlerBase
+      description: The damage handler base.
+    return:
+      type: System.Boolean
+      description: Whether or not damaging was successful.
+    content.vb: Public Function Damage(damageHandlerBase As DamageHandlerBase) As Boolean
+  overload: PluginAPI.Core.Player.Damage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: PluginAPI.Core.Player.OnStart
   commentId: M:PluginAPI.Core.Player.OnStart
   id: OnStart
@@ -3478,11 +4484,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnStart
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 883
+    startLine: 1024
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3514,11 +4520,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 886
+    startLine: 1027
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3550,11 +4556,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnUpdate
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 889
+    startLine: 1030
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3586,11 +4592,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnLateUpdate
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 892
+    startLine: 1033
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3622,11 +4628,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnFixedUpdate
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 895
+    startLine: 1036
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3658,11 +4664,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 899
+    startLine: 1040
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3704,11 +4710,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Player.cs
-    startLine: 906
+    startLine: 1047
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -4241,6 +5247,121 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic.Dictionary{System.String,PluginAPI.Core.Interfaces.IGameComponent}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,PluginAPI.Core.Interfaces.IGameComponent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, IGameComponent>
+  nameWithType: Dictionary<String, IGameComponent>
+  fullName: System.Collections.Generic.Dictionary<System.String, PluginAPI.Core.Interfaces.IGameComponent>
+  nameWithType.vb: Dictionary(Of String, IGameComponent)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, PluginAPI.Core.Interfaces.IGameComponent)
+  name.vb: Dictionary(Of String, IGameComponent)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: PluginAPI.Core.Interfaces.IGameComponent
+    name: IGameComponent
+    nameWithType: IGameComponent
+    fullName: PluginAPI.Core.Interfaces.IGameComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: PluginAPI.Core.Player.Count*
   commentId: Overload:PluginAPI.Core.Player.Count
   name: Count
@@ -4253,21 +5374,31 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: PluginAPI.Core.Player.NonVerifiedCount*
+  commentId: Overload:PluginAPI.Core.Player.NonVerifiedCount
+  name: NonVerifiedCount
+  nameWithType: Player.NonVerifiedCount
+  fullName: PluginAPI.Core.Player.NonVerifiedCount
+- uid: PluginAPI.Core.Player.ConnectionsCount*
+  commentId: Overload:PluginAPI.Core.Player.ConnectionsCount
+  name: ConnectionsCount
+  nameWithType: Player.ConnectionsCount
+  fullName: PluginAPI.Core.Player.ConnectionsCount
 - uid: PluginAPI.Core.Player.GetPlayers*
   commentId: Overload:PluginAPI.Core.Player.GetPlayers
   name: GetPlayers
   nameWithType: Player.GetPlayers
   fullName: PluginAPI.Core.Player.GetPlayers
-- uid: System.Collections.Generic.List{{T}}
-  commentId: T:System.Collections.Generic.List{``0}
+- uid: System.Collections.Generic.List{PluginAPI.Core.Player}
+  commentId: T:System.Collections.Generic.List{PluginAPI.Core.Player}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<Player>
+  nameWithType: List<Player>
+  fullName: System.Collections.Generic.List<PluginAPI.Core.Player>
+  nameWithType.vb: List(Of Player)
+  fullName.vb: System.Collections.Generic.List(Of PluginAPI.Core.Player)
+  name.vb: List(Of Player)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
@@ -4277,9 +5408,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -4292,9 +5424,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - uid: PluginAPI.Core.Player
+    name: Player
+    nameWithType: Player
+    fullName: PluginAPI.Core.Player
   - name: )
     nameWithType: )
     fullName: )
@@ -4337,12 +5470,46 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: PluginAPI.Core.Player
   commentId: T:PluginAPI.Core.Player
   parent: PluginAPI.Core
@@ -4360,12 +5527,6 @@ references:
   name: TryGet
   nameWithType: Player.TryGet
   fullName: PluginAPI.Core.Player.TryGet
-- uid: '{T}'
-  commentId: '!:T'
-  definition: T
-  name: T
-  nameWithType: T
-  fullName: T
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -4373,6 +5534,12 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
 - uid: T
   name: T
   nameWithType: T
@@ -4925,6 +6092,29 @@ references:
   name: Reconnect
   nameWithType: Player.Reconnect
   fullName: PluginAPI.Core.Player.Reconnect
+- uid: PluginAPI.Core.Player.Kill*
+  commentId: Overload:PluginAPI.Core.Player.Kill
+  name: Kill
+  nameWithType: Player.Kill
+  fullName: PluginAPI.Core.Player.Kill
+- uid: PluginAPI.Core.Player.Damage*
+  commentId: Overload:PluginAPI.Core.Player.Damage
+  name: Damage
+  nameWithType: Player.Damage
+  fullName: PluginAPI.Core.Player.Damage
+- uid: PlayerStatsSystem.DamageHandlerBase
+  commentId: T:PlayerStatsSystem.DamageHandlerBase
+  parent: PlayerStatsSystem
+  isExternal: true
+  name: DamageHandlerBase
+  nameWithType: DamageHandlerBase
+  fullName: PlayerStatsSystem.DamageHandlerBase
+- uid: PlayerStatsSystem
+  commentId: N:PlayerStatsSystem
+  isExternal: true
+  name: PlayerStatsSystem
+  nameWithType: PlayerStatsSystem
+  fullName: PlayerStatsSystem
 - uid: PluginAPI.Core.Player.OnStart*
   commentId: Overload:PluginAPI.Core.Player.OnStart
   name: OnStart

@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/FactoryManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FactoryManager
     path: ../NwPluginAPI/Core/FactoryManager.cs
     startLine: 11
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/FactoryManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterPlayerFactory
     path: ../NwPluginAPI/Core/FactoryManager.cs
     startLine: 28
@@ -103,8 +103,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/FactoryManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterPlayerFactory
     path: ../NwPluginAPI/Core/FactoryManager.cs
     startLine: 42
@@ -148,8 +148,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/FactoryManager.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Init
     path: ../NwPluginAPI/Core/FactoryManager.cs
     startLine: 47

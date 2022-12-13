@@ -77,6 +77,8 @@
     name: PluginEntryPoint
   - uid: PluginAPI.Core.Attributes.PluginEvent
     name: PluginEvent
+  - uid: PluginAPI.Core.Attributes.PluginPriority
+    name: PluginPriority
   - uid: PluginAPI.Core.Attributes.PluginReload
     name: PluginReload
   - uid: PluginAPI.Core.Attributes.PluginUnload

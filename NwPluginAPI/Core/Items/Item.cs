@@ -82,17 +82,15 @@ namespace PluginAPI.Core.Items
 			return (T)itm;
 		}
 
-		internal static bool Remove(ItemBase item)
+		public static bool Remove(ItemBase item)
 		{
 			if (!CachedItems.TryGetValue(item.ItemSerial, out Item itm)) return false;
-			Debug.Log("Remove ITEM " + itm.Type);
 			return CachedItems.Remove(item.ItemSerial);
 		}
 
-		internal Item(ItemBase item)
+		public Item(ItemBase item)
 		{
 			OriginalObject = item;
-			Debug.Log("Create new ITEM  " + Type);
 		}
 	}
 }

@@ -71,8 +71,6 @@ namespace PluginAPI.Loader
 			if (StartupArgs.Args.Any(arg => string.Equals(arg, "-disableAnsiColors", StringComparison.OrdinalIgnoreCase)))
 				Log.DisableBetterColors = true;
 
-			Log.DebugMode = ConfigFile.ServerConfig.GetBool("pluginapi_debug");
-
 			Paths.Setup();
 			FactoryManager.Init();
 
@@ -86,21 +84,20 @@ namespace PluginAPI.Loader
 			LoadDependencies(Paths.LocalPlugins.Dependencies);
 			LoadPlugins(Paths.LocalPlugins);
 
-			Log.Info("<---<       Start all plugins       <---<");
-			foreach (var plugin in Plugins.Values)
+			Log.Info("<---<        Load all plugins       <---<");
+
+			foreach (var plugin in Plugins.Values.SelectMany(x => x.Values).OrderByDescending(x => x.LoadPriority))
 			{
-				foreach (var pluginType in plugin.Values)
+				try
 				{
-					try
-					{
-						pluginType.Load();
-					}
-					catch (Exception ex)
-					{
-						Log.Error($"Failed loading plugin &6{pluginType.PluginName}&r.\n{ex}");
-					}
+					plugin.Load();
+				}
+				catch (Exception ex)
+				{
+					Log.Error($"Failed loading plugin &6{plugin.PluginName}&r.\n{ex}");
 				}
 			}
+
 			Log.Info("<---<    Plugin system is ready !    <---<");
 		}
 
@@ -196,7 +193,7 @@ namespace PluginAPI.Loader
 			int successes = 0;
 			string[] files = Directory.GetFiles(path, "*.dll");
 
-			Log.Info($"Loading &2{files.Length}&r dependencies...", "Loader");
+			Log.Info($"Loading &2{files.Length}&r dependencies...");
 
 			foreach (string dependencyPath in files)
 			{
@@ -209,13 +206,13 @@ namespace PluginAPI.Loader
 				}
 				catch (Exception ex)
 				{
-					Log.Error($"Failed loading dependency &2{Path.GetFileNameWithoutExtension(dependencyPath)}&r.\n{ex}", "Loader");
+					Log.Error($"Failed loading dependency &2{Path.GetFileNameWithoutExtension(dependencyPath)}&r.\n{ex}");
 					continue;
 				}
 				successes++;
 			}
 
-			Log.Info($"Loaded &2{successes}&r/&2{files.Length}&r dependencies", "Loader");
+			Log.Info($"Loaded &2{successes}&r/&2{files.Length}&r dependencies");
 		}
 
 		/// <summary>

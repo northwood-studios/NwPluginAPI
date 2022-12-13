@@ -5,6 +5,7 @@ items:
   id: Statistics.Peak
   parent: PluginAPI.Core
   children:
+  - PluginAPI.Core.Statistics.Peak.#ctor(System.Int32,System.DateTime)
   - PluginAPI.Core.Statistics.Peak.Timestamp
   - PluginAPI.Core.Statistics.Peak.Total
   langs:
@@ -17,11 +18,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Peak
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 55
+    startLine: 63
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -46,6 +47,41 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: PluginAPI.Core.Statistics.Peak.#ctor(System.Int32,System.DateTime)
+  commentId: M:PluginAPI.Core.Statistics.Peak.#ctor(System.Int32,System.DateTime)
+  id: '#ctor(System.Int32,System.DateTime)'
+  parent: PluginAPI.Core.Statistics.Peak
+  langs:
+  - csharp
+  - vb
+  name: Peak(Int32, DateTime)
+  nameWithType: Statistics.Peak.Peak(Int32, DateTime)
+  fullName: PluginAPI.Core.Statistics.Peak.Peak(System.Int32, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 65
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public Peak(int total, DateTime timestamp)
+    parameters:
+    - id: total
+      type: System.Int32
+    - id: timestamp
+      type: System.DateTime
+    content.vb: Public Sub New(total As Integer, timestamp As Date)
+  overload: PluginAPI.Core.Statistics.Peak.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: PluginAPI.Core.Statistics.Peak.Total
   commentId: P:PluginAPI.Core.Statistics.Peak.Total
   id: Total
@@ -60,11 +96,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Total
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 57
+    startLine: 71
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -95,11 +131,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: dev
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Timestamp
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 58
+    startLine: 72
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -414,11 +450,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: PluginAPI.Core.Statistics.Peak.Total*
-  commentId: Overload:PluginAPI.Core.Statistics.Peak.Total
-  name: Total
-  nameWithType: Statistics.Peak.Total
-  fullName: PluginAPI.Core.Statistics.Peak.Total
+- uid: PluginAPI.Core.Statistics.Peak.#ctor*
+  commentId: Overload:PluginAPI.Core.Statistics.Peak.#ctor
+  name: Peak
+  nameWithType: Statistics.Peak.Peak
+  fullName: PluginAPI.Core.Statistics.Peak.Peak
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -426,11 +462,6 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: PluginAPI.Core.Statistics.Peak.Timestamp*
-  commentId: Overload:PluginAPI.Core.Statistics.Peak.Timestamp
-  name: Timestamp
-  nameWithType: Statistics.Peak.Timestamp
-  fullName: PluginAPI.Core.Statistics.Peak.Timestamp
 - uid: System.DateTime
   commentId: T:System.DateTime
   parent: System
@@ -438,3 +469,13 @@ references:
   name: DateTime
   nameWithType: DateTime
   fullName: System.DateTime
+- uid: PluginAPI.Core.Statistics.Peak.Total*
+  commentId: Overload:PluginAPI.Core.Statistics.Peak.Total
+  name: Total
+  nameWithType: Statistics.Peak.Total
+  fullName: PluginAPI.Core.Statistics.Peak.Total
+- uid: PluginAPI.Core.Statistics.Peak.Timestamp*
+  commentId: Overload:PluginAPI.Core.Statistics.Peak.Timestamp
+  name: Timestamp
+  nameWithType: Statistics.Peak.Timestamp
+  fullName: PluginAPI.Core.Statistics.Peak.Timestamp
