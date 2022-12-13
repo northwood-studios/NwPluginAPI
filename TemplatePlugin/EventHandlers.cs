@@ -250,13 +250,13 @@
 		}
 
 		[PluginEvent(ServerEventType.Scp049ResurrectBody)]
-		public void OnScp049ResurrectBody(MyPlayer player, MyPlayer target, Ragdoll body)
+		public void OnScp049ResurrectBody(MyPlayer player, MyPlayer target, BasicRagdoll body)
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-049 resurrected body of &6{target.Nickname}&r (&6{target.UserId}&r), ragdoll with class &2{body.Info.RoleType}&r!");
 		}
 
 		[PluginEvent(ServerEventType.Scp049StartResurrectingBody)]
-		public void OnScp049StartResurrectingBody(MyPlayer player, MyPlayer target, Ragdoll body, bool canResurrect)
+		public void OnScp049StartResurrectingBody(MyPlayer player, MyPlayer target, BasicRagdoll body, bool canResurrect)
 		{
 			//Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-049 tried resurrecting body of &6{target.Nickname}&r (&6{target.UserId}&r), ragdoll with class &2{body.Info.RoleType}&r but it {(canResurrect ? "failed" : "succeded")}!");
 		}

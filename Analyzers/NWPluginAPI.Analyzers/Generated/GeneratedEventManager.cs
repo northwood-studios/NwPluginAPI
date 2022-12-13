@@ -324,11 +324,11 @@ public static class EventManager
 		{ 97, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
-			new EventParameter("Ragdoll", false, "body")) },
+			new EventParameter("BasicRagdoll", false, "body")) },
 		{ 98, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
-			new EventParameter("Ragdoll", false, "body"),
+			new EventParameter("BasicRagdoll", false, "body"),
 			new EventParameter("System.Boolean", false, "canResurrct")) },
 		{ 99, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),

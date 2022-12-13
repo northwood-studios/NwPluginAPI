@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginDirectory
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
     startLine: 7
@@ -59,7 +59,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
     startLine: 13
@@ -95,7 +95,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Dependencies
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
     startLine: 23
@@ -132,7 +132,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Plugins
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
     startLine: 28
