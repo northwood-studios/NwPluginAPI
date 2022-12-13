@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Peak
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 63
@@ -61,8 +61,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 65
@@ -96,8 +96,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Total
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 71
@@ -131,8 +131,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Timestamp
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 72

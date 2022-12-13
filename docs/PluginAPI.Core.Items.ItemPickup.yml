@@ -31,8 +31,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ItemPickup
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 10
@@ -72,8 +72,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 17
@@ -107,8 +107,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Type
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 22
@@ -144,8 +144,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LastOwner
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 27
@@ -181,8 +181,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Serial
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 32
@@ -218,8 +218,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Weight
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 37
@@ -255,8 +255,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 46
@@ -292,8 +292,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Rigidbody
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 55
@@ -329,8 +329,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 60
@@ -366,8 +366,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 65
@@ -403,8 +403,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 70
@@ -440,8 +440,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 75
@@ -477,8 +477,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Remove
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 87
@@ -514,8 +514,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 101
@@ -561,8 +561,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Spawn
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 118
@@ -593,8 +593,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Destroy
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 127
@@ -625,8 +625,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 132

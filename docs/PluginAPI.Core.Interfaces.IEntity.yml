@@ -15,8 +15,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IEntity.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IEntity
     path: ../NwPluginAPI/Core/Interfaces/IEntity.cs
     startLine: 5

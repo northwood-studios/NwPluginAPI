@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Setting up your environment | Nw Plugin API </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Setting up your environment | Nw Plugin API ">
+      <meta name="generator" content="docfx 2.59.4.0">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../../styles/config.css">
+      <link rel="stylesheet" href="../../styles/discord.css">
+      <link rel="stylesheet" href="../../styles/singulink.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+      
+      <meta property="docfx:rel" content="../../">
+      <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../../index.html">
+              <img src="../../images/logo.jpg" alt="Nw Plugin API" class="logomark">
+              <span class="brand-title">Nw Plugin API</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../../index.html">
+                          <img src="../../images/logo.jpg" alt="Nw Plugin API" class="logomark">
+                          <span class="brand-title">Nw Plugin API</span>
+                        </a>  </div>
+                    
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  Nw Plugin API
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="setting-up-your-environment">Setting up your environment</h1>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer">.NET Framework 4.8</a></li>
+<li>An IDE<ul>
+<li><a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a> is a popular choice that is free<ul>
+<li>Make sure to select the .NET desktop development workload</li>
+</ul>
+</li>
+<li><a href="https://www.jetbrains.com/rider/">Jetbrains Rider</a> is the premium option that is free for students.</li>
+</ul>
+</li>
+</ul>
+<h2 id="creating-the-project">Creating the project</h2>
+<h3 id="visual-studio-walkthrough">Visual Studio walkthrough</h3>
+<ol>
+<li>Open Visual Studio</li>
+<li>Click <code>Create a new project</code> <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Create new Project img" src="VSCreateNewMenu.png">
+ </details></li>
+<li>Select <code>C#</code> and <code>Class Library (.NET Framework)</code> <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Class library img" src="VSClassLib.png">
+ </details></li>
+<li>Click <code>Next</code> and select .NET Framework 4.8 from the dropdown, optionally give your plugin a name <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Framework img" src="VSNETFramework48.png">
+ </details></li>
+<li>Click <code>Create</code></li>
+</ol>
+<h3 id="rider-walkthrough">Rider walkthrough</h3>
+<ol>
+<li>Open Rider</li>
+<li>Click <code>New Solution</code> <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="New Solution img" src="RDCreateNewMenu.png">
+ </details></li>
+<li>Under <code>.NET Framework</code> select <code>Class Library</code> and make sure framework is set to <code>v4.8</code>, optionally specify a solution name <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Class library img" src="RDClassLib.png">
+ </details></li>
+<li>Click <code>Create</code></li>
+</ol>
+<h2 id="adding-references">Adding References</h2>
+<h3 id="visual-studio-walkthrough-1">Visual Studio walkthrough</h3>
+<ol>
+<li>Right click on your project in the solution explorer and select <code>Manage NuGet Packages for Solution</code> <br>
+<em>You might need to sign into your Microsoft account on the top right to do this.</em> <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Manage NuGet Packages img" src="VSManageNuget.png">
+ </details></li>
+<li>Select the <code>Browse</code> tab and search <code>Northwood.PluginApi</code>. You currently need to check the <code>Include prerelease</code> checkbox to find the latest version <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Northwood.PluginApi img" src="VSNorthwoodPluginApi.png">
+ </details></li>
+<li>Select it from the list, click on the checkmark next to your project, and click <code>Install</code> <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Nuget Install img" src="VSNugetInstall.png">
+ </details></li>
+<li>Press <code>OK</code> or <code>I Accept</code> if any prompt(s) shows up.</li>
+</ol>
+<h3 id="rider-walkthrough-1">Rider walkthrough</h3>
+<ol>
+<li>Right click on your project in the solution explorer and select <code>Manage NuGet Packages</code> <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Manage NuGet Packages img" src="RDManageNuget.png">
+ </details></li>
+<li>Select the <code>Browse</code> tab and search <code>Northwood.PluginApi</code>. You currently need to check the <code>Include prerelease</code> checkbox to find the latest version <br>
+ <details>
+     <summary>View Image</summary>
+     <img title="Image" alt="Northwood.PluginApi img" src="RDNorthwoodPluginApi.png">
+ </details></li>
+<li>Press the green checkmark</li>
+</ol>
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>Northwood Studios @ 2022. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../../styles/docfx.js"></script>
+        <script type="text/javascript" src="../../styles/singulink.js"></script>
+        <script type="text/javascript" src="../../styles/main.js"></script>    </body>
+</html>

@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: EzRoom
     path: ../NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
     startLine: 8
@@ -71,8 +71,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
     startLine: 15

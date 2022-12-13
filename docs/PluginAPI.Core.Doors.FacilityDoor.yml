@@ -30,8 +30,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: FacilityDoor
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 11
@@ -76,8 +76,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 16
@@ -115,8 +115,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 21
@@ -154,8 +154,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 26
@@ -189,8 +189,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Room
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 31
@@ -224,8 +224,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsOpened
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 36
@@ -261,8 +261,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 45
@@ -298,8 +298,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LockReason
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 54
@@ -335,8 +335,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Permissions
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 63
@@ -372,8 +372,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Bypass2176
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 72
@@ -409,8 +409,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 81
@@ -446,8 +446,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 86
@@ -483,8 +483,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 91
@@ -520,8 +520,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 96
@@ -557,8 +557,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Lock
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 103
@@ -596,8 +596,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
     startLine: 110

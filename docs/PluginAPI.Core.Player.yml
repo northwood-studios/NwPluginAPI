@@ -130,8 +130,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Player
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 29
@@ -183,8 +183,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PlayersUserIds
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 33
@@ -216,8 +216,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 41
@@ -255,8 +255,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: NonVerifiedCount
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 49
@@ -294,8 +294,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ConnectionsCount
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 54
@@ -333,8 +333,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetPlayers
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 63
@@ -369,8 +369,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetPlayers
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 68
@@ -412,8 +412,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 90
@@ -456,8 +456,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 95
@@ -504,8 +504,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 118
@@ -543,8 +543,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 123
@@ -589,8 +589,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 133
@@ -634,8 +634,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 139
@@ -683,8 +683,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 169
@@ -722,8 +722,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 174
@@ -768,8 +768,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 184
@@ -813,8 +813,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 190
@@ -862,8 +862,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 214
@@ -901,8 +901,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 219
@@ -947,8 +947,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 229
@@ -992,8 +992,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 235
@@ -1041,8 +1041,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetByName
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 258
@@ -1080,8 +1080,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetByName
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 263
@@ -1126,8 +1126,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGetByName
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 273
@@ -1171,8 +1171,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGetByName
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 279
@@ -1220,8 +1220,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 314
@@ -1259,8 +1259,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 319
@@ -1305,8 +1305,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 329
@@ -1350,8 +1350,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 335
@@ -1399,8 +1399,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 359
@@ -1438,8 +1438,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 364
@@ -1484,8 +1484,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 374
@@ -1529,8 +1529,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 380
@@ -1578,8 +1578,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 410
@@ -1617,8 +1617,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 415
@@ -1663,8 +1663,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 425
@@ -1708,8 +1708,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGet
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 431
@@ -1757,8 +1757,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ReferenceHub
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 455
@@ -1796,8 +1796,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 460
@@ -1835,8 +1835,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: NetworkId
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 465
@@ -1872,8 +1872,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PlayerId
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 470
@@ -1909,8 +1909,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Nickname
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 475
@@ -1946,8 +1946,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DisplayNickname
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 480
@@ -1983,8 +1983,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UserId
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 489
@@ -2020,8 +2020,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IpAddress
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 494
@@ -2057,8 +2057,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Role
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 499
@@ -2094,8 +2094,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: CustomInfo
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 508
@@ -2131,8 +2131,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Health
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 517
@@ -2168,8 +2168,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: MaxHealth
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 526
@@ -2205,8 +2205,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ArtificialHealth
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 531
@@ -2242,8 +2242,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: MaxArtificalHealth
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 540
@@ -2279,8 +2279,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RemoteAdminAccess
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 545
@@ -2316,8 +2316,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DoNotTrack
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 550
@@ -2353,8 +2353,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsOverwatchEnabled
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 555
@@ -2390,8 +2390,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PlayerInfo
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 564
@@ -2427,8 +2427,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: CurrentItem
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 569
@@ -2464,8 +2464,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsDisarmed
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 584
@@ -2501,8 +2501,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsMuted
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 605
@@ -2538,8 +2538,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsIntercomMuted
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 610
@@ -2575,8 +2575,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsUsingVoiceChat
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 615
@@ -2612,8 +2612,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsGlobalModerator
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 620
@@ -2649,8 +2649,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsNorthwoodStaff
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 625
@@ -2686,8 +2686,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsBypassEnabled
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 630
@@ -2723,8 +2723,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsGodModeEnabled
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 639
@@ -2760,8 +2760,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsNoclipEnabled
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 648
@@ -2797,8 +2797,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsInventoryFull
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 657
@@ -2834,8 +2834,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsHuman
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 662
@@ -2871,8 +2871,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsAlive
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 667
@@ -2908,8 +2908,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsReady
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 672
@@ -2945,8 +2945,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsServer
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 677
@@ -2984,8 +2984,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DisarmedBy
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 682
@@ -3021,8 +3021,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Connection
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 703
@@ -3058,8 +3058,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Camera
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 708
@@ -3095,8 +3095,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TemporaryData
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 713
@@ -3134,8 +3134,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: EffectsManager
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 718
@@ -3171,8 +3171,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DamageManager
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 723
@@ -3208,8 +3208,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 728
@@ -3245,8 +3245,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 737
@@ -3282,8 +3282,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 753
@@ -3318,8 +3318,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 795
@@ -3363,8 +3363,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 805
@@ -3395,8 +3395,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SendConsoleMessage
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 812
@@ -3434,8 +3434,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Ban
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 821
@@ -3479,8 +3479,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Ban
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 829
@@ -3521,8 +3521,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Kick
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 836
@@ -3560,8 +3560,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Kick
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 842
@@ -3596,8 +3596,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Mute
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 847
@@ -3631,8 +3631,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Unmute
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 859
@@ -3667,8 +3667,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IntercomMute
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 870
@@ -3702,8 +3702,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IntercomUnmute
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 882
@@ -3738,8 +3738,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: AddAmmo
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 895
@@ -3777,8 +3777,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SetAmmo
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 902
@@ -3816,8 +3816,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetAmmo
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 909
@@ -3855,8 +3855,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DropAmmo
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 918
@@ -3900,8 +3900,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DropEverything
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 923
@@ -3932,8 +3932,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Heal
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 929
@@ -3968,8 +3968,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SetRole
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 936
@@ -4007,8 +4007,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Disconnect
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 942
@@ -4043,8 +4043,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ReceiveHint
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 949
@@ -4082,8 +4082,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ReceiveHint
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 957
@@ -4127,8 +4127,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ReceiveHitMarker
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 963
@@ -4163,8 +4163,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetStatModule
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 970
@@ -4206,8 +4206,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RedirectToServer
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 976
@@ -4242,8 +4242,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Reconnect
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 983
@@ -4281,8 +4281,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Kill
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 988
@@ -4313,8 +4313,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Kill
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 995
@@ -4352,8 +4352,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Damage
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1004
@@ -4397,8 +4397,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Damage
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1014
@@ -4445,8 +4445,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Damage
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1021
@@ -4484,8 +4484,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OnStart
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1024
@@ -4520,8 +4520,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1027
@@ -4556,8 +4556,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OnUpdate
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1030
@@ -4592,8 +4592,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OnLateUpdate
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1033
@@ -4628,8 +4628,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: OnFixedUpdate
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1036
@@ -4664,8 +4664,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1040
@@ -4710,8 +4710,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Player.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Player.cs
     startLine: 1047

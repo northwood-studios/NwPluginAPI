@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityZone.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: FacilityZone
     path: ../NwPluginAPI/Core/Zones/FacilityZone.cs
     startLine: 8
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityZone.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/FacilityZone.cs
     startLine: 14
@@ -103,8 +103,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityZone.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/FacilityZone.cs
     startLine: 21
@@ -148,8 +148,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityZone.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TryGetRoom
     path: ../NwPluginAPI/Core/Zones/FacilityZone.cs
     startLine: 29
@@ -195,8 +195,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityZone.cs
-      branch: dev
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ZoneType
     path: ../NwPluginAPI/Core/Zones/FacilityZone.cs
     startLine: 38
