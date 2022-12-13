@@ -18,7 +18,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/Command.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/Command.cs
     startLine: 8
@@ -61,7 +61,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/Command.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Object
     path: ../NwPluginAPI/Commands/Command.cs
     startLine: 10
@@ -92,7 +92,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/Command.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Plugin
     path: ../NwPluginAPI/Commands/Command.cs
     startLine: 11

@@ -342,11 +342,11 @@ namespace PluginAPI.Events
 			{ ServerEventType.Scp049ResurrectBody, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IPlayer), "target"),
-				new EventParameter(typeof(Ragdoll), "body")) },
+				new EventParameter(typeof(BasicRagdoll), "body")) },
 			{ ServerEventType.Scp049StartResurrectingBody, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IPlayer), "target"),
-				new EventParameter(typeof(Ragdoll), "body"),
+				new EventParameter(typeof(BasicRagdoll), "body"),
 				new EventParameter(typeof(bool), "canResurrct")) },
 			{ ServerEventType.PlayerInteractDoor, new Event(
 				new EventParameter(typeof(IPlayer), "player"),

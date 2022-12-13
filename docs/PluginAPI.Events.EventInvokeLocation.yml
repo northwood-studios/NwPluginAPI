@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventInvokeLocation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EventInvokeLocation
     path: ../NwPluginAPI/Events/EventInvokeLocation.cs
     startLine: 9
@@ -63,7 +63,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventInvokeLocation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Plugin
     path: ../NwPluginAPI/Events/EventInvokeLocation.cs
     startLine: 11
@@ -94,7 +94,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventInvokeLocation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Target
     path: ../NwPluginAPI/Events/EventInvokeLocation.cs
     startLine: 12
@@ -125,7 +125,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventInvokeLocation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Method
     path: ../NwPluginAPI/Events/EventInvokeLocation.cs
     startLine: 13
@@ -156,7 +156,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventInvokeLocation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Invoke
     path: ../NwPluginAPI/Events/EventInvokeLocation.cs
     startLine: 20

@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginPriority.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginPriority
     path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
     startLine: 8
@@ -122,7 +122,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginPriority.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Priority
     path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
     startLine: 11
@@ -157,7 +157,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginPriority.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
     startLine: 17
@@ -193,7 +193,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginPriority.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Attributes/PluginPriority.cs
     startLine: 26
