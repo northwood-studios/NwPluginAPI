@@ -27,7 +27,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: EventManager
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 36
@@ -71,7 +71,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Events
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 46
@@ -108,7 +108,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RegisterAllEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 381
@@ -146,7 +146,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnregisterAllEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 420
@@ -184,7 +184,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 439
@@ -222,7 +222,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 449
@@ -260,7 +260,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 459
@@ -305,7 +305,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 474
@@ -350,7 +350,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 486
@@ -391,7 +391,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 493
@@ -432,7 +432,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 570
@@ -479,7 +479,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
     startLine: 579

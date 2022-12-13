@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Factory
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 9
@@ -75,7 +75,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 17
@@ -114,7 +114,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 24
@@ -159,7 +159,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetOrAdd
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 31
@@ -202,7 +202,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: AddIfNotExists
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 45

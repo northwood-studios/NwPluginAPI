@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: FastestRound
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 46
@@ -63,7 +63,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 48
@@ -100,7 +100,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LeadingTeam
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 55
@@ -135,7 +135,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 56
@@ -170,7 +170,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Timestamp
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 57

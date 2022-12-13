@@ -18,7 +18,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginApiVersion
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 2
@@ -60,7 +60,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Version
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 4
@@ -93,7 +93,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: VersionString
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 5
@@ -101,10 +101,10 @@ items:
   - PluginAPI
   namespace: PluginAPI
   syntax:
-    content: public const string VersionString = "12.0.0-rc.1"
+    content: public const string VersionString = "12.0.0-rc.2"
     return:
       type: System.String
-    content.vb: Public Const VersionString As String = "12.0.0-rc.1"
+    content.vb: Public Const VersionString As String = "12.0.0-rc.2"
   modifiers.csharp:
   - public
   - const
