@@ -13,6 +13,8 @@
 
 		<SignAssembly>False</SignAssembly>
 
+		<IncludeSymbols>true</IncludeSymbols>
+
 		<PackageId>Northwood.PluginAPI</PackageId>
 		<Authors>Northwood Studios</Authors>
 		<Company>Northwood Studio</Company>
