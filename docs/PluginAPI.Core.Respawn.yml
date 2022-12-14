@@ -21,7 +21,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Respawn
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 8
@@ -65,7 +65,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: NtfTickets
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 13
@@ -104,7 +104,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChaosTickets
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 18
@@ -143,7 +143,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: NextKnownTeam
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 23
@@ -182,7 +182,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AddTickets
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 30
@@ -223,7 +223,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Spawn
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 37

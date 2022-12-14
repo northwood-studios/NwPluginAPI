@@ -18,7 +18,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginCommandAliases
     path: ../NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
     startLine: 7
@@ -121,7 +121,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
     startLine: 10
@@ -156,7 +156,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Attributes/PluginCommandAliases.cs
     startLine: 16

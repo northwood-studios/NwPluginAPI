@@ -17,7 +17,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Map.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Map
     path: ../NwPluginAPI/Core/Map.cs
     startLine: 5
@@ -61,7 +61,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Map.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Seed
     path: ../NwPluginAPI/Core/Map.cs
     startLine: 10

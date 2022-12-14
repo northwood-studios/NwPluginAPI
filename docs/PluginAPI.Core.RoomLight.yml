@@ -22,7 +22,7 @@ items:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoomLight
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 7
@@ -65,7 +65,7 @@ items:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsEnabled
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 21
@@ -102,7 +102,7 @@ items:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LightColor
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 37
@@ -139,7 +139,7 @@ items:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DefaultColor
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 55
@@ -176,7 +176,7 @@ items:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LightIntensity
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 67
@@ -213,7 +213,7 @@ items:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FlickerLights
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 84
@@ -249,7 +249,7 @@ items:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 93
