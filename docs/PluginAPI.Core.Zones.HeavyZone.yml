@@ -22,7 +22,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/HeavyZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: HeavyZone
     path: ../NwPluginAPI/Core/Zones/HeavyZone.cs
     startLine: 12
@@ -69,7 +69,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/HeavyZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZoneType
     path: ../NwPluginAPI/Core/Zones/HeavyZone.cs
     startLine: 18
@@ -109,7 +109,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/HeavyZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/HeavyZone.cs
     startLine: 21
@@ -155,7 +155,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/HeavyZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Zones/HeavyZone.cs
     startLine: 26
@@ -194,7 +194,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/HeavyZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Zones/HeavyZone.cs
     startLine: 31
@@ -233,7 +233,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/HeavyZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetRoom
     path: ../NwPluginAPI/Core/Zones/HeavyZone.cs
     startLine: 34
@@ -281,7 +281,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/HeavyZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/HeavyZone.cs
     startLine: 61

@@ -24,7 +24,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LightZone
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 13
@@ -71,7 +71,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZoneType
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 19
@@ -111,7 +111,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 22
@@ -157,7 +157,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 27
@@ -196,7 +196,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 32
@@ -235,7 +235,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetRoom
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 35
@@ -283,7 +283,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsDecontaminated
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 62
@@ -322,7 +322,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: StartDecontamination
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 67
@@ -356,7 +356,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/LightZone.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/LightZone.cs
     startLine: 76

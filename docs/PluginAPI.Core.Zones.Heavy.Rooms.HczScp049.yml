@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: HczScp049
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 10
@@ -76,7 +76,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoomLights
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 20
@@ -115,7 +115,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoomIdentifier
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 25
@@ -154,7 +154,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 32
