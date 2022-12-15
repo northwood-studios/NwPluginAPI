@@ -76,7 +76,7 @@ namespace PluginAPI.Core
 
 			foreach (var hub in ReferenceHub.AllHubs)
 			{
-				if (hub.isServer) continue;
+				if (hub.isLocalPlayer) continue;
 				factory.AddIfNotExists(hub);
 			}
 
