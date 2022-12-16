@@ -10,11 +10,13 @@
     {
         public virtual Type BaseType { get; } = typeof(Player);
 
-        /// <summary>
-        /// Creates a new <see cref="IPlayer"/> instance.
-        /// </summary>
-        /// <param name="component">The <see cref="IGameComponent"/>.</param>
-        /// <returns>The created <see cref="IPlayer"/>.</returns>
-        public override IPlayer Create(IGameComponent component) => new Player(component);
+		public override IPlayer DefaultServer() => Server.Instance;
+
+		/// <summary>
+		/// Creates a new <see cref="IPlayer"/> instance.
+		/// </summary>
+		/// <param name="component">The <see cref="IGameComponent"/>.</param>
+		/// <returns>The created <see cref="IPlayer"/>.</returns>
+		public override IPlayer Create(IGameComponent component) => new Player(component);
 	}
 }

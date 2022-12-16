@@ -10,6 +10,7 @@
 	/// <typeparam name="TEntity">The entity to create.</typeparam>
 	public interface IEntityFactory<TEntity> where TEntity : IEntity
     {
+		TEntity DefaultServer();
 	    TEntity Create(IGameComponent component);
         TEntity GetOrAdd(IGameComponent component);
 		void AddIfNotExists(IGameComponent component);
