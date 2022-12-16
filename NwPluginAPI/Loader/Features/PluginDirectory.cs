@@ -5,7 +5,7 @@ namespace PluginAPI.Loader.Features
 	/// <summary>
     /// Contains the paths containing plugins and dependencies.
     /// </summary>
-    public struct PluginDirectory
+    public readonly struct PluginDirectory
     {
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginDirectory"/> struct.
@@ -14,18 +14,17 @@ namespace PluginAPI.Loader.Features
 		public PluginDirectory(string containingFolder)
 		{
 			Plugins = containingFolder;
-
 			Dependencies = Paths.GetDirectory(Plugins, "dependencies");
 		}
 
 		/// <summary>
 		/// Gets or sets the dependencies folder.
 		/// </summary>
-		public string Dependencies { get; set; }
+		public readonly string Dependencies;
 
 		/// <summary>
 		/// Gets or sets the plugins folder.
 		/// </summary>
-		public string Plugins { get; set; }
-	}
+		public readonly string Plugins;
+    }
 }
