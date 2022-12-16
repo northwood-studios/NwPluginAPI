@@ -562,7 +562,7 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="SpawnableTeamType"/> team.
 		/// </remarks>
-		/// 
+		///
 		TeamRespawnSelected = 70,
 
 		/// <summary>
@@ -665,7 +665,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-173 tries to start/stop brackneck speeds.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player <see cref="bool"/> activate. 
+		/// Parameters: <see cref="IPlayer"/> player <see cref="bool"/> activate.
 		/// </remarks>
 		Scp173BreakneckSpeeds = 84,
 
@@ -673,7 +673,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-173 is seen by player.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player <see cref="IPlayer"/> target. 
+		/// Parameters: <see cref="IPlayer"/> player <see cref="IPlayer"/> target.
 		/// </remarks>
 		Scp173NewObserver = 85,
 
@@ -681,7 +681,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-173 tries to snap player neck.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player <see cref="IPlayer"/> target. 
+		/// Parameters: <see cref="IPlayer"/> player <see cref="IPlayer"/> target.
 		/// </remarks>
 		Scp173SnapPlayer = 100,
 
@@ -689,7 +689,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-939 tries to create amnestic cloud.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player. 
+		/// Parameters: <see cref="IPlayer"/> player.
 		/// </remarks>
 		Scp939CreateAmnesticCloud = 86,
 
@@ -697,7 +697,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-939 tries to lunge.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp939LungeState"/> state. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp939LungeState"/> state.
 		/// </remarks>
 		Scp939Lunge = 87,
 
@@ -705,7 +705,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-939 tries to attack something.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="IDestructible"/> target. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IDestructible"/> target.
 		/// </remarks>
 		Scp939Attack = 88,
 
@@ -713,7 +713,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 gains experience.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="int"/> amount, <see cref="Scp079HudTranslation"/> reason. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="int"/> amount, <see cref="Scp079HudTranslation"/> reason.
 		/// </remarks>
 		Scp079GainExperience = 89,
 
@@ -721,7 +721,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 level ups to new tier.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="int"/> tier. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="int"/> tier.
 		/// </remarks>
 		Scp079LevelUpTier = 90,
 
@@ -729,7 +729,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 tries to use tesla.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="TeslaGate"/> tesla. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="TeslaGate"/> tesla.
 		/// </remarks>
 		Scp079UseTesla = 91,
 
@@ -737,7 +737,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 lockdowns room.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room.
 		/// </remarks>
 		Scp079LockdownRoom = 92,
 
@@ -745,7 +745,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 cancels room lockdown.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room.
 		/// </remarks>
 		Scp079CancelRoomLockdown = 101,
 
@@ -753,7 +753,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 locks door.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door.
 		/// </remarks>
 		Scp079LockDoor = 93,
 
@@ -761,7 +761,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 unlocks door.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door.
 		/// </remarks>
 		Scp079UnlockDoor = 94,
 
@@ -769,7 +769,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 blackouts zone.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="FacilityZone"/> zone. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="FacilityZone"/> zone.
 		/// </remarks>
 		Scp079BlackoutZone = 95,
 
@@ -777,7 +777,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-079 blackouts room.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RoomIdentifier"/> room.
 		/// </remarks>
 		Scp079BlackoutRoom = 96,
 
@@ -785,7 +785,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-049 resurrects body.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="Ragdoll"/> body. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="Ragdoll"/> body.
 		/// </remarks>
 		Scp049ResurrectBody = 97,
 
@@ -793,7 +793,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP-049 starts resurrecting body.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="Ragdoll"/> body, <see cref="bool"/> canResurrect. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="Ragdoll"/> body, <see cref="bool"/> canResurrect.
 		/// </remarks>
 		Scp049StartResurrectingBody = 98,
 
@@ -801,8 +801,24 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to interact with door.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door, <see cref="bool"/> canOpen. 
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door, <see cref="bool"/> canOpen.
 		/// </remarks>
 		PlayerInteractDoor = 99,
+
+		/// <summary>
+		/// Event executed when a new ban issued and saved in the files.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanType"/> banType.
+		/// </remarks>
+		BanIssued = 102,
+
+		/// <summary>
+		/// Event executed when an existing ban is revoked and removed from the files.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="string"/> userId, <see cref="BanType"/> banType.
+		/// </remarks>
+		BanRevoked = 103,
 	}
 }

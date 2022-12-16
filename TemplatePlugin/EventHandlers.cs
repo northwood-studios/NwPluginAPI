@@ -266,5 +266,17 @@
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) teleported player &6{target.Nickname}&r (&6{target.UserId}&r) to pocket dimension as SCP-106");
 		}
+
+		[PluginEvent(ServerEventType.BanIssued)]
+		public void OnBanIssued(BanDetails banDetails, BanHandler.BanType banType)
+		{
+			Log.Info($"UserID {banDetails.Id} of type {banType} has been banned by {banDetails.Issuer}.");
+		}
+
+		[PluginEvent(ServerEventType.BanRevoked)]
+		public void OnBanRevoked(string id, BanHandler.BanType banType)
+		{
+			Log.Info($"ID {id} of type {banType} has been unbanned.");
+		}
 	}
 }
