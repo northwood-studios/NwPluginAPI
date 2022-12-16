@@ -12,11 +12,6 @@ namespace PluginAPI.Helpers
 	public static class Paths
 	{
 		/// <summary>
-		/// Gets the path to global config folder.
-		/// </summary>
-		public static string Global { get; private set; }
-
-		/// <summary>
 		/// Gets the paths to global plugins and dependencies.
 		/// </summary>
 		public static PluginDirectory GlobalPlugins { get; private set; }
@@ -50,11 +45,6 @@ namespace PluginAPI.Helpers
 		/// Gets the path to the "Plugins" folder, located inside the "Plugin API" folder.
 		/// </summary>
 		public static string Plugins { get; private set; }
-
-		/// <summary>
-		/// Gets the path to the "Dependencies" folder, located inside the "Plugins" folder.
-		/// </summary>
-		public static string Dependencies { get; private set; }
 
 		/// <summary>
 		/// Initializes all the paths.
