@@ -7,6 +7,7 @@ items:
   children:
   - PluginAPI.Core.Factories.PlayerFactory.BaseType
   - PluginAPI.Core.Factories.PlayerFactory.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  - PluginAPI.Core.Factories.PlayerFactory.DefaultServer
   langs:
   - csharp
   - vb
@@ -18,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/PlayerFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PlayerFactory
     path: ../NwPluginAPI/Core/Factories/PlayerFactory.cs
     startLine: 8
@@ -70,7 +71,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/PlayerFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BaseType
     path: ../NwPluginAPI/Core/Factories/PlayerFactory.cs
     startLine: 10
@@ -92,6 +93,41 @@ items:
   - Public
   - Overridable
   - ReadOnly
+- uid: PluginAPI.Core.Factories.PlayerFactory.DefaultServer
+  commentId: M:PluginAPI.Core.Factories.PlayerFactory.DefaultServer
+  id: DefaultServer
+  parent: PluginAPI.Core.Factories.PlayerFactory
+  langs:
+  - csharp
+  - vb
+  name: DefaultServer()
+  nameWithType: PlayerFactory.DefaultServer()
+  fullName: PluginAPI.Core.Factories.PlayerFactory.DefaultServer()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Factories/PlayerFactory.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: DefaultServer
+    path: ../NwPluginAPI/Core/Factories/PlayerFactory.cs
+    startLine: 12
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Factories
+  syntax:
+    content: public override IPlayer DefaultServer()
+    return:
+      type: PluginAPI.Core.Interfaces.IPlayer
+    content.vb: Public Overrides Function DefaultServer As IPlayer
+  overridden: PluginAPI.Core.Factories.Factory{PluginAPI.Core.Interfaces.IPlayer}.DefaultServer
+  overload: PluginAPI.Core.Factories.PlayerFactory.DefaultServer*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: PluginAPI.Core.Factories.PlayerFactory.Create(PluginAPI.Core.Interfaces.IGameComponent)
   commentId: M:PluginAPI.Core.Factories.PlayerFactory.Create(PluginAPI.Core.Interfaces.IGameComponent)
   id: Create(PluginAPI.Core.Interfaces.IGameComponent)
@@ -107,10 +143,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/PlayerFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/PlayerFactory.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -819,6 +855,71 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
+- uid: PluginAPI.Core.Factories.Factory{PluginAPI.Core.Interfaces.IPlayer}.DefaultServer
+  commentId: M:PluginAPI.Core.Factories.Factory{PluginAPI.Core.Interfaces.IPlayer}.DefaultServer
+  parent: PluginAPI.Core.Factories.Factory{PluginAPI.Core.Interfaces.IPlayer}
+  definition: PluginAPI.Core.Factories.Factory`1.DefaultServer
+  name: DefaultServer()
+  nameWithType: Factory<IPlayer>.DefaultServer()
+  fullName: PluginAPI.Core.Factories.Factory<PluginAPI.Core.Interfaces.IPlayer>.DefaultServer()
+  nameWithType.vb: Factory(Of IPlayer).DefaultServer()
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of PluginAPI.Core.Interfaces.IPlayer).DefaultServer()
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.Factory`1.DefaultServer
+    name: DefaultServer
+    nameWithType: Factory<IPlayer>.DefaultServer
+    fullName: PluginAPI.Core.Factories.Factory<PluginAPI.Core.Interfaces.IPlayer>.DefaultServer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.Factory`1.DefaultServer
+    name: DefaultServer
+    nameWithType: Factory(Of IPlayer).DefaultServer
+    fullName: PluginAPI.Core.Factories.Factory(Of PluginAPI.Core.Interfaces.IPlayer).DefaultServer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Factories.PlayerFactory.DefaultServer*
+  commentId: Overload:PluginAPI.Core.Factories.PlayerFactory.DefaultServer
+  name: DefaultServer
+  nameWithType: PlayerFactory.DefaultServer
+  fullName: PluginAPI.Core.Factories.PlayerFactory.DefaultServer
+- uid: PluginAPI.Core.Factories.Factory`1.DefaultServer
+  commentId: M:PluginAPI.Core.Factories.Factory`1.DefaultServer
+  name: DefaultServer()
+  nameWithType: Factory<T>.DefaultServer()
+  fullName: PluginAPI.Core.Factories.Factory<T>.DefaultServer()
+  nameWithType.vb: Factory(Of T).DefaultServer()
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).DefaultServer()
+  spec.csharp:
+  - uid: PluginAPI.Core.Factories.Factory`1.DefaultServer
+    name: DefaultServer
+    nameWithType: Factory<T>.DefaultServer
+    fullName: PluginAPI.Core.Factories.Factory<T>.DefaultServer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Factories.Factory`1.DefaultServer
+    name: DefaultServer
+    nameWithType: Factory(Of T).DefaultServer
+    fullName: PluginAPI.Core.Factories.Factory(Of T).DefaultServer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: PluginAPI.Core.Interfaces.IGameComponent
   commentId: T:PluginAPI.Core.Interfaces.IGameComponent
   parent: PluginAPI.Core.Interfaces

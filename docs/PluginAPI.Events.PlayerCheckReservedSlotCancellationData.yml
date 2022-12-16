@@ -5,6 +5,8 @@ items:
   id: PlayerCheckReservedSlotCancellationData
   parent: PluginAPI.Events
   children:
+  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
+  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
   - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
   - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
   - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
@@ -20,7 +22,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PlayerCheckReservedSlotCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 199
@@ -65,7 +67,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 202
@@ -90,6 +92,44 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  commentId: P:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  id: BypassReservedSlotsLimit
+  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  langs:
+  - csharp
+  - vb
+  name: BypassReservedSlotsLimit
+  nameWithType: PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: BypassReservedSlotsLimit
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 207
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nDetermines whether the player should be allowed to join unconditionally.\n"
+  example: []
+  syntax:
+    content: public readonly bool BypassReservedSlotsLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property BypassReservedSlotsLimit As Boolean
+  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit*
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
   commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
   id: HasReservedSlot
@@ -105,10 +145,10 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: HasReservedSlot
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 205
+    startLine: 210
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -138,10 +178,10 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LeaveUnchanged
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 217
+    startLine: 223
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -175,10 +215,10 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Override
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 225
+    startLine: 231
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -195,6 +235,43 @@ items:
       description: The <xref href="PluginAPI.Events.PlayerCheckReservedSlotCancellationData" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Shared Function Override(hasReservedSlot As Boolean) As PlayerCheckReservedSlotCancellationData
   overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
+  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
+  id: BypassCheck
+  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  langs:
+  - csharp
+  - vb
+  name: BypassCheck()
+  nameWithType: PlayerCheckReservedSlotCancellationData.BypassCheck()
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: BypassCheck
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 238
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nBypasses the check of free reserved slots on the server and allows the connection unconditionally.\n"
+  example: []
+  syntax:
+    content: public static PlayerCheckReservedSlotCancellationData BypassCheck()
+    return:
+      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+      description: ''
+    content.vb: Public Shared Function BypassCheck As PlayerCheckReservedSlotCancellationData
+  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck*
   modifiers.csharp:
   - public
   - static
@@ -499,6 +576,11 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit*
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  name: BypassReservedSlotsLimit
+  nameWithType: PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
 - uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
   commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
   parent: PluginAPI.Events
@@ -515,3 +597,8 @@ references:
   name: Override
   nameWithType: PlayerCheckReservedSlotCancellationData.Override
   fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
+- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck*
+  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
+  name: BypassCheck
+  nameWithType: PlayerCheckReservedSlotCancellationData.BypassCheck
+  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck

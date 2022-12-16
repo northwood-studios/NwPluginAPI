@@ -9,6 +9,7 @@ items:
   - PluginAPI.Core.Warhead.DetonationTime
   - PluginAPI.Core.Warhead.IsDetonated
   - PluginAPI.Core.Warhead.IsDetonationInProgress
+  - PluginAPI.Core.Warhead.IsLocked
   - PluginAPI.Core.Warhead.LeverStatus
   - PluginAPI.Core.Warhead.Shake
   - PluginAPI.Core.Warhead.Start(System.Boolean,System.Boolean)
@@ -25,7 +26,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Warhead
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 5
@@ -69,7 +70,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LeverStatus
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 10
@@ -108,7 +109,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: WarheadUnlocked
     path: ../NwPluginAPI/Core/Warhead.cs
     startLine: 19
@@ -132,6 +133,45 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: PluginAPI.Core.Warhead.IsLocked
+  commentId: P:PluginAPI.Core.Warhead.IsLocked
+  id: IsLocked
+  parent: PluginAPI.Core.Warhead
+  langs:
+  - csharp
+  - vb
+  name: IsLocked
+  nameWithType: Warhead.IsLocked
+  fullName: PluginAPI.Core.Warhead.IsLocked
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Warhead.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: IsLocked
+    path: ../NwPluginAPI/Core/Warhead.cs
+    startLine: 28
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets a value indicating whether the current warhead status cannot be changed by the player.\n"
+  example: []
+  syntax:
+    content: public static bool IsLocked { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsLocked As Boolean
+  overload: PluginAPI.Core.Warhead.IsLocked*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Warhead.IsDetonated
   commentId: P:PluginAPI.Core.Warhead.IsDetonated
   id: IsDetonated
@@ -147,10 +187,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsDetonated
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 28
+    startLine: 37
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -186,10 +226,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsDetonationInProgress
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 33
+    startLine: 42
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -225,10 +265,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DetonationTime
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 38
+    startLine: 47
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -264,10 +304,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 50
+    startLine: 59
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -305,10 +345,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Stop
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 59
+    startLine: 68
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -339,10 +379,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Detonate
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 64
+    startLine: 73
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -373,10 +413,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Warhead.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Shake
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 71
+    startLine: 80
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -707,6 +747,11 @@ references:
   name: WarheadUnlocked
   nameWithType: Warhead.WarheadUnlocked
   fullName: PluginAPI.Core.Warhead.WarheadUnlocked
+- uid: PluginAPI.Core.Warhead.IsLocked*
+  commentId: Overload:PluginAPI.Core.Warhead.IsLocked
+  name: IsLocked
+  nameWithType: Warhead.IsLocked
+  fullName: PluginAPI.Core.Warhead.IsLocked
 - uid: PluginAPI.Core.Warhead.IsDetonated*
   commentId: Overload:PluginAPI.Core.Warhead.IsDetonated
   name: IsDetonated
