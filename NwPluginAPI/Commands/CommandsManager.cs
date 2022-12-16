@@ -90,7 +90,7 @@
 			else
 			{
 				// this is not pretty.
-				Log.Info($"Attempting to register subcommand {activatedCommand.Command} for custom handler / parent command: {commandHandler.Name}");
+				Log.Debug($"Attempting to register subcommand {activatedCommand.Command} for custom handler / parent command: {commandHandler.Name}");
 				foreach (var attributeData in commandHandler.GetCustomAttributesData())
 				{
 					if (attributeData.AttributeType != typeof(CommandHandlerAttribute)) continue;
