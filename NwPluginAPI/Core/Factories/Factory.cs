@@ -18,6 +18,12 @@
         public IEnumerable<T> Get() => Entities.Values;
 
 		/// <summary>
+		/// Default server entity.
+		/// </summary>
+		/// <returns>Entity</returns>
+		public virtual T DefaultServer() => default(T);
+
+		/// <summary>
 		/// Creates new entity.
 		/// </summary>
 		/// <param name="component">The game component</param>
@@ -34,6 +40,9 @@
             if (Entities.TryGetValue(component, out T entity))
                 return entity;
 
+			if (component is ReferenceHub hb && hb.isLocalPlayer)
+				return DefaultServer();
+
             var ent = Create(component);
             Entities.Add(component, ent);
             return ent;
@@ -46,6 +55,9 @@
 		public void AddIfNotExists(IGameComponent component)
 		{
 			if (Entities.ContainsKey(component)) return;
+
+			if (component is ReferenceHub hb && hb.isLocalPlayer)
+				return;
 
 			var ent = Create(component);
 			Entities.Add(component, ent);
