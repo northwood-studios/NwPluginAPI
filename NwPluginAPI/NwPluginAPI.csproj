@@ -14,6 +14,7 @@
 		<SignAssembly>False</SignAssembly>
 
 		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
 		<PackageId>Northwood.PluginAPI</PackageId>
 		<Authors>Northwood Studios</Authors>
