@@ -24,6 +24,15 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets or sets a value indicating whether the current warhead status cannot be changed by the player.
+		/// </summary>
+		public static bool IsLocked
+		{
+			get => AlphaWarheadController.Singleton.IsLocked;
+			set => AlphaWarheadController.Singleton.IsLocked = value;
+		}
+
+		/// <summary>
 		/// Gets a value indicating whether or not the warhead is detonated.
 		/// </summary>
 		public static bool IsDetonated => AlphaWarheadController.Detonated;

@@ -19,12 +19,12 @@ namespace PluginAPI.Helpers
 		/// <summary>
 		/// Gets the paths to global plugins and dependencies.
 		/// </summary>
-		public static PluginDirectory GlobalPlugins { get; internal set; }
+		public static PluginDirectory GlobalPlugins { get; private set; }
 
 		/// <summary>
 		/// Gets the paths to this server port's plugins and dependencies.
 		/// </summary>
-		public static PluginDirectory LocalPlugins { get; internal set; }
+		public static PluginDirectory LocalPlugins { get; private set; }
 
 		/// <summary>
 		/// Gets the path to the server's config settings.
@@ -57,17 +57,19 @@ namespace PluginAPI.Helpers
 		public static string Dependencies { get; private set; }
 
 		/// <summary>
-		/// Intializes all the paths.
+		/// Initializes all the paths.
 		/// </summary>
 		internal static void Setup()
 		{
-			AppData = GetHosterPolicy() ? 
-				"AppData" : 
+			AppData = GetHosterPolicy() ?
+				"AppData" :
 				Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
 			if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
 
 			SecretLab = GetDirectory(AppData, "SCP Secret Laboratory");
+
+			Configs = FileManager.GetAppFolder(true, true);
 
 			PluginAPI = GetDirectory(SecretLab, "PluginAPI");
 			Plugins = GetDirectory(PluginAPI, "plugins");
@@ -76,7 +78,7 @@ namespace PluginAPI.Helpers
 			LocalPlugins = new PluginDirectory(GetDirectory(Plugins, Server.Port.ToString()));
 		}
 
-		internal static bool GetHosterPolicy()
+		private static bool GetHosterPolicy()
 		{
 			if (!File.Exists("hoster_policy.txt"))
 				return false;

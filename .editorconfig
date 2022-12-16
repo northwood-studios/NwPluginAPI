@@ -1,4 +1,7 @@
-﻿[*.cs]
+﻿[*]
+charset = utf-8
+
+[*.cs]
 
 # CS0436: Type conflicts with imported type
 dotnet_diagnostic.CS0436.severity = none
@@ -75,3 +78,6 @@ dotnet_style_null_propagation = true:suggestion
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
 dotnet_style_prefer_auto_properties = true:silent
 indent_style = tab
+
+insert_final_newline = false
+trim_trailing_whitespace = true

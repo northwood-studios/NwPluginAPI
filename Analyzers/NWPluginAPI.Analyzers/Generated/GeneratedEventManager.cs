@@ -334,5 +334,11 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("Interactables.Interobjects.DoorUtils.DoorVariant", false, "door"),
 			new EventParameter("System.Boolean", false, "canOpen")) },
+		{ 102, new Event(
+			new EventParameter("BanDetails", false, "banDetails"),
+			new EventParameter("BanHandler+BanType", false, "banType")) },
+		{ 103, new Event(
+			new EventParameter("System.String", false, "id"),
+			new EventParameter("BanHandler+BanType", false, "banType")) },
 	};
 }
