@@ -42,7 +42,7 @@
 
 ## Adding References
 
-### Visual Studio
+### Visual Studio walkthrough
 1. Right click on your project in the solution explorer and select `Manage NuGet Packages for Solution` <br>
    *You might need to sign into your Microsoft account on the top right to do this.* <br>
     <details>
@@ -61,7 +61,7 @@
     </details>
 4. Press `OK` or `I Accept` if any prompt(s) shows up.
 
-### Rider
+### Rider walkthrough
 1. Right click on your project in the solution explorer and select `Manage NuGet Packages` <br>
     <details>
         <summary>View Image</summary>
