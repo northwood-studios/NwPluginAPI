@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core.Factories
+namespace PluginAPI.Core.Factories
 {
 	using Interfaces;
 	using System.Collections.Generic;
@@ -10,7 +10,7 @@
 	/// <typeparam name="TEntity">The entity to create.</typeparam>
 	public interface IEntityFactory<TEntity> where TEntity : IEntity
     {
-		TEntity DefaultServer();
+		TEntity DefaultServer { get; set; }
 	    TEntity Create(IGameComponent component);
         TEntity GetOrAdd(IGameComponent component);
 		void AddIfNotExists(IGameComponent component);

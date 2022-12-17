@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core.Factories
+namespace PluginAPI.Core.Factories
 {
 	using Interfaces;
 	using System;
@@ -9,8 +9,6 @@
 	public class PlayerFactory : Factory<IPlayer>
     {
         public virtual Type BaseType { get; } = typeof(Player);
-
-		public override IPlayer DefaultServer() => Server.Instance;
 
 		/// <summary>
 		/// Creates a new <see cref="IPlayer"/> instance.

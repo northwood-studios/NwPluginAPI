@@ -205,7 +205,7 @@ namespace PluginAPI.Events
 		/// <summary>
 		/// Determines whether the player should be allowed to join unconditionally.
 		/// </summary>
-		public bool BypassReservedSlotsLimit { get; }
+		public readonly bool BypassReservedSlotsLimit;
 
 		// ReSharper disable once MemberCanBePrivate.Global
 		public readonly bool HasReservedSlot;

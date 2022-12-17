@@ -470,6 +470,9 @@ namespace PluginAPI.Enums
         /// <summary>
         /// Executed when round ended.
         /// </summary>
+        /// <remarks>
+        /// Parameters: <see cref="RoundSummary.LeadingTeam"/> leadingTeam.
+        /// </remarks>
         RoundEnd = 57,
 
         /// <summary>
@@ -820,5 +823,37 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="string"/> userId, <see cref="BanType"/> banType.
 		/// </remarks>
 		BanRevoked = 103,
+
+		/// <summary>
+		/// Event executed when remoteadmin command completes.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
+		/// </remarks>
+		PlayerRemoteAdminCommandExecuted = 104,
+
+		/// <summary>
+		/// Event executed when game console command completes.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="string"/> response.
+		/// </remarks>
+		PlayerGameConsoleCommandExecuted = 105,
+
+		/// <summary>
+		/// Event executed when console command completes.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
+		/// </remarks>
+		ConsoleCommandExecuted = 106,
+
+		/// <summary>
+		/// Event executed when an existing ban is updated.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanType"/> banType.
+		/// </remarks>
+		BanUpdated = 107,
 	}
 }
