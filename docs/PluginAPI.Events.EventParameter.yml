@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EventParameter
     path: ../NwPluginAPI/Events/EventParameter.cs
     startLine: 7
@@ -62,7 +62,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BaseType
     path: ../NwPluginAPI/Events/EventParameter.cs
     startLine: 12
@@ -99,7 +99,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DefaultIdentifierName
     path: ../NwPluginAPI/Events/EventParameter.cs
     startLine: 17
@@ -136,7 +136,7 @@ items:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Events/EventParameter.cs
     startLine: 24

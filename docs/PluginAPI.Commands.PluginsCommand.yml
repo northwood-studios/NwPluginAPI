@@ -23,7 +23,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginsCommand
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 9
@@ -94,7 +94,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 12
@@ -132,7 +132,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 13
@@ -170,7 +170,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 14
@@ -208,7 +208,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Usage
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 15
@@ -245,7 +245,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 17
@@ -279,7 +279,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteParent
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 24
@@ -324,7 +324,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/PluginsCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LoadGeneratedCommands
     path: ../NwPluginAPI/Commands/PluginsCommand.cs
     startLine: 30

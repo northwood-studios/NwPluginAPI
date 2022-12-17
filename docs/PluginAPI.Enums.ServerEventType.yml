@@ -123,7 +123,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ServerEventType
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 23
@@ -156,7 +156,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerJoined
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 31
@@ -191,7 +191,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerLeft
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 39
@@ -226,7 +226,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDeath
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 47
@@ -261,7 +261,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LczDecontaminationStart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 52
@@ -295,7 +295,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LczDecontaminationAnnouncement
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 60
@@ -330,7 +330,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MapGenerated
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 65
@@ -364,7 +364,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GrenadeExploded
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 73
@@ -399,7 +399,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ItemSpawned
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 81
@@ -434,7 +434,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GeneratorActivated
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 89
@@ -469,7 +469,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlaceBlood
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 94
@@ -503,7 +503,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlaceBulletHole
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 99
@@ -537,7 +537,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerActivateGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 107
@@ -572,7 +572,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerAimWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 115
@@ -607,7 +607,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerBanned
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 123
@@ -642,7 +642,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCancelUsingItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 131
@@ -677,7 +677,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 139
@@ -712,7 +712,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeRadioRange
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 147
@@ -744,7 +744,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeSpectator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 155
@@ -779,7 +779,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCloseGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 163
@@ -814,7 +814,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDamagedShootingTarget
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 171
@@ -849,7 +849,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDamagedWindow
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 179
@@ -884,7 +884,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDeactivatedGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 187
@@ -919,7 +919,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDropAmmo
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 195
@@ -954,7 +954,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDropItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 203
@@ -989,7 +989,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDryfireWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 211
@@ -1024,7 +1024,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerEscape
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 219
@@ -1059,7 +1059,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerHandcuff
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 227
@@ -1094,7 +1094,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerRemoveHandcuffs
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 235
@@ -1129,7 +1129,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDamage
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 243
@@ -1164,7 +1164,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractElevator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 251
@@ -1199,7 +1199,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractLocker
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 259
@@ -1234,7 +1234,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractScp330
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 267
@@ -1269,7 +1269,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractShootingTarget
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 275
@@ -1304,7 +1304,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerKicked
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 283
@@ -1339,7 +1339,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerMakeNoise
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 291
@@ -1374,7 +1374,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerOpenGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 299
@@ -1409,7 +1409,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPickupAmmo
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 307
@@ -1444,7 +1444,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPickupArmor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 315
@@ -1479,7 +1479,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPickupScp330
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 323
@@ -1514,7 +1514,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPreauth
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 331
@@ -1549,7 +1549,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerReceiveEffect
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 339
@@ -1584,7 +1584,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerReloadWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 347
@@ -1619,7 +1619,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeRole
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 355
@@ -1654,7 +1654,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerSearchPickup
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 363
@@ -1689,7 +1689,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerSearchedPickup
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 371
@@ -1724,7 +1724,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerShotWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 379
@@ -1759,7 +1759,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerSpawn
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 387
@@ -1794,7 +1794,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RagdollSpawn
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 395
@@ -1829,7 +1829,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerThrowItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 403
@@ -1864,7 +1864,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerToggleFlashlight
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 411
@@ -1899,7 +1899,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUnloadWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 419
@@ -1934,7 +1934,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUnlockGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 427
@@ -1969,7 +1969,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUsedItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 435
@@ -2004,7 +2004,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUseHotkey
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 443
@@ -2039,7 +2039,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUseItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 451
@@ -2074,7 +2074,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerReport
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 459
@@ -2109,7 +2109,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCheaterReport
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 467
@@ -2144,7 +2144,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundEnd
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 475
@@ -2179,7 +2179,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundRestart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 480
@@ -2213,7 +2213,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundStart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 485
@@ -2247,7 +2247,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WaitingForPlayers
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 490
@@ -2281,7 +2281,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadStart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 498
@@ -2316,7 +2316,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadStop
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 506
@@ -2351,7 +2351,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadDetonation
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 511
@@ -2385,7 +2385,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerMuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 519
@@ -2420,7 +2420,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUnmuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 527
@@ -2455,7 +2455,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCheckReservedSlot
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 535
@@ -2490,7 +2490,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerRemoteAdminCommand
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 543
@@ -2525,7 +2525,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerGameConsoleCommand
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 551
@@ -2560,7 +2560,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConsoleCommand
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 559
@@ -2595,7 +2595,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TeamRespawnSelected
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 568
@@ -2630,7 +2630,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TeamRespawn
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 576
@@ -2665,7 +2665,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp106Stalking
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 584
@@ -2700,7 +2700,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerEnterPocketDimension
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 592
@@ -2735,7 +2735,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerExitPocketDimension
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 600
@@ -2770,7 +2770,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerThrowProjectile
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 608
@@ -2805,7 +2805,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914Activate
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 616
@@ -2840,7 +2840,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914KnobChange
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 624
@@ -2875,7 +2875,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914UpgradeInventory
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 632
@@ -2910,7 +2910,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914UpgradePickup
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 640
@@ -2945,7 +2945,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp106TeleportPlayer
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 648
@@ -2980,7 +2980,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173PlaySound
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 656
@@ -3015,7 +3015,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173CreateTantrum
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 664
@@ -3050,7 +3050,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173BreakneckSpeeds
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 672
@@ -3085,7 +3085,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173NewObserver
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 680
@@ -3120,7 +3120,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173SnapPlayer
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 688
@@ -3155,7 +3155,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp939CreateAmnesticCloud
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 696
@@ -3190,7 +3190,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp939Lunge
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 704
@@ -3225,7 +3225,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp939Attack
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 712
@@ -3260,7 +3260,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079GainExperience
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 720
@@ -3295,7 +3295,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079LevelUpTier
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 728
@@ -3330,7 +3330,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079UseTesla
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 736
@@ -3365,7 +3365,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079LockdownRoom
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 744
@@ -3400,7 +3400,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079CancelRoomLockdown
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 752
@@ -3435,7 +3435,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079LockDoor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 760
@@ -3470,7 +3470,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079UnlockDoor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 768
@@ -3505,7 +3505,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079BlackoutZone
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 776
@@ -3540,7 +3540,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079BlackoutRoom
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 784
@@ -3575,7 +3575,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp049ResurrectBody
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 792
@@ -3610,7 +3610,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp049StartResurrectingBody
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 800
@@ -3645,7 +3645,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractDoor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 808
@@ -3680,7 +3680,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanIssued
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 816
@@ -3715,7 +3715,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanRevoked
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 824
@@ -3750,7 +3750,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerRemoteAdminCommandExecuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 832
@@ -3785,7 +3785,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerGameConsoleCommandExecuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 840
@@ -3820,7 +3820,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConsoleCommandExecuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 848
@@ -3855,7 +3855,7 @@ items:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanUpdated
     path: ../NwPluginAPI/Enums/ServerEventType.cs
     startLine: 856

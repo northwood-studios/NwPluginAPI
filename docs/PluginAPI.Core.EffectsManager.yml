@@ -25,7 +25,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EffectsManager
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 7
@@ -68,7 +68,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 15
@@ -104,7 +104,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChangeState
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 24
@@ -156,7 +156,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChangeState
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 35
@@ -204,7 +204,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisableAllEffects
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 41
@@ -236,7 +236,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EnableEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 50
@@ -286,7 +286,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisableEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 58
@@ -329,7 +329,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 66
@@ -372,7 +372,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 75
@@ -419,7 +419,7 @@ items:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
     startLine: 84

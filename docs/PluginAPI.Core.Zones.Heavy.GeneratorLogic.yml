@@ -22,7 +22,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GeneratorLogic
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
     startLine: 5
@@ -65,7 +65,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Generator
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
     startLine: 10
@@ -100,7 +100,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnUpdate
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
     startLine: 12
@@ -134,7 +134,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnLateUpdate
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
     startLine: 14
@@ -168,7 +168,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnPlayerInteraction
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
     startLine: 16
@@ -205,7 +205,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
     startLine: 18
@@ -237,7 +237,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
     startLine: 24
