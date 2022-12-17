@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "[REACTED]/NwPluginAPI.Docs",
+  "source_base_path": "[REDACTED]/NwPluginAPI.Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gettingstarted/codeprerequisites.html",
-          "hash": "pw9ZIeFHORP1MEIT5o+YMkBilnwJcMgQ68cw746xpcM="
+          "hash": "pqbqlTveuIeZq1qe/Q+pdx0UySYOtiAXNH94AgvAfis="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gettingstarted/gettingstarted-cli.html",
-          "hash": "b2Nl3QAd2Dn6QdpcweCvw+Bf5EpnE+rVrSSyPBexwis="
+          "hash": "xK1eJmcTTVBC3pZfPfAps3BPEPSdCSIb4NR4zUTAVO8="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gettingstarted/gettingstarted-ide.html",
-          "hash": "GddSeMMhsUlS7pzhT+x8fx08v/VgULbyCFcVlixuO9Q="
+          "hash": "ff93sLkMWf5tlynKgDQDlGgfnD1uwdOLK9fUUXYjruc="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gettingstarted/gettingstarted.html",
-          "hash": "dUd5Likjxtyw///OjeseqK6UMOqbEjkiu22Km+Cyu4k="
+          "hash": "74+qoFlc1EFcZztRGIGGF/k3CGY+8qeMDaYGKnBljXc="
         }
       },
       "is_incremental": false,
@@ -81,19 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "S3PwAQ/fkZrZCmHJiGHcgCFm0ZhUnkosY47vXv5hXgE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/toc.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/toc.html",
-          "hash": "Q6Rl7hsjiC7OrvUHTH6mcwFVqDHjk/0gJo4SeZoLu5M="
+          "hash": "q17fxUfX89pbf6P0LlrQT/SaLTqnouqdrbOLywPBE7w="
         }
       },
       "is_incremental": false,
@@ -139,7 +127,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "nnUvgcXhMEXtNGGh2tnLFH8TXcFoGn6d2ZgosWs/vvQ="
+          "hash": "DOs6EOFyofyeaf1yT2I6wtcX6vpDR+XmVv8FprVL1rw="
         }
       },
       "is_incremental": false,

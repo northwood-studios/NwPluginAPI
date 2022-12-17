@@ -93,7 +93,7 @@ items:
   - Public
   - ReadOnly
 - uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  commentId: P:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
   id: BypassReservedSlotsLimit
   parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
   langs:
@@ -102,7 +102,7 @@ items:
   name: BypassReservedSlotsLimit
   nameWithType: PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
   fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  type: Property
+  type: Field
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
@@ -117,16 +117,13 @@ items:
   summary: "\nDetermines whether the player should be allowed to join unconditionally.\n"
   example: []
   syntax:
-    content: public readonly bool BypassReservedSlotsLimit { get; }
-    parameters: []
+    content: public readonly bool BypassReservedSlotsLimit
     return:
       type: System.Boolean
-    content.vb: Public ReadOnly Property BypassReservedSlotsLimit As Boolean
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit*
+    content.vb: Public ReadOnly BypassReservedSlotsLimit As Boolean
   modifiers.csharp:
   - public
   - readonly
-  - get
   modifiers.vb:
   - Public
   - ReadOnly
@@ -576,11 +573,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  name: BypassReservedSlotsLimit
-  nameWithType: PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
 - uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
   commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
   parent: PluginAPI.Events

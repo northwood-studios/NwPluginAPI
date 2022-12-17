@@ -101,16 +101,16 @@ items:
   - Public
   fullName.vb: PluginAPI.Core.Factories.Factory(Of T).Get()
 - uid: PluginAPI.Core.Factories.Factory`1.DefaultServer
-  commentId: M:PluginAPI.Core.Factories.Factory`1.DefaultServer
+  commentId: P:PluginAPI.Core.Factories.Factory`1.DefaultServer
   id: DefaultServer
   parent: PluginAPI.Core.Factories.Factory`1
   langs:
   - csharp
   - vb
-  name: DefaultServer()
-  nameWithType: Factory<T>.DefaultServer()
-  fullName: PluginAPI.Core.Factories.Factory<T>.DefaultServer()
-  type: Method
+  name: DefaultServer
+  nameWithType: Factory<T>.DefaultServer
+  fullName: PluginAPI.Core.Factories.Factory<T>.DefaultServer
+  type: Property
   source:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
@@ -118,29 +118,29 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: DefaultServer
     path: ../NwPluginAPI/Core/Factories/Factory.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
   summary: "\nDefault server entity.\n"
   example: []
   syntax:
-    content: public virtual T DefaultServer()
+    content: public T DefaultServer { get; set; }
+    parameters: []
     return:
       type: '{T}'
-      description: Entity
-    content.vb: Public Overridable Function DefaultServer As T
+    content.vb: Public Property DefaultServer As T
   overload: PluginAPI.Core.Factories.Factory`1.DefaultServer*
   implements:
   - PluginAPI.Core.Factories.IEntityFactory{{T}}.DefaultServer
-  nameWithType.vb: Factory(Of T).DefaultServer()
+  nameWithType.vb: Factory(Of T).DefaultServer
   modifiers.csharp:
   - public
-  - virtual
+  - get
+  - set
   modifiers.vb:
   - Public
-  - Overridable
-  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).DefaultServer()
+  fullName.vb: PluginAPI.Core.Factories.Factory(Of T).DefaultServer
 - uid: PluginAPI.Core.Factories.Factory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
   commentId: M:PluginAPI.Core.Factories.Factory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
   id: Create(PluginAPI.Core.Interfaces.IGameComponent)
@@ -159,7 +159,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/Factory.cs
-    startLine: 30
+    startLine: 29
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -204,7 +204,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetOrAdd
     path: ../NwPluginAPI/Core/Factories/Factory.cs
-    startLine: 37
+    startLine: 36
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -247,7 +247,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: AddIfNotExists
     path: ../NwPluginAPI/Core/Factories/Factory.cs
-    startLine: 54
+    startLine: 57
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -801,36 +801,14 @@ references:
   nameWithType.vb: Factory(Of T).DefaultServer
   fullName.vb: PluginAPI.Core.Factories.Factory(Of T).DefaultServer
 - uid: PluginAPI.Core.Factories.IEntityFactory{{T}}.DefaultServer
-  commentId: M:PluginAPI.Core.Factories.IEntityFactory{`0}.DefaultServer
+  commentId: P:PluginAPI.Core.Factories.IEntityFactory{`0}.DefaultServer
   parent: PluginAPI.Core.Factories.IEntityFactory{{T}}
   definition: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-  name: DefaultServer()
-  nameWithType: IEntityFactory<T>.DefaultServer()
-  fullName: PluginAPI.Core.Factories.IEntityFactory<T>.DefaultServer()
-  nameWithType.vb: IEntityFactory(Of T).DefaultServer()
-  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of T).DefaultServer()
-  spec.csharp:
-  - uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-    name: DefaultServer
-    nameWithType: IEntityFactory<T>.DefaultServer
-    fullName: PluginAPI.Core.Factories.IEntityFactory<T>.DefaultServer
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-    name: DefaultServer
-    nameWithType: IEntityFactory(Of T).DefaultServer
-    fullName: PluginAPI.Core.Factories.IEntityFactory(Of T).DefaultServer
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: DefaultServer
+  nameWithType: IEntityFactory<T>.DefaultServer
+  fullName: PluginAPI.Core.Factories.IEntityFactory<T>.DefaultServer
+  nameWithType.vb: IEntityFactory(Of T).DefaultServer
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of T).DefaultServer
 - uid: '{T}'
   commentId: '!:T'
   definition: T
@@ -838,34 +816,12 @@ references:
   nameWithType: T
   fullName: T
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-  commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-  name: DefaultServer()
-  nameWithType: IEntityFactory<TEntity>.DefaultServer()
-  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.DefaultServer()
-  nameWithType.vb: IEntityFactory(Of TEntity).DefaultServer()
-  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).DefaultServer()
-  spec.csharp:
-  - uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-    name: DefaultServer
-    nameWithType: IEntityFactory<TEntity>.DefaultServer
-    fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.DefaultServer
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-    name: DefaultServer
-    nameWithType: IEntityFactory(Of TEntity).DefaultServer
-    fullName: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).DefaultServer
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
+  commentId: P:PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
+  name: DefaultServer
+  nameWithType: IEntityFactory<TEntity>.DefaultServer
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.DefaultServer
+  nameWithType.vb: IEntityFactory(Of TEntity).DefaultServer
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).DefaultServer
 - uid: T
   name: T
   nameWithType: T

@@ -49,16 +49,16 @@ items:
   fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity)
   name.vb: IEntityFactory(Of TEntity)
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
-  commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
+  commentId: P:PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
   id: DefaultServer
   parent: PluginAPI.Core.Factories.IEntityFactory`1
   langs:
   - csharp
   - vb
-  name: DefaultServer()
-  nameWithType: IEntityFactory<TEntity>.DefaultServer()
-  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.DefaultServer()
-  type: Method
+  name: DefaultServer
+  nameWithType: IEntityFactory<TEntity>.DefaultServer
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.DefaultServer
+  type: Property
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
@@ -71,13 +71,17 @@ items:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
   syntax:
-    content: TEntity DefaultServer()
+    content: TEntity DefaultServer { get; set; }
+    parameters: []
     return:
       type: '{TEntity}'
-    content.vb: Function DefaultServer As TEntity
+    content.vb: Property DefaultServer As TEntity
   overload: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer*
-  nameWithType.vb: IEntityFactory(Of TEntity).DefaultServer()
-  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).DefaultServer()
+  nameWithType.vb: IEntityFactory(Of TEntity).DefaultServer
+  modifiers.csharp:
+  - get
+  - set
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).DefaultServer
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
   commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
   id: Create(PluginAPI.Core.Interfaces.IGameComponent)

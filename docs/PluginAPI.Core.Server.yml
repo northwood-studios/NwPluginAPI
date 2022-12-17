@@ -23,6 +23,7 @@ items:
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,System.String)
   - PluginAPI.Core.Server.MaxPlayers
   - PluginAPI.Core.Server.Port
+  - PluginAPI.Core.Server.ReservedSlots
   - PluginAPI.Core.Server.Restart
   - PluginAPI.Core.Server.Restart(System.UInt16)
   - PluginAPI.Core.Server.RunCommand(System.String,CommandSender)
@@ -437,7 +438,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: MaxPlayers
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 60
+    startLine: 67
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -450,6 +451,45 @@ items:
       type: System.Int32
     content.vb: Public Shared Property MaxPlayers As Integer
   overload: PluginAPI.Core.Server.MaxPlayers*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.ReservedSlots
+  commentId: P:PluginAPI.Core.Server.ReservedSlots
+  id: ReservedSlots
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: ReservedSlots
+  nameWithType: Server.ReservedSlots
+  fullName: PluginAPI.Core.Server.ReservedSlots
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: ReservedSlots
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 76
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets the amount of reserved slots.\n"
+  example: []
+  syntax:
+    content: public static int ReservedSlots { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared Property ReservedSlots As Integer
+  overload: PluginAPI.Core.Server.ReservedSlots*
   modifiers.csharp:
   - public
   - static
@@ -476,7 +516,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 74
+    startLine: 90
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -523,7 +563,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 84
+    startLine: 100
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -573,7 +613,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 92
+    startLine: 108
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -617,7 +657,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 99
+    startLine: 115
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -658,7 +698,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 109
+    startLine: 125
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -708,7 +748,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 120
+    startLine: 136
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -761,7 +801,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 143
+    startLine: 159
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -811,7 +851,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 154
+    startLine: 170
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -864,7 +904,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 174
+    startLine: 190
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -905,7 +945,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 189
+    startLine: 205
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -946,7 +986,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsPlayerBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 204
+    startLine: 220
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -987,7 +1027,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 215
+    startLine: 231
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1024,7 +1064,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 227
+    startLine: 243
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1065,7 +1105,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 233
+    startLine: 249
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1099,7 +1139,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 238
+    startLine: 254
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1136,7 +1176,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 247
+    startLine: 263
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1170,7 +1210,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 252
+    startLine: 268
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1207,7 +1247,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RunCommand
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 263
+    startLine: 279
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1250,7 +1290,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 272
+    startLine: 288
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1297,7 +1337,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 282
+    startLine: 298
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -5739,6 +5779,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: PluginAPI.Core.Server.ReservedSlots*
+  commentId: Overload:PluginAPI.Core.Server.ReservedSlots
+  name: ReservedSlots
+  nameWithType: Server.ReservedSlots
+  fullName: PluginAPI.Core.Server.ReservedSlots
 - uid: PluginAPI.Core.Server.BanPlayer*
   commentId: Overload:PluginAPI.Core.Server.BanPlayer
   name: BanPlayer
