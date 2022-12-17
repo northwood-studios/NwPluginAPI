@@ -22,7 +22,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PocketDimension
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
     startLine: 10
@@ -76,7 +76,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
     startLine: 15
@@ -111,7 +111,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Teleports
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
     startLine: 23
@@ -148,7 +148,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Logic
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
     startLine: 28
@@ -187,7 +187,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsAccessible
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
     startLine: 33
@@ -226,7 +226,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ShuffleTeleports
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
     startLine: 38
@@ -258,7 +258,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
     startLine: 48

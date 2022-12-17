@@ -23,7 +23,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Paths
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 11
@@ -67,7 +67,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GlobalPlugins
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 16
@@ -106,7 +106,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LocalPlugins
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 21
@@ -145,7 +145,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Configs
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 26
@@ -184,7 +184,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AppData
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 31
@@ -223,7 +223,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SecretLab
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 36
@@ -262,7 +262,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginAPI
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 41
@@ -301,7 +301,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Plugins
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 46

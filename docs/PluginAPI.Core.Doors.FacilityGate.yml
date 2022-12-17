@@ -21,7 +21,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityGate
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 12
@@ -78,7 +78,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 17
@@ -117,7 +117,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 22
@@ -156,7 +156,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 27
@@ -191,7 +191,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PryPositions
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 32
@@ -228,7 +228,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
     startLine: 39

@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ListCommand
     path: ../NwPluginAPI/Commands/ListCommand.cs
     startLine: 10
@@ -78,7 +78,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/ListCommand.cs
     startLine: 14
@@ -116,7 +116,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Commands/ListCommand.cs
     startLine: 16
@@ -154,7 +154,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Commands/ListCommand.cs
     startLine: 18
@@ -192,7 +192,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Execute
     path: ../NwPluginAPI/Commands/ListCommand.cs
     startLine: 20

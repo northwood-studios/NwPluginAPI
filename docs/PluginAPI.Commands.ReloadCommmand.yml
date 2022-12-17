@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReloadCommmand
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
     startLine: 10
@@ -78,7 +78,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
     startLine: 13
@@ -115,7 +115,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
     startLine: 14
@@ -152,7 +152,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
     startLine: 15
@@ -189,7 +189,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Execute
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
     startLine: 17
