@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core.Factories
+namespace PluginAPI.Core.Factories
 {
 	using Interfaces;
 	using System.Collections.Generic;
@@ -20,8 +20,7 @@
 		/// <summary>
 		/// Default server entity.
 		/// </summary>
-		/// <returns>Entity</returns>
-		public virtual T DefaultServer() => default(T);
+		public T DefaultServer { get; set; }
 
 		/// <summary>
 		/// Creates new entity.
@@ -41,7 +40,11 @@
                 return entity;
 
 			if (component is ReferenceHub hb && hb.isLocalPlayer)
-				return DefaultServer();
+			{
+				if (DefaultServer == null)
+					DefaultServer = Create(component);
+				return DefaultServer;
+			}
 
             var ent = Create(component);
             Entities.Add(component, ent);
