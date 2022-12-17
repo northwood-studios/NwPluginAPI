@@ -52,7 +52,14 @@ namespace PluginAPI.Core
 		public static bool FriendlyFire
 		{
 			get => ServerConsole.FriendlyFire;
-			set => ServerConsole.FriendlyFire = value;
+			set
+			{
+				if (FriendlyFire == value)
+					return;
+
+				ServerConsole.FriendlyFire = value;
+				ServerConfigSynchronizer.Singleton.RefreshMainBools();
+			}
 		}
 
 		/// <summary>
@@ -62,6 +69,15 @@ namespace PluginAPI.Core
 		{
 			get => CustomNetworkManager.slots;
 			set => CustomNetworkManager.slots = value;
+		}
+
+		/// <summary>
+		/// Gets or sets the amount of reserved slots.
+		/// </summary>
+		public static int ReservedSlots
+		{
+			get => CustomNetworkManager.reservedSlots;
+			set => CustomNetworkManager.reservedSlots = value;
 		}
 
 		#region Ban System

@@ -428,9 +428,9 @@
 		}
 
         [PluginEvent(ServerEventType.RoundEnd)]
-        void OnRoundEnded()
+        void OnRoundEnded(RoundSummary.LeadingTeam leadingTeam)
         {
-            Log.Info($"Round ended");
+            Log.Info($"Round ended. {leadingTeam.ToString()} won!");
         }
 
         [PluginEvent(ServerEventType.RoundRestart)]

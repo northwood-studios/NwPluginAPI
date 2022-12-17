@@ -258,7 +258,7 @@ namespace PluginAPI.Core
 
 			foreach (var method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
-				foreach(var attribute in method.GetCustomAttributes<Attribute>())
+				foreach (var attribute in method.GetCustomAttributes<Attribute>())
 				{
 					switch (attribute)
 					{
