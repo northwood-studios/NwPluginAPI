@@ -24,7 +24,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Facility
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 16
@@ -67,7 +67,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetRoom
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 29
@@ -104,7 +104,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RegisterDoors
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 101
@@ -144,7 +144,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RegisterDoor
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 123
@@ -181,7 +181,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Reset
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 143
@@ -213,7 +213,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 151
@@ -252,7 +252,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 156
@@ -291,7 +291,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TurnOnAllLights
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 161
@@ -325,7 +325,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: TurnOffAllLights
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 169

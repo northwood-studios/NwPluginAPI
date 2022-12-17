@@ -22,7 +22,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/AssemblyLoader.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: AssemblyLoader
     path: ../NwPluginAPI/Loader/AssemblyLoader.cs
     startLine: 19
@@ -66,7 +66,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/AssemblyLoader.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: MainAssembly
     path: ../NwPluginAPI/Loader/AssemblyLoader.cs
     startLine: 26
@@ -105,7 +105,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/AssemblyLoader.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Plugins
     path: ../NwPluginAPI/Loader/AssemblyLoader.cs
     startLine: 38
@@ -144,7 +144,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/AssemblyLoader.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: InstalledPlugins
     path: ../NwPluginAPI/Loader/AssemblyLoader.cs
     startLine: 45
@@ -183,7 +183,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/AssemblyLoader.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Dependencies
     path: ../NwPluginAPI/Loader/AssemblyLoader.cs
     startLine: 50
@@ -222,7 +222,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/AssemblyLoader.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsLoaded
     path: ../NwPluginAPI/Loader/AssemblyLoader.cs
     startLine: 56
@@ -261,7 +261,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/AssemblyLoader.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Initialize
     path: ../NwPluginAPI/Loader/AssemblyLoader.cs
     startLine: 61

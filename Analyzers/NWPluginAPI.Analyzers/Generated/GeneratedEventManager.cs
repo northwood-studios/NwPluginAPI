@@ -210,7 +210,8 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
 			new EventParameter("System.String", false, "reason")) },
-		{ 57, new Event() },
+		{ 57, new Event(
+			new EventParameter("RoundSummary+LeadingTeam", false, "leadingTeam")) },
 		{ 58, new Event() },
 		{ 59, new Event() },
 		{ 60, new Event() },
@@ -334,5 +335,30 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("Interactables.Interobjects.DoorUtils.DoorVariant", false, "door"),
 			new EventParameter("System.Boolean", false, "canOpen")) },
+		{ 102, new Event(
+			new EventParameter("BanDetails", false, "banDetails"),
+			new EventParameter("BanHandler+BanType", false, "banType")) },
+		{ 103, new Event(
+			new EventParameter("System.String", false, "id"),
+			new EventParameter("BanHandler+BanType", false, "banType")) },
+		{ 104, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.String", false, "command"),
+			new EventParameter("System.String", true, "arguments"),
+			new EventParameter("System.Boolean", false, "result"),
+			new EventParameter("System.String", false, "response")) },
+		{ 105, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.String", false, "command"),
+			new EventParameter("System.String", true, "arguments"),
+			new EventParameter("System.String", false, "response")) },
+		{ 106, new Event(
+			new EventParameter("System.String", false, "command"),
+			new EventParameter("System.String", true, "arguments"),
+			new EventParameter("System.Boolean", false, "result"),
+			new EventParameter("System.String", false, "response")) },
+		{ 107, new Event(
+			new EventParameter("BanDetails", false, "banDetails"),
+			new EventParameter("BanHandler+BanType", false, "banType")) },
 	};
 }

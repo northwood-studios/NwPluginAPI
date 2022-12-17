@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginDirectory
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
     startLine: 7
@@ -29,7 +29,7 @@ items:
   summary: "\nContains the paths containing plugins and dependencies.\n"
   example: []
   syntax:
-    content: public struct PluginDirectory
+    content: public readonly struct PluginDirectory
     content.vb: Public Structure PluginDirectory
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
@@ -40,6 +40,7 @@ items:
   - System.Object.GetType
   modifiers.csharp:
   - public
+  - readonly
   - struct
   modifiers.vb:
   - Public
@@ -59,7 +60,7 @@ items:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
     startLine: 13
@@ -81,7 +82,7 @@ items:
   modifiers.vb:
   - Public
 - uid: PluginAPI.Loader.Features.PluginDirectory.Dependencies
-  commentId: P:PluginAPI.Loader.Features.PluginDirectory.Dependencies
+  commentId: F:PluginAPI.Loader.Features.PluginDirectory.Dependencies
   id: Dependencies
   parent: PluginAPI.Loader.Features.PluginDirectory
   langs:
@@ -90,35 +91,33 @@ items:
   name: Dependencies
   nameWithType: PluginDirectory.Dependencies
   fullName: PluginAPI.Loader.Features.PluginDirectory.Dependencies
-  type: Property
+  type: Field
   source:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Dependencies
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Loader.Features
   summary: "\nGets or sets the dependencies folder.\n"
   example: []
   syntax:
-    content: public string Dependencies { get; set; }
-    parameters: []
+    content: public readonly string Dependencies
     return:
       type: System.String
-    content.vb: Public Property Dependencies As String
-  overload: PluginAPI.Loader.Features.PluginDirectory.Dependencies*
+    content.vb: Public ReadOnly Dependencies As String
   modifiers.csharp:
   - public
-  - get
-  - set
+  - readonly
   modifiers.vb:
   - Public
+  - ReadOnly
 - uid: PluginAPI.Loader.Features.PluginDirectory.Plugins
-  commentId: P:PluginAPI.Loader.Features.PluginDirectory.Plugins
+  commentId: F:PluginAPI.Loader.Features.PluginDirectory.Plugins
   id: Plugins
   parent: PluginAPI.Loader.Features.PluginDirectory
   langs:
@@ -127,33 +126,31 @@ items:
   name: Plugins
   nameWithType: PluginDirectory.Plugins
   fullName: PluginAPI.Loader.Features.PluginDirectory.Plugins
-  type: Property
+  type: Field
   source:
     remote:
       path: NwPluginAPI/Loader/Features/PluginDirectory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Plugins
     path: ../NwPluginAPI/Loader/Features/PluginDirectory.cs
-    startLine: 28
+    startLine: 27
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Loader.Features
   summary: "\nGets or sets the plugins folder.\n"
   example: []
   syntax:
-    content: public string Plugins { get; set; }
-    parameters: []
+    content: public readonly string Plugins
     return:
       type: System.String
-    content.vb: Public Property Plugins As String
-  overload: PluginAPI.Loader.Features.PluginDirectory.Plugins*
+    content.vb: Public ReadOnly Plugins As String
   modifiers.csharp:
   - public
-  - get
-  - set
+  - readonly
   modifiers.vb:
   - Public
+  - ReadOnly
 references:
 - uid: PluginAPI.Loader.Features
   commentId: N:PluginAPI.Loader.Features
@@ -446,13 +443,3 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: PluginAPI.Loader.Features.PluginDirectory.Dependencies*
-  commentId: Overload:PluginAPI.Loader.Features.PluginDirectory.Dependencies
-  name: Dependencies
-  nameWithType: PluginDirectory.Dependencies
-  fullName: PluginAPI.Loader.Features.PluginDirectory.Dependencies
-- uid: PluginAPI.Loader.Features.PluginDirectory.Plugins*
-  commentId: Overload:PluginAPI.Loader.Features.PluginDirectory.Plugins
-  name: Plugins
-  nameWithType: PluginDirectory.Plugins
-  fullName: PluginAPI.Loader.Features.PluginDirectory.Plugins

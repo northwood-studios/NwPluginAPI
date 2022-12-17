@@ -76,7 +76,7 @@ namespace PluginAPI.Events
 		{
 			if (banReason.Length > 400)
 				throw new ArgumentOutOfRangeException(nameof(banReason), "Reason can't be longer than 400 characters.");
-			
+
 			return new PreauthCancellationData(RejectionReason.Banned, isForced, banReason, expiration: expiration);
 		}
 
@@ -90,7 +90,7 @@ namespace PluginAPI.Events
 		{
 			if (string.IsNullOrEmpty(customReason) || customReason.Length > 400)
 				throw new ArgumentOutOfRangeException(nameof(customReason), "Reason can't be null, empty or longer than 400 characters.");
-			
+
 			return new PreauthCancellationData(RejectionReason.Custom, isForced, customReason: customReason);
 		}
 
@@ -109,7 +109,7 @@ namespace PluginAPI.Events
 				case RejectionReason.Redirect:
 				case RejectionReason.Custom:
 					throw new Exception("Specified reason requires extra parameters. Please use the appropriate method.");
-				
+
 				default:
 					return new PreauthCancellationData(reason, isForced);
 			}
@@ -202,13 +202,19 @@ namespace PluginAPI.Events
 		/// <inheritdoc />
 		public bool IsCancelled { get; }
 
+		/// <summary>
+		/// Determines whether the player should be allowed to join unconditionally.
+		/// </summary>
+		public readonly bool BypassReservedSlotsLimit;
+
 		// ReSharper disable once MemberCanBePrivate.Global
 		public readonly bool HasReservedSlot;
 
-		private PlayerCheckReservedSlotCancellationData(bool isCancelled, bool hasReservedSlot)
+		private PlayerCheckReservedSlotCancellationData(bool isCancelled, bool hasReservedSlot, bool bypassReservedSlotsLimit)
 		{
 			IsCancelled = isCancelled;
 			HasReservedSlot = hasReservedSlot;
+			BypassReservedSlotsLimit = bypassReservedSlotsLimit;
 		}
 
 		/// <summary>
@@ -216,7 +222,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <returns>The <see cref="PlayerCheckReservedSlotCancellationData"/>.</returns>
 		public static PlayerCheckReservedSlotCancellationData LeaveUnchanged() =>
-			new PlayerCheckReservedSlotCancellationData(false, false);
+			new PlayerCheckReservedSlotCancellationData(false, false, false);
 
 		/// <summary>
 		/// Overrides a reserved slot check.
@@ -224,6 +230,12 @@ namespace PluginAPI.Events
 		/// <param name="hasReservedSlot">Indicating whether or not the player has a reserved slot.</param>
 		/// <returns>The <see cref="PlayerCheckReservedSlotCancellationData"/>.</returns>
 		public static PlayerCheckReservedSlotCancellationData Override(bool hasReservedSlot) =>
-			new PlayerCheckReservedSlotCancellationData(true, hasReservedSlot);
+			new PlayerCheckReservedSlotCancellationData(true, hasReservedSlot, false);
+
+		/// <summary>
+		/// Bypasses the check of free reserved slots on the server and allows the connection unconditionally.
+		/// </summary>
+		/// <returns></returns>
+		public static PlayerCheckReservedSlotCancellationData BypassCheck() => new PlayerCheckReservedSlotCancellationData(true, true, true);
 	}
 }

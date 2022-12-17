@@ -14,6 +14,7 @@
 		<SignAssembly>False</SignAssembly>
 
 		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
 		<PackageId>Northwood.PluginAPI</PackageId>
 		<Authors>Northwood Studios</Authors>
@@ -32,7 +33,8 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Northwood.PluginAPI</Title>
 		<Copyright>Copyright by Hubert Moszka Northwood, 2022</Copyright>
-		<PackageVersion>12.0.0-rc.2</PackageVersion>
+		<PackageVersion>12.0.0-rc.3</PackageVersion>
+		<LangVersion>default</LangVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>

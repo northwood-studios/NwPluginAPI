@@ -266,5 +266,41 @@
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) teleported player &6{target.Nickname}&r (&6{target.UserId}&r) to pocket dimension as SCP-106");
 		}
+
+		[PluginEvent(ServerEventType.BanIssued)]
+		public void OnBanIssued(BanDetails banDetails, BanHandler.BanType banType)
+		{
+			Log.Info($"ID {banDetails.Id} of type {banType} has been banned by {banDetails.Issuer}.");
+		}
+
+		[PluginEvent(ServerEventType.BanRevoked)]
+		public void OnBanRevoked(string id, BanHandler.BanType banType)
+		{
+			Log.Info($"ID {id} of type {banType} has been unbanned.");
+		}
+
+		[PluginEvent(ServerEventType.BanUpdated)]
+		public void OnBanUpdated(BanDetails banDetails, BanHandler.BanType banType)
+		{
+			Log.Info($"Ban of ID {banDetails.Id} of type {banType} has been updated by {banDetails.Issuer}.");
+		}
+
+		[PluginEvent(ServerEventType.PlayerRemoteAdminCommandExecuted)]
+		public void OnPlayerRemoteadminCommandExecuted(MyPlayer player, string command, string[] arguments, bool result, string response)
+		{
+			Log.Info($"&7[&1RemoteAdmin&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}. Result: {result}. Command output: {response}.");
+		}
+
+		[PluginEvent(ServerEventType.PlayerGameConsoleCommandExecuted)]
+		public void OnPlayerGameconsoleCommandExecuted(MyPlayer player, string command, string[] arguments, string response)
+		{
+			Log.Info($"&7[&3GameConsole&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}. Command output: {response}.");
+		}
+
+		[PluginEvent(ServerEventType.ConsoleCommandExecuted)]
+		public void OnConsoleCommandExecuted(string command, string[] arguments, bool result, string response)
+		{
+			Log.Info($"&7[&2Console&7]&r Server used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}. Result: {result}. Command output: {response}.");
+		}
 	}
 }

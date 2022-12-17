@@ -228,7 +228,8 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IPlayer), "target"),
 				new EventParameter(typeof(string), "reason")) },
-			{ ServerEventType.RoundEnd, new Event() },
+			{ ServerEventType.RoundEnd, new Event(
+				new EventParameter(typeof(RoundSummary.LeadingTeam), "leadingTeam")) },
 			{ ServerEventType.RoundRestart, new Event() },
 			{ ServerEventType.RoundStart, new Event() },
 			{ ServerEventType.WaitingForPlayers, new Event() },
@@ -352,6 +353,31 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(DoorVariant), "door"),
 				new EventParameter(typeof(bool), "canOpen")) },
+			{ ServerEventType.BanIssued, new Event(
+				new EventParameter(typeof(BanDetails), "banDetails"),
+				new EventParameter(typeof(BanHandler.BanType), "banType")) },
+			{ ServerEventType.BanRevoked, new Event(
+				new EventParameter(typeof(string), "id"),
+				new EventParameter(typeof(BanHandler.BanType), "banType")) },
+			{ ServerEventType.PlayerRemoteAdminCommandExecuted, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(string), "command"),
+				new EventParameter(typeof(string[]), "arguments"),
+				new EventParameter(typeof(bool), "result"),
+				new EventParameter(typeof(string), "response")) },
+			{ ServerEventType.PlayerGameConsoleCommandExecuted, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(string), "command"),
+				new EventParameter(typeof(string[]), "arguments"),
+				new EventParameter(typeof(string), "response")) },
+			{ ServerEventType.ConsoleCommandExecuted, new Event(
+				new EventParameter(typeof(string), "command"),
+				new EventParameter(typeof(string[]), "arguments"),
+				new EventParameter(typeof(bool), "result"),
+				new EventParameter(typeof(string), "response")) },
+			{ ServerEventType.BanUpdated, new Event(
+				new EventParameter(typeof(BanDetails), "banDetails"),
+				new EventParameter(typeof(BanHandler.BanType), "banType")) },
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
@@ -384,7 +410,7 @@ namespace PluginAPI.Events
 			Type pluginType = plugin.GetType();
 
 			if (!AssemblyLoader.PluginToAssembly.TryGetValue(plugin, out Assembly assembly)) return;
-			
+
 			foreach(var type in assembly.GetTypes().Where(x => x.IsClass))
 			{
 				bool foundEvents = false;
@@ -423,9 +449,9 @@ namespace PluginAPI.Events
 			Type pluginType = plugin.GetType();
 
 			foreach(var handler in Events
-				.SelectMany(x => 
+				.SelectMany(x =>
 					x.Value.Invokers.Where(y => y.Key == pluginType))
-				.SelectMany(x => 
+				.SelectMany(x =>
 					x.Value.Select(y => y.Target))
 				.Distinct())
 			{
@@ -528,7 +554,7 @@ namespace PluginAPI.Events
 							Log.Debug($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
 							break;
 					}
-				}          
+				}
 			}
         }
 
@@ -611,7 +637,7 @@ namespace PluginAPI.Events
 						Log.Error($"Failed executing event &6{invoker.Method.Name}&r (&6{type}&r) in plugin &6{invoker.Plugin.FullName}&r\n{ex}");
 						continue;
 					}
-					
+
 					if (cancelled || result is null)
 						continue;
 

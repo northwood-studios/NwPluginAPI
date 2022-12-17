@@ -7,8 +7,6 @@ items:
   children:
   - PluginAPI.Helpers.Paths.AppData
   - PluginAPI.Helpers.Paths.Configs
-  - PluginAPI.Helpers.Paths.Dependencies
-  - PluginAPI.Helpers.Paths.Global
   - PluginAPI.Helpers.Paths.GlobalPlugins
   - PluginAPI.Helpers.Paths.LocalPlugins
   - PluginAPI.Helpers.Paths.PluginAPI
@@ -25,7 +23,7 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Paths
     path: ../NwPluginAPI/Helpers/Paths.cs
     startLine: 11
@@ -54,45 +52,6 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: PluginAPI.Helpers.Paths.Global
-  commentId: P:PluginAPI.Helpers.Paths.Global
-  id: Global
-  parent: PluginAPI.Helpers.Paths
-  langs:
-  - csharp
-  - vb
-  name: Global
-  nameWithType: Paths.Global
-  fullName: PluginAPI.Helpers.Paths.Global
-  type: Property
-  source:
-    remote:
-      path: NwPluginAPI/Helpers/Paths.cs
-      branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: Global
-    path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 16
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Helpers
-  summary: "\nGets the path to global config folder.\n"
-  example: []
-  syntax:
-    content: public static string Global { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Shared ReadOnly Property Global As String
-  overload: PluginAPI.Helpers.Paths.Global*
-  modifiers.csharp:
-  - public
-  - static
-  - get
-  modifiers.vb:
-  - Public
-  - Shared
-  - ReadOnly
 - uid: PluginAPI.Helpers.Paths.GlobalPlugins
   commentId: P:PluginAPI.Helpers.Paths.GlobalPlugins
   id: GlobalPlugins
@@ -108,10 +67,10 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GlobalPlugins
     path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 21
+    startLine: 16
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Helpers
@@ -147,10 +106,10 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: LocalPlugins
     path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 26
+    startLine: 21
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Helpers
@@ -186,10 +145,10 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Configs
     path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 31
+    startLine: 26
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Helpers
@@ -225,10 +184,10 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: AppData
     path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 36
+    startLine: 31
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Helpers
@@ -264,10 +223,10 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SecretLab
     path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 41
+    startLine: 36
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Helpers
@@ -303,10 +262,10 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginAPI
     path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 46
+    startLine: 41
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Helpers
@@ -342,10 +301,10 @@ items:
     remote:
       path: NwPluginAPI/Helpers/Paths.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Plugins
     path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 51
+    startLine: 46
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Helpers
@@ -358,45 +317,6 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property Plugins As String
   overload: PluginAPI.Helpers.Paths.Plugins*
-  modifiers.csharp:
-  - public
-  - static
-  - get
-  modifiers.vb:
-  - Public
-  - Shared
-  - ReadOnly
-- uid: PluginAPI.Helpers.Paths.Dependencies
-  commentId: P:PluginAPI.Helpers.Paths.Dependencies
-  id: Dependencies
-  parent: PluginAPI.Helpers.Paths
-  langs:
-  - csharp
-  - vb
-  name: Dependencies
-  nameWithType: Paths.Dependencies
-  fullName: PluginAPI.Helpers.Paths.Dependencies
-  type: Property
-  source:
-    remote:
-      path: NwPluginAPI/Helpers/Paths.cs
-      branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: Dependencies
-    path: ../NwPluginAPI/Helpers/Paths.cs
-    startLine: 56
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Helpers
-  summary: "\nGets the path to the &quot;Dependencies&quot; folder, located inside the &quot;Plugins&quot; folder.\n"
-  example: []
-  syntax:
-    content: public static string Dependencies { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Shared ReadOnly Property Dependencies As String
-  overload: PluginAPI.Helpers.Paths.Dependencies*
   modifiers.csharp:
   - public
   - static
@@ -703,18 +623,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: PluginAPI.Helpers.Paths.Global*
-  commentId: Overload:PluginAPI.Helpers.Paths.Global
-  name: Global
-  nameWithType: Paths.Global
-  fullName: PluginAPI.Helpers.Paths.Global
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
 - uid: PluginAPI.Helpers.Paths.GlobalPlugins*
   commentId: Overload:PluginAPI.Helpers.Paths.GlobalPlugins
   name: GlobalPlugins
@@ -741,6 +649,13 @@ references:
   name: Configs
   nameWithType: Paths.Configs
   fullName: PluginAPI.Helpers.Paths.Configs
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: PluginAPI.Helpers.Paths.AppData*
   commentId: Overload:PluginAPI.Helpers.Paths.AppData
   name: AppData
@@ -761,8 +676,3 @@ references:
   name: Plugins
   nameWithType: Paths.Plugins
   fullName: PluginAPI.Helpers.Paths.Plugins
-- uid: PluginAPI.Helpers.Paths.Dependencies*
-  commentId: Overload:PluginAPI.Helpers.Paths.Dependencies
-  name: Dependencies
-  nameWithType: Paths.Dependencies
-  fullName: PluginAPI.Helpers.Paths.Dependencies

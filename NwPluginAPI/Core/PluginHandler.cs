@@ -19,13 +19,14 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class PluginHandler
 	{
-		private static readonly string UnknownName = "Unknown";
-		private static readonly string UnknownVersion = "0.0.0";
+		private const string UnknownName = "Unknown";
+		private const string UnknownVersion = "0.0.0";
 
 		private readonly string _pluginDirectory;
 		private readonly string _mainConfigPath;
 
         private readonly PluginEntryPoint _entryInfo;
+        private string _pluginVersion;
 
         private readonly MethodInfo _entryPoint;
         private readonly MethodInfo _onUnload;
@@ -62,7 +63,30 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the version of the plugin.
 		/// </summary>
-		public string PluginVersion => _entryInfo?.Version ?? UnknownVersion;
+		public string PluginVersion
+		{
+			get
+			{
+				if (string.IsNullOrEmpty(_pluginVersion))
+				{
+					if (_entryInfo is not null)
+					{
+						if (!string.IsNullOrEmpty(_entryInfo.Version))
+						{
+							_pluginVersion = _entryInfo.Version;
+
+							return _pluginVersion;
+						}
+					}
+
+					_pluginVersion =
+						Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+							.InformationalVersion ?? UnknownVersion;
+				}
+
+				return _pluginVersion;
+			}
+		}
 
 		/// <summary>
 		/// Gets the description of the plugin.
@@ -171,7 +195,7 @@ namespace PluginAPI.Core
 				File.WriteAllText(targetPath, YamlParser.Serializer.Serialize(config));
 
 				Log.Debug($"Loaded config file for &2{PluginName}&r.", Log.DebugMode);
-			}	
+			}
 		}
 		/// <summary>
 		/// Loads the default plugin config.
@@ -234,7 +258,7 @@ namespace PluginAPI.Core
 
 			foreach (var method in _pluginType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
 			{
-				foreach(var attribute in method.GetCustomAttributes<Attribute>())
+				foreach (var attribute in method.GetCustomAttributes<Attribute>())
 				{
 					switch (attribute)
 					{

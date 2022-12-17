@@ -7,6 +7,7 @@ items:
   children:
   - PluginAPI.Core.Factories.IEntityFactory`1.AddIfNotExists(PluginAPI.Core.Interfaces.IGameComponent)
   - PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
+  - PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
   - PluginAPI.Core.Factories.IEntityFactory`1.Get
   - PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd(PluginAPI.Core.Interfaces.IGameComponent)
   langs:
@@ -20,7 +21,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IEntityFactory
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 10
@@ -47,6 +48,36 @@ items:
   - Interface
   fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity)
   name.vb: IEntityFactory(Of TEntity)
+- uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
+  commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
+  id: DefaultServer
+  parent: PluginAPI.Core.Factories.IEntityFactory`1
+  langs:
+  - csharp
+  - vb
+  name: DefaultServer()
+  nameWithType: IEntityFactory<TEntity>.DefaultServer()
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.DefaultServer()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Factories/IEntityFactory.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: DefaultServer
+    path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
+    startLine: 12
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core.Factories
+  syntax:
+    content: TEntity DefaultServer()
+    return:
+      type: '{TEntity}'
+    content.vb: Function DefaultServer As TEntity
+  overload: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer*
+  nameWithType.vb: IEntityFactory(Of TEntity).DefaultServer()
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).DefaultServer()
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
   commentId: M:PluginAPI.Core.Factories.IEntityFactory`1.Create(PluginAPI.Core.Interfaces.IGameComponent)
   id: Create(PluginAPI.Core.Interfaces.IGameComponent)
@@ -62,10 +93,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -95,10 +126,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetOrAdd
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -128,10 +159,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: AddIfNotExists
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -159,10 +190,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Factories
@@ -180,6 +211,23 @@ references:
   name: PluginAPI.Core.Factories
   nameWithType: PluginAPI.Core.Factories
   fullName: PluginAPI.Core.Factories
+- uid: PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer*
+  commentId: Overload:PluginAPI.Core.Factories.IEntityFactory`1.DefaultServer
+  name: DefaultServer
+  nameWithType: IEntityFactory<TEntity>.DefaultServer
+  fullName: PluginAPI.Core.Factories.IEntityFactory<TEntity>.DefaultServer
+  nameWithType.vb: IEntityFactory(Of TEntity).DefaultServer
+  fullName.vb: PluginAPI.Core.Factories.IEntityFactory(Of TEntity).DefaultServer
+- uid: '{TEntity}'
+  commentId: '!:TEntity'
+  definition: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.Create*
   commentId: Overload:PluginAPI.Core.Factories.IEntityFactory`1.Create
   name: Create
@@ -193,21 +241,11 @@ references:
   name: IGameComponent
   nameWithType: IGameComponent
   fullName: PluginAPI.Core.Interfaces.IGameComponent
-- uid: '{TEntity}'
-  commentId: '!:TEntity'
-  definition: TEntity
-  name: TEntity
-  nameWithType: TEntity
-  fullName: TEntity
 - uid: PluginAPI.Core.Interfaces
   commentId: N:PluginAPI.Core.Interfaces
   name: PluginAPI.Core.Interfaces
   nameWithType: PluginAPI.Core.Interfaces
   fullName: PluginAPI.Core.Interfaces
-- uid: TEntity
-  name: TEntity
-  nameWithType: TEntity
-  fullName: TEntity
 - uid: PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd*
   commentId: Overload:PluginAPI.Core.Factories.IEntityFactory`1.GetOrAdd
   name: GetOrAdd
