@@ -6,6 +6,6 @@
 ### [CLI](gettingstarted-cli.md) (For people who can't run an IDE)
 
 ## Writing the code
-Before we begin writing our code, we must make sure that we understand the [plugin prerequisites](codeprerequisites.md) so we can avoid and unnecessary errors.
+> WARNING: Make sure you have read the [plugin prerequisites](codeprerequisites.md) before you continue 
 
 TODO: Write the code
