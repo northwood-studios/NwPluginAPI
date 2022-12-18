@@ -59,6 +59,7 @@ namespace PluginAPI.Core
 
 				ServerConsole.FriendlyFire = value;
 				ServerConfigSynchronizer.Singleton.RefreshMainBools();
+				ServerConfigSynchronizer.OnRefreshed?.Invoke();
 			}
 		}
 
