@@ -7,9 +7,9 @@
   - 4 parameters must be passed on to `PluginEntryPoint` attribute, in the following order: <br>
     Plugin Name, Plugin Version, Plugin Author, and Plugin Description.
   - If you are planning to use any kind of events, you would call `EventManager::RegisterEvents` in the `PluginEntryPoint` method, more on that in the EventHandlers section.
-  - Here is also where a ['Singleton'](https://csharpindepth.com/Articles/Singleton) would be initialized.
+  - Here is also where a [Singleton](https://csharpindepth.com/Articles/Singleton) would be initialized.
 ### The `Config` Class
-> #### NOTE: The `Config` class isn't required, but is recommended since you will need to if you're planning on letting serverhosts make any changes to your plugin. Most developers will urge you to include as many config values as possible as this is considered good practice.
+> #### NOTE: The `Config` class isn't required, but is recommended since you will need to if you're planning on letting serverhosts make any changes to your plugin. Most developers will urge you to add any config values for things you (and other server hosts) may want to change as this is considered good practice.
 - The `Config` class contains properties, which values will be serialized and deserialized into/from a YML file when the plugin loads.
   - Properties are similar to fields, except they have a getter and a setter. <br> `public string Text { get; set; }` is an example property.
   - Properties can be of any supported type, but they must be public.
