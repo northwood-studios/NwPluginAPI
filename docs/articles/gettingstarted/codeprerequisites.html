@@ -19,7 +19,7 @@
       <link rel="stylesheet" href="../../styles/singulink.css">
       <link rel="stylesheet" href="../../styles/main.css">
       <meta property="docfx:navrel" content="../../toc.html">
-      <meta property="docfx:tocrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="../../toc.html">
       
       <meta property="docfx:rel" content="../../">
       <meta property="docfx:newtab" content="true">
@@ -60,10 +60,6 @@
                       <div id="navbar">
                       </div>
                     </div>                    <div class="sidebar-item-separator"></div>
-                        
-                        <div id="sidetoggle">
-                          <div id="sidetoc"></div>
-                        </div>
                 </div>
                 <div class="footer">
                   Nw Plugin API
@@ -93,8 +89,8 @@
 <h1 id="plugin-prerequisites">Plugin prerequisites</h1>
 
 <h3 id="the-plugin-class">The <code>Plugin</code> Class</h3>
+<blockquote><h4 id="warning-your-plugin-must-have-a-plugin-class">WARNING: Your plugin MUST have a <code>Plugin</code> class.</h4>
 <ul>
-<li>Your plugin must have a <code>Plugin</code> class.</li>
 <li>The <code>Plugin</code> class is the main class of your plugin. It contains the entry point of your plugin and is used to initialize your plugin.<ul>
 <li>It is typically named either <code>Plugin</code>, <code>MainClass</code>, or the name of your plugin.</li>
 </ul>
@@ -103,11 +99,11 @@
 <li>4 parameters must be passed on to <code>PluginEntryPoint</code> attribute, in the following order: <br>
 Plugin Name, Plugin Version, Plugin Author, and Plugin Description.</li>
 <li>If you are planning to use any kind of events, you would call <code>EventManager::RegisterEvents</code> in the <code>PluginEntryPoint</code> method, more on that in the EventHandlers section.</li>
-<li>Here is also where a Singleton would be initialized.
-### The <code>Config</code> Class</li>
+<li>Here is also where a <a href="https://csharpindepth.com/Articles/Singleton">&#39;Singleton&#39;</a> would be initialized.
+### The <code>Config</code> Class
+#### NOTE: The <code>Config</code> class isn&#39;t required, but is recommended since you will need to if you&#39;re planning on letting serverhosts make any changes to your plugin. Most developers will urge you to include as many config values as possible as this is considered good practice.</li>
 </ul>
 </li>
-<li>#### The <code>Config</code> class isn&#39;t required, but is recommended since you will need to if you&#39;re planning on letting serverhosts make any changes to your plugin</li>
 <li>The <code>Config</code> class contains properties, which values will be serialized and deserialized into/from a YML file when the plugin loads.<ul>
 <li>Properties are similar to fields, except they have a getter and a setter. <br> <code>public string Text { get; set; }</code> is an example property.</li>
 <li>Properties can be of any supported type, but they must be public.</li>
@@ -138,6 +134,7 @@ public void OnPlayerJoin(Player player)
     player.SendBroadcast(&quot;Welcome to the server!&quot;, 5);
 }</code></li>
 </ul>
+</blockquote>
 </article>
                 </div>
 

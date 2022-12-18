@@ -20,10 +20,10 @@ namespace PluginAPI.Loader
 	public static class AssemblyLoader
 	{
 		private static Assembly _mainAssembly;
-		
+
 		/// <summary>
 		/// Gets a main assembly of game.
-		/// </summary>		
+		/// </summary>
 		public static Assembly MainAssembly
 		{
 			get
@@ -64,12 +64,12 @@ namespace PluginAPI.Loader
 			if (IsLoaded)
 				return;
 
+			if (StartupArgs.Args.Any(arg => string.Equals(arg, "-disableAnsiColors", StringComparison.OrdinalIgnoreCase)))
+				Log.DisableBetterColors = true;
+
 			Log.Info("<---<  Startup of plugin system...  <---<");
 			Log.Info("Loading of dependencies and plugins in progress...");
 			IsLoaded = true;
-
-			if (StartupArgs.Args.Any(arg => string.Equals(arg, "-disableAnsiColors", StringComparison.OrdinalIgnoreCase)))
-				Log.DisableBetterColors = true;
 
 			Paths.Setup();
 			FactoryManager.Init();
@@ -114,7 +114,7 @@ namespace PluginAPI.Loader
 
 			var loadedAssemblies = AppDomain.CurrentDomain
 				.GetAssemblies()
-				.Select(x => 
+				.Select(x =>
 					$"{x.GetName().Name}&r v&6{x.GetName().Version.ToString(3)}");
 
 			foreach (string pluginPath in files)
@@ -126,10 +126,10 @@ namespace PluginAPI.Loader
 
                 var missingDependencies = assembly
 	                .GetReferencedAssemblies()
-	                .Select(x => 
+	                .Select(x =>
 		                $"{x.Name}&r v&6{x.Version.ToString(3)}")
 	                .Where(x => !loadedAssemblies.Contains(x)).ToArray();
-                
+
                 try
                 {
 	                if (missingDependencies.Length != 0)
@@ -143,14 +143,22 @@ namespace PluginAPI.Loader
 		                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}\n\n{e}", "Loader");
 		                continue;
 	                }
-	                
+
 	                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, {e.ToString()}");
 	                continue;
                 }
 
 				foreach (var entryType in types)
 				{
-					if (!entryType.IsValidEntrypoint()) continue;
+					try
+					{
+						if (!entryType.IsValidEntrypoint()) continue;
+					}
+					catch (Exception ex)
+					{
+						Log.Error($"Failed checking entrypoint for plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r.\n{ex}");
+						continue;
+					}
 
                     if (!Plugins.ContainsKey(assembly)) Plugins.Add(assembly, new Dictionary<Type, PluginHandler>());
 
@@ -180,7 +188,7 @@ namespace PluginAPI.Loader
 
             if (successes > 0)
 	            CustomNetworkManager.Modded = true;
-            
+
 			Log.Info($"Loaded &2{successes}&r/&2{files.Length}&r plugins.");
 		}
 
@@ -236,7 +244,7 @@ namespace PluginAPI.Loader
 			assembly = null;
 			return false;
 		}
-		
+
 		/// <summary>
 		/// Attempts to load Embedded assemblies (compressed) from the target
 		/// </summary>
@@ -245,7 +253,7 @@ namespace PluginAPI.Loader
 		{
 			Log.Debug($"Attempting to load embedded resources for {target.FullName}", Log.DebugMode);
 
-			
+
 			var resourceNames = target.GetManifestResourceNames();
 			foreach (var name in resourceNames)
 			{

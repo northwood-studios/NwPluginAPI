@@ -23,7 +23,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInfo
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 5
@@ -66,7 +66,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 13
@@ -102,7 +102,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsNicknameHidden
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 18
@@ -139,7 +139,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsBadgeHidden
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 33
@@ -176,7 +176,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCustomInfoHidden
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 48
@@ -213,7 +213,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsPowerStatusHidden
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 63
@@ -250,7 +250,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsRoleHidden
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 78
@@ -287,7 +287,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerInfo.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsUnitNameHidden
     path: ../NwPluginAPI/Core/PlayerInfo.cs
     startLine: 93

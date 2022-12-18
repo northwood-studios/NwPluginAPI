@@ -21,7 +21,7 @@ items:
     remote:
       path: NwPluginAPI/Events/Event.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Event
     path: ../NwPluginAPI/Events/Event.cs
     startLine: 11
@@ -64,7 +64,7 @@ items:
     remote:
       path: NwPluginAPI/Events/Event.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Invokers
     path: ../NwPluginAPI/Events/Event.cs
     startLine: 26
@@ -97,7 +97,7 @@ items:
     remote:
       path: NwPluginAPI/Events/Event.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Parameters
     path: ../NwPluginAPI/Events/Event.cs
     startLine: 28
@@ -130,7 +130,7 @@ items:
     remote:
       path: NwPluginAPI/Events/Event.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Events/Event.cs
     startLine: 34
@@ -169,7 +169,7 @@ items:
     remote:
       path: NwPluginAPI/Events/Event.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegenerateParameters
     path: ../NwPluginAPI/Events/Event.cs
     startLine: 46
@@ -209,7 +209,7 @@ items:
     remote:
       path: NwPluginAPI/Events/Event.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterInvoker
     path: ../NwPluginAPI/Events/Event.cs
     startLine: 72

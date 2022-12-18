@@ -27,7 +27,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Generator
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 8
@@ -70,7 +70,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 13
@@ -105,7 +105,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Room
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 18
@@ -140,7 +140,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsActivating
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 54
@@ -177,7 +177,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsActivationReady
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 64
@@ -214,7 +214,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsEngaged
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 69
@@ -251,7 +251,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 114
@@ -288,7 +288,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 119
@@ -325,7 +325,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 124
@@ -362,7 +362,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 129
@@ -399,7 +399,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayDeniedSound
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 134
@@ -431,7 +431,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 144

@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerSharedStorage.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerSharedStorage
     path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
     startLine: 10
@@ -63,7 +63,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerSharedStorage.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: StoredComponents
     path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
     startLine: 40
@@ -100,7 +100,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerSharedStorage.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CanReceiveDamageFromPlayers
     path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
     startLine: 45
@@ -137,7 +137,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerSharedStorage.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageBlacklist
     path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
     startLine: 50
@@ -174,7 +174,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PlayerSharedStorage.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageWhitelist
     path: ../NwPluginAPI/Core/PlayerSharedStorage.cs
     startLine: 55

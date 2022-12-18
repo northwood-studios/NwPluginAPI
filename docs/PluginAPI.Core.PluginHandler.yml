@@ -31,7 +31,7 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginHandler
     path: ../NwPluginAPI/Core/PluginHandler.cs
     startLine: 19
@@ -74,10 +74,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -115,10 +115,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LoadPriority
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 54
+    startLine: 55
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -152,10 +152,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginName
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -189,10 +189,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginVersion
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -226,10 +226,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginDescription
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 69
+    startLine: 93
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -263,10 +263,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginAuthor
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 74
+    startLine: 98
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -300,10 +300,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginFilePath
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 79
+    startLine: 103
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -337,10 +337,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginDirectoryPath
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 84
+    startLine: 108
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -374,10 +374,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MainConfigPath
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 89
+    startLine: 113
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -411,10 +411,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Unload
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 94
+    startLine: 118
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -443,10 +443,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Load
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 115
+    startLine: 139
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -475,10 +475,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LoadConfig
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 138
+    startLine: 162
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -514,10 +514,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LoadDefaultConfig
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 180
+    startLine: 204
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -553,10 +553,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SaveConfig
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 204
+    startLine: 228
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -592,10 +592,10 @@ items:
     remote:
       path: NwPluginAPI/Core/PluginHandler.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/PluginHandler.cs
-    startLine: 229
+    startLine: 253
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
