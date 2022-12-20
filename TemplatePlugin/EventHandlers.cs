@@ -306,13 +306,13 @@
 		[PluginEvent(ServerEventType.PlayerPreCoinFlip)]
 		public void OnPlayerPreCoinFlip(MyPlayer player)
 		{
-			Log.Info($"&7[&3GameConsole&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) flipped the coin (PreCoinFlip event).");
+			Log.Info($"&rPlayer &6{player.Nickname}&r (&6{player.UserId}&r) flipped the coin (PreCoinFlip event).");
 		}
 
 		[PluginEvent(ServerEventType.PlayerCoinFlip)]
 		public void OnPlayerCoinFlip(MyPlayer player, bool isTails)
 		{
-			Log.Info($"&7[&2Console&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) flipped the coin. Flip result: {(isTails ? "tails" : "heads")}.");
+			Log.Info($"&rPlayer &6{player.Nickname}&r (&6{player.UserId}&r) flipped the coin. Flip result: {(isTails ? "tails" : "heads")}.");
 		}
 	}
 }
