@@ -37,7 +37,9 @@ items:
       <AttributeUsage(AttributeTargets.Method, AllowMultiple:=False)>
 
       Public Class PluginPriority
+
           Inherits Attribute
+
           Implements _Attribute
   inheritance:
   - System.Object

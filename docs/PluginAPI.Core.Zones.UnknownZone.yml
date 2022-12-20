@@ -29,6 +29,7 @@ items:
     content: 'public class UnknownZone : FacilityZone'
     content.vb: >-
       Public Class UnknownZone
+
           Inherits FacilityZone
   inheritance:
   - System.Object

@@ -31,7 +31,9 @@ items:
     content: 'public class PlayerFactory : Factory<IPlayer>, IEntityFactory<IPlayer>'
     content.vb: >-
       Public Class PlayerFactory
+
           Inherits Factory(Of IPlayer)
+
           Implements IEntityFactory(Of IPlayer)
   inheritance:
   - System.Object

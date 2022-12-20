@@ -30,6 +30,7 @@ items:
     content: 'public class EzRoom : FacilityRoom'
     content.vb: >-
       Public Class EzRoom
+
           Inherits FacilityRoom
   inheritance:
   - System.Object

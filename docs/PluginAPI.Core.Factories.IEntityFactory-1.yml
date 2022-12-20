@@ -34,6 +34,7 @@ items:
   syntax:
     content: >-
       public interface IEntityFactory<TEntity>
+
           where TEntity : IEntity
     typeParameters:
     - id: TEntity

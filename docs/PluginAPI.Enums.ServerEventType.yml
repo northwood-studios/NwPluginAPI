@@ -29,6 +29,7 @@ items:
   - PluginAPI.Enums.ServerEventType.PlayerCheaterReport
   - PluginAPI.Enums.ServerEventType.PlayerCheckReservedSlot
   - PluginAPI.Enums.ServerEventType.PlayerCloseGenerator
+  - PluginAPI.Enums.ServerEventType.PlayerCoinFlip
   - PluginAPI.Enums.ServerEventType.PlayerDamage
   - PluginAPI.Enums.ServerEventType.PlayerDamagedShootingTarget
   - PluginAPI.Enums.ServerEventType.PlayerDamagedWindow
@@ -58,10 +59,9 @@ items:
   - PluginAPI.Enums.ServerEventType.PlayerPickupArmor
   - PluginAPI.Enums.ServerEventType.PlayerPickupScp330
   - PluginAPI.Enums.ServerEventType.PlayerPreauth
+  - PluginAPI.Enums.ServerEventType.PlayerPreCoinFlip
   - PluginAPI.Enums.ServerEventType.PlayerReceiveEffect
   - PluginAPI.Enums.ServerEventType.PlayerReloadWeapon
-  - PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
-  - PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommandExecuted
   - PluginAPI.Enums.ServerEventType.PlayerRemoveHandcuffs
   - PluginAPI.Enums.ServerEventType.PlayerReport
   - PluginAPI.Enums.ServerEventType.PlayerSearchedPickup
@@ -78,6 +78,8 @@ items:
   - PluginAPI.Enums.ServerEventType.PlayerUseHotkey
   - PluginAPI.Enums.ServerEventType.PlayerUseItem
   - PluginAPI.Enums.ServerEventType.RagdollSpawn
+  - PluginAPI.Enums.ServerEventType.RemoteAdminCommand
+  - PluginAPI.Enums.ServerEventType.RemoteAdminCommandExecuted
   - PluginAPI.Enums.ServerEventType.RoundEnd
   - PluginAPI.Enums.ServerEventType.RoundRestart
   - PluginAPI.Enums.ServerEventType.RoundStart
@@ -126,7 +128,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ServerEventType
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -159,7 +161,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerJoined
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 31
+    startLine: 34
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -194,7 +196,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerLeft
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 39
+    startLine: 42
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -229,7 +231,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDeath
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 47
+    startLine: 50
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -264,7 +266,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LczDecontaminationStart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 52
+    startLine: 55
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -298,7 +300,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LczDecontaminationAnnouncement
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 60
+    startLine: 63
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -333,7 +335,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MapGenerated
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -367,7 +369,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GrenadeExploded
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 73
+    startLine: 76
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -402,7 +404,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ItemSpawned
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 81
+    startLine: 84
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -437,12 +439,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GeneratorActivated
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 89
+    startLine: 92
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when generator activates.\n"
-  remarks: "\nParameters: <see cref=\"!:Generator\"></see> generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Zones.Heavy.Generator\" data-throw-if-not-resolved=\"false\"></xref> generator.\n"
   example: []
   syntax:
     content: GeneratorActivated = 8
@@ -472,7 +474,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlaceBlood
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 94
+    startLine: 97
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -506,7 +508,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlaceBulletHole
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 99
+    startLine: 102
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -540,12 +542,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerActivateGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 107
+    startLine: 110
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when player activated generator.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Zones.Heavy.Generator\" data-throw-if-not-resolved=\"false\"></xref> generator.\n"
   example: []
   syntax:
     content: PlayerActivateGenerator = 11
@@ -575,7 +577,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerAimWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 115
+    startLine: 118
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -610,12 +612,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerBanned
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 123
+    startLine: 126
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when player gets banned.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> issuer, ref <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> reason, ref <xref href=\"System.Int64\" data-throw-if-not-resolved=\"false\"></xref> duration.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"CommandSystem.ICommandSender\" data-throw-if-not-resolved=\"false\"></xref> issuer, ref <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> reason, ref <xref href=\"System.Int64\" data-throw-if-not-resolved=\"false\"></xref> duration.\n"
   example: []
   syntax:
     content: PlayerBanned = 13
@@ -645,7 +647,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCancelUsingItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 131
+    startLine: 134
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -680,7 +682,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 139
+    startLine: 142
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -715,7 +717,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeRadioRange
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 147
+    startLine: 150
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -747,7 +749,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeSpectator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 155
+    startLine: 158
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -782,12 +784,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCloseGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 163
+    startLine: 166
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when player closes generator.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Zones.Heavy.Generator\" data-throw-if-not-resolved=\"false\"></xref> generator.\n"
   example: []
   syntax:
     content: PlayerCloseGenerator = 18
@@ -817,7 +819,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDamagedShootingTarget
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 171
+    startLine: 174
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -852,7 +854,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDamagedWindow
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 179
+    startLine: 182
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -887,12 +889,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDeactivatedGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 187
+    startLine: 190
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when player deactivates generator.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Zones.Heavy.Generator\" data-throw-if-not-resolved=\"false\"></xref> generator.\n"
   example: []
   syntax:
     content: PlayerDeactivatedGenerator = 21
@@ -922,7 +924,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDropAmmo
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 195
+    startLine: 198
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -957,7 +959,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDropItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 203
+    startLine: 206
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -992,7 +994,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDryfireWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 211
+    startLine: 214
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1027,7 +1029,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerEscape
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 219
+    startLine: 222
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1062,7 +1064,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerHandcuff
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 227
+    startLine: 230
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1097,7 +1099,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerRemoveHandcuffs
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 235
+    startLine: 238
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1132,7 +1134,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerDamage
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 243
+    startLine: 246
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1167,7 +1169,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractElevator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 251
+    startLine: 254
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1202,12 +1204,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractLocker
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 259
+    startLine: 262
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when player interacts with locker.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Locker\"></see> locker, <xref href=\"System.Byte\" data-throw-if-not-resolved=\"false\"></xref> colliderId, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> canAccess.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"MapGeneration.Distributors.Locker\" data-throw-if-not-resolved=\"false\"></xref> locker, <xref href=\"System.Byte\" data-throw-if-not-resolved=\"false\"></xref> colliderId, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> canAccess.\n"
   example: []
   syntax:
     content: PlayerInteractLocker = 30
@@ -1237,7 +1239,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractScp330
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 267
+    startLine: 270
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1272,7 +1274,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractShootingTarget
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 275
+    startLine: 278
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1307,7 +1309,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerKicked
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 283
+    startLine: 286
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1342,7 +1344,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerMakeNoise
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 291
+    startLine: 294
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1377,12 +1379,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerOpenGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 299
+    startLine: 302
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when player opens generator.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Zones.Heavy.Generator\" data-throw-if-not-resolved=\"false\"></xref> generator.\n"
   example: []
   syntax:
     content: PlayerOpenGenerator = 35
@@ -1412,7 +1414,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPickupAmmo
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 307
+    startLine: 310
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1447,7 +1449,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPickupArmor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 315
+    startLine: 318
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1482,7 +1484,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPickupScp330
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 323
+    startLine: 326
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1517,7 +1519,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPreauth
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 331
+    startLine: 334
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1552,7 +1554,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerReceiveEffect
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 339
+    startLine: 342
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1587,7 +1589,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerReloadWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 347
+    startLine: 350
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1622,7 +1624,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerChangeRole
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 355
+    startLine: 358
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1657,7 +1659,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerSearchPickup
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 363
+    startLine: 366
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1692,7 +1694,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerSearchedPickup
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 371
+    startLine: 374
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1727,7 +1729,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerShotWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 379
+    startLine: 382
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1762,7 +1764,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerSpawn
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 387
+    startLine: 390
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1797,7 +1799,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RagdollSpawn
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 395
+    startLine: 398
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1832,7 +1834,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerThrowItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 403
+    startLine: 406
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1867,7 +1869,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerToggleFlashlight
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 411
+    startLine: 414
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1902,7 +1904,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUnloadWeapon
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 419
+    startLine: 422
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -1937,12 +1939,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUnlockGenerator
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 427
+    startLine: 430
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nExecuted when player unlocks generator.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <see cref=\"!:Generator\"></see> generator.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"PluginAPI.Core.Zones.Heavy.Generator\" data-throw-if-not-resolved=\"false\"></xref> generator.\n"
   example: []
   syntax:
     content: PlayerUnlockGenerator = 51
@@ -1972,7 +1974,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUsedItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 435
+    startLine: 438
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2007,7 +2009,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUseHotkey
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 443
+    startLine: 446
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2042,7 +2044,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUseItem
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 451
+    startLine: 454
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2077,7 +2079,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerReport
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 459
+    startLine: 462
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2112,7 +2114,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCheaterReport
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 467
+    startLine: 470
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2147,7 +2149,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundEnd
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 475
+    startLine: 478
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2182,7 +2184,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundRestart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 480
+    startLine: 483
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2216,7 +2218,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundStart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 485
+    startLine: 488
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2250,7 +2252,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WaitingForPlayers
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 490
+    startLine: 493
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2284,7 +2286,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadStart
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 498
+    startLine: 501
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2319,7 +2321,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadStop
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 506
+    startLine: 509
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2354,7 +2356,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadDetonation
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 511
+    startLine: 514
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2388,7 +2390,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerMuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 519
+    startLine: 522
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2423,7 +2425,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerUnmuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 527
+    startLine: 530
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2458,7 +2460,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCheckReservedSlot
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 535
+    startLine: 538
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2475,33 +2477,33 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
-  commentId: F:PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
-  id: PlayerRemoteAdminCommand
+- uid: PluginAPI.Enums.ServerEventType.RemoteAdminCommand
+  commentId: F:PluginAPI.Enums.ServerEventType.RemoteAdminCommand
+  id: RemoteAdminCommand
   parent: PluginAPI.Enums.ServerEventType
   langs:
   - csharp
   - vb
-  name: PlayerRemoteAdminCommand
-  nameWithType: ServerEventType.PlayerRemoteAdminCommand
-  fullName: PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommand
+  name: RemoteAdminCommand
+  nameWithType: ServerEventType.RemoteAdminCommand
+  fullName: PluginAPI.Enums.ServerEventType.RemoteAdminCommand
   type: Field
   source:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: PlayerRemoteAdminCommand
+    id: RemoteAdminCommand
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 543
+    startLine: 546
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
-  summary: "\nEvent executed when using remoteadmin command.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments.\n"
+  summary: "\nEvent executed when using remote admin command.\n"
+  remarks: "\nParameters: <xref href=\"CommandSystem.ICommandSender\" data-throw-if-not-resolved=\"false\"></xref> sender, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments.\n"
   example: []
   syntax:
-    content: PlayerRemoteAdminCommand = 67
+    content: RemoteAdminCommand = 67
     return:
       type: PluginAPI.Enums.ServerEventType
   modifiers.csharp:
@@ -2528,7 +2530,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerGameConsoleCommand
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 551
+    startLine: 554
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2563,12 +2565,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConsoleCommand
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 559
+    startLine: 562
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nEvent executed when using console command.\n"
-  remarks: "\nParameters: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments.\n"
+  remarks: "\nParameters: <xref href=\"CommandSystem.ICommandSender\" data-throw-if-not-resolved=\"false\"></xref> sender, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments.\n"
   example: []
   syntax:
     content: ConsoleCommand = 69
@@ -2598,7 +2600,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TeamRespawnSelected
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 568
+    startLine: 571
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2633,7 +2635,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TeamRespawn
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 576
+    startLine: 579
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2668,7 +2670,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp106Stalking
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 584
+    startLine: 587
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2703,7 +2705,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerEnterPocketDimension
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 592
+    startLine: 595
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2738,7 +2740,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerExitPocketDimension
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 600
+    startLine: 603
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2773,7 +2775,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerThrowProjectile
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 608
+    startLine: 611
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2808,7 +2810,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914Activate
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 616
+    startLine: 619
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2843,7 +2845,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914KnobChange
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 624
+    startLine: 627
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2878,7 +2880,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914UpgradeInventory
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 632
+    startLine: 635
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2913,7 +2915,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp914UpgradePickup
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 640
+    startLine: 643
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2948,7 +2950,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp106TeleportPlayer
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 648
+    startLine: 651
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -2983,7 +2985,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173PlaySound
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 656
+    startLine: 659
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3018,7 +3020,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173CreateTantrum
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 664
+    startLine: 667
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3053,7 +3055,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173BreakneckSpeeds
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 672
+    startLine: 675
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3088,7 +3090,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173NewObserver
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 680
+    startLine: 683
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3123,7 +3125,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp173SnapPlayer
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 688
+    startLine: 691
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3158,7 +3160,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp939CreateAmnesticCloud
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 696
+    startLine: 699
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3193,7 +3195,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp939Lunge
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 704
+    startLine: 707
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3228,7 +3230,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp939Attack
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 712
+    startLine: 715
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3263,7 +3265,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079GainExperience
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 720
+    startLine: 723
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3298,7 +3300,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079LevelUpTier
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 728
+    startLine: 731
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3333,7 +3335,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079UseTesla
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 736
+    startLine: 739
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3368,7 +3370,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079LockdownRoom
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 744
+    startLine: 747
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3403,7 +3405,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079CancelRoomLockdown
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 752
+    startLine: 755
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3438,7 +3440,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079LockDoor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 760
+    startLine: 763
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3473,7 +3475,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079UnlockDoor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 768
+    startLine: 771
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3508,7 +3510,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079BlackoutZone
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 776
+    startLine: 779
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3543,7 +3545,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp079BlackoutRoom
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 784
+    startLine: 787
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3578,7 +3580,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp049ResurrectBody
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 792
+    startLine: 795
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3613,7 +3615,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Scp049StartResurrectingBody
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 800
+    startLine: 803
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3648,7 +3650,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerInteractDoor
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 808
+    startLine: 811
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3683,12 +3685,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanIssued
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 816
+    startLine: 819
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nEvent executed when a new ban issued and saved in the files.\n"
-  remarks: "\nParameters: <xref href=\"BanDetails\" data-throw-if-not-resolved=\"false\"></xref> banDetails, <see cref=\"!:BanType\"></see> banType.\n"
+  remarks: "\nParameters: <xref href=\"BanDetails\" data-throw-if-not-resolved=\"false\"></xref> banDetails, <xref href=\"BanHandler.BanType\" data-throw-if-not-resolved=\"false\"></xref> banType.\n"
   example: []
   syntax:
     content: BanIssued = 102
@@ -3718,12 +3720,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanRevoked
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 824
+    startLine: 827
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nEvent executed when an existing ban is revoked and removed from the files.\n"
-  remarks: "\nParameters: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> userId, <see cref=\"!:BanType\"></see> banType.\n"
+  remarks: "\nParameters: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> userId, <xref href=\"BanHandler.BanType\" data-throw-if-not-resolved=\"false\"></xref> banType.\n"
   example: []
   syntax:
     content: BanRevoked = 103
@@ -3735,33 +3737,33 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommandExecuted
-  commentId: F:PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommandExecuted
-  id: PlayerRemoteAdminCommandExecuted
+- uid: PluginAPI.Enums.ServerEventType.RemoteAdminCommandExecuted
+  commentId: F:PluginAPI.Enums.ServerEventType.RemoteAdminCommandExecuted
+  id: RemoteAdminCommandExecuted
   parent: PluginAPI.Enums.ServerEventType
   langs:
   - csharp
   - vb
-  name: PlayerRemoteAdminCommandExecuted
-  nameWithType: ServerEventType.PlayerRemoteAdminCommandExecuted
-  fullName: PluginAPI.Enums.ServerEventType.PlayerRemoteAdminCommandExecuted
+  name: RemoteAdminCommandExecuted
+  nameWithType: ServerEventType.RemoteAdminCommandExecuted
+  fullName: PluginAPI.Enums.ServerEventType.RemoteAdminCommandExecuted
   type: Field
   source:
     remote:
       path: NwPluginAPI/Enums/ServerEventType.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: PlayerRemoteAdminCommandExecuted
+    id: RemoteAdminCommandExecuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 832
+    startLine: 835
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
-  summary: "\nEvent executed when remoteadmin command completes.\n"
-  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> result, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> response.\n"
+  summary: "\nEvent executed when remote admin command completes.\n"
+  remarks: "\nParameters: <xref href=\"CommandSystem.ICommandSender\" data-throw-if-not-resolved=\"false\"></xref> sender, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> result, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> response.\n"
   example: []
   syntax:
-    content: PlayerRemoteAdminCommandExecuted = 104
+    content: RemoteAdminCommandExecuted = 104
     return:
       type: PluginAPI.Enums.ServerEventType
   modifiers.csharp:
@@ -3788,7 +3790,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerGameConsoleCommandExecuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 840
+    startLine: 843
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
@@ -3823,12 +3825,12 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConsoleCommandExecuted
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 848
+    startLine: 851
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nEvent executed when console command completes.\n"
-  remarks: "\nParameters: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> result, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> response.\n"
+  remarks: "\nParameters: <xref href=\"CommandSystem.ICommandSender\" data-throw-if-not-resolved=\"false\"></xref> sender, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> command, <see cref=\"!:string[]\"></see> arguments, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> result, <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> response.\n"
   example: []
   syntax:
     content: ConsoleCommandExecuted = 106
@@ -3858,15 +3860,85 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanUpdated
     path: ../NwPluginAPI/Enums/ServerEventType.cs
-    startLine: 856
+    startLine: 859
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Enums
   summary: "\nEvent executed when an existing ban is updated.\n"
-  remarks: "\nParameters: <xref href=\"BanDetails\" data-throw-if-not-resolved=\"false\"></xref> banDetails, <see cref=\"!:BanType\"></see> banType.\n"
+  remarks: "\nParameters: <xref href=\"BanDetails\" data-throw-if-not-resolved=\"false\"></xref> banDetails, <xref href=\"BanHandler.BanType\" data-throw-if-not-resolved=\"false\"></xref> banType.\n"
   example: []
   syntax:
     content: BanUpdated = 107
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerPreCoinFlip
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerPreCoinFlip
+  id: PlayerPreCoinFlip
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerPreCoinFlip
+  nameWithType: ServerEventType.PlayerPreCoinFlip
+  fullName: PluginAPI.Enums.ServerEventType.PlayerPreCoinFlip
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerPreCoinFlip
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 867
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted before player flips the coin.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player.\n"
+  example: []
+  syntax:
+    content: PlayerPreCoinFlip = 108
+    return:
+      type: PluginAPI.Enums.ServerEventType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.ServerEventType.PlayerCoinFlip
+  commentId: F:PluginAPI.Enums.ServerEventType.PlayerCoinFlip
+  id: PlayerCoinFlip
+  parent: PluginAPI.Enums.ServerEventType
+  langs:
+  - csharp
+  - vb
+  name: PlayerCoinFlip
+  nameWithType: ServerEventType.PlayerCoinFlip
+  fullName: PluginAPI.Enums.ServerEventType.PlayerCoinFlip
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/ServerEventType.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerCoinFlip
+    path: ../NwPluginAPI/Enums/ServerEventType.cs
+    startLine: 875
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  summary: "\nExecuted when player flips the coin.\n"
+  remarks: "\nParameters: <xref href=\"PluginAPI.Core.Interfaces.IPlayer\" data-throw-if-not-resolved=\"false\"></xref> player, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref> isTails.\n"
+  example: []
+  syntax:
+    content: PlayerCoinFlip = 109
     return:
       type: PluginAPI.Enums.ServerEventType
   modifiers.csharp:
@@ -3943,6 +4015,17 @@ references:
   name: ItemType
   nameWithType: ItemType
   fullName: ItemType
+- uid: PluginAPI.Core.Zones.Heavy.Generator
+  commentId: T:PluginAPI.Core.Zones.Heavy.Generator
+  parent: PluginAPI.Core.Zones.Heavy
+  name: Generator
+  nameWithType: Generator
+  fullName: PluginAPI.Core.Zones.Heavy.Generator
+- uid: PluginAPI.Core.Zones.Heavy
+  commentId: N:PluginAPI.Core.Zones.Heavy
+  name: PluginAPI.Core.Zones.Heavy
+  nameWithType: PluginAPI.Core.Zones.Heavy
+  fullName: PluginAPI.Core.Zones.Heavy
 - uid: PluginAPI.Core.Items.Item
   commentId: T:PluginAPI.Core.Items.Item
   name: Item
@@ -3955,6 +4038,13 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: CommandSystem.ICommandSender
+  commentId: T:CommandSystem.ICommandSender
+  parent: CommandSystem
+  isExternal: true
+  name: ICommandSender
+  nameWithType: ICommandSender
+  fullName: CommandSystem.ICommandSender
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -3969,6 +4059,12 @@ references:
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
+- uid: CommandSystem
+  commentId: N:CommandSystem
+  isExternal: true
+  name: CommandSystem
+  nameWithType: CommandSystem
+  fullName: CommandSystem
 - uid: InventorySystem.Items.Usables.UsableItem
   commentId: T:InventorySystem.Items.Usables.UsableItem
   isExternal: true
@@ -4005,6 +4101,9 @@ references:
   name: PlayerRoles
   nameWithType: PlayerRoles
   fullName: PlayerRoles
+- uid: MapGeneration.Distributors.Locker
+  commentId: T:MapGeneration.Distributors.Locker
+  isExternal: true
 - uid: System.Byte
   commentId: T:System.Byte
   parent: System
@@ -4133,3 +4232,9 @@ references:
 - uid: BanDetails
   commentId: T:BanDetails
   isExternal: true
+- uid: BanHandler.BanType
+  commentId: T:BanHandler.BanType
+  isExternal: true
+  name: BanHandler.BanType
+  nameWithType: BanHandler.BanType
+  fullName: BanHandler.BanType

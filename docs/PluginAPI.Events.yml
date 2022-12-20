@@ -10,6 +10,8 @@ items:
   - PluginAPI.Events.EventParameter
   - PluginAPI.Events.IEventCancellation
   - PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
   - PluginAPI.Events.PreauthCancellationData
   langs:
   - csharp
@@ -60,6 +62,18 @@ references:
   name: PlayerCheckReservedSlotCancellationData
   nameWithType: PlayerCheckReservedSlotCancellationData
   fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+  commentId: T:PluginAPI.Events.PlayerPreCoinFlipCancellationData
+  parent: PluginAPI.Events
+  name: PlayerPreCoinFlipCancellationData
+  nameWithType: PlayerPreCoinFlipCancellationData
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  commentId: T:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  parent: PluginAPI.Events
+  name: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
 - uid: PluginAPI.Events
   commentId: N:PluginAPI.Events
   name: PluginAPI.Events

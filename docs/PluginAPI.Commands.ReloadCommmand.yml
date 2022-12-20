@@ -38,6 +38,7 @@ items:
       <CommandHandler(GetType(PluginsCommand))>
 
       Public Class ReloadCommmand
+
           Implements ICommand
   inheritance:
   - System.Object

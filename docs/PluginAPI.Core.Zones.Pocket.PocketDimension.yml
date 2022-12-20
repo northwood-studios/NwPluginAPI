@@ -35,6 +35,7 @@ items:
     content: 'public class PocketDimension : FacilityRoom'
     content.vb: >-
       Public Class PocketDimension
+
           Inherits FacilityRoom
   inheritance:
   - System.Object

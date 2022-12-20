@@ -20,7 +20,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IEventCancellation
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -53,7 +53,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events

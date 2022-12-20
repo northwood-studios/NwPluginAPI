@@ -111,7 +111,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterAllEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 407
+    startLine: 414
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -149,7 +149,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterAllEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 446
+    startLine: 453
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -187,7 +187,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 465
+    startLine: 472
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -225,7 +225,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 475
+    startLine: 482
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -263,7 +263,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 485
+    startLine: 492
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -272,6 +272,7 @@ items:
   syntax:
     content: >-
       public static void RegisterEvents<T>(object plugin)
+
           where T : class
     parameters:
     - id: plugin
@@ -308,7 +309,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 500
+    startLine: 507
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -317,6 +318,7 @@ items:
   syntax:
     content: >-
       public static void UnregisterEvents<T>(object plugin)
+
           where T : class
     parameters:
     - id: plugin
@@ -353,7 +355,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 512
+    startLine: 519
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -394,7 +396,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 519
+    startLine: 526
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -435,7 +437,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 596
+    startLine: 603
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -482,7 +484,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 605
+    startLine: 612
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -491,6 +493,7 @@ items:
   syntax:
     content: >-
       public static T ExecuteEvent<T>(ServerEventType type, params object[] args)
+
           where T : struct
     parameters:
     - id: type

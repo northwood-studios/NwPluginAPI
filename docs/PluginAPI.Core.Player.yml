@@ -144,6 +144,7 @@ items:
     content: 'public class Player : IPlayer, IEntity'
     content.vb: >-
       Public Class Player
+
           Implements IPlayer, IEntity
   inheritance:
   - System.Object
@@ -382,6 +383,7 @@ items:
   syntax:
     content: >-
       public static List<T> GetPlayers<T>()
+
           where T : IPlayer
     typeParameters:
     - id: T
@@ -469,6 +471,7 @@ items:
   syntax:
     content: >-
       public static bool TryGet<T>(IGameComponent component, out T player)
+
           where T : IPlayer
     parameters:
     - id: component
@@ -556,6 +559,7 @@ items:
   syntax:
     content: >-
       public static T Get<T>(GameObject gameObject)
+
           where T : IPlayer
     parameters:
     - id: gameObject
@@ -647,6 +651,7 @@ items:
   syntax:
     content: >-
       public static bool TryGet<T>(GameObject gameObject, out T player)
+
           where T : IPlayer
     parameters:
     - id: gameObject
@@ -735,6 +740,7 @@ items:
   syntax:
     content: >-
       public static T Get<T>(ReferenceHub hub)
+
           where T : IPlayer
     parameters:
     - id: hub
@@ -826,6 +832,7 @@ items:
   syntax:
     content: >-
       public static bool TryGet<T>(ReferenceHub hub, out T player)
+
           where T : IPlayer
     parameters:
     - id: hub
@@ -914,6 +921,7 @@ items:
   syntax:
     content: >-
       public static T Get<T>(NetworkIdentity netIdentity)
+
           where T : IPlayer
     parameters:
     - id: netIdentity
@@ -1005,6 +1013,7 @@ items:
   syntax:
     content: >-
       public static bool TryGet<T>(NetworkIdentity netIdentity, out T player)
+
           where T : IPlayer
     parameters:
     - id: netIdentity
@@ -1093,6 +1102,7 @@ items:
   syntax:
     content: >-
       public static T GetByName<T>(string name)
+
           where T : IPlayer
     parameters:
     - id: name
@@ -1184,6 +1194,7 @@ items:
   syntax:
     content: >-
       public static bool TryGetByName<T>(string name, out T player)
+
           where T : IPlayer
     parameters:
     - id: name
@@ -1272,6 +1283,7 @@ items:
   syntax:
     content: >-
       public static T Get<T>(int playerId)
+
           where T : IPlayer
     parameters:
     - id: playerId
@@ -1363,6 +1375,7 @@ items:
   syntax:
     content: >-
       public static bool TryGet<T>(int playerId, out T player)
+
           where T : IPlayer
     parameters:
     - id: playerId
@@ -1451,6 +1464,7 @@ items:
   syntax:
     content: >-
       public static T Get<T>(string userId)
+
           where T : IPlayer
     parameters:
     - id: userId
@@ -1542,6 +1556,7 @@ items:
   syntax:
     content: >-
       public static bool TryGet<T>(string userId, out T player)
+
           where T : IPlayer
     parameters:
     - id: userId
@@ -1630,6 +1645,7 @@ items:
   syntax:
     content: >-
       public static T Get<T>(uint networkId)
+
           where T : IPlayer
     parameters:
     - id: networkId
@@ -1721,6 +1737,7 @@ items:
   syntax:
     content: >-
       public static bool TryGet<T>(uint networkId, out T player)
+
           where T : IPlayer
     parameters:
     - id: networkId
@@ -2287,7 +2304,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nGets whether or not the player has remoteadmin access. \n"
+  summary: "\nGets whether or not the player has remoteadmin access.\n"
   example: []
   syntax:
     content: public bool RemoteAdminAccess { get; }
@@ -4176,6 +4193,7 @@ items:
   syntax:
     content: >-
       public T GetStatModule<T>()
+
           where T : StatBase
     typeParameters:
     - id: T
@@ -4492,7 +4510,6 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nExecuted when player object is created.\n"
   example: []
   syntax:
     content: public virtual void OnStart()
@@ -4528,7 +4545,6 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nExecuted when player object is destroyed.\n"
   example: []
   syntax:
     content: public virtual void OnDestroy()
@@ -4564,7 +4580,6 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nExecuted every frame.\n"
   example: []
   syntax:
     content: public virtual void OnUpdate()
@@ -4600,7 +4615,6 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nExecuted after all OnUpdate functions have been called.\n"
   example: []
   syntax:
     content: public virtual void OnLateUpdate()
@@ -4636,7 +4650,6 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nExecuted with the frequency of the physics system.\n<remarks>Unity&apos;s physics engine runs at 50hz by default.</remarks>\n"
   example: []
   syntax:
     content: public virtual void OnFixedUpdate()
@@ -4672,11 +4685,11 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nGets the <xref href=\"UnityEngine.MonoBehaviour\" data-throw-if-not-resolved=\"false\"></xref> and caches it.\n"
   example: []
   syntax:
     content: >-
       public T GetComponent<T>(bool globalSearch = false)
+
           where T : MonoBehaviour
     parameters:
     - id: globalSearch
@@ -4718,11 +4731,11 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nGets the <xref href=\"UnityEngine.MonoBehaviour\" data-throw-if-not-resolved=\"false\"></xref> and caches it.\n"
   example: []
   syntax:
     content: >-
       public bool TryGetComponent<T>(out T component, bool globalSearch = false)
+
           where T : MonoBehaviour
     parameters:
     - id: component

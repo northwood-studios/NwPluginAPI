@@ -32,6 +32,7 @@ items:
     content: 'public class HczScp049 : HczRoom'
     content.vb: >-
       Public Class HczScp049
+
           Inherits HczRoom
   inheritance:
   - System.Object

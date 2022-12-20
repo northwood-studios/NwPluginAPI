@@ -116,6 +116,7 @@ items:
   syntax:
     content: >-
       public virtual List<T> GetRooms<T>()
+
           where T : FacilityRoom
     typeParameters:
     - id: T

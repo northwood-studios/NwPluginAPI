@@ -146,6 +146,7 @@ items:
   syntax:
     content: >-
       public bool TryGet<T>(string dataName, out T data)
+
           where T : class, IComparable
     parameters:
     - id: dataName
@@ -196,6 +197,7 @@ items:
   syntax:
     content: >-
       public T Get<T>(string dataName)
+
           where T : class, IComparable
     parameters:
     - id: dataName
@@ -243,6 +245,7 @@ items:
   syntax:
     content: >-
       public bool Add<T>(string dataName, T data)
+
           where T : class, IComparable
     parameters:
     - id: dataName
@@ -293,6 +296,7 @@ items:
   syntax:
     content: >-
       public void Override<T>(string dataName, T data)
+
           where T : class, IComparable
     parameters:
     - id: dataName

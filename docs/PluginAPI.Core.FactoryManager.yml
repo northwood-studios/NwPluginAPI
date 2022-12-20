@@ -116,6 +116,7 @@ items:
   syntax:
     content: >-
       public static void RegisterPlayerFactory<T>(object plugin)
+
           where T : PlayerFactory
     parameters:
     - id: plugin

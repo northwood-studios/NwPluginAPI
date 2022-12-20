@@ -6,22 +6,29 @@ items:
   parent: PluginAPI.Core
   children:
   - PluginAPI.Core.Server.#ctor(PluginAPI.Core.Interfaces.IGameComponent)
+  - PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
   - PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64)
   - PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,System.String,System.Int64)
-  - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
+  - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,System.String,System.Int64,System.String)
-  - PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
+  - PluginAPI.Core.Server.BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  - PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByUserId(System.String,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.ClearBroadcasts
   - PluginAPI.Core.Server.FriendlyFire
   - PluginAPI.Core.Server.GetAllPlayersBanned
   - PluginAPI.Core.Server.GetAllPlayersBanned(BanHandler.BanType)
+  - PluginAPI.Core.Server.IdleModeActive
+  - PluginAPI.Core.Server.IdleModeAvailable
   - PluginAPI.Core.Server.Init
   - PluginAPI.Core.Server.Instance
   - PluginAPI.Core.Server.IsPlayerBanned(System.String)
+  - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String)
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,System.String)
   - PluginAPI.Core.Server.MaxPlayers
+  - PluginAPI.Core.Server.PauseIdleMode
   - PluginAPI.Core.Server.Port
   - PluginAPI.Core.Server.ReservedSlots
   - PluginAPI.Core.Server.Restart
@@ -29,6 +36,7 @@ items:
   - PluginAPI.Core.Server.RunCommand(System.String,CommandSender)
   - PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
   - PluginAPI.Core.Server.ServerIpAddress
+  - PluginAPI.Core.Server.SetIdleMode(System.Boolean)
   - PluginAPI.Core.Server.Shutdown
   - PluginAPI.Core.Server.Shutdown(System.UInt16)
   - PluginAPI.Core.Server.UnbanPlayerByIpAddress(System.String)
@@ -47,7 +55,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Server
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -57,7 +65,9 @@ items:
     content: 'public class Server : Player, IPlayer, IEntity'
     content.vb: >-
       Public Class Server
+
           Inherits Player
+
           Implements IPlayer, IEntity
   inheritance:
   - System.Object
@@ -212,7 +222,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Init
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -246,7 +256,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Instance
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 30
+    startLine: 32
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -285,7 +295,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 36
+    startLine: 38
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -321,7 +331,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ServerIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 41
+    startLine: 43
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -360,7 +370,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Port
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 46
+    startLine: 48
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -399,7 +409,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FriendlyFire
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 51
+    startLine: 53
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -438,7 +448,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxPlayers
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 67
+    startLine: 70
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -477,7 +487,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReservedSlots
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 76
+    startLine: 79
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -516,7 +526,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 90
+    startLine: 93
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -563,7 +573,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 100
+    startLine: 103
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -595,6 +605,56 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
+  commentId: M:PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
+  id: BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: BanPlayer(Player, ICommandSender, String, Int64)
+  nameWithType: Server.BanPlayer(Player, ICommandSender, String, Int64)
+  fullName: PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player, CommandSystem.ICommandSender, System.String, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BanPlayer
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 113
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nBans a player from the server.\n"
+  example: []
+  syntax:
+    content: public static bool BanPlayer(Player player, ICommandSender issuer, string reason, long duration)
+    parameters:
+    - id: player
+      type: PluginAPI.Core.Player
+      description: The player which will be banned.
+    - id: issuer
+      type: CommandSystem.ICommandSender
+      description: The player who issued the ban.
+    - id: reason
+      type: System.String
+      description: The reason of ban.
+    - id: duration
+      type: System.Int64
+      description: The duration of the ban in seconds.
+    return:
+      type: System.Boolean
+      description: Whether or not the ban was successful.
+    content.vb: Public Shared Function BanPlayer(player As Player, issuer As ICommandSender, reason As String, duration As Long) As Boolean
+  overload: PluginAPI.Core.Server.BanPlayer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String)
   commentId: M:PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String)
   id: KickPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String)
@@ -613,7 +673,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 108
+    startLine: 121
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -639,6 +699,50 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
+  commentId: M:PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
+  id: KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: KickPlayer(Player, ICommandSender, String)
+  nameWithType: Server.KickPlayer(Player, ICommandSender, String)
+  fullName: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player, CommandSystem.ICommandSender, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: KickPlayer
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 129
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nKicks a player from the server.\n"
+  example: []
+  syntax:
+    content: public static void KickPlayer(Player player, ICommandSender issuer, string reason)
+    parameters:
+    - id: player
+      type: PluginAPI.Core.Player
+      description: The player which will be kicked.
+    - id: issuer
+      type: CommandSystem.ICommandSender
+      description: The player who issued kick.
+    - id: reason
+      type: System.String
+      description: The reason of the kick.
+    content.vb: Public Shared Sub KickPlayer(player As Player, issuer As ICommandSender, reason As String)
+  overload: PluginAPI.Core.Server.KickPlayer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,System.String)
   commentId: M:PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,System.String)
   id: KickPlayer(PluginAPI.Core.Player,System.String)
@@ -657,7 +761,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 115
+    startLine: 136
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -698,7 +802,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 125
+    startLine: 146
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -730,16 +834,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
-  commentId: M:PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
-  id: BanPlayerByUserId(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
+- uid: PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
+  commentId: M:PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
+  id: BanPlayerByUserId(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
-  name: BanPlayerByUserId(String, Player, String, Int64, String)
-  nameWithType: Server.BanPlayerByUserId(String, Player, String, Int64, String)
-  fullName: PluginAPI.Core.Server.BanPlayerByUserId(System.String, PluginAPI.Core.Player, System.String, System.Int64, System.String)
+  name: BanPlayerByUserId(String, IPlayer, String, Int64, String)
+  nameWithType: Server.BanPlayerByUserId(String, IPlayer, String, Int64, String)
+  fullName: PluginAPI.Core.Server.BanPlayerByUserId(System.String, PluginAPI.Core.Interfaces.IPlayer, System.String, System.Int64, System.String)
   type: Method
   source:
     remote:
@@ -748,20 +852,20 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 136
+    startLine: 157
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
   summary: "\nBans a player from the server.\n"
   example: []
   syntax:
-    content: public static bool BanPlayerByUserId(string userId, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
+    content: public static bool BanPlayerByUserId(string userId, IPlayer issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
     parameters:
     - id: userId
       type: System.String
       description: The userid of the player which will be banned.
     - id: issuer
-      type: PluginAPI.Core.Player
+      type: PluginAPI.Core.Interfaces.IPlayer
       description: The issuer of the ban.
     - id: reason
       type: System.String
@@ -775,7 +879,60 @@ items:
     return:
       type: System.Boolean
       description: Whether or not the ban was successful.
-    content.vb: Public Shared Function BanPlayerByUserId(userId As String, issuer As Player, reason As String, duration As Long, bannedPlayerNickname As String = "UnknownName") As Boolean
+    content.vb: Public Shared Function BanPlayerByUserId(userId As String, issuer As IPlayer, reason As String, duration As Long, bannedPlayerNickname As String = "UnknownName") As Boolean
+  overload: PluginAPI.Core.Server.BanPlayerByUserId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  commentId: M:PluginAPI.Core.Server.BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  id: BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: BanPlayerByUserId(String, ICommandSender, String, Int64, String)
+  nameWithType: Server.BanPlayerByUserId(String, ICommandSender, String, Int64, String)
+  fullName: PluginAPI.Core.Server.BanPlayerByUserId(System.String, CommandSystem.ICommandSender, System.String, System.Int64, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BanPlayerByUserId
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 168
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nBans a player from the server.\n"
+  example: []
+  syntax:
+    content: public static bool BanPlayerByUserId(string userId, ICommandSender issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
+    parameters:
+    - id: userId
+      type: System.String
+      description: The userid of the player which will be banned.
+    - id: issuer
+      type: CommandSystem.ICommandSender
+      description: The issuer of the ban.
+    - id: reason
+      type: System.String
+      description: The ban reason.
+    - id: duration
+      type: System.Int64
+      description: The duration of the ban.
+    - id: bannedPlayerNickname
+      type: System.String
+      description: The nickname of the banned player.
+    return:
+      type: System.Boolean
+      description: Whether or not the ban was successful.
+    content.vb: Public Shared Function BanPlayerByUserId(userId As String, issuer As ICommandSender, reason As String, duration As Long, bannedPlayerNickname As String = "UnknownName") As Boolean
   overload: PluginAPI.Core.Server.BanPlayerByUserId*
   modifiers.csharp:
   - public
@@ -801,7 +958,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 159
+    startLine: 191
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -833,16 +990,16 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
-  commentId: M:PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
-  id: BanPlayerByIpAddress(System.String,PluginAPI.Core.Player,System.String,System.Int64,System.String)
+- uid: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
+  commentId: M:PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
+  id: BanPlayerByIpAddress(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
-  name: BanPlayerByIpAddress(String, Player, String, Int64, String)
-  nameWithType: Server.BanPlayerByIpAddress(String, Player, String, Int64, String)
-  fullName: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String, PluginAPI.Core.Player, System.String, System.Int64, System.String)
+  name: BanPlayerByIpAddress(String, IPlayer, String, Int64, String)
+  nameWithType: Server.BanPlayerByIpAddress(String, IPlayer, String, Int64, String)
+  fullName: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String, PluginAPI.Core.Interfaces.IPlayer, System.String, System.Int64, System.String)
   type: Method
   source:
     remote:
@@ -851,20 +1008,20 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 170
+    startLine: 202
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
   summary: "\nBans a player from the server.\n"
   example: []
   syntax:
-    content: public static bool BanPlayerByIpAddress(string ipAddress, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
+    content: public static bool BanPlayerByIpAddress(string ipAddress, IPlayer issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
     parameters:
     - id: ipAddress
       type: System.String
       description: The ip address of the player which will be banned.
     - id: issuer
-      type: PluginAPI.Core.Player
+      type: PluginAPI.Core.Interfaces.IPlayer
       description: The issuer of the ban.
     - id: reason
       type: System.String
@@ -878,7 +1035,60 @@ items:
     return:
       type: System.Boolean
       description: Whether or not the ban was successful.
-    content.vb: Public Shared Function BanPlayerByIpAddress(ipAddress As String, issuer As Player, reason As String, duration As Long, bannedPlayerNickname As String = "UnknownName") As Boolean
+    content.vb: Public Shared Function BanPlayerByIpAddress(ipAddress As String, issuer As IPlayer, reason As String, duration As Long, bannedPlayerNickname As String = "UnknownName") As Boolean
+  overload: PluginAPI.Core.Server.BanPlayerByIpAddress*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  commentId: M:PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  id: BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: BanPlayerByIpAddress(String, ICommandSender, String, Int64, String)
+  nameWithType: Server.BanPlayerByIpAddress(String, ICommandSender, String, Int64, String)
+  fullName: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String, CommandSystem.ICommandSender, System.String, System.Int64, System.String)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BanPlayerByIpAddress
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 213
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nBans a player from the server.\n"
+  example: []
+  syntax:
+    content: public static bool BanPlayerByIpAddress(string ipAddress, ICommandSender issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
+    parameters:
+    - id: ipAddress
+      type: System.String
+      description: The ip address of the player which will be banned.
+    - id: issuer
+      type: CommandSystem.ICommandSender
+      description: The issuer of the ban.
+    - id: reason
+      type: System.String
+      description: The ban reason.
+    - id: duration
+      type: System.Int64
+      description: The duration of the ban.
+    - id: bannedPlayerNickname
+      type: System.String
+      description: The nickname of the banned player.
+    return:
+      type: System.Boolean
+      description: Whether or not the ban was successful.
+    content.vb: Public Shared Function BanPlayerByIpAddress(ipAddress As String, issuer As ICommandSender, reason As String, duration As Long, bannedPlayerNickname As String = "UnknownName") As Boolean
   overload: PluginAPI.Core.Server.BanPlayerByIpAddress*
   modifiers.csharp:
   - public
@@ -904,7 +1114,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 190
+    startLine: 233
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -945,7 +1155,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 205
+    startLine: 248
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -986,7 +1196,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsPlayerBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 220
+    startLine: 263
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1027,7 +1237,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 231
+    startLine: 274
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1064,7 +1274,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 243
+    startLine: 286
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1105,7 +1315,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 249
+    startLine: 292
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1139,7 +1349,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 254
+    startLine: 297
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1176,7 +1386,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 263
+    startLine: 306
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1210,7 +1420,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 268
+    startLine: 311
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1247,7 +1457,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RunCommand
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 279
+    startLine: 322
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1290,7 +1500,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 288
+    startLine: 331
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1337,7 +1547,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 298
+    startLine: 341
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1347,6 +1557,161 @@ items:
     content: public static void ClearBroadcasts()
     content.vb: Public Shared Sub ClearBroadcasts
   overload: PluginAPI.Core.Server.ClearBroadcasts*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.IdleModeActive
+  commentId: P:PluginAPI.Core.Server.IdleModeActive
+  id: IdleModeActive
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: IdleModeActive
+  nameWithType: Server.IdleModeActive
+  fullName: PluginAPI.Core.Server.IdleModeActive
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IdleModeActive
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 346
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nIndicates whether the server is in the Idle Mode.\n"
+  example: []
+  syntax:
+    content: public static bool IdleModeActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IdleModeActive As Boolean
+  overload: PluginAPI.Core.Server.IdleModeActive*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Server.PauseIdleMode
+  commentId: P:PluginAPI.Core.Server.PauseIdleMode
+  id: PauseIdleMode
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: PauseIdleMode
+  nameWithType: Server.PauseIdleMode
+  fullName: PluginAPI.Core.Server.PauseIdleMode
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PauseIdleMode
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 351
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether the server temporarily can&apos;t enter the Idle Mode.\n"
+  example: []
+  syntax:
+    content: public static bool PauseIdleMode { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property PauseIdleMode As Boolean
+  overload: PluginAPI.Core.Server.PauseIdleMode*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.IdleModeAvailable
+  commentId: P:PluginAPI.Core.Server.IdleModeAvailable
+  id: IdleModeAvailable
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: IdleModeAvailable
+  nameWithType: Server.IdleModeAvailable
+  fullName: PluginAPI.Core.Server.IdleModeAvailable
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IdleModeAvailable
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 361
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets whether the idle mode is available on the server.\n"
+  example: []
+  syntax:
+    content: public static bool IdleModeAvailable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IdleModeAvailable As Boolean
+  overload: PluginAPI.Core.Server.IdleModeAvailable*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.SetIdleMode(System.Boolean)
+  commentId: M:PluginAPI.Core.Server.SetIdleMode(System.Boolean)
+  id: SetIdleMode(System.Boolean)
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: SetIdleMode(Boolean)
+  nameWithType: Server.SetIdleMode(Boolean)
+  fullName: PluginAPI.Core.Server.SetIdleMode(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SetIdleMode
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 372
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nEnters or leaves the idle mode.\n"
+  example: []
+  syntax:
+    content: public static void SetIdleMode(bool state)
+    parameters:
+    - id: state
+      type: System.Boolean
+      description: Value indicating whether the server should enter the idle mode.
+    content.vb: Public Shared Sub SetIdleMode(state As Boolean)
+  overload: PluginAPI.Core.Server.SetIdleMode*
   modifiers.csharp:
   - public
   - static
@@ -5796,6 +6161,19 @@ references:
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
+- uid: CommandSystem.ICommandSender
+  commentId: T:CommandSystem.ICommandSender
+  parent: CommandSystem
+  isExternal: true
+  name: ICommandSender
+  nameWithType: ICommandSender
+  fullName: CommandSystem.ICommandSender
+- uid: CommandSystem
+  commentId: N:CommandSystem
+  isExternal: true
+  name: CommandSystem
+  nameWithType: CommandSystem
+  fullName: CommandSystem
 - uid: PluginAPI.Core.Server.KickPlayer*
   commentId: Overload:PluginAPI.Core.Server.KickPlayer
   name: KickPlayer
@@ -5900,3 +6278,23 @@ references:
   name: ClearBroadcasts
   nameWithType: Server.ClearBroadcasts
   fullName: PluginAPI.Core.Server.ClearBroadcasts
+- uid: PluginAPI.Core.Server.IdleModeActive*
+  commentId: Overload:PluginAPI.Core.Server.IdleModeActive
+  name: IdleModeActive
+  nameWithType: Server.IdleModeActive
+  fullName: PluginAPI.Core.Server.IdleModeActive
+- uid: PluginAPI.Core.Server.PauseIdleMode*
+  commentId: Overload:PluginAPI.Core.Server.PauseIdleMode
+  name: PauseIdleMode
+  nameWithType: Server.PauseIdleMode
+  fullName: PluginAPI.Core.Server.PauseIdleMode
+- uid: PluginAPI.Core.Server.IdleModeAvailable*
+  commentId: Overload:PluginAPI.Core.Server.IdleModeAvailable
+  name: IdleModeAvailable
+  nameWithType: Server.IdleModeAvailable
+  fullName: PluginAPI.Core.Server.IdleModeAvailable
+- uid: PluginAPI.Core.Server.SetIdleMode*
+  commentId: Overload:PluginAPI.Core.Server.SetIdleMode
+  name: SetIdleMode
+  nameWithType: Server.SetIdleMode
+  fullName: PluginAPI.Core.Server.SetIdleMode

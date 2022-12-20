@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  commentId: T:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  id: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Heads
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.None
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.PreventFlip
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Tails
+  langs:
+  - csharp
+  - vb
+  name: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  type: Enum
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CoinFlipCancellation
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 282
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public enum CoinFlipCancellation
+    content.vb: Public Enum CoinFlipCancellation
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.None
+  commentId: F:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.None
+  id: None
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation.None
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.None
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: None
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 284
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: None = 0
+    return:
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Heads
+  commentId: F:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Heads
+  id: Heads
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  langs:
+  - csharp
+  - vb
+  name: Heads
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Heads
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Heads
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Heads
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 285
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: Heads = 1
+    return:
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Tails
+  commentId: F:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Tails
+  id: Tails
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  langs:
+  - csharp
+  - vb
+  name: Tails
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Tails
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.Tails
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Tails
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 286
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: Tails = 2
+    return:
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.PreventFlip
+  commentId: F:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.PreventFlip
+  id: PreventFlip
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  langs:
+  - csharp
+  - vb
+  name: PreventFlip
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation.PreventFlip
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation.PreventFlip
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PreventFlip
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 287
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: PreventFlip = 3
+    return:
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  commentId: T:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  parent: PluginAPI.Events
+  name: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation

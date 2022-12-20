@@ -37,6 +37,7 @@ items:
       description: The entity type.
     content.vb: >-
       Public Class Factory(Of T As IEntity)
+
           Implements IEntityFactory(Of T)
   inheritance:
   - System.Object

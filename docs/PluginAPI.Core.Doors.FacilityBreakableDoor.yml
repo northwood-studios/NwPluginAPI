@@ -38,6 +38,7 @@ items:
     content: 'public class FacilityBreakableDoor : FacilityDoor'
     content.vb: >-
       Public Class FacilityBreakableDoor
+
           Inherits FacilityDoor
   inheritance:
   - System.Object

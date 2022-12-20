@@ -38,6 +38,7 @@ items:
       <CommandHandler(GetType(PluginsCommand))>
 
       Public Class ListCommand
+
           Implements ICommand
   inheritance:
   - System.Object

@@ -339,6 +339,7 @@ items:
   syntax:
     content: >-
       public T GetComponent<T>(bool globalSearch = false, bool childSearch = false)
+
           where T : MonoBehaviour
     parameters:
     - id: globalSearch
@@ -384,6 +385,7 @@ items:
   syntax:
     content: >-
       public bool TryGetComponent<T>(out T component, bool globalSearch = false, bool childSearch = false)
+
           where T : MonoBehaviour
     parameters:
     - id: component

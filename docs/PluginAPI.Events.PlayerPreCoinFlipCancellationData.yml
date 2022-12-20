@@ -1,40 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  id: PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+  commentId: T:PluginAPI.Events.PlayerPreCoinFlipCancellationData
+  id: PlayerPreCoinFlipCancellationData
   parent: PluginAPI.Events
   children:
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override(System.Boolean)
+  - PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip
   langs:
   - csharp
   - vb
-  name: PlayerCheckReservedSlotCancellationData
-  nameWithType: PlayerCheckReservedSlotCancellationData
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  name: PlayerPreCoinFlipCancellationData
+  nameWithType: PlayerPreCoinFlipCancellationData
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData
   type: Struct
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: PlayerCheckReservedSlotCancellationData
+    id: PlayerPreCoinFlipCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 201
+    startLine: 246
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nRepresents reserved slot check event cancellation data.\n"
+  summary: "\nRepresents player pre coin flip event cancellation data.\n"
   example: []
   syntax:
-    content: 'public readonly struct PlayerCheckReservedSlotCancellationData : IEventCancellation'
+    content: 'public readonly struct PlayerPreCoinFlipCancellationData : IEventCancellation'
     content.vb: >-
-      Public Structure PlayerCheckReservedSlotCancellationData
+      Public Structure PlayerPreCoinFlipCancellationData
 
           Implements IEventCancellation
   implements:
@@ -53,16 +52,16 @@ items:
   modifiers.vb:
   - Public
   - Structure
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
-  commentId: P:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled
+  commentId: P:PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled
   id: IsCancelled
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData
   langs:
   - csharp
   - vb
   name: IsCancelled
-  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  nameWithType: PlayerPreCoinFlipCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled
   type: Property
   source:
     remote:
@@ -71,7 +70,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 204
+    startLine: 249
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -82,7 +81,7 @@ items:
     return:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsCancelled As Boolean
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled*
+  overload: PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled*
   implements:
   - PluginAPI.Events.IEventCancellation.IsCancelled
   modifiers.csharp:
@@ -92,84 +91,52 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  id: BypassReservedSlotsLimit
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation
+  commentId: P:PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation
+  id: Cancellation
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData
   langs:
   - csharp
   - vb
-  name: BypassReservedSlotsLimit
-  nameWithType: PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  type: Field
+  name: Cancellation
+  nameWithType: PlayerPreCoinFlipCancellationData.Cancellation
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation
+  type: Property
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: BypassReservedSlotsLimit
+    id: Cancellation
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 209
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Events
-  summary: "\nDetermines whether the player should be allowed to join unconditionally.\n"
-  example: []
-  syntax:
-    content: public readonly bool BypassReservedSlotsLimit
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly BypassReservedSlotsLimit As Boolean
-  modifiers.csharp:
-  - public
-  - readonly
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  id: HasReservedSlot
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  langs:
-  - csharp
-  - vb
-  name: HasReservedSlot
-  nameWithType: PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  type: Field
-  source:
-    remote:
-      path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: HasReservedSlot
-    path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 212
+    startLine: 251
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
   syntax:
-    content: public readonly bool HasReservedSlot
+    content: public readonly PlayerPreCoinFlipCancellationData.CoinFlipCancellation Cancellation { get; }
+    parameters: []
     return:
-      type: System.Boolean
-    content.vb: Public ReadOnly HasReservedSlot As Boolean
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+    content.vb: Public ReadOnly Property Cancellation As PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  overload: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation*
   modifiers.csharp:
   - public
   - readonly
+  - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged
+  commentId: M:PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged
   id: LeaveUnchanged
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData
   langs:
   - csharp
   - vb
   name: LeaveUnchanged()
-  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
+  nameWithType: PlayerPreCoinFlipCancellationData.LeaveUnchanged()
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged()
   type: Method
   source:
     remote:
@@ -178,35 +145,35 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeaveUnchanged
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 225
+    startLine: 263
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nDoesn&apos;t override the reserved slot check.\n"
+  summary: "\nDoesn&apos;t override the coin flip result.\n"
   example: []
   syntax:
-    content: public static PlayerCheckReservedSlotCancellationData LeaveUnchanged()
+    content: public static PlayerPreCoinFlipCancellationData LeaveUnchanged()
     return:
-      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-      description: The <xref href="PluginAPI.Events.PlayerCheckReservedSlotCancellationData" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Shared Function LeaveUnchanged As PlayerCheckReservedSlotCancellationData
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged*
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+      description: The <xref href="PluginAPI.Events.PlayerPreCoinFlipCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function LeaveUnchanged As PlayerPreCoinFlipCancellationData
+  overload: PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
-  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override(System.Boolean)
+  commentId: M:PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override(System.Boolean)
   id: Override(System.Boolean)
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData
   langs:
   - csharp
   - vb
   name: Override(Boolean)
-  nameWithType: PlayerCheckReservedSlotCancellationData.Override(Boolean)
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  nameWithType: PlayerPreCoinFlipCancellationData.Override(Boolean)
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override(System.Boolean)
   type: Method
   source:
     remote:
@@ -215,60 +182,60 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Override
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 233
+    startLine: 272
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nOverrides a reserved slot check.\n"
+  summary: "\nOverrides the flip result.\n"
   example: []
   syntax:
-    content: public static PlayerCheckReservedSlotCancellationData Override(bool hasReservedSlot)
+    content: public static PlayerPreCoinFlipCancellationData Override(bool isTails)
     parameters:
-    - id: hasReservedSlot
+    - id: isTails
       type: System.Boolean
-      description: Indicating whether or not the player has a reserved slot.
+      description: True if the coin flip result should be tails.
     return:
-      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-      description: The <xref href="PluginAPI.Events.PlayerCheckReservedSlotCancellationData" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Shared Function Override(hasReservedSlot As Boolean) As PlayerCheckReservedSlotCancellationData
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+      description: ''
+    content.vb: Public Shared Function Override(isTails As Boolean) As PlayerPreCoinFlipCancellationData
+  overload: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  id: BypassCheck
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip
+  commentId: M:PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip
+  id: PreventFlip
+  parent: PluginAPI.Events.PlayerPreCoinFlipCancellationData
   langs:
   - csharp
   - vb
-  name: BypassCheck()
-  nameWithType: PlayerCheckReservedSlotCancellationData.BypassCheck()
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck()
+  name: PreventFlip()
+  nameWithType: PlayerPreCoinFlipCancellationData.PreventFlip()
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip()
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: BypassCheck
+    id: PreventFlip
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 240
+    startLine: 279
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nBypasses the check of free reserved slots on the server and allows the connection unconditionally.\n"
+  summary: "\nPrevents the coin flip.\n"
   example: []
   syntax:
-    content: public static PlayerCheckReservedSlotCancellationData BypassCheck()
+    content: public static PlayerPreCoinFlipCancellationData PreventFlip()
     return:
-      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-      description: ''
-    content.vb: Public Shared Function BypassCheck As PlayerCheckReservedSlotCancellationData
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck*
+      type: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+      description: The <xref href="PluginAPI.Events.PlayerPreCoinFlipCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function PreventFlip As PlayerPreCoinFlipCancellationData
+  overload: PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip*
   modifiers.csharp:
   - public
   - static
@@ -555,11 +522,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled*
+  commentId: Overload:PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled
   name: IsCancelled
-  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  nameWithType: PlayerPreCoinFlipCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.IsCancelled
 - uid: PluginAPI.Events.IEventCancellation.IsCancelled
   commentId: P:PluginAPI.Events.IEventCancellation.IsCancelled
   parent: PluginAPI.Events.IEventCancellation
@@ -573,24 +540,35 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation*
+  commentId: Overload:PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation
+  name: Cancellation
+  nameWithType: PlayerPreCoinFlipCancellationData.Cancellation
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Cancellation
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  commentId: T:PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
   parent: PluginAPI.Events
-  name: PlayerCheckReservedSlotCancellationData
-  nameWithType: PlayerCheckReservedSlotCancellationData
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
+  name: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+  commentId: T:PluginAPI.Events.PlayerPreCoinFlipCancellationData
+  parent: PluginAPI.Events
+  name: PlayerPreCoinFlipCancellationData
+  nameWithType: PlayerPreCoinFlipCancellationData
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged*
+  commentId: Overload:PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged
   name: LeaveUnchanged
-  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
+  nameWithType: PlayerPreCoinFlipCancellationData.LeaveUnchanged
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.LeaveUnchanged
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override*
+  commentId: Overload:PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override
   name: Override
-  nameWithType: PlayerCheckReservedSlotCancellationData.Override
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  name: BypassCheck
-  nameWithType: PlayerCheckReservedSlotCancellationData.BypassCheck
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
+  nameWithType: PlayerPreCoinFlipCancellationData.Override
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.Override
+- uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip*
+  commentId: Overload:PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip
+  name: PreventFlip
+  nameWithType: PlayerPreCoinFlipCancellationData.PreventFlip
+  fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.PreventFlip
