@@ -298,5 +298,36 @@ namespace PluginAPI.Core
 		/// Clears displayed broadcast.
 		/// </summary>
 		public new static void ClearBroadcasts() => Instance.GetComponent<Broadcast>().RpcClearElements();
+
+		/// <summary>
+		/// Indicates whether the server is in the Idle Mode.
+		/// </summary>
+		public static bool IdleModeActive => IdleMode.IdleModeActive;
+
+		/// <summary>
+		/// Gets or sets whether the server temporarily can't enter the Idle Mode.
+		/// </summary>
+		public static bool PauseIdleMode
+		{
+			get => IdleMode.PauseIdleMode;
+
+			set => IdleMode.PauseIdleMode = value;
+		}
+
+		/// <summary>
+		/// Gets or sets whether the idle mode is available on the server.
+		/// </summary>
+		public static bool IdleModeAvailable
+		{
+			get => IdleMode.IdleModeEnabled;
+
+			set => IdleMode.IdleModeEnabled = value;
+		}
+
+		/// <summary>
+		/// Enters or leaves the idle mode.
+		/// </summary>
+		/// <param name="state">Value indicating whether the server should enter the idle mode.</param>
+		public static void SetIdleMode(bool state) => IdleMode.SetIdleMode(state);
 	}
 }

@@ -539,7 +539,7 @@ namespace PluginAPI.Enums
 		/// Event executed when using remoteadmin command.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments.
+		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments.
 		/// </remarks>
 		PlayerRemoteAdminCommand = 67,
 
@@ -555,7 +555,7 @@ namespace PluginAPI.Enums
 		/// Event executed when using console command.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="string"/> command, <see cref="string[]"/> arguments.
+		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments.
 		/// </remarks>
 		ConsoleCommand = 69,
 
@@ -828,7 +828,7 @@ namespace PluginAPI.Enums
 		/// Event executed when remoteadmin command completes.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
+		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
 		/// </remarks>
 		PlayerRemoteAdminCommandExecuted = 104,
 
@@ -844,7 +844,7 @@ namespace PluginAPI.Enums
 		/// Event executed when console command completes.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
+		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
 		/// </remarks>
 		ConsoleCommandExecuted = 106,
 
@@ -855,5 +855,21 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanType"/> banType.
 		/// </remarks>
 		BanUpdated = 107,
+
+		/// <summary>
+		/// Executed before player flips the coin.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		PlayerPreCoinFlip = 108,
+
+		/// <summary>
+		/// Executed when player flips the coin.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isTails.
+		/// </remarks>
+		PlayerCoinFlip = 109,
 	}
 }
