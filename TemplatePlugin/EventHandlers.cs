@@ -1,5 +1,6 @@
 ﻿namespace TemplatePlugin
 {
+	using CommandSystem;
 	using Interactables.Interobjects.DoorUtils;
 	using InventorySystem.Items;
 	using InventorySystem.Items.Pickups;
@@ -12,7 +13,7 @@
 	using PluginAPI.Core.Attributes;
 	using PluginAPI.Enums;
 	using Respawning;
-	using TemplatePlugin.Factory;
+	using Factory;
 	using UnityEngine;
 
 	public class EventHandlers
@@ -59,10 +60,10 @@
 			Log.Info($"Player &6{userid}&r {(hasReservedSlot ? "has reserved slot" : "dont have reserved slot")}");
 		}
 
-		[PluginEvent(ServerEventType.PlayerRemoteAdminCommand)]
-		public void OnPlayerRemoteadminCommand(MyPlayer player, string command, string[] arguments)
+		[PluginEvent(ServerEventType.RemoteAdminCommand)]
+		public void OnRemoteadminCommand(ICommandSender sender, string command, string[] arguments)
 		{
-			Log.Info($"&7[&1RemoteAdmin&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}");
+			Log.Info($"&7[&1RemoteAdmin&7]&r &6{sender.LogName}&r used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}");
 		}
 
 		[PluginEvent(ServerEventType.PlayerGameConsoleCommand)]
@@ -72,7 +73,7 @@
 		}
 
 		[PluginEvent(ServerEventType.ConsoleCommand)]
-		public void OnConsoleCommand(string command, string[] arguments)
+		public void OnConsoleCommand(ICommandSender sender, string command, string[] arguments)
 		{
 			Log.Info($"&7[&2Console&7]&r Server used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}");
 		}
@@ -285,10 +286,10 @@
 			Log.Info($"Ban of ID {banDetails.Id} of type {banType} has been updated by {banDetails.Issuer}.");
 		}
 
-		[PluginEvent(ServerEventType.PlayerRemoteAdminCommandExecuted)]
-		public void OnPlayerRemoteadminCommandExecuted(MyPlayer player, string command, string[] arguments, bool result, string response)
+		[PluginEvent(ServerEventType.RemoteAdminCommandExecuted)]
+		public void OnRemoteadminCommandExecuted(ICommandSender sender, string command, string[] arguments, bool result, string response)
 		{
-			Log.Info($"&7[&1RemoteAdmin&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}. Result: {result}. Command output: {response}.");
+			Log.Info($"&7[&1RemoteAdmin&7]&r &6{sender.LogName}&r used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}. Result: {result}. Command output: {response}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerGameConsoleCommandExecuted)]
@@ -298,9 +299,21 @@
 		}
 
 		[PluginEvent(ServerEventType.ConsoleCommandExecuted)]
-		public void OnConsoleCommandExecuted(string command, string[] arguments, bool result, string response)
+		public void OnConsoleCommandExecuted(ICommandSender sender, string command, string[] arguments, bool result, string response)
 		{
 			Log.Info($"&7[&2Console&7]&r Server used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}. Result: {result}. Command output: {response}.");
+		}
+
+		[PluginEvent(ServerEventType.PlayerPreCoinFlip)]
+		public void OnPlayerPreCoinFlip(MyPlayer player)
+		{
+			Log.Info($"&rPlayer &6{player.Nickname}&r (&6{player.UserId}&r) flipped the coin (PreCoinFlip event).");
+		}
+
+		[PluginEvent(ServerEventType.PlayerCoinFlip)]
+		public void OnPlayerCoinFlip(MyPlayer player, bool isTails)
+		{
+			Log.Info($"&rPlayer &6{player.Nickname}&r (&6{player.UserId}&r) flipped the coin. Flip result: {(isTails ? "tails" : "heads")}.");
 		}
 	}
 }

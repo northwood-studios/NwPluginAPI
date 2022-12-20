@@ -1,5 +1,3 @@
-using LiteNetLib;
-
 namespace PluginAPI.Events
 {
 	using System;
@@ -22,7 +20,7 @@ namespace PluginAPI.Events
 	using Enums;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 	using Respawning;
-	using PluginAPI.Loader;
+	using Loader;
 	using InventorySystem.Items.ThrowableProjectiles;
 	using PlayerRoles.PlayableScps.Scp173;
 	using PlayerRoles.PlayableScps.Scp079;
@@ -30,6 +28,8 @@ namespace PluginAPI.Events
 	using Interactables.Interobjects.DoorUtils;
 	using UnityEngine;
 	using PlayerRoles.PlayableScps.Scp939;
+	using CommandSystem;
+	using LiteNetLib;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -75,7 +75,7 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(bool), "isAiming")) },
 			{ ServerEventType.PlayerBanned, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
-				new EventParameter(typeof(IPlayer), "issuer"),
+				new EventParameter(typeof(ICommandSender), "issuer"),
 				new EventParameter(typeof(string), "reason"),
 				new EventParameter(typeof(long), "duration")) },
 			{ ServerEventType.PlayerCancelUsingItem, new Event(
@@ -248,8 +248,8 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerCheckReservedSlot, new Event(
 				new EventParameter(typeof(string), "userid"),
 				new EventParameter(typeof(bool), "hasReservedSlot")) },
-			{ ServerEventType.PlayerRemoteAdminCommand, new Event(
-				new EventParameter(typeof(IPlayer), "player"),
+			{ ServerEventType.RemoteAdminCommand, new Event(
+				new EventParameter(typeof(ICommandSender), "sender"),
 				new EventParameter(typeof(string), "command"),
 				new EventParameter(typeof(string[]), "arguments")) },
 			{ ServerEventType.PlayerGameConsoleCommand, new Event(
@@ -257,6 +257,7 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(string), "command"),
 				new EventParameter(typeof(string[]), "arguments")) },
 			{ ServerEventType.ConsoleCommand, new Event(
+				new EventParameter(typeof(ICommandSender), "sender"),
 				new EventParameter(typeof(string), "command"),
 				new EventParameter(typeof(string[]), "arguments")) },
 			{ ServerEventType.TeamRespawn, new Event(
@@ -359,8 +360,8 @@ namespace PluginAPI.Events
 			{ ServerEventType.BanRevoked, new Event(
 				new EventParameter(typeof(string), "id"),
 				new EventParameter(typeof(BanHandler.BanType), "banType")) },
-			{ ServerEventType.PlayerRemoteAdminCommandExecuted, new Event(
-				new EventParameter(typeof(IPlayer), "player"),
+			{ ServerEventType.RemoteAdminCommandExecuted, new Event(
+				new EventParameter(typeof(ICommandSender), "sender"),
 				new EventParameter(typeof(string), "command"),
 				new EventParameter(typeof(string[]), "arguments"),
 				new EventParameter(typeof(bool), "result"),
@@ -371,6 +372,7 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(string[]), "arguments"),
 				new EventParameter(typeof(string), "response")) },
 			{ ServerEventType.ConsoleCommandExecuted, new Event(
+				new EventParameter(typeof(ICommandSender), "sender"),
 				new EventParameter(typeof(string), "command"),
 				new EventParameter(typeof(string[]), "arguments"),
 				new EventParameter(typeof(bool), "result"),
@@ -378,6 +380,11 @@ namespace PluginAPI.Events
 			{ ServerEventType.BanUpdated, new Event(
 				new EventParameter(typeof(BanDetails), "banDetails"),
 				new EventParameter(typeof(BanHandler.BanType), "banType")) },
+			{ ServerEventType.PlayerPreCoinFlip, new Event(
+				new EventParameter(typeof(IPlayer), "player")) },
+			{ ServerEventType.PlayerCoinFlip, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(bool), "isTails")) },
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)

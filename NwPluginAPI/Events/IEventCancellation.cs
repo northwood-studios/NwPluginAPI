@@ -1,5 +1,7 @@
 ﻿using System;
 using LiteNetLib.Utils;
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
 
 namespace PluginAPI.Events
 {
@@ -237,5 +239,53 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <returns></returns>
 		public static PlayerCheckReservedSlotCancellationData BypassCheck() => new PlayerCheckReservedSlotCancellationData(true, true, true);
+	}
+
+	/// <summary>
+	/// Represents player pre coin flip event cancellation data.
+	/// </summary>
+	public readonly struct PlayerPreCoinFlipCancellationData : IEventCancellation
+	{
+		/// <inheritdoc />
+		public bool IsCancelled { get; }
+
+		public CoinFlipCancellation Cancellation { get; }
+
+		private PlayerPreCoinFlipCancellationData(bool isCancelled, CoinFlipCancellation cancellation)
+		{
+			IsCancelled = isCancelled;
+			Cancellation = cancellation;
+		}
+
+		/// <summary>
+		/// Doesn't override the coin flip result.
+		/// </summary>
+		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
+		public static PlayerPreCoinFlipCancellationData LeaveUnchanged() =>
+			new PlayerPreCoinFlipCancellationData(false, CoinFlipCancellation.None);
+
+		/// <returns></returns>
+		/// /// <summary>
+		/// Overrides the flip result.
+		/// </summary>
+		/// <param name="isTails">True if the coin flip result should be tails.</param>
+		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
+		public static PlayerPreCoinFlipCancellationData Override(bool isTails) =>
+			new PlayerPreCoinFlipCancellationData(true, isTails ? CoinFlipCancellation.Tails : CoinFlipCancellation.Heads);
+
+		/// <summary>
+		/// Prevents the coin flip.
+		/// </summary>
+		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
+		public static PlayerPreCoinFlipCancellationData PreventFlip() =>
+			new PlayerPreCoinFlipCancellationData(true, CoinFlipCancellation.PreventFlip);
+
+		public enum CoinFlipCancellation
+		{
+			None,
+			Heads,
+			Tails,
+			PreventFlip,
+		}
 	}
 }

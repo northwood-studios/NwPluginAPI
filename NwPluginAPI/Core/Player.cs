@@ -39,7 +39,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the amount of online players.
 		/// </summary>
-		public static int Count => ReferenceHub.AllHubs.Count(x => 
+		public static int Count => ReferenceHub.AllHubs.Count(x =>
 			!x.isLocalPlayer &&
 			x.Mode == ClientInstanceMode.ReadyClient &&
 			!string.IsNullOrEmpty(x.characterClassManager.UserId));
@@ -201,7 +201,7 @@ namespace PluginAPI.Core
 				player = default(T);
 				return false;
 			}
-          
+
 			player = plr;
             return true;
         }
@@ -541,7 +541,7 @@ namespace PluginAPI.Core
 		public float MaxArtificalHealth => ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
 
 		/// <summary>
-		/// Gets whether or not the player has remoteadmin access. 
+		/// Gets whether or not the player has remoteadmin access.
 		/// </summary>
 		public bool RemoteAdminAccess => ReferenceHub.serverRoles.RemoteAdmin;
 
@@ -685,7 +685,7 @@ namespace PluginAPI.Core
 			get
 			{
 				if (!IsDisarmed) return null;
-				
+
 				DisarmedEntry entry = DisarmedPlayers.Entries.Find(x => x.DisarmedPlayer == NetworkId);
 
 				return Player.Get<Player>(entry.Disarmer);

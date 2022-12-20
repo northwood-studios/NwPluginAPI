@@ -1,5 +1,7 @@
 namespace PluginAPI.Core
 {
+	using CommandSystem;
+	using RemoteAdmin;
 	using System.Collections.Generic;
 	using Mirror;
 	using Interfaces;
@@ -28,7 +30,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// The <see cref="Server"/> instance.
 		/// </summary>
-		public static Server Instance { get; internal set; }
+		public static Server Instance { get; private set; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Server"/> class.
@@ -102,12 +104,30 @@ namespace PluginAPI.Core
 		public static bool BanPlayer(Player player, IPlayer issuer, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, issuer.ReferenceHub, reason, duration);
 
 		/// <summary>
+		/// Bans a player from the server.
+		/// </summary>
+		/// <param name="player">The player which will be banned.</param>
+		/// <param name="issuer">The player who issued the ban.</param>
+		/// <param name="reason">The reason of ban.</param>
+		/// <param name="duration">The duration of the ban in seconds.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
+		public static bool BanPlayer(Player player, ICommandSender issuer, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, issuer, reason, duration);
+
+		/// <summary>
 		/// Kicks a player from the server.
 		/// </summary>
 		/// <param name="player">The player which will be kicked.</param>
 		/// <param name="issuer">The player who issued kick.</param>
 		/// <param name="reason">The reason of the kick.</param>
 		public static void KickPlayer(Player player, IPlayer issuer, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, issuer.ReferenceHub, reason);
+
+		/// <summary>
+		/// Kicks a player from the server.
+		/// </summary>
+		/// <param name="player">The player which will be kicked.</param>
+		/// <param name="issuer">The player who issued kick.</param>
+		/// <param name="reason">The reason of the kick.</param>
+		public static void KickPlayer(Player player, ICommandSender issuer, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, issuer, reason);
 
 		/// <summary>
 		/// Kicks a player from the server.
@@ -124,7 +144,7 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of the ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
 		/// <returns>Whether or not the ban was successful.</returns>
-		public static bool BanPlayerByUserId(string userId, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, Instance, reason, duration, bannedPlayerNickname);
+		public static bool BanPlayerByUserId(string userId, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, ServerConsole.Scs, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
 		/// Bans a player from the server.
@@ -135,7 +155,18 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of the ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
 		/// <returns>Whether or not the ban was successful.</returns>
-		public static bool BanPlayerByUserId(string userId, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
+		public static bool BanPlayerByUserId(string userId, IPlayer issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, new PlayerCommandSender(issuer.ReferenceHub), reason, duration, bannedPlayerNickname);
+
+		/// <summary>
+		/// Bans a player from the server.
+		/// </summary>
+		/// <param name="userId">The userid of the player which will be banned.</param>
+		/// <param name="issuer">The issuer of the ban.</param>
+		/// <param name="reason">The ban reason.</param>
+		/// <param name="duration">The duration of the ban.</param>
+		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
+		public static bool BanPlayerByUserId(string userId, ICommandSender issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
 		{
 			if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(reason)) return false;
 
@@ -144,7 +175,7 @@ namespace PluginAPI.Core
 				Id = userId,
 				IssuanceTime = TimeBehaviour.CurrentTimestamp(),
 				Expires = TimeBehaviour.GetBanExpirationTime((uint)duration),
-				Issuer = issuer.UserId,
+				Issuer = issuer.LogName,
 				OriginalName = bannedPlayerNickname,
 				Reason = reason,
 			}, BanType.UserId);
@@ -158,7 +189,7 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of the ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of the the banned player.</param>
 		/// <returns>Whether or not the ban was successful.</returns>
-		public static bool BanPlayerByIpAddress(string ipAddress, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, Instance, reason, duration, bannedPlayerNickname);
+		public static bool BanPlayerByIpAddress(string ipAddress, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, ServerConsole.Scs, reason, duration, bannedPlayerNickname);
 
 		/// <summary>
 		/// Bans a player from the server.
@@ -169,7 +200,18 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of the ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
 		/// <returns>Whether or not the ban was successful.</returns>
-		public static bool BanPlayerByIpAddress(string ipAddress, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
+		public static bool BanPlayerByIpAddress(string ipAddress, IPlayer issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, new PlayerCommandSender(issuer.ReferenceHub), reason, duration, bannedPlayerNickname);
+
+		/// <summary>
+		/// Bans a player from the server.
+		/// </summary>
+		/// <param name="ipAddress">The ip address of the player which will be banned.</param>
+		/// <param name="issuer">The issuer of the ban.</param>
+		/// <param name="reason">The ban reason.</param>
+		/// <param name="duration">The duration of the ban.</param>
+		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
+		/// <returns>Whether or not the ban was successful.</returns>
+		public static bool BanPlayerByIpAddress(string ipAddress, ICommandSender issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName")
 		{
 			if (string.IsNullOrEmpty(ipAddress) || string.IsNullOrEmpty(reason)) return false;
 
@@ -178,7 +220,7 @@ namespace PluginAPI.Core
 				Id = ipAddress,
 				IssuanceTime = TimeBehaviour.CurrentTimestamp(),
 				Expires = TimeBehaviour.GetBanExpirationTime((uint)duration),
-				Issuer = issuer.UserId,
+				Issuer = issuer.LogName,
 				OriginalName = bannedPlayerNickname,
 				Reason = reason,
 			}, BanType.IP);
@@ -298,5 +340,36 @@ namespace PluginAPI.Core
 		/// Clears displayed broadcast.
 		/// </summary>
 		public new static void ClearBroadcasts() => Instance.GetComponent<Broadcast>().RpcClearElements();
+
+		/// <summary>
+		/// Indicates whether the server is in the Idle Mode.
+		/// </summary>
+		public static bool IdleModeActive => IdleMode.IdleModeActive;
+
+		/// <summary>
+		/// Gets or sets whether the server temporarily can't enter the Idle Mode.
+		/// </summary>
+		public static bool PauseIdleMode
+		{
+			get => IdleMode.PauseIdleMode;
+
+			set => IdleMode.PauseIdleMode = value;
+		}
+
+		/// <summary>
+		/// Gets or sets whether the idle mode is available on the server.
+		/// </summary>
+		public static bool IdleModeAvailable
+		{
+			get => IdleMode.IdleModeEnabled;
+
+			set => IdleMode.IdleModeEnabled = value;
+		}
+
+		/// <summary>
+		/// Enters or leaves the idle mode.
+		/// </summary>
+		/// <param name="state">Value indicating whether the server should enter the idle mode.</param>
+		public static void SetIdleMode(bool state) => IdleMode.SetIdleMode(state);
 	}
 }
