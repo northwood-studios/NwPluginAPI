@@ -27,7 +27,7 @@
   "articles/intro.html": {
     "href": "articles/intro.html",
     "title": "NwAPI Introduction | Nw Plugin API",
-    "keywords": "NwAPI Introduction TODO: IMPROVE INTRO The Northwood plugin API (NWAPI) is a first-party, event based API used to create server-side plugins for SCP:SL in C#. Getting Started ### Environment setup ### Writing code ## Code Prerequisites ### The Plugin class ### The Config class ### Event handlers"
+    "keywords": "NwAPI Introduction The Northwood plugin API (NWAPI) is a first-party, event based API used to create server-side plugins for SCP:SL in C#. Getting Started Environment setup Writing code Code Prerequisites The Plugin class The Config class Event handlers"
   },
   "index.html": {
     "href": "index.html",
