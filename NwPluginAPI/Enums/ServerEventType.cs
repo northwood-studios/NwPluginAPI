@@ -1,5 +1,8 @@
 namespace PluginAPI.Enums
 {
+	using CommandSystem;
+	using MapGeneration.Distributors;
+	using Core.Zones.Heavy;
 	using Core.Interfaces;
 	using PlayerRoles;
 	using PlayerRoles.PlayableScps.Scp173;
@@ -119,7 +122,7 @@ namespace PluginAPI.Enums
         /// Executed when player gets banned.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> issuer, ref <see cref="string"/> reason, ref <see cref="long"/> duration.
+        /// Parameters: <see cref="IPlayer"/> player, <see cref="ICommandSender"/> issuer, ref <see cref="string"/> reason, ref <see cref="long"/> duration.
         /// </remarks>
         PlayerBanned = 13,
 
@@ -536,12 +539,12 @@ namespace PluginAPI.Enums
 		PlayerCheckReservedSlot = 66,
 
 		/// <summary>
-		/// Event executed when using remoteadmin command.
+		/// Event executed when using remote admin command.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments.
+		/// Parameters: <see cref="ICommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments.
 		/// </remarks>
-		PlayerRemoteAdminCommand = 67,
+		RemoteAdminCommand = 67,
 
 		/// <summary>
 		/// Event executed when using game console command.
@@ -555,7 +558,7 @@ namespace PluginAPI.Enums
 		/// Event executed when using console command.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments.
+		/// Parameters: <see cref="ICommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments.
 		/// </remarks>
 		ConsoleCommand = 69,
 
@@ -812,7 +815,7 @@ namespace PluginAPI.Enums
 		/// Event executed when a new ban issued and saved in the files.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanType"/> banType.
+		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanHandler.BanType"/> banType.
 		/// </remarks>
 		BanIssued = 102,
 
@@ -820,17 +823,17 @@ namespace PluginAPI.Enums
 		/// Event executed when an existing ban is revoked and removed from the files.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="string"/> userId, <see cref="BanType"/> banType.
+		/// Parameters: <see cref="string"/> userId, <see cref="BanHandler.BanType"/> banType.
 		/// </remarks>
 		BanRevoked = 103,
 
 		/// <summary>
-		/// Event executed when remoteadmin command completes.
+		/// Event executed when remote admin command completes.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
+		/// Parameters: <see cref="ICommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
 		/// </remarks>
-		PlayerRemoteAdminCommandExecuted = 104,
+		RemoteAdminCommandExecuted = 104,
 
 		/// <summary>
 		/// Event executed when game console command completes.
@@ -844,7 +847,7 @@ namespace PluginAPI.Enums
 		/// Event executed when console command completes.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="CommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
+		/// Parameters: <see cref="ICommandSender"/> sender, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
 		/// </remarks>
 		ConsoleCommandExecuted = 106,
 
@@ -852,7 +855,7 @@ namespace PluginAPI.Enums
 		/// Event executed when an existing ban is updated.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanType"/> banType.
+		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanHandler.BanType"/> banType.
 		/// </remarks>
 		BanUpdated = 107,
 

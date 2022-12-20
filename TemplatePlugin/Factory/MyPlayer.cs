@@ -1,7 +1,7 @@
-﻿using RemoteAdmin;
-
-namespace TemplatePlugin.Factory
+﻿namespace TemplatePlugin.Factory
 {
+	using CommandSystem;
+	using RemoteAdmin;
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
 	using PluginAPI.Core.Interfaces;
@@ -19,13 +19,13 @@ namespace TemplatePlugin.Factory
 
         public string Test => "TestValue";
 
-		[PluginEvent(ServerEventType.PlayerRemoteAdminCommand)]
-		public void OnRaCommand(CommandSender plr, string cmd, string[] args)
+		[PluginEvent(ServerEventType.RemoteAdminCommand)]
+		public void OnRaCommand(ICommandSender plr, string cmd, string[] args)
 		{
 			if (!(plr is PlayerCommandSender pcs) || pcs.ReferenceHub != ReferenceHub)
 				return;
 
-			Log.Info($" [&4MyPlayer&r] Player {plr.Nickname} executed command {cmd}");
+			Log.Info($" [&4MyPlayer&r] Player {pcs.Nickname} executed command {cmd}");
 		}
 
 		public override void OnDestroy()

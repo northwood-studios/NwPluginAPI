@@ -1,5 +1,6 @@
 ﻿namespace TemplatePlugin
 {
+	using CommandSystem;
 	using AdminToys;
 	using CustomPlayerEffects;
 	using InventorySystem.Items;
@@ -150,9 +151,9 @@
         }
 
         [PluginEvent(ServerEventType.PlayerBanned)]
-        void OnPlayerBanned(MyPlayer plr, MyPlayer issuer, string reason, long duration)
+        void OnPlayerBanned(MyPlayer plr, ICommandSender issuer, string reason, long duration)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) got banned by &6{issuer.Nickname}&r (&6{issuer.UserId}&r) with reason &6{reason}&r for duration &6{duration}&r seconds");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) got banned by &6{issuer.LogName}&r with reason &6{reason}&r for duration &6{duration}&r seconds");
         }
 
         [PluginEvent(ServerEventType.PlayerCancelUsingItem)]

@@ -57,7 +57,7 @@ public static class EventManager
 			new EventParameter("System.Boolean", false, "isAiming")) },
 		{ 13, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "issuer"),
+			new EventParameter("CommandSystem.ICommandSender", false, "issuer"),
 			new EventParameter("System.String", false, "reason"),
 			new EventParameter("System.Int64", false, "duration")) },
 		{ 14, new Event(
@@ -231,7 +231,7 @@ public static class EventManager
 			new EventParameter("System.String", false, "userid"),
 			new EventParameter("System.Boolean", false, "hasReservedSlot")) },
 		{ 67, new Event(
-			new EventParameter("CommandSender", false, "sender"),
+			new EventParameter("CommandSystem.ICommandSender", false, "sender"),
 			new EventParameter("System.String", false, "command"),
 			new EventParameter("System.String", true, "arguments")) },
 		{ 68, new Event(
@@ -239,7 +239,7 @@ public static class EventManager
 			new EventParameter("System.String", false, "command"),
 			new EventParameter("System.String", true, "arguments")) },
 		{ 69, new Event(
-			new EventParameter("CommandSender", false, "sender"),
+			new EventParameter("CommandSystem.ICommandSender", false, "sender"),
 			new EventParameter("System.String", false, "command"),
 			new EventParameter("System.String", true, "arguments")) },
 		{ 71, new Event(
@@ -343,7 +343,7 @@ public static class EventManager
 			new EventParameter("System.String", false, "id"),
 			new EventParameter("BanHandler+BanType", false, "banType")) },
 		{ 104, new Event(
-			new EventParameter("CommandSender", false, "sender"),
+			new EventParameter("CommandSystem.ICommandSender", false, "sender"),
 			new EventParameter("System.String", false, "command"),
 			new EventParameter("System.String", true, "arguments"),
 			new EventParameter("System.Boolean", false, "result"),
@@ -354,7 +354,7 @@ public static class EventManager
 			new EventParameter("System.String", true, "arguments"),
 			new EventParameter("System.String", false, "response")) },
 		{ 106, new Event(
-			new EventParameter("CommandSender", false, "sender"),
+			new EventParameter("CommandSystem.ICommandSender", false, "sender"),
 			new EventParameter("System.String", false, "command"),
 			new EventParameter("System.String", true, "arguments"),
 			new EventParameter("System.Boolean", false, "result"),
