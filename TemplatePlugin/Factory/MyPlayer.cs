@@ -1,4 +1,6 @@
-﻿namespace TemplatePlugin.Factory
+﻿using RemoteAdmin;
+
+namespace TemplatePlugin.Factory
 {
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
@@ -18,9 +20,10 @@
         public string Test => "TestValue";
 
 		[PluginEvent(ServerEventType.PlayerRemoteAdminCommand)]
-		public void OnRaCommand(MyPlayer plr, string cmd, string[] args)
+		public void OnRaCommand(CommandSender plr, string cmd, string[] args)
 		{
-			if (plr != this) return;
+			if (!(plr is PlayerCommandSender pcs) || pcs.ReferenceHub != ReferenceHub)
+				return;
 
 			Log.Info($" [&4MyPlayer&r] Player {plr.Nickname} executed command {cmd}");
 		}
