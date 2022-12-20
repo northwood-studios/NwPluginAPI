@@ -14,7 +14,7 @@
 	
 	<PropertyGroup>
 		<PackageId>Northwood.PluginAPI.Analyzers</PackageId>
-		<PackageVersion>12.0.0-rc.4</PackageVersion>
+		<PackageVersion>12.0.0-rc.5</PackageVersion>
 		<Authors>Northwood Studios</Authors>
 		<Company>Northwood Studio</Company>
 		<Product>PluginAPI.Analyzers</Product>
