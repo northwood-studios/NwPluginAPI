@@ -121,8 +121,8 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IPlayer), "target")) },
 			{ ServerEventType.PlayerDamage, new Event(
-				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IPlayer), "target"),
+				new EventParameter(typeof(IPlayer), "attacker"),
 				new EventParameter(typeof(DamageHandlerBase), "damageHandler")) },
 			{ ServerEventType.PlayerInteractElevator, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
