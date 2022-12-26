@@ -176,7 +176,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Turns off all lights in facility.
+		/// Turns on all lights in facility.
 		/// </summary>
 		public void TurnOnAllLights()
 		{
