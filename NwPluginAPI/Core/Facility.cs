@@ -159,7 +159,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Turns off all lights in facility.
 		/// </summary>
-		public void TurnOffAllLights(float duration = 0)
+		public static void TurnOffAllLights(float duration = 0)
 		{
 			foreach (FlickerableLightController flickerableLightController in FlickerableLightController.Instances)
 			{
@@ -178,7 +178,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Turns on all lights in facility.
 		/// </summary>
-		public void TurnOnAllLights()
+		public static void TurnOnAllLights()
 		{
 			foreach (FlickerableLightController flickerableLightController in FlickerableLightController.Instances)
 			{
