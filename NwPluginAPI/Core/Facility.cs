@@ -157,18 +157,33 @@ namespace PluginAPI.Core
 		public static List<FacilityDoor> Doors => Rooms.SelectMany(x => x._doors.Values).ToList();
 
 		/// <summary>
-		/// Turns on all lights in facility.
+		/// Turns off all lights in facility.
 		/// </summary>
-		public static void TurnOnAllLights()
+		public void TurnOffAllLights(float duration = 0)
 		{
-			
+			foreach (FlickerableLightController flickerableLightController in FlickerableLightController.Instances)
+			{
+				if (duration > 0)
+				{
+					flickerableLightController.ServerFlickerLights(duration);
+				}
+				else
+				{
+					flickerableLightController.NetworkLightsEnabled = false;
+				}
+
+			}
 		}
 
 		/// <summary>
 		/// Turns off all lights in facility.
 		/// </summary>
-		public static void TurnOffAllLights()
+		public void TurnOnAllLights()
 		{
+			foreach (FlickerableLightController flickerableLightController in FlickerableLightController.Instances)
+			{
+				flickerableLightController.NetworkLightsEnabled = true;
+			}
 		}
 	}
 }

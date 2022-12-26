@@ -2,6 +2,7 @@ namespace PluginAPI.Core
 {
 	using GameCore;
 	using RoundRestarting;
+	using System;
 	using static ServerStatic;
 
 	public static class Round
@@ -28,6 +29,11 @@ namespace PluginAPI.Core
 			get => RoundStart.LobbyLock;
 			set => RoundStart.LobbyLock = value;
 		}
+
+		/// <summary>
+		/// Gets the duration of the current round.
+		/// </summary>
+		public static TimeSpan Duration => RoundStart.RoundLength;
 
 		/// <summary>
 		/// Restarts round.

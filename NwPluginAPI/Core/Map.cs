@@ -1,3 +1,6 @@
+using MapGeneration;
+using System.Collections.Generic;
+
 namespace PluginAPI.Core
 {
 	/// <summary>
@@ -9,5 +12,10 @@ namespace PluginAPI.Core
 		/// Gets the current seed of the map.
 		/// </summary>
 		public static int Seed => MapGeneration.SeedSynchronizer.Seed;
+
+		/// <summary>
+		/// Get the current rooms of the map.
+		/// </summary>
+		public static IReadOnlyCollection<RoomIdentifier> Rooms => RoomIdentifier.RoomsByCoordinates.Values;
 	}
 }

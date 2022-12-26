@@ -23,6 +23,8 @@ namespace PluginAPI.Core
 	using Mirror.LiteNetLib4Mirror;
 	using Footprinting;
 	using RemoteAdmin.Communication;
+	using MapGeneration;
+	using CommandSystem;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -446,14 +448,67 @@ namespace PluginAPI.Core
             player = plr;
             return true;
         }
-        #endregion
-        #endregion
+		#endregion
 
-        #region Public Parameters
-        /// <summary>
-        /// Gets the player's <see cref="global::ReferenceHub"/>.
-        /// </summary>
-        public ReferenceHub ReferenceHub { get; }
+		#region Get player from ICommandSender
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		public static Player Get(ICommandSender sender) => Get<Player>(sender);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		public static T Get<T>(ICommandSender sender) where T : IPlayer
+		{
+			TryGet(sender, out T player);
+			return player;
+		}
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(ICommandSender sender, out Player player) => TryGet<Player>(sender, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(ICommandSender sender, out T player) where T : IPlayer
+		{
+			if (string.IsNullOrEmpty((sender as CommandSender)?.SenderId))
+			{
+				player = default;
+				return false;
+			}
+
+			if (!PlayersUserIds.TryGetValue((sender as CommandSender)?.SenderId, out IGameComponent component))
+			{
+				player = default;
+				return false;
+			}
+
+			if (!TryGet(component, out T plr))
+			{
+				player = default;
+				return false;
+			}
+
+			player = plr;
+			return true;
+		}
+
+		#endregion
+
+		#endregion
+
+		#region Public Parameters
+		/// <summary>
+		/// Gets the player's <see cref="global::ReferenceHub"/>.
+		/// </summary>
+		public ReferenceHub ReferenceHub { get; }
 
 		/// <summary>
 		/// Gets the player's <see cref="UnityEngine.GameObject"/>.
@@ -578,6 +633,22 @@ namespace PluginAPI.Core
 					ReferenceHub.inventory.ServerSelectItem(value.ItemSerial);
 			}
 		}
+
+		/// <summary>
+		/// Get player current room.
+		/// </summary>
+		public RoomIdentifier Room => RoomIdUtils.RoomAtPosition(GameObject.transform.position);
+
+
+		/// <summary>
+		/// Get player current zone.
+		/// </summary>
+		public FacilityZone Zone => Room?.Zone ?? FacilityZone.None;
+
+		/// <summary>
+		/// Get player items.
+		/// </summary>
+		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
 
 		/// <summary>
 		/// Gets or sets whether or not the player is disarmed.
@@ -896,6 +967,12 @@ namespace PluginAPI.Core
 		public void AddAmmo(ItemType item, ushort amount) => ReferenceHub.inventory.ServerAddAmmo(item, amount);
 
 		/// <summary>
+		/// Adds an Item of specific item type.
+		/// </summary>
+		/// <param name="item">ItemType</param>
+		public void AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+
+		/// <summary>
 		/// Sets the ammo amount of a specific ammo type.
 		/// </summary>
 		/// <param name="item">The type of ammo</param>
@@ -922,6 +999,29 @@ namespace PluginAPI.Core
 		/// Drops all items including ammo.
 		/// </summary>
 		public void DropEverything() => ReferenceHub.inventory.ServerDropEverything();
+
+		/// <summary>
+		/// Clear player inventory.
+		/// </summary>
+		/// <param name="clearAmmo">Should clear player ammunition</param>
+		/// <param name="clearItems">Should clear the player items</param>
+		public void ClearInventory(bool clearAmmo = true, bool clearItems = true)
+		{
+			if (clearAmmo)
+			{
+				foreach(var ammo in ReferenceHub.inventory.UserInventory.ReserveAmmo.Keys)
+				{
+					ReferenceHub.inventory.ServerSetAmmo(ammo, 0);
+				}
+			}
+			if (clearItems)
+			{
+				foreach (var item in ReferenceHub.inventory.UserInventory.Items.Values)
+				{
+					ReferenceHub.inventory.ServerRemoveItem(item.ItemSerial, null);
+				}
+			}
+		}
 
 		/// <summary>
 		/// Heals the player.
