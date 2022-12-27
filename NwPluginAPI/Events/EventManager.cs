@@ -509,7 +509,7 @@ namespace PluginAPI.Events
 		{
 			if (!EventHandlers.TryGetValue(typeof(T), out object handler)) return;
 
-			RegisterEvents(plugin.GetType(), handler);
+			UnregisterEvents(plugin.GetType(), handler);
 		}
 
 		/// <summary>
