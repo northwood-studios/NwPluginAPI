@@ -23,15 +23,17 @@ namespace PluginAPI.Core
 	using Mirror.LiteNetLib4Mirror;
 	using Footprinting;
 	using RemoteAdmin.Communication;
+	using MapGeneration;
+	using CommandSystem;
 
 	/// <summary>
 	/// Represents a player connected to server.
 	/// </summary>
 	public class Player : IPlayer
-    {
-        #region Static Internal Variables
-        internal static Dictionary<int, IGameComponent> PlayersIds = new Dictionary<int, IGameComponent>();
-        public static Dictionary<string, IGameComponent> PlayersUserIds = new Dictionary<string, IGameComponent>();
+	{
+		#region Static Internal Variables
+		internal static Dictionary<int, IGameComponent> PlayersIds = new Dictionary<int, IGameComponent>();
+		public static Dictionary<string, IGameComponent> PlayersUserIds = new Dictionary<string, IGameComponent>();
 		#endregion
 
 		#region Static Parameters
@@ -68,11 +70,11 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static List<T> GetPlayers<T>() where T : IPlayer
 		{
-            if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
-                return (List<T>)Enumerable.Empty<T>();
+			if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
+				return (List<T>)Enumerable.Empty<T>();
 
-            if (!FactoryManager.PlayerFactories.TryGetValue(plugin, out PlayerFactory factory))
-                return (List<T>)Enumerable.Empty<T>();
+			if (!FactoryManager.PlayerFactories.TryGetValue(plugin, out PlayerFactory factory))
+				return (List<T>)Enumerable.Empty<T>();
 
 			foreach (var hub in ReferenceHub.AllHubs)
 			{
@@ -83,7 +85,7 @@ namespace PluginAPI.Core
 			return factory.Entities.Values
 				.Cast<T>()
 				.ToList();
-        }
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
@@ -94,22 +96,22 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
 		/// </summary>
 		public static bool TryGet<T>(IGameComponent component, out T player) where T : IPlayer
-        {
-            if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
-            {
-                player = default(T);
-                return false;
-            }
+		{
+			if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
+			{
+				player = default(T);
+				return false;
+			}
 
-            if (!FactoryManager.PlayerFactories.TryGetValue(plugin, out PlayerFactory factory))
-            {
-                player = default(T);
-                return false;
-            }
+			if (!FactoryManager.PlayerFactories.TryGetValue(plugin, out PlayerFactory factory))
+			{
+				player = default(T);
+				return false;
+			}
 
-            player = (T)factory.GetOrAdd(component);
-            return true;
-        }
+			player = (T)factory.GetOrAdd(component);
+			return true;
+		}
 
 		#region Get player from gameobject.
 
@@ -122,10 +124,10 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
 		/// </summary>
 		public static T Get<T>(GameObject gameObject) where T : IPlayer
-        {
+		{
 			TryGet(gameObject, out T player);
-            return player;
-        }
+			return player;
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
@@ -138,14 +140,14 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
 		public static bool TryGet<T>(GameObject gameObject, out T player) where T : IPlayer
-        {
+		{
 			if (gameObject == null)
 			{
 				player = default(T);
 				return false;
 			}
 
-            if (!ReferenceHub.TryGetHub(gameObject, out ReferenceHub hub))
+			if (!ReferenceHub.TryGetHub(gameObject, out ReferenceHub hub))
 			{
 				player = default(T);
 				return false;
@@ -153,13 +155,13 @@ namespace PluginAPI.Core
 
 			if (!TryGet(hub, out T plr))
 			{
-                player = default(T);
-                return false;
-            }
+				player = default(T);
+				return false;
+			}
 
 			player = plr;
 			return true;
-        }
+		}
 		#endregion
 
 		#region Get player from reference hub.
@@ -173,10 +175,10 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
 		/// </summary>
 		public static T Get<T>(ReferenceHub hub) where T : IPlayer
-        {
+		{
 			TryGet(hub, out T player);
-            return player;
-        }
+			return player;
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
@@ -189,22 +191,22 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
 		public static bool TryGet<T>(ReferenceHub hub, out T player) where T : IPlayer
-        {
-            if (hub == null)
-            {
-                player = default(T);
-                return false;
+		{
+			if (hub == null)
+			{
+				player = default(T);
+				return false;
 			}
 
-            if (!TryGet((IGameComponent)hub, out T plr))
+			if (!TryGet((IGameComponent)hub, out T plr))
 			{
 				player = default(T);
 				return false;
 			}
 
 			player = plr;
-            return true;
-        }
+			return true;
+		}
 		#endregion
 
 		#region Get player from network identity.
@@ -234,21 +236,21 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
 		public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : IPlayer
-        {
-            if (netIdentity == null)
-            {
-                player = default(T);
-                return false;
-            }
-
-            if (!TryGet(netIdentity.netId, out player))
+		{
+			if (netIdentity == null)
 			{
 				player = default(T);
 				return false;
 			}
 
-            return true;
-        }
+			if (!TryGet(netIdentity.netId, out player))
+			{
+				player = default(T);
+				return false;
+			}
+
+			return true;
+		}
 		#endregion
 
 		#region Get player from name.
@@ -262,10 +264,10 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their name.
 		/// </summary>
 		public static T GetByName<T>(string name) where T : IPlayer
-        {
+		{
 			TryGetByName(name, out T player);
 			return player;
-        }
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their name.
@@ -278,17 +280,17 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
 		public static bool TryGetByName<T>(string name, out T player) where T : IPlayer
-        {
-            if (string.IsNullOrEmpty(name))
-            {
-                player = default(T);
-                return false;
+		{
+			if (string.IsNullOrEmpty(name))
+			{
+				player = default(T);
+				return false;
 			}
 
-            var hub = ReferenceHub.AllHubs.Where(p =>
-                p.nicknameSync.MyNick == name ||
-                p.nicknameSync.MyNick.ToLower().Replace(" ", "") == name.ToLower().Replace(" ", ""))
-                .FirstOrDefault();
+			var hub = ReferenceHub.AllHubs.Where(p =>
+				p.nicknameSync.MyNick == name ||
+				p.nicknameSync.MyNick.ToLower().Replace(" ", "") == name.ToLower().Replace(" ", ""))
+				.FirstOrDefault();
 
 			if (hub == null)
 			{
@@ -303,8 +305,8 @@ namespace PluginAPI.Core
 			}
 
 			player = plr;
-            return true;
-        }
+			return true;
+		}
 		#endregion
 
 		#region Get player from player id.
@@ -318,10 +320,10 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their player id.
 		/// </summary>
 		public static T Get<T>(int playerId) where T : IPlayer
-        {
+		{
 			TryGet(playerId, out T player);
-            return player;
-        }
+			return player;
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their player id.
@@ -334,22 +336,22 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
 		public static bool TryGet<T>(int playerId, out T player) where T : IPlayer
-        {
-            if (!PlayersIds.TryGetValue(playerId, out IGameComponent component))
-            {
+		{
+			if (!PlayersIds.TryGetValue(playerId, out IGameComponent component))
+			{
 				player = default(T);
-                return false;
-            }
+				return false;
+			}
 
-            if (!TryGet(component, out T plr))
+			if (!TryGet(component, out T plr))
 			{
 				player = default(T);
 				return false;
 			}
 
 			player = plr;
-            return true;
-        }
+			return true;
+		}
 		#endregion
 
 		#region Get player from userid.
@@ -363,10 +365,10 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their user id.
 		/// </summary>
 		public static T Get<T>(string userId) where T : IPlayer
-        {
+		{
 			TryGet(userId, out T player);
-            return player;
-        }
+			return player;
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their user id.
@@ -379,28 +381,28 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
 		public static bool TryGet<T>(string userId, out T player) where T : IPlayer
-        {
-            if (string.IsNullOrEmpty(userId))
-            {
-                player = default(T);
-                return false;
-            }
+		{
+			if (string.IsNullOrEmpty(userId))
+			{
+				player = default(T);
+				return false;
+			}
 
-            if (!PlayersUserIds.TryGetValue(userId, out IGameComponent component))
-            {
-                player = default(T);
-                return false;
-            }
+			if (!PlayersUserIds.TryGetValue(userId, out IGameComponent component))
+			{
+				player = default(T);
+				return false;
+			}
 
 			if (!TryGet(component, out T plr))
 			{
 				player = default(T);
-                return false;
+				return false;
 			}
 
 			player = plr;
 			return true;
-        }
+		}
 		#endregion
 
 		#region Get player from network id.
@@ -414,10 +416,10 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their network id.
 		/// </summary>
 		public static T Get<T>(uint networkId) where T : IPlayer
-        {
+		{
 			TryGet(networkId, out T player);
-            return player;
-        }
+			return player;
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their network id.
@@ -430,30 +432,83 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
 		public static bool TryGet<T>(uint networkId, out T player) where T : IPlayer
-        {
-            if (!ReferenceHub.TryGetHubNetID(networkId, out ReferenceHub hub))
+		{
+			if (!ReferenceHub.TryGetHubNetID(networkId, out ReferenceHub hub))
 			{
 				player = default(T);
 				return false;
-            }
+			}
 
 			if (!TryGet(hub, out T plr))
 			{
-                player = default(T);
-                return false;
+				player = default(T);
+				return false;
 			}
 
-            player = plr;
-            return true;
-        }
-        #endregion
-        #endregion
+			player = plr;
+			return true;
+		}
+		#endregion
 
-        #region Public Parameters
-        /// <summary>
-        /// Gets the player's <see cref="global::ReferenceHub"/>.
-        /// </summary>
-        public ReferenceHub ReferenceHub { get; }
+		#region Get player from ICommandSender
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		public static Player Get(ICommandSender sender) => Get<Player>(sender);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		public static T Get<T>(ICommandSender sender) where T : IPlayer
+		{
+			TryGet(sender, out T player);
+			return player;
+		}
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet(ICommandSender sender, out Player player) => TryGet<Player>(sender, out player);
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
+		/// </summary>
+		/// <returns>Whether or not a player was found.</returns>
+		public static bool TryGet<T>(ICommandSender sender, out T player) where T : IPlayer
+		{
+			if (string.IsNullOrEmpty((sender as CommandSender)?.SenderId))
+			{
+				player = default;
+				return false;
+			}
+
+			if (!PlayersUserIds.TryGetValue((sender as CommandSender)?.SenderId, out IGameComponent component))
+			{
+				player = default;
+				return false;
+			}
+
+			if (!TryGet(component, out T plr))
+			{
+				player = default;
+				return false;
+			}
+
+			player = plr;
+			return true;
+		}
+
+		#endregion
+
+		#endregion
+
+		#region Public Parameters
+		/// <summary>
+		/// Gets the player's <see cref="global::ReferenceHub"/>.
+		/// </summary>
+		public ReferenceHub ReferenceHub { get; }
 
 		/// <summary>
 		/// Gets the player's <see cref="UnityEngine.GameObject"/>.
@@ -580,6 +635,22 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Get player current room.
+		/// </summary>
+		public RoomIdentifier Room => RoomIdUtils.RoomAtPosition(GameObject.transform.position);
+
+
+		/// <summary>
+		/// Get player current zone.
+		/// </summary>
+		public FacilityZone Zone => Room?.Zone ?? FacilityZone.None;
+
+		/// <summary>
+		/// Get player items.
+		/// </summary>
+		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
+
+		/// <summary>
 		/// Gets or sets whether or not the player is disarmed.
 		/// </summary>
 		public bool IsDisarmed
@@ -652,15 +723,15 @@ namespace PluginAPI.Core
 			set => ReferenceHub.playerStats.GetModule<AdminFlagsStat>().SetFlag(AdminFlags.Noclip, value);
 		}
 
-        /// <summary>
+		/// <summary>
 		/// Gets whether or not the player's inventory is full.
-        /// </summary>
-        public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
+		/// </summary>
+		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
 
-        /// <summary>
-        /// Gets whether or not the player is human.
-        /// </summary>
-        public bool IsHuman => ReferenceHub.IsHuman();
+		/// <summary>
+		/// Gets whether or not the player is human.
+		/// </summary>
+		public bool IsHuman => ReferenceHub.IsHuman();
 
 		/// <summary>
 		/// Gets whether or not the player is alive
@@ -775,9 +846,9 @@ namespace PluginAPI.Core
 
 			try
 			{
-                OnStart();
-            }
-            catch (Exception ex)
+				OnStart();
+			}
+			catch (Exception ex)
 			{
 				Log.Error($"Failed executing OnStart in {GetType().Name}, error\n {ex}");
 			}
@@ -905,6 +976,12 @@ namespace PluginAPI.Core
 		public void AddAmmo(ItemType item, ushort amount) => ReferenceHub.inventory.ServerAddAmmo(item, amount);
 
 		/// <summary>
+		/// Adds an Item of specific item type.
+		/// </summary>
+		/// <param name="item">ItemType</param>
+		public void AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+
+		/// <summary>
 		/// Sets the ammo amount of a specific ammo type.
 		/// </summary>
 		/// <param name="item">The type of ammo</param>
@@ -931,6 +1008,29 @@ namespace PluginAPI.Core
 		/// Drops all items including ammo.
 		/// </summary>
 		public void DropEverything() => ReferenceHub.inventory.ServerDropEverything();
+
+		/// <summary>
+		/// Clear player inventory.
+		/// </summary>
+		/// <param name="clearAmmo">Should clear player ammunition</param>
+		/// <param name="clearItems">Should clear the player items</param>
+		public void ClearInventory(bool clearAmmo = true, bool clearItems = true)
+		{
+			if (clearAmmo)
+			{
+				foreach (var ammo in ReferenceHub.inventory.UserInventory.ReserveAmmo.Keys)
+				{
+					ReferenceHub.inventory.ServerSetAmmo(ammo, 0);
+				}
+			}
+			if (clearItems)
+			{
+				foreach (var item in ReferenceHub.inventory.UserInventory.Items.Values)
+				{
+					ReferenceHub.inventory.ServerRemoveItem(item.ItemSerial, null);
+				}
+			}
+		}
 
 		/// <summary>
 		/// Heals the player.
@@ -1033,17 +1133,17 @@ namespace PluginAPI.Core
 		/// <inheritdoc/>
 		public virtual void OnStart() { }
 
-        /// <inheritdoc/>
-        public virtual void OnDestroy() { }
+		/// <inheritdoc/>
+		public virtual void OnDestroy() { }
 
-        /// <inheritdoc/>
-        public virtual void OnUpdate() { }
+		/// <inheritdoc/>
+		public virtual void OnUpdate() { }
 
-        /// <inheritdoc/>
-        public virtual void OnLateUpdate() { }
+		/// <inheritdoc/>
+		public virtual void OnLateUpdate() { }
 
-        /// <inheritdoc/>
-        public virtual void OnFixedUpdate() { }
+		/// <inheritdoc/>
+		public virtual void OnFixedUpdate() { }
 
 		#region GetComponents
 		/// <inheritdoc/>
