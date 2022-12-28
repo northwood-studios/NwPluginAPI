@@ -30,6 +30,8 @@ namespace PluginAPI.Events
 	using PlayerRoles.PlayableScps.Scp939;
 	using CommandSystem;
 	using LiteNetLib;
+	using Scp914;
+	using Interactables.Interobjects;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -59,13 +61,22 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(int), "id")) },
 			{ ServerEventType.MapGenerated, new Event() },
 			{ ServerEventType.GrenadeExploded, new Event(
+				new EventParameter(typeof(IPlayer), "owner"),
+				new EventParameter(typeof(Vector3), "position"),
 				new EventParameter(typeof(ItemPickupBase), "grenade")) },
 			{ ServerEventType.ItemSpawned, new Event(
-				new EventParameter(typeof(ItemType), "item")) },
+				new EventParameter(typeof(ItemType), "item"),
+				new EventParameter(typeof(Vector3), "position")) },
 			{ ServerEventType.GeneratorActivated, new Event(
 				new EventParameter(typeof(Scp079Generator), "generator")) },
-			{ ServerEventType.PlaceBlood, new Event() },
-			{ ServerEventType.PlaceBulletHole, new Event() },
+			{ ServerEventType.PlaceBlood, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Vector3), "position"),
+				new EventParameter(typeof(Quaternion), "rotation"))},
+			{ ServerEventType.PlaceBulletHole, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Vector3), "position"),
+				new EventParameter(typeof(Quaternion), "rotation"))},
 			{ ServerEventType.PlayerActivateGenerator, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Scp079Generator), "generator")) },
@@ -133,16 +144,18 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(IPlayer), "target"),
 				new EventParameter(typeof(DamageHandlerBase), "damageHandler")) },
 			{ ServerEventType.PlayerInteractElevator, new Event(
-				new EventParameter(typeof(IPlayer), "player")) },
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(ElevatorChamber), "elevator")) },
 			{ ServerEventType.PlayerInteractLocker, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Locker), "locker"),
-				new EventParameter(typeof(byte), "colliderId"),
+				new EventParameter(typeof(LockerChamber), "chamber"),
 				new EventParameter(typeof(bool), "canOpen")) },
 			{ ServerEventType.PlayerInteractScp330, new Event(
 				new EventParameter(typeof(IPlayer), "player")) },
 			{ ServerEventType.PlayerInteractShootingTarget, new Event(
-				new EventParameter(typeof(IPlayer), "player")) },
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(ShootingTarget), "shootingTarget")) },
 			{ ServerEventType.PlayerKicked, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IPlayer), "issuer"),
@@ -173,6 +186,7 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerReceiveEffect, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(StatusEffectBase), "effect"),
+				new EventParameter(typeof(byte), "intensity"),
 				new EventParameter(typeof(float), "duration")) },
 			{ ServerEventType.PlayerReloadWeapon, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
@@ -200,7 +214,8 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(DamageHandlerBase), "damageHandler")) },
 			{ ServerEventType.PlayerThrowItem, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
-				new EventParameter(typeof(ItemBase), "item")) },
+				new EventParameter(typeof(ItemBase), "item"),
+				new EventParameter(typeof(ThrowableItem.ProjectileSettings), "projectileSettings"))},
 			{ ServerEventType.PlayerToggleFlashlight, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(ItemBase), "item"),
@@ -275,19 +290,22 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerThrowProjectile, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(ThrowableItem), "item"),
-				new EventParameter(typeof(float), "forceAmount"),
-				new EventParameter(typeof(float), "upwardsFactor"),
-				new EventParameter(typeof(Vector3), "torque"),
-				new EventParameter(typeof(Vector3), "velocity")) },
+				new EventParameter(typeof(ThrowableItem.ProjectileSettings), "projectileSettings")) },
 			{ ServerEventType.Scp914Activate, new Event(
-				new EventParameter(typeof(IPlayer), "player")) },
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))},
 			{ ServerEventType.Scp914KnobChange, new Event(
-				new EventParameter(typeof(IPlayer), "player")) },
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Scp914KnobSetting), "knobSetting"),
+				new EventParameter(typeof(Scp914KnobSetting), "previousKnobSetting"))},
 			{ ServerEventType.Scp914UpgradeInventory, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
-				new EventParameter(typeof(ItemBase), "item")) },
+				new EventParameter(typeof(ItemBase), "item"),
+				new EventParameter(typeof(ItemBase), "newItem")) },
 			{ ServerEventType.Scp914UpgradePickup, new Event(
-				new EventParameter(typeof(ItemPickupBase), "item")) },
+				new EventParameter(typeof(ItemPickupBase), "item"),
+				new EventParameter(typeof(Vector3), "outputPosition"),
+				new EventParameter(typeof(ItemPickupBase), "newItem")) },
 			{ ServerEventType.Scp106TeleportPlayer, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(IPlayer), "target")) },
@@ -385,6 +403,9 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerCoinFlip, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(bool), "isTails")) },
+			{ ServerEventType.PlayerInteractGenerator, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(Scp079Generator), "generator"))},
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
@@ -509,7 +530,7 @@ namespace PluginAPI.Events
 		{
 			if (!EventHandlers.TryGetValue(typeof(T), out object handler)) return;
 
-			UnregisterEvents(plugin.GetType(), handler);
+			RegisterEvents(plugin.GetType(), handler);
 		}
 
 		/// <summary>
