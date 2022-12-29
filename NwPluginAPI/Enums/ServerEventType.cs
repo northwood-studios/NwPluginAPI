@@ -83,7 +83,7 @@ namespace PluginAPI.Enums
         /// Executed when grenade explodes.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="Footprint"/> player, <see cref="Vector3"/> position, <see cref="ItemPickupBase"/> pickup.
+        /// Parameters: <see cref="Footprint"/> thrower, <see cref="Vector3"/> position, <see cref="ItemPickupBase"/> pickup.
         /// </remarks>
         GrenadeExploded = 6,
 
@@ -108,15 +108,17 @@ namespace PluginAPI.Enums
         /// Executed when blood is placed.
         /// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="Vector3"/> position.
+		/// Parameters: <see cref="IPlayer"/> bleeder, <see cref="IPlayer"/> target, <see cref="Vector3"/> position.
 		/// </remarks>
+		/// <param name="bleeder">who placing the blood.</param>
+        /// <param name="position">blood placing position.</param>
         PlaceBlood = 9,
 
 		/// <summary>
 		/// Executed when bullet hole is placed.
 		/// </summary>
 	    /// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="Vector3"/> position.
+		/// Parameters: <see cref="IPlayer"/> shooter, <see cref="Vector3"/> position, <see cref="Quaternion"/> rotation
 		/// </remarks>
 		PlaceBulletHole = 10,
 
@@ -425,7 +427,7 @@ namespace PluginAPI.Enums
 		/// Executed when player throws item.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item, <see cref="Rigidbody"/> rigid
 		/// </remarks>
 		PlayerThrowItem = 48,
 
@@ -638,7 +640,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to throw projectile like grenades.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ThrowableItem"/> item, <see cref="ThrowableItem.ProjectileSettings"/> projectileSettings, <see cref="bool"/> fullForce.
+		/// Parameters: <see cref="IPlayer"/> thrower, <see cref="ThrowableItem"/> item, <see cref="ThrowableItem.ProjectileSettings"/> projectileSettings, <see cref="bool"/> fullForce.
 		/// </remarks>
 		PlayerThrowProjectile = 76,
 
@@ -924,5 +926,25 @@ namespace PluginAPI.Enums
 		/// Cancellable with <see cref="RoundEndConditionsCheckCancellationData"/>.
 		/// </remarks>
 		RoundEndConditionsCheck = 111,
+
+		/// <summary>
+		/// Executed after a pickup is upgraded by the SCP-914.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition
+		/// </remarks>
+		/// <param name="item">The upgraded item</param>
+		/// <param name="newPosition">The position where the item will be moved to</param>
+		Scp914PickupUpgraded = 112,
+
+		/// <summary>
+		/// Executed after SCP-914 upgrades items in a player inventory.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item
+		/// </remarks>
+		/// <param name="player">The player whose inventory items have been upgraded</param>
+		/// <param name="item">The upgraded item</param>
+		Scp914InventoryItemUpgraded = 113
 	}
 }
