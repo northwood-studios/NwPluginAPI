@@ -320,15 +320,27 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractGenerator)]
-		public void OnPlayerInteractGenerator(MyPlayer player, Scp079Generator generator, byte colliderId)
+		public void OnPlayerInteractGenerator(MyPlayer player, Scp079Generator generator, Scp079Generator.GeneratorColliderId colliderId)
 		{
 			Log.Info($"&rPlayer &6{player.Nickname}&r (&6{player.UserId}&r) interact with a generator in the position &2{generator.transform.position}&r");
 		}
 
 		[PluginEvent(ServerEventType.RoundEndConditionsCheck)]
-		public void OnRoundEndConditionsCheck()
+		public void OnRoundEndConditionsCheck(bool baseGameConditionsSatisfied)
 		{
-			Log.Info($"&rRound end conditions are being checked.");
+			Log.Info("&rRound end conditions are being checked.");
+		}
+
+		[PluginEvent(ServerEventType.Scp914PickupUpgraded)]
+		public void OnScp914PickupUpgraded(ItemPickupBase item, Vector3 newPosition)
+		{
+			Log.Info($"&rItem pickup with ItemID {item.Info.ItemId} has been upgraded in SCP 914.");
+		}
+
+		[PluginEvent(ServerEventType.Scp914InventoryItemUpgraded)]
+		public void OnScp914InventoryItemUpgraded(MyPlayer player, ItemBase item)
+		{
+			Log.Info($"&rItem in inventory of player &6{player.Nickname}&r (&6{player.UserId}&r) with ItemID {item.ItemTypeId} has been upgraded in SCP 914.");
 		}
 	}
 }

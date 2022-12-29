@@ -41,7 +41,7 @@ public static class EventManager
 			new EventParameter("System.Int32", false, "id")) },
 		{ 5, new Event() },
 		{ 6, new Event(
-			new EventParameter("Footprinting.Footprint", false, "owner"),
+			new EventParameter("Footprinting.Footprint", false, "thrower"),
 			new EventParameter("UnityEngine.Vector3", false, "position"),
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "grenade")) },
 		{ 7, new Event(
@@ -53,7 +53,6 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("UnityEngine.Vector3", false, "position")) },
 		{ 10, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("UnityEngine.Vector3", false, "position")) },
 		{ 11, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
@@ -192,7 +191,8 @@ public static class EventManager
 			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler")) },
 		{ 48, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
+			new EventParameter("UnityEngine.Rigidbody", false, "rigidbody")) },
 		{ 49, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
@@ -266,7 +266,7 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("System.Boolean", false, "isSuccessful")) },
 		{ 76, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "thrower"),
 			new EventParameter("InventorySystem.Items.ThrowableProjectiles.ThrowableItem", false, "item"),
 			new EventParameter("InventorySystem.Items.ThrowableProjectiles.ThrowableItem+ProjectileSettings", false, "projectileSettings"),
 			new EventParameter("System.Boolean", false, "fullForce")) },
@@ -384,7 +384,14 @@ public static class EventManager
 		{ 110, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("MapGeneration.Distributors.Scp079Generator", false, "generator"),
-			new EventParameter("System.Byte", false, "colliderId")) },
-		{ 111, new Event() },
+			new EventParameter("MapGeneration.Distributors.Scp079Generator+GeneratorColliderId", false, "generatorColliderId")) },
+		{ 111, new Event(
+			new EventParameter("System.Boolean", false, "baseGameConditionsSatisfied")) },
+		{ 112, new Event(
+			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "item"),
+			new EventParameter("UnityEngine.Vector3", false, "newPosition")) },
+		{ 113, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
 	};
 }

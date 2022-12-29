@@ -83,7 +83,7 @@ namespace PluginAPI.Enums
         /// Executed when grenade explodes.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="Footprint"/> player, <see cref="Vector3"/> position, <see cref="ItemPickupBase"/> pickup.
+        /// Parameters: <see cref="Footprint"/> thrower, <see cref="Vector3"/> position, <see cref="ItemPickupBase"/> pickup.
         /// </remarks>
         GrenadeExploded = 6,
 
@@ -116,7 +116,7 @@ namespace PluginAPI.Enums
 		/// Executed when bullet hole is placed.
 		/// </summary>
 	    /// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="Vector3"/> position.
+		/// Parameters: <see cref="Vector3"/> position.
 		/// </remarks>
 		PlaceBulletHole = 10,
 
@@ -425,7 +425,7 @@ namespace PluginAPI.Enums
 		/// Executed when player throws item.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item, <see cref="Rigidbody"/> rigidbody.
 		/// </remarks>
 		PlayerThrowItem = 48,
 
@@ -638,7 +638,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to throw projectile like grenades.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ThrowableItem"/> item, <see cref="ThrowableItem.ProjectileSettings"/> projectileSettings, <see cref="bool"/> fullForce.
+		/// Parameters: <see cref="IPlayer"/> thrower, <see cref="ThrowableItem"/> item, <see cref="ThrowableItem.ProjectileSettings"/> projectileSettings, <see cref="bool"/> fullForce.
 		/// </remarks>
 		PlayerThrowProjectile = 76,
 
@@ -913,7 +913,7 @@ namespace PluginAPI.Enums
 		/// Executed when player interacts with a generator.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Generator"/> generator, <see cref="byte"/> colliderId.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Generator"/> generator, <see cref="Scp079Generator.GeneratorColliderId"/> generatorColliderId.
 		/// </remarks>
 		PlayerInteractGenerator = 110,
 
@@ -921,8 +921,27 @@ namespace PluginAPI.Enums
 		/// Executed when round end conditions are checked.
 		/// </summary>
 		/// <remarks>
+		/// Parameters: <see cref="bool"/> baseGameConditionsSatisfied
 		/// Cancellable with <see cref="RoundEndConditionsCheckCancellationData"/>.
 		/// </remarks>
 		RoundEndConditionsCheck = 111,
+
+		/// <summary>
+		/// Executed after a pickup is upgraded by the SCP-914.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition.
+		/// Event is NOT cancellable.
+		/// </remarks>
+		Scp914PickupUpgraded = 112,
+
+		/// <summary>
+		/// Executed after SCP-914 upgrades items in a player inventory.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// Event is NOT cancellable.
+		/// </remarks>
+		Scp914InventoryItemUpgraded = 113,
 	}
 }

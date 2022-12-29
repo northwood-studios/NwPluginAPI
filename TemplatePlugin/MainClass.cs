@@ -128,7 +128,7 @@ namespace TemplatePlugin
         [PluginEvent(ServerEventType.GeneratorActivated)]
         void OnGeneratorActivated(Scp079Generator gen)
         {
-            Log.Info($"Generator activated");
+            Log.Info("Generator activated");
         }
 
         [PluginEvent(ServerEventType.PlaceBlood)]
@@ -138,9 +138,9 @@ namespace TemplatePlugin
         }
 
         [PluginEvent(ServerEventType.PlaceBulletHole)]
-        void OnPlaceBulletHole(MyPlayer player, Vector3 position)
+        void OnPlaceBulletHole( Vector3 position)
         {
-            Log.Info($"Player &6{player.Nickname}&r placed bullet hole on map position &6{position}&r");
+            Log.Info($"Bullet hole has been placed on map. Position &6{position}&r.");
         }
 
         [PluginEvent(ServerEventType.PlayerActivateGenerator)]
@@ -350,7 +350,7 @@ namespace TemplatePlugin
         }
 
         [PluginEvent(ServerEventType.PlayerThrowItem)]
-        void OnThrowItem(MyPlayer plr, ItemBase item)
+        void OnThrowItem(MyPlayer plr, ItemBase item, Rigidbody rb)
         {
             Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) thrown item &6{item.ItemTypeId}&r");
         }

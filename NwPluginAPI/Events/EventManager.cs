@@ -63,7 +63,7 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(int), "id")) },
 			{ ServerEventType.MapGenerated, new Event() },
 			{ ServerEventType.GrenadeExploded, new Event(
-				new EventParameter(typeof(Footprint), "owner"),
+				new EventParameter(typeof(Footprint), "thrower"),
 				new EventParameter(typeof(Vector3), "position"),
 				new EventParameter(typeof(ItemPickupBase), "grenade")) },
 			{ ServerEventType.ItemSpawned, new Event(
@@ -75,7 +75,6 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Vector3), "position")) },
 			{ ServerEventType.PlaceBulletHole, new Event(
-				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Vector3), "position")) },
 			{ ServerEventType.PlayerActivateGenerator, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
@@ -214,7 +213,8 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(DamageHandlerBase), "damageHandler")) },
 			{ ServerEventType.PlayerThrowItem, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
-				new EventParameter(typeof(ItemBase), "item")) },
+				new EventParameter(typeof(ItemBase), "item"),
+				new EventParameter(typeof(Rigidbody), "rigidbody")) },
 			{ ServerEventType.PlayerToggleFlashlight, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(ItemBase), "item"),
@@ -288,7 +288,7 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(bool), "isSuccessful")) },
 			{ ServerEventType.PlayerThrowProjectile, new Event(
-				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(IPlayer), "thrower"),
 				new EventParameter(typeof(ThrowableItem), "item"),
 				new EventParameter(typeof(ThrowableItem.ProjectileSettings), "projectileSettings"),
 				new EventParameter(typeof(bool), "fullForce")) },
@@ -406,8 +406,15 @@ namespace PluginAPI.Events
 			{ ServerEventType.PlayerInteractGenerator, new Event(
 				new EventParameter(typeof(IPlayer), "player"),
 				new EventParameter(typeof(Scp079Generator), "generator"),
-				new EventParameter(typeof(byte), "colliderId")) },
-			{ ServerEventType.RoundEndConditionsCheck, new Event() },
+				new EventParameter(typeof(Scp079Generator.GeneratorColliderId), "generatorColliderId")) },
+			{ ServerEventType.RoundEndConditionsCheck, new Event(
+				new EventParameter(typeof(bool), "baseGameConditionsSatisfied")) },
+			{ ServerEventType.Scp914PickupUpgraded, new Event(
+				new EventParameter(typeof(ItemPickupBase), "item"),
+				new EventParameter(typeof(Vector3), "newPosition"))},
+			{ ServerEventType.Scp914InventoryItemUpgraded, new Event(
+				new EventParameter(typeof(IPlayer), "player"),
+				new EventParameter(typeof(ItemBase), "item"))},
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
