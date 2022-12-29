@@ -110,8 +110,6 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> bleeder, <see cref="Vector3"/> position.
 		/// </remarks>
-		/// <param name="bleeder">who placing the blood.</param>
-        /// <param name="position">blood placing position.</param>
         PlaceBlood = 9,
 
 		/// <summary>
@@ -933,8 +931,6 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition
 		/// </remarks>
-		/// <param name="item">The upgraded item</param>
-		/// <param name="newPosition">The position where the item will be moved to</param>
 		Scp914PickupUpgraded = 112,
 
 		/// <summary>
@@ -943,8 +939,6 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item
 		/// </remarks>
-		/// <param name="player">The player whose inventory items have been upgraded</param>
-		/// <param name="item">The upgraded item</param>
 		Scp914InventoryItemUpgraded = 113
 	}
 }
