@@ -36,6 +36,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerJoined = 0,
 
@@ -44,6 +45,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerLeft = 1,
 
@@ -65,12 +67,16 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="int"/> announcement type.
+        /// Event is NOT cancellable.
         /// </remarks>
         LczDecontaminationAnnouncement = 4,
 
         /// <summary>
         /// Executed when map generates.
         /// </summary>
+        /// <remarks>
+        /// Event is NOT cancellable.
+        /// </remarks>
         MapGenerated = 5,
 
         /// <summary>
@@ -94,6 +100,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="Generator"/> generator.
+        /// Event is NOT cancellable.
         /// </remarks>
         GeneratorActivated = 8,
 
@@ -150,6 +157,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ushort"/> oldItem, <see cref="ushort"/> newItem.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerChangeItem = 15,
 
@@ -166,6 +174,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> oldTarget, <see cref="IPlayer"/> newTarget.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerChangeSpectator = 17,
 
@@ -367,6 +376,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerRoleBase"/> oldRole, <see cref="RoleTypeId"/> newRole, <see cref="RoleChangeReason"/> reason.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerChangeRole = 42,
 
@@ -399,6 +409,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="RoleTypeId"/> role.
+        /// Event MIGHT NOT BE cancellable (depends on the situation).
         /// </remarks>
         PlayerSpawn = 46,
 
@@ -494,6 +505,9 @@ namespace PluginAPI.Enums
         /// <summary>
         /// Executed when round restarts.
         /// </summary>
+        /// <remarks>
+        /// Event is NOT cancellable.
+        /// </remarks>
         RoundRestart = 58,
 
 		/// <summary>
@@ -504,6 +518,9 @@ namespace PluginAPI.Enums
 		/// <summary>
 		/// Executed when server waits for players.
 		/// </summary>
+		/// <remarks>
+		/// Event is NOT cancellable.
+		/// </remarks>
 		WaitingForPlayers = 60,
 
 		/// <summary>
@@ -830,6 +847,7 @@ namespace PluginAPI.Enums
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanHandler.BanType"/> banType.
+		/// Event is NOT cancellable if the ban is being updated (BanUpdated event is called first and it's cancellable).
 		/// </remarks>
 		BanIssued = 102,
 
@@ -838,6 +856,7 @@ namespace PluginAPI.Enums
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="string"/> userId, <see cref="BanHandler.BanType"/> banType.
+		/// Event is NOT cancellable if the ban is being updated (BanUpdated event is called first and it's cancellable).
 		/// </remarks>
 		BanRevoked = 103,
 
