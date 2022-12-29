@@ -262,7 +262,7 @@ namespace PluginAPI.Enums
         /// Executed when player damages someone.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="DamageHandlerBase"/> damageHandler.
+        /// Parameters: <see cref="IPlayer"/> target, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
         /// </remarks>
         PlayerDamage = 28,
 
