@@ -1,4 +1,5 @@
-﻿using Interactables.Interobjects;
+﻿using Footprinting;
+using Interactables.Interobjects;
 using InventorySystem.Items.ThrowableProjectiles;
 using UnityEngine;
 
@@ -113,7 +114,7 @@ namespace TemplatePlugin
         }
 
         [PluginEvent(ServerEventType.GrenadeExploded)]
-        void OnGrenadeExploded(MyPlayer owner, Vector3 position, ItemPickupBase item)
+        void OnGrenadeExploded(Footprint owner, Vector3 position, ItemPickupBase item)
         {
             Log.Info($"Grenade &6{item.NetworkInfo.ItemId}&r thrown by &6{item.PreviousOwner.Nickname}&r exploded at &6{item.NetworkInfo.RelativePosition.ToString()}&r");
         }
@@ -131,15 +132,15 @@ namespace TemplatePlugin
         }
 
         [PluginEvent(ServerEventType.PlaceBlood)]
-        void OnPlaceBlood(MyPlayer player, Vector3 position, Quaternion rotation)
+        void OnPlaceBlood(MyPlayer player, Vector3 position)
         {
-            Log.Info($"Player &6{player.Nickname}&r blood placed on map position &6{position}&r and its rotation is &6{rotation}&r");
+            Log.Info($"Player &6{player.Nickname}&r blood placed on map position &6{position}&r");
         }
 
         [PluginEvent(ServerEventType.PlaceBulletHole)]
-        void OnPlaceBulletHole(MyPlayer player, Vector3 position, Quaternion rotation)
+        void OnPlaceBulletHole(MyPlayer player, Vector3 position)
         {
-            Log.Info($"Player &6{player.Nickname}&r placed bullet hole on map position &6{position}&r and its rotation is &6{rotation}&r");
+            Log.Info($"Player &6{player.Nickname}&r placed bullet hole on map position &6{position}&r");
         }
 
         [PluginEvent(ServerEventType.PlayerActivateGenerator)]
@@ -349,9 +350,9 @@ namespace TemplatePlugin
         }
 
         [PluginEvent(ServerEventType.PlayerThrowItem)]
-        void OnThrowItem(MyPlayer plr, ItemBase item, ThrowableItem.ProjectileSettings projectileSettings)
+        void OnThrowItem(MyPlayer plr, ItemBase item)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) thrown item &6{item.ItemTypeId}&r with an input speed of &6{projectileSettings.StartVelocity}&r");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) thrown item &6{item.ItemTypeId}&r");
         }
 
         [PluginEvent(ServerEventType.PlayerToggleFlashlight)]

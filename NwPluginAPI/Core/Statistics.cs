@@ -39,7 +39,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Statistics related to current round.
 		/// </summary>
-		public static Round CurrentRound = new Round();
+		public static Round CurrentRound = new();
 
 		/// <summary>
 		/// Represents a fastest round.
@@ -134,6 +134,11 @@ namespace PluginAPI.Core
 			/// </summary>
 			public int ZombiesChanged => ChangedIntoZombies;
 			public int WarheadKills { get; set; }
+
+			/// <summary>
+			/// Provides information about Alpha Warhead detonation status.
+			/// </summary>
+			public bool WarheadDetonated { get; set; }
 		}
 	}
 }

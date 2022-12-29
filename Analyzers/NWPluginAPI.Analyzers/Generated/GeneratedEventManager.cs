@@ -41,7 +41,7 @@ public static class EventManager
 			new EventParameter("System.Int32", false, "id")) },
 		{ 5, new Event() },
 		{ 6, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "owner"),
+			new EventParameter("Footprinting.Footprint", false, "owner"),
 			new EventParameter("UnityEngine.Vector3", false, "position"),
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "grenade")) },
 		{ 7, new Event(
@@ -51,12 +51,10 @@ public static class EventManager
 			new EventParameter("MapGeneration.Distributors.Scp079Generator", false, "generator")) },
 		{ 9, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("UnityEngine.Vector3", false, "position"),
-			new EventParameter("UnityEngine.Quaternion", false, "rotation")) },
+			new EventParameter("UnityEngine.Vector3", false, "position")) },
 		{ 10, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("UnityEngine.Vector3", false, "position"),
-			new EventParameter("UnityEngine.Quaternion", false, "rotation")) },
+			new EventParameter("UnityEngine.Vector3", false, "position")) },
 		{ 11, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("MapGeneration.Distributors.Scp079Generator", false, "generator")) },
@@ -120,8 +118,8 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target")) },
 		{ 28, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "attacker"),
 			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler")) },
 		{ 29, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
@@ -194,8 +192,7 @@ public static class EventManager
 			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler")) },
 		{ 48, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
-			new EventParameter("InventorySystem.Items.ThrowableProjectiles.ThrowableItem+ProjectileSettings", false, "projectileSettings")) },
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
 		{ 49, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
@@ -230,7 +227,8 @@ public static class EventManager
 		{ 60, new Event() },
 		{ 61, new Event(
 			new EventParameter("System.Boolean", false, "isAutomatic"),
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.Boolean", false, "isResumed")) },
 		{ 62, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
 		{ 63, new Event() },
@@ -270,7 +268,8 @@ public static class EventManager
 		{ 76, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("InventorySystem.Items.ThrowableProjectiles.ThrowableItem", false, "item"),
-			new EventParameter("InventorySystem.Items.ThrowableProjectiles.ThrowableItem+ProjectileSettings", false, "projectileSettings")) },
+			new EventParameter("InventorySystem.Items.ThrowableProjectiles.ThrowableItem+ProjectileSettings", false, "projectileSettings"),
+			new EventParameter("System.Boolean", false, "fullForce")) },
 		{ 77, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
@@ -280,12 +279,10 @@ public static class EventManager
 			new EventParameter("Scp914.Scp914KnobSetting", false, "previousKnobSetting")) },
 		{ 79, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "newItem")) },
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
 		{ 80, new Event(
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "item"),
-			new EventParameter("UnityEngine.Vector3", false, "outputPosition"),
-			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "newItem")) },
+			new EventParameter("UnityEngine.Vector3", false, "outputPosition")) },
 		{ 81, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target")) },
@@ -368,6 +365,7 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("System.String", false, "command"),
 			new EventParameter("System.String", true, "arguments"),
+			new EventParameter("System.Boolean", false, "result"),
 			new EventParameter("System.String", false, "response")) },
 		{ 106, new Event(
 			new EventParameter("CommandSystem.ICommandSender", false, "sender"),
@@ -385,6 +383,8 @@ public static class EventManager
 			new EventParameter("System.Boolean", false, "isTails")) },
 		{ 110, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("MapGeneration.Distributors.Scp079Generator", false, "generator")) },
+			new EventParameter("MapGeneration.Distributors.Scp079Generator", false, "generator"),
+			new EventParameter("System.Byte", false, "colliderId")) },
+		{ 111, new Event() },
 	};
 }
