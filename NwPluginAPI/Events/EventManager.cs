@@ -73,7 +73,6 @@ namespace PluginAPI.Events
 				new EventParameter(typeof(Scp079Generator), "generator")) },
 			{ ServerEventType.PlaceBlood, new Event(
 				new EventParameter(typeof(IPlayer), "bleeder"),
-				new EventParameter(typeof(IPlayer), "target"),
 				new EventParameter(typeof(Vector3), "position")) },
 			{ ServerEventType.PlaceBulletHole, new Event(
 				new EventParameter(typeof(IPlayer), "shooter"),

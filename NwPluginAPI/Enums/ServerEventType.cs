@@ -108,7 +108,7 @@ namespace PluginAPI.Enums
         /// Executed when blood is placed.
         /// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> bleeder, <see cref="IPlayer"/> target, <see cref="Vector3"/> position.
+		/// Parameters: <see cref="IPlayer"/> bleeder, <see cref="Vector3"/> position.
 		/// </remarks>
 		/// <param name="bleeder">who placing the blood.</param>
         /// <param name="position">blood placing position.</param>
