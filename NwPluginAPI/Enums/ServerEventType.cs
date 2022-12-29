@@ -20,6 +20,8 @@ namespace PluginAPI.Enums
 	using UnityEngine;
 	using MapGeneration;
 	using Interactables.Interobjects.DoorUtils;
+	using Interactables.Interobjects;
+	using Scp914;
 
 	/// <summary>
 	/// Represents server event types.
@@ -72,7 +74,7 @@ namespace PluginAPI.Enums
         /// Executed when grenade explodes.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="ItemPickupBase"/> pickup.
+        /// Parameters: <see cref="IPlayer"/> player, <see cref="Vector3"/> position, <see cref="ItemPickupBase"/> pickup.
         /// </remarks>
         GrenadeExploded = 6,
 
@@ -80,7 +82,7 @@ namespace PluginAPI.Enums
         /// Executed when item is spawned while generation of map.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="ItemType"/> item.
+        /// Parameters: <see cref="ItemType"/> item, <see cref="Vector3"/> position.
         /// </remarks>
         ItemSpawned = 7,
 
@@ -95,12 +97,18 @@ namespace PluginAPI.Enums
         /// <summary>
         /// Executed when blood is placed.
         /// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Vector3"/> position, <see cref="Quaternion"/> rotation.
+		/// </remarks>
         PlaceBlood = 9,
 
-        /// <summary>
-        /// Executed when bullet hole is placed.
-        /// </summary>
-        PlaceBulletHole = 10,
+		/// <summary>
+		/// Executed when bullet hole is placed.
+		/// </summary>
+	    /// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Vector3"/> position, <see cref="Quaternion"/> rotation.
+		/// </remarks>
+		PlaceBulletHole = 10,
 
         /// <summary>
         /// Executed when player activated generator.
@@ -246,21 +254,21 @@ namespace PluginAPI.Enums
         /// </remarks>
         PlayerDamage = 28,
 
-        /// <summary>
-        /// Executed when player interacts with elevator.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player.
-        /// </remarks>
-        PlayerInteractElevator = 29,
+		/// <summary>
+		/// Executed when player interacts with elevator.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ElevatorChamber"/> elevator
+		/// </remarks>
+		PlayerInteractElevator = 29,
 
-        /// <summary>
-        /// Executed when player interacts with locker.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="Locker"/> locker, <see cref="byte"/> colliderId, <see cref="bool"/> canAccess.
-        /// </remarks>
-        PlayerInteractLocker = 30,
+		/// <summary>
+		/// Executed when player interacts with locker.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Locker"/> locker, <see cref="LockerChamber"/> chamber, <see cref="bool"/> canAccess.
+		/// </remarks>
+		PlayerInteractLocker = 30,
 
         /// <summary>
         /// Executed when player interacts with SCP330.
@@ -270,13 +278,13 @@ namespace PluginAPI.Enums
         /// </remarks>
         PlayerInteractScp330 = 31,
 
-        /// <summary>
-        /// Executed when player interacts with shooting target.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player.
-        /// </remarks>
-        PlayerInteractShootingTarget = 32,
+		/// <summary>
+		/// Executed when player interacts with shooting target.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ShootingTarget"/> shootingTarget
+		/// </remarks>
+		PlayerInteractShootingTarget = 32,
 
         /// <summary>
         /// Executed when player gets kicked from server.
@@ -334,13 +342,13 @@ namespace PluginAPI.Enums
         /// </remarks>
         PlayerPreauth = 39,
 
-        /// <summary>
-        /// Executed when player receives effect.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerEffect"/> effect.
-        /// </remarks>
-        PlayerReceiveEffect = 40,
+		/// <summary>
+		/// Executed when player receives effect.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerEffect"/> effect, <see cref="byte"/> intensity, <see cref="float"/> duration.
+		/// </remarks>
+		PlayerReceiveEffect = 40,
 
         /// <summary>
         /// Executed when player reloads weapon.
@@ -398,13 +406,13 @@ namespace PluginAPI.Enums
         /// </remarks>
         RagdollSpawn = 47,
 
-        /// <summary>
-        /// Executed when player throws item.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
-        /// </remarks>
-        PlayerThrowItem = 48,
+		/// <summary>
+		/// Executed when player throws item.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item, <see cref="ThrowableItem.ProjectileSettings"/> projectileSettings.
+		/// </remarks>
+		PlayerThrowItem = 48,
 
         /// <summary>
         /// Executed when player toggles flashlight.
@@ -607,7 +615,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to throw projectile like grenades.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ThrowableItem"/> item, <see cref="float"/> forceAmount, <see cref="float"/> upwardsFactor, <see cref="Vector3"/> torque, <see cref="Vector3"/> velocity.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ThrowableItem"/> item, <see cref="ThrowableItem.ProjectileSettings"/> projectileSettings
 		/// </remarks>
 		PlayerThrowProjectile = 76,
 
@@ -615,7 +623,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to activate SCP 914.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// </remarks>
 		Scp914Activate = 77,
 
@@ -623,7 +631,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to change SCP 914 knob.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting, <see cref="Scp914KnobSetting"/> previousKnobSetting.
 		/// </remarks>
 		Scp914KnobChange = 78,
 
@@ -631,7 +639,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP 914 upgrades player inventory.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item, <see cref="ItemBase"/> newItem.
 		/// </remarks>
 		Scp914UpgradeInventory = 79,
 
@@ -639,7 +647,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP 914 upgrades pickup.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="ItemPickupBase"/> item.
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> outputPosition, <see cref="ItemPickupBase"/> newItem
 		/// </remarks>
 		Scp914UpgradePickup = 80,
 
@@ -874,5 +882,13 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isTails.
 		/// </remarks>
 		PlayerCoinFlip = 109,
+
+		/// <summary>
+		/// Executed when player interacts with a generator.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Generator"/> generator
+		/// </remarks>
+		PlayerInteractGenerator = 110,
 	}
 }
