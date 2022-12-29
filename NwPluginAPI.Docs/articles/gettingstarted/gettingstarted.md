@@ -3,6 +3,7 @@
 ### [IDE](gettingstarted-ide.md) (Beginner-friendly)
 * [Visual studio](gettingstarted-ide.md#visual-studio-walkthrough)
 * [Jetbrains rider](gettingstarted-ide.md#rider-walkthrough)
+
 ### [CLI](gettingstarted-cli.md) (For people who can't run an IDE)
 
 ## Writing the code

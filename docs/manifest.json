@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/gettingstarted/gettingstarted.html",
-          "hash": "LvRliLxpaYWtmZwJOmbX79c2Qeji2hCXxTZasVE0egc="
+          "hash": "jyTLuzdKstYPomDQIwKnQgFb2xKcgfqpc3CYvm4Yd2Y="
         }
       },
       "is_incremental": false,
@@ -159,7 +159,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 7,
-          "skipped_file_count": 6
+          "skipped_file_count": 7
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
