@@ -12,7 +12,7 @@
   "articles/gettingstarted/gettingstarted.html": {
     "href": "articles/gettingstarted/gettingstarted.html",
     "title": "Making your first plugin | Nw Plugin API",
-    "keywords": "Making your first plugin Environment setup: IDE (Beginner-friendly) Visual studio Jetbrains rider ### CLI (For people who can't run an IDE) Writing the code WARNING: Make sure you have read the plugin prerequisites before you continue TODO: Write the code"
+    "keywords": "Making your first plugin Environment setup: IDE (Beginner-friendly) Visual studio Jetbrains rider CLI (For people who can't run an IDE) Writing the code WARNING: Make sure you have read the plugin prerequisites before you continue TODO: Write the code"
   },
   "articles/gettingstarted/gettingstarted-cli.html": {
     "href": "articles/gettingstarted/gettingstarted-cli.html",
