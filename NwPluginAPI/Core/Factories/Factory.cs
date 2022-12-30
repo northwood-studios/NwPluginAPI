@@ -8,14 +8,14 @@ namespace PluginAPI.Core.Factories
 	/// </summary>
 	/// <typeparam name="T">The entity type.</typeparam>
 	public class Factory<T> : IEntityFactory<T> where T : IEntity
-    {    
-        internal readonly Dictionary<IGameComponent, T> Entities = new Dictionary<IGameComponent, T>();
+	{
+		internal readonly Dictionary<IGameComponent, T> Entities = new Dictionary<IGameComponent, T>();
 
 		/// <summary>
 		/// Gets all entities stored in factory.
 		/// </summary>
 		/// <returns>List of all entities.</returns>
-        public IEnumerable<T> Get() => Entities.Values;
+		public IEnumerable<T> Get() => Entities.Values;
 
 		/// <summary>
 		/// Default server entity.
@@ -27,17 +27,17 @@ namespace PluginAPI.Core.Factories
 		/// </summary>
 		/// <param name="component">The game component</param>
 		/// <returns>Entity.</returns>
-        public virtual T Create(IGameComponent component) => default(T);
+		public virtual T Create(IGameComponent component) => default(T);
 
 		/// <summary>
 		/// Gets entity from factory.
 		/// </summary>
 		/// <param name="component">The game component.</param>
 		/// <returns>Entity.</returns>
-        public T GetOrAdd(IGameComponent component)
-        {
-            if (Entities.TryGetValue(component, out T entity))
-                return entity;
+		public T GetOrAdd(IGameComponent component)
+		{
+			if (Entities.TryGetValue(component, out T entity))
+				return entity;
 
 			if (component is ReferenceHub hb && hb.isLocalPlayer)
 			{
@@ -46,10 +46,10 @@ namespace PluginAPI.Core.Factories
 				return DefaultServer;
 			}
 
-            var ent = Create(component);
-            Entities.Add(component, ent);
-            return ent;
-        }
+			var ent = Create(component);
+			Entities.Add(component, ent);
+			return ent;
+		}
 
 		/// <summary>
 		/// Adds missing entity if not exists.
@@ -65,5 +65,5 @@ namespace PluginAPI.Core.Factories
 			var ent = Create(component);
 			Entities.Add(component, ent);
 		}
-    }
+	}
 }

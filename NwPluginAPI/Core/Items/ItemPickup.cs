@@ -79,7 +79,7 @@ namespace PluginAPI.Core.Items
 		{
 			if (CachedItems.TryGetValue(item.Info.Serial, out ItemPickup it))
 				return it;
-			
+
 			var newItem = new ItemPickup(item);
 			CachedItems.Add(item.Info.Serial, newItem);
 			return newItem;

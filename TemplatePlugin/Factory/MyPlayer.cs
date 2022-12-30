@@ -9,15 +9,15 @@
 	using PluginAPI.Events;
 
 	public class MyPlayer : Player
-    {
-        public MyPlayer(IGameComponent component) : base(component)
-        {
+	{
+		public MyPlayer(IGameComponent component) : base(component)
+		{
 			EventManager.RegisterEvents(MainClass.Singleton, this);
-        }
+		}
 
 		public string TestParam { get; set; }
 
-        public string Test => "TestValue";
+		public string Test => "TestValue";
 
 		[PluginEvent(ServerEventType.RemoteAdminCommand)]
 		public void OnRaCommand(ICommandSender plr, string cmd, string[] args)

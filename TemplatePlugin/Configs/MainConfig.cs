@@ -6,6 +6,7 @@ namespace TemplatePlugin.Configs
 	{
 		public string StringValue { get; set; } = "Test";
 		public int IntValue { get; set; } = 100;
+
 		public Dictionary<string, string> DictionaryValue { get; set; } = new Dictionary<string, string>()
 		{
 			{ "Value1", "Param1" },

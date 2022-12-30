@@ -1,22 +1,24 @@
 namespace PluginAPI.Commands
 {
-    using System;
-    using System.Collections.Generic;
-    using CommandSystem;
-    using Loader;
+	using System;
+	using System.Collections.Generic;
+	using CommandSystem;
+	using Loader;
 
-    /// <summary>
-    /// Lists all plugins on the server.
-    /// </summary>
-    [CommandHandler(typeof(PluginsCommand))]
+	/// <summary>
+	/// Lists all plugins on the server.
+	/// </summary>
+	[CommandHandler(typeof(PluginsCommand))]
 	public class ListCommand : ICommand
 	{
 		/// <inheritdoc/>
 		public string Command { get; } = "list";
+
 		/// <inheritdoc/>
 		public string[] Aliases { get; } = null;
+
 		/// <inheritdoc/>
-        public string Description { get; } = "List of installed plugins.";
+		public string Description { get; } = "List of installed plugins.";
 
 		public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
 		{

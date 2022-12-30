@@ -4,7 +4,6 @@
 	using System.Collections.Generic;
 	using System.Linq;
 	using CommandSystem;
-
 	using PluginAPI.Core;
 	using RemoteAdmin;
 
@@ -60,7 +59,7 @@
 				if (!_registeredCommands.ContainsKey(commandType))
 				{
 					_registeredCommands.Add(commandType, new Dictionary<string, Command>());
-					Log.Info("Registered parent command for: "+commandType.Name);
+					Log.Info("Registered parent command for: " + commandType.Name);
 				}
 				if (!_commandHandlerToName.ContainsKey(commandType))
 				{

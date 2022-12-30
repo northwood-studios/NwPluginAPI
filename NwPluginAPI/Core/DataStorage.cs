@@ -29,7 +29,7 @@ namespace PluginAPI.Core
 		{
 			if (StoredData.TryGetValue(dataName, out object obj))
 			{
-				data = (T) obj;
+				data = (T)obj;
 				return true;
 			}
 
@@ -46,7 +46,7 @@ namespace PluginAPI.Core
 		public T Get<T>(string dataName) where T : class, IComparable
 		{
 			if (StoredData.TryGetValue(dataName, out object obj))
-				return (T) obj;
+				return (T)obj;
 
 			return default(T);
 		}

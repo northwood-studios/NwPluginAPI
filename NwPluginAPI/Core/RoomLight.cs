@@ -25,7 +25,7 @@ namespace PluginAPI.Core
 			{
 				return _lightController.LightsEnabled;
 			}
-			
+
 			set
 			{
 				_lightController.LightsEnabled = value;
@@ -41,7 +41,7 @@ namespace PluginAPI.Core
 			{
 				return DefaultColor;
 			}
-			
+
 			set
 			{
 				SaveDefaultColor();
@@ -71,7 +71,7 @@ namespace PluginAPI.Core
 			{
 				return _lightController.LightIntensityMultiplier;
 			}
-			
+
 			set
 			{
 				_lightController.LightIntensityMultiplier = value;

@@ -83,7 +83,8 @@ namespace PluginAPI.Core
 			set => CustomNetworkManager.reservedSlots = value;
 		}
 
-		#region Ban System
+#region Ban System
+
 		/// <summary>
 		/// Bans a player from the server.
 		/// </summary>
@@ -285,7 +286,8 @@ namespace PluginAPI.Core
 		/// <param name="banType">The type of ban.</param>
 		/// <returns>List of specified ban types.</returns>
 		public static BanDetails[] GetAllPlayersBanned(BanType banType) => GetBans(banType).ToArray();
-		#endregion
+
+#endregion
 
 		/// <summary>
 		/// Restarts the server and reconnects all players.

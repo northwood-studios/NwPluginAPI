@@ -17,14 +17,14 @@ namespace PluginAPI.Events
 			public Type Type;
 		}
 
-		private readonly List<Type> ParametersToRegenerate = new List<Type>()
+		private readonly List<Type> ParametersToRegenerate = new()
 		{
 			{ typeof(IPlayer) }
 		};
 
-		private readonly List<IndexInfo> IndexesToRegenerate = new List<IndexInfo>();
+		private readonly List<IndexInfo> IndexesToRegenerate = new();
 
-		public readonly Dictionary<Type, List<EventInvokeLocation>> Invokers = new Dictionary<Type, List<EventInvokeLocation>>();
+		public readonly Dictionary<Type, List<EventInvokeLocation>> Invokers = new();
 
 		public readonly EventParameter[] Parameters;
 

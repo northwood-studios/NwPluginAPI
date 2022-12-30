@@ -76,7 +76,7 @@ namespace PluginAPI.Core.Items
 		{
 			if (CachedItems.TryGetValue(item.ItemSerial, out Item outItem))
 				return (T)outItem;
-			
+
 			var itm = new Item(item);
 			CachedItems.Add(item.ItemSerial, itm);
 			return (T)itm;

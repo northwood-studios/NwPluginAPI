@@ -1,4 +1,3 @@
-
 namespace PluginAPI.Enums
 {
 	using System;

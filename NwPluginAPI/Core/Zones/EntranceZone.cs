@@ -15,6 +15,7 @@ namespace PluginAPI.Core.Zones
 		/// The <see cref="EntranceZone"/> instance.
 		/// </summary>
 		internal static EntranceZone Instance;
+
 		internal Dictionary<RoomIdentifier, EzRoom> _rooms = new Dictionary<RoomIdentifier, EzRoom>();
 
 		/// <inheritdoc/>

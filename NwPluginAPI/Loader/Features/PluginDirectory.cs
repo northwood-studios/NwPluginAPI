@@ -3,10 +3,10 @@ namespace PluginAPI.Loader.Features
 	using Helpers;
 
 	/// <summary>
-    /// Contains the paths containing plugins and dependencies.
-    /// </summary>
-    public readonly struct PluginDirectory
-    {
+	/// Contains the paths containing plugins and dependencies.
+	/// </summary>
+	public readonly struct PluginDirectory
+	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginDirectory"/> struct.
 		/// </summary>
@@ -26,5 +26,5 @@ namespace PluginAPI.Loader.Features
 		/// Gets or sets the plugins folder.
 		/// </summary>
 		public readonly string Plugins;
-    }
+	}
 }

@@ -7,8 +7,8 @@ namespace PluginAPI.Core.Factories
 	/// A factory to create <see cref="IPlayer"/>'s.
 	/// </summary>
 	public class PlayerFactory : Factory<IPlayer>
-    {
-        public virtual Type BaseType { get; } = typeof(Player);
+	{
+		public virtual Type BaseType { get; } = typeof(Player);
 
 		/// <summary>
 		/// Creates a new <see cref="IPlayer"/> instance.

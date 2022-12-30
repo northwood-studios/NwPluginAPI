@@ -7,7 +7,5 @@ namespace PluginAPI.Core.Attributes
 	/// Called when the plugin is unloaded.
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
-	public class PluginUnload : Attribute
-	{
-	}
+	public class PluginUnload : Attribute { }
 }

@@ -22,10 +22,7 @@ namespace PluginAPI.Core.Zones.Pocket
 			return true;
 		}
 
-		public virtual void OnDestroy()
-		{
-
-		}
+		public virtual void OnDestroy() { }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PocketDimensionLogic"/> class.

@@ -96,7 +96,7 @@ namespace PluginAPI.Core
 		public static string FormatText(string message, string defaultColor = null, bool unityRichText = false)
 		{
 			bool isPrefix = false;
-			char escapeChar = (char) 27;
+			char escapeChar = (char)27;
 			string newText = string.Empty;
 			string lastTag = string.Empty;
 
@@ -184,6 +184,7 @@ namespace PluginAPI.Core
 							newText += unityRichText ? "<color=white>" : $"{escapeChar}[37m";
 							lastTag = "color";
 							break;
+
 						//Reset
 						case 'r':
 							if (unityRichText && lastTag != string.Empty)
@@ -254,7 +255,7 @@ namespace PluginAPI.Core
 				}
 				newText += message[x];
 
-				if (unityRichText && x == message.Length -1 && lastTag != string.Empty)
+				if (unityRichText && x == message.Length - 1 && lastTag != string.Empty)
 					newText += EndTag(ref lastTag);
 			}
 

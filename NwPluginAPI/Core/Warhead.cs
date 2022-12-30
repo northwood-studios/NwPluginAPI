@@ -3,7 +3,7 @@ namespace PluginAPI.Core
 	/// <summary>
 	/// Manages the warhead.
 	/// </summary>
-    public static class Warhead
+	public static class Warhead
 	{
 		/// <summary>
 		/// Gets or sets a value indicating whether or not the lever in the warhead room is enabled.
@@ -51,7 +51,8 @@ namespace PluginAPI.Core
 			set => AlphaWarheadController.Singleton.ForceTime(value);
 		}
 
-		#region Detonation
+#region Detonation
+
 		/// <summary>
 		/// Starts the detonation countdown.
 		/// </summary>
@@ -72,9 +73,11 @@ namespace PluginAPI.Core
 		/// Detonate warhead.
 		/// </summary>
 		public static void Detonate() => Server.Instance.GetComponent<AlphaWarheadController>().ForceTime(0);
-		#endregion
 
-		#region Shake Effect
+#endregion
+
+#region Shake Effect
+
 		/// <summary>
 		/// Show the shake effect to all players.
 		/// </summary>
@@ -83,6 +86,7 @@ namespace PluginAPI.Core
 			//foreach(var player in Player.List)
 			//	player.Warhead.Shake();
 		}
-		#endregion
+
+#endregion
 	}
 }

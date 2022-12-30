@@ -9,12 +9,12 @@ namespace PluginAPI.Core.Zones.Heavy
 		/// The generator.
 		/// </summary>
 		public readonly Generator Generator;
-		
+
 		public virtual bool OnUpdate() => true;
 
 		public virtual bool OnLateUpdate() => true;
 
-		public virtual bool OnPlayerInteraction(Player plr) => true;// GeneratorColliderId colliderId)
+		public virtual bool OnPlayerInteraction(Player plr) => true; // GeneratorColliderId colliderId)
 
 		public virtual void OnDestroy() { }
 

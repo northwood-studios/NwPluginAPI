@@ -100,14 +100,16 @@ namespace PluginAPI.Core
 			/// Gets the total amount Class-Ds who have escaped.
 			/// </summary>
 			public int ClassDEscaped => EscapedClassD;
+
 			public int ClassDAlive { get; set; }
 			public int ScientistsStart => RoundSummary.singleton.classlistStart.scientists;
-			public int ScientistsDead => Mathf.Clamp(ScientistsStart -  (ScientistsAlive + ScientistsEscaped), 0, int.MaxValue);
+			public int ScientistsDead => Mathf.Clamp(ScientistsStart - (ScientistsAlive + ScientistsEscaped), 0, int.MaxValue);
 
 			/// <summary>
 			/// Gets the total amount Scientists who have escaped.
 			/// </summary>
 			public int ScientistsEscaped => EscapedScientists;
+
 			public int ScientistsAlive { get; set; }
 			public int ChaosInsurgencyStart => RoundSummary.singleton.classlistStart.chaos_insurgents;
 			public int ChaosInsurgencyDead => Mathf.Clamp(ChaosInsurgencyStart - ChaosInsurgencyAlive, 0, int.MaxValue);
@@ -127,12 +129,14 @@ namespace PluginAPI.Core
 			/// Gets the total amount of SCPs alive.
 			/// </summary>
 			public int ScpsAlive { get; set; }
+
 			public int ZombiesAlive { get; set; }
 
 			/// <summary>
 			/// Gets the total amount Scp049-2s created.
 			/// </summary>
 			public int ZombiesChanged => ChangedIntoZombies;
+
 			public int WarheadKills { get; set; }
 
 			/// <summary>

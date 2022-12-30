@@ -16,6 +16,7 @@ namespace PluginAPI.Core.Doors
 		/// Gets a list of all the <see cref="FacilityBreakableDoor"/>s.
 		/// </summary>
 		public new static List<FacilityBreakableDoor> List => Facility.Doors.Where(x => x is FacilityBreakableDoor).Cast<FacilityBreakableDoor>().ToList();
+
 		/// <summary>
 		/// Gets the total amount of breakable doors.
 		/// </summary>
@@ -43,7 +44,7 @@ namespace PluginAPI.Core.Doors
 			get => OriginalObject.MaxHealth;
 			set => OriginalObject.MaxHealth = value;
 		}
-		
+
 		/// <summary>
 		/// Gets or sets the door's ignored <see cref="DoorDamageType"/>.
 		/// </summary>

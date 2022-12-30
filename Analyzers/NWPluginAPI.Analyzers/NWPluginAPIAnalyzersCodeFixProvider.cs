@@ -32,7 +32,7 @@ namespace NWPluginAPI.Analyzers
 		{
 			var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
 
-			foreach(var diagnostic in context.Diagnostics)
+			foreach (var diagnostic in context.Diagnostics)
 			{
 				var diagnosticSpan = diagnostic.Location.SourceSpan;
 
@@ -74,7 +74,7 @@ namespace NWPluginAPI.Analyzers
 
 			var updatedMethod = method.AddParameterListParameters(
 				SyntaxFactory.Parameter(
-					SyntaxFactory.Identifier("amogus"))
+						SyntaxFactory.Identifier("amogus"))
 					.WithType(SyntaxFactory.ParseTypeName("PluginAPI.Core.Player")));
 
 			var updatedSyntaxTree = root.ReplaceNode(method, updatedMethod);
@@ -98,10 +98,10 @@ namespace NWPluginAPI.Analyzers
 
 			var updatedMethod = method.AddParameterListParameters(
 				SyntaxFactory.Parameter(
-						SyntaxFactory.Identifier(
-							ev.Parameters[parameterIndex].DefaultIdentifierName)).WithType(
-						SyntaxFactory.ParseTypeName(ev.Parameters[parameterIndex].BaseType + (ev.Parameters[parameterIndex].IsArray ? "[]" : string.Empty))
-							.WithAdditionalAnnotations(Simplifier.Annotation)));
+					SyntaxFactory.Identifier(
+						ev.Parameters[parameterIndex].DefaultIdentifierName)).WithType(
+					SyntaxFactory.ParseTypeName(ev.Parameters[parameterIndex].BaseType + (ev.Parameters[parameterIndex].IsArray ? "[]" : string.Empty))
+						.WithAdditionalAnnotations(Simplifier.Annotation)));
 
 			var updatedSyntaxTree = root.ReplaceNode(method, updatedMethod);
 
@@ -131,7 +131,7 @@ namespace NWPluginAPI.Analyzers
 						SyntaxFactory.Identifier(
 							ev.Parameters[index].DefaultIdentifierName)).WithType(
 						SyntaxFactory.ParseTypeName(ev.Parameters[index].BaseType + (ev.Parameters[index].IsArray ? "[]" : string.Empty))
-								.WithAdditionalAnnotations(Simplifier.Annotation)));
+							.WithAdditionalAnnotations(Simplifier.Annotation)));
 			}
 
 			MethodDeclarationSyntax updatedMethod = method.AddParameterListParameters(parameters.ToArray());

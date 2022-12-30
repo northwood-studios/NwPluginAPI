@@ -93,7 +93,7 @@ namespace NWPluginAPI.Analyzers
 			{
 				var parameter = methodSymbol.Parameters[x];
 
-				if (requiredSymbols.Count < x+1)
+				if (requiredSymbols.Count < x + 1)
 				{
 					var diagTooMuchParams = Diagnostic.Create(ParameterNotRequiredRule, parameter.Locations[0], parameter.Name);
 

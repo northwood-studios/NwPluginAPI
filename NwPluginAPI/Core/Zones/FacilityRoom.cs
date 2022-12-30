@@ -51,7 +51,8 @@ namespace PluginAPI.Core.Zones
 		/// </summary>
 		public Quaternion Rotation => Transform.rotation;
 
-		#region Get Components
+#region Get Components
+
 		/// <inheritdoc/>
 		public T GetComponent<T>(bool globalSearch = false, bool childSearch = false) where T : MonoBehaviour
 		{
@@ -117,7 +118,8 @@ namespace PluginAPI.Core.Zones
 			component = (T)StoredComponents[typeof(T)];
 			return true;
 		}
-		#endregion
+
+#endregion
 
 		internal void RegisterDoor(DoorVariant door)
 		{

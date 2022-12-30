@@ -27,31 +27,31 @@ namespace PluginAPI.Core.Interfaces
 		/// </summary>
 		DataStorage TemporaryData { get; }
 
-        /// <summary>
-        /// Executed when player object is created.
-        /// </summary>
-        void OnStart();
+		/// <summary>
+		/// Executed when player object is created.
+		/// </summary>
+		void OnStart();
 
-        /// <summary>
-        /// Executed when player object is destroyed.
-        /// </summary>
-        void OnDestroy();
+		/// <summary>
+		/// Executed when player object is destroyed.
+		/// </summary>
+		void OnDestroy();
 
-        /// <summary>
-        /// Executed every frame.
-        /// </summary>
-        void OnUpdate();
+		/// <summary>
+		/// Executed every frame.
+		/// </summary>
+		void OnUpdate();
 
-        /// <summary>
-        /// Executed after all OnUpdate functions have been called.
-        /// </summary>
-        void OnLateUpdate();
+		/// <summary>
+		/// Executed after all OnUpdate functions have been called.
+		/// </summary>
+		void OnLateUpdate();
 
-        /// <summary>
-        /// Executed with the frequency of the physics system.
-        /// <remarks>Unity's physics engine runs at 50hz by default.</remarks>
-        /// </summary>
-        void OnFixedUpdate();
+		/// <summary>
+		/// Executed with the frequency of the physics system.
+		/// <remarks>Unity's physics engine runs at 50hz by default.</remarks>
+		/// </summary>
+		void OnFixedUpdate();
 
 		/// <summary>
 		/// Gets the <see cref="UnityEngine.MonoBehaviour"/> and caches it.

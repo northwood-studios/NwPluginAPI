@@ -12,7 +12,8 @@ namespace PluginAPI.Core
 	/// </summary>
 	public static class Cassie
 	{
-		#region Static Parameters
+#region Static Parameters
+
 		/// <summary>
 		/// Gets whether or not CASSIE is speaking.
 		/// </summary>
@@ -23,10 +24,12 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static IEnumerable<VoiceLine> VoiceLines => singleton.voiceLines;
 
-		#endregion
+#endregion
 
-		#region Static Methods
-		#region Sending messages.
+#region Static Methods
+
+#region Sending messages.
+
 		/// <summary>
 		/// Send CASSIE message without glitch phrases.
 		/// </summary>
@@ -43,20 +46,22 @@ namespace PluginAPI.Core
 		/// <param name="glitchChance">The chance of placing a glitch phrase between each word.</param>
 		/// <param name="jamChance">The chance of jamming each word.</param>
 		public static void GlitchyMessage(string message, float glitchChance, float jamChance) => singleton.ServerOnlyAddGlitchyPhrase(message, glitchChance, jamChance);
-		#endregion
+
+#endregion
 
 		/// <summary>
 		/// Clears all CASSIE messages in queue.
 		/// </summary>
 		public static void Clear() => RespawnEffectsController.ClearQueue();
 
-		#region Utils.
+#region Utils.
+
 		/// <summary>
 		/// Calculates duration of a CASSIE message.
 		/// </summary>
 		/// <param name="message">The message.</param>
 		/// <param name="rawNumber">Raw number.</param>
-	    public static float CalculateDuration(string message, bool rawNumber = false) => singleton.CalculateDuration(message, rawNumber);
+		public static float CalculateDuration(string message, bool rawNumber = false) => singleton.CalculateDuration(message, rawNumber);
 
 		/// <summary>
 		/// Converts team into a CASSIE readable unit name.
@@ -76,7 +81,8 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="word">The word.</param>
 		public static bool IsValid(string word) => singleton.voiceLines.Any(line => line.apiName.ToUpper() == word.ToUpper());
-		#endregion
+
+#endregion
 
 		/// <summary>
 		/// Forces an scp termination announcement.
@@ -85,6 +91,7 @@ namespace PluginAPI.Core
 		/// <param name="info">The damage information.</param>
 		public static void ScpTermination(Player player, DamageHandlerBase info)
 			=> AnnounceScpTermination(player.ReferenceHub, info);
-		#endregion
+
+#endregion
 	}
 }

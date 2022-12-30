@@ -22,7 +22,7 @@ namespace PluginAPI.Events
 		/// </summary>
 		/// <param name="type">The <see cref="BaseType"/>.</param>
 		/// <param name="defaultIdentifierName">The <see cref="DefaultIdentifierName"/>.</param>
-		public EventParameter(Type type,string defaultIdentifierName) 
+		public EventParameter(Type type, string defaultIdentifierName)
 		{
 			BaseType = type;
 			DefaultIdentifierName = defaultIdentifierName;

@@ -9,11 +9,11 @@ namespace PluginAPI.Core.Factories
 	/// <remarks>See https://www.tutorialspoint.com/design_pattern/factory_pattern.htm for more info </remarks>
 	/// <typeparam name="TEntity">The entity to create.</typeparam>
 	public interface IEntityFactory<TEntity> where TEntity : IEntity
-    {
+	{
 		TEntity DefaultServer { get; set; }
-	    TEntity Create(IGameComponent component);
-        TEntity GetOrAdd(IGameComponent component);
+		TEntity Create(IGameComponent component);
+		TEntity GetOrAdd(IGameComponent component);
 		void AddIfNotExists(IGameComponent component);
-        IEnumerable<TEntity> Get();
-    }
+		IEnumerable<TEntity> Get();
+	}
 }

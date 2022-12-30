@@ -11,7 +11,7 @@
 	public class PlayerSharedStorage
 	{
 		private static Dictionary<IPlayer, PlayerSharedStorage> Storage { get; } = new Dictionary<IPlayer, PlayerSharedStorage>();
-	
+
 		/// <summary>
 		/// Gets a players storage.
 		/// </summary>

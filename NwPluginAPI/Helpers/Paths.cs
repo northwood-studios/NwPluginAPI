@@ -51,9 +51,7 @@ namespace PluginAPI.Helpers
 		/// </summary>
 		internal static void Setup()
 		{
-			AppData = GetHosterPolicy() ?
-				"AppData" :
-				Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			AppData = GetHosterPolicy() ? "AppData" : Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
 			if (!Directory.Exists(AppData)) Directory.CreateDirectory(AppData);
 

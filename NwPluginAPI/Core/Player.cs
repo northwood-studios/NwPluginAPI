@@ -31,12 +31,14 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class Player : IPlayer
 	{
-		#region Static Internal Variables
+#region Static Internal Variables
+
 		internal static Dictionary<int, IGameComponent> PlayersIds = new Dictionary<int, IGameComponent>();
 		public static Dictionary<string, IGameComponent> PlayersUserIds = new Dictionary<string, IGameComponent>();
-		#endregion
 
-		#region Static Parameters
+#endregion
+
+#region Static Parameters
 
 		/// <summary>
 		/// Gets the amount of online players.
@@ -56,9 +58,9 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static int ConnectionsCount => LiteNetLib4MirrorCore.Host.ConnectedPeersCount;
 
-		#endregion
+#endregion
 
-		#region Static Methods
+#region Static Methods
 
 		/// <summary>
 		/// Gets all players.
@@ -113,7 +115,7 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-		#region Get player from gameobject.
+#region Get player from gameobject.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
@@ -162,9 +164,10 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
 		}
-		#endregion
 
-		#region Get player from reference hub.
+#endregion
+
+#region Get player from reference hub.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
@@ -207,9 +210,10 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
 		}
-		#endregion
 
-		#region Get player from network identity.
+#endregion
+
+#region Get player from network identity.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
@@ -251,9 +255,10 @@ namespace PluginAPI.Core
 
 			return true;
 		}
-		#endregion
 
-		#region Get player from name.
+#endregion
+
+#region Get player from name.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their name.
@@ -288,8 +293,8 @@ namespace PluginAPI.Core
 			}
 
 			var hub = ReferenceHub.AllHubs.Where(p =>
-				p.nicknameSync.MyNick == name ||
-				p.nicknameSync.MyNick.ToLower().Replace(" ", "") == name.ToLower().Replace(" ", ""))
+					p.nicknameSync.MyNick == name ||
+					p.nicknameSync.MyNick.ToLower().Replace(" ", "") == name.ToLower().Replace(" ", ""))
 				.FirstOrDefault();
 
 			if (hub == null)
@@ -307,9 +312,10 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
 		}
-		#endregion
 
-		#region Get player from player id.
+#endregion
+
+#region Get player from player id.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their player id.
@@ -352,9 +358,10 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
 		}
-		#endregion
 
-		#region Get player from userid.
+#endregion
+
+#region Get player from userid.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their user id.
@@ -403,9 +410,10 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
 		}
-		#endregion
 
-		#region Get player from network id.
+#endregion
+
+#region Get player from network id.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their network id.
@@ -448,9 +456,10 @@ namespace PluginAPI.Core
 			player = plr;
 			return true;
 		}
-		#endregion
 
-		#region Get player from ICommandSender
+#endregion
+
+#region Get player from ICommandSender
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
@@ -500,11 +509,12 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-		#endregion
+#endregion
 
-		#endregion
+#endregion
 
-		#region Public Parameters
+#region Public Parameters
+
 		/// <summary>
 		/// Gets the player's <see cref="global::ReferenceHub"/>.
 		/// </summary>
@@ -820,13 +830,17 @@ namespace PluginAPI.Core
 			get => ReferenceHub.playerStats.StatModules[2].CurValue;
 			set => ReferenceHub.playerStats.StatModules[2].CurValue = value;
 		}
-		#endregion
 
-		#region Private Variables
+#endregion
+
+#region Private Variables
+
 		internal PlayerSharedStorage SharedStorage { get; }
-		#endregion
 
-		#region Constructor
+#endregion
+
+#region Constructor
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Player"/> class.
 		/// </summary>
@@ -853,9 +867,11 @@ namespace PluginAPI.Core
 				Log.Error($"Failed executing OnStart in {GetType().Name}, error\n {ex}");
 			}
 		}
-		#endregion
 
-		#region Internal Methods
+#endregion
+
+#region Internal Methods
+
 		internal void OnInternalDestroy()
 		{
 			PlayerSharedStorage.DestroyStorage(this);
@@ -863,9 +879,11 @@ namespace PluginAPI.Core
 			if (!string.IsNullOrEmpty(UserId))
 				PlayersUserIds.Remove(UserId);
 		}
-		#endregion
 
-		#region Public Methods
+#endregion
+
+#region Public Methods
+
 		/// <summary>
 		/// Sends a broadcast to the player.
 		/// </summary>
@@ -1145,7 +1163,8 @@ namespace PluginAPI.Core
 		/// <inheritdoc/>
 		public virtual void OnFixedUpdate() { }
 
-		#region GetComponents
+#region GetComponents
+
 		/// <inheritdoc/>
 		public T GetComponent<T>(bool globalSearch = false) where T : MonoBehaviour
 		{
@@ -1177,7 +1196,9 @@ namespace PluginAPI.Core
 			component = (T)SharedStorage.StoredComponents[typeof(T)];
 			return true;
 		}
-		#endregion
-		#endregion
+
+#endregion
+
+#endregion
 	}
 }

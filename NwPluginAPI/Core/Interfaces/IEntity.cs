@@ -3,7 +3,5 @@
 	/// <summary>
 	/// Defines an entity.
 	/// </summary>
-    public interface IEntity
-    {
-    }
+	public interface IEntity { }
 }

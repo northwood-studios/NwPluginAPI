@@ -1,15 +1,15 @@
 namespace PluginAPI.Loader
 {
 	using System.IO.Compression;
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Reflection;
-    using Core;
-    using Core.Extensions;
-    using Helpers;
-    using Features;
+	using System;
+	using System.Collections.Generic;
+	using System.IO;
+	using System.Linq;
+	using System.Reflection;
+	using Core;
+	using Core.Extensions;
+	using Helpers;
+	using Features;
 	using Utils.ConfigHandler;
 	using GameCore;
 	using Log = Core.Log;
@@ -118,35 +118,35 @@ namespace PluginAPI.Loader
 					$"{x.GetName().Name}&r v&6{x.GetName().Version.ToString(3)}");
 
 			foreach (string pluginPath in files)
-            {
-                if (!TryGetAssembly(pluginPath, out Assembly assembly))
+			{
+				if (!TryGetAssembly(pluginPath, out Assembly assembly))
 					continue;
 
-                Type[] types = null;
+				Type[] types = null;
 
-                var missingDependencies = assembly
-	                .GetReferencedAssemblies()
-	                .Select(x =>
-		                $"{x.Name}&r v&6{x.Version.ToString(3)}")
-	                .Where(x => !loadedAssemblies.Contains(x)).ToArray();
+				var missingDependencies = assembly
+					.GetReferencedAssemblies()
+					.Select(x =>
+						$"{x.Name}&r v&6{x.Version.ToString(3)}")
+					.Where(x => !loadedAssemblies.Contains(x)).ToArray();
 
-                try
-                {
-	                if (missingDependencies.Length != 0)
-		                ResolveAssemblyEmbeddedResources(assembly);
-	                types = assembly.GetTypes();
-                }
-                catch (Exception e)
-                {
-	                if (missingDependencies.Length != 0)
-	                {
-		                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}\n\n{e}", "Loader");
-		                continue;
-	                }
+				try
+				{
+					if (missingDependencies.Length != 0)
+						ResolveAssemblyEmbeddedResources(assembly);
+					types = assembly.GetTypes();
+				}
+				catch (Exception e)
+				{
+					if (missingDependencies.Length != 0)
+					{
+						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}\n\n{e}", "Loader");
+						continue;
+					}
 
-	                Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, {e.ToString()}");
-	                continue;
-                }
+					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, {e.ToString()}");
+					continue;
+				}
 
 				foreach (var entryType in types)
 				{
@@ -160,7 +160,7 @@ namespace PluginAPI.Loader
 						continue;
 					}
 
-                    if (!Plugins.ContainsKey(assembly)) Plugins.Add(assembly, new Dictionary<Type, PluginHandler>());
+					if (!Plugins.ContainsKey(assembly)) Plugins.Add(assembly, new Dictionary<Type, PluginHandler>());
 
 					if (!Plugins[assembly].ContainsKey(entryType))
 					{
@@ -186,8 +186,8 @@ namespace PluginAPI.Loader
 				}
 			}
 
-            if (successes > 0)
-	            CustomNetworkManager.Modded = true;
+			if (successes > 0)
+				CustomNetworkManager.Modded = true;
 
 			Log.Info($"Loaded &2{successes}&r/&2{files.Length}&r plugins.");
 		}

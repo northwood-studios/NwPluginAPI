@@ -19,7 +19,7 @@
 		{
 			Priority = (byte)priority;
 		}
-		
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginPriority"/> class.
 		/// </summary>

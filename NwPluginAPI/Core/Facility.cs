@@ -62,11 +62,11 @@ namespace PluginAPI.Core
 
 		private static bool TryGetZone<T>(MapGeneration.FacilityZone zone, out T facilityZone) where T : FacilityZone
 		{
-			int zoneId = (int) zone;
+			int zoneId = (int)zone;
 
 			if (Zones.TryGetValue(zoneId, out FacilityZone facZone))
 			{
-				facilityZone = (T) facZone;
+				facilityZone = (T)facZone;
 				return true;
 			}
 
@@ -95,7 +95,7 @@ namespace PluginAPI.Core
 			}
 
 			Zones.Add(zoneId, newZone);
-			facilityZone = (T) newZone;
+			facilityZone = (T)newZone;
 			return true;
 		}
 
@@ -150,7 +150,7 @@ namespace PluginAPI.Core
 		/// Gets all rooms in facility.
 		/// </summary>
 		public static List<FacilityRoom> Rooms => Zones.Values.SelectMany(x => x.GetRooms()).ToList();
-		
+
 		/// <summary>
 		/// Gets all doors in facility.
 		/// </summary>

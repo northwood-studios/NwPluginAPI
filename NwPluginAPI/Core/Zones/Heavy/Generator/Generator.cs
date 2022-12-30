@@ -62,7 +62,7 @@ namespace PluginAPI.Core.Zones.Heavy
 		/// <summary>
 		/// Gets whether or not the generator is activation-ready.
 		/// </summary>
-		public bool IsActivationReady => false;//OriginalObject.ActivationReady;
+		public bool IsActivationReady => false; //OriginalObject.ActivationReady;
 
 		/// <summary>
 		/// Gets or sets whether or not the generator is engaged (active).

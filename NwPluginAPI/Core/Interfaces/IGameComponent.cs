@@ -3,7 +3,5 @@
 	/// <summary>
 	/// Defines a game component.
 	/// </summary>
-    public interface IGameComponent
-    {
-    }
+	public interface IGameComponent { }
 }

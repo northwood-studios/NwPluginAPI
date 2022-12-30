@@ -60,7 +60,7 @@ namespace PluginAPI.Core.Zones
 		/// <summary>
 		/// Checks whether or not the zone has already been decontaminated.
 		/// </summary>
-		public static bool IsDecontaminated => false;// DecontaminationController.Singleton._stopUpdating && !DecontaminationController.Singleton.disableDecontamination;
+		public static bool IsDecontaminated => false; // DecontaminationController.Singleton._stopUpdating && !DecontaminationController.Singleton.disableDecontamination;
 
 		/// <summary>
 		/// Starts decontamination.

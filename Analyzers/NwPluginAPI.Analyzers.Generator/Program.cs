@@ -40,14 +40,14 @@ foreach (var ev in EventManager.Events)
 	else
 	{
 		builder.AppendLine("		{ " + (int)ev.Key + ", new Event(");
-		for(int x = 0; x < ev.Value.Parameters.Length; x++)
+		for (int x = 0; x < ev.Value.Parameters.Length; x++)
 		{
 			var param = ev.Value.Parameters[x];
 
 			if (param.BaseType.IsArray)
-				builder.AppendLine("			new EventParameter(\"" + param.BaseType.GetElementType()?.FullName + "\", true, \"" + param.DefaultIdentifierName+ "\")" + (x == (ev.Value.Parameters.Length - 1) ? ") }," : ","));
+				builder.AppendLine("			new EventParameter(\"" + param.BaseType.GetElementType()?.FullName + "\", true, \"" + param.DefaultIdentifierName + "\")" + (x == (ev.Value.Parameters.Length - 1) ? ") }," : ","));
 			else
-				builder.AppendLine("			new EventParameter(\"" + param.BaseType.FullName + "\", false, \"" + param.DefaultIdentifierName+ "\")" + (x == (ev.Value.Parameters.Length - 1) ? ") }," : ","));
+				builder.AppendLine("			new EventParameter(\"" + param.BaseType.FullName + "\", false, \"" + param.DefaultIdentifierName + "\")" + (x == (ev.Value.Parameters.Length - 1) ? ") }," : ","));
 		}
 	}
 }

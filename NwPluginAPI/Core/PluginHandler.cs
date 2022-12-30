@@ -25,11 +25,11 @@ namespace PluginAPI.Core
 		private readonly string _pluginDirectory;
 		private readonly string _mainConfigPath;
 
-        private readonly PluginEntryPoint _entryInfo;
-        private string _pluginVersion;
+		private readonly PluginEntryPoint _entryInfo;
+		private string _pluginVersion;
 
-        private readonly MethodInfo _entryPoint;
-        private readonly MethodInfo _onUnload;
+		private readonly MethodInfo _entryPoint;
+		private readonly MethodInfo _onUnload;
 
 		private readonly object _plugin;
 		private readonly Type _pluginType;
@@ -118,13 +118,13 @@ namespace PluginAPI.Core
 		/// </summary>
 		public void Unload()
 		{
-            if (_onUnload == null)
-            {
-                Log.Warning($"Plugin &2{PluginName}&r has missing unload method!");
-                return;
-            }
+			if (_onUnload == null)
+			{
+				Log.Warning($"Plugin &2{PluginName}&r has missing unload method!");
+				return;
+			}
 
-            try
+			try
 			{
 				_onUnload.Invoke(_plugin, null);
 			}
@@ -185,7 +185,7 @@ namespace PluginAPI.Core
 				{
 					config = YamlParser.Deserializer.Deserialize(File.ReadAllText(targetPath), field.FieldType);
 				}
-				catch(Exception ex)
+				catch (Exception ex)
 				{
 					Log.Error($"Failed deserializing config file for &2{PluginName}&r,\n{ex}");
 					return;
@@ -197,6 +197,7 @@ namespace PluginAPI.Core
 				Log.Debug($"Loaded config file for &2{PluginName}&r.", Log.DebugMode);
 			}
 		}
+
 		/// <summary>
 		/// Loads the default plugin config.
 		/// </summary>
@@ -278,8 +279,8 @@ namespace PluginAPI.Core
 
 			if (_entryInfo == null)
 			{
-                Log.Error($"Missing entrypoint for plugin &2{PluginName}&r!");
-                return;
+				Log.Error($"Missing entrypoint for plugin &2{PluginName}&r!");
+				return;
 			}
 
 			_pluginDirectory = Path.Combine(directory.Plugins, PluginName);
@@ -301,13 +302,13 @@ namespace PluginAPI.Core
 
 			if (!Directory.Exists(_pluginDirectory))
 			{
-                Directory.CreateDirectory(_pluginDirectory);
-                Log.Debug($"Created missing plugin directory for \"&2{PluginName}&r\".", Log.DebugMode);
-            }
+				Directory.CreateDirectory(_pluginDirectory);
+				Log.Debug($"Created missing plugin directory for \"&2{PluginName}&r\".", Log.DebugMode);
+			}
 
-            foreach (var field in _pluginType.GetFields())
+			foreach (var field in _pluginType.GetFields())
 			{
-				foreach(var attribute in field.GetCustomAttributes<Attribute>())
+				foreach (var attribute in field.GetCustomAttributes<Attribute>())
 				{
 					switch (attribute)
 					{
