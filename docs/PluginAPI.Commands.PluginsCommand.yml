@@ -41,9 +41,7 @@ items:
       <CommandHandler(GetType(GameConsoleCommandHandler))>
 
       Public Class PluginsCommand
-
           Inherits ParentCommand
-
           Implements ICommandHandler, ICommand, IUsageProvider
   inheritance:
   - System.Object

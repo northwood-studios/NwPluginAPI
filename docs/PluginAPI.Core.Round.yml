@@ -5,6 +5,7 @@ items:
   id: Round
   parent: PluginAPI.Core
   children:
+  - PluginAPI.Core.Round.Duration
   - PluginAPI.Core.Round.End
   - PluginAPI.Core.Round.IsLobbyLocked
   - PluginAPI.Core.Round.IsLocked
@@ -26,7 +27,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Round
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -68,7 +69,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsRoundStarted
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -107,7 +108,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -146,7 +147,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLobbyLocked
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -167,6 +168,45 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: PluginAPI.Core.Round.Duration
+  commentId: P:PluginAPI.Core.Round.Duration
+  id: Duration
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: Round.Duration
+  fullName: PluginAPI.Core.Round.Duration
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Duration
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets the duration of the current round.\n"
+  example: []
+  syntax:
+    content: public static TimeSpan Duration { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Shared ReadOnly Property Duration As TimeSpan
+  overload: PluginAPI.Core.Round.Duration*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
   commentId: M:PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
   id: Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
@@ -185,7 +225,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 37
+    startLine: 43
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -229,7 +269,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RestartSilently
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 51
+    startLine: 57
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -263,7 +303,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 56
+    startLine: 62
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -297,7 +337,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: End
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 62
+    startLine: 68
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -636,6 +676,18 @@ references:
   name: IsLobbyLocked
   nameWithType: Round.IsLobbyLocked
   fullName: PluginAPI.Core.Round.IsLobbyLocked
+- uid: PluginAPI.Core.Round.Duration*
+  commentId: Overload:PluginAPI.Core.Round.Duration
+  name: Duration
+  nameWithType: Round.Duration
+  fullName: PluginAPI.Core.Round.Duration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
 - uid: PluginAPI.Core.Round.Restart*
   commentId: Overload:PluginAPI.Core.Round.Restart
   name: Restart

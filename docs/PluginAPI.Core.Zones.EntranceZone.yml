@@ -35,7 +35,6 @@ items:
     content: 'public class EntranceZone : FacilityZone'
     content.vb: >-
       Public Class EntranceZone
-
           Inherits FacilityZone
   inheritance:
   - System.Object
@@ -73,10 +72,11 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZoneType
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
+  summary: "\nGets the zone type.\n"
   example: []
   syntax:
     content: public override FacilityZone ZoneType { get; }
@@ -112,20 +112,22 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
+  summary: "\nGets all rooms of specific type.\n"
   example: []
   syntax:
     content: >-
       public override List<T> GetRooms<T>()
-
           where T : FacilityRoom
     typeParameters:
     - id: T
+      description: The tyep of rooms.
     return:
       type: System.Collections.Generic.List{{T}}
+      description: List of all rooms.
     content.vb: Public Overrides Function GetRooms(Of T As FacilityRoom) As List(Of T)
   overridden: PluginAPI.Core.Zones.FacilityZone.GetRooms``1
   overload: PluginAPI.Core.Zones.EntranceZone.GetRooms*
@@ -156,7 +158,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
@@ -195,7 +197,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
@@ -234,20 +236,24 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetRoom
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
+  summary: "\nGets surface room from room identifier.\n"
   example: []
   syntax:
     content: public override bool TryGetRoom(RoomIdentifier roomIdentity, out FacilityRoom room)
     parameters:
     - id: roomIdentity
       type: MapGeneration.RoomIdentifier
+      description: The room identifier.
     - id: room
       type: PluginAPI.Core.Zones.FacilityRoom
+      description: The facility room.
     return:
       type: System.Boolean
+      description: Whether or not the room was found.
     content.vb: Public Overrides Function TryGetRoom(roomIdentity As RoomIdentifier, ByRef room As FacilityRoom) As Boolean
   overridden: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
   overload: PluginAPI.Core.Zones.EntranceZone.TryGetRoom*
@@ -278,7 +284,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones

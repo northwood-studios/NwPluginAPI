@@ -40,7 +40,6 @@ items:
     content: 'public interface IPlayer : IEntity'
     content.vb: >-
       Public Interface IPlayer
-
           Inherits IEntity
   modifiers.csharp:
   - public
@@ -355,7 +354,6 @@ items:
   syntax:
     content: >-
       T GetComponent<T>(bool globalSearch = false)
-
           where T : MonoBehaviour
     parameters:
     - id: globalSearch
@@ -396,7 +394,6 @@ items:
   syntax:
     content: >-
       bool TryGetComponent<T>(out T component, bool globalSearch = false)
-
           where T : MonoBehaviour
     parameters:
     - id: component

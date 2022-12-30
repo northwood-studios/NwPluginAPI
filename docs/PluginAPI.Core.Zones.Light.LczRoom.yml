@@ -29,7 +29,6 @@ items:
     content: 'public class LczRoom : FacilityRoom'
     content.vb: >-
       Public Class LczRoom
-
           Inherits FacilityRoom
   inheritance:
   - System.Object

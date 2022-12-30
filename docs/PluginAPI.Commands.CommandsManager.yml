@@ -19,7 +19,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CommandsManager
     path: ../NwPluginAPI/Commands/CommandsManager.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands

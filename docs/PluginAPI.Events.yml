@@ -13,6 +13,9 @@ items:
   - PluginAPI.Events.PlayerPreCoinFlipCancellationData
   - PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
   - PluginAPI.Events.PreauthCancellationData
+  - PluginAPI.Events.RoundEndCancellationData
+  - PluginAPI.Events.RoundEndConditionsCheckCancellationData
+  - PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
   langs:
   - csharp
   - vb
@@ -74,6 +77,24 @@ references:
   name: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
   nameWithType: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
   fullName: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+- uid: PluginAPI.Events.RoundEndCancellationData
+  commentId: T:PluginAPI.Events.RoundEndCancellationData
+  parent: PluginAPI.Events
+  name: RoundEndCancellationData
+  nameWithType: RoundEndCancellationData
+  fullName: PluginAPI.Events.RoundEndCancellationData
+- uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData
+  commentId: T:PluginAPI.Events.RoundEndConditionsCheckCancellationData
+  parent: PluginAPI.Events
+  name: RoundEndConditionsCheckCancellationData
+  nameWithType: RoundEndConditionsCheckCancellationData
+  fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData
+- uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  commentId: T:PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  parent: PluginAPI.Events
+  name: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  nameWithType: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
 - uid: PluginAPI.Events
   commentId: N:PluginAPI.Events
   name: PluginAPI.Events

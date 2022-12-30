@@ -38,7 +38,6 @@ items:
     content: 'public class FacilityBreakableDoor : FacilityDoor'
     content.vb: >-
       Public Class FacilityBreakableDoor
-
           Inherits FacilityDoor
   inheritance:
   - System.Object
@@ -125,7 +124,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
@@ -164,7 +163,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
@@ -199,7 +198,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Health
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 31
+    startLine: 32
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
@@ -236,7 +235,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxHealth
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
@@ -273,7 +272,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IgnoredDamageSources
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
@@ -310,7 +309,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsDestroyed
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 58
+    startLine: 59
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
@@ -347,7 +346,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Destroy
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 63
+    startLine: 64
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
@@ -379,7 +378,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-    startLine: 77
+    startLine: 78
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors

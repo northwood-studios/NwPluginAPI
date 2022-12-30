@@ -212,7 +212,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
-    startLine: 33
+    startLine: 30
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones.Pocket

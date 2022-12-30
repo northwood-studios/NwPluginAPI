@@ -307,7 +307,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -348,7 +348,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Stop
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 68
+    startLine: 69
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -382,7 +382,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Detonate
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 73
+    startLine: 74
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -416,7 +416,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shake
     path: ../NwPluginAPI/Core/Warhead.cs
-    startLine: 80
+    startLine: 83
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core

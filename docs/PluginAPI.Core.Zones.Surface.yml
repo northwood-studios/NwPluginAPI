@@ -31,7 +31,6 @@ items:
     content: 'public class Surface : FacilityRoom'
     content.vb: >-
       Public Class Surface
-
           Inherits FacilityRoom
   inheritance:
   - System.Object

@@ -37,7 +37,6 @@ items:
     content: 'public class LightZone : FacilityZone'
     content.vb: >-
       Public Class LightZone
-
           Inherits FacilityZone
   inheritance:
   - System.Object
@@ -79,6 +78,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
+  summary: "\nGets the zone type.\n"
   example: []
   syntax:
     content: public override FacilityZone ZoneType { get; }
@@ -118,16 +118,18 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
+  summary: "\nGets all rooms of specific type.\n"
   example: []
   syntax:
     content: >-
       public override List<T> GetRooms<T>()
-
           where T : FacilityRoom
     typeParameters:
     - id: T
+      description: The tyep of rooms.
     return:
       type: System.Collections.Generic.List{{T}}
+      description: List of all rooms.
     content.vb: Public Overrides Function GetRooms(Of T As FacilityRoom) As List(Of T)
   overridden: PluginAPI.Core.Zones.FacilityZone.GetRooms``1
   overload: PluginAPI.Core.Zones.LightZone.GetRooms*
@@ -240,16 +242,20 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
+  summary: "\nGets surface room from room identifier.\n"
   example: []
   syntax:
     content: public override bool TryGetRoom(RoomIdentifier roomIdentity, out FacilityRoom room)
     parameters:
     - id: roomIdentity
       type: MapGeneration.RoomIdentifier
+      description: The room identifier.
     - id: room
       type: PluginAPI.Core.Zones.FacilityRoom
+      description: The facility room.
     return:
       type: System.Boolean
+      description: Whether or not the room was found.
     content.vb: Public Overrides Function TryGetRoom(roomIdentity As RoomIdentifier, ByRef room As FacilityRoom) As Boolean
   overridden: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
   overload: PluginAPI.Core.Zones.LightZone.TryGetRoom*

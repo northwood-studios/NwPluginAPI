@@ -28,13 +28,12 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nRepresents player pre coin flip event cancellation data.\n"
+  summary: "\nRepresents PlayerPreCoinFlip event cancellation data.\n"
   example: []
   syntax:
     content: 'public readonly struct PlayerPreCoinFlipCancellationData : IEventCancellation'
     content.vb: >-
       Public Structure PlayerPreCoinFlipCancellationData
-
           Implements IEventCancellation
   implements:
   - PluginAPI.Events.IEventCancellation
@@ -74,6 +73,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
+  summary: "\nDetermines whether event is cancelled.\n"
   example: []
   syntax:
     content: public readonly bool IsCancelled { get; }
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeaveUnchanged
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 263
+    startLine: 259
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -182,7 +182,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Override
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 272
+    startLine: 268
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -223,7 +223,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PreventFlip
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 279
+    startLine: 275
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events

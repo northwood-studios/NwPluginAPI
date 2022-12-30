@@ -34,13 +34,12 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nRepresents preauth event cancellation data.\n"
+  summary: "\nRepresents PlayerPreauth event cancellation data.\n"
   example: []
   syntax:
     content: 'public readonly struct PreauthCancellationData : IEventCancellation'
     content.vb: >-
       Public Structure PreauthCancellationData
-
           Implements IEventCancellation
   implements:
   - PluginAPI.Events.IEventCancellation
@@ -80,6 +79,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
+  summary: "\nDetermines whether event is cancelled.\n"
   example: []
   syntax:
     content: public readonly bool IsCancelled { get; }

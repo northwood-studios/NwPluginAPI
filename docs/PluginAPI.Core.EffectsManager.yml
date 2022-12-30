@@ -116,7 +116,6 @@ items:
   syntax:
     content: >-
       public T ChangeState<T>(byte intensity, float duration = 0F, bool addDuration = false)
-
           where T : StatusEffectBase
     parameters:
     - id: intensity
@@ -249,7 +248,6 @@ items:
   syntax:
     content: >-
       public T EnableEffect<T>(float duration = 0F, bool addDuration = false)
-
           where T : StatusEffectBase
     parameters:
     - id: duration
@@ -300,7 +298,6 @@ items:
   syntax:
     content: >-
       public T DisableEffect<T>()
-
           where T : StatusEffectBase
     typeParameters:
     - id: T
@@ -344,7 +341,6 @@ items:
   syntax:
     content: >-
       public T GetEffect<T>()
-
           where T : StatusEffectBase
     typeParameters:
     - id: T
@@ -388,7 +384,6 @@ items:
   syntax:
     content: >-
       public bool TryGetEffect<T>(out T statusEffect)
-
           where T : StatusEffectBase
     parameters:
     - id: statusEffect

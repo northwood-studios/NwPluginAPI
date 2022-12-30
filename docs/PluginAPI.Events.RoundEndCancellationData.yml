@@ -1,40 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  id: PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.RoundEndCancellationData
+  commentId: T:PluginAPI.Events.RoundEndCancellationData
+  id: RoundEndCancellationData
   parent: PluginAPI.Events
   children:
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  - PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  - PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
+  - PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
+  - PluginAPI.Events.RoundEndCancellationData.Delay
+  - PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
+  - PluginAPI.Events.RoundEndCancellationData.IsCancelled
   langs:
   - csharp
   - vb
-  name: PlayerCheckReservedSlotCancellationData
-  nameWithType: PlayerCheckReservedSlotCancellationData
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  name: RoundEndCancellationData
+  nameWithType: RoundEndCancellationData
+  fullName: PluginAPI.Events.RoundEndCancellationData
   type: Struct
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: PlayerCheckReservedSlotCancellationData
+    id: RoundEndCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 201
+    startLine: 290
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nRepresents PlayerCheckReservedSlot event cancellation data.\n"
+  summary: "\nRepresents RoundEnd event cancellation data.\n"
   example: []
   syntax:
-    content: 'public readonly struct PlayerCheckReservedSlotCancellationData : IEventCancellation'
+    content: 'public readonly struct RoundEndCancellationData : IEventCancellation'
     content.vb: >-
-      Public Structure PlayerCheckReservedSlotCancellationData
+      Public Structure RoundEndCancellationData
           Implements IEventCancellation
   implements:
   - PluginAPI.Events.IEventCancellation
@@ -52,16 +51,16 @@ items:
   modifiers.vb:
   - Public
   - Structure
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
-  commentId: P:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+- uid: PluginAPI.Events.RoundEndCancellationData.IsCancelled
+  commentId: P:PluginAPI.Events.RoundEndCancellationData.IsCancelled
   id: IsCancelled
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  parent: PluginAPI.Events.RoundEndCancellationData
   langs:
   - csharp
   - vb
   name: IsCancelled
-  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  nameWithType: RoundEndCancellationData.IsCancelled
+  fullName: PluginAPI.Events.RoundEndCancellationData.IsCancelled
   type: Property
   source:
     remote:
@@ -70,7 +69,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 204
+    startLine: 293
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -82,7 +81,7 @@ items:
     return:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsCancelled As Boolean
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled*
+  overload: PluginAPI.Events.RoundEndCancellationData.IsCancelled*
   implements:
   - PluginAPI.Events.IEventCancellation.IsCancelled
   modifiers.csharp:
@@ -92,183 +91,151 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  id: BypassReservedSlotsLimit
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.RoundEndCancellationData.Delay
+  commentId: F:PluginAPI.Events.RoundEndCancellationData.Delay
+  id: Delay
+  parent: PluginAPI.Events.RoundEndCancellationData
   langs:
   - csharp
   - vb
-  name: BypassReservedSlotsLimit
-  nameWithType: PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassReservedSlotsLimit
+  name: Delay
+  nameWithType: RoundEndCancellationData.Delay
+  fullName: PluginAPI.Events.RoundEndCancellationData.Delay
   type: Field
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: BypassReservedSlotsLimit
+    id: Delay
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 209
+    startLine: 295
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nDetermines whether the player should be allowed to join unconditionally.\n"
-  example: []
   syntax:
-    content: public readonly bool BypassReservedSlotsLimit
+    content: public readonly float Delay
     return:
-      type: System.Boolean
-    content.vb: Public ReadOnly BypassReservedSlotsLimit As Boolean
+      type: System.Single
+    content.vb: Public ReadOnly Delay As Single
   modifiers.csharp:
   - public
   - readonly
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  commentId: F:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  id: HasReservedSlot
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
+  commentId: M:PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
+  id: AllowRoundEnd
+  parent: PluginAPI.Events.RoundEndCancellationData
   langs:
   - csharp
   - vb
-  name: HasReservedSlot
-  nameWithType: PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.HasReservedSlot
-  type: Field
-  source:
-    remote:
-      path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: HasReservedSlot
-    path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 212
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Events
-  syntax:
-    content: public readonly bool HasReservedSlot
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly HasReservedSlot As Boolean
-  modifiers.csharp:
-  - public
-  - readonly
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  id: LeaveUnchanged
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  langs:
-  - csharp
-  - vb
-  name: LeaveUnchanged()
-  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged()
+  name: AllowRoundEnd()
+  nameWithType: RoundEndCancellationData.AllowRoundEnd()
+  fullName: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd()
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: LeaveUnchanged
+    id: AllowRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 225
+    startLine: 307
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nDoesn&apos;t override the reserved slot check.\n"
+  summary: "\nAllows the round end.\n"
   example: []
   syntax:
-    content: public static PlayerCheckReservedSlotCancellationData LeaveUnchanged()
+    content: public static RoundEndCancellationData AllowRoundEnd()
     return:
-      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-      description: The <xref href="PluginAPI.Events.PlayerCheckReservedSlotCancellationData" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Shared Function LeaveUnchanged As PlayerCheckReservedSlotCancellationData
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged*
+      type: PluginAPI.Events.RoundEndCancellationData
+      description: The <xref href="PluginAPI.Events.RoundEndCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function AllowRoundEnd As RoundEndCancellationData
+  overload: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
-  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
-  id: Override(System.Boolean)
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
+  commentId: M:PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
+  id: DelayRoundEnd(System.Single)
+  parent: PluginAPI.Events.RoundEndCancellationData
   langs:
   - csharp
   - vb
-  name: Override(Boolean)
-  nameWithType: PlayerCheckReservedSlotCancellationData.Override(Boolean)
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override(System.Boolean)
+  name: DelayRoundEnd(Single)
+  nameWithType: RoundEndCancellationData.DelayRoundEnd(Single)
+  fullName: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: Override
+    id: DelayRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 233
+    startLine: 316
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nOverrides a reserved slot check.\n"
+  summary: "\nDelays the round end.\n"
   example: []
   syntax:
-    content: public static PlayerCheckReservedSlotCancellationData Override(bool hasReservedSlot)
+    content: public static RoundEndCancellationData DelayRoundEnd(float delay)
     parameters:
-    - id: hasReservedSlot
-      type: System.Boolean
-      description: Indicating whether or not the player has a reserved slot.
+    - id: delay
+      type: System.Single
+      description: Determines the delay (in seconds).
     return:
-      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-      description: The <xref href="PluginAPI.Events.PlayerCheckReservedSlotCancellationData" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Shared Function Override(hasReservedSlot As Boolean) As PlayerCheckReservedSlotCancellationData
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
+      type: PluginAPI.Events.RoundEndCancellationData
+      description: The <xref href="PluginAPI.Events.RoundEndCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function DelayRoundEnd(delay As Single) As RoundEndCancellationData
+  overload: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  commentId: M:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  id: BypassCheck
-  parent: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
+  commentId: M:PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
+  id: AbortRoundEnd
+  parent: PluginAPI.Events.RoundEndCancellationData
   langs:
   - csharp
   - vb
-  name: BypassCheck()
-  nameWithType: PlayerCheckReservedSlotCancellationData.BypassCheck()
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck()
+  name: AbortRoundEnd()
+  nameWithType: RoundEndCancellationData.AbortRoundEnd()
+  fullName: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd()
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: BypassCheck
+    id: AbortRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 240
+    startLine: 328
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nBypasses the check of free reserved slots on the server and allows the connection unconditionally.\n"
+  summary: "\nPermanently aborts the round end.\n"
   example: []
   syntax:
-    content: public static PlayerCheckReservedSlotCancellationData BypassCheck()
+    content: public static RoundEndCancellationData AbortRoundEnd()
     return:
-      type: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-      description: ''
-    content.vb: Public Shared Function BypassCheck As PlayerCheckReservedSlotCancellationData
-  overload: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck*
+      type: PluginAPI.Events.RoundEndCancellationData
+      description: The <xref href="PluginAPI.Events.RoundEndCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function AbortRoundEnd As RoundEndCancellationData
+  overload: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd*
   modifiers.csharp:
   - public
   - static
@@ -555,11 +522,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+- uid: PluginAPI.Events.RoundEndCancellationData.IsCancelled*
+  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.IsCancelled
   name: IsCancelled
-  nameWithType: PlayerCheckReservedSlotCancellationData.IsCancelled
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.IsCancelled
+  nameWithType: RoundEndCancellationData.IsCancelled
+  fullName: PluginAPI.Events.RoundEndCancellationData.IsCancelled
 - uid: PluginAPI.Events.IEventCancellation.IsCancelled
   commentId: P:PluginAPI.Events.IEventCancellation.IsCancelled
   parent: PluginAPI.Events.IEventCancellation
@@ -573,24 +540,34 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-  commentId: T:PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Events.RoundEndCancellationData
+  commentId: T:PluginAPI.Events.RoundEndCancellationData
   parent: PluginAPI.Events
-  name: PlayerCheckReservedSlotCancellationData
-  nameWithType: PlayerCheckReservedSlotCancellationData
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  name: LeaveUnchanged
-  nameWithType: PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.LeaveUnchanged
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
-  name: Override
-  nameWithType: PlayerCheckReservedSlotCancellationData.Override
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.Override
-- uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck*
-  commentId: Overload:PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
-  name: BypassCheck
-  nameWithType: PlayerCheckReservedSlotCancellationData.BypassCheck
-  fullName: PluginAPI.Events.PlayerCheckReservedSlotCancellationData.BypassCheck
+  name: RoundEndCancellationData
+  nameWithType: RoundEndCancellationData
+  fullName: PluginAPI.Events.RoundEndCancellationData
+- uid: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd*
+  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
+  name: AllowRoundEnd
+  nameWithType: RoundEndCancellationData.AllowRoundEnd
+  fullName: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd*
+  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd
+  name: DelayRoundEnd
+  nameWithType: RoundEndCancellationData.DelayRoundEnd
+  fullName: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd
+- uid: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd*
+  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
+  name: AbortRoundEnd
+  nameWithType: RoundEndCancellationData.AbortRoundEnd
+  fullName: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd

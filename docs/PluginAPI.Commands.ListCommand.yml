@@ -38,7 +38,6 @@ items:
       <CommandHandler(GetType(PluginsCommand))>
 
       Public Class ListCommand
-
           Implements ICommand
   inheritance:
   - System.Object
@@ -120,7 +119,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Commands/ListCommand.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
@@ -158,7 +157,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Commands/ListCommand.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
@@ -196,7 +195,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Execute
     path: ../NwPluginAPI/Commands/ListCommand.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands

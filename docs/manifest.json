@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "[REDACTED]/NwPluginAPI.Docs",
+  "source_base_path": "[REDACTED]/NwPluginAPI/NwPluginAPI.Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -159,7 +159,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 7,
-          "skipped_file_count": 7
+          "skipped_file_count": 6
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

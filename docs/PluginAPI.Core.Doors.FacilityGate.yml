@@ -34,7 +34,6 @@ items:
     content: 'public class FacilityGate : FacilityDoor'
     content.vb: >-
       Public Class FacilityGate
-
           Inherits FacilityDoor
   inheritance:
   - System.Object

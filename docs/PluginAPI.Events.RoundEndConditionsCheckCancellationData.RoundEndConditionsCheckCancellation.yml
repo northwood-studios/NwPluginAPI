@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  commentId: T:PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  id: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsNotSatisfied
+  - PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsSatisfied
+  - PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.None
+  langs:
+  - csharp
+  - vb
+  name: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  nameWithType: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  type: Enum
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoundEndConditionsCheckCancellation
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 362
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public enum RoundEndConditionsCheckCancellation
+    content.vb: Public Enum RoundEndConditionsCheckCancellation
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.None
+  commentId: F:PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.None
+  id: None
+  parent: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.None
+  fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.None
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: None
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 364
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: None = 0
+    return:
+      type: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsSatisfied
+  commentId: F:PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsSatisfied
+  id: ConditionsSatisfied
+  parent: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  langs:
+  - csharp
+  - vb
+  name: ConditionsSatisfied
+  nameWithType: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsSatisfied
+  fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsSatisfied
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ConditionsSatisfied
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 365
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: ConditionsSatisfied = 1
+    return:
+      type: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsNotSatisfied
+  commentId: F:PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsNotSatisfied
+  id: ConditionsNotSatisfied
+  parent: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  langs:
+  - csharp
+  - vb
+  name: ConditionsNotSatisfied
+  nameWithType: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsNotSatisfied
+  fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation.ConditionsNotSatisfied
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventCancellation.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ConditionsNotSatisfied
+    path: ../NwPluginAPI/Events/IEventCancellation.cs
+    startLine: 366
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: ConditionsNotSatisfied = 2
+    return:
+      type: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  commentId: T:PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  parent: PluginAPI.Events
+  name: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  nameWithType: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation

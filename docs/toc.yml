@@ -213,6 +213,12 @@
     name: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
   - uid: PluginAPI.Events.PreauthCancellationData
     name: PreauthCancellationData
+  - uid: PluginAPI.Events.RoundEndCancellationData
+    name: RoundEndCancellationData
+  - uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData
+    name: RoundEndConditionsCheckCancellationData
+  - uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+    name: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
 - uid: PluginAPI.Helpers
   name: PluginAPI.Helpers
   items:

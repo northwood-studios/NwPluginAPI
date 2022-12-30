@@ -23,7 +23,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CoinFlipCancellation
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 282
+    startLine: 278
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -54,7 +54,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: None
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 284
+    startLine: 280
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -86,7 +86,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Heads
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 285
+    startLine: 281
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Tails
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 286
+    startLine: 282
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -150,7 +150,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PreventFlip
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 287
+    startLine: 283
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events

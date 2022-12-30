@@ -36,9 +36,7 @@ items:
       <AttributeUsage(AttributeTargets.Method, AllowMultiple:=False)>
 
       Public Class PluginCommandAliases
-
           Inherits Attribute
-
           Implements _Attribute
   inheritance:
   - System.Object

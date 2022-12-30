@@ -26,6 +26,7 @@ items:
   - PluginAPI.Core.Statistics.Round.StartTimestamp
   - PluginAPI.Core.Statistics.Round.TotalKilledPlayers
   - PluginAPI.Core.Statistics.Round.TotalScpKills
+  - PluginAPI.Core.Statistics.Round.WarheadDetonated
   - PluginAPI.Core.Statistics.Round.WarheadKills
   - PluginAPI.Core.Statistics.Round.ZombiesAlive
   - PluginAPI.Core.Statistics.Round.ZombiesChanged
@@ -306,7 +307,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ClassDAlive
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 102
+    startLine: 103
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -341,7 +342,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScientistsStart
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 103
+    startLine: 104
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -376,7 +377,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScientistsDead
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -411,7 +412,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScientistsEscaped
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 109
+    startLine: 110
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -448,7 +449,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScientistsAlive
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 110
+    startLine: 112
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -483,7 +484,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChaosInsurgencyStart
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 111
+    startLine: 113
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -518,7 +519,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChaosInsurgencyDead
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 112
+    startLine: 114
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -553,7 +554,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChaosInsurgencyAlive
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 113
+    startLine: 115
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -588,7 +589,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MtfAndGuardsStart
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 114
+    startLine: 116
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -623,7 +624,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MtfAndGuardsDead
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 115
+    startLine: 117
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -658,7 +659,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MtfAndGuardsAlive
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 116
+    startLine: 118
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -693,7 +694,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScpsStart
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 117
+    startLine: 119
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -728,7 +729,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScpsDead
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 118
+    startLine: 120
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -763,7 +764,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TotalScpKills
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 123
+    startLine: 125
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -800,7 +801,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScpsAlive
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 128
+    startLine: 130
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -837,7 +838,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZombiesAlive
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 129
+    startLine: 132
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -872,7 +873,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZombiesChanged
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 134
+    startLine: 137
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -909,7 +910,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: WarheadKills
     path: ../NwPluginAPI/Core/Statistics.cs
-    startLine: 135
+    startLine: 139
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -920,6 +921,43 @@ items:
       type: System.Int32
     content.vb: Public Property WarheadKills As Integer
   overload: PluginAPI.Core.Statistics.Round.WarheadKills*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Core.Statistics.Round.WarheadDetonated
+  commentId: P:PluginAPI.Core.Statistics.Round.WarheadDetonated
+  id: WarheadDetonated
+  parent: PluginAPI.Core.Statistics.Round
+  langs:
+  - csharp
+  - vb
+  name: WarheadDetonated
+  nameWithType: Statistics.Round.WarheadDetonated
+  fullName: PluginAPI.Core.Statistics.Round.WarheadDetonated
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Statistics.cs
+      branch: master
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: WarheadDetonated
+    path: ../NwPluginAPI/Core/Statistics.cs
+    startLine: 144
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nProvides information about Alpha Warhead detonation status.\n"
+  example: []
+  syntax:
+    content: public bool WarheadDetonated { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property WarheadDetonated As Boolean
+  overload: PluginAPI.Core.Statistics.Round.WarheadDetonated*
   modifiers.csharp:
   - public
   - get
@@ -1365,3 +1403,15 @@ references:
   name: WarheadKills
   nameWithType: Statistics.Round.WarheadKills
   fullName: PluginAPI.Core.Statistics.Round.WarheadKills
+- uid: PluginAPI.Core.Statistics.Round.WarheadDetonated*
+  commentId: Overload:PluginAPI.Core.Statistics.Round.WarheadDetonated
+  name: WarheadDetonated
+  nameWithType: Statistics.Round.WarheadDetonated
+  fullName: PluginAPI.Core.Statistics.Round.WarheadDetonated
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

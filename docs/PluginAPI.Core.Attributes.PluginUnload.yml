@@ -34,9 +34,7 @@ items:
       <AttributeUsage(AttributeTargets.Method, AllowMultiple:=False)>
 
       Public Class PluginUnload
-
           Inherits Attribute
-
           Implements _Attribute
   inheritance:
   - System.Object

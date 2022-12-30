@@ -331,7 +331,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
-    startLine: 55
+    startLine: 56
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
@@ -339,7 +339,6 @@ items:
   syntax:
     content: >-
       public T GetComponent<T>(bool globalSearch = false, bool childSearch = false)
-
           where T : MonoBehaviour
     parameters:
     - id: globalSearch
@@ -377,7 +376,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
-    startLine: 88
+    startLine: 89
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
@@ -385,7 +384,6 @@ items:
   syntax:
     content: >-
       public bool TryGetComponent<T>(out T component, bool globalSearch = false, bool childSearch = false)
-
           where T : MonoBehaviour
     parameters:
     - id: component
@@ -425,7 +423,7 @@ items:
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
-    startLine: 144
+    startLine: 146
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones

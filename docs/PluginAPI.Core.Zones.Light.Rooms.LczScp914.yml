@@ -31,7 +31,6 @@ items:
     content: 'public class LczScp914 : LczRoom'
     content.vb: >-
       Public Class LczScp914
-
           Inherits LczRoom
   inheritance:
   - System.Object

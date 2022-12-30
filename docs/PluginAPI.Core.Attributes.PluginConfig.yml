@@ -37,9 +37,7 @@ items:
       <AttributeUsage(AttributeTargets.Field, AllowMultiple:=False)>
 
       Public Class PluginConfig
-
           Inherits Attribute
-
           Implements _Attribute
   inheritance:
   - System.Object
