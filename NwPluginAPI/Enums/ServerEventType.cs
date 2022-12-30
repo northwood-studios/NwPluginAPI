@@ -1,3 +1,6 @@
+using Footprinting;
+using PluginAPI.Events;
+
 namespace PluginAPI.Enums
 {
 	using CommandSystem;
@@ -20,6 +23,8 @@ namespace PluginAPI.Enums
 	using UnityEngine;
 	using MapGeneration;
 	using Interactables.Interobjects.DoorUtils;
+	using Interactables.Interobjects;
+	using Scp914;
 
 	/// <summary>
 	/// Represents server event types.
@@ -31,6 +36,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerJoined = 0,
 
@@ -39,6 +45,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerLeft = 1,
 
@@ -60,19 +67,23 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="int"/> announcement type.
+        /// Event is NOT cancellable.
         /// </remarks>
         LczDecontaminationAnnouncement = 4,
 
         /// <summary>
         /// Executed when map generates.
         /// </summary>
+        /// <remarks>
+        /// Event is NOT cancellable.
+        /// </remarks>
         MapGenerated = 5,
 
         /// <summary>
         /// Executed when grenade explodes.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="ItemPickupBase"/> pickup.
+        /// Parameters: <see cref="Footprint"/> thrower, <see cref="Vector3"/> position, <see cref="ItemPickupBase"/> pickup.
         /// </remarks>
         GrenadeExploded = 6,
 
@@ -80,7 +91,7 @@ namespace PluginAPI.Enums
         /// Executed when item is spawned while generation of map.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="ItemType"/> item.
+        /// Parameters: <see cref="ItemType"/> item, <see cref="Vector3"/> position.
         /// </remarks>
         ItemSpawned = 7,
 
@@ -89,18 +100,25 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="Generator"/> generator.
+        /// Event is NOT cancellable.
         /// </remarks>
         GeneratorActivated = 8,
 
         /// <summary>
         /// Executed when blood is placed.
         /// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Vector3"/> position.
+		/// </remarks>
         PlaceBlood = 9,
 
-        /// <summary>
-        /// Executed when bullet hole is placed.
-        /// </summary>
-        PlaceBulletHole = 10,
+		/// <summary>
+		/// Executed when bullet hole is placed.
+		/// </summary>
+	    /// <remarks>
+		/// Parameters: <see cref="Vector3"/> position.
+		/// </remarks>
+		PlaceBulletHole = 10,
 
         /// <summary>
         /// Executed when player activated generator.
@@ -139,6 +157,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="ushort"/> oldItem, <see cref="ushort"/> newItem.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerChangeItem = 15,
 
@@ -155,6 +174,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> oldTarget, <see cref="IPlayer"/> newTarget.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerChangeSpectator = 17,
 
@@ -242,25 +262,25 @@ namespace PluginAPI.Enums
         /// Executed when player damages someone.
         /// </summary>
         /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="DamageHandlerBase"/> damageHandler.
+        /// Parameters: <see cref="IPlayer"/> target, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
         /// </remarks>
         PlayerDamage = 28,
 
-        /// <summary>
-        /// Executed when player interacts with elevator.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player.
-        /// </remarks>
-        PlayerInteractElevator = 29,
+		/// <summary>
+		/// Executed when player interacts with elevator.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ElevatorChamber"/> elevator
+		/// </remarks>
+		PlayerInteractElevator = 29,
 
-        /// <summary>
-        /// Executed when player interacts with locker.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="Locker"/> locker, <see cref="byte"/> colliderId, <see cref="bool"/> canAccess.
-        /// </remarks>
-        PlayerInteractLocker = 30,
+		/// <summary>
+		/// Executed when player interacts with locker.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Locker"/> locker, <see cref="LockerChamber"/> chamber, <see cref="bool"/> canAccess.
+		/// </remarks>
+		PlayerInteractLocker = 30,
 
         /// <summary>
         /// Executed when player interacts with SCP330.
@@ -270,13 +290,13 @@ namespace PluginAPI.Enums
         /// </remarks>
         PlayerInteractScp330 = 31,
 
-        /// <summary>
-        /// Executed when player interacts with shooting target.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player.
-        /// </remarks>
-        PlayerInteractShootingTarget = 32,
+		/// <summary>
+		/// Executed when player interacts with shooting target.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ShootingTarget"/> shootingTarget
+		/// </remarks>
+		PlayerInteractShootingTarget = 32,
 
         /// <summary>
         /// Executed when player gets kicked from server.
@@ -331,16 +351,17 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="string"/> userid, <see cref="string"/> ipAddress, <see cref="long"/> expiration, <see cref="CentralAuthPreauthFlags"/> flags, <see cref="string"/> country, <see cref="byte[]"/> signature.
+        /// Cancellable with <see cref="PreauthCancellationData"/>.
         /// </remarks>
         PlayerPreauth = 39,
 
-        /// <summary>
-        /// Executed when player receives effect.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerEffect"/> effect.
-        /// </remarks>
-        PlayerReceiveEffect = 40,
+		/// <summary>
+		/// Executed when player receives effect.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerEffect"/> effect, <see cref="byte"/> intensity, <see cref="float"/> duration.
+		/// </remarks>
+		PlayerReceiveEffect = 40,
 
         /// <summary>
         /// Executed when player reloads weapon.
@@ -355,6 +376,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="PlayerRoleBase"/> oldRole, <see cref="RoleTypeId"/> newRole, <see cref="RoleChangeReason"/> reason.
+        /// Event is NOT cancellable.
         /// </remarks>
         PlayerChangeRole = 42,
 
@@ -387,6 +409,7 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="IPlayer"/> player, <see cref="RoleTypeId"/> role.
+        /// Event MIGHT NOT BE cancellable (depends on the situation).
         /// </remarks>
         PlayerSpawn = 46,
 
@@ -398,13 +421,13 @@ namespace PluginAPI.Enums
         /// </remarks>
         RagdollSpawn = 47,
 
-        /// <summary>
-        /// Executed when player throws item.
-        /// </summary>
-        /// <remarks>
-        /// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
-        /// </remarks>
-        PlayerThrowItem = 48,
+		/// <summary>
+		/// Executed when player throws item.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item, <see cref="Rigidbody"/> rigidbody.
+		/// </remarks>
+		PlayerThrowItem = 48,
 
         /// <summary>
         /// Executed when player toggles flashlight.
@@ -475,12 +498,16 @@ namespace PluginAPI.Enums
         /// </summary>
         /// <remarks>
         /// Parameters: <see cref="RoundSummary.LeadingTeam"/> leadingTeam.
+        /// Cancellable with <see cref="RoundEndCancellationData"/>.
         /// </remarks>
         RoundEnd = 57,
 
         /// <summary>
         /// Executed when round restarts.
         /// </summary>
+        /// <remarks>
+        /// Event is NOT cancellable.
+        /// </remarks>
         RoundRestart = 58,
 
 		/// <summary>
@@ -491,13 +518,16 @@ namespace PluginAPI.Enums
 		/// <summary>
 		/// Executed when server waits for players.
 		/// </summary>
+		/// <remarks>
+		/// Event is NOT cancellable.
+		/// </remarks>
 		WaitingForPlayers = 60,
 
 		/// <summary>
 		/// Event executed when warhead is started.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="bool"/> isAutomatic, <see cref="IPlayer"/> player.
+		/// Parameters: <see cref="bool"/> isAutomatic, <see cref="IPlayer"/> player, <see cref="bool"/> isResumed.
 		/// </remarks>
 		WarheadStart = 61,
 
@@ -535,6 +565,7 @@ namespace PluginAPI.Enums
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="string"/> userId, <see cref="bool"/> hasReservedSlot.
+		/// Cancellable with <see cref="PlayerCheckReservedSlotCancellationData"/>.
 		/// </remarks>
 		PlayerCheckReservedSlot = 66,
 
@@ -607,7 +638,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to throw projectile like grenades.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ThrowableItem"/> item, <see cref="float"/> forceAmount, <see cref="float"/> upwardsFactor, <see cref="Vector3"/> torque, <see cref="Vector3"/> velocity.
+		/// Parameters: <see cref="IPlayer"/> thrower, <see cref="ThrowableItem"/> item, <see cref="ThrowableItem.ProjectileSettings"/> projectileSettings, <see cref="bool"/> fullForce.
 		/// </remarks>
 		PlayerThrowProjectile = 76,
 
@@ -615,7 +646,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to activate SCP 914.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// </remarks>
 		Scp914Activate = 77,
 
@@ -623,7 +654,7 @@ namespace PluginAPI.Enums
 		/// Event executed when player tries to change SCP 914 knob.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting, <see cref="Scp914KnobSetting"/> previousKnobSetting.
 		/// </remarks>
 		Scp914KnobChange = 78,
 
@@ -639,7 +670,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP 914 upgrades pickup.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="ItemPickupBase"/> item.
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> outputPosition.
 		/// </remarks>
 		Scp914UpgradePickup = 80,
 
@@ -816,6 +847,7 @@ namespace PluginAPI.Enums
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="BanDetails"/> banDetails, <see cref="BanHandler.BanType"/> banType.
+		/// Event is NOT cancellable if the ban is being updated (BanUpdated event is called first and it's cancellable).
 		/// </remarks>
 		BanIssued = 102,
 
@@ -824,6 +856,7 @@ namespace PluginAPI.Enums
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="string"/> userId, <see cref="BanHandler.BanType"/> banType.
+		/// Event is NOT cancellable if the ban is being updated (BanUpdated event is called first and it's cancellable).
 		/// </remarks>
 		BanRevoked = 103,
 
@@ -839,7 +872,7 @@ namespace PluginAPI.Enums
 		/// Event executed when game console command completes.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="string"/> response.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="string"/> command, <see cref="string[]"/> arguments, <see cref="bool"/> result, <see cref="string"/> response.
 		/// </remarks>
 		PlayerGameConsoleCommandExecuted = 105,
 
@@ -864,6 +897,7 @@ namespace PluginAPI.Enums
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player.
+		/// Cancellable with <see cref="PlayerPreCoinFlipCancellationData"/>.
 		/// </remarks>
 		PlayerPreCoinFlip = 108,
 
@@ -874,5 +908,40 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> isTails.
 		/// </remarks>
 		PlayerCoinFlip = 109,
+
+		/// <summary>
+		/// Executed when player interacts with a generator.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Generator"/> generator, <see cref="Scp079Generator.GeneratorColliderId"/> generatorColliderId.
+		/// </remarks>
+		PlayerInteractGenerator = 110,
+
+		/// <summary>
+		/// Executed when round end conditions are checked.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="bool"/> baseGameConditionsSatisfied
+		/// Cancellable with <see cref="RoundEndConditionsCheckCancellationData"/>.
+		/// </remarks>
+		RoundEndConditionsCheck = 111,
+
+		/// <summary>
+		/// Executed after a pickup is upgraded by the SCP-914.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition.
+		/// Event is NOT cancellable.
+		/// </remarks>
+		Scp914PickupUpgraded = 112,
+
+		/// <summary>
+		/// Executed after SCP-914 upgrades items in a player inventory.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// Event is NOT cancellable.
+		/// </remarks>
+		Scp914InventoryItemUpgraded = 113,
 	}
 }

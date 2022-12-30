@@ -1,4 +1,9 @@
-﻿namespace TemplatePlugin
+﻿using Footprinting;
+using Interactables.Interobjects;
+using InventorySystem.Items.ThrowableProjectiles;
+using UnityEngine;
+
+namespace TemplatePlugin
 {
 	using CommandSystem;
 	using AdminToys;
@@ -109,13 +114,13 @@
         }
 
         [PluginEvent(ServerEventType.GrenadeExploded)]
-        void OnGrenadeExploded(ItemPickupBase item)
+        void OnGrenadeExploded(Footprint owner, Vector3 position, ItemPickupBase item)
         {
             Log.Info($"Grenade &6{item.NetworkInfo.ItemId}&r thrown by &6{item.PreviousOwner.Nickname}&r exploded at &6{item.NetworkInfo.RelativePosition.ToString()}&r");
         }
 
         [PluginEvent(ServerEventType.ItemSpawned)]
-        void OnItemSpawned(ItemType item)
+        void OnItemSpawned(ItemType item, Vector3 position)
         {
             Log.Info($"Item &6{item}&r spawned on map");
         }
@@ -123,19 +128,19 @@
         [PluginEvent(ServerEventType.GeneratorActivated)]
         void OnGeneratorActivated(Scp079Generator gen)
         {
-            Log.Info($"Generator activated");
+            Log.Info("Generator activated");
         }
 
         [PluginEvent(ServerEventType.PlaceBlood)]
-        void OnPlaceBlood()
+        void OnPlaceBlood(MyPlayer player, Vector3 position)
         {
-            Log.Info($"Blood placed on map");
+            Log.Info($"Player &6{player.Nickname}&r blood placed on map position &6{position}&r");
         }
 
         [PluginEvent(ServerEventType.PlaceBulletHole)]
-        void OnPlaceBulletHole()
+        void OnPlaceBulletHole( Vector3 position)
         {
-            Log.Info($"Bullet hole placed on map");
+            Log.Info($"Bullet hole has been placed on map. Position &6{position}&r.");
         }
 
         [PluginEvent(ServerEventType.PlayerActivateGenerator)]
@@ -295,9 +300,9 @@
 		}
 
         [PluginEvent(ServerEventType.PlayerReceiveEffect)]
-        void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect, float duration)
+        void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect, byte intensity, float duration)
         {
-            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) received effect &6{effect}&r.");
+            Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) received effect &6{effect}&r with an intensity of &6{intensity}&r.");
         }
 
         [PluginEvent(ServerEventType.PlayerReloadWeapon)]
@@ -345,7 +350,7 @@
         }
 
         [PluginEvent(ServerEventType.PlayerThrowItem)]
-        void OnThrowItem(MyPlayer plr, ItemBase item)
+        void OnThrowItem(MyPlayer plr, ItemBase item, Rigidbody rb)
         {
             Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) thrown item &6{item.ItemTypeId}&r");
         }
@@ -399,21 +404,21 @@
         }
 
 		[PluginEvent(ServerEventType.PlayerInteractShootingTarget)]
-		void OnInteractWithShootingTarget(MyPlayer plr)
+		void OnInteractWithShootingTarget(MyPlayer plr, ShootingTarget target)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with shooting target.");
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with shooting target in the position {target.transform.position}");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractLocker)]
-		void OnInteractWithLocker(MyPlayer plr, Locker locker, byte colliderId, bool canAccess)
+		void OnInteractWithLocker(MyPlayer plr, Locker locker, LockerChamber chamber, bool canAccess)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) {(canAccess ? "interacted" : "failed to interact")} with locker and chamberId &2{colliderId}&r.");
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) {(canAccess ? "interacted" : "failed to interact")} with locker and chamber is in the position {chamber.transform.position}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractElevator)]
-		void OnInteractWithElevator(MyPlayer plr)
+		void OnInteractWithElevator(MyPlayer plr, ElevatorChamber elevator)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with elevator.");
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with elevator in position &6{elevator.transform.position}&r with the destination in &6{elevator.CurrentDestination.transform.position}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractScp330)]

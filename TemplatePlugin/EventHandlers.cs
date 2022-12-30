@@ -1,4 +1,7 @@
-﻿namespace TemplatePlugin
+﻿using MapGeneration.Distributors;
+using Scp914;
+
+namespace TemplatePlugin
 {
 	using CommandSystem;
 	using Interactables.Interobjects.DoorUtils;
@@ -19,12 +22,12 @@
 	public class EventHandlers
 	{
 		[PluginEvent(ServerEventType.WarheadStart)]
-		public void OnWarheadStart(bool isAutomatic, MyPlayer player)
+		public void OnWarheadStart(bool isAutomatic, MyPlayer player, bool isResumed)
 		{
 			if (player == null)
-				Log.Info($"Warhead detonation started ( isAutomatic: {(isAutomatic ? "yes" : "no")} )");
+				Log.Info($"Warhead detonation started (isAutomatic: {(isAutomatic ? "yes" : "no")}, isResumed: {(isResumed ? "yes" : "no")}).");
 			else
-				Log.Info($"Warhead detonation started by &6{player.Nickname}&r (&6{player.UserId}&r)");
+				Log.Info($"Warhead detonation started by &6{player.Nickname}&r (&6{player.UserId}&r) (isResumed: {(isResumed ? "yes" : "no")}).");
 		}
 
 		[PluginEvent(ServerEventType.WarheadStop)]
@@ -103,9 +106,9 @@
 		}
 
 		[PluginEvent(ServerEventType.PlayerThrowProjectile)]
-		public void OnPlayerThrowProjectile(MyPlayer player, ThrowableItem item, float forceAmount, float upwardsFactor, Vector3 torque, Vector3 velocity)
+		public void OnPlayerThrowProjectile(MyPlayer player, ThrowableItem item, ThrowableItem.ProjectileSettings projectileSettings, bool fullForce)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) throws &2{item.ItemTypeId}&r with force &2{forceAmount}&r");
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) throws &2{item.ItemTypeId}&r with force &2{projectileSettings.StartVelocity}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractDoor)]
@@ -115,15 +118,15 @@
 		}
 
 		[PluginEvent(ServerEventType.Scp914Activate)]
-		public void OnScp914Activate(MyPlayer player)
+		public void OnScp914Activate(MyPlayer player, Scp914KnobSetting knobSetting)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) activated SCP-914");
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) activated SCP-914 with the knob setting at &6{knobSetting}&r");
 		}
 
 		[PluginEvent(ServerEventType.Scp914KnobChange)]
-		public void OnScp914KnobChange(MyPlayer player)
+		public void OnScp914KnobChange(MyPlayer player, Scp914KnobSetting knobSetting, Scp914KnobSetting previousKnobSetting)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) changed knob state of SCP-914 ");
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) changed knob state of SCP-914 from &6{previousKnobSetting}&r to &6{knobSetting}&r");
 		}
 
 		[PluginEvent(ServerEventType.Scp914UpgradeInventory)]
@@ -133,9 +136,9 @@
 		}
 
 		[PluginEvent(ServerEventType.Scp914UpgradePickup)]
-		public void OnScp914UpgradePickup(ItemPickupBase item)
+		public void OnScp914UpgradePickup(ItemPickupBase item, Vector3 outputPosition)
 		{
-			Log.Info($"SCP-914 upgraded pickup &2{item.Info.ItemId}&r!");
+			Log.Info($"SCP-914 upgraded pickup &2{item.Info.ItemId}&r and it is at the exit in the position {outputPosition}");
 		}
 
 		[PluginEvent(ServerEventType.Scp106Stalking)]
@@ -293,7 +296,7 @@
 		}
 
 		[PluginEvent(ServerEventType.PlayerGameConsoleCommandExecuted)]
-		public void OnPlayerGameconsoleCommandExecuted(MyPlayer player, string command, string[] arguments, string response)
+		public void OnPlayerGameconsoleCommandExecuted(MyPlayer player, string command, string[] arguments, bool result, string response)
 		{
 			Log.Info($"&7[&3GameConsole&7]&r Player &6{player.Nickname}&r (&6{player.UserId}&r) used command &6{command}&r{(arguments.Length != 0 ? $" with arguments &6{string.Join(", ", arguments)}&r" : string.Empty)}. Command output: {response}.");
 		}
@@ -314,6 +317,30 @@
 		public void OnPlayerCoinFlip(MyPlayer player, bool isTails)
 		{
 			Log.Info($"&rPlayer &6{player.Nickname}&r (&6{player.UserId}&r) flipped the coin. Flip result: {(isTails ? "tails" : "heads")}.");
+		}
+
+		[PluginEvent(ServerEventType.PlayerInteractGenerator)]
+		public void OnPlayerInteractGenerator(MyPlayer player, Scp079Generator generator, Scp079Generator.GeneratorColliderId colliderId)
+		{
+			Log.Info($"&rPlayer &6{player.Nickname}&r (&6{player.UserId}&r) interact with a generator in the position &2{generator.transform.position}&r");
+		}
+
+		[PluginEvent(ServerEventType.RoundEndConditionsCheck)]
+		public void OnRoundEndConditionsCheck(bool baseGameConditionsSatisfied)
+		{
+			Log.Info("&rRound end conditions are being checked.");
+		}
+
+		[PluginEvent(ServerEventType.Scp914PickupUpgraded)]
+		public void OnScp914PickupUpgraded(ItemPickupBase item, Vector3 newPosition)
+		{
+			Log.Info($"&rItem pickup with ItemID {item.Info.ItemId} has been upgraded in SCP 914.");
+		}
+
+		[PluginEvent(ServerEventType.Scp914InventoryItemUpgraded)]
+		public void OnScp914InventoryItemUpgraded(MyPlayer player, ItemBase item)
+		{
+			Log.Info($"&rItem in inventory of player &6{player.Nickname}&r (&6{player.UserId}&r) with ItemID {item.ItemTypeId} has been upgraded in SCP 914.");
 		}
 	}
 }

@@ -17,7 +17,7 @@ namespace PluginAPI.Events
 	}
 
 	/// <summary>
-	/// Represents preauth event cancellation data.
+	/// Represents PlayerPreauth event cancellation data.
 	/// </summary>
 	public readonly struct PreauthCancellationData : IEventCancellation
 	{
@@ -197,7 +197,7 @@ namespace PluginAPI.Events
 	}
 
 	/// <summary>
-	/// Represents reserved slot check event cancellation data.
+	/// Represents PlayerCheckReservedSlot event cancellation data.
 	/// </summary>
 	public readonly struct PlayerCheckReservedSlotCancellationData : IEventCancellation
 	{
@@ -242,27 +242,23 @@ namespace PluginAPI.Events
 	}
 
 	/// <summary>
-	/// Represents player pre coin flip event cancellation data.
+	/// Represents PlayerPreCoinFlip event cancellation data.
 	/// </summary>
 	public readonly struct PlayerPreCoinFlipCancellationData : IEventCancellation
 	{
 		/// <inheritdoc />
-		public bool IsCancelled { get; }
+		public bool IsCancelled => Cancellation == CoinFlipCancellation.None;
 
 		public CoinFlipCancellation Cancellation { get; }
 
-		private PlayerPreCoinFlipCancellationData(bool isCancelled, CoinFlipCancellation cancellation)
-		{
-			IsCancelled = isCancelled;
-			Cancellation = cancellation;
-		}
+		private PlayerPreCoinFlipCancellationData(CoinFlipCancellation cancellation) => Cancellation = cancellation;
 
 		/// <summary>
 		/// Doesn't override the coin flip result.
 		/// </summary>
 		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
 		public static PlayerPreCoinFlipCancellationData LeaveUnchanged() =>
-			new PlayerPreCoinFlipCancellationData(false, CoinFlipCancellation.None);
+			new PlayerPreCoinFlipCancellationData(CoinFlipCancellation.None);
 
 		/// <returns></returns>
 		/// /// <summary>
@@ -271,14 +267,14 @@ namespace PluginAPI.Events
 		/// <param name="isTails">True if the coin flip result should be tails.</param>
 		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
 		public static PlayerPreCoinFlipCancellationData Override(bool isTails) =>
-			new PlayerPreCoinFlipCancellationData(true, isTails ? CoinFlipCancellation.Tails : CoinFlipCancellation.Heads);
+			new PlayerPreCoinFlipCancellationData(isTails ? CoinFlipCancellation.Tails : CoinFlipCancellation.Heads);
 
 		/// <summary>
 		/// Prevents the coin flip.
 		/// </summary>
 		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
 		public static PlayerPreCoinFlipCancellationData PreventFlip() =>
-			new PlayerPreCoinFlipCancellationData(true, CoinFlipCancellation.PreventFlip);
+			new PlayerPreCoinFlipCancellationData(CoinFlipCancellation.PreventFlip);
 
 		public enum CoinFlipCancellation
 		{
@@ -286,6 +282,89 @@ namespace PluginAPI.Events
 			Heads,
 			Tails,
 			PreventFlip,
+		}
+	}
+
+	/// <summary>
+	/// Represents RoundEnd event cancellation data.
+	/// </summary>
+	public readonly struct RoundEndCancellationData : IEventCancellation
+	{
+		/// <inheritdoc />
+		public bool IsCancelled { get; }
+
+		public readonly float Delay;
+
+		private RoundEndCancellationData(bool isCancelled, float delay)
+		{
+			IsCancelled = isCancelled;
+			Delay = delay;
+		}
+
+		/// <summary>
+		/// Allows the round end.
+		/// </summary>
+		/// <returns>The <see cref="RoundEndCancellationData"/>.</returns>
+		public static RoundEndCancellationData AllowRoundEnd() =>
+			new RoundEndCancellationData(false, 0);
+
+		/// <summary>
+		/// Delays the round end.
+		/// </summary>
+		/// /// <param name="delay">Determines the delay (in seconds).</param>
+		/// <returns>The <see cref="RoundEndCancellationData"/>.</returns>
+		/// <exception cref="ArgumentException"></exception>
+		public static RoundEndCancellationData DelayRoundEnd(float delay)
+		{
+			if (delay <= 0)
+				throw new ArgumentException("Delay must be greater than 0.", nameof(delay));
+
+			return new RoundEndCancellationData(true, delay);
+		}
+
+		/// <summary>
+		/// Permanently aborts the round end.
+		/// </summary>
+		/// <returns>The <see cref="RoundEndCancellationData"/>.</returns>
+		public static RoundEndCancellationData AbortRoundEnd()
+		{
+			return new RoundEndCancellationData(true, 0);
+		}
+	}
+
+	/// <summary>
+	/// Represents RoundEndConditionsCheck event cancellation data.
+	/// </summary>
+	public readonly struct RoundEndConditionsCheckCancellationData : IEventCancellation
+	{
+		/// <inheritdoc />
+		public bool IsCancelled => Cancellation == RoundEndConditionsCheckCancellation.None;
+
+		public readonly RoundEndConditionsCheckCancellation Cancellation;
+
+		private RoundEndConditionsCheckCancellationData(RoundEndConditionsCheckCancellation cancellation) => Cancellation = cancellation;
+
+		/// <summary>
+		/// Doesn't override the round end conditions check result.
+		/// </summary>
+		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
+		public static RoundEndConditionsCheckCancellationData LeaveUnchanged() =>
+			new RoundEndConditionsCheckCancellationData(RoundEndConditionsCheckCancellation.None);
+
+		/// <returns></returns>
+		/// /// <summary>
+		/// Overrides the the round end conditions check result.
+		/// </summary>
+		/// <param name="satisfied">Indicates whether round end conditions are satisifed.</param>
+		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
+		public static RoundEndConditionsCheckCancellationData Override(bool satisfied) =>
+			new RoundEndConditionsCheckCancellationData(satisfied ? RoundEndConditionsCheckCancellation.ConditionsSatisfied : RoundEndConditionsCheckCancellation.ConditionsNotSatisfied);
+
+		public enum RoundEndConditionsCheckCancellation
+		{
+			None,
+			ConditionsSatisfied,
+			ConditionsNotSatisfied
 		}
 	}
 }
