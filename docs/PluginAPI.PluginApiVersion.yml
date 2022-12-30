@@ -101,10 +101,10 @@ items:
   - PluginAPI
   namespace: PluginAPI
   syntax:
-    content: public const string VersionString = "12.0.0-rc.5"
+    content: public const string VersionString = "12.0.0-rc.6"
     return:
       type: System.String
-    content.vb: Public Const VersionString As String = "12.0.0-rc.5"
+    content.vb: Public Const VersionString As String = "12.0.0-rc.6"
   modifiers.csharp:
   - public
   - const
