@@ -633,6 +633,12 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(ItemBase), "item"),
 					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
+			{
+				ServerEventType.Scp914ProcessPlayer, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"),
+					new EventParameter(typeof(Vector3), "outPosition"))
+			},
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)

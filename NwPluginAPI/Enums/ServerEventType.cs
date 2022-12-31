@@ -943,5 +943,13 @@ namespace PluginAPI.Enums
 		/// Event is NOT cancellable.
 		/// </remarks>
 		Scp914InventoryItemUpgraded = 113,
+
+		/// <summary>
+		/// Executed when a player is processed by the SCP-914
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting, <see cref="Vector3"/> outPosition.
+		/// </remarks>
+		Scp914ProcessPlayer = 114,
 	}
 }
