@@ -446,12 +446,14 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp914UpgradeInventory, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(ItemBase), "item"))
+					new EventParameter(typeof(ItemBase), "item"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp914UpgradePickup, new Event(
 					new EventParameter(typeof(ItemPickupBase), "item"),
-					new EventParameter(typeof(Vector3), "outputPosition"))
+					new EventParameter(typeof(Vector3), "outputPosition"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp106TeleportPlayer, new Event(
@@ -622,12 +624,14 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp914PickupUpgraded, new Event(
 					new EventParameter(typeof(ItemPickupBase), "item"),
-					new EventParameter(typeof(Vector3), "newPosition"))
+					new EventParameter(typeof(Vector3), "newPosition"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp914InventoryItemUpgraded, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(ItemBase), "item"))
+					new EventParameter(typeof(ItemBase), "item"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 		};
 

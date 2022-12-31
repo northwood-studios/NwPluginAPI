@@ -661,6 +661,22 @@ namespace PluginAPI.Core
 		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
 
 		/// <summary>
+		/// Gets if the player is SCP.
+		/// </summary>
+		public bool IsScp => ReferenceHub.roleManager.CurrentRole.RoleTypeId is RoleTypeId.Scp049 or RoleTypeId.Scp079
+			or RoleTypeId.Scp096 or RoleTypeId.Scp106 or RoleTypeId.Scp173 or RoleTypeId.Scp0492 or RoleTypeId.Scp939;
+
+		/// <summary>
+		/// Gets if the player has no items in his inventory.
+		/// </summary>
+		public bool IsWithoutItems => ReferenceHub.inventory.UserInventory.Items.Count == 0;
+
+		/// <summary>
+		/// Get if the player has no ammunition.
+		/// </summary>
+		public bool IsOutOfAmmo => ReferenceHub.inventory.UserInventory.ReserveAmmo.All(ammo => ammo.Value == 0);
+
+		/// <summary>
 		/// Gets or sets whether or not the player is disarmed.
 		/// </summary>
 		public bool IsDisarmed

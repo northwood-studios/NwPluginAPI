@@ -279,10 +279,12 @@ public static class EventManager
 			new EventParameter("Scp914.Scp914KnobSetting", false, "previousKnobSetting")) },
 		{ 79, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
 		{ 80, new Event(
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "item"),
-			new EventParameter("UnityEngine.Vector3", false, "outputPosition")) },
+			new EventParameter("UnityEngine.Vector3", false, "outputPosition"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
 		{ 81, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target")) },
@@ -389,9 +391,11 @@ public static class EventManager
 			new EventParameter("System.Boolean", false, "baseGameConditionsSatisfied")) },
 		{ 112, new Event(
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "item"),
-			new EventParameter("UnityEngine.Vector3", false, "newPosition")) },
+			new EventParameter("UnityEngine.Vector3", false, "newPosition"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
 		{ 113, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
 	};
 }
