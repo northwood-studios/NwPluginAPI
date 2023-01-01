@@ -1,4 +1,5 @@
 using Footprinting;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
 
 namespace PluginAPI.Events
 {
@@ -446,12 +447,14 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp914UpgradeInventory, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(ItemBase), "item"))
+					new EventParameter(typeof(ItemBase), "item"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp914UpgradePickup, new Event(
 					new EventParameter(typeof(ItemPickupBase), "item"),
-					new EventParameter(typeof(Vector3), "outputPosition"))
+					new EventParameter(typeof(Vector3), "outputPosition"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp106TeleportPlayer, new Event(
@@ -622,12 +625,25 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp914PickupUpgraded, new Event(
 					new EventParameter(typeof(ItemPickupBase), "item"),
-					new EventParameter(typeof(Vector3), "newPosition"))
+					new EventParameter(typeof(Vector3), "newPosition"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp914InventoryItemUpgraded, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(ItemBase), "item"))
+					new EventParameter(typeof(ItemBase), "item"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
+			},
+			{
+				ServerEventType.Scp914ProcessPlayer, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"),
+					new EventParameter(typeof(Vector3), "outPosition"))
+			},
+			{
+				ServerEventType.Scp079CameraChanged, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp079Camera), "camera"))
 			},
 		};
 

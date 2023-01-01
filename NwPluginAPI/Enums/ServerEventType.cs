@@ -1,4 +1,5 @@
 using Footprinting;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PluginAPI.Events;
 
 namespace PluginAPI.Enums
@@ -662,7 +663,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP 914 upgrades player inventory.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// </remarks>
 		Scp914UpgradeInventory = 79,
 
@@ -670,7 +671,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP 914 upgrades pickup.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> outputPosition.
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> outputPosition, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// </remarks>
 		Scp914UpgradePickup = 80,
 
@@ -930,7 +931,7 @@ namespace PluginAPI.Enums
 		/// Executed after a pickup is upgraded by the SCP-914.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition.
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition <see cref="Scp914KnobSetting"/> knobSetting.
 		/// Event is NOT cancellable.
 		/// </remarks>
 		Scp914PickupUpgraded = 112,
@@ -939,9 +940,26 @@ namespace PluginAPI.Enums
 		/// Executed after SCP-914 upgrades items in a player inventory.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// Event is NOT cancellable.
 		/// </remarks>
 		Scp914InventoryItemUpgraded = 113,
+
+		/// <summary>
+		/// Executed when a player is processed by the SCP-914
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting, <see cref="Vector3"/> outPosition.
+		/// </remarks>
+		Scp914ProcessPlayer = 114,
+
+		/// <summary>
+		/// Executed after a SCP-079 changes camera.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Camera"/> camera.
+		/// </remarks>
+		Scp079CameraChanged = 115,
+
 	}
 }
