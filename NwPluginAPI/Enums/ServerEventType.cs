@@ -960,6 +960,5 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Camera"/> camera.
 		/// </remarks>
 		Scp079CameraChanged = 115,
-
 	}
 }

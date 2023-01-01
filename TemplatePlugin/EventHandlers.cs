@@ -1,4 +1,5 @@
 ﻿using MapGeneration.Distributors;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
 using Scp914;
 
 namespace TemplatePlugin
@@ -130,13 +131,13 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.Scp914UpgradeInventory)]
-		public void OnScp914UpgradeInventory(MyPlayer player, ItemBase item)
+		public void OnScp914UpgradeInventory(MyPlayer player, ItemBase item, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"Item &2{item.ItemTypeId}&r upgraded in inventory of &6{player.Nickname}&r (&6{player.UserId}&r) by SCP-914");
 		}
 
 		[PluginEvent(ServerEventType.Scp914UpgradePickup)]
-		public void OnScp914UpgradePickup(ItemPickupBase item, Vector3 outputPosition)
+		public void OnScp914UpgradePickup(ItemPickupBase item, Vector3 outputPosition, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"SCP-914 upgraded pickup &2{item.Info.ItemId}&r and it is at the exit in the position {outputPosition}");
 		}
@@ -259,6 +260,12 @@ namespace TemplatePlugin
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-049 resurrected body of &6{target.Nickname}&r (&6{target.UserId}&r), ragdoll with class &2{body.Info.RoleType}&r!");
 		}
 
+		[PluginEvent(ServerEventType.Scp079CameraChanged)]
+		public void OnScp079ChangedCamera(MyPlayer player, Scp079Camera camera)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-079 changes camera");
+		}
+
 		[PluginEvent(ServerEventType.Scp049StartResurrectingBody)]
 		public void OnScp049StartResurrectingBody(MyPlayer player, MyPlayer target, BasicRagdoll body, bool canResurrect)
 		{
@@ -338,9 +345,15 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.Scp914InventoryItemUpgraded)]
-		public void OnScp914InventoryItemUpgraded(MyPlayer player, ItemBase item)
+		public void OnScp914InventoryItemUpgraded(MyPlayer player, ItemBase item, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"&rItem in inventory of player &6{player.Nickname}&r (&6{player.UserId}&r) with ItemID {item.ItemTypeId} has been upgraded in SCP 914.");
+		}
+
+		[PluginEvent(ServerEventType.Scp914ProcessPlayer)]
+		public void OnScp914ProcessPlayer(MyPlayer player, Scp914KnobSetting knobSetting, Vector3 outPosition)
+		{
+			Log.Info($"&rSCP-914 process &6{player.Nickname}&r with KnobSetting {knobSetting} and will exit in the {outPosition} position.");
 		}
 	}
 }
