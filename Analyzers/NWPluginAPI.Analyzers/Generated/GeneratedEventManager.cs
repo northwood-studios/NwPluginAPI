@@ -135,7 +135,7 @@ public static class EventManager
 			new EventParameter("AdminToys.ShootingTarget", false, "shootingTarget")) },
 		{ 33, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "issuer"),
+			new EventParameter("CommandSystem.ICommandSender", false, "issuer"),
 			new EventParameter("System.String", false, "reason")) },
 		{ 34, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
