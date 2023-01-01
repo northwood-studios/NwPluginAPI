@@ -302,7 +302,7 @@ namespace PluginAPI.Enums
 		/// Executed when player gets kicked from server.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ICommandSender"/> issuer, ref <see cref="string"/> reason.
 		/// </remarks>
 		PlayerKicked = 33,
 

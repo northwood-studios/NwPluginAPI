@@ -220,7 +220,7 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.PlayerKicked, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(IPlayer), "issuer"),
+					new EventParameter(typeof(ICommandSender), "issuer"),
 					new EventParameter(typeof(string), "reason"))
 			},
 			{
