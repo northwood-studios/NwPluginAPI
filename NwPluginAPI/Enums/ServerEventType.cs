@@ -1,4 +1,5 @@
 using Footprinting;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PluginAPI.Events;
 
 namespace PluginAPI.Enums
@@ -951,5 +952,14 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting, <see cref="Vector3"/> outPosition.
 		/// </remarks>
 		Scp914ProcessPlayer = 114,
+
+		/// <summary>
+		/// Executed after a SCP-079 changes camera.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Camera"/> camera.
+		/// </remarks>
+		Scp079CameraChanged = 115,
+
 	}
 }

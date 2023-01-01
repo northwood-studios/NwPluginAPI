@@ -1,4 +1,5 @@
 using Footprinting;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
 
 namespace PluginAPI.Events
 {
@@ -638,6 +639,11 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"),
 					new EventParameter(typeof(Vector3), "outPosition"))
+			},
+			{
+				ServerEventType.Scp079CameraChanged, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp079Camera), "camera"))
 			},
 		};
 
