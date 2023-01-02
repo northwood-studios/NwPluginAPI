@@ -645,6 +645,37 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(Scp079Camera), "camera"))
 			},
+			{
+				ServerEventType.Scp096AddingTarget, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IPlayer), "target"),
+					new EventParameter(typeof(bool), "isForLook")
+					)
+			},
+			{
+				ServerEventType.Scp096Enraging, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(bool), "clearTime"),
+					new EventParameter(typeof(float), "enragedTimeLeft"))
+			},
+			{
+				ServerEventType.Scp096CalmingDown, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.Scp096Charging, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.Scp096PryingGate, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(PryableDoor), "gateDoor"))
+			},
+			{
+				ServerEventType.ScpTryNotCry, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(DoorVariant), "door"))
+			}
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)

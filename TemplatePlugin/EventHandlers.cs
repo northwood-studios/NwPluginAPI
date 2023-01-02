@@ -1,4 +1,5 @@
-﻿using MapGeneration.Distributors;
+﻿using Interactables.Interobjects;
+using MapGeneration.Distributors;
 using Scp914;
 
 namespace TemplatePlugin
@@ -269,6 +270,41 @@ namespace TemplatePlugin
 		public void OnScp106TeleportPlayer(MyPlayer player, MyPlayer target)
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) teleported player &6{target.Nickname}&r (&6{target.UserId}&r) to pocket dimension as SCP-106");
+		}
+
+		[PluginEvent(ServerEventType.Scp096AddingTarget)]
+		public void OnScp096AddTarget(MyPlayer player, MyPlayer target, bool isForLooking)
+		{
+			Log.Info($"Player &6{target.Nickname}&r (&6{player.UserId}&r) {(isForLooking ? "look" : "shoot")}  player &6{player.Nickname}&r (&6{player.UserId}&r) and was added to the SCP-096 target list");
+		}
+
+		[PluginEvent(ServerEventType.Scp096Enraging)]
+		public void OnScp096Enrage(MyPlayer player, bool clearTime, float enragedTimeLeft)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) went into a state of rage for {enragedTimeLeft} seconds");
+		}
+
+		[PluginEvent(ServerEventType.Scp096CalmingDown)]
+		public void OnScp096CalmDown(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) calm down as SCP-096");
+		}
+
+		[PluginEvent(ServerEventType.Scp096Charging)]
+		public void OnScp096Charge(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) uses its charging ability as SCP-096");
+		}
+
+		[PluginEvent(ServerEventType.Scp096PryingGate)]
+		public void OnScp096PryGate(MyPlayer player, PryableDoor gate)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) breached the gate {gate.name}");
+		}
+
+		public void OnScp096TryingNotCry(MyPlayer player, DoorVariant door)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is trying not to cry in a {(door is null ? "door" : "wall")}");
 		}
 
 		[PluginEvent(ServerEventType.BanIssued)]

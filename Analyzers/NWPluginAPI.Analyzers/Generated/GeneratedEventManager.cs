@@ -401,5 +401,26 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting"),
 			new EventParameter("UnityEngine.Vector3", false, "outPosition")) },
+		{ 115, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera", false, "camera")) },
+		{ 116, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
+			new EventParameter("System.Boolean", false, "isForLook")) },
+		{ 117, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.Boolean", false, "clearTime"),
+			new EventParameter("System.Single", false, "enragedTimeLeft")) },
+		{ 118, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 119, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 120, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("Interactables.Interobjects.PryableDoor", false, "gateDoor")) },
+		{ 121, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("Interactables.Interobjects.DoorUtils.DoorVariant", false, "door")) },
 	};
 }

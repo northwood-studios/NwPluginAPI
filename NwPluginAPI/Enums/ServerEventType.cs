@@ -961,5 +961,53 @@ namespace PluginAPI.Enums
 		/// </remarks>
 		Scp079CameraChanged = 115,
 
+		/// <summary>
+		/// Executes when a player looks at SCP-096.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="bool"/> isForLooking.
+		/// </remarks>
+		Scp096AddingTarget = 116,
+
+		/// <summary>
+		/// Executed when a SCP096 gets angered.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> clearTime, <see cref="float"/> enragedTimeLeft
+		/// </remarks>
+		Scp096Enraging = 117,
+
+		/// <summary>
+		/// Executed when SCP-096 calms down.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		Scp096CalmingDown = 118,
+
+		/// <summary>
+		/// Executed when SCP-096 charges.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		Scp096Charging = 119,
+
+		/// <summary>
+		/// Executed when SCP-096 begins prying a gate.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="PryableDoor"/> gateDoor.
+		/// </remarks>
+		Scp096PryingGate = 120,
+
+		/// <summary>
+		/// Executed when SCP-096 tries not to cry.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door.
+		/// </remarks>
+		/// Door can be null if SCP-096 is crying on a wall
+		ScpTryNotCry = 121,
 	}
 }

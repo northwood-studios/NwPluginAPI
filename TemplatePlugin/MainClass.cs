@@ -265,7 +265,9 @@ namespace TemplatePlugin
 		[PluginEvent(ServerEventType.PlayerKicked)]
 		void OnPlayerKicked(MyPlayer plr, ICommandSender issuer, string reason)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) kicked from server by &6{issuer.Nickname}&r (&6{issuer.UserId}&r) with reason &6{reason}&r.");
+			var playerIssuer = Player.Get(issuer);
+
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) kicked from server by &6{playerIssuer.Nickname}&r (&6{playerIssuer.UserId}&r) with reason &6{reason}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerOpenGenerator)]
