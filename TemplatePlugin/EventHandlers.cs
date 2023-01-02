@@ -302,6 +302,7 @@ namespace TemplatePlugin
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) breached the gate {gate.name}");
 		}
 
+		[PluginEvent(ServerEventType.Scp096TryNotCry)]
 		public void OnScp096TryingNotCry(MyPlayer player, DoorVariant door)
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is trying not to cry in a {(door is null ? "door" : "wall")}");

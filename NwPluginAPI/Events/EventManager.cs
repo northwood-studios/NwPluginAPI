@@ -672,7 +672,7 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(PryableDoor), "gateDoor"))
 			},
 			{
-				ServerEventType.ScpTryNotCry, new Event(
+				ServerEventType.Scp096TryNotCry, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(DoorVariant), "door"))
 			}
