@@ -275,7 +275,7 @@ namespace TemplatePlugin
 		[PluginEvent(ServerEventType.Scp096AddingTarget)]
 		public void OnScp096AddTarget(MyPlayer player, MyPlayer target, bool isForLooking)
 		{
-			Log.Info($"Player &6{target.Nickname}&r (&6{player.UserId}&r) {(isForLooking ? "look" : "shoot")}  player &6{player.Nickname}&r (&6{player.UserId}&r) and was added to the SCP-096 target list");
+			Log.Info($"Player &6{target.Nickname}&r (&6{target.UserId}&r) {(isForLooking ? "look" : "shoot")}  player &6{player.Nickname}&r (&6{player.UserId}&r) and was added to the SCP-096 target list");
 		}
 
 		[PluginEvent(ServerEventType.Scp096Enraging)]
