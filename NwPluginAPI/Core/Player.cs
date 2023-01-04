@@ -998,20 +998,20 @@ namespace PluginAPI.Core
 		/// Adds an Item of specific item type.
 		/// </summary>
 		/// <param name="item">ItemType</param>
-		/// <returns>Returns created ItemBase.</returns>
+		/// <returns>Returns the added item.</returns>
 		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
 
 		/// <summary>
-		/// Remove an item from a player's inventory
+		/// Removes an specific item.
 		/// </summary>
-		/// <param name="itemSerial">Item serial</param>
-		/// <param name="pickup">Item pickup</param>
+		/// <param name="itemSerial">The item serial</param>
+		/// <param name="pickup">The item pickup</param>
 		public void RemoveItem(ushort itemSerial, ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(itemSerial, pickup);
 
 		/// <summary>
-		/// Drop an item from a player's inventory
+		/// Drops an specific item.
 		/// </summary>
-		/// <param name="itemSerial">Item serial</param>
+		/// <param name="itemSerial">The item serial</param>
 		public void DropItem(ushort itemSerial) => ReferenceHub.inventory.ServerDropItem(itemSerial);
 
 		/// <summary>
