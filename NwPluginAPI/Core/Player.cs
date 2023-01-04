@@ -25,6 +25,7 @@ namespace PluginAPI.Core
 	using RemoteAdmin.Communication;
 	using MapGeneration;
 	using CommandSystem;
+	using InventorySystem.Items.Pickups;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -997,7 +998,21 @@ namespace PluginAPI.Core
 		/// Adds an Item of specific item type.
 		/// </summary>
 		/// <param name="item">ItemType</param>
-		public void AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+		/// <returns>Returns created ItemBase.</returns>
+		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+
+		/// <summary>
+		/// Remove an item from a player's inventory
+		/// </summary>
+		/// <param name="itemSerial">Item serial</param>
+		/// <param name="pickup">Item pickup</param>
+		public void RemoveItem(ushort itemSerial, ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(itemSerial, pickup);
+
+		/// <summary>
+		/// Drop an item from a player's inventory
+		/// </summary>
+		/// <param name="itemSerial">Item serial</param>
+		public void DropItem(ushort itemSerial) => ReferenceHub.inventory.ServerDropItem(itemSerial);
 
 		/// <summary>
 		/// Sets the ammo amount of a specific ammo type.
