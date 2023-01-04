@@ -620,8 +620,8 @@ namespace PluginAPI.Core
 		/// </summary>
 		public bool IsOverwatchEnabled
 		{
-			get => ReferenceHub.serverRoles.OverwatchEnabled;
-			set => ReferenceHub.serverRoles.OverwatchEnabled = value;
+			get => ReferenceHub.serverRoles.IsInOverwatch;
+			set => ReferenceHub.serverRoles.IsInOverwatch = value;
 		}
 
 		/// <summary>
