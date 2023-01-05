@@ -1005,26 +1005,38 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Removes an specific item.
 		/// </summary>
-		/// <param name="pickup">The item pickup.</param>
-		public void RemoveItem(ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Info.Serial, pickup);
+		/// <param name="item">The item.</param>
+		public void RemoveItem(Item item) => ReferenceHub.inventory.ServerRemoveItem(item.Serial, item.OriginalObject.PickupDropModel);
 
 		/// <summary>
 		/// Removes an specific item.
 		/// </summary>
-		/// <param name="item">The item base.</param>
-		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.ServerRemoveItem(item.ItemSerial, item.PickupDropModel);
+		/// <param name="pickup">The item pickup.</param>
+		public void RemoveItem(ItemPickup pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Serial, pickup.OriginalObject);
+
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="pickup">The item pickup.</param>
+		public void RemoveItem(ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Info.Serial, pickup);
 
 		/// <summary>
 		/// Drops an specific item.
 		/// </summary>
-		/// <param name="itemSerial">The item serial.</param>
-		public void DropItem(ushort itemSerial) => ReferenceHub.inventory.ServerDropItem(itemSerial);
+		/// <param name="item">The item.</param>
+		public void DropItem(Item item) => ReferenceHub.inventory.ServerDropItem(item.Serial);
 
 		/// <summary>
 		/// Drops an specific item.
 		/// </summary>
 		/// <param name="item">The item base.</param>
 		public void DropItem(ItemBase item) => ReferenceHub.inventory.ServerDropItem(item.ItemSerial);
+
+		/// <summary>
+		/// Drops an specific item.
+		/// </summary>
+		/// <param name="itemSerial">The item serial.</param>
+		public void DropItem(ushort itemSerial) => ReferenceHub.inventory.ServerDropItem(itemSerial);
 
 		/// <summary>
 		/// Sets the ammo amount of a specific ammo type.
