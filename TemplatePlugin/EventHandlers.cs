@@ -1,5 +1,7 @@
+﻿using Interactables.Interobjects;
 ﻿using MapGeneration.Distributors;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
 using Scp914;
 
 namespace TemplatePlugin
@@ -276,6 +278,48 @@ namespace TemplatePlugin
 		public void OnScp106TeleportPlayer(MyPlayer player, MyPlayer target)
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) teleported player &6{target.Nickname}&r (&6{target.UserId}&r) to pocket dimension as SCP-106");
+		}
+
+		[PluginEvent(ServerEventType.Scp096AddingTarget)]
+		public void OnScp096AddTarget(MyPlayer player, MyPlayer target, bool isForLooking)
+		{
+			Log.Info($"Player &6{target.Nickname}&r (&6{target.UserId}&r) {(isForLooking ? "look" : "shoot")}  player &6{player.Nickname}&r (&6{player.UserId}&r) and was added to the SCP-096 target list");
+		}
+
+		[PluginEvent(ServerEventType.Scp096Enraging)]
+		public void OnScp096Enrage(MyPlayer player, float initialDuration)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) went into a state of rage for {initialDuration} seconds");
+		}
+
+		[PluginEvent(ServerEventType.Scp096ChangeState)]
+		public void OnScp096CalmDown(MyPlayer player, Scp096RageState rageState)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) changed its state to {rageState} as SCP-096");
+		}
+
+		[PluginEvent(ServerEventType.Scp096Charging)]
+		public void OnScp096Charge(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) uses its charging ability as SCP-096");
+		}
+
+		[PluginEvent(ServerEventType.Scp096PryingGate)]
+		public void OnScp096PryGate(MyPlayer player, PryableDoor gate)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) breached the gate {gate.name}");
+		}
+
+		[PluginEvent(ServerEventType.Scp096TryNotCry)]
+		public void OnScp096TryingNotCry(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is trying not to cry");
+		}
+
+		[PluginEvent(ServerEventType.Scp096StartCrying)]
+		public void OnScp096StartCrying(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) cancel his TryToNotCry ability");
 		}
 
 		[PluginEvent(ServerEventType.BanIssued)]

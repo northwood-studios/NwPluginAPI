@@ -1,5 +1,6 @@
 using Footprinting;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
 using PluginAPI.Events;
 
 namespace PluginAPI.Enums
@@ -960,5 +961,61 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Camera"/> camera.
 		/// </remarks>
 		Scp079CameraChanged = 115,
+
+		/// <summary>
+		/// Executes when a player looks at SCP-096.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="bool"/> isForLooking.
+		/// </remarks>
+		Scp096AddingTarget = 116,
+
+		/// <summary>
+		/// Executed when a SCP096 gets angered.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="float"/> initialDuration.
+		/// </remarks>
+		Scp096Enraging = 117,
+
+		/// <summary>
+		/// Executed when SCP-096 changes state.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp096RageState"/> rageState.
+		/// </remarks>
+		Scp096ChangeState = 118,
+
+		/// <summary>
+		/// Executed when SCP-096 charges.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		Scp096Charging = 119,
+
+		/// <summary>
+		/// Executed when SCP-096 begins prying a gate.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="PryableDoor"/> gateDoor.
+		/// </remarks>
+		Scp096PryingGate = 120,
+
+		/// <summary>
+		/// Executed when SCP-096 tries not to cry.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player
+		/// </remarks>
+		Scp096TryNotCry = 121,
+
+		/// <summary>
+		/// Executed when SCP-096 cancels its TryToNotCry ability.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player
+		/// </remarks>
+		Scp096StartCrying = 122,
 	}
 }

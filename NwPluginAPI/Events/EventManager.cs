@@ -1,5 +1,6 @@
 using Footprinting;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
 
 namespace PluginAPI.Events
 {
@@ -645,6 +646,40 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(Scp079Camera), "camera"))
 			},
+			{
+				ServerEventType.Scp096AddingTarget, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IPlayer), "target"),
+					new EventParameter(typeof(bool), "isForLook")
+					)
+			},
+			{
+				ServerEventType.Scp096Enraging, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(float), "initialDuration"))
+			},
+			{
+				ServerEventType.Scp096ChangeState, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp096RageState), "rageState"))
+			},
+			{
+				ServerEventType.Scp096Charging, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.Scp096PryingGate, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(PryableDoor), "gateDoor"))
+			},
+			{
+				ServerEventType.Scp096TryNotCry, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.Scp096StartCrying, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			}
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
