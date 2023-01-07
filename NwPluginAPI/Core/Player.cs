@@ -25,6 +25,8 @@ namespace PluginAPI.Core
 	using RemoteAdmin.Communication;
 	using MapGeneration;
 	using CommandSystem;
+	using InventorySystem.Items.Pickups;
+	using PluginAPI.Core.Items;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -620,8 +622,8 @@ namespace PluginAPI.Core
 		/// </summary>
 		public bool IsOverwatchEnabled
 		{
-			get => ReferenceHub.serverRoles.OverwatchEnabled;
-			set => ReferenceHub.serverRoles.OverwatchEnabled = value;
+			get => ReferenceHub.serverRoles.IsInOverwatch;
+			set => ReferenceHub.serverRoles.IsInOverwatch = value;
 		}
 
 		/// <summary>
@@ -1013,7 +1015,44 @@ namespace PluginAPI.Core
 		/// Adds an Item of specific item type.
 		/// </summary>
 		/// <param name="item">ItemType</param>
-		public void AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+		/// <returns>Returns the added item.</returns>
+		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="item">The item.</param>
+		public void RemoveItem(Item item) => ReferenceHub.inventory.ServerRemoveItem(item.Serial, item.OriginalObject.PickupDropModel);
+
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="pickup">The item pickup.</param>
+		public void RemoveItem(ItemPickup pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Serial, pickup.OriginalObject);
+
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="pickup">The item pickup.</param>
+		public void RemoveItem(ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Info.Serial, pickup);
+
+		/// <summary>
+		/// Drops an specific item.
+		/// </summary>
+		/// <param name="item">The item.</param>
+		public void DropItem(Item item) => ReferenceHub.inventory.ServerDropItem(item.Serial);
+
+		/// <summary>
+		/// Drops an specific item.
+		/// </summary>
+		/// <param name="item">The item base.</param>
+		public void DropItem(ItemBase item) => ReferenceHub.inventory.ServerDropItem(item.ItemSerial);
+
+		/// <summary>
+		/// Drops an specific item.
+		/// </summary>
+		/// <param name="itemSerial">The item serial.</param>
+		public void DropItem(ushort itemSerial) => ReferenceHub.inventory.ServerDropItem(itemSerial);
 
 		/// <summary>
 		/// Sets the ammo amount of a specific ammo type.
@@ -1052,16 +1091,14 @@ namespace PluginAPI.Core
 		{
 			if (clearAmmo)
 			{
-				foreach (var ammo in ReferenceHub.inventory.UserInventory.ReserveAmmo.Keys)
-				{
-					ReferenceHub.inventory.ServerSetAmmo(ammo, 0);
-				}
+				ReferenceHub.inventory.UserInventory.ReserveAmmo.Clear();
 			}
 			if (clearItems)
 			{
-				foreach (var item in ReferenceHub.inventory.UserInventory.Items.Values)
+				var inventory = ReferenceHub.inventory.UserInventory;
+				while (inventory.Items.Count > 0)
 				{
-					ReferenceHub.inventory.ServerRemoveItem(item.ItemSerial, null);
+					ReferenceHub.inventory.ServerRemoveItem(inventory.Items.ElementAt(0).Key, null);
 				}
 			}
 		}
