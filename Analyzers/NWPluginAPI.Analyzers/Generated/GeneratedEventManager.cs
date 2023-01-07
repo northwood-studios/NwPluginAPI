@@ -401,5 +401,8 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting"),
 			new EventParameter("UnityEngine.Vector3", false, "outPosition")) },
+		{ 115, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera", false, "camera")) },
 	};
 }
