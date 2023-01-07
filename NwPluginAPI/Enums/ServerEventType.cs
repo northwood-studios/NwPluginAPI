@@ -1008,7 +1008,6 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player
 		/// </remarks>
-		/// Door can be null if SCP-096 is crying on a wall
 		Scp096TryNotCry = 121,
 
 		/// <summary>
