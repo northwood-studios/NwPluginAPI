@@ -1,5 +1,6 @@
 using Footprinting;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
 
 namespace PluginAPI.Events
 {
@@ -655,12 +656,12 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp096Enraging, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(bool), "clearTime"),
-					new EventParameter(typeof(float), "enragedTimeLeft"))
+					new EventParameter(typeof(float), "initialDuration"))
 			},
 			{
-				ServerEventType.Scp096CalmingDown, new Event(
-					new EventParameter(typeof(IPlayer), "player"))
+				ServerEventType.Scp096ChangeState, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp096RageState), "rageState"))
 			},
 			{
 				ServerEventType.Scp096Charging, new Event(
@@ -673,8 +674,11 @@ namespace PluginAPI.Events
 			},
 			{
 				ServerEventType.Scp096TryNotCry, new Event(
-					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(DoorVariant), "door"))
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.Scp096StartCrying, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
 			}
 		};
 

@@ -410,17 +410,18 @@ public static class EventManager
 			new EventParameter("System.Boolean", false, "isForLook")) },
 		{ 117, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("System.Boolean", false, "clearTime"),
-			new EventParameter("System.Single", false, "enragedTimeLeft")) },
+			new EventParameter("System.Single", false, "initialDuration")) },
 		{ 118, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.PlayableScps.Scp096.Scp096RageState", false, "rageState")) },
 		{ 119, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
 		{ 120, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("Interactables.Interobjects.PryableDoor", false, "gateDoor")) },
 		{ 121, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("Interactables.Interobjects.DoorUtils.DoorVariant", false, "door")) },
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 122, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
 	};
 }

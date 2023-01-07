@@ -1,5 +1,6 @@
 using Footprinting;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
 using PluginAPI.Events;
 
 namespace PluginAPI.Enums
@@ -973,17 +974,17 @@ namespace PluginAPI.Enums
 		/// Executed when a SCP096 gets angered.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="bool"/> clearTime, <see cref="float"/> enragedTimeLeft
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="float"/> initialDuration.
 		/// </remarks>
 		Scp096Enraging = 117,
 
 		/// <summary>
-		/// Executed when SCP-096 calms down.
+		/// Executed when SCP-096 changes state.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp096RageState"/> rageState.
 		/// </remarks>
-		Scp096CalmingDown = 118,
+		Scp096ChangeState = 118,
 
 		/// <summary>
 		/// Executed when SCP-096 charges.
@@ -1005,9 +1006,17 @@ namespace PluginAPI.Enums
 		/// Executed when SCP-096 tries not to cry.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="DoorVariant"/> door.
+		/// Parameters: <see cref="IPlayer"/> player
 		/// </remarks>
 		/// Door can be null if SCP-096 is crying on a wall
 		Scp096TryNotCry = 121,
+
+		/// <summary>
+		/// Executed when SCP-096 cancels its TryToNotCry ability.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player
+		/// </remarks>
+		Scp096StartCrying = 122,
 	}
 }
