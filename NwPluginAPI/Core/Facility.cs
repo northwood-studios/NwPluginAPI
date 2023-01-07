@@ -149,7 +149,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets all rooms in facility.
 		/// </summary>
-		public static List<FacilityRoom> Rooms => Zones.Values.SelectMany(x => x.GetRooms()).ToList();
+		public static List<FacilityRoom> Rooms => Zones.Values.Where(z => z.ZoneType is not MapGeneration.FacilityZone.None).SelectMany(x => x.GetRooms()).ToList();
 
 		/// <summary>
 		/// Gets all doors in facility.
