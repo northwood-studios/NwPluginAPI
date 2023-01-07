@@ -17,7 +17,7 @@ namespace PluginAPI.Core.Zones
 		/// <summary>
 		/// Gets all rooms of specific type.
 		/// </summary>
-		/// <typeparam name="T">The tyep of rooms.</typeparam>
+		/// <typeparam name="T">The type of rooms.</typeparam>
 		/// <returns>List of all rooms.</returns>
 		public virtual List<T> GetRooms<T>() where T : FacilityRoom => null;
 
