@@ -1052,16 +1052,14 @@ namespace PluginAPI.Core
 		{
 			if (clearAmmo)
 			{
-				foreach (var ammo in ReferenceHub.inventory.UserInventory.ReserveAmmo.Keys)
-				{
-					ReferenceHub.inventory.ServerSetAmmo(ammo, 0);
-				}
+				ReferenceHub.inventory.UserInventory.ReserveAmmo.Clear();
 			}
 			if (clearItems)
 			{
-				foreach (var item in ReferenceHub.inventory.UserInventory.Items.Values)
+				var inventory = ReferenceHub.inventory.UserInventory;
+				while (inventory.Items.Count > 0)
 				{
-					ReferenceHub.inventory.ServerRemoveItem(item.ItemSerial, null);
+					ReferenceHub.inventory.ServerRemoveItem(inventory.Items.ElementAt(0).Key, null);
 				}
 			}
 		}
