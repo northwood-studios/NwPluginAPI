@@ -247,7 +247,7 @@ namespace PluginAPI.Events
 	public readonly struct PlayerPreCoinFlipCancellationData : IEventCancellation
 	{
 		/// <inheritdoc />
-		public bool IsCancelled => Cancellation == CoinFlipCancellation.None;
+		public bool IsCancelled => Cancellation != CoinFlipCancellation.None;
 
 		public CoinFlipCancellation Cancellation { get; }
 
@@ -338,7 +338,7 @@ namespace PluginAPI.Events
 	public readonly struct RoundEndConditionsCheckCancellationData : IEventCancellation
 	{
 		/// <inheritdoc />
-		public bool IsCancelled => Cancellation == RoundEndConditionsCheckCancellation.None;
+		public bool IsCancelled => Cancellation != RoundEndConditionsCheckCancellation.None;
 
 		public readonly RoundEndConditionsCheckCancellation Cancellation;
 
