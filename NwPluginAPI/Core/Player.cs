@@ -1,3 +1,6 @@
+using PlayerRoles.Voice;
+using RemoteAdmin;
+
 namespace PluginAPI.Core
 {
 	using System;
@@ -663,10 +666,65 @@ namespace PluginAPI.Core
 		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
 
 		/// <summary>
-		/// Gets if the player is SCP.
+		/// Get or set player group.
 		/// </summary>
-		public bool IsScp => ReferenceHub.roleManager.CurrentRole.RoleTypeId is RoleTypeId.Scp049 or RoleTypeId.Scp079
-			or RoleTypeId.Scp096 or RoleTypeId.Scp106 or RoleTypeId.Scp173 or RoleTypeId.Scp0492 or RoleTypeId.Scp939;
+		public UserGroup Group
+		{
+			// Set group is not private but get group yes !?
+			get => ReferenceHub.serverRoles.Group;
+			set => ReferenceHub.serverRoles.SetGroup(value, false);
+		}
+
+		/// <summary>
+		/// Get or set server role color.
+		/// </summary>
+		public string RoleColor
+		{
+			get => ReferenceHub.serverRoles.Network_myColor;
+			set => ReferenceHub.serverRoles.SetColor(value);
+		}
+
+		/// <summary>
+		/// Get or set server role text.
+		/// </summary>
+		public string RoleName
+		{
+			get => ReferenceHub.serverRoles.Network_myText;
+			set => ReferenceHub.serverRoles.SetText(value);
+		}
+
+		/// <summary>
+		/// Gets the player unit name.
+		/// </summary>
+		public string UnitName => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitName : string.Empty;
+
+		/// <summary>
+		/// Get if player has reserved slot.
+		/// </summary>
+		public bool HasReservedSlot => ReservedSlot.HasReservedSlot(UserId, out _);
+
+		/// <summary>
+		/// Gets player velocity.
+		/// </summary>
+		public Vector3 Velocity => ReferenceHub.GetVelocity();
+
+		/*/// <summary>
+		/// Gets player command sender. Oh no field is private
+		/// </summary>
+		public PlayerCommandSender CommandSender => ReferenceHub.queryProcessor._sender;*/
+
+		/// <summary>
+		/// Gets player <see cref="VoiceModule"/>
+		/// <remarks>
+		///  Can be null.
+		/// </remarks>
+		/// </summary>
+		public VoiceModuleBase VoiceModule => ReferenceHub.roleManager.CurrentRole is IVoiceRole voiceRole ? voiceRole.VoiceModule : null;
+
+		/// <summary>
+		/// Gets player <see cref="VoiceChannel"/>.
+		/// </summary>
+		public VoiceChatChannel VoiceChannel => VoiceModule?.CurrentChannel ?? VoiceChatChannel.None;
 
 		/// <summary>
 		/// Gets if the player has no items in his inventory.
@@ -757,9 +815,29 @@ namespace PluginAPI.Core
 		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
 
 		/// <summary>
+		/// Gets if the player is SCP.
+		/// </summary>
+		public bool IsScp => Role.GetTeam() is Team.SCPs;
+
+		/// <summary>
 		/// Gets whether or not the player is human.
 		/// </summary>
 		public bool IsHuman => ReferenceHub.IsHuman();
+
+		/// <summary>
+		/// Gets whether or not the player is Nine Tailed Fox forces.
+		/// </summary>
+		public bool IsNTF => Role.GetTeam() is Team.FoundationForces;
+
+		/// <summary>
+		/// Gets whether or not the player is Chaos Insurgency forces.
+		/// </summary>
+		public bool IsCHI => Role.GetTeam() is Team.ChaosInsurgency;
+
+		/// <summary>
+		/// Gets whether or not the player is tutorial.
+		/// </summary>
+		public bool IsTutorial => Role is RoleTypeId.Tutorial;
 
 		/// <summary>
 		/// Gets whether or not the player is alive
@@ -914,6 +992,35 @@ namespace PluginAPI.Core
 			if (shouldClearPrevious) ClearBroadcasts();
 
 			Server.Instance.GetComponent<Broadcast>().TargetAddElement(ReferenceHub.characterClassManager.connectionToClient, message, duration, type);
+		}
+
+		/// <summary>
+		/// Sets the player server role. why group is private....
+		/// </summary>
+		/// <param name="name">Name of server role to set.</param>
+		/// <param name="group">Group to be set.</param>
+		public void SetServerRole(string name, UserGroup group)
+		{
+			if (ServerStatic.GetPermissionsHandler()._groups.ContainsKey(name))
+			{
+				ServerStatic.GetPermissionsHandler()._groups[name].BadgeColor = group.BadgeColor;
+				ServerStatic.GetPermissionsHandler()._groups[name].BadgeText = name;
+				ServerStatic.GetPermissionsHandler()._groups[name].HiddenByDefault = !group.Cover;
+				ServerStatic.GetPermissionsHandler()._groups[name].Cover = group.Cover;
+
+				ReferenceHub.serverRoles.SetGroup(ServerStatic.GetPermissionsHandler()._groups[name], false, false, group.Cover);
+			}
+			else
+			{
+				ServerStatic.GetPermissionsHandler()._groups.Add(name, group);
+
+				ReferenceHub.serverRoles.SetGroup(group, false, false, group.Cover);
+			}
+
+			if (ServerStatic.GetPermissionsHandler()._members.ContainsKey(UserId))
+				ServerStatic.GetPermissionsHandler()._members[UserId] = name;
+			else
+				ServerStatic.GetPermissionsHandler()._members.Add(UserId, name);
 		}
 
 		/// <summary>
