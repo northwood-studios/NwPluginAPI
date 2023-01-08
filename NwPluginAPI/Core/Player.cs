@@ -673,14 +673,9 @@ namespace PluginAPI.Core
 		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
 
 		/// <summary>
-		/// Get or set player group.
+		/// Get player ammo.
 		/// </summary>
-		public UserGroup Group
-		{
-			// serverRoles.Group is a private field
-			get => ReferenceHub.serverRoles.Group;
-			set => ReferenceHub.serverRoles.SetGroup(value, false);
-		}
+		public Dictionary<ItemType, ushort> Ammo => ReferenceHub.inventory.UserInventory.ReserveAmmo;
 
 		/// <summary>
 		/// Get or set server role color.
@@ -700,6 +695,7 @@ namespace PluginAPI.Core
 			set => ReferenceHub.serverRoles.SetText(value);
 		}
 
+
 		/// <summary>
 		/// Gets the player unit name.
 		/// </summary>
@@ -714,12 +710,6 @@ namespace PluginAPI.Core
 		/// Gets player velocity.
 		/// </summary>
 		public Vector3 Velocity => ReferenceHub.GetVelocity();
-
-		/// <summary>
-		/// Gets player command sender.
-		/// </summary>
-		// _sender is a private fild.
-		public PlayerCommandSender CommandSender => ReferenceHub.queryProcessor._sender;
 
 		/// <summary>
 		/// Gets player <see cref="VoiceModule"/>
@@ -1003,36 +993,6 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Sets the player server role. why group is private....
-		/// </summary>
-		/// <param name="name">Name of server role to set.</param>
-		/// <param name="group">Group to be set.</param>
-		public void SetServerRole(string name, UserGroup group)
-		{
-			// _groups is a private fild
-			if (ServerStatic.GetPermissionsHandler()._groups.ContainsKey(name))
-			{
-				ServerStatic.GetPermissionsHandler()._groups[name].BadgeColor = group.BadgeColor;
-				ServerStatic.GetPermissionsHandler()._groups[name].BadgeText = name;
-				ServerStatic.GetPermissionsHandler()._groups[name].HiddenByDefault = !group.Cover;
-				ServerStatic.GetPermissionsHandler()._groups[name].Cover = group.Cover;
-
-				ReferenceHub.serverRoles.SetGroup(ServerStatic.GetPermissionsHandler()._groups[name], false, false, group.Cover);
-			}
-			else
-			{
-				ServerStatic.GetPermissionsHandler()._groups.Add(name, group);
-
-				ReferenceHub.serverRoles.SetGroup(group, false, false, group.Cover);
-			}
-
-			if (ServerStatic.GetPermissionsHandler()._members.ContainsKey(UserId))
-				ServerStatic.GetPermissionsHandler()._members[UserId] = name;
-			else
-				ServerStatic.GetPermissionsHandler()._members.Add(UserId, name);
-		}
-
-		/// <summary>
 		/// Clears displayed broadcast(s).
 		/// </summary>
 		public void ClearBroadcasts() => Server.Instance.GetComponent<Broadcast>().TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
@@ -1217,6 +1177,15 @@ namespace PluginAPI.Core
 					ReferenceHub.inventory.ServerRemoveItem(inventory.Items.ElementAt(0).Key, null);
 				}
 			}
+		}
+
+		/// <summary>
+		/// Set player <see cref="UserGroup"/>
+		/// </summary>
+		/// <param name="group">UserGroup to set</param>
+		public void SetGroup(UserGroup group)
+		{
+			ReferenceHub.serverRoles.SetGroup(group, false);
 		}
 
 		/// <summary>
