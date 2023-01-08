@@ -1,8 +1,3 @@
-using PlayerRoles.PlayableScps.Scp079;
-using PlayerRoles.PlayableScps.Scp079.Pinging;
-using PlayerRoles.PlayableScps.Scp096;
-using PlayerRoles.Voice;
-using RemoteAdmin;
 
 namespace PluginAPI.Core
 {
@@ -33,6 +28,7 @@ namespace PluginAPI.Core
 	using CommandSystem;
 	using InventorySystem.Items.Pickups;
 	using PluginAPI.Core.Items;
+	using PlayerRoles.Voice;
 
 	/// <summary>
 	/// Represents a player connected to server.
