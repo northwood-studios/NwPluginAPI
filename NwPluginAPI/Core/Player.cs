@@ -1,3 +1,6 @@
+using PlayerRoles.PlayableScps.Scp079;
+using PlayerRoles.PlayableScps.Scp079.Pinging;
+using PlayerRoles.PlayableScps.Scp096;
 using PlayerRoles.Voice;
 using RemoteAdmin;
 
@@ -572,6 +575,14 @@ namespace PluginAPI.Core
 			get => ReferenceHub.GetRoleId();
 			set => ReferenceHub.roleManager.ServerSetRole(value, RoleChangeReason.RemoteAdmin);
 		}
+
+		/// <summary>
+		/// Gets player <see cref="PlayerRoleBase"/>
+		/// <remarks>
+		/// It is useful to use for example (RoleBase as Scp096Role)
+		/// </remarks>
+		/// </summary>
+		public PlayerRoleBase RoleBase => ReferenceHub.roleManager.CurrentRole;
 
 		/// <summary>
 		/// Gets or sets the player's custom info.
