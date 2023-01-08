@@ -1,3 +1,7 @@
+using System;
+using CustomPlayerEffects;
+using UnityEngine;
+
 namespace PluginAPI.Core
 {
 	using CommandSystem;
@@ -66,6 +70,11 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Get the amount of players connected to the server.
+		/// </summary>
+		public static int PlayersConnected => Player.Count;
+
+		/// <summary>
 		/// Gets or sets the maximum amount of players online at the same time.
 		/// </summary>
 		public static int MaxPlayers
@@ -81,6 +90,48 @@ namespace PluginAPI.Core
 		{
 			get => CustomNetworkManager.reservedSlots;
 			set => CustomNetworkManager.reservedSlots = value;
+		}
+
+		/// <summary>
+		/// Get server <see cref="PermissionsHandler"/>
+		/// </summary>
+		public static PermissionsHandler PermissionsHandler => ServerStatic.GetPermissionsHandler();
+
+		/// <summary>
+		/// Get actual ticks per second of the server.
+		/// </summary>
+		public static double Tps => Math.Round(1f / Time.smoothDeltaTime);
+
+		/// <summary>
+		/// Get actual frames of the server.
+		/// </summary>
+		public static double Frames => Math.Round(1f / Time.deltaTime);
+
+		/// <summary>
+		/// Get or set server spawn protection time.
+		/// </summary>
+		public static float SpawnProtectTime
+		{
+			get => SpawnProtected.SpawnDuration;
+			set => SpawnProtected.SpawnDuration = value;
+		}
+
+		/// <summary>
+		/// Get or set if server is heavily modded.
+		/// </summary>
+		public static bool IsHeavilyModded
+		{
+			get => CustomNetworkManager.HeavilyModded;
+			set => CustomNetworkManager.HeavilyModded = value;
+		}
+
+		/// <summary>
+		/// Get or set server has whitelist enabled.
+		/// </summary>
+		public static bool IsWhitelisted
+		{
+			get => ServerConsole.WhiteListEnabled;
+			set => ServerConsole.WhiteListEnabled = value;
 		}
 
 #region Ban System
