@@ -670,7 +670,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		public UserGroup Group
 		{
-			// Set group is not private but get group yes !?
+			// serverRoles.Group is a private field
 			get => ReferenceHub.serverRoles.Group;
 			set => ReferenceHub.serverRoles.SetGroup(value, false);
 		}
@@ -1001,6 +1001,7 @@ namespace PluginAPI.Core
 		/// <param name="group">Group to be set.</param>
 		public void SetServerRole(string name, UserGroup group)
 		{
+			// _groups is a private fild
 			if (ServerStatic.GetPermissionsHandler()._groups.ContainsKey(name))
 			{
 				ServerStatic.GetPermissionsHandler()._groups[name].BadgeColor = group.BadgeColor;
