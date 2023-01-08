@@ -1,4 +1,5 @@
 using Footprinting;
+using InventorySystem.Items.Radio;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PlayerRoles.PlayableScps.Scp096;
 using PluginAPI.Events;
@@ -1017,5 +1018,29 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player
 		/// </remarks>
 		Scp096StartCrying = 122,
+
+		/// <summary>
+		/// Executed when a player drain radio battery.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="float"/> drain.
+		/// </remarks>
+		PlayerUsingRadio = 123,
+
+		/// <summary>
+		/// Executed before CASSIE announces an SCP termination
+		/// </summary>
+		/// <remarks>
+		/// Params: <see cref="IPlayer"/> player, <see cref="DamageHandlerBase"/> damageHandler <see cref="string"/> announcement
+		/// </remarks>
+		CassieAnnouncesScpTermination = 124,
+
+		/// <summary>
+		/// Executed before a player changes is UserGroup.
+		/// </summary>
+		/// <remarks>
+		/// Params: <see cref="IPlayer"/> player, <see cref="UserGroup"/> group.
+ 		/// </remarks>
+		PlayerChangingGroup = 125,
 	}
 }
