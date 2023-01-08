@@ -1,4 +1,3 @@
-
 namespace PluginAPI.Core
 {
 	using System;
@@ -29,6 +28,7 @@ namespace PluginAPI.Core
 	using InventorySystem.Items.Pickups;
 	using PluginAPI.Core.Items;
 	using PlayerRoles.Voice;
+	using RemoteAdmin;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -715,10 +715,11 @@ namespace PluginAPI.Core
 		/// </summary>
 		public Vector3 Velocity => ReferenceHub.GetVelocity();
 
-		/*/// <summary>
-		/// Gets player command sender. Oh no field is private
+		/// <summary>
+		/// Gets player command sender.
 		/// </summary>
-		public PlayerCommandSender CommandSender => ReferenceHub.queryProcessor._sender;*/
+		// _sender is a private fild.
+		public PlayerCommandSender CommandSender => ReferenceHub.queryProcessor._sender;
 
 		/// <summary>
 		/// Gets player <see cref="VoiceModule"/>
