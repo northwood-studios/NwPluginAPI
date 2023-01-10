@@ -72,7 +72,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Get the amount of players connected to the server.
 		/// </summary>
-		public static int PlayersConnected => Player.Count;
+		public static int PlayerCount => Player.Count;
 
 		/// <summary>
 		/// Gets or sets the maximum amount of players online at the same time.
@@ -100,17 +100,12 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Get actual ticks per second of the server.
 		/// </summary>
-		public static double Tps => Math.Round(1f / Time.smoothDeltaTime);
+		public static double TPS => Math.Round(1f / Time.smoothDeltaTime);
 
 		/// <summary>
-		/// Get actual frames of the server.
+		/// Get or set server spawn protection duration.
 		/// </summary>
-		public static double Frames => Math.Round(1f / Time.deltaTime);
-
-		/// <summary>
-		/// Get or set server spawn protection time.
-		/// </summary>
-		public static float SpawnProtectTime
+		public static float SpawnProtectDuration
 		{
 			get => SpawnProtected.SpawnDuration;
 			set => SpawnProtected.SpawnDuration = value;
@@ -125,16 +120,7 @@ namespace PluginAPI.Core
 			set => CustomNetworkManager.HeavilyModded = value;
 		}
 
-		/// <summary>
-		/// Get or set server has whitelist enabled.
-		/// </summary>
-		public static bool IsWhitelisted
-		{
-			get => ServerConsole.WhiteListEnabled;
-			set => ServerConsole.WhiteListEnabled = value;
-		}
-
-#region Ban System
+		#region Ban System
 
 		/// <summary>
 		/// Bans a player from the server.

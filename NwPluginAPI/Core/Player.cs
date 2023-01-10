@@ -673,9 +673,9 @@ namespace PluginAPI.Core
 		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
 
 		/// <summary>
-		/// Get player ammo.
+		/// Get player ammo bag.
 		/// </summary>
-		public Dictionary<ItemType, ushort> Ammo => ReferenceHub.inventory.UserInventory.ReserveAmmo;
+		public Dictionary<ItemType, ushort> AmmoBag => ReferenceHub.inventory.UserInventory.ReserveAmmo;
 
 		/// <summary>
 		/// Get or set server role color.
@@ -699,7 +699,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the player unit name.
 		/// </summary>
-		public string UnitName => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitName : string.Empty;
+		public string UnitName => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitName : null;
 
 		/// <summary>
 		/// Get if player has reserved slot.
@@ -815,7 +815,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets if the player is SCP.
 		/// </summary>
-		public bool IsScp => Role.GetTeam() is Team.SCPs;
+		public bool IsSCP => Role.GetTeam() is Team.SCPs;
 
 		/// <summary>
 		/// Gets whether or not the player is human.
@@ -830,7 +830,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets whether or not the player is Chaos Insurgency forces.
 		/// </summary>
-		public bool IsCHI => Role.GetTeam() is Team.ChaosInsurgency;
+		public bool IsChaos => Role.GetTeam() is Team.ChaosInsurgency;
 
 		/// <summary>
 		/// Gets whether or not the player is tutorial.
