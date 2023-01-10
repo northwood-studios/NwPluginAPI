@@ -699,7 +699,13 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(UserGroup), "group")
 					)
+			},
+			{
+				ServerEventType.PlayerUsingIntercom, new Event(
+					new EventParameter(typeof(IPlayer), "player")
+					)
 			}
+
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)

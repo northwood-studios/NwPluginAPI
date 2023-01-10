@@ -1042,5 +1042,13 @@ namespace PluginAPI.Enums
 		/// Params: <see cref="IPlayer"/> player, <see cref="UserGroup"/> group.
  		/// </remarks>
 		PlayerChangingGroup = 125,
+
+		/// <summary>
+		/// Executed while a player is using intercom.
+		/// <remarks>
+		/// Params: <see cref="IPlayer"/> player
+		/// </remarks>
+		/// </summary>
+		PlayerUsingIntercom = 126,
 	}
 }
