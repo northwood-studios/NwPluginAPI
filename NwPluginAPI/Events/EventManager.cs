@@ -1,6 +1,7 @@
 using Footprinting;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PlayerRoles.PlayableScps.Scp096;
+using PlayerRoles.Voice;
 
 namespace PluginAPI.Events
 {
@@ -61,7 +62,7 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "player"))
 			},
 			{
-				ServerEventType.PlayerDeath, new Event(
+				ServerEventType.PlayerDying, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(IPlayer), "attacker"),
 					new EventParameter(typeof(DamageHandlerBase), "damageHandler"))
@@ -679,7 +680,40 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp096StartCrying, new Event(
 					new EventParameter(typeof(IPlayer), "player"))
-			}
+			},
+			{
+				ServerEventType.PlayerUsingRadio, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(RadioItem), "radio"),
+					new EventParameter(typeof(float), "drain")
+					)
+			},
+			{
+				ServerEventType.CassieAnnouncesScpTermination, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(DamageHandlerBase), "damageHandler"),
+					new EventParameter(typeof(String), "announcement")
+					)
+			},
+			{
+				ServerEventType.PlayerChangingGroup, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(UserGroup), "group")
+					)
+			},
+			{
+				ServerEventType.PlayerUsingIntercom, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IntercomState), "intercomState")
+					)
+			},
+			{
+				ServerEventType.PlayerDeath, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IPlayer), "attacker"),
+					new EventParameter(typeof(DamageHandlerBase), "damageHandler"))
+			},
+
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)
