@@ -53,12 +53,12 @@ namespace PluginAPI.Enums
 		PlayerLeft = 1,
 
 		/// <summary>
-		/// Executed when player dies.
+		/// Executed before a player dies.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
 		/// </remarks>
-		PlayerDeath = 2,
+		PlayerDying  = 2,
 
 		/// <summary>
 		/// Executed when decontamination in LCZ starts.
@@ -1050,5 +1050,13 @@ namespace PluginAPI.Enums
 		/// </remarks>
 		/// </summary>
 		PlayerUsingIntercom = 126,
+
+		/// <summary>
+		/// Executed after a player dies.
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
+		/// </remarks>
+		/// </summary>
+		PlayerDeath,
 	}
 }

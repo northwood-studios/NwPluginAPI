@@ -61,7 +61,7 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "player"))
 			},
 			{
-				ServerEventType.PlayerDeath, new Event(
+				ServerEventType.PlayerDying, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(IPlayer), "attacker"),
 					new EventParameter(typeof(DamageHandlerBase), "damageHandler"))
@@ -704,7 +704,13 @@ namespace PluginAPI.Events
 				ServerEventType.PlayerUsingIntercom, new Event(
 					new EventParameter(typeof(IPlayer), "player")
 					)
-			}
+			},
+			{
+				ServerEventType.PlayerDeath, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IPlayer), "attacker"),
+					new EventParameter(typeof(DamageHandlerBase), "damageHandler"))
+			},
 
 		};
 
