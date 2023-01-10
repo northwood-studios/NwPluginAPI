@@ -2,6 +2,7 @@
 using Interactables.Interobjects;
 using InventorySystem.Items.ThrowableProjectiles;
 using MapGeneration;
+using PlayerRoles.Voice;
 using UnityEngine;
 
 namespace TemplatePlugin
@@ -100,7 +101,7 @@ namespace TemplatePlugin
 			{
 				Log.Info(attacker == null
 					? $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying, cause {damageHandler}"
-					: $"Player &6{attacker.Nickname}&r (&6{attacker.UserId}&r) is dying by &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler}");
+					: $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying by &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}");
 				// The event runs normally
 				return true;
 			}
@@ -218,7 +219,7 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerUsingIntercom)]
-		void OnPlayerUsingIntercom(MyPlayer player)
+		void OnPlayerUsingIntercom(MyPlayer player, IntercomState state)
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is using Intercom");
 		}

@@ -1,6 +1,7 @@
 using Footprinting;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PlayerRoles.PlayableScps.Scp096;
+using PlayerRoles.Voice;
 
 namespace PluginAPI.Events
 {
@@ -702,7 +703,8 @@ namespace PluginAPI.Events
 			},
 			{
 				ServerEventType.PlayerUsingIntercom, new Event(
-					new EventParameter(typeof(IPlayer), "player")
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IntercomState), "intercomState")
 					)
 			},
 			{
