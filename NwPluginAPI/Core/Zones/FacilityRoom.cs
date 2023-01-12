@@ -148,9 +148,9 @@ namespace PluginAPI.Core.Zones
 		{
 			Zone = zone;
 			Identifier = room;
-
-			if (room.TryGetComponent(out FlickerableLightController lightController))
-				Lights = new RoomLight(lightController);
+			
+			if(room.GetComponentInChildren<FlickerableLightController>())
+				Lights = new RoomLight(room.GetComponentInChildren<FlickerableLightController>());
 
 			Facility.RegisterDoors(this, room.gameObject.GetComponentsInChildren<DoorVariant>());
 		}
