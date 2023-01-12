@@ -92,6 +92,8 @@ namespace PluginAPI.Core
 			set => CustomNetworkManager.reservedSlots = value;
 		}
 
+		public static Broadcast Broadcast => Broadcast.Singleton;
+
 		/// <summary>
 		/// Get server <see cref="PermissionsHandler"/>
 		/// </summary>

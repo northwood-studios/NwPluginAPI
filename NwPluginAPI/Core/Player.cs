@@ -989,13 +989,13 @@ namespace PluginAPI.Core
 		{
 			if (shouldClearPrevious) ClearBroadcasts();
 
-			Server.Instance.GetComponent<Broadcast>().TargetAddElement(ReferenceHub.characterClassManager.connectionToClient, message, duration, type);
+			Server.Broadcast.TargetAddElement(ReferenceHub.characterClassManager.connectionToClient, message, duration, type);
 		}
 
 		/// <summary>
 		/// Clears displayed broadcast(s).
 		/// </summary>
-		public void ClearBroadcasts() => Server.Instance.GetComponent<Broadcast>().TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
+		public void ClearBroadcasts() => Server.Broadcast.TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
 
 		/// <summary>
 		/// Sends a console message to the player's console.
