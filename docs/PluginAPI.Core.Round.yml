@@ -24,7 +24,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Round
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 7
@@ -66,7 +66,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsRoundStarted
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 12
@@ -105,7 +105,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 17
@@ -144,7 +144,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsLobbyLocked
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 26
@@ -183,7 +183,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 35
@@ -222,7 +222,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 43
@@ -266,7 +266,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RestartSilently
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 57
@@ -300,7 +300,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 62
@@ -334,7 +334,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Round.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: End
     path: ../NwPluginAPI/Core/Round.cs
     startLine: 68

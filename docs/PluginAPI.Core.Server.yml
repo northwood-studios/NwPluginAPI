@@ -15,6 +15,7 @@ items:
   - PluginAPI.Core.Server.BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByUserId(System.String,System.String,System.Int64,System.String)
+  - PluginAPI.Core.Server.Broadcast
   - PluginAPI.Core.Server.ClearBroadcasts
   - PluginAPI.Core.Server.FriendlyFire
   - PluginAPI.Core.Server.GetAllPlayersBanned
@@ -23,12 +24,15 @@ items:
   - PluginAPI.Core.Server.IdleModeAvailable
   - PluginAPI.Core.Server.Init
   - PluginAPI.Core.Server.Instance
+  - PluginAPI.Core.Server.IsHeavilyModded
   - PluginAPI.Core.Server.IsPlayerBanned(System.String)
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String)
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,System.String)
   - PluginAPI.Core.Server.MaxPlayers
   - PluginAPI.Core.Server.PauseIdleMode
+  - PluginAPI.Core.Server.PermissionsHandler
+  - PluginAPI.Core.Server.PlayerCount
   - PluginAPI.Core.Server.Port
   - PluginAPI.Core.Server.ReservedSlots
   - PluginAPI.Core.Server.Restart
@@ -39,6 +43,8 @@ items:
   - PluginAPI.Core.Server.SetIdleMode(System.Boolean)
   - PluginAPI.Core.Server.Shutdown
   - PluginAPI.Core.Server.Shutdown(System.UInt16)
+  - PluginAPI.Core.Server.SpawnProtectDuration
+  - PluginAPI.Core.Server.TPS
   - PluginAPI.Core.Server.UnbanPlayerByIpAddress(System.String)
   - PluginAPI.Core.Server.UnbanPlayerByUserId(System.String)
   langs:
@@ -52,10 +58,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Server
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -123,6 +129,7 @@ items:
   - PluginAPI.Core.Player.UserId
   - PluginAPI.Core.Player.IpAddress
   - PluginAPI.Core.Player.Role
+  - PluginAPI.Core.Player.RoleBase
   - PluginAPI.Core.Player.CustomInfo
   - PluginAPI.Core.Player.Health
   - PluginAPI.Core.Player.MaxHealth
@@ -136,6 +143,16 @@ items:
   - PluginAPI.Core.Player.Room
   - PluginAPI.Core.Player.Zone
   - PluginAPI.Core.Player.Items
+  - PluginAPI.Core.Player.AmmoBag
+  - PluginAPI.Core.Player.RoleColor
+  - PluginAPI.Core.Player.RoleName
+  - PluginAPI.Core.Player.UnitName
+  - PluginAPI.Core.Player.HasReservedSlot
+  - PluginAPI.Core.Player.Velocity
+  - PluginAPI.Core.Player.VoiceModule
+  - PluginAPI.Core.Player.VoiceChannel
+  - PluginAPI.Core.Player.IsWithoutItems
+  - PluginAPI.Core.Player.IsOutOfAmmo
   - PluginAPI.Core.Player.IsDisarmed
   - PluginAPI.Core.Player.IsMuted
   - PluginAPI.Core.Player.IsIntercomMuted
@@ -146,7 +163,12 @@ items:
   - PluginAPI.Core.Player.IsGodModeEnabled
   - PluginAPI.Core.Player.IsNoclipEnabled
   - PluginAPI.Core.Player.IsInventoryFull
+  - PluginAPI.Core.Player.Team
+  - PluginAPI.Core.Player.IsSCP
   - PluginAPI.Core.Player.IsHuman
+  - PluginAPI.Core.Player.IsNTF
+  - PluginAPI.Core.Player.IsChaos
+  - PluginAPI.Core.Player.IsTutorial
   - PluginAPI.Core.Player.IsAlive
   - PluginAPI.Core.Player.IsReady
   - PluginAPI.Core.Player.IsServer
@@ -170,11 +192,18 @@ items:
   - PluginAPI.Core.Player.IntercomUnmute(System.Boolean)
   - PluginAPI.Core.Player.AddAmmo(ItemType,System.UInt16)
   - PluginAPI.Core.Player.AddItem(ItemType)
+  - PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
+  - PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
+  - PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  - PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
+  - PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  - PluginAPI.Core.Player.DropItem(System.UInt16)
   - PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
   - PluginAPI.Core.Player.GetAmmo(ItemType)
   - PluginAPI.Core.Player.DropAmmo(ItemType,System.UInt16,System.Boolean)
   - PluginAPI.Core.Player.DropEverything
   - PluginAPI.Core.Player.ClearInventory(System.Boolean,System.Boolean)
+  - PluginAPI.Core.Player.SetGroup(UserGroup)
   - PluginAPI.Core.Player.Heal(System.Single)
   - PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
   - PluginAPI.Core.Player.Disconnect(System.String)
@@ -212,40 +241,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: PluginAPI.Core.Server.Init
-  commentId: M:PluginAPI.Core.Server.Init
-  id: Init
-  parent: PluginAPI.Core.Server
-  langs:
-  - csharp
-  - vb
-  name: Init()
-  nameWithType: Server.Init()
-  fullName: PluginAPI.Core.Server.Init()
-  type: Method
-  source:
-    remote:
-      path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
-    id: Init
-    path: ../NwPluginAPI/Core/Server.cs
-    startLine: 21
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Core
-  summary: "\nInitializes server instance.\n"
-  example: []
-  syntax:
-    content: public static void Init()
-    content.vb: Public Shared Sub Init
-  overload: PluginAPI.Core.Server.Init*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 - uid: PluginAPI.Core.Server.Instance
   commentId: P:PluginAPI.Core.Server.Instance
   id: Instance
@@ -261,10 +256,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Instance
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 32
+    startLine: 23
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -285,6 +280,38 @@ items:
   - Public
   - Shared
   - ReadOnly
+- uid: PluginAPI.Core.Server.Init
+  commentId: M:PluginAPI.Core.Server.Init
+  id: Init
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: Init()
+  nameWithType: Server.Init()
+  fullName: PluginAPI.Core.Server.Init()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: Init
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 25
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public static void Init()
+    content.vb: Public Shared Sub Init
+  overload: PluginAPI.Core.Server.Init*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Core.Server.#ctor(PluginAPI.Core.Interfaces.IGameComponent)
   commentId: M:PluginAPI.Core.Server.#ctor(PluginAPI.Core.Interfaces.IGameComponent)
   id: '#ctor(PluginAPI.Core.Interfaces.IGameComponent)'
@@ -300,10 +327,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 38
+    startLine: 31
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -336,10 +363,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ServerIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 43
+    startLine: 36
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -375,10 +402,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Port
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 48
+    startLine: 41
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -414,10 +441,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: FriendlyFire
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 53
+    startLine: 46
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -438,6 +465,45 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: PluginAPI.Core.Server.PlayerCount
+  commentId: P:PluginAPI.Core.Server.PlayerCount
+  id: PlayerCount
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: PlayerCount
+  nameWithType: Server.PlayerCount
+  fullName: PluginAPI.Core.Server.PlayerCount
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: PlayerCount
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 63
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGet the amount of players connected to the server.\n"
+  example: []
+  syntax:
+    content: public static int PlayerCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property PlayerCount As Integer
+  overload: PluginAPI.Core.Server.PlayerCount*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: PluginAPI.Core.Server.MaxPlayers
   commentId: P:PluginAPI.Core.Server.MaxPlayers
   id: MaxPlayers
@@ -453,10 +519,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: MaxPlayers
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 70
+    startLine: 68
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -492,10 +558,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ReservedSlots
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 79
+    startLine: 77
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -508,6 +574,199 @@ items:
       type: System.Int32
     content.vb: Public Shared Property ReservedSlots As Integer
   overload: PluginAPI.Core.Server.ReservedSlots*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.Broadcast
+  commentId: P:PluginAPI.Core.Server.Broadcast
+  id: Broadcast
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: Broadcast
+  nameWithType: Server.Broadcast
+  fullName: PluginAPI.Core.Server.Broadcast
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: Broadcast
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 83
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  syntax:
+    content: public static Broadcast Broadcast { get; }
+    parameters: []
+    return:
+      type: Broadcast
+    content.vb: Public Shared ReadOnly Property Broadcast As Broadcast
+  overload: PluginAPI.Core.Server.Broadcast*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Server.PermissionsHandler
+  commentId: P:PluginAPI.Core.Server.PermissionsHandler
+  id: PermissionsHandler
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: PermissionsHandler
+  nameWithType: Server.PermissionsHandler
+  fullName: PluginAPI.Core.Server.PermissionsHandler
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: PermissionsHandler
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 88
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGet server <xref href=\"PluginAPI.Core.Server.PermissionsHandler\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public static PermissionsHandler PermissionsHandler { get; }
+    parameters: []
+    return:
+      type: PermissionsHandler
+    content.vb: Public Shared ReadOnly Property PermissionsHandler As PermissionsHandler
+  overload: PluginAPI.Core.Server.PermissionsHandler*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Server.TPS
+  commentId: P:PluginAPI.Core.Server.TPS
+  id: TPS
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: TPS
+  nameWithType: Server.TPS
+  fullName: PluginAPI.Core.Server.TPS
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: TPS
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 93
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGet actual ticks per second of the server.\n"
+  example: []
+  syntax:
+    content: public static double TPS { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Shared ReadOnly Property TPS As Double
+  overload: PluginAPI.Core.Server.TPS*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Server.SpawnProtectDuration
+  commentId: P:PluginAPI.Core.Server.SpawnProtectDuration
+  id: SpawnProtectDuration
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: SpawnProtectDuration
+  nameWithType: Server.SpawnProtectDuration
+  fullName: PluginAPI.Core.Server.SpawnProtectDuration
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: SpawnProtectDuration
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 98
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGet or set server spawn protection duration.\n"
+  example: []
+  syntax:
+    content: public static float SpawnProtectDuration { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared Property SpawnProtectDuration As Single
+  overload: PluginAPI.Core.Server.SpawnProtectDuration*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Core.Server.IsHeavilyModded
+  commentId: P:PluginAPI.Core.Server.IsHeavilyModded
+  id: IsHeavilyModded
+  parent: PluginAPI.Core.Server
+  langs:
+  - csharp
+  - vb
+  name: IsHeavilyModded
+  nameWithType: Server.IsHeavilyModded
+  fullName: PluginAPI.Core.Server.IsHeavilyModded
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Server.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: IsHeavilyModded
+    path: ../NwPluginAPI/Core/Server.cs
+    startLine: 107
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGet or set if server is heavily modded.\n"
+  example: []
+  syntax:
+    content: public static bool IsHeavilyModded { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsHeavilyModded As Boolean
+  overload: PluginAPI.Core.Server.IsHeavilyModded*
   modifiers.csharp:
   - public
   - static
@@ -531,10 +790,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 94
+    startLine: 122
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -578,10 +837,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 104
+    startLine: 132
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -628,10 +887,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 114
+    startLine: 142
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -678,10 +937,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 122
+    startLine: 150
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -722,10 +981,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 130
+    startLine: 158
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -766,10 +1025,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 137
+    startLine: 165
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -807,10 +1066,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 147
+    startLine: 175
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -857,10 +1116,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 158
+    startLine: 186
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -910,10 +1169,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 169
+    startLine: 197
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -963,10 +1222,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 192
+    startLine: 220
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1013,10 +1272,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 203
+    startLine: 231
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1066,10 +1325,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 214
+    startLine: 242
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1119,10 +1378,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 234
+    startLine: 262
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1160,10 +1419,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 249
+    startLine: 277
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1201,10 +1460,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsPlayerBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 264
+    startLine: 292
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1242,10 +1501,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 275
+    startLine: 303
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1279,10 +1538,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 287
+    startLine: 315
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1320,10 +1579,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 294
+    startLine: 322
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1354,10 +1613,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 299
+    startLine: 327
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1391,10 +1650,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 308
+    startLine: 336
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1425,10 +1684,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 313
+    startLine: 341
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1462,10 +1721,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RunCommand
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 324
+    startLine: 352
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1505,10 +1764,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 333
+    startLine: 361
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1552,10 +1811,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 343
+    startLine: 371
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1586,10 +1845,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IdleModeActive
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 348
+    startLine: 376
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1625,10 +1884,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PauseIdleMode
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 353
+    startLine: 381
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1664,10 +1923,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IdleModeAvailable
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 363
+    startLine: 391
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1703,10 +1962,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: SetIdleMode
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 374
+    startLine: 402
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -3500,6 +3759,12 @@ references:
   name: Role
   nameWithType: Player.Role
   fullName: PluginAPI.Core.Player.Role
+- uid: PluginAPI.Core.Player.RoleBase
+  commentId: P:PluginAPI.Core.Player.RoleBase
+  parent: PluginAPI.Core.Player
+  name: RoleBase
+  nameWithType: Player.RoleBase
+  fullName: PluginAPI.Core.Player.RoleBase
 - uid: PluginAPI.Core.Player.CustomInfo
   commentId: P:PluginAPI.Core.Player.CustomInfo
   parent: PluginAPI.Core.Player
@@ -3578,6 +3843,66 @@ references:
   name: Items
   nameWithType: Player.Items
   fullName: PluginAPI.Core.Player.Items
+- uid: PluginAPI.Core.Player.AmmoBag
+  commentId: P:PluginAPI.Core.Player.AmmoBag
+  parent: PluginAPI.Core.Player
+  name: AmmoBag
+  nameWithType: Player.AmmoBag
+  fullName: PluginAPI.Core.Player.AmmoBag
+- uid: PluginAPI.Core.Player.RoleColor
+  commentId: P:PluginAPI.Core.Player.RoleColor
+  parent: PluginAPI.Core.Player
+  name: RoleColor
+  nameWithType: Player.RoleColor
+  fullName: PluginAPI.Core.Player.RoleColor
+- uid: PluginAPI.Core.Player.RoleName
+  commentId: P:PluginAPI.Core.Player.RoleName
+  parent: PluginAPI.Core.Player
+  name: RoleName
+  nameWithType: Player.RoleName
+  fullName: PluginAPI.Core.Player.RoleName
+- uid: PluginAPI.Core.Player.UnitName
+  commentId: P:PluginAPI.Core.Player.UnitName
+  parent: PluginAPI.Core.Player
+  name: UnitName
+  nameWithType: Player.UnitName
+  fullName: PluginAPI.Core.Player.UnitName
+- uid: PluginAPI.Core.Player.HasReservedSlot
+  commentId: P:PluginAPI.Core.Player.HasReservedSlot
+  parent: PluginAPI.Core.Player
+  name: HasReservedSlot
+  nameWithType: Player.HasReservedSlot
+  fullName: PluginAPI.Core.Player.HasReservedSlot
+- uid: PluginAPI.Core.Player.Velocity
+  commentId: P:PluginAPI.Core.Player.Velocity
+  parent: PluginAPI.Core.Player
+  name: Velocity
+  nameWithType: Player.Velocity
+  fullName: PluginAPI.Core.Player.Velocity
+- uid: PluginAPI.Core.Player.VoiceModule
+  commentId: P:PluginAPI.Core.Player.VoiceModule
+  parent: PluginAPI.Core.Player
+  name: VoiceModule
+  nameWithType: Player.VoiceModule
+  fullName: PluginAPI.Core.Player.VoiceModule
+- uid: PluginAPI.Core.Player.VoiceChannel
+  commentId: P:PluginAPI.Core.Player.VoiceChannel
+  parent: PluginAPI.Core.Player
+  name: VoiceChannel
+  nameWithType: Player.VoiceChannel
+  fullName: PluginAPI.Core.Player.VoiceChannel
+- uid: PluginAPI.Core.Player.IsWithoutItems
+  commentId: P:PluginAPI.Core.Player.IsWithoutItems
+  parent: PluginAPI.Core.Player
+  name: IsWithoutItems
+  nameWithType: Player.IsWithoutItems
+  fullName: PluginAPI.Core.Player.IsWithoutItems
+- uid: PluginAPI.Core.Player.IsOutOfAmmo
+  commentId: P:PluginAPI.Core.Player.IsOutOfAmmo
+  parent: PluginAPI.Core.Player
+  name: IsOutOfAmmo
+  nameWithType: Player.IsOutOfAmmo
+  fullName: PluginAPI.Core.Player.IsOutOfAmmo
 - uid: PluginAPI.Core.Player.IsDisarmed
   commentId: P:PluginAPI.Core.Player.IsDisarmed
   parent: PluginAPI.Core.Player
@@ -3638,12 +3963,42 @@ references:
   name: IsInventoryFull
   nameWithType: Player.IsInventoryFull
   fullName: PluginAPI.Core.Player.IsInventoryFull
+- uid: PluginAPI.Core.Player.Team
+  commentId: P:PluginAPI.Core.Player.Team
+  parent: PluginAPI.Core.Player
+  name: Team
+  nameWithType: Player.Team
+  fullName: PluginAPI.Core.Player.Team
+- uid: PluginAPI.Core.Player.IsSCP
+  commentId: P:PluginAPI.Core.Player.IsSCP
+  parent: PluginAPI.Core.Player
+  name: IsSCP
+  nameWithType: Player.IsSCP
+  fullName: PluginAPI.Core.Player.IsSCP
 - uid: PluginAPI.Core.Player.IsHuman
   commentId: P:PluginAPI.Core.Player.IsHuman
   parent: PluginAPI.Core.Player
   name: IsHuman
   nameWithType: Player.IsHuman
   fullName: PluginAPI.Core.Player.IsHuman
+- uid: PluginAPI.Core.Player.IsNTF
+  commentId: P:PluginAPI.Core.Player.IsNTF
+  parent: PluginAPI.Core.Player
+  name: IsNTF
+  nameWithType: Player.IsNTF
+  fullName: PluginAPI.Core.Player.IsNTF
+- uid: PluginAPI.Core.Player.IsChaos
+  commentId: P:PluginAPI.Core.Player.IsChaos
+  parent: PluginAPI.Core.Player
+  name: IsChaos
+  nameWithType: Player.IsChaos
+  fullName: PluginAPI.Core.Player.IsChaos
+- uid: PluginAPI.Core.Player.IsTutorial
+  commentId: P:PluginAPI.Core.Player.IsTutorial
+  parent: PluginAPI.Core.Player
+  name: IsTutorial
+  nameWithType: Player.IsTutorial
+  fullName: PluginAPI.Core.Player.IsTutorial
 - uid: PluginAPI.Core.Player.IsAlive
   commentId: P:PluginAPI.Core.Player.IsAlive
   parent: PluginAPI.Core.Player
@@ -4237,6 +4592,231 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
+  commentId: M:PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
+  parent: PluginAPI.Core.Player
+  name: RemoveItem(Item)
+  nameWithType: Player.RemoveItem(Item)
+  fullName: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Items.Item
+    name: Item
+    nameWithType: Item
+    fullName: PluginAPI.Core.Items.Item
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Items.Item
+    name: Item
+    nameWithType: Item
+    fullName: PluginAPI.Core.Items.Item
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
+  commentId: M:PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
+  parent: PluginAPI.Core.Player
+  name: RemoveItem(ItemPickup)
+  nameWithType: Player.RemoveItem(ItemPickup)
+  fullName: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Items.ItemPickup
+    name: ItemPickup
+    nameWithType: ItemPickup
+    fullName: PluginAPI.Core.Items.ItemPickup
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Items.ItemPickup
+    name: ItemPickup
+    nameWithType: ItemPickup
+    fullName: PluginAPI.Core.Items.ItemPickup
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  commentId: M:PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: RemoveItem(ItemPickupBase)
+  nameWithType: Player.RemoveItem(ItemPickupBase)
+  fullName: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: InventorySystem.Items.Pickups.ItemPickupBase
+    name: ItemPickupBase
+    nameWithType: ItemPickupBase
+    fullName: InventorySystem.Items.Pickups.ItemPickupBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: InventorySystem.Items.Pickups.ItemPickupBase
+    name: ItemPickupBase
+    nameWithType: ItemPickupBase
+    fullName: InventorySystem.Items.Pickups.ItemPickupBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
+  commentId: M:PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
+  parent: PluginAPI.Core.Player
+  name: DropItem(Item)
+  nameWithType: Player.DropItem(Item)
+  fullName: PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
+    name: DropItem
+    nameWithType: Player.DropItem
+    fullName: PluginAPI.Core.Player.DropItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Items.Item
+    name: Item
+    nameWithType: Item
+    fullName: PluginAPI.Core.Items.Item
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
+    name: DropItem
+    nameWithType: Player.DropItem
+    fullName: PluginAPI.Core.Player.DropItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Items.Item
+    name: Item
+    nameWithType: Item
+    fullName: PluginAPI.Core.Items.Item
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  commentId: M:PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: DropItem(ItemBase)
+  nameWithType: Player.DropItem(ItemBase)
+  fullName: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+    name: DropItem
+    nameWithType: Player.DropItem
+    fullName: PluginAPI.Core.Player.DropItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: InventorySystem.Items.ItemBase
+    name: ItemBase
+    nameWithType: ItemBase
+    fullName: InventorySystem.Items.ItemBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+    name: DropItem
+    nameWithType: Player.DropItem
+    fullName: PluginAPI.Core.Player.DropItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: InventorySystem.Items.ItemBase
+    name: ItemBase
+    nameWithType: ItemBase
+    fullName: InventorySystem.Items.ItemBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.DropItem(System.UInt16)
+  commentId: M:PluginAPI.Core.Player.DropItem(System.UInt16)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: DropItem(UInt16)
+  nameWithType: Player.DropItem(UInt16)
+  fullName: PluginAPI.Core.Player.DropItem(System.UInt16)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.DropItem(System.UInt16)
+    name: DropItem
+    nameWithType: Player.DropItem
+    fullName: PluginAPI.Core.Player.DropItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.DropItem(System.UInt16)
+    name: DropItem
+    nameWithType: Player.DropItem
+    fullName: PluginAPI.Core.Player.DropItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
   commentId: M:PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
   parent: PluginAPI.Core.Player
@@ -4481,6 +5061,45 @@ references:
     name: Boolean
     nameWithType: Boolean
     fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.SetGroup(UserGroup)
+  commentId: M:PluginAPI.Core.Player.SetGroup(UserGroup)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: SetGroup(UserGroup)
+  nameWithType: Player.SetGroup(UserGroup)
+  fullName: PluginAPI.Core.Player.SetGroup(UserGroup)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.SetGroup(UserGroup)
+    name: SetGroup
+    nameWithType: Player.SetGroup
+    fullName: PluginAPI.Core.Player.SetGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UserGroup
+    name: UserGroup
+    nameWithType: UserGroup
+    fullName: UserGroup
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.SetGroup(UserGroup)
+    name: SetGroup
+    nameWithType: Player.SetGroup
+    fullName: PluginAPI.Core.Player.SetGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: UserGroup
+    name: UserGroup
+    nameWithType: UserGroup
+    fullName: UserGroup
     isExternal: true
   - name: )
     nameWithType: )
@@ -6436,11 +7055,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Server.Init*
-  commentId: Overload:PluginAPI.Core.Server.Init
-  name: Init
-  nameWithType: Server.Init
-  fullName: PluginAPI.Core.Server.Init
 - uid: PluginAPI.Core.Server
   commentId: T:PluginAPI.Core.Server
   parent: PluginAPI.Core
@@ -6452,6 +7066,11 @@ references:
   name: Instance
   nameWithType: Server.Instance
   fullName: PluginAPI.Core.Server.Instance
+- uid: PluginAPI.Core.Server.Init*
+  commentId: Overload:PluginAPI.Core.Server.Init
+  name: Init
+  nameWithType: Server.Init
+  fullName: PluginAPI.Core.Server.Init
 - uid: PluginAPI.Core.Server.#ctor*
   commentId: Overload:PluginAPI.Core.Server.#ctor
   name: Server
@@ -6499,11 +7118,11 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: PluginAPI.Core.Server.MaxPlayers*
-  commentId: Overload:PluginAPI.Core.Server.MaxPlayers
-  name: MaxPlayers
-  nameWithType: Server.MaxPlayers
-  fullName: PluginAPI.Core.Server.MaxPlayers
+- uid: PluginAPI.Core.Server.PlayerCount*
+  commentId: Overload:PluginAPI.Core.Server.PlayerCount
+  name: PlayerCount
+  nameWithType: Server.PlayerCount
+  fullName: PluginAPI.Core.Server.PlayerCount
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -6511,11 +7130,70 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: PluginAPI.Core.Server.MaxPlayers*
+  commentId: Overload:PluginAPI.Core.Server.MaxPlayers
+  name: MaxPlayers
+  nameWithType: Server.MaxPlayers
+  fullName: PluginAPI.Core.Server.MaxPlayers
 - uid: PluginAPI.Core.Server.ReservedSlots*
   commentId: Overload:PluginAPI.Core.Server.ReservedSlots
   name: ReservedSlots
   nameWithType: Server.ReservedSlots
   fullName: PluginAPI.Core.Server.ReservedSlots
+- uid: PluginAPI.Core.Server.Broadcast*
+  commentId: Overload:PluginAPI.Core.Server.Broadcast
+  name: Broadcast
+  nameWithType: Server.Broadcast
+  fullName: PluginAPI.Core.Server.Broadcast
+- uid: Broadcast
+  commentId: T:Broadcast
+  isExternal: true
+  name: Broadcast
+  nameWithType: Broadcast
+  fullName: Broadcast
+- uid: PluginAPI.Core.Server.PermissionsHandler
+  commentId: P:PluginAPI.Core.Server.PermissionsHandler
+  isExternal: true
+- uid: PluginAPI.Core.Server.PermissionsHandler*
+  commentId: Overload:PluginAPI.Core.Server.PermissionsHandler
+  name: PermissionsHandler
+  nameWithType: Server.PermissionsHandler
+  fullName: PluginAPI.Core.Server.PermissionsHandler
+- uid: PermissionsHandler
+  commentId: T:PermissionsHandler
+  isExternal: true
+  name: PermissionsHandler
+  nameWithType: PermissionsHandler
+  fullName: PermissionsHandler
+- uid: PluginAPI.Core.Server.TPS*
+  commentId: Overload:PluginAPI.Core.Server.TPS
+  name: TPS
+  nameWithType: Server.TPS
+  fullName: PluginAPI.Core.Server.TPS
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: PluginAPI.Core.Server.SpawnProtectDuration*
+  commentId: Overload:PluginAPI.Core.Server.SpawnProtectDuration
+  name: SpawnProtectDuration
+  nameWithType: Server.SpawnProtectDuration
+  fullName: PluginAPI.Core.Server.SpawnProtectDuration
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Core.Server.IsHeavilyModded*
+  commentId: Overload:PluginAPI.Core.Server.IsHeavilyModded
+  name: IsHeavilyModded
+  nameWithType: Server.IsHeavilyModded
+  fullName: PluginAPI.Core.Server.IsHeavilyModded
 - uid: PluginAPI.Core.Server.BanPlayer*
   commentId: Overload:PluginAPI.Core.Server.BanPlayer
   name: BanPlayer

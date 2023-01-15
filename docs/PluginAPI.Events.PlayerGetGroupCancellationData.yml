@@ -1,39 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: PluginAPI.Events.RoundEndCancellationData
-  commentId: T:PluginAPI.Events.RoundEndCancellationData
-  id: RoundEndCancellationData
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData
+  commentId: T:PluginAPI.Events.PlayerGetGroupCancellationData
+  id: PlayerGetGroupCancellationData
   parent: PluginAPI.Events
   children:
-  - PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
-  - PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
-  - PluginAPI.Events.RoundEndCancellationData.Delay
-  - PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
-  - PluginAPI.Events.RoundEndCancellationData.IsCancelled
+  - PluginAPI.Events.PlayerGetGroupCancellationData.AssignedUserGroup
+  - PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled
+  - PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged
+  - PluginAPI.Events.PlayerGetGroupCancellationData.Override(UserGroup)
   langs:
   - csharp
   - vb
-  name: RoundEndCancellationData
-  nameWithType: RoundEndCancellationData
-  fullName: PluginAPI.Events.RoundEndCancellationData
+  name: PlayerGetGroupCancellationData
+  nameWithType: PlayerGetGroupCancellationData
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData
   type: Struct
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: RoundEndCancellationData
+    id: PlayerGetGroupCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 290
+    startLine: 373
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nRepresents RoundEnd event cancellation data.\n"
+  summary: "\nRepresents PlayerGetGroup event cancellation data.\n"
   example: []
   syntax:
-    content: 'public readonly struct RoundEndCancellationData : IEventCancellation'
+    content: 'public readonly struct PlayerGetGroupCancellationData : IEventCancellation'
     content.vb: >-
-      Public Structure RoundEndCancellationData
+      Public Structure PlayerGetGroupCancellationData
           Implements IEventCancellation
   implements:
   - PluginAPI.Events.IEventCancellation
@@ -51,16 +50,16 @@ items:
   modifiers.vb:
   - Public
   - Structure
-- uid: PluginAPI.Events.RoundEndCancellationData.IsCancelled
-  commentId: P:PluginAPI.Events.RoundEndCancellationData.IsCancelled
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled
+  commentId: P:PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled
   id: IsCancelled
-  parent: PluginAPI.Events.RoundEndCancellationData
+  parent: PluginAPI.Events.PlayerGetGroupCancellationData
   langs:
   - csharp
   - vb
   name: IsCancelled
-  nameWithType: RoundEndCancellationData.IsCancelled
-  fullName: PluginAPI.Events.RoundEndCancellationData.IsCancelled
+  nameWithType: PlayerGetGroupCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled
   type: Property
   source:
     remote:
@@ -69,7 +68,7 @@ items:
       repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 293
+    startLine: 376
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -81,7 +80,7 @@ items:
     return:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsCancelled As Boolean
-  overload: PluginAPI.Events.RoundEndCancellationData.IsCancelled*
+  overload: PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled*
   implements:
   - PluginAPI.Events.IEventCancellation.IsCancelled
   modifiers.csharp:
@@ -91,151 +90,111 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Events.RoundEndCancellationData.Delay
-  commentId: F:PluginAPI.Events.RoundEndCancellationData.Delay
-  id: Delay
-  parent: PluginAPI.Events.RoundEndCancellationData
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData.AssignedUserGroup
+  commentId: F:PluginAPI.Events.PlayerGetGroupCancellationData.AssignedUserGroup
+  id: AssignedUserGroup
+  parent: PluginAPI.Events.PlayerGetGroupCancellationData
   langs:
   - csharp
   - vb
-  name: Delay
-  nameWithType: RoundEndCancellationData.Delay
-  fullName: PluginAPI.Events.RoundEndCancellationData.Delay
+  name: AssignedUserGroup
+  nameWithType: PlayerGetGroupCancellationData.AssignedUserGroup
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData.AssignedUserGroup
   type: Field
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: Delay
+    id: AssignedUserGroup
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 295
+    startLine: 378
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
   syntax:
-    content: public readonly float Delay
+    content: public readonly UserGroup AssignedUserGroup
     return:
-      type: System.Single
-    content.vb: Public ReadOnly Delay As Single
+      type: UserGroup
+    content.vb: Public ReadOnly AssignedUserGroup As UserGroup
   modifiers.csharp:
   - public
   - readonly
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
-  commentId: M:PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
-  id: AllowRoundEnd
-  parent: PluginAPI.Events.RoundEndCancellationData
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged
+  commentId: M:PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged
+  id: LeaveUnchanged
+  parent: PluginAPI.Events.PlayerGetGroupCancellationData
   langs:
   - csharp
   - vb
-  name: AllowRoundEnd()
-  nameWithType: RoundEndCancellationData.AllowRoundEnd()
-  fullName: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd()
+  name: LeaveUnchanged()
+  nameWithType: PlayerGetGroupCancellationData.LeaveUnchanged()
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged()
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: AllowRoundEnd
+    id: LeaveUnchanged
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 307
+    startLine: 390
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nAllows the round end.\n"
+  summary: "\nDoesn&apos;t override the user group.\n"
   example: []
   syntax:
-    content: public static RoundEndCancellationData AllowRoundEnd()
+    content: public static PlayerGetGroupCancellationData LeaveUnchanged()
     return:
-      type: PluginAPI.Events.RoundEndCancellationData
-      description: The <xref href="PluginAPI.Events.RoundEndCancellationData" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Shared Function AllowRoundEnd As RoundEndCancellationData
-  overload: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd*
+      type: PluginAPI.Events.PlayerGetGroupCancellationData
+      description: The <xref href="PluginAPI.Events.PlayerGetGroupCancellationData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function LeaveUnchanged As PlayerGetGroupCancellationData
+  overload: PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
-  commentId: M:PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
-  id: DelayRoundEnd(System.Single)
-  parent: PluginAPI.Events.RoundEndCancellationData
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData.Override(UserGroup)
+  commentId: M:PluginAPI.Events.PlayerGetGroupCancellationData.Override(UserGroup)
+  id: Override(UserGroup)
+  parent: PluginAPI.Events.PlayerGetGroupCancellationData
   langs:
   - csharp
   - vb
-  name: DelayRoundEnd(Single)
-  nameWithType: RoundEndCancellationData.DelayRoundEnd(Single)
-  fullName: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd(System.Single)
+  name: Override(UserGroup)
+  nameWithType: PlayerGetGroupCancellationData.Override(UserGroup)
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData.Override(UserGroup)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
       repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: DelayRoundEnd
+    id: Override
     path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 316
+    startLine: 399
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
-  summary: "\nDelays the round end.\n"
+  summary: "\nOverrides the user group.\n"
   example: []
   syntax:
-    content: public static RoundEndCancellationData DelayRoundEnd(float delay)
+    content: public static PlayerGetGroupCancellationData Override(UserGroup assignedUserGroup)
     parameters:
-    - id: delay
-      type: System.Single
-      description: Determines the delay (in seconds).
+    - id: assignedUserGroup
+      type: UserGroup
+      description: User group assigned to the Player.
     return:
-      type: PluginAPI.Events.RoundEndCancellationData
-      description: The <xref href="PluginAPI.Events.RoundEndCancellationData" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Shared Function DelayRoundEnd(delay As Single) As RoundEndCancellationData
-  overload: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd*
-  exceptions:
-  - type: System.ArgumentException
-    commentId: T:System.ArgumentException
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
-  commentId: M:PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
-  id: AbortRoundEnd
-  parent: PluginAPI.Events.RoundEndCancellationData
-  langs:
-  - csharp
-  - vb
-  name: AbortRoundEnd()
-  nameWithType: RoundEndCancellationData.AbortRoundEnd()
-  fullName: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd()
-  type: Method
-  source:
-    remote:
-      path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: AbortRoundEnd
-    path: ../NwPluginAPI/Events/IEventCancellation.cs
-    startLine: 328
-  assemblies:
-  - PluginAPI
-  namespace: PluginAPI.Events
-  summary: "\nPermanently aborts the round end.\n"
-  example: []
-  syntax:
-    content: public static RoundEndCancellationData AbortRoundEnd()
-    return:
-      type: PluginAPI.Events.RoundEndCancellationData
-      description: The <xref href="PluginAPI.Events.RoundEndCancellationData" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Shared Function AbortRoundEnd As RoundEndCancellationData
-  overload: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd*
+      type: PluginAPI.Events.PlayerGetGroupCancellationData
+      description: ''
+    content.vb: Public Shared Function Override(assignedUserGroup As UserGroup) As PlayerGetGroupCancellationData
+  overload: PluginAPI.Events.PlayerGetGroupCancellationData.Override*
   modifiers.csharp:
   - public
   - static
@@ -522,11 +481,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: PluginAPI.Events.RoundEndCancellationData.IsCancelled*
-  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.IsCancelled
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled*
+  commentId: Overload:PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled
   name: IsCancelled
-  nameWithType: RoundEndCancellationData.IsCancelled
-  fullName: PluginAPI.Events.RoundEndCancellationData.IsCancelled
+  nameWithType: PlayerGetGroupCancellationData.IsCancelled
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData.IsCancelled
 - uid: PluginAPI.Events.IEventCancellation.IsCancelled
   commentId: P:PluginAPI.Events.IEventCancellation.IsCancelled
   parent: PluginAPI.Events.IEventCancellation
@@ -540,34 +499,25 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
+- uid: UserGroup
+  commentId: T:UserGroup
   isExternal: true
-  name: Single
-  nameWithType: Single
-  fullName: System.Single
-- uid: PluginAPI.Events.RoundEndCancellationData
-  commentId: T:PluginAPI.Events.RoundEndCancellationData
+  name: UserGroup
+  nameWithType: UserGroup
+  fullName: UserGroup
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData
+  commentId: T:PluginAPI.Events.PlayerGetGroupCancellationData
   parent: PluginAPI.Events
-  name: RoundEndCancellationData
-  nameWithType: RoundEndCancellationData
-  fullName: PluginAPI.Events.RoundEndCancellationData
-- uid: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd*
-  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
-  name: AllowRoundEnd
-  nameWithType: RoundEndCancellationData.AllowRoundEnd
-  fullName: PluginAPI.Events.RoundEndCancellationData.AllowRoundEnd
-- uid: System.ArgumentException
-  commentId: T:System.ArgumentException
-  isExternal: true
-- uid: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd*
-  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd
-  name: DelayRoundEnd
-  nameWithType: RoundEndCancellationData.DelayRoundEnd
-  fullName: PluginAPI.Events.RoundEndCancellationData.DelayRoundEnd
-- uid: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd*
-  commentId: Overload:PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
-  name: AbortRoundEnd
-  nameWithType: RoundEndCancellationData.AbortRoundEnd
-  fullName: PluginAPI.Events.RoundEndCancellationData.AbortRoundEnd
+  name: PlayerGetGroupCancellationData
+  nameWithType: PlayerGetGroupCancellationData
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged*
+  commentId: Overload:PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged
+  name: LeaveUnchanged
+  nameWithType: PlayerGetGroupCancellationData.LeaveUnchanged
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData.LeaveUnchanged
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData.Override*
+  commentId: Overload:PluginAPI.Events.PlayerGetGroupCancellationData.Override
+  name: Override
+  nameWithType: PlayerGetGroupCancellationData.Override
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData.Override

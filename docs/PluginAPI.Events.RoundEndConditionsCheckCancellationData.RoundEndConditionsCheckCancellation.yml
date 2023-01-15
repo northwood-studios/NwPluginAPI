@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: RoundEndConditionsCheckCancellation
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 362
@@ -50,7 +50,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: None
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 364
@@ -82,7 +82,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ConditionsSatisfied
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 365
@@ -114,7 +114,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: ConditionsNotSatisfied
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 366

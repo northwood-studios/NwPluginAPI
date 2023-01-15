@@ -6,6 +6,7 @@ items:
   parent: PluginAPI
   children:
   - PluginAPI.PluginApiVersion.Version
+  - PluginAPI.PluginApiVersion.VersionStatic
   - PluginAPI.PluginApiVersion.VersionString
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: PluginApiVersion
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 2
@@ -60,7 +61,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: Version
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 4
@@ -93,7 +94,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: https://github.com/northwood-studios/NwPluginAPI.git
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
     id: VersionString
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 5
@@ -101,16 +102,53 @@ items:
   - PluginAPI
   namespace: PluginAPI
   syntax:
-    content: public const string VersionString = "12.0.0-rc.6"
+    content: public const string VersionString = "12.0.0"
     return:
       type: System.String
-    content.vb: Public Const VersionString As String = "12.0.0-rc.6"
+    content.vb: Public Const VersionString As String = "12.0.0"
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
+- uid: PluginAPI.PluginApiVersion.VersionStatic
+  commentId: P:PluginAPI.PluginApiVersion.VersionStatic
+  id: VersionStatic
+  parent: PluginAPI.PluginApiVersion
+  langs:
+  - csharp
+  - vb
+  name: VersionStatic
+  nameWithType: PluginApiVersion.VersionStatic
+  fullName: PluginAPI.PluginApiVersion.VersionStatic
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/PluginApiVersion.cs
+      branch: master
+      repo: git@github.com:northwood-studios/NwPluginAPI.git
+    id: VersionStatic
+    path: ../NwPluginAPI/PluginApiVersion.cs
+    startLine: 9
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI
+  syntax:
+    content: public static string VersionStatic { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property VersionStatic As String
+  overload: PluginAPI.PluginApiVersion.VersionStatic*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 references:
 - uid: PluginAPI
   commentId: N:PluginAPI
@@ -416,3 +454,8 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: PluginAPI.PluginApiVersion.VersionStatic*
+  commentId: Overload:PluginAPI.PluginApiVersion.VersionStatic
+  name: VersionStatic
+  nameWithType: PluginApiVersion.VersionStatic
+  fullName: PluginAPI.PluginApiVersion.VersionStatic

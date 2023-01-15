@@ -10,6 +10,7 @@ items:
   - PluginAPI.Events.EventParameter
   - PluginAPI.Events.IEventCancellation
   - PluginAPI.Events.PlayerCheckReservedSlotCancellationData
+  - PluginAPI.Events.PlayerGetGroupCancellationData
   - PluginAPI.Events.PlayerPreCoinFlipCancellationData
   - PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
   - PluginAPI.Events.PreauthCancellationData
@@ -95,6 +96,12 @@ references:
   name: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
   nameWithType: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
   fullName: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+- uid: PluginAPI.Events.PlayerGetGroupCancellationData
+  commentId: T:PluginAPI.Events.PlayerGetGroupCancellationData
+  parent: PluginAPI.Events
+  name: PlayerGetGroupCancellationData
+  nameWithType: PlayerGetGroupCancellationData
+  fullName: PluginAPI.Events.PlayerGetGroupCancellationData
 - uid: PluginAPI.Events
   commentId: N:PluginAPI.Events
   name: PluginAPI.Events

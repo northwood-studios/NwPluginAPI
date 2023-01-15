@@ -207,6 +207,8 @@
     name: IEventCancellation
   - uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
     name: PlayerCheckReservedSlotCancellationData
+  - uid: PluginAPI.Events.PlayerGetGroupCancellationData
+    name: PlayerGetGroupCancellationData
   - uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData
     name: PlayerPreCoinFlipCancellationData
   - uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
