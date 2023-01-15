@@ -27,6 +27,8 @@ namespace PluginAPI.Core
 	using CommandSystem;
 	using InventorySystem.Items.Pickups;
 	using PluginAPI.Core.Items;
+	using PlayerRoles.Voice;
+	using RemoteAdmin;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -571,6 +573,14 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets player <see cref="PlayerRoleBase"/>
+		/// <remarks>
+		/// It is useful to use for example (RoleBase as Scp096Role)
+		/// </remarks>
+		/// </summary>
+		public PlayerRoleBase RoleBase => ReferenceHub.roleManager.CurrentRole;
+
+		/// <summary>
 		/// Gets or sets the player's custom info.
 		/// </summary>
 		public string CustomInfo
@@ -663,10 +673,56 @@ namespace PluginAPI.Core
 		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
 
 		/// <summary>
-		/// Gets if the player is SCP.
+		/// Get player ammo bag.
 		/// </summary>
-		public bool IsScp => ReferenceHub.roleManager.CurrentRole.RoleTypeId is RoleTypeId.Scp049 or RoleTypeId.Scp079
-			or RoleTypeId.Scp096 or RoleTypeId.Scp106 or RoleTypeId.Scp173 or RoleTypeId.Scp0492 or RoleTypeId.Scp939;
+		public Dictionary<ItemType, ushort> AmmoBag => ReferenceHub.inventory.UserInventory.ReserveAmmo;
+
+		/// <summary>
+		/// Get or set server role color.
+		/// </summary>
+		public string RoleColor
+		{
+			get => ReferenceHub.serverRoles.Network_myColor;
+			set => ReferenceHub.serverRoles.SetColor(value);
+		}
+
+		/// <summary>
+		/// Get or set server role text.
+		/// </summary>
+		public string RoleName
+		{
+			get => ReferenceHub.serverRoles.Network_myText;
+			set => ReferenceHub.serverRoles.SetText(value);
+		}
+
+
+		/// <summary>
+		/// Gets the player unit name.
+		/// </summary>
+		public string UnitName => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitName : null;
+
+		/// <summary>
+		/// Get if player has reserved slot.
+		/// </summary>
+		public bool HasReservedSlot => ReservedSlot.HasReservedSlot(UserId, out _);
+
+		/// <summary>
+		/// Gets player velocity.
+		/// </summary>
+		public Vector3 Velocity => ReferenceHub.GetVelocity();
+
+		/// <summary>
+		/// Gets player <see cref="VoiceModule"/>
+		/// <remarks>
+		///  Can be null.
+		/// </remarks>
+		/// </summary>
+		public VoiceModuleBase VoiceModule => ReferenceHub.roleManager.CurrentRole is IVoiceRole voiceRole ? voiceRole.VoiceModule : null;
+
+		/// <summary>
+		/// Gets player <see cref="VoiceChannel"/>.
+		/// </summary>
+		public VoiceChatChannel VoiceChannel => VoiceModule?.CurrentChannel ?? VoiceChatChannel.None;
 
 		/// <summary>
 		/// Gets if the player has no items in his inventory.
@@ -757,9 +813,29 @@ namespace PluginAPI.Core
 		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
 
 		/// <summary>
+		/// Gets if the player is SCP.
+		/// </summary>
+		public bool IsSCP => Role.GetTeam() is Team.SCPs;
+
+		/// <summary>
 		/// Gets whether or not the player is human.
 		/// </summary>
 		public bool IsHuman => ReferenceHub.IsHuman();
+
+		/// <summary>
+		/// Gets whether or not the player is Nine Tailed Fox forces.
+		/// </summary>
+		public bool IsNTF => Role.GetTeam() is Team.FoundationForces;
+
+		/// <summary>
+		/// Gets whether or not the player is Chaos Insurgency forces.
+		/// </summary>
+		public bool IsChaos => Role.GetTeam() is Team.ChaosInsurgency;
+
+		/// <summary>
+		/// Gets whether or not the player is tutorial.
+		/// </summary>
+		public bool IsTutorial => Role is RoleTypeId.Tutorial;
 
 		/// <summary>
 		/// Gets whether or not the player is alive
@@ -913,13 +989,13 @@ namespace PluginAPI.Core
 		{
 			if (shouldClearPrevious) ClearBroadcasts();
 
-			Server.Instance.GetComponent<Broadcast>().TargetAddElement(ReferenceHub.characterClassManager.connectionToClient, message, duration, type);
+			Server.Broadcast.TargetAddElement(ReferenceHub.characterClassManager.connectionToClient, message, duration, type);
 		}
 
 		/// <summary>
 		/// Clears displayed broadcast(s).
 		/// </summary>
-		public void ClearBroadcasts() => Server.Instance.GetComponent<Broadcast>().TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
+		public void ClearBroadcasts() => Server.Broadcast.TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
 
 		/// <summary>
 		/// Sends a console message to the player's console.
@@ -1101,6 +1177,15 @@ namespace PluginAPI.Core
 					ReferenceHub.inventory.ServerRemoveItem(inventory.Items.ElementAt(0).Key, null);
 				}
 			}
+		}
+
+		/// <summary>
+		/// Set player <see cref="UserGroup"/>
+		/// </summary>
+		/// <param name="group">UserGroup to set</param>
+		public void SetGroup(UserGroup group)
+		{
+			ReferenceHub.serverRoles.SetGroup(group, false);
 		}
 
 		/// <summary>

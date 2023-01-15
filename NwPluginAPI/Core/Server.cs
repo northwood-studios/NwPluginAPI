@@ -1,3 +1,7 @@
+using System;
+using CustomPlayerEffects;
+using UnityEngine;
+
 namespace PluginAPI.Core
 {
 	using CommandSystem;
@@ -66,6 +70,11 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Get the amount of players connected to the server.
+		/// </summary>
+		public static int PlayerCount => Player.Count;
+
+		/// <summary>
 		/// Gets or sets the maximum amount of players online at the same time.
 		/// </summary>
 		public static int MaxPlayers
@@ -83,7 +92,37 @@ namespace PluginAPI.Core
 			set => CustomNetworkManager.reservedSlots = value;
 		}
 
-#region Ban System
+		public static Broadcast Broadcast => Broadcast.Singleton;
+
+		/// <summary>
+		/// Get server <see cref="PermissionsHandler"/>
+		/// </summary>
+		public static PermissionsHandler PermissionsHandler => ServerStatic.GetPermissionsHandler();
+
+		/// <summary>
+		/// Get actual ticks per second of the server.
+		/// </summary>
+		public static double TPS => Math.Round(1f / Time.smoothDeltaTime);
+
+		/// <summary>
+		/// Get or set server spawn protection duration.
+		/// </summary>
+		public static float SpawnProtectDuration
+		{
+			get => SpawnProtected.SpawnDuration;
+			set => SpawnProtected.SpawnDuration = value;
+		}
+
+		/// <summary>
+		/// Get or set if server is heavily modded.
+		/// </summary>
+		public static bool IsHeavilyModded
+		{
+			get => CustomNetworkManager.HeavilyModded;
+			set => CustomNetworkManager.HeavilyModded = value;
+		}
+
+		#region Ban System
 
 		/// <summary>
 		/// Bans a player from the server.
