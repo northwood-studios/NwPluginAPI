@@ -247,7 +247,7 @@ namespace PluginAPI.Events
 	public readonly struct PlayerPreCoinFlipCancellationData : IEventCancellation
 	{
 		/// <inheritdoc />
-		public bool IsCancelled => Cancellation == CoinFlipCancellation.None;
+		public bool IsCancelled => Cancellation != CoinFlipCancellation.None;
 
 		public CoinFlipCancellation Cancellation { get; }
 
@@ -338,7 +338,7 @@ namespace PluginAPI.Events
 	public readonly struct RoundEndConditionsCheckCancellationData : IEventCancellation
 	{
 		/// <inheritdoc />
-		public bool IsCancelled => Cancellation == RoundEndConditionsCheckCancellation.None;
+		public bool IsCancelled => Cancellation != RoundEndConditionsCheckCancellation.None;
 
 		public readonly RoundEndConditionsCheckCancellation Cancellation;
 
@@ -355,7 +355,7 @@ namespace PluginAPI.Events
 		/// /// <summary>
 		/// Overrides the the round end conditions check result.
 		/// </summary>
-		/// <param name="satisfied">Indicates whether round end conditions are satisifed.</param>
+		/// <param name="satisfied">Indicates whether round end conditions are satisfied.</param>
 		/// <returns>The <see cref="PlayerPreCoinFlipCancellationData"/>.</returns>
 		public static RoundEndConditionsCheckCancellationData Override(bool satisfied) =>
 			new RoundEndConditionsCheckCancellationData(satisfied ? RoundEndConditionsCheckCancellation.ConditionsSatisfied : RoundEndConditionsCheckCancellation.ConditionsNotSatisfied);
@@ -366,5 +366,38 @@ namespace PluginAPI.Events
 			ConditionsSatisfied,
 			ConditionsNotSatisfied
 		}
+	}
+
+	/// <summary>
+	/// Represents PlayerGetGroup event cancellation data.
+	/// </summary>
+	public readonly struct PlayerGetGroupCancellationData : IEventCancellation
+	{
+		/// <inheritdoc />
+		public bool IsCancelled { get; }
+
+		public readonly UserGroup AssignedUserGroup;
+
+		private PlayerGetGroupCancellationData(bool isCancelled, UserGroup assignedUserGroup)
+		{
+			IsCancelled = isCancelled;
+			AssignedUserGroup = assignedUserGroup;
+		}
+
+		/// <summary>
+		/// Doesn't override the user group.
+		/// </summary>
+		/// <returns>The <see cref="PlayerGetGroupCancellationData"/>.</returns>
+		public static PlayerGetGroupCancellationData LeaveUnchanged() =>
+			new PlayerGetGroupCancellationData(false, null);
+
+		/// <returns></returns>
+		/// /// <summary>
+		/// Overrides the user group.
+		/// </summary>
+		/// <param name="assignedUserGroup">User group assigned to the Player.</param>
+		/// <returns>The <see cref="PlayerGetGroupCancellationData"/>.</returns>
+		public static PlayerGetGroupCancellationData Override(UserGroup assignedUserGroup) =>
+			new PlayerGetGroupCancellationData(true, assignedUserGroup);
 	}
 }

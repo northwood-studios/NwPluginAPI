@@ -1,6 +1,8 @@
 ﻿using Footprinting;
 using Interactables.Interobjects;
 using InventorySystem.Items.ThrowableProjectiles;
+using MapGeneration;
+using PlayerRoles.Voice;
 using UnityEngine;
 
 namespace TemplatePlugin
@@ -84,6 +86,25 @@ namespace TemplatePlugin
 		void OnPlayerLeave(MyPlayer player)
 		{
 			Log.Info($"Player &6{player.UserId}&r left this server with of &1{player.Test}&4");
+		}
+
+		[PluginEvent(ServerEventType.PlayerDying)]
+		bool OnPlayerDying(MyPlayer player, MyPlayer attacker, DamageHandlerBase damageHandler)
+		{
+			var condition = false;
+			if (condition is true)
+			{
+				// The event is canceled and the player does not die
+				return false;
+			}
+			else
+			{
+				Log.Info(attacker == null
+					? $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying, cause {damageHandler}"
+					: $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying by &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}");
+				// The event runs normally
+				return true;
+			}
 		}
 
 		[PluginEvent(ServerEventType.PlayerDeath)]
@@ -177,6 +198,36 @@ namespace TemplatePlugin
 		void OnPlayerChangesRadioRange(MyPlayer plr, RadioItem item, byte range)
 		{
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed radio range to &6{range}&r");
+		}
+
+		[PluginEvent(ServerEventType.PlayerRadioToggle)]
+		void OnPlayerRadioToggle(MyPlayer plr, RadioItem item, bool newState)
+		{
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) toggled the radio state to &6{newState}&r");
+		}
+
+		[PluginEvent(ServerEventType.PlayerUsingRadio)]
+		void OnPlayerUsingRadio(MyPlayer player, RadioItem radio, float drain)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is using a radio and its draining &6{drain}&r of the battery");
+		}
+
+		[PluginEvent(ServerEventType.CassieAnnouncesScpTermination)]
+		void OnCassieAnnouncScpTermination(MyPlayer scp, DamageHandlerBase damage, string announcement)
+		{
+			Log.Info($"Cassie announce a SCP termination of player &6{scp.Nickname}&r (&6{scp.UserId}&r), CASSIE announcement is &6{announcement}&r");
+		}
+
+		[PluginEvent(ServerEventType.PlayerGetGroup)]
+		void OnPlayerChangeGroup(string userID, UserGroup group)
+		{
+			Log.Info($"User group of {userID} is &6{((group == null || group.BadgeText == null) ? "(null)" : group.BadgeText)}&r");
+		}
+
+		[PluginEvent(ServerEventType.PlayerUsingIntercom)]
+		void OnPlayerUsingIntercom(MyPlayer player, IntercomState state)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is using Intercom");
 		}
 
 		[PluginEvent(ServerEventType.PlayerChangeSpectator)]
@@ -450,7 +501,6 @@ namespace TemplatePlugin
 		{
 			Log.Info($"Round started");
 		}
-
 
 		[PluginEvent(ServerEventType.WaitingForPlayers)]
 		void WaitingForPlayers()

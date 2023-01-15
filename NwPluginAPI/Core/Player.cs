@@ -25,6 +25,10 @@ namespace PluginAPI.Core
 	using RemoteAdmin.Communication;
 	using MapGeneration;
 	using CommandSystem;
+	using InventorySystem.Items.Pickups;
+	using PluginAPI.Core.Items;
+	using PlayerRoles.Voice;
+	using RemoteAdmin;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -569,6 +573,14 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets player <see cref="PlayerRoleBase"/>.
+		/// <remarks>
+		/// It is useful to use for example (RoleBase as Scp096Role)
+		/// </remarks>
+		/// </summary>
+		public PlayerRoleBase RoleBase => ReferenceHub.roleManager.CurrentRole;
+
+		/// <summary>
 		/// Gets or sets the player's custom info.
 		/// </summary>
 		public string CustomInfo
@@ -620,8 +632,8 @@ namespace PluginAPI.Core
 		/// </summary>
 		public bool IsOverwatchEnabled
 		{
-			get => ReferenceHub.serverRoles.OverwatchEnabled;
-			set => ReferenceHub.serverRoles.OverwatchEnabled = value;
+			get => ReferenceHub.serverRoles.IsInOverwatch;
+			set => ReferenceHub.serverRoles.IsInOverwatch = value;
 		}
 
 		/// <summary>
@@ -659,6 +671,68 @@ namespace PluginAPI.Core
 		/// Get player items.
 		/// </summary>
 		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
+
+		/// <summary>
+		/// Get player ammo bag.
+		/// </summary>
+		public Dictionary<ItemType, ushort> AmmoBag => ReferenceHub.inventory.UserInventory.ReserveAmmo;
+
+		/// <summary>
+		/// Get or set server role color.
+		/// </summary>
+		public string RoleColor
+		{
+			get => ReferenceHub.serverRoles.Network_myColor;
+			set => ReferenceHub.serverRoles.SetColor(value);
+		}
+
+		/// <summary>
+		/// Get or set server role text.
+		/// </summary>
+		public string RoleName
+		{
+			get => ReferenceHub.serverRoles.Network_myText;
+			set => ReferenceHub.serverRoles.SetText(value);
+		}
+
+
+		/// <summary>
+		/// Gets the player unit name.
+		/// </summary>
+		public string UnitName => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitName : null;
+
+		/// <summary>
+		/// Get if player has reserved slot.
+		/// </summary>
+		public bool HasReservedSlot => ReservedSlot.HasReservedSlot(UserId, out _);
+
+		/// <summary>
+		/// Gets player velocity.
+		/// </summary>
+		public Vector3 Velocity => ReferenceHub.GetVelocity();
+
+		/// <summary>
+		/// Gets player <see cref="VoiceModule"/>
+		/// <remarks>
+		///  Can be null.
+		/// </remarks>
+		/// </summary>
+		public VoiceModuleBase VoiceModule => ReferenceHub.roleManager.CurrentRole is IVoiceRole voiceRole ? voiceRole.VoiceModule : null;
+
+		/// <summary>
+		/// Gets player <see cref="VoiceChannel"/>.
+		/// </summary>
+		public VoiceChatChannel VoiceChannel => VoiceModule?.CurrentChannel ?? VoiceChatChannel.None;
+
+		/// <summary>
+		/// Gets if the player has no items in his inventory.
+		/// </summary>
+		public bool IsWithoutItems => ReferenceHub.inventory.UserInventory.Items.Count == 0;
+
+		/// <summary>
+		/// Get if the player has no ammunition.
+		/// </summary>
+		public bool IsOutOfAmmo => ReferenceHub.inventory.UserInventory.ReserveAmmo.All(ammo => ammo.Value == 0);
 
 		/// <summary>
 		/// Gets or sets whether or not the player is disarmed.
@@ -739,9 +813,34 @@ namespace PluginAPI.Core
 		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
 
 		/// <summary>
+		/// Get player role team.
+		/// </summary>
+		public Team Team => Role.GetTeam();
+
+		/// <summary>
+		/// Gets if the player is SCP.
+		/// </summary>
+		public bool IsSCP => Role.GetTeam() is Team.SCPs;
+
+		/// <summary>
 		/// Gets whether or not the player is human.
 		/// </summary>
 		public bool IsHuman => ReferenceHub.IsHuman();
+
+		/// <summary>
+		/// Gets whether or not the player is Nine Tailed Fox forces.
+		/// </summary>
+		public bool IsNTF => Role.GetTeam() is Team.FoundationForces;
+
+		/// <summary>
+		/// Gets whether or not the player is Chaos Insurgency forces.
+		/// </summary>
+		public bool IsChaos => Role.GetTeam() is Team.ChaosInsurgency;
+
+		/// <summary>
+		/// Gets whether or not the player is tutorial.
+		/// </summary>
+		public bool IsTutorial => Role is RoleTypeId.Tutorial;
 
 		/// <summary>
 		/// Gets whether or not the player is alive
@@ -895,13 +994,13 @@ namespace PluginAPI.Core
 		{
 			if (shouldClearPrevious) ClearBroadcasts();
 
-			Server.Instance.GetComponent<Broadcast>().TargetAddElement(ReferenceHub.characterClassManager.connectionToClient, message, duration, type);
+			Server.Broadcast.TargetAddElement(ReferenceHub.characterClassManager.connectionToClient, message, duration, type);
 		}
 
 		/// <summary>
 		/// Clears displayed broadcast(s).
 		/// </summary>
-		public void ClearBroadcasts() => Server.Instance.GetComponent<Broadcast>().TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
+		public void ClearBroadcasts() => Server.Broadcast.TargetClearElements(ReferenceHub.characterClassManager.connectionToClient);
 
 		/// <summary>
 		/// Sends a console message to the player's console.
@@ -997,7 +1096,44 @@ namespace PluginAPI.Core
 		/// Adds an Item of specific item type.
 		/// </summary>
 		/// <param name="item">ItemType</param>
-		public void AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+		/// <returns>Returns the added item.</returns>
+		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="item">The item.</param>
+		public void RemoveItem(Item item) => ReferenceHub.inventory.ServerRemoveItem(item.Serial, item.OriginalObject.PickupDropModel);
+
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="pickup">The item pickup.</param>
+		public void RemoveItem(ItemPickup pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Serial, pickup.OriginalObject);
+
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="pickup">The item pickup.</param>
+		public void RemoveItem(ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Info.Serial, pickup);
+
+		/// <summary>
+		/// Drops an specific item.
+		/// </summary>
+		/// <param name="item">The item.</param>
+		public void DropItem(Item item) => ReferenceHub.inventory.ServerDropItem(item.Serial);
+
+		/// <summary>
+		/// Drops an specific item.
+		/// </summary>
+		/// <param name="item">The item base.</param>
+		public void DropItem(ItemBase item) => ReferenceHub.inventory.ServerDropItem(item.ItemSerial);
+
+		/// <summary>
+		/// Drops an specific item.
+		/// </summary>
+		/// <param name="itemSerial">The item serial.</param>
+		public void DropItem(ushort itemSerial) => ReferenceHub.inventory.ServerDropItem(itemSerial);
 
 		/// <summary>
 		/// Sets the ammo amount of a specific ammo type.
@@ -1036,18 +1172,25 @@ namespace PluginAPI.Core
 		{
 			if (clearAmmo)
 			{
-				foreach (var ammo in ReferenceHub.inventory.UserInventory.ReserveAmmo.Keys)
-				{
-					ReferenceHub.inventory.ServerSetAmmo(ammo, 0);
-				}
+				ReferenceHub.inventory.UserInventory.ReserveAmmo.Clear();
 			}
 			if (clearItems)
 			{
-				foreach (var item in ReferenceHub.inventory.UserInventory.Items.Values)
+				var inventory = ReferenceHub.inventory.UserInventory;
+				while (inventory.Items.Count > 0)
 				{
-					ReferenceHub.inventory.ServerRemoveItem(item.ItemSerial, null);
+					ReferenceHub.inventory.ServerRemoveItem(inventory.Items.ElementAt(0).Key, null);
 				}
 			}
+		}
+
+		/// <summary>
+		/// Set player <see cref="UserGroup"/>
+		/// </summary>
+		/// <param name="group">UserGroup to set</param>
+		public void SetGroup(UserGroup group)
+		{
+			ReferenceHub.serverRoles.SetGroup(group, false);
 		}
 
 		/// <summary>

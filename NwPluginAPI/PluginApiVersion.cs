@@ -6,5 +6,7 @@
 		public const string VersionString = "12.0.0-rc.6";
 
 		//PackageVersion needs to be set to the same value as VersionString MANUALLY IN .csproj
+
+		public static string VersionStatic => VersionString;
 	}
 }

@@ -1,4 +1,7 @@
+﻿using Interactables.Interobjects;
 ﻿using MapGeneration.Distributors;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
 using Scp914;
 
 namespace TemplatePlugin
@@ -130,13 +133,13 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.Scp914UpgradeInventory)]
-		public void OnScp914UpgradeInventory(MyPlayer player, ItemBase item)
+		public void OnScp914UpgradeInventory(MyPlayer player, ItemBase item, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"Item &2{item.ItemTypeId}&r upgraded in inventory of &6{player.Nickname}&r (&6{player.UserId}&r) by SCP-914");
 		}
 
 		[PluginEvent(ServerEventType.Scp914UpgradePickup)]
-		public void OnScp914UpgradePickup(ItemPickupBase item, Vector3 outputPosition)
+		public void OnScp914UpgradePickup(ItemPickupBase item, Vector3 outputPosition, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"SCP-914 upgraded pickup &2{item.Info.ItemId}&r and it is at the exit in the position {outputPosition}");
 		}
@@ -259,6 +262,12 @@ namespace TemplatePlugin
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-049 resurrected body of &6{target.Nickname}&r (&6{target.UserId}&r), ragdoll with class &2{body.Info.RoleType}&r!");
 		}
 
+		[PluginEvent(ServerEventType.Scp079CameraChanged)]
+		public void OnScp079ChangedCamera(MyPlayer player, Scp079Camera camera)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-079 changes camera");
+		}
+
 		[PluginEvent(ServerEventType.Scp049StartResurrectingBody)]
 		public void OnScp049StartResurrectingBody(MyPlayer player, MyPlayer target, BasicRagdoll body, bool canResurrect)
 		{
@@ -269,6 +278,48 @@ namespace TemplatePlugin
 		public void OnScp106TeleportPlayer(MyPlayer player, MyPlayer target)
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) teleported player &6{target.Nickname}&r (&6{target.UserId}&r) to pocket dimension as SCP-106");
+		}
+
+		[PluginEvent(ServerEventType.Scp096AddingTarget)]
+		public void OnScp096AddTarget(MyPlayer player, MyPlayer target, bool isForLooking)
+		{
+			Log.Info($"Player &6{target.Nickname}&r (&6{target.UserId}&r) {(isForLooking ? "look" : "shoot")}  player &6{player.Nickname}&r (&6{player.UserId}&r) and was added to the SCP-096 target list");
+		}
+
+		[PluginEvent(ServerEventType.Scp096Enraging)]
+		public void OnScp096Enrage(MyPlayer player, float initialDuration)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) went into a state of rage for {initialDuration} seconds");
+		}
+
+		[PluginEvent(ServerEventType.Scp096ChangeState)]
+		public void OnScp096CalmDown(MyPlayer player, Scp096RageState rageState)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) changed its state to {rageState} as SCP-096");
+		}
+
+		[PluginEvent(ServerEventType.Scp096Charging)]
+		public void OnScp096Charge(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) uses its charging ability as SCP-096");
+		}
+
+		[PluginEvent(ServerEventType.Scp096PryingGate)]
+		public void OnScp096PryGate(MyPlayer player, PryableDoor gate)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) breached the gate {gate.name}");
+		}
+
+		[PluginEvent(ServerEventType.Scp096TryNotCry)]
+		public void OnScp096TryingNotCry(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is trying not to cry");
+		}
+
+		[PluginEvent(ServerEventType.Scp096StartCrying)]
+		public void OnScp096StartCrying(MyPlayer player)
+		{
+			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) cancel his TryToNotCry ability");
 		}
 
 		[PluginEvent(ServerEventType.BanIssued)]
@@ -332,15 +383,21 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.Scp914PickupUpgraded)]
-		public void OnScp914PickupUpgraded(ItemPickupBase item, Vector3 newPosition)
+		public void OnScp914PickupUpgraded(ItemPickupBase item, Vector3 newPosition, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"&rItem pickup with ItemID {item.Info.ItemId} has been upgraded in SCP 914.");
 		}
 
 		[PluginEvent(ServerEventType.Scp914InventoryItemUpgraded)]
-		public void OnScp914InventoryItemUpgraded(MyPlayer player, ItemBase item)
+		public void OnScp914InventoryItemUpgraded(MyPlayer player, ItemBase item, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"&rItem in inventory of player &6{player.Nickname}&r (&6{player.UserId}&r) with ItemID {item.ItemTypeId} has been upgraded in SCP 914.");
+		}
+
+		[PluginEvent(ServerEventType.Scp914ProcessPlayer)]
+		public void OnScp914ProcessPlayer(MyPlayer player, Scp914KnobSetting knobSetting, Vector3 outPosition)
+		{
+			Log.Info($"&rSCP-914 process &6{player.Nickname}&r with KnobSetting {knobSetting} and will exit in the {outPosition} position.");
 		}
 	}
 }

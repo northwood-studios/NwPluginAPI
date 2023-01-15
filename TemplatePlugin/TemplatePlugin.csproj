@@ -10,6 +10,8 @@
 
 		<Configurations>Release</Configurations>
 		<Platforms>AnyCPU</Platforms>
+		<Copyright>Copyright by Hubert Moszka Northwood, 2022-2023</Copyright>
+		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -19,6 +21,13 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\NwPluginAPI\NwPluginAPI.csproj" />
 	</ItemGroup>
+	
+	<PropertyGroup>
+		<!-- Disable automatic generation of version attribute -->
+		<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+		<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+		<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<Reference Include="Assembly-CSharp" HintPath="$(SL_REFERENCES)\Assembly-CSharp.dll" />

@@ -1,4 +1,8 @@
 using Footprinting;
+using InventorySystem.Items.Radio;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
+using PlayerRoles.Voice;
 using PluginAPI.Events;
 
 namespace PluginAPI.Enums
@@ -50,12 +54,12 @@ namespace PluginAPI.Enums
 		PlayerLeft = 1,
 
 		/// <summary>
-		/// Executed when player dies.
+		/// Executed before a player dies.
 		/// </summary>
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
 		/// </remarks>
-		PlayerDeath = 2,
+		PlayerDying  = 2,
 
 		/// <summary>
 		/// Executed when decontamination in LCZ starts.
@@ -165,7 +169,7 @@ namespace PluginAPI.Enums
 		/// Executed when player changes range in radio.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="byte"> range.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="byte"/> range.
 		/// </remarks>
 		PlayerChangeRadioRange = 16,
 
@@ -662,7 +666,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP 914 upgrades player inventory.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// </remarks>
 		Scp914UpgradeInventory = 79,
 
@@ -670,7 +674,7 @@ namespace PluginAPI.Enums
 		/// Event executed when SCP 914 upgrades pickup.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> outputPosition.
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> outputPosition, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// </remarks>
 		Scp914UpgradePickup = 80,
 
@@ -930,7 +934,7 @@ namespace PluginAPI.Enums
 		/// Executed after a pickup is upgraded by the SCP-914.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition.
+		/// Parameters: <see cref="ItemPickupBase"/> item, <see cref="Vector3"/> newPosition <see cref="Scp914KnobSetting"/> knobSetting.
 		/// Event is NOT cancellable.
 		/// </remarks>
 		Scp914PickupUpgraded = 112,
@@ -939,9 +943,131 @@ namespace PluginAPI.Enums
 		/// Executed after SCP-914 upgrades items in a player inventory.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemBase"/> item, <see cref="Scp914KnobSetting"/> knobSetting.
 		/// Event is NOT cancellable.
 		/// </remarks>
 		Scp914InventoryItemUpgraded = 113,
+
+		/// <summary>
+		/// Executed when a player is processed by the SCP-914
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp914KnobSetting"/> knobSetting, <see cref="Vector3"/> outPosition.
+		/// </remarks>
+		Scp914ProcessPlayer = 114,
+
+		/// <summary>
+		/// Executed after a SCP-079 changes camera.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp079Camera"/> camera.
+		/// </remarks>
+		Scp079CameraChanged = 115,
+
+		/// <summary>
+		/// Executes when a player looks at SCP-096.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> target, <see cref="bool"/> isForLooking.
+		/// </remarks>
+		Scp096AddingTarget = 116,
+
+		/// <summary>
+		/// Executed when a SCP096 gets angered.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="float"/> initialDuration.
+		/// </remarks>
+		Scp096Enraging = 117,
+
+		/// <summary>
+		/// Executed when SCP-096 changes state.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Scp096RageState"/> rageState.
+		/// </remarks>
+		Scp096ChangeState = 118,
+
+		/// <summary>
+		/// Executed when SCP-096 charges.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player.
+		/// </remarks>
+		Scp096Charging = 119,
+
+		/// <summary>
+		/// Executed when SCP-096 begins prying a gate.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="PryableDoor"/> gateDoor.
+		/// </remarks>
+		Scp096PryingGate = 120,
+
+		/// <summary>
+		/// Executed when SCP-096 tries not to cry.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player
+		/// </remarks>
+		Scp096TryNotCry = 121,
+
+		/// <summary>
+		/// Executed when SCP-096 cancels its TryToNotCry ability.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player
+		/// </remarks>
+		Scp096StartCrying = 122,
+
+		/// <summary>
+		/// Executed when a player drain radio battery.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="float"/> drain.
+		/// </remarks>
+		PlayerUsingRadio = 123,
+
+		/// <summary>
+		/// Executed before CASSIE announces an SCP termination
+		/// </summary>
+		/// <remarks>
+		/// Params: <see cref="IPlayer"/> player, <see cref="DamageHandlerBase"/> damageHandler <see cref="string"/> announcement
+		/// </remarks>
+		CassieAnnouncesScpTermination = 124,
+
+		/// <summary>
+		/// Executed when UserGroup of a player is obtained.
+		/// </summary>
+		/// <remarks>
+		/// Params: <see cref="string"/> userId, <see cref="UserGroup"/> group.
+		/// Cancellable with <see cref="PlayerGetGroupCancellationData"/>.
+ 		/// </remarks>
+		PlayerGetGroup = 125,
+
+		/// <summary>
+		/// Executed while a player is using intercom.
+		/// <remarks>
+		/// Params: <see cref="IPlayer"/> player, <see cref="IntercomState"/> intercomState
+		/// </remarks>
+		/// </summary>
+		PlayerUsingIntercom = 126,
+
+		/// <summary>
+		/// Executed after a player dies.
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
+		/// Event is NOT cancellable.
+		/// </remarks>
+		/// </summary>
+		PlayerDeath = 127,
+
+		/// <summary>
+		/// Executed when player enables or disables the radio.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="bool"/> newState.
+		/// </remarks>
+		PlayerRadioToggle = 128,
 	}
 }

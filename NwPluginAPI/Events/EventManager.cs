@@ -1,4 +1,7 @@
 using Footprinting;
+using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PlayerRoles.PlayableScps.Scp096;
+using PlayerRoles.Voice;
 
 namespace PluginAPI.Events
 {
@@ -59,7 +62,7 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "player"))
 			},
 			{
-				ServerEventType.PlayerDeath, new Event(
+				ServerEventType.PlayerDying, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(IPlayer), "attacker"),
 					new EventParameter(typeof(DamageHandlerBase), "damageHandler"))
@@ -446,12 +449,14 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp914UpgradeInventory, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(ItemBase), "item"))
+					new EventParameter(typeof(ItemBase), "item"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp914UpgradePickup, new Event(
 					new EventParameter(typeof(ItemPickupBase), "item"),
-					new EventParameter(typeof(Vector3), "outputPosition"))
+					new EventParameter(typeof(Vector3), "outputPosition"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp106TeleportPlayer, new Event(
@@ -622,12 +627,93 @@ namespace PluginAPI.Events
 			{
 				ServerEventType.Scp914PickupUpgraded, new Event(
 					new EventParameter(typeof(ItemPickupBase), "item"),
-					new EventParameter(typeof(Vector3), "newPosition"))
+					new EventParameter(typeof(Vector3), "newPosition"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
 			},
 			{
 				ServerEventType.Scp914InventoryItemUpgraded, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(ItemBase), "item"))
+					new EventParameter(typeof(ItemBase), "item"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"))
+			},
+			{
+				ServerEventType.Scp914ProcessPlayer, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp914KnobSetting), "knobSetting"),
+					new EventParameter(typeof(Vector3), "outPosition"))
+			},
+			{
+				ServerEventType.Scp079CameraChanged, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp079Camera), "camera"))
+			},
+			{
+				ServerEventType.Scp096AddingTarget, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IPlayer), "target"),
+					new EventParameter(typeof(bool), "isForLook")
+					)
+			},
+			{
+				ServerEventType.Scp096Enraging, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(float), "initialDuration"))
+			},
+			{
+				ServerEventType.Scp096ChangeState, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(Scp096RageState), "rageState"))
+			},
+			{
+				ServerEventType.Scp096Charging, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.Scp096PryingGate, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(PryableDoor), "gateDoor"))
+			},
+			{
+				ServerEventType.Scp096TryNotCry, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.Scp096StartCrying, new Event(
+					new EventParameter(typeof(IPlayer), "player"))
+			},
+			{
+				ServerEventType.PlayerUsingRadio, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(RadioItem), "radio"),
+					new EventParameter(typeof(float), "drain"))
+			},
+			{
+				ServerEventType.CassieAnnouncesScpTermination, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(DamageHandlerBase), "damageHandler"),
+					new EventParameter(typeof(String), "announcement"))
+			},
+			{
+				ServerEventType.PlayerGetGroup, new Event(
+					new EventParameter(typeof(string), "userId"),
+					new EventParameter(typeof(UserGroup), "group"))
+			},
+			{
+				ServerEventType.PlayerUsingIntercom, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IntercomState), "intercomState"))
+			},
+			{
+				ServerEventType.PlayerDeath, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(IPlayer), "attacker"),
+					new EventParameter(typeof(DamageHandlerBase), "damageHandler"))
+			},
+			{
+				ServerEventType.PlayerRadioToggle, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(RadioItem), "radio"),
+					new EventParameter(typeof(bool), "newState"))
 			},
 		};
 

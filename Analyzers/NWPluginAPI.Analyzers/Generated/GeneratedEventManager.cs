@@ -279,10 +279,12 @@ public static class EventManager
 			new EventParameter("Scp914.Scp914KnobSetting", false, "previousKnobSetting")) },
 		{ 79, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
 		{ 80, new Event(
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "item"),
-			new EventParameter("UnityEngine.Vector3", false, "outputPosition")) },
+			new EventParameter("UnityEngine.Vector3", false, "outputPosition"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
 		{ 81, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target")) },
@@ -389,9 +391,59 @@ public static class EventManager
 			new EventParameter("System.Boolean", false, "baseGameConditionsSatisfied")) },
 		{ 112, new Event(
 			new EventParameter("InventorySystem.Items.Pickups.ItemPickupBase", false, "item"),
-			new EventParameter("UnityEngine.Vector3", false, "newPosition")) },
+			new EventParameter("UnityEngine.Vector3", false, "newPosition"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
 		{ 113, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
-			new EventParameter("InventorySystem.Items.ItemBase", false, "item")) },
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting")) },
+		{ 114, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("Scp914.Scp914KnobSetting", false, "knobSetting"),
+			new EventParameter("UnityEngine.Vector3", false, "outPosition")) },
+		{ 115, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera", false, "camera")) },
+		{ 116, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
+			new EventParameter("System.Boolean", false, "isForLook")) },
+		{ 117, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.Single", false, "initialDuration")) },
+		{ 118, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.PlayableScps.Scp096.Scp096RageState", false, "rageState")) },
+		{ 119, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 120, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("Interactables.Interobjects.PryableDoor", false, "gateDoor")) },
+		{ 121, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 122, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 123, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("InventorySystem.Items.Radio.RadioItem", false, "radio"),
+			new EventParameter("System.Single", false, "drain")) },
+		{ 124, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler"),
+			new EventParameter("System.String", false, "announcement")) },
+		{ 125, new Event(
+			new EventParameter("System.String", false, "userId"),
+			new EventParameter("UserGroup", false, "group")) },
+		{ 126, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.Voice.IntercomState", false, "intercomState")) },
+		{ 127, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "attacker"),
+			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler")) },
+		{ 128, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("InventorySystem.Items.Radio.RadioItem", false, "radio"),
+			new EventParameter("System.Boolean", false, "newState")) },
 	};
 }
