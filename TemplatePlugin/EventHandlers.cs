@@ -383,7 +383,7 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.Scp914PickupUpgraded)]
-		public void OnScp914PickupUpgraded(ItemPickupBase item, Vector3 newPosition)
+		public void OnScp914PickupUpgraded(ItemPickupBase item, Vector3 newPosition, Scp914KnobSetting knobSetting)
 		{
 			Log.Info($"&rItem pickup with ItemID {item.Info.ItemId} has been upgraded in SCP 914.");
 		}
