@@ -695,7 +695,7 @@ namespace PluginAPI.Events
 			},
 			{
 				ServerEventType.PlayerGetGroup, new Event(
-					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(string), "userId"),
 					new EventParameter(typeof(UserGroup), "group"))
 			},
 			{

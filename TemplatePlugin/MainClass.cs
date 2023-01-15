@@ -219,9 +219,9 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerGetGroup)]
-		void OnPlayerChangeGroup(MyPlayer player, UserGroup group)
+		void OnPlayerChangeGroup(string userID, UserGroup group)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is changing to group &6{group.BadgeText}&r");
+			Log.Info($"User group of {userID} is &6{((group == null || group.BadgeText == null) ? "(null)" : group.BadgeText)}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUsingIntercom)]

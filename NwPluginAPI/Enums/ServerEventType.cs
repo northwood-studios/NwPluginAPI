@@ -1040,7 +1040,7 @@ namespace PluginAPI.Enums
 		/// Executed when UserGroup of a player is obtained.
 		/// </summary>
 		/// <remarks>
-		/// Params: <see cref="IPlayer"/> player, <see cref="UserGroup"/> group.
+		/// Params: <see cref="string"/> userId, <see cref="UserGroup"/> group.
 		/// Cancellable with <see cref="PlayerGetGroupCancellationData"/>.
  		/// </remarks>
 		PlayerGetGroup = 125,

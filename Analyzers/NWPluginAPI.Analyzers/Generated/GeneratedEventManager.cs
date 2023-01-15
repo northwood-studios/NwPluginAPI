@@ -432,7 +432,7 @@ public static class EventManager
 			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler"),
 			new EventParameter("System.String", false, "announcement")) },
 		{ 125, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("System.String", false, "userId"),
 			new EventParameter("UserGroup", false, "group")) },
 		{ 126, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
