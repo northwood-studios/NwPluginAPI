@@ -573,7 +573,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets player <see cref="PlayerRoleBase"/>
+		/// Gets player <see cref="PlayerRoleBase"/>.
 		/// <remarks>
 		/// It is useful to use for example (RoleBase as Scp096Role)
 		/// </remarks>
@@ -811,6 +811,11 @@ namespace PluginAPI.Core
 		/// Gets whether or not the player's inventory is full.
 		/// </summary>
 		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
+
+		/// <summary>
+		/// Get player role team.
+		/// </summary>
+		public Team Team => Role.GetTeam();
 
 		/// <summary>
 		/// Gets if the player is SCP.
