@@ -107,7 +107,7 @@ namespace PluginAPI.Loader
 		/// <param name="directory">The paths from which to load plugins and their configs from.</param>
 		private static void LoadPlugins(PluginDirectory directory)
 		{
-			string[] files = Directory.GetFiles(directory.Plugins, "*.dll");
+			string[] files = Directory.GetFiles(directory.Plugins, "*.dll").Where(x => !x.Contains("MatHost")).ToArray();
 
 			Log.Info($"Loading &2{files.Length}&r plugins...");
 			int successes = 0;
