@@ -18,23 +18,21 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class Server : Player
 	{
-		private static bool _isInitialized;
-
-		/// <summary>
-		/// Initializes server instance.
-		/// </summary>
-		public static void Init()
-		{
-			if (_isInitialized) return;
-
-			_isInitialized = true;
-			Instance = new Server(ReferenceHub.HostHub);
-		}
+		private static Server _instance;
 
 		/// <summary>
 		/// The <see cref="Server"/> instance.
 		/// </summary>
-		public static Server Instance { get; private set; }
+		public static Server Instance
+		{
+			get
+			{
+				if (_instance.ReferenceHub == null)
+					_instance = new Server(ReferenceHub.HostHub);
+
+				return _instance;
+			}
+		}
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Server"/> class.
