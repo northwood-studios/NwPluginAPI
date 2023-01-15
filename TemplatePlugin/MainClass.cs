@@ -200,6 +200,12 @@ namespace TemplatePlugin
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed radio range to &6{range}&r");
 		}
 
+		[PluginEvent(ServerEventType.PlayerRadioToggle)]
+		void OnPlayerRadioToggle(MyPlayer plr, RadioItem item, bool newState)
+		{
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) toggled the radio state to &6{newState}&r");
+		}
+
 		[PluginEvent(ServerEventType.PlayerUsingRadio)]
 		void OnPlayerUsingRadio(MyPlayer player, RadioItem radio, float drain)
 		{
@@ -212,7 +218,7 @@ namespace TemplatePlugin
 			Log.Info($"Cassie announce a SCP termination of player &6{scp.Nickname}&r (&6{scp.UserId}&r), CASSIE announcement is &6{announcement}&r");
 		}
 
-		[PluginEvent(ServerEventType.PlayerChangingGroup)]
+		[PluginEvent(ServerEventType.PlayerGetGroup)]
 		void OnPlayerChangeGroup(MyPlayer player, UserGroup group)
 		{
 			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is changing to group &6{group.BadgeText}&r");
@@ -501,8 +507,6 @@ namespace TemplatePlugin
 		{
 			Log.Info($"Waiting for players...");
 		}
-
-
 
 		[PluginConfig] public MainConfig PluginConfig;
 

@@ -685,27 +685,23 @@ namespace PluginAPI.Events
 				ServerEventType.PlayerUsingRadio, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(RadioItem), "radio"),
-					new EventParameter(typeof(float), "drain")
-					)
+					new EventParameter(typeof(float), "drain"))
 			},
 			{
 				ServerEventType.CassieAnnouncesScpTermination, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
 					new EventParameter(typeof(DamageHandlerBase), "damageHandler"),
-					new EventParameter(typeof(String), "announcement")
-					)
+					new EventParameter(typeof(String), "announcement"))
 			},
 			{
-				ServerEventType.PlayerChangingGroup, new Event(
+				ServerEventType.PlayerGetGroup, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(UserGroup), "group")
-					)
+					new EventParameter(typeof(UserGroup), "group"))
 			},
 			{
 				ServerEventType.PlayerUsingIntercom, new Event(
 					new EventParameter(typeof(IPlayer), "player"),
-					new EventParameter(typeof(IntercomState), "intercomState")
-					)
+					new EventParameter(typeof(IntercomState), "intercomState"))
 			},
 			{
 				ServerEventType.PlayerDeath, new Event(
@@ -713,7 +709,12 @@ namespace PluginAPI.Events
 					new EventParameter(typeof(IPlayer), "attacker"),
 					new EventParameter(typeof(DamageHandlerBase), "damageHandler"))
 			},
-
+			{
+				ServerEventType.PlayerRadioToggle, new Event(
+					new EventParameter(typeof(IPlayer), "player"),
+					new EventParameter(typeof(RadioItem), "radio"),
+					new EventParameter(typeof(bool), "newState"))
+			},
 		};
 
 		private static bool ValidateEvent(Type[] parameters, Type[] requiredParameters)

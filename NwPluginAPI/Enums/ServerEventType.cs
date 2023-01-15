@@ -2,6 +2,7 @@ using Footprinting;
 using InventorySystem.Items.Radio;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PlayerRoles.PlayableScps.Scp096;
+using PlayerRoles.Voice;
 using PluginAPI.Events;
 
 namespace PluginAPI.Enums
@@ -168,7 +169,7 @@ namespace PluginAPI.Enums
 		/// Executed when player changes range in radio.
 		/// </summary>
 		/// <remarks>
-		/// Parameters: <see cref="IPlayer"/> player, <see cref="byte"> range.
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="byte"/> range.
 		/// </remarks>
 		PlayerChangeRadioRange = 16,
 
@@ -1036,17 +1037,18 @@ namespace PluginAPI.Enums
 		CassieAnnouncesScpTermination = 124,
 
 		/// <summary>
-		/// Executed before a player changes is UserGroup.
+		/// Executed when UserGroup of a player is obtained.
 		/// </summary>
 		/// <remarks>
 		/// Params: <see cref="IPlayer"/> player, <see cref="UserGroup"/> group.
+		/// Cancellable with <see cref="PlayerGetGroupCancellationData"/>.
  		/// </remarks>
-		PlayerChangingGroup = 125,
+		PlayerGetGroup = 125,
 
 		/// <summary>
 		/// Executed while a player is using intercom.
 		/// <remarks>
-		/// Params: <see cref="IPlayer"/> player
+		/// Params: <see cref="IPlayer"/> player, <see cref="IntercomState"/> intercomState
 		/// </remarks>
 		/// </summary>
 		PlayerUsingIntercom = 126,
@@ -1057,6 +1059,14 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
 		/// </remarks>
 		/// </summary>
-		PlayerDeath,
+		PlayerDeath = 127,
+
+		/// <summary>
+		/// Executed when player enables or disables the radio.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="bool"/> newState.
+		/// </remarks>
+		PlayerRadioToggle = 128,
 	}
 }

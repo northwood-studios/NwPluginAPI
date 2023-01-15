@@ -435,10 +435,15 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("UserGroup", false, "group")) },
 		{ 126, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerRoles.Voice.IntercomState", false, "intercomState")) },
 		{ 127, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "attacker"),
 			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler")) },
+		{ 128, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("InventorySystem.Items.Radio.RadioItem", false, "radio"),
+			new EventParameter("System.Boolean", false, "newState")) },
 	};
 }
