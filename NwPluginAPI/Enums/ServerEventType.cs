@@ -1057,6 +1057,7 @@ namespace PluginAPI.Enums
 		/// Executed after a player dies.
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
+		/// Event is NOT cancellable.
 		/// </remarks>
 		/// </summary>
 		PlayerDeath = 127,
