@@ -30,7 +30,7 @@
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		
 		<Title>Northwood.PluginAPI.Analyzers</Title>
-		<Copyright>Copyright by Hubert Moszka Northwood, 2022</Copyright>
+		<Copyright>Copyright by Hubert Moszka Northwood, 2022-2023</Copyright>
 		<BaseOutputPath></BaseOutputPath>
 		<PackAsTool>False</PackAsTool>
 	</PropertyGroup>
