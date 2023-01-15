@@ -423,5 +423,22 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
 		{ 122, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 123, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("InventorySystem.Items.Radio.RadioItem", false, "radio"),
+			new EventParameter("System.Single", false, "drain")) },
+		{ 124, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler"),
+			new EventParameter("System.String", false, "announcement")) },
+		{ 125, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("UserGroup", false, "group")) },
+		{ 126, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player")) },
+		{ 127, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "attacker"),
+			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler")) },
 	};
 }
