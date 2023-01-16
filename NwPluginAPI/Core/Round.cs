@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace PluginAPI.Core
 {
 	using GameCore;
@@ -11,6 +13,11 @@ namespace PluginAPI.Core
 		/// Gets a value indicating whether the round is started or not.
 		/// </summary>
 		public static bool IsRoundStarted => RoundSummary.RoundInProgress();
+
+		/// <summary>
+		/// Gets a value indicating whether the round is ended or not.
+		/// </summary>
+		public static bool IsRoundEnded => RoundSummary.singleton._roundEnded; // Idk why is this bool private, but you can make a getter public, please.
 
 		/// <summary>
 		/// Gets or sets a value indicating whether the round is locked or not.
