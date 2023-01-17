@@ -608,7 +608,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float ArtificialHealth
 		{
-			get => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue :  ((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue;
+			get => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue :  ((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue;
 			set
 			{
 				if (IsSCP)
@@ -617,7 +617,7 @@ namespace PluginAPI.Core
 					return;
 				}
 
-				((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue = value;
+				((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue = value;
 			}
 		}
 
