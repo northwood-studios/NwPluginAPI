@@ -2,9 +2,11 @@ using MapGeneration;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using Interactables.Interobjects;
 using LightContainmentZoneDecontamination;
 using MapGeneration.Distributors;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using PluginAPI.Core.Zones.Heavy;
 using UnityEngine;
 using Color = UnityEngine.Color;
 
@@ -31,7 +33,7 @@ namespace PluginAPI.Core
 		/// <remarks>
 		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
 		/// </remarks>
-		public static IReadOnlyCollection<Scp079Camera> Cameras => (IReadOnlyCollection<Scp079Camera>)Object.FindObjectsOfType(typeof(Scp079Camera));
+		public static IReadOnlyCollection<Scp079Camera> Cameras => Object.FindObjectsOfType<Scp079Camera>();
 
 		/// <summary>
 		/// Get the current pocket dimensions teleports of the map.
@@ -39,7 +41,7 @@ namespace PluginAPI.Core
 		/// <remarks>
 		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
 		/// </remarks>
-		public static IReadOnlyCollection<PocketDimensionTeleport> PocketDimensionTeleports => (IReadOnlyCollection<PocketDimensionTeleport>)Object.FindObjectsOfType(typeof(PocketDimensionTeleport));
+		public static IReadOnlyCollection<PocketDimensionTeleport> PocketDimensionTeleports => Object.FindObjectsOfType<PocketDimensionTeleport>();
 
 		/// <summary>
 		/// Get the current lockers of the map.
@@ -47,7 +49,31 @@ namespace PluginAPI.Core
 		/// <remarks>
 		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
 		/// </remarks>
-		public static IReadOnlyCollection<Locker> Lockers => (IReadOnlyCollection<Locker>)Object.FindObjectsOfType(typeof(Locker));
+		public static IReadOnlyCollection<Locker> Lockers => Object.FindObjectsOfType<Locker>();
+
+		/// <summary>
+		/// Get the current elevators of the map.
+		/// </summary>
+		/// <remarks>
+		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
+		/// </remarks>
+		public static IReadOnlyCollection<ElevatorChamber> Elevators => Object.FindObjectsOfType<ElevatorChamber>();
+
+		/// <summary>
+		/// Get the current tesla gates of the map.
+		/// </summary>
+		/// <remarks>
+		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
+		/// </remarks>
+		public static IReadOnlyCollection<TeslaGate> TeslaGates => TeslaGateController.Singleton.TeslaGates;
+
+		/// <summary>
+		/// Get the current generators of the map.
+		/// </summary>
+		/// <remarks>
+		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
+		/// </remarks>
+		public static IReadOnlyCollection<Scp079Generator> Generators => Object.FindObjectsOfType<Scp079Generator>();
 
 		/// <summary>
 		/// Broadcast a message to all <see cref="Player">players</see>.
