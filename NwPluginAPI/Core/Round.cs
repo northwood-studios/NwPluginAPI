@@ -17,7 +17,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets a value indicating whether the round is ended or not.
 		/// </summary>
-		public static bool IsRoundEnded => RoundSummary.singleton._roundEnded; // Idk why is this bool private, but you can make a getter public, please.
+		public static bool IsRoundEnded => !IsRoundStarted && Round.Duration.Seconds > 1;
 
 		/// <summary>
 		/// Gets or sets a value indicating whether the round is locked or not.
