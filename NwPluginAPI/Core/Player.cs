@@ -608,14 +608,23 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float ArtificialHealth
 		{
-			get => ((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue;
-			set => ((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue = value;
+			get => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue :  ((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue;
+			set
+			{
+				if (IsSCP)
+				{
+					((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue = value;
+					return;
+				}
+
+				((AhpStat)ReferenceHub.playerStats.StatModules[0]).CurValue = value;
+			}
 		}
 
 		/// <summary>
 		/// Gets the player's current maximum artifical health.
 		/// </summary>
-		public float MaxArtificalHealth => ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
+		public float MaxArtificalHealth => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).MaxValue : ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
 
 		/// <summary>
 		/// Gets whether or not the player has remoteadmin access.
@@ -1343,5 +1352,6 @@ namespace PluginAPI.Core
 #endregion
 
 #endregion
+
 	}
 }
