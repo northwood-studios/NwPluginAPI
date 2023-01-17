@@ -117,7 +117,7 @@ namespace PluginAPI.Core
 		#region GetRandomRoom
 
 		/// <summary>
-		/// You get a random room from the specified zone.
+		/// Get a random room from the specified zone.
 		/// </summary>
 		/// <remarks>
 		/// Can be null if no room is found.
