@@ -1,9 +1,11 @@
 using MapGeneration;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using LightContainmentZoneDecontamination;
 using MapGeneration.Distributors;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using UnityEngine;
 using Color = UnityEngine.Color;
 
 namespace PluginAPI.Core
@@ -24,19 +26,28 @@ namespace PluginAPI.Core
 		public static IReadOnlyCollection<RoomIdentifier> Rooms => RoomIdentifier.RoomsByCoordinates.Values;
 
 		/// <summary>
-		/// Get the current cameras of the map.
+		/// Get the current <see cref="Scp079Camera"/>s of the map.
 		/// </summary>
-		public static IReadOnlyCollection<Scp079Camera> Scp079Cameras => _cameras.AsReadOnly();
+		/// <remarks>
+		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
+		/// </remarks>
+		public static IReadOnlyCollection<Scp079Camera> Cameras => (IReadOnlyCollection<Scp079Camera>)Object.FindObjectsOfType(typeof(Scp079Camera));
 
 		/// <summary>
 		/// Get the current pocket dimensions teleports of the map.
 		/// </summary>
-		public static IReadOnlyCollection<PocketDimensionTeleport> PocketDimensionTeleports => _teleports.AsReadOnly();
+		/// <remarks>
+		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
+		/// </remarks>
+		public static IReadOnlyCollection<PocketDimensionTeleport> PocketDimensionTeleports => (IReadOnlyCollection<PocketDimensionTeleport>)Object.FindObjectsOfType(typeof(PocketDimensionTeleport));
 
 		/// <summary>
 		/// Get the current lockers of the map.
 		/// </summary>
-		public static IReadOnlyCollection<Locker> Lockers => _lockers.AsReadOnly();
+		/// <remarks>
+		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
+		/// </remarks>
+		public static IReadOnlyCollection<Locker> Lockers => (IReadOnlyCollection<Locker>)Object.FindObjectsOfType(typeof(Locker));
 
 		/// <summary>
 		/// Broadcast a message to all <see cref="Player">players</see>.
@@ -66,7 +77,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Get or set LCZ decontamination status.
 		/// <remarks>
-		/// None is by default, set status to force dont actually force decontamination for dat use <see cref="ForceDecontamination"/>.
+		/// None is by default, set status to force dont actually force decontamination for that use <see cref="Map.ForceDecontamination"/>.
 		/// </remarks>
 		/// </summary>
 		public static DecontaminationController.DecontaminationStatus DecontaminationStatus
@@ -75,7 +86,24 @@ namespace PluginAPI.Core
 			set => DecontaminationController.Singleton.DecontaminationOverride = value;
 		}
 
-		#region Facility rooms
+		#region Facility rooms tools
+
+		#region GetRandomRoom
+
+		/// <summary>
+		/// You get a random room from the specified zone.
+		/// </summary>
+		/// <remarks>
+		/// Can be null if no room is found.
+		/// </remarks>
+		/// <returns><see cref="RoomIdentifier"/></returns>
+		public static RoomIdentifier GetRandomRoom(FacilityZone zone)
+		{
+			var rooms = Rooms.Where(r => r.Zone == zone);
+			return rooms.Any() ? rooms.ElementAtOrDefault(Random.Range(0, rooms.Count())) : null;
+		}
+
+		#endregion
 
 		#region  Light Flicker
 
@@ -237,16 +265,6 @@ namespace PluginAPI.Core
 		}
 
 		#endregion
-
-		#endregion
-
-		#region Internal fields
-
-		internal static List<Scp079Camera> _cameras = new(150); //Idk the exact number of cameras per map.
-
-		internal static List<PocketDimensionTeleport> _teleports = new(8);
-
-		internal static List<Locker> _lockers = new(100);
 
 		#endregion
 	}
