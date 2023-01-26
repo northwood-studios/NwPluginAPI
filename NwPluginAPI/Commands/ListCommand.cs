@@ -8,24 +8,19 @@ namespace PluginAPI.Commands
 	/// <summary>
 	/// Lists all plugins on the server.
 	/// </summary>
-	[CommandHandler(typeof(PluginsCommand))]
 	public class ListCommand : ICommand
 	{
-		/// <inheritdoc/>
 		public string Command { get; } = "list";
-
-		/// <inheritdoc/>
 		public string[] Aliases { get; } = null;
-
-		/// <inheritdoc/>
 		public string Description { get; } = "List of installed plugins.";
+		public static ListCommand Instance = new();
 
 		public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
 		{
-			List<string> plugins = new List<string>();
+			var plugins = new List<string>();
 			foreach (var plugin in AssemblyLoader.InstalledPlugins)
 			{
-				plugins.Add($"<color=lime>{(plugin.PluginName)}</color> v<color=orange>{plugin.PluginVersion}</color>");
+				plugins.Add($"<color=lime>{(plugin.PluginName)}</color> v<color=orange>{plugin.PluginVersion}</color> - <color=blue>{plugin.PluginAuthor}</color>\n");
 			}
 
 			response = $"Plugins: {(plugins.Count == 0 ? "0 plugins enabled" : string.Join(", ", plugins))}";

@@ -1,3 +1,8 @@
+using System.Linq;
+using System.Reflection;
+using PluginAPI.Core;
+using PluginAPI.Core.Attributes;
+
 namespace PluginAPI.Commands
 {
 	using CommandSystem;
@@ -6,25 +11,50 @@ namespace PluginAPI.Commands
 	using System.Collections.Generic;
 
 	/// <summary>
-	/// Reloads plugins configs.
+	/// Reloads plugins or gameplay configs.
 	/// </summary>
-	[CommandHandler(typeof(PluginsCommand))]
-	public class ReloadCommmand : ICommand
+	public class ReloadConfigCommmand : ICommand, IUsageProvider
 	{
 		public string Command { get; } = "reload";
 		public string[] Aliases { get; } = null;
-		public string Description { get; } = "Reload of plugins configs.";
+		public string Description { get; } = "Reload plugins configuration or config_gameplay";
+		public string[] Usage { get; } = { "plugins/gameplay" };
+		public static ReloadConfigCommmand Instance = new();
 
 		public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
 		{
-			List<string> plugins = new List<string>();
-			foreach (var plugin in AssemblyLoader.InstalledPlugins)
+			if (arguments.IsEmpty())
 			{
-				plugins.Add($"<color=lime>{(plugin.PluginName)}</color>");
+				response = $"Please specify a valid argument\nUsage: plugins reload {this.DisplayCommandUsage()}";
+				return false;
 			}
 
-			response = $"{(plugins.Count == 0 ? "Reloaded 0 plugin configs!" : $"Reloaded {string.Join(", ", plugins)} plugin configs!")}";
-			return true;
+			switch (arguments.At(0).ToLower())
+			{
+				case "plugins":
+				{
+					var plugins = new List<string>();
+
+					foreach (var plugin in AssemblyLoader.InstalledPlugins)
+					{
+						plugin.ReloadConfig(plugin);
+						plugins.Add($"<color=lime>{plugin.PluginName}</color>");
+					}
+					response = $"{(plugins.Count == 0 ? "Reloaded 0 plugin configs!" : $"Reloaded {string.Join(", ", plugins)} plugin configs!")}";
+					return true;
+				}
+				case "gameplay":
+				{
+					GameCore.ConfigFile.ReloadGameConfigs();
+					response = $"config_gameplay successfully reloaded";
+					return true;
+				}
+				default:
+				{
+					response = $"Please specify a valid argument\nUsage: plugins reload {this.DisplayCommandUsage()}";
+					return false;
+				}
+			}
 		}
 	}
 }

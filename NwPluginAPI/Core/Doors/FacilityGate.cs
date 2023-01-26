@@ -23,6 +23,11 @@ namespace PluginAPI.Core.Doors
 		public new static int Count => List.Count;
 
 		/// <summary>
+		/// Gets gate name.
+		/// </summary>
+		public string Name => OriginalObject.name;
+
+		/// <summary>
 		/// The base-game object.
 		/// </summary>
 		public new readonly PryableDoor OriginalObject;

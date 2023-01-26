@@ -30,6 +30,8 @@ namespace PluginAPI.Commands
 
 		public override void LoadGeneratedCommands()
 		{
+			RegisterCommand(ReloadConfigCommmand.Instance);
+			RegisterCommand(ListCommand.Instance);
 			Debug.LogError("Command loading has not been patched!");
 		}
 	}
