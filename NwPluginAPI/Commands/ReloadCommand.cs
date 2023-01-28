@@ -29,7 +29,7 @@ namespace PluginAPI.Commands
 				return false;
 			}
 
-			switch (arguments.At(0).ToLower())
+			switch (arguments.At(0).ToLowerInvariant())
 			{
 				case "plugins":
 				{
