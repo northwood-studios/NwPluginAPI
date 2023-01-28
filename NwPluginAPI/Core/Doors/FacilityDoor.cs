@@ -1,6 +1,8 @@
 namespace PluginAPI.Core.Doors
 {
+	using System.Linq;
 	using Interactables.Interobjects.DoorUtils;
+	using MapGeneration;
 	using Core;
 	using Zones;
 	using System.Collections.Generic;
@@ -95,6 +97,20 @@ namespace PluginAPI.Core.Doors
 		/// Gets the door's rotation.
 		/// </summary>
 		public Quaternion Rotation => Transform.rotation;
+
+		/// <summary>
+		/// Gets the door in specified room.
+		/// </summary>
+		/// <param name="roomId">Target room identifier.</param>
+		public static IEnumerable<FacilityDoor> Get(RoomIdentifier roomId) =>
+			List.Where(x => x.Room.Identifier.Equals(roomId));
+
+		/// <summary>
+		/// Gets the door in specified zone.
+		/// </summary>
+		/// <param name="facilityZone">Target zone.</param>
+		public static IEnumerable<FacilityDoor> Get(Zones.FacilityZone facilityZone) =>
+			List.Where(x => x.Room.Zone.Equals(facilityZone));
 
 		/// <summary>
 		/// Locks the door.
