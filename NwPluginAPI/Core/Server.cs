@@ -81,6 +81,9 @@ namespace PluginAPI.Core
 			set => CustomNetworkManager.reservedSlots = value;
 		}
 
+		/// <summary>
+		/// Gets server broadcast singleton.
+		/// </summary>
 		public static Broadcast Broadcast => Broadcast.Singleton;
 
 		/// <summary>

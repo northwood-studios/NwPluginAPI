@@ -22,14 +22,17 @@ namespace PluginAPI.Commands
 			return command;
 		}
 
-		protected override bool ExecuteParent(ArraySegment<string> arguments, ICommandSender sender, out string response)
+		protected override bool ExecuteParent(ArraySegment<string> arguments, ICommandSender sender,
+			out string response)
 		{
-			response = $"Avaliable commands: <color=green>list/reload</color>";
+			response = $"Available commands: <color=green>list/reload</color>";
 			return true;
 		}
 
 		public override void LoadGeneratedCommands()
 		{
+			RegisterCommand(ReloadConfigCommand.Instance);
+			RegisterCommand(ListCommand.Instance);
 			Debug.LogError("Command loading has not been patched!");
 		}
 	}

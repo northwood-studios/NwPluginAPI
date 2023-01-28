@@ -79,6 +79,11 @@ namespace PluginAPI.Core.Doors
 		}
 
 		/// <summary>
+		/// Gets door name.
+		/// </summary>
+		public string Name => OriginalObject.name;
+
+		/// <summary>
 		/// Gets the door's <see cref="UnityEngine.Transform"/>.
 		/// </summary>
 		public Transform Transform => OriginalObject.transform;

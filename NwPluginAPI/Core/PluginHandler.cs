@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace PluginAPI.Core
 {
 	using System;
@@ -167,7 +169,7 @@ namespace PluginAPI.Core
 
 			var attribute = field.GetCustomAttribute<Attribute>();
 
-			if (!(attribute is PluginConfig cfg)) return;
+			if (attribute is not PluginConfig cfg) return;
 
 			string targetPath = string.IsNullOrEmpty(cfg.ConfigPath) ? _mainConfigPath : Path.Combine(PluginDirectoryPath, cfg.ConfigPath);
 
@@ -196,6 +198,52 @@ namespace PluginAPI.Core
 
 				Log.Debug($"Loaded config file for &2{PluginName}&r.", Log.DebugMode);
 			}
+		}
+
+		/// <summary>
+		/// Reload the plugin config.
+		/// </summary>
+		/// <param name="plugin">The class location of config field.</param>
+		public void ReloadConfig(object plugin)
+		{
+			var fields = plugin.GetType().GetFields();
+			var configFields = fields.Where(f => f.GetCustomAttributes<Attribute>() is PluginConfig);
+
+			foreach (var configField in configFields)
+			{
+				var cfg = configField.GetCustomAttributes<PluginConfig>().FirstOrDefault();
+
+				string targetPath = string.IsNullOrEmpty(cfg.ConfigPath) ? _mainConfigPath : Path.Combine(PluginDirectoryPath, cfg.ConfigPath);
+
+				if (!Directory.Exists(Path.GetDirectoryName(targetPath)))
+				{
+					Log.Error($"{nameof(ReloadConfig)}: Configuration directory does not exist");
+					return;
+				}
+
+				if (!File.Exists(targetPath))
+				{
+					Log.Error($"{nameof(ReloadConfig)}: Configuration file does not exist");
+					return;
+				}
+
+				object config;
+				try
+				{
+					config = YamlParser.Deserializer.Deserialize(File.ReadAllText(targetPath), configField.FieldType);
+				}
+				catch (Exception ex)
+				{
+					Log.Error($"{nameof(ReloadConfig)}: Failed deserializing config file for &2{PluginName}&r,\n{ex}");
+					return;
+				}
+
+				configField.SetValue(plugin, config);
+				File.WriteAllText(targetPath, YamlParser.Serializer.Serialize(config));
+
+				Log.Debug($"Reloaded config file for &2{PluginName}&r.", Log.DebugMode);
+			}
+
 		}
 
 		/// <summary>
@@ -244,6 +292,7 @@ namespace PluginAPI.Core
 
 			Log.Debug($"Saved config file for &2{PluginName}&r.", Log.DebugMode);
 		}
+
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginHandler"/> class.
