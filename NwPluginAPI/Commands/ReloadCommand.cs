@@ -13,19 +13,21 @@ namespace PluginAPI.Commands
 	/// <summary>
 	/// Reloads plugins or gameplay configs.
 	/// </summary>
-	public class ReloadConfigCommmand : ICommand, IUsageProvider
+	public class ReloadConfigCommand : ICommand, IUsageProvider
 	{
 		public string Command { get; } = "reload";
 		public string[] Aliases { get; } = null;
 		public string Description { get; } = "Reload plugins configuration or config_gameplay";
 		public string[] Usage { get; } = { "plugins/gameplay" };
-		public static ReloadConfigCommmand Instance = new();
+
+		public static ReloadConfigCommand Instance = new();
 
 		public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
 		{
 			if (arguments.IsEmpty())
 			{
-				response = $"Please specify a valid argument\nUsage: plugins reload {this.DisplayCommandUsage()}";
+				response =
+					$"Please specify a valid argument\nUsage: {arguments.Array[0]} {arguments.Array[1]} {this.DisplayCommandUsage()}";
 				return false;
 			}
 
@@ -40,7 +42,9 @@ namespace PluginAPI.Commands
 						plugin.ReloadConfig(plugin);
 						plugins.Add($"<color=lime>{plugin.PluginName}</color>");
 					}
-					response = $"{(plugins.Count == 0 ? "Reloaded 0 plugin configs!" : $"Reloaded {string.Join(", ", plugins)} plugin configs!")}";
+
+					response =
+						$"{(plugins.Count == 0 ? "Reloaded 0 plugin configs!" : $"Reloaded {string.Join(", ", plugins)} plugin configs!")}";
 					return true;
 				}
 				case "gameplay":

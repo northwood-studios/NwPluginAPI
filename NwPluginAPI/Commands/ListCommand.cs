@@ -20,7 +20,8 @@ namespace PluginAPI.Commands
 			var plugins = new List<string>();
 			foreach (var plugin in AssemblyLoader.InstalledPlugins)
 			{
-				plugins.Add($"<color=lime>{(plugin.PluginName)}</color> v<color=orange>{plugin.PluginVersion}</color> - <color=blue>{plugin.PluginAuthor}</color>\n");
+				plugins.Add(
+					$"<color=lime>{plugin.PluginName}</color> v<color=orange>{plugin.PluginVersion}</color> - <color=blue>{plugin.PluginAuthor}</color>\n");
 			}
 
 			response = $"Plugins: {(plugins.Count == 0 ? "0 plugins enabled" : string.Join(", ", plugins))}";
