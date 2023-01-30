@@ -3,6 +3,7 @@ using Interactables.Interobjects.DoorUtils;
 using JetBrains.Annotations;
 using PlayerRoles.PlayableScps.Scp096;
 using PluginAPI.Core;
+using PluginAPI.Core.Doors;
 using PluginAPI.Core.Interfaces;
 using UnityEngine;
 
@@ -18,7 +19,9 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		{
 			Player = (Player)player;
 			Scp096Role = player.ReferenceHub.roleManager.CurrentRole as Scp096Role;
-			Door = DoorVariant.AllDoors.OrderBy(door => Vector3.Distance(door.transform.position, player.ReferenceHub.transform.position)).FirstOrDefault();
+			Door = FacilityDoor.List
+				.OrderBy(door => Vector3.Distance(door.Position, player.ReferenceHub.transform.position))
+				.FirstOrDefault();
 		}
 
 		/// <summary>
@@ -35,6 +38,6 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// Gets the door where SCP-096 is trying not to cry, if there is one.
 		/// </summary>
 		[CanBeNull]
-		public DoorVariant Door { get; }
+		public FacilityDoor Door { get; }
 	}
 }
