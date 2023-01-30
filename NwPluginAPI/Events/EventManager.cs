@@ -2,6 +2,7 @@ using Footprinting;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PlayerRoles.PlayableScps.Scp096;
 using PlayerRoles.Voice;
+using PluginAPI.Events.EventArgs.Scp096;
 
 namespace PluginAPI.Events
 {
@@ -675,7 +676,7 @@ namespace PluginAPI.Events
 			},
 			{
 				ServerEventType.Scp096TryNotCry, new Event(
-					new EventParameter(typeof(IPlayer), "player"))
+					new EventParameter(typeof(TryNotCryEventArg), "TryNotCryEventArg"))
 			},
 			{
 				ServerEventType.Scp096StartCrying, new Event(

@@ -2,6 +2,7 @@
 ﻿using MapGeneration.Distributors;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
 using PlayerRoles.PlayableScps.Scp096;
+using PluginAPI.Events.EventArgs.Scp096;
 using Scp914;
 
 namespace TemplatePlugin
@@ -311,9 +312,9 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.Scp096TryNotCry)]
-		public void OnScp096TryingNotCry(MyPlayer player)
+		public void OnScp096TryingNotCry(TryNotCryEventArg ev)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is trying not to cry");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) is trying not to cry");
 		}
 
 		[PluginEvent(ServerEventType.Scp096StartCrying)]
