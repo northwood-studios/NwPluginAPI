@@ -1139,11 +1139,16 @@ namespace PluginAPI.Core
 		/// <param name="number">The number of items that will be removed.</param>
 		public void RemoveItems(ItemType itemType, int number = 1)
 		{
-			for (int i = 0; i < number; i++)
+			int removed = 0;
+			for (int i = 0; i < ReferenceHub.inventory.UserInventory.Items.Count; i++)
 			{
-				if (ReferenceHub.inventory.UserInventory.Items.ContainsKey((ushort)Items.ToList().IndexOf(Items.FirstOrDefault(x => x.ItemTypeId == itemType))))
+				if (removed == number)
+					break;
+				var kvp = ReferenceHub.inventory.UserInventory.Items.ElementAt(i);
+				if (kvp.Value.ItemTypeId == itemType)
 				{
-					ReferenceHub.inventory.UserInventory.Items.Remove((ushort)Items.ToList().IndexOf(Items.FirstOrDefault(x => x.ItemTypeId == itemType)));
+					ReferenceHub.inventory.UserInventory.Items.Remove(kvp.Key);
+					removed++;
 				}
 			}
 		}
