@@ -1142,13 +1142,12 @@ namespace PluginAPI.Core
 			int removed = 0;
 			for (int i = 0; i < ReferenceHub.inventory.UserInventory.Items.Count; i++)
 			{
-				if (removed == number)
-					break;
 				var kvp = ReferenceHub.inventory.UserInventory.Items.ElementAt(i);
 				if (kvp.Value.ItemTypeId == itemType)
 				{
 					ReferenceHub.inventory.UserInventory.Items.Remove(kvp.Key);
-					removed++;
+					if (++removed == number)
+						break;
 				}
 			}
 		}
