@@ -1133,10 +1133,20 @@ namespace PluginAPI.Core
 		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.UserInventory.Items.Remove(item.ItemSerial);
 		
 		/// <summary>
-		/// Removes an specific item.
+		/// Removes all specific items.
 		/// </summary>
 		/// <param name="itemtype">The item type.</param>
-		public void RemoveItem(ItemType itemType) => ReferenceHub.inventory.UserInventory.Items.Remove((ushort)Items.ToList().IndexOf(Items.FirstOrDefault(x => x.ItemTypeId == itemType)));
+		/// <param name="number">The number of items that will be removed.</param>
+		public void RemoveItems(ItemType itemType, int number = 1)
+		{
+			for (int i = 0; i < number; i++)
+			{
+				if (ReferenceHub.inventory.UserInventory.Items.ContainsKey((ushort)Items.ToList().IndexOf(Items.FirstOrDefault(x => x.ItemTypeId == itemType))))
+				{
+					ReferenceHub.inventory.UserInventory.Items.Remove((ushort)Items.ToList().IndexOf(Items.FirstOrDefault(x => x.ItemTypeId == itemType)));
+				}
+			}
+		}
 
 		/// <summary>
 		/// Drops an specific item.
