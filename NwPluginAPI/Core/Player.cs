@@ -1131,6 +1131,12 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="item">The item base.</param>
 		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.UserInventory.Items.Remove(item.ItemSerial);
+		
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="itemtype">The item type.</param>
+		public void RemoveItem(ItemType itemType) => ReferenceHub.inventory.UserInventory.Items.Remove((ushort)Items.ToList().IndexOf(Items.FirstOrDefault(x => x.ItemTypeId == itemType)));
 
 		/// <summary>
 		/// Drops an specific item.
