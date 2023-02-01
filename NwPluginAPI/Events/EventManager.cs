@@ -676,7 +676,7 @@ namespace PluginAPI.Events
 			},
 			{
 				ServerEventType.Scp096TryNotCry, new Event(
-					new EventParameter(typeof(TryNotCryEventArg), "TryNotCryEventArg"))
+					new EventParameter(typeof(TryNotCryEventArg), nameof(TryNotCryEventArg)))
 			},
 			{
 				ServerEventType.Scp096StartCrying, new Event(
