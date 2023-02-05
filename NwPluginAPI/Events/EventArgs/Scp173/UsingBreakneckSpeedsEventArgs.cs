@@ -4,6 +4,9 @@ using PluginAPI.Core.Interfaces;
 
 namespace PluginAPI.Events.EventArgs.Scp173
 {
+	/// <summary>
+	/// Create new event for this.
+	/// </summary>
 	public class UsingBreakneckSpeedsEventArgs
 	{
 		/// <summary>
@@ -11,11 +14,12 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// </summary>
 		/// <param name="scp173">The player due to this event is executing</param>
 		/// <param name="activated">the value indicating whether at the moment of executing the event the ability is being activated or deactivated.</param>
-		public UsingBreakneckSpeedsEventArgs(IPlayer scp173, bool activated)
+		public UsingBreakneckSpeedsEventArgs(IPlayer scp173, bool activated, float cooldown)
 		{
 			Player = (Player)scp173;
 			Scp173Role = Player.RoleBase as Scp173Role;
 			IsActivated = activated;
+			Cooldown = cooldown;
 		}
 
 		/// <summary>
@@ -32,5 +36,10 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// Gets a value indicating whether the ability is activated.
 		/// </summary>
 		public bool IsActivated { get; }
+
+		/// <summary>
+		/// The cooldown of this ability when disabled.
+		/// </summary>
+		public float Cooldown { get; set; }
 	}
 }

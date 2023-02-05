@@ -1,9 +1,13 @@
 using PlayerRoles.PlayableScps.Scp096;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp096
 {
+	/// <summary>
+	/// This EventArgs is for <see cref="ServerEventType.Scp096ChangeState"/>.
+	/// </summary>
 	public class ChangeStateEventArgs
 	{
 		/// <summary>
@@ -24,13 +28,13 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		public Player Player { get; }
 
 		/// <summary>
-		/// Gets <see cref="Scp096Role"/> instance.
+		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp096.Scp096Role"/> instance.
 		/// </summary>
 		public Scp096Role Scp096Role { get; }
 
 		/// <summary>
-		/// Gets SCP-096 <see cref="Scp096RageState"/>
+		/// Get or set SCP-096 <see cref="Scp096RageState"/>
 		/// </summary>
-		public Scp096RageState RageState { get; }
+		public Scp096RageState RageState { get; set; }
 	}
 }

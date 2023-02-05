@@ -28,7 +28,7 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		public Player Player { get; }
 
 		/// <summary>
-		///  Gets <see cref="Scp173Role"/> instance.
+		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp173.Scp173Role"/> instance.
 		/// </summary>
 		public Scp173Role Scp173Role { get; }
 

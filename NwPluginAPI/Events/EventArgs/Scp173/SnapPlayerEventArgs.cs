@@ -6,19 +6,20 @@ using PluginAPI.Enums;
 namespace PluginAPI.Events.EventArgs.Scp173
 {
 	/// <summary>
-	/// This EventArgs is for <see cref="ServerEventType.Scp173CreateTantrum"/>.
+	/// This EventArgs is for <see cref="ServerEventType.Scp173SnapPlayer"/>
 	/// </summary>
-	public class PlacingTantrumEventArgs
+	public class SnapPlayerNeckEventArgs
 	{
 		/// <summary>
-		/// Initializes a new instance of <see cref="PlacingTantrumEventArgs"/>.
+		/// Initializes a new instance of <see cref="SnapPlayerNeckEventArgs"/>.
 		/// </summary>
-		/// <param name="scp173">The player due to this event is executing</param>
-		public PlacingTantrumEventArgs(IPlayer scp173, float cooldown)
+		/// <param name="scp173">The player due to this event is executing.</param>
+		/// <param name="target">Player that SCP-173 is attempting to snap its neck.</param>
+		public SnapPlayerNeckEventArgs(IPlayer scp173, IPlayer target)
 		{
 			Player = (Player)scp173;
 			Scp173Role = Player.RoleBase as Scp173Role;
-			Cooldown = cooldown;
+			Target = (Player)target;
 		}
 
 		/// <summary>
@@ -32,9 +33,8 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		public Scp173Role Scp173Role { get; }
 
 		/// <summary>
-		/// Get or set this ability cooldown.
+		/// Get the player that SCP-173 is attempting to snap its neck.
 		/// </summary>
-		public float Cooldown { get; set; }
-
+		public Player Target { get; }
 	}
 }

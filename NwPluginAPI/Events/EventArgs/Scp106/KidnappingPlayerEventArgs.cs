@@ -1,9 +1,13 @@
 using PlayerRoles.PlayableScps.Scp106;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp106
 {
+	/// <summary>
+	/// This EventArgs is for <see cref="ServerEventType.Scp106TeleportPlayer"/>.
+	/// </summary>
 	public class KidnappingPlayerEventArgs
 	{
 		/// <summary>
@@ -29,9 +33,19 @@ namespace PluginAPI.Events.EventArgs.Scp106
 		public Player Target { get; }
 
 		/// <summary>
-		/// Gets <see cref="Scp106Role"/> instance.
+		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp106.Scp106Role"/> instance.
 		/// </summary>
 		public Scp106Role Scp106Role { get; }
+
+		/// <summary>
+		/// Get or set SCP-106 cooldown of this ability.
+		/// </summary>
+		public float Cooldown { get; set; }
+
+		/// <summary>
+		/// Get or set the amount of vigor gained by SCP-106 at kidnapping someone to its pocket dimension.
+		/// </summary>
+		public float VigorGained { get; set; }
 
 		// I had fun thinking of the name of the class.
 	}

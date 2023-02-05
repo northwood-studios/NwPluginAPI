@@ -1,24 +1,25 @@
-using System.Numerics;
 using PlayerRoles.PlayableScps.Scp106;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp106
 {
 	/// <summary>
-	/// Create a new Event for this Licht.
+	/// This EventArgs is for <see cref="ServerEventType.Scp106Stalking"/>.
 	/// </summary>
-	public class TeleportingEventArgs
+	public class StalkingEventArgs
 	{
 		/// <summary>
-		/// Initializes a new instance of <see cref="TeleportingEventArgs"/>.
+		/// Initializes a new instance of <see cref="StalkingEventArgs"/>.
 		/// </summary>
-		/// <param name="player">The player due to this event is executing</param>
-		/// <param name="teleport">The position where SCP-106 is about to be teleported.</param>
-		public TeleportingEventArgs(IPlayer player, Vector3 teleport)
+		/// <param name="scp106"></param>
+		/// <param name="isActivating"></param>
+		public StalkingEventArgs(IPlayer scp106, bool isActivating)
 		{
-			Player = (Player)player;
+			Player = (Player)scp106;
 			Scp106Role = Player.RoleBase as Scp106Role;
+			IsActivating = isActivating;
 		}
 
 		/// <summary>
@@ -32,8 +33,8 @@ namespace PluginAPI.Events.EventArgs.Scp106
 		public Scp106Role Scp106Role { get; }
 
 		/// <summary>
-		/// Gets or set teleport position.
+		/// Get or set if the SCP-106 is entering or leaving of the ground.
 		/// </summary>
-		public Vector3 Position { get; set; }
+		public bool IsActivating { get; set; }
 	}
 }

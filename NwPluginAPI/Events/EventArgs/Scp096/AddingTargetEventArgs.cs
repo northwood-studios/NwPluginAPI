@@ -36,7 +36,7 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		public Player Target { get; }
 
 		/// <summary>
-		/// Gets <see cref="Scp096Role"/> instance.
+		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp096.Scp096Role"/> instance.
 		/// </summary>
 		public Scp096Role Scp096Role { get; }
 
