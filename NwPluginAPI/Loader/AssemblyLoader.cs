@@ -86,7 +86,7 @@ namespace PluginAPI.Loader
 
 			Log.Info("<---<        Load all plugins       <---<");
 
-			foreach (var plugin in Plugins.Values.SelectMany(x => x.Values).OrderByDescending(x => x.LoadPriority))
+			foreach (var plugin in Plugins.Values.SelectMany(x => x.Values).OrderBy(x => x.LoadPriority))
 			{
 				try
 				{

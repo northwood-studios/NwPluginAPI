@@ -1125,6 +1125,32 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="pickup">The item pickup.</param>
 		public void RemoveItem(ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Info.Serial, pickup);
+		
+		/// <summary>
+		/// Removes an specific item.
+		/// </summary>
+		/// <param name="item">The item base.</param>
+		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.UserInventory.Items.Remove(item.ItemSerial);
+		
+		/// <summary>
+		/// Removes all specific items.
+		/// </summary>
+		/// <param name="itemtype">The item type.</param>
+		/// <param name="number">The number of items that will be removed.</param>
+		public void RemoveItems(ItemType itemType, int number = 1)
+		{
+			int removed = 0;
+			for (int i = 0; i < ReferenceHub.inventory.UserInventory.Items.Count; i++)
+			{
+				var kvp = ReferenceHub.inventory.UserInventory.Items.ElementAt(i);
+				if (kvp.Value.ItemTypeId == itemType)
+				{
+					ReferenceHub.inventory.UserInventory.Items.Remove(kvp.Key);
+					if (++removed == number)
+						break;
+				}
+			}
+		}
 
 		/// <summary>
 		/// Drops an specific item.
