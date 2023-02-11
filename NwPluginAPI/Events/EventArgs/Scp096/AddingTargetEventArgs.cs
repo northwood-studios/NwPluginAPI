@@ -19,21 +19,21 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <param name="isForLooking">The event is executed because SCP-096 was looked at or shot at.</param>
 		public AddingTargetEventArg(IPlayer player, IPlayer target, bool isForLooking)
 		{
-			Player = (Player)player;
+			Player = (Core.Player)player;
 			Scp096Role = Player.RoleBase as Scp096Role;
-			Target = (Player)target;
+			Target = (Core.Player)target;
 			IsForLook = isForLooking;
 		}
 
 		/// <summary>
 		/// Gets player playing SCP-096.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player who is a new target.
 		/// </summary>
-		public Player Target { get; }
+		public Core.Player Target { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp096.Scp096Role"/> instance.

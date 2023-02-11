@@ -17,7 +17,7 @@ namespace PluginAPI.Events.EventArgs.Scp106
 		/// <param name="isActivating"></param>
 		public StalkingEventArgs(IPlayer scp106, bool isActivating)
 		{
-			Player = (Player)scp106;
+			Player = (Core.Player)scp106;
 			Scp106Role = Player.RoleBase as Scp106Role;
 			IsActivating = isActivating;
 		}
@@ -25,7 +25,7 @@ namespace PluginAPI.Events.EventArgs.Scp106
 		/// <summary>
 		/// Gets player playing SCP-106.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp106.Scp106Role"/> instance.

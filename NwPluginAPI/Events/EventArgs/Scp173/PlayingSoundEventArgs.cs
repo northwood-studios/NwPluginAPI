@@ -17,7 +17,7 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <param name="soundId">Sound id</param>
 		public PlayingSoundEventArgs(IPlayer scp173, Scp173AudioPlayer.Scp173SoundId soundId)
 		{
-			Player = (Player)scp173;
+			Player = (Core.Player)scp173;
 			Scp173Role = Player.RoleBase as Scp173Role;
 			SoundId = soundId;
 		}
@@ -25,7 +25,7 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <summary>
 		/// Gets player playing SCP-173.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp173.Scp173Role"/> instance.

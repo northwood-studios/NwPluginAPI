@@ -118,6 +118,14 @@ namespace PluginAPI.Core.Doors
 			List.Where(x => x.Room.Zone.Equals(facilityZone));
 
 		/// <summary>
+		/// Gets a FacilityDoor from a DoorVariant
+		/// </summary>
+		/// <param name="doorVariant">Door.</param>
+		/// <returns><see cref="FacilityDoor"/> if door is found.</returns>
+		public static FacilityDoor Get(DoorVariant doorVariant) =>
+			List.FirstOrDefault(d => d.GameObject == doorVariant.gameObject);
+
+		/// <summary>
 		/// Locks the door.
 		/// </summary>
 		/// <param name="reason">The reason.</param>

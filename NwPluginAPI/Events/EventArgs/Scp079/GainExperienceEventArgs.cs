@@ -18,7 +18,7 @@ namespace PluginAPI.Events.EventArgs.Scp079
 		/// <param name="reason"></param>
 		public GainExperienceEventArgs(IPlayer scp079, int amount, Scp079HudTranslation reason)
 		{
-			Player = (Player)scp079;
+			Player = (Core.Player)scp079;
 			Scp079Role = Player.RoleBase as Scp079Role;
 			Amount = amount;
 			Reason = reason;
@@ -27,7 +27,7 @@ namespace PluginAPI.Events.EventArgs.Scp079
 		/// <summary>
 		/// Gets player playing SCP-079.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp079.Scp079Role"/> instance.

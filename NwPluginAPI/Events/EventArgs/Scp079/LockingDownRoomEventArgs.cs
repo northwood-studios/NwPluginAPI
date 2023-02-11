@@ -20,7 +20,7 @@ namespace PluginAPI.Events.EventArgs.Scp079
 		/// <param name="cooldown"></param>
 		public LockingDownRoomEventArgs(IPlayer scp079, FacilityRoom room, int energyCost, float cooldown)
 		{
-			Player = (Player)scp079;
+			Player = (Core.Player)scp079;
 			Scp079Role = Player.RoleBase as Scp079Role;
 			Room = room;
 			EnergyCost = energyCost;
@@ -30,7 +30,7 @@ namespace PluginAPI.Events.EventArgs.Scp079
 		/// <summary>
 		/// Gets player playing SCP-079.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp079.Scp079Role"/> instance.

@@ -16,7 +16,7 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <param name="activated">the value indicating whether at the moment of executing the event the ability is being activated or deactivated.</param>
 		public UsingBreakneckSpeedsEventArgs(IPlayer scp173, bool activated, float cooldown)
 		{
-			Player = (Player)scp173;
+			Player = (Core.Player)scp173;
 			Scp173Role = Player.RoleBase as Scp173Role;
 			IsActivated = activated;
 			Cooldown = cooldown;
@@ -25,7 +25,7 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <summary>
 		/// Gets player playing SCP-173.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		///  Gets <see cref="Scp173Role"/> instance.

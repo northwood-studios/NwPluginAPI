@@ -21,7 +21,7 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <param name="player">The player due to this event is executing</param>
 		public TryNotCryEventArg(IPlayer player)
 		{
-			Player = (Player)player;
+			Player = (Core.Player)player;
 			Scp096Role = player.ReferenceHub.roleManager.CurrentRole as Scp096Role;
 			Door = FacilityDoor.List.OrderBy(door => Vector3.Distance(door.Position, player.ReferenceHub.transform.position)).FirstOrDefault();
 		}
@@ -29,7 +29,7 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <summary>
 		///  Gets the player who is playing SCP-096.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp096.Scp096Role"/> instance.

@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace PluginAPI.Core.Zones.Heavy
 {
 	using MapGeneration.Distributors;
@@ -9,6 +12,11 @@ namespace PluginAPI.Core.Zones.Heavy
 	public class Generator
 	{
 		/// <summary>
+		/// Get a list of all map generators.
+		/// </summary>
+		public static readonly List<Generator> Generators = new();
+
+		/// <summary>
 		/// The base-game object.
 		/// </summary>
 		public readonly Scp079Generator OriginalObject;
@@ -18,7 +26,6 @@ namespace PluginAPI.Core.Zones.Heavy
 		/// </summary>
 		public readonly HczRoom Room;
 
-		/*
 		/// <summary>
 		/// Gets or sets whether or not the generator is opened.
 		/// </summary>
@@ -48,7 +55,7 @@ namespace PluginAPI.Core.Zones.Heavy
 				OriginalObject.ServerSetFlag(Scp079Generator.GeneratorFlags.Unlocked, !value);
 			}
 		}
-		*/
+
 		/// <summary>
 		/// Gets or sets whether or not the generator is activating.
 		/// </summary>
@@ -62,7 +69,7 @@ namespace PluginAPI.Core.Zones.Heavy
 		/// <summary>
 		/// Gets whether or not the generator is activation-ready.
 		/// </summary>
-		public bool IsActivationReady => false; //OriginalObject.ActivationReady;
+		public bool IsActivationReady => OriginalObject.ActivationReady;
 
 		/// <summary>
 		/// Gets or sets whether or not the generator is engaged (active).
@@ -73,7 +80,9 @@ namespace PluginAPI.Core.Zones.Heavy
 			set => OriginalObject.Engaged = value;
 		}
 
-		/*public short SynchronizedTime
+		public int RemainingTime => OriginalObject.RemainingTime;
+
+		public short SynchronizedTime
 		{
 			get
 			{
@@ -83,9 +92,9 @@ namespace PluginAPI.Core.Zones.Heavy
 			{
 				OriginalObject._syncTime = value;
 			}
-		}*/
+		}
 
-		/*public float InteractionCooldown
+		public float InteractionCooldown
 		{
 			get
 			{
@@ -96,8 +105,8 @@ namespace PluginAPI.Core.Zones.Heavy
 				OriginalObject._doorToggleCooldownTime = value;
 			}
 		}
-		*/
-		/*public float UnlockInteractionCooldown
+
+		public float UnlockInteractionCooldown
 		{
 			get
 			{
@@ -108,7 +117,7 @@ namespace PluginAPI.Core.Zones.Heavy
 				OriginalObject._unlockCooldownTime = value;
 			}
 		}
-		*/
+
 		/// <summary>
 		/// Gets the generator's <see cref="UnityEngine.Transform"/>.
 		/// </summary>
@@ -134,7 +143,15 @@ namespace PluginAPI.Core.Zones.Heavy
 		/// </summary>
 		public void PlayDeniedSound()
 		{
-			//OriginalObject.RpcDenied();
+			OriginalObject.RpcDenied();
+		}
+
+		/// <summary>
+		/// Gets a <see cref="Generator"/> from a <see cref="Scp079Generator"/>.
+		/// </summary>
+		public static Generator Get(Scp079Generator scp079Generator)
+		{
+			return Generators.FirstOrDefault(g => g.OriginalObject == scp079Generator);
 		}
 
 		/// <summary>
@@ -146,6 +163,11 @@ namespace PluginAPI.Core.Zones.Heavy
 		{
 			Room = room;
 			OriginalObject = generator;
+
+			if(Generators.Count is 3)
+				Generators.Clear();
+
+			Generators.Add(this);
 		}
 	}
 }

@@ -18,9 +18,9 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <param name="damage"></param>
 		public SlapPlayerEventArgs(IPlayer scp096, IPlayer target, bool isLeftHand, float damage)
 		{
-			Player = (Player)scp096;
+			Player = (Core.Player)scp096;
 			Scp096Role = Player.RoleBase as Scp096Role;
-			Target = (Player)target;
+			Target = (Core.Player)target;
 			IsLeftAttack = isLeftHand;
 			Damage = damage;
 		}
@@ -28,7 +28,7 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <summary>
 		/// Gets player playing SCP-096.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp096.Scp096Role"/> instance.
@@ -38,7 +38,7 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <summary>
 		/// Gets player slapped for SCP-096.
 		/// </summary>
-		public Player Target { get; }
+		public Core.Player Target { get; }
 
 		/// <summary>
 		/// Gets or set if SCP-096 attacks with left hand.

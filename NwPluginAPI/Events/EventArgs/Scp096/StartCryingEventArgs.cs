@@ -16,14 +16,14 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <param name="player">The player due to this event is executing.</param>
 		public StartCryingEventArgs(IPlayer player)
 		{
-			Player = (Player)player;
+			Player = (Core.Player)player;
 			Scp096Role = Player.RoleBase as Scp096Role;
 		}
 
 		/// <summary>
 		/// Gets player playing SCP-096.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp096.Scp096Role"/> instance.

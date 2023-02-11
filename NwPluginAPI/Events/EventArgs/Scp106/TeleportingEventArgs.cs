@@ -17,14 +17,14 @@ namespace PluginAPI.Events.EventArgs.Scp106
 		/// <param name="teleport">The position where SCP-106 is about to be teleported.</param>
 		public TeleportingEventArgs(IPlayer player, Vector3 teleport)
 		{
-			Player = (Player)player;
+			Player = (Core.Player)player;
 			Scp106Role = Player.RoleBase as Scp106Role;
 		}
 
 		/// <summary>
 		/// Gets player playing SCP-106.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp106.Scp106Role"/> instance.

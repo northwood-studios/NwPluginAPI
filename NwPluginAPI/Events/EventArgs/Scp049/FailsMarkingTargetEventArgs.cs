@@ -16,7 +16,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <param name="cooldown"></param>
 		public FailsMarkingTargetEventArgs(IPlayer scp049, float cooldown)
 		{
-			Player = (Player)scp049;
+			Player = (Core.Player)scp049;
 			Scp049Role = Player.RoleBase as Scp049Role;
 			Cooldown = cooldown;
 		}
@@ -24,7 +24,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <summary>
 		/// Gets player playing SCP-049.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp049.Scp049Role"/> instance.

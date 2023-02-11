@@ -17,20 +17,20 @@ namespace PluginAPI.Events.EventArgs.Scp106
 		/// <param name="target">Player who will be teleported to the pocket dimension.</param>
 		public KidnappingPlayerEventArgs(IPlayer scp106, IPlayer target)
 		{
-			Player = (Player)scp106;
+			Player = (Core.Player)scp106;
 			Scp106Role = Player.RoleBase as Scp106Role;
-			Target = (Player)target;
+			Target = (Core.Player)target;
 		}
 
 		/// <summary>
 		/// Gets player playing SCP-106.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets kidnapped player.
 		/// </summary>
-		public Player Target { get; }
+		public Core.Player Target { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp106.Scp106Role"/> instance.

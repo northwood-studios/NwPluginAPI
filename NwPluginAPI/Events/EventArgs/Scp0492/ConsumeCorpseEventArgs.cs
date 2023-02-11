@@ -17,7 +17,7 @@ namespace PluginAPI.Events.EventArgs.Scp0492
 		/// <param name="healAmount"></param>
 		public ConsumeCorpseEventArgs(IPlayer scp0492, BasicRagdoll ragdoll, float healAmount)
 		{
-			Player = (Player)scp0492;
+			Player = (Core.Player)scp0492;
 			Scp0492Role = Player.RoleBase as ZombieRole;
 			Ragdoll = ragdoll;
 			HealAmount = healAmount;
@@ -26,7 +26,7 @@ namespace PluginAPI.Events.EventArgs.Scp0492
 		/// <summary>
 		/// Gets player playing SCP-049-2.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp049.Zombies.ZombieRole"/> instance.

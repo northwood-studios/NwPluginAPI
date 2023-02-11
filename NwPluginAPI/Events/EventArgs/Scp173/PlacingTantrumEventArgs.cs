@@ -16,7 +16,7 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <param name="scp173">The player due to this event is executing</param>
 		public PlacingTantrumEventArgs(IPlayer scp173, float cooldown)
 		{
-			Player = (Player)scp173;
+			Player = (Core.Player)scp173;
 			Scp173Role = Player.RoleBase as Scp173Role;
 			Cooldown = cooldown;
 		}
@@ -24,7 +24,7 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <summary>
 		/// Gets player playing SCP-173.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp173.Scp173Role"/> instance.

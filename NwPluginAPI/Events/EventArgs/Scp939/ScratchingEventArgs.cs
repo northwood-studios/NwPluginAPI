@@ -8,16 +8,16 @@ namespace PluginAPI.Events.EventArgs.Scp939
 	/// <summary>
 	/// This EventArgs is for <see cref="ServerEventType.Scp939Attack"/>.
 	/// </summary>
-	public class Scp939AttackEventArgs
+	public class ScratchingEventArgs
 	{
 		/// <summary>
-		/// Initializes a new instance of <see cref="Scp939AttackEventArgs"/>.
+		/// Initializes a new instance of <see cref="ScratchingEventArgs"/>.
 		/// </summary>
 		/// <param name="scp939"></param>
 		/// <param name="target"></param>
-		public Scp939AttackEventArgs(IPlayer scp939, IDestructible target)
+		public ScratchingEventArgs(IPlayer scp939, IDestructible target)
 		{
-			Player = (Player)scp939;
+			Player = (Core.Player)scp939;
 			Scp939Role = Player.RoleBase as Scp939Role;
 			Target = target;
 		}
@@ -25,7 +25,7 @@ namespace PluginAPI.Events.EventArgs.Scp939
 		/// <summary>
 		/// Gets player playing SCP-939.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp939.Scp939Role"/> instance.

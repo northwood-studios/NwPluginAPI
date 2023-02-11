@@ -19,9 +19,9 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <param name="canRevive"></param>
 		public StartingResurrectionEventArgs(IPlayer scp049, IPlayer target, BasicRagdoll basicRagdoll, bool canRevive)
 		{
-			Player = (Player)scp049;
+			Player = (Core.Player)scp049;
 			Scp049Role = Player.RoleBase as Scp049Role;
-			Target = (Player)target;
+			Target = (Core.Player)target;
 			Ragdoll = basicRagdoll;
 			CanRevive = canRevive;
 		}
@@ -29,7 +29,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <summary>
 		/// Gets player playing SCP-049.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp049.Scp049Role"/> instance.
@@ -39,7 +39,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <summary>
 		/// Gets player target.
 		/// </summary>
-		public Player Target { get; }
+		public Core.Player Target { get; }
 
 		/// <summary>
 		/// Gets target <see cref="BasicRagdoll"/>.

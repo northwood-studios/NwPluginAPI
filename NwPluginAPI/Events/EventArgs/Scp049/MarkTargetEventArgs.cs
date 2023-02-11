@@ -17,16 +17,16 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <param name="duration"></param>
 		public MarkTargetEventArgs(IPlayer scp049, IPlayer target, float duration)
 		{
-			Player = (Player)scp049;
+			Player = (Core.Player)scp049;
 			Scp049Role = Player.RoleBase as Scp049Role;
-			Target = (Player)target;
+			Target = (Core.Player)target;
 			Duration = duration;
 		}
 
 		/// <summary>
 		/// Gets player playing SCP-049.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp049.Scp049Role"/> instance.
@@ -36,7 +36,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <summary>
 		/// Gets player target marked.
 		/// </summary>
-		public Player Target { get; }
+		public Core.Player Target { get; }
 
 		/// <summary>
 		/// Get or set the duration of the mark.

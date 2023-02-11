@@ -17,7 +17,7 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <param name="state">New SCP-096 rage state.</param>
 		public ChangeStateEventArgs(IPlayer player, Scp096RageState state)
 		{
-			Player = (Player)player;
+			Player = (Core.Player)player;
 			Scp096Role = Player.RoleBase as Scp096Role;
 			RageState = state;
 		}
@@ -25,7 +25,7 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		/// <summary>
 		/// Gets player playing SCP-096.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp096.Scp096Role"/> instance.

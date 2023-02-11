@@ -16,14 +16,14 @@ namespace PluginAPI.Events.EventArgs.Scp939
 		/// <param name="scp939">The player due to this event is executing.</param>
 		public CreatingAmnesticCloudEventArgs(IPlayer scp939)
 		{
-			Player = (Player)scp939;
+			Player = (Core.Player)scp939;
 			Scp939Role = Player.RoleBase as Scp939Role;
 		}
 
 		/// <summary>
 		/// Gets player playing SCP-939.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp939.Scp939Role"/> instance.

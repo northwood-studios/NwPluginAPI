@@ -18,9 +18,9 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <param name="ragdoll"></param>
 		public ResurrectBodyEventArgs(IPlayer scp049, IPlayer scp0492, BasicRagdoll ragdoll, float humeShieldGained)
 		{
-			Player = (Player)scp049;
+			Player = (Core.Player)scp049;
 			Scp049Role = Player.RoleBase as Scp049Role;
-			Target = (Player)scp0492;
+			Target = (Core.Player)scp0492;
 			Ragdoll = ragdoll;
 			HumeShieldGained = humeShieldGained;
 		}
@@ -28,7 +28,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <summary>
 		/// Gets player playing SCP-049.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp049.Scp049Role"/> instance.
@@ -38,7 +38,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// <summary>
 		/// Gets player revived.
 		/// </summary>
-		public Player Target { get; }
+		public Core.Player Target { get; }
 
 		/// <summary>
 		/// Gets target ragdoll.

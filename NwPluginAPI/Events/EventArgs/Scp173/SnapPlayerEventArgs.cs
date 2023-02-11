@@ -17,15 +17,15 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <param name="target">Player that SCP-173 is attempting to snap its neck.</param>
 		public SnapPlayerNeckEventArgs(IPlayer scp173, IPlayer target)
 		{
-			Player = (Player)scp173;
+			Player = (Core.Player)scp173;
 			Scp173Role = Player.RoleBase as Scp173Role;
-			Target = (Player)target;
+			Target = (Core.Player)target;
 		}
 
 		/// <summary>
 		/// Gets player playing SCP-173.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp173.Scp173Role"/> instance.
@@ -35,6 +35,6 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// <summary>
 		/// Get the player that SCP-173 is attempting to snap its neck.
 		/// </summary>
-		public Player Target { get; }
+		public Core.Player Target { get; }
 	}
 }

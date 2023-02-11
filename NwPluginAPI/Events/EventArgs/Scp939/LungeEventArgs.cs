@@ -17,7 +17,7 @@ namespace PluginAPI.Events.EventArgs.Scp939
 		/// <param name="state"></param>
 		public LungeEventArgs(IPlayer scp939, Scp939LungeState state)
 		{
-			Player = (Player)scp939;
+			Player = (Core.Player)scp939;
 			Scp939Role = Player.RoleBase as Scp939Role;
 			LungeState = state;
 		}
@@ -25,7 +25,7 @@ namespace PluginAPI.Events.EventArgs.Scp939
 		/// <summary>
 		/// Gets player playing SCP-939.
 		/// </summary>
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp939.Scp939Role"/> instance.
