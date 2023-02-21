@@ -92,6 +92,35 @@ namespace PluginAPI.Core
 				.Cast<T>()
 				.ToList();
 		}
+				/// <summary>
+		/// Randomly select a player from a specified RoleTypeId
+		/// </summary>
+		/// <param name="roleType">The roleType to be select.</param>
+		/// <returns>Return a player<see cref="T:Player" /> or return null</returns>
+		public static Player GetRamdomPlayer(RoleTypeId roleType)
+		{
+			var players = Player.GetPlayers().Where(player => player.Role == roleType).ToList();
+			return players.Any() ? players[new System.Random().Next(0, players.Count - 1)] : null;
+		}
+		/// <summary>
+		/// Randomly select a player from a specified team
+		/// </summary>
+		/// <param name="team">The roleType to be select.</param>
+		/// <returns>Return a player<see cref="T:Player" /> or return null</returns>
+		public static Player GetRamdomPlayer(Team team)
+		{
+			var players = Player.GetPlayers().Where(player => player.Team == team).ToList();
+			return players.Any() ? players[new System.Random().Next(0, players.Count - 1)] : null;
+		}
+		/// <summary>
+		/// Get a random dead player.
+		/// </summary>
+		/// <returns>Return a player<see cref="T:Player" /> or return null</returns>
+		public static Player GetRamdomDeadPlayer()
+		{
+			var players = Player.GetPlayers().Where(player => player.Role == RoleTypeId.Spectator && !player.IsOverwatchEnabled).ToList();
+			return players.Any() ? players[new System.Random().Next(0, players.Count - 1)] : null;
+		}
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
