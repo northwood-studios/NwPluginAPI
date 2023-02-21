@@ -20,5 +20,29 @@
 		/// <param name="category">The item category.</param>
 		/// <returns>Maximum amount of items which player can hold.</returns>
 		public static int GetCategoryLimit(this Player plr, ItemCategory category) => InventoryLimits.GetCategoryLimit(category, plr.ReferenceHub);
+		/// <summary>
+		/// Get whether the player holds the item of the specified Serial
+		/// </summary>
+		/// <param name="serialId">the Serial to check.</param>
+		/// <returns>Whether the player holds the item of the specified Serial or not.</returns>
+		public static bool HaveItem(this Player plr, ushort serialId){
+			return plr.Items.Any(item => item.ItemSerial == serialId);
+		}
+		/// <summary>
+		/// Get whether the player holds the item of the specified itemType
+		/// </summary>
+		/// <param name="itemType">the itemType to check.</param>
+		/// <returns>Whether the player holds the item of the specified itemType or not.</returns>
+		public static bool HaveItem(this Player plr, ItemType itemType){
+			return plr.Items.Any(item => item.ItemTypeId == itemType);
+		}
+		/// <summary>
+		/// Get the number of items of the specified Itemtype held by the player
+		/// </summary>
+		/// <param name="itemType">the itemType to check.</param>
+		/// <returns>Holds the number of items of the specified itemtype.</returns>
+		public static int CountItem(this Player plr, ItemType itemType){
+			return plr.Items.Count(item => item.ItemTypeId == itemType);
+		}
 	}
 }
