@@ -16,7 +16,8 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// <param name="oldRole"></param>
 		/// <param name="newRole"></param>
 		/// <param name="reason"></param>
-		public ChangingRoleEventArgs(IPlayer player, PlayerRoleBase oldRole, RoleTypeId newRole, RoleChangeReason reason)
+		public ChangingRoleEventArgs(IPlayer player, PlayerRoleBase oldRole, RoleTypeId newRole,
+			RoleChangeReason reason)
 		{
 			Player = (Core.Player)player;
 			OldRole = oldRole;

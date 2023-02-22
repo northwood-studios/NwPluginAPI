@@ -29,6 +29,5 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// Gets the shooting target being interacted with.
 		/// </summary>
 		public ShootingTarget ShootingTarget { get; }
-
 	}
 }

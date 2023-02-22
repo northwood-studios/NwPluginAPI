@@ -45,7 +45,8 @@ namespace PluginAPI.Events.EventArgs.Player
 			set
 			{
 				if (!Player.ReferenceHub.inventory.UserInventory.Items.TryGetValue(value.Serial, out _))
-					throw new InvalidOperationException($"{nameof(NewItem)} cannot be assigned an item that the player does not have in their inventory.");
+					throw new InvalidOperationException(
+						$"{nameof(NewItem)} cannot be assigned an item that the player does not have in their inventory.");
 
 				NewItem = value;
 			}

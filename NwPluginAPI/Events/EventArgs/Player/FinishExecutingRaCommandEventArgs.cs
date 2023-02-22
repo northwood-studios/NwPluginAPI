@@ -19,7 +19,8 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// <param name="sender"></param>
 		/// <param name="command"></param>
 		/// <param name="arguments"></param>
-		public FinishExecutingRaCommandEventArgs(ICommandSender sender, string command, string[] arguments, bool result, string response)
+		public FinishExecutingRaCommandEventArgs(ICommandSender sender, string command, string[] arguments, bool result,
+			string response)
 		{
 			Sender = sender;
 			Command = command;

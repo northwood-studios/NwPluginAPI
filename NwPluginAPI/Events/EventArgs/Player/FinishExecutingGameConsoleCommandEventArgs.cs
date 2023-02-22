@@ -19,7 +19,8 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// <param name="arguments"></param>
 		/// <param name="result"></param>
 		/// <param name="response"></param>
-		public FinishExecutingGameConsoleCommandEventArgs(IPlayer player, string command, string[] arguments, bool result, string response)
+		public FinishExecutingGameConsoleCommandEventArgs(IPlayer player, string command, string[] arguments,
+			bool result, string response)
 		{
 			Sender = (Core.Player)player;
 			Command = command;

@@ -21,7 +21,9 @@ namespace PluginAPI.Events.EventArgs.Map
 		{
 			Item = item;
 			Position = position;
-			TriggerDoor = DoorNametagExtension.NamedDoors.TryGetValue(triggerDoor, out var door) ? FacilityDoor.Get(door.TargetDoor) : null;
+			TriggerDoor = DoorNametagExtension.NamedDoors.TryGetValue(triggerDoor, out var door)
+				? FacilityDoor.Get(door.TargetDoor)
+				: null;
 		}
 
 		/// <summary>

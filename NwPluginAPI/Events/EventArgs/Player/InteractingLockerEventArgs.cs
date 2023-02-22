@@ -17,7 +17,8 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// <param name="chamber"></param>
 		/// <param name="chamberId"></param>
 		/// <param name="canOpen"></param>
-		public InteractingLockerEventArgs(IPlayer player, Locker locker, LockerChamber chamber, byte chamberId, bool canOpen)
+		public InteractingLockerEventArgs(IPlayer player, Locker locker, LockerChamber chamber, byte chamberId,
+			bool canOpen)
 		{
 			Player = (Core.Player)player;
 			Locker = locker;

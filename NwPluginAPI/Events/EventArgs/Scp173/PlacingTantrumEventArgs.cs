@@ -35,6 +35,5 @@ namespace PluginAPI.Events.EventArgs.Scp173
 		/// Get or set this ability cooldown.
 		/// </summary>
 		public float Cooldown { get; set; }
-
 	}
 }

@@ -14,7 +14,8 @@ namespace PluginAPI.Events.EventArgs.Scp914
 		/// </summary>
 		/// <param name="player"></param>
 		/// <param name="knobSetting"></param>
-		public ChangingKnobSettingEventArgs(IPlayer player, Scp914KnobSetting previousKnobsetting, Scp914KnobSetting knobSetting)
+		public ChangingKnobSettingEventArgs(IPlayer player, Scp914KnobSetting previousKnobsetting,
+			Scp914KnobSetting knobSetting)
 		{
 			Player = (Core.Player)player;
 			KnobSetting = knobSetting;

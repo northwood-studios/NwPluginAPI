@@ -12,7 +12,6 @@ namespace PluginAPI.Events.EventArgs.Map
 		/// </summary>
 		public DecontaminatingEventArgs()
 		{
-
 		}
 	}
 }

@@ -30,7 +30,7 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// <summary>
 		/// Gets the flashlight being toggled.
 		/// </summary>
-		public ItemBase Flashlight  { get; }
+		public ItemBase Flashlight { get; }
 
 		/// <summary>
 		/// Get or set the new flashlight state.

@@ -22,7 +22,6 @@ namespace PluginAPI.Events.EventArgs.Scp914
 			OutputPosition = outPosition;
 			KnobSetting = knobSetting;
 			Pickup = pickup;
-
 		}
 
 		/// <summary>

@@ -20,6 +20,7 @@ namespace PluginAPI.Events.EventArgs.Player
 			Window = window;
 			Amount = damageAmount;
 		}
+
 		/// <summary>
 		/// Gets player damaging a window.
 		/// </summary>

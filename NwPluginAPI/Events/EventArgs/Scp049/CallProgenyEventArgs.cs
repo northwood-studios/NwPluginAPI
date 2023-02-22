@@ -18,7 +18,7 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// </summary>
 		/// <param name="scp049"></param>
 		/// <param name="duration"></param>
-		public CallProgenyEventArgs(IPlayer scp049,Scp049CallAbility ability, float duration)
+		public CallProgenyEventArgs(IPlayer scp049, Scp049CallAbility ability, float duration)
 		{
 			Player = (Core.Player)scp049;
 			Scp049Role = Player.RoleBase as Scp049Role;

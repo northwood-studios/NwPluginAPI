@@ -20,7 +20,8 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// <param name="target"></param>
 		/// <param name="exactHit"></param>
 		/// <param name="damageAmount"></param>
-		public DamagingShootingTargetEventArgs(IPlayer player, ShootingTarget target, Vector3 exactHit, float damageAmount)
+		public DamagingShootingTargetEventArgs(IPlayer player, ShootingTarget target, Vector3 exactHit,
+			float damageAmount)
 		{
 			Player = (Core.Player)player;
 			ShootingTarget = target;

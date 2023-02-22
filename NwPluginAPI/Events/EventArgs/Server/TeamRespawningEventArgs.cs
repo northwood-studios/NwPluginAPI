@@ -44,6 +44,5 @@ namespace PluginAPI.Events.EventArgs.Server
 		/// Gets the team spawning.
 		/// </summary>
 		public SpawnableTeamType Team { get; }
-
 	}
 }

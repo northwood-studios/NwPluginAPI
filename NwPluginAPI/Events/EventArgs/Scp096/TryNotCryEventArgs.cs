@@ -23,7 +23,9 @@ namespace PluginAPI.Events.EventArgs.Scp096
 		{
 			Player = (Core.Player)player;
 			Scp096Role = player.ReferenceHub.roleManager.CurrentRole as Scp096Role;
-			Door = FacilityDoor.List.OrderBy(door => Vector3.Distance(door.Position, player.ReferenceHub.transform.position)).FirstOrDefault();
+			Door = FacilityDoor.List
+				.OrderBy(door => Vector3.Distance(door.Position, player.ReferenceHub.transform.position))
+				.FirstOrDefault();
 		}
 
 		/// <summary>
