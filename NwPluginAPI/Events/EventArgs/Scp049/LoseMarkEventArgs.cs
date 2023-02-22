@@ -1,11 +1,15 @@
 using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp049
 {
 	/// <summary>
-	/// Create new event for this.
+	/// Contains all information before SCP-049 loses a player marked for its ability.
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp049LosingMarkedPlayer"/>.
+	/// </remarks>
 	/// </summary>
 	public class LoseMarkEventArgs
 	{

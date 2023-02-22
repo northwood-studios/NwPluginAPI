@@ -21,7 +21,7 @@ namespace PluginAPI.Events.EventArgs.Player
 		public DiedEventArgs(IPlayer player, IPlayer killer, DamageHandlerBase damage)
 		{
 			Player = (Core.Player)player;
-			Killer = (Core.Player)killer;
+			Attacker = (Core.Player)killer;
 			Damage = damage;
 		}
 
@@ -33,7 +33,7 @@ namespace PluginAPI.Events.EventArgs.Player
 		/// <summary>
 		/// Gets the killer player.
 		/// </summary>
-		public Core.Player Killer { get; }
+		public Core.Player Attacker { get; }
 
 		/// <summary>
 		/// Gets <see cref="DamageHandlerBase"/> of the event.

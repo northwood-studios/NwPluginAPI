@@ -1,3 +1,4 @@
+using System.Numerics;
 using Interactables.Interobjects.DoorUtils;
 using InventorySystem.Items.Pickups;
 using JetBrains.Annotations;
@@ -16,16 +17,23 @@ namespace PluginAPI.Events.EventArgs.Map
 		/// </summary>
 		/// <param name="item"></param>
 		/// <param name="triggerDoor"></param>
-		public SpawningItemEventArgs(ItemType item, string triggerDoor)
+		public SpawningItemEventArgs(ItemType item, Vector3 position, string triggerDoor)
 		{
 			Item = item;
+			Position = position;
 			TriggerDoor = DoorNametagExtension.NamedDoors.TryGetValue(triggerDoor, out var door) ? FacilityDoor.Get(door.TargetDoor) : null;
 		}
 
 		/// <summary>
 		/// Get or set <see cref="ItemType"/> spawned.
+		/// <remarks>dont set te value in <see cref="ItemType.None"/></remarks>
 		/// </summary>
 		public ItemType Item { get; set; }
+
+		/// <summary>
+		/// Gets item spawn position.
+		/// </summary>
+		public Vector3 Position { get; }
 
 		/// <summary>
 		/// Get or set trigger door.

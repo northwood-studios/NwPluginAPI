@@ -1069,5 +1069,50 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="bool"/> newState.
 		/// </remarks>
 		PlayerRadioToggle = 128,
+
+		/// <summary>
+		/// Executed when a SCP-049-2 consume a corpse.
+		/// </summary>
+		Scp0492ConsumedCorpse = 129,
+
+		/// <summary>
+		/// Executed when a SCP-106 use his <see cref="PlayerRoles.PlayableScps.Scp106.Scp106HuntersAtlasAbility"/>.
+		/// </summary>
+		Scp106UsingHunterAtlas = 130,
+
+		/// <summary>
+		/// Executed when a SCP-106 hit a player with a attack.
+		/// </summary>
+		Scp096SlapPlayer = 131,
+
+		/// <summary>
+		/// Executed when a SCP-079 makes a ping.
+		/// </summary>
+		Scp079Pining = 132,
+
+		/// <summary>
+		/// Executed when a SCP-049 use his <see cref="PlayerRoles.PlayableScps.Scp049.Scp049CallAbility"/>.
+		/// </summary>
+		Scp049CallProgeny = 133,
+
+		/// <summary>
+		/// Executed when a SCP-049 fails to mark a player with his <see cref="PlayerRoles.PlayableScps.Scp049.Scp049SenseAbility"/>.
+		/// </summary>
+		Scp049FailsMarkPlayer = 134,
+
+		/// <summary>
+		/// Executed when a SCP-049 kills a marked player with <see cref="PlayerRoles.PlayableScps.Scp049.Scp049SenseAbility"/>.
+		/// </summary>
+		Scp049KillMarkedPlayer = 135,
+
+		/// <summary>
+		/// Executed when a SCP-049 lose his marked player with <see cref="PlayerRoles.PlayableScps.Scp049.Scp049SenseAbility"/>.
+		/// </summary>
+		Scp049LosingMarkedPlayer = 136,
+
+		/// <summary>
+		/// Executed when a SCP-049 mark a player with <see cref="PlayerRoles.PlayableScps.Scp049.Scp049SenseAbility"/>.
+		/// </summary>
+		Scp049MarkingPlayer = 137,
 	}
 }

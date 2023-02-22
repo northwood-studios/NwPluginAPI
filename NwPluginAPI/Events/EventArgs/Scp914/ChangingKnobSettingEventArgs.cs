@@ -14,16 +14,22 @@ namespace PluginAPI.Events.EventArgs.Scp914
 		/// </summary>
 		/// <param name="player"></param>
 		/// <param name="knobSetting"></param>
-		public ChangingKnobSettingEventArgs(IPlayer player, Scp914KnobSetting knobSetting)
+		public ChangingKnobSettingEventArgs(IPlayer player, Scp914KnobSetting previousKnobsetting, Scp914KnobSetting knobSetting)
 		{
 			Player = (Core.Player)player;
 			KnobSetting = knobSetting;
+			PreviousKnobSetting = previousKnobsetting;
 		}
 
 		/// <summary>
 		/// Gets the player who's changing the SCP-914 knob setting.
 		/// </summary>
 		public Core.Player Player { get; }
+
+		/// <summary>
+		/// Gets the previous knob setting.
+		/// </summary>
+		public Scp914KnobSetting PreviousKnobSetting { get; }
 
 		/// <summary>
 		/// Gets or sets the SCP-914 knob setting.

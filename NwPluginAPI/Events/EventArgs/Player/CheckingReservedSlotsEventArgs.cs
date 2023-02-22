@@ -6,14 +6,14 @@ namespace PluginAPI.Events.EventArgs.Player
 	/// Contains all information when checking if a player has a reserved slot.
 	/// <remarks>This EventArgs is for <see cref="ServerEventType.PlayerCheckReservedSlot"/>.</remarks>
 	/// </summary>
-	public class ReservedSlotsCheckEventArgs
+	public class CheckingReservedSlotsEventArgs
 	{
 		/// <summary>
 		/// Initializes a new instance of <see cref="UnMuteEventArgs"/>.
 		/// </summary>
 		/// <param name="userId"></param>
 		/// <param name="hasReservedSlot"></param>
-		public ReservedSlotsCheckEventArgs(string userId, bool hasReservedSlot)
+		public CheckingReservedSlotsEventArgs(string userId, bool hasReservedSlot)
 		{
 			UserId = userId;
 			HasReservedSlot = hasReservedSlot;

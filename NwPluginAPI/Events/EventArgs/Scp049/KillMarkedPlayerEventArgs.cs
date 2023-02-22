@@ -1,15 +1,19 @@
 using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp049
 {
 	/// <summary>
-	/// Create new event for this.
+	/// Contains all information before SCP-049 kills the marked player with its ability.
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp049KillMarkedPlayer"/>.
+	/// </remarks>
 	/// </summary>
 	public class KillMarkedPlayerEventArgs
 	{
-		/// <summary>
+		/// <summary> Scp049KillMarkedPlayer
 		/// Initializes a new instance of <see cref="KillMarkedPlayerEventArgs"/>.
 		/// </summary>
 		/// <param name="scp049"></param>

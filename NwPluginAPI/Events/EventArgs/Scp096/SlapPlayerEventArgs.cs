@@ -1,11 +1,15 @@
 using PlayerRoles.PlayableScps.Scp096;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp096
 {
 	/// <summary>
-	/// Create new event for this.
+	/// Contains all the information before an SCP-096 hit a player with an attack
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp096SlapPlayer"/>.
+	/// </remarks>
 	/// </summary>
 	public class SlapPlayerEventArgs
 	{

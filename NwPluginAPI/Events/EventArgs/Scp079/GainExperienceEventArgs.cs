@@ -40,7 +40,7 @@ namespace PluginAPI.Events.EventArgs.Scp079
 		public int Amount { get; set; }
 
 		/// <summary>
-		/// Get or set <see cref="Scp079HudTranslation"/>.
+		/// Get or set the reason.
 		/// </summary>
 		public Scp079HudTranslation Reason { get; set; }
 	}

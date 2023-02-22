@@ -7,14 +7,14 @@ namespace PluginAPI.Events.EventArgs.Player
 	/// <summary>
 	/// This EventArgs is for <see cref="ServerEventType.PlayerUnloadWeapon"/>.
 	/// </summary>
-	public class UnloadingWeapon
+	public class UnloadingWeaponEventArgs
 	{
 		/// <summary>
-		/// Initializes a new instance of <see cref="UnloadingWeapon"/>.
+		/// Initializes a new instance of <see cref="UnloadingWeaponEventArgs"/>.
 		/// </summary>
 		/// <param name="player"></param>
 		/// <param name="weapon"></param>
-		public UnloadingWeapon(IPlayer player, Firearm weapon)
+		public UnloadingWeaponEventArgs(IPlayer player, Firearm weapon)
 		{
 			Player = (Core.Player)player;
 			Firearm = weapon;

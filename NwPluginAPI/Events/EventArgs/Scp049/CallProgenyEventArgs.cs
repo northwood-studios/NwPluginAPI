@@ -1,11 +1,15 @@
 using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp049
 {
 	/// <summary>
-	/// Create a new Event for this licht
+	/// Contains all the information before an SCP-049 uses its ability to call zombies.
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp049CallProgeny"/>.
+	/// </remarks>
 	/// </summary>
 	public class CallProgenyEventArgs
 	{
@@ -14,10 +18,11 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// </summary>
 		/// <param name="scp049"></param>
 		/// <param name="duration"></param>
-		public CallProgenyEventArgs(IPlayer scp049, float duration)
+		public CallProgenyEventArgs(IPlayer scp049,Scp049CallAbility ability, float duration)
 		{
 			Player = (Core.Player)scp049;
 			Scp049Role = Player.RoleBase as Scp049Role;
+			Ability = ability;
 			Duration = duration;
 		}
 
@@ -30,6 +35,11 @@ namespace PluginAPI.Events.EventArgs.Scp049
 		/// Gets player <see cref="PlayerRoles.PlayableScps.Scp049.Scp049Role"/> instance.
 		/// </summary>
 		public Scp049Role Scp049Role { get; }
+
+		/// <summary>
+		/// Gets <see cref="Scp049CallAbility"/> instance.
+		/// </summary>
+		public Scp049CallAbility Ability { get; }
 
 		/// <summary>
 		/// Get or set the duration of the call for all SCP-049-2.

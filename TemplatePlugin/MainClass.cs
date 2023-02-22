@@ -3,6 +3,10 @@ using Interactables.Interobjects;
 using InventorySystem.Items.ThrowableProjectiles;
 using MapGeneration;
 using PlayerRoles.Voice;
+using PluginAPI.Events.EventArgs.Map;
+using PluginAPI.Events.EventArgs.Player;
+using PluginAPI.Events.EventArgs.Scp330;
+using PluginAPI.Events.EventArgs.Server;
 using UnityEngine;
 
 namespace TemplatePlugin
@@ -72,9 +76,9 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerJoined)]
-		void OnPlayerJoin(MyPlayer player)
+		void OnPlayerJoin(JoinedEventArgs ev)
 		{
-			Log.Info($"Player &6{player.UserId}&r joined this server with &1{player.Test}&4");
+			Log.Info($"Player &6{ev.Player.UserId}&r joined this server");
 
 			foreach (var plr in Player.GetPlayers())
 			{
@@ -83,15 +87,16 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerLeft)]
-		void OnPlayerLeave(MyPlayer player)
+		void OnPlayerLeave(LeftEventArgs ev)
 		{
-			Log.Info($"Player &6{player.UserId}&r left this server with of &1{player.Test}&4");
+			Log.Info($"Player &6{ev.Player.UserId}&r left this server");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDying)]
-		bool OnPlayerDying(MyPlayer player, MyPlayer attacker, DamageHandlerBase damageHandler)
+		bool OnPlayerDying(DyingEventArgs ev)
 		{
 			var condition = false;
+
 			if (condition is true)
 			{
 				// The event is canceled and the player does not die
@@ -99,21 +104,21 @@ namespace TemplatePlugin
 			}
 			else
 			{
-				Log.Info(attacker == null
-					? $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying, cause {damageHandler}"
-					: $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying by &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}");
+				Log.Info(ev.Attacker == null
+					? $"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) is dying, cause {(ev.DamageHandler as AttackerDamageHandler)?.ServerLogsText}"
+					: $"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) is dying by &6{ev.Attacker.Nickname}&r (&6{ev.Attacker.UserId}&r), cause {(ev.DamageHandler as AttackerDamageHandler)?.ServerLogsText}");
 				// The event runs normally
 				return true;
 			}
 		}
 
 		[PluginEvent(ServerEventType.PlayerDeath)]
-		void OnPlayerDied(MyPlayer player, MyPlayer attacker, DamageHandlerBase damageHandler)
+		void OnPlayerDied(DiedEventArgs ev)
 		{
-			if (attacker == null)
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) died, cause {damageHandler}");
+			if (ev.Attacker == null)
+				Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) died, cause {(ev.Damage as AttackerDamageHandler)?.ServerLogsText}");
 			else
-				Log.Info($"Player &6{attacker.Nickname}&r (&6{attacker.UserId}&r) killed &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler}");
+				Log.Info($"Player &6{ev.Attacker.Nickname}&r (&6{ev.Attacker.UserId}&r) killed &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r), cause {(ev.Damage as AttackerDamageHandler)?.ServerLogsText}");
 		}
 
 		[PluginEvent(ServerEventType.LczDecontaminationStart)]
@@ -123,371 +128,365 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.LczDecontaminationAnnouncement)]
-		void OnAnnounceLczDecontamination(int id)
+		void OnAnnounceLczDecontamination(AnnouncingDecontaminationEventArgs ev)
 		{
-			Log.Info($"LCZ Annoucement &6{id}&r.");
+			Log.Info($"LCZ Annoucement &6{ev.AnnounceType}&r.");
 		}
 
 		[PluginEvent(ServerEventType.MapGenerated)]
-		void OnMapGenerated()
+		void OnMapGenerated(MapGeneratedEventArgs ev)
 		{
-			Log.Info("Map generated.");
+			Log.Info($"Map generated, seed: {ev.Seed}");
 		}
 
 		[PluginEvent(ServerEventType.GrenadeExploded)]
-		void OnGrenadeExploded(Footprint owner, Vector3 position, ItemPickupBase item)
+		void OnGrenadeExploded(ExplodingGrenadeEventArgs ev)
 		{
-			Log.Info($"Grenade &6{item.NetworkInfo.ItemId}&r thrown by &6{item.PreviousOwner.Nickname}&r exploded at &6{item.NetworkInfo.RelativePosition.ToString()}&r");
+			Log.Info($"Grenade &6{ev.Grenade.NetworkInfo.ItemId}&r thrown by &6{ev.Grenade.PreviousOwner.Nickname}&r exploded at &6{ev.Grenade.NetworkInfo.RelativePosition.Position}&r");
 		}
 
 		[PluginEvent(ServerEventType.ItemSpawned)]
-		void OnItemSpawned(ItemType item, Vector3 position)
+		void OnItemSpawned(SpawningItemEventArgs ev)
 		{
-			Log.Info($"Item &6{item}&r spawned on map");
+			Log.Info($"Item &6{ev.Item}&r spawned on map on position {ev.Position}");
 		}
 
 		[PluginEvent(ServerEventType.GeneratorActivated)]
-		void OnGeneratorActivated(Scp079Generator gen)
+		void OnGeneratorActivated(GeneratorActivatedEventArgs ev)
 		{
-			Log.Info("Generator activated");
+			Log.Info($"Generator on room {ev.Generator.Room.Identifier.Name} activated");
 		}
 
 		[PluginEvent(ServerEventType.PlaceBlood)]
-		void OnPlaceBlood(MyPlayer player, Vector3 position)
+		void OnPlaceBlood(PlacingBloodEventArgs ev)
 		{
-			Log.Info($"Player &6{player.Nickname}&r blood placed on map position &6{position}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r blood placed on map position &6{ev.Position}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlaceBulletHole)]
-		void OnPlaceBulletHole(Vector3 position)
+		void OnPlaceBulletHole(PlacingBulletHoleEventArgs ev)
 		{
-			Log.Info($"Bullet hole has been placed on map. Position &6{position}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r bullet hole has been placed on map. Position &6{ev.Position}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerActivateGenerator)]
-		void OnPlayerActivateGenerator(MyPlayer plr, Scp079Generator gen)
+		void OnPlayerActivateGenerator(ActivatingGeneratorEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) activated generator with remaining time &6{gen.RemainingTime}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) activated generator with remaining time &6{ev.Generator.RemainingTime}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerAimWeapon)]
-		void OnPlayerAimsWeapon(MyPlayer plr, Firearm gun, bool isAiming)
+		void OnPlayerAimsWeapon(AimingWeaponEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) is {(isAiming ? "aiming" : "not aiming")} gun &6{gun.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) is {(ev.IsAiming ? "aiming" : "not aiming")} gun &6{ev.Weapon.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerBanned)]
-		void OnPlayerBanned(MyPlayer plr, ICommandSender issuer, string reason, long duration)
+		void OnPlayerBanned(BanningEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) got banned by &6{issuer.LogName}&r with reason &6{reason}&r for duration &6{duration}&r seconds");
+			Log.Info($"Player &6{ev.Target.Nickname}&r (&6{ev.Target.UserId}&r) got banned by &6{ev.Issuer.Nickname}&r with reason &6{ev.Reason}&r for duration &6{ev.Duration}&r seconds");
 		}
 
 		[PluginEvent(ServerEventType.PlayerCancelUsingItem)]
-		void OnPlayerCancelsUsingItem(MyPlayer plr, UsableItem item)
+		void OnPlayerCancelsUsingItem(CancellingItemUseEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) cancelled using item &6{item.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) cancelled using item &6{ev.Item.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerChangeItem)]
-		void OnPlayerChangesItem(MyPlayer plr, ushort oldItem, ushort newItem)
+		void OnPlayerChangesItem(ChangingItemEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) change current item &6{oldItem}&r to &6{newItem}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) change current item &6{ev.OldItem}&r to &6{ev.NewItem}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerChangeRadioRange)]
-		void OnPlayerChangesRadioRange(MyPlayer plr, RadioItem item, byte range)
+		void OnPlayerChangesRadioRange(ChangingRadioRangeEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed radio range to &6{range}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) changed radio range to &6{ev.NewRange}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerRadioToggle)]
-		void OnPlayerRadioToggle(MyPlayer plr, RadioItem item, bool newState)
+		void OnPlayerRadioToggle(ToggledRadioEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) toggled the radio state to &6{newState}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) toggled the radio state to &6{ev.NewState}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUsingRadio)]
-		void OnPlayerUsingRadio(MyPlayer player, RadioItem radio, float drain)
+		void OnPlayerUsingRadio(UsingRadioBatteryEventArgs ev)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is using a radio and its draining &6{drain}&r of the battery");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) is using a radio and its draining &6{ev.Drain}&r of the battery");
 		}
 
 		[PluginEvent(ServerEventType.CassieAnnouncesScpTermination)]
-		void OnCassieAnnouncScpTermination(MyPlayer scp, DamageHandlerBase damage, string announcement)
+		void OnCassieAnnouncScpTermination(AnnouncingScpTerminationEventArgs ev)
 		{
-			Log.Info($"Cassie announce a SCP termination of player &6{scp.Nickname}&r (&6{scp.UserId}&r), CASSIE announcement is &6{announcement}&r");
+			Log.Info($"Cassie announce a SCP termination of player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r), CASSIE announcement is &6{ev.Announcement}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerGetGroup)]
-		void OnPlayerChangeGroup(string userID, UserGroup group)
+		void OnPlayerChangeGroup(GettingGroupEventArgs ev)
 		{
-			Log.Info($"User group of {userID} is &6{((group == null || group.BadgeText == null) ? "(null)" : group.BadgeText)}&r");
+			Log.Info($"User group of {ev.UserId} is &6{ev.Group?.BadgeText ?? "(null)"}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUsingIntercom)]
-		void OnPlayerUsingIntercom(MyPlayer player, IntercomState state)
+		void OnPlayerUsingIntercom(UsingIntercomEventArgs ev)
 		{
-			Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) is using Intercom");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) is using Intercom");
 		}
 
 		[PluginEvent(ServerEventType.PlayerChangeSpectator)]
-		void OnPlayerChangesSpectatedPlayer(MyPlayer plr, MyPlayer oldTarget, MyPlayer newTarget)
+		void OnPlayerChangesSpectatedPlayer(ChangingSpectatedPlayerEventArgs ev)
 		{
-			if (oldTarget == null && newTarget != null)
+			if (ev.OldTarget == null && ev.NewTarget != null)
 			{
-				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) is now spectating &6{newTarget.Nickname}&r (&6{newTarget.UserId}&r)");
+				Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) is now spectating &6{ev.NewTarget.Nickname}&r (&6{ev.NewTarget.UserId}&r)");
 
 			}
-			else if (oldTarget != null && newTarget != null)
+			else if (ev.OldTarget != null && ev.NewTarget != null)
 			{
-				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed spectated player &6{oldTarget.Nickname}&r (&6{oldTarget.UserId}&r) &6{newTarget.Nickname}&r (&6{newTarget.UserId}&r)");
+				Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) changed spectated player &6{ev.OldTarget.Nickname}&r (&6{ev.OldTarget.UserId}&r) to &6{ev.NewTarget.Nickname}&r (&6{ev.NewTarget.UserId}&r)");
 			}
 		}
 
 		[PluginEvent(ServerEventType.PlayerCloseGenerator)]
-		void OnPlayerClosesGenerator(MyPlayer plr, Scp079Generator gen)
+		void OnPlayerClosesGenerator(ClosingGeneratorEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) closed generator");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) closed generator");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDamagedShootingTarget)]
-		void OnPlayerDamagedShootingTarget(MyPlayer plr, ShootingTarget target, DamageHandlerBase dmgHandler, float amount)
+		void OnPlayerDamagedShootingTarget(DamagingShootingTargetEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) hit shooting target with damage amount &6{amount}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) hit shooting target with damage amount &6{ev.Amount}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDamagedWindow)]
-		void OnPlayerDamagedWindow(MyPlayer plr, BreakableWindow window, DamageHandlerBase dmgHandler, float amount)
+		void OnPlayerDamagedWindow(DamagingWindowEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) damaged window with damage amount &6{amount}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) damaged window with damage amount &6{ev.Amount}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDeactivatedGenerator)]
-		void OnPlayerDeactivatedGenerator(MyPlayer plr, Scp079Generator gen)
+		void OnPlayerDeactivatedGenerator(DeactivatingGeneratorEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) deactivated a generator.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) deactivated a generator.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDropAmmo)]
-		void OnPlayerDroppedAmmo(MyPlayer plr, ItemType ammoType, int amount)
+		void OnPlayerDroppedAmmo(DroppingAmmoEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) dropped &6{amount}&r ammo of type &6{ammoType}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) dropped &6{ev.Amount}&r ammo of type &6{ev.AmmoType}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDropItem)]
-		void OnPlayerDroppedItem(MyPlayer plr, ItemBase item)
+		void OnPlayerDroppedItem(DroppingItemEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) dropped item &6{item.ItemTypeId}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) dropped item &6{ev.Item.Type}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDryfireWeapon)]
-		void OnPlayerDryfireWeapon(MyPlayer plr, Firearm item)
+		void OnPlayerDryfireWeapon(DryWeaponEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) dryfired weapon &6{item.ItemTypeId}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) dryfired weapon &6{ev.Weapon.ItemTypeId}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerEscape)]
-		void OnPlayerEscaped(MyPlayer plr, RoleTypeId role)
+		void OnPlayerEscaped(EscapingEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) escaped as &6{plr.Role}&r and new role is &6{role}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) escaped as &6{ev.Player.Role}&r and new role is &6{ev.NewRole}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerHandcuff)]
-		void OnPlayerHandcuffed(MyPlayer plr, MyPlayer target)
+		void OnPlayerHandcuffed(HandcuffingEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) handcuffed &6{target.Nickname}&r (&6{target.UserId}&r).");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) handcuffed &6{ev.Target.Nickname}&r (&6{ev.Target.UserId}&r).");
 		}
 
 		[PluginEvent(ServerEventType.PlayerRemoveHandcuffs)]
-		void OnPlayerUncuffed(MyPlayer plr, MyPlayer target)
+		void OnPlayerUncuffed(RemovingHandcuffsEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) uncuffed &6{target.Nickname}&r (&6{target.UserId}&r).");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) uncuffed &6{ev.Target.Nickname}&r (&6{ev.Target.UserId}&r).");
 		}
 
 		[PluginEvent(ServerEventType.PlayerDamage)]
-		void OnPlayerDamage(MyPlayer player, MyPlayer attacker, DamageHandlerBase damageHandler)
+		void OnPlayerDamage(DamagingPlayerEventArgs ev)
 		{
-			if (attacker == null)
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler}.");
+			if (ev.Attacker == null)
+				Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) got damaged, cause {ev.DamageHandler}.");
 			else
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}.");
+				Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) received damage from &6{ev.Attacker.Nickname}&r (&6{ev.Attacker.UserId}&r), cause {ev.DamageHandler}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerKicked)]
-		void OnPlayerKicked(MyPlayer plr, ICommandSender issuer, string reason)
+		void OnPlayerKicked(KickingEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) kicked from server by &6{issuer.LogName}&r with reason &6{reason}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) kicked from server by &6{ev.Issuer.Nickname}&r with reason &6{ev.Reason}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerOpenGenerator)]
-		void OnPlayerOpenedGenerator(MyPlayer plr, Scp079Generator gen)
+		void OnPlayerOpenedGenerator(OpeningGeneratorEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) opened generator.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) opened generator.");
 		}
 
 
 		[PluginEvent(ServerEventType.PlayerPickupAmmo)]
-		void OnPlayerPickupAmmo(MyPlayer plr, ItemPickupBase pickup)
+		void OnPlayerPickupAmmo(PickingUpAmmoEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) pickup ammo {pickup.Info.ItemId}.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) pickup ammo {ev.AmmoPickup.Info.ItemId}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerPickupArmor)]
-		void OnPlayerPickupArmor(MyPlayer plr, ItemPickupBase pickup)
+		void OnPlayerPickupArmor(PickingUpArmorEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) pickup armor {pickup.Info.ItemId}.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) pickup armor {ev.Armor.Info.ItemId}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerPickupScp330)]
-		void OnPlayerPickupScp330(MyPlayer plr, ItemPickupBase pickup)
+		void OnPlayerPickupScp330(PickingUpScp330EventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) pickup scp330 {pickup.Info.ItemId}.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) pickup scp330 {ev.Candy.ItemTypeId}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerPreauth)]
-		void OnPreauth(string userid, string ipAddress, long expiration, CentralAuthPreauthFlags flags, string country, byte[] signature, ConnectionRequest req, Int32 index)
+		void OnPreauth(PreAuthenticatingEventArgs ev)
 		{
-			Log.Info($"Player &6{userid}&r (&6{ipAddress}&r) preauthenticated from country &6{country}&r with central flags &6{flags}&r");
+			Log.Info($"Player &6{ev.UserId}&r (&6{ev.IpAddress}&r) preauthenticated from country &6{ev.Country}&r with central flags &6{ev.Flags}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerReceiveEffect)]
-		void OnReceiveEffect(MyPlayer plr, StatusEffectBase effect, byte intensity, float duration)
+		void OnReceiveEffect(ReceivingEffectEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) received effect &6{effect}&r with an intensity of &6{intensity}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) received effect &6{ev.Effect}&r with an intensity of &6{ev.Intensity}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerReloadWeapon)]
-		void OnReloadWeapon(MyPlayer plr, Firearm gun)
+		void OnReloadWeapon(ReloadingWeaponEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) reloaded weapon &6{gun.ItemTypeId}&r.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) reloaded weapon &6{ev.Firearm.ItemTypeId}&r.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerChangeRole)]
-		void OnChangeRole(MyPlayer plr, PlayerRoleBase oldRole, RoleTypeId newRole, RoleChangeReason reason)
+		void OnChangeRole(ChangingRoleEventArgs ev)
 		{
-			if (oldRole == null)
-			{
-				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed role to &6{newRole}&r with reason &6{reason}&r");
-			}
-			else
-			{
-				Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed role from &6{oldRole.RoleName}&r to &6{newRole}&r with reason &6{reason}&r");
-			}
+			Log.Info(ev.OldRole == null
+				? $"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) changed role to &6{ev.NewRole}&r with reason &6{ev.Reason}&r"
+				: $"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) changed role from &6{ev.OldRole.RoleName}&r to &6{ev.NewRole}&r with reason &6{ev.Reason}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerSearchPickup)]
-		void OnSearchPickup(MyPlayer plr, ItemPickupBase pickup)
+		void OnSearchPickup(SearchingPickupEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) started searching pickup &6{pickup.NetworkInfo.ItemId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) started searching pickup &6{ev.Pickup.NetworkInfo.ItemId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerSearchedPickup)]
-		void OnSearchedPickup(MyPlayer plr, ItemPickupBase pickup)
+		void OnSearchedPickup(SearchedPickupEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) searched pickup &6{pickup.NetworkInfo.ItemId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) searched pickup &6{ev.Pickup.NetworkInfo.ItemId}&r");
 		}
 
-
 		[PluginEvent(ServerEventType.PlayerShotWeapon)]
-		void OnShotWeapon(MyPlayer plr, Firearm gun)
+		void OnShotWeapon(ShootingEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) shot &6{gun.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) shot &6{ev.Firearm.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerSpawn)]
-		void OnSpawn(MyPlayer plr, RoleTypeId role)
+		void OnSpawn(SpawningEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) spawned as &6{role}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) spawned as &6{ev.RoleType}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerThrowItem)]
-		void OnThrowItem(MyPlayer plr, ItemBase item, Rigidbody rb)
+		void OnThrowItem(ThrowingItemEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) thrown item &6{item.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) thrown item &6{ev.Item.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerToggleFlashlight)]
-		void OnToggleFlashlight(MyPlayer plr, ItemBase item, bool isToggled)
+		void OnToggleFlashlight(TogglingFlashlightEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) toggled {(isToggled ? "on" : "off")} flashlight on &6{item.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) toggled {(ev.NewState ? "on" : "off")} flashlight on &6{ev.Flashlight.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUnloadWeapon)]
-		void OnUnloadWeapon(MyPlayer plr, Firearm gun)
+		void OnUnloadWeapon(UnloadingWeaponEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) unloads &6{gun.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) unloads &6{ev.Firearm.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUnlockGenerator)]
-		void OnUnlockGenerator(MyPlayer plr, Scp079Generator generator)
+		void OnUnlockGenerator(UnlockingGeneratorEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) unlocked generator");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) unlocked generator");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUsedItem)]
-		void OnPlayerUsedItem(MyPlayer plr, ItemBase item)
+		void OnPlayerUsedItem(UsedItemEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) used item &6{item.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) used item &6{ev.Item.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUseHotkey)]
-		void OnPlaeyrUsedHotkey(MyPlayer plr, ActionName action)
+		void OnPlaeyrUsedHotkey(UsingHotkeyEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) used hotkey &6{action}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) used hotkey &6{ev.Hotkey}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerUseItem)]
-		void OnPlayerStartedUsingItem(MyPlayer plr, UsableItem item)
+		void OnPlayerStartedUsingItem(UsingItemEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) started using item &6{item.ItemTypeId}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) started using item &6{ev.Item.ItemTypeId}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerCheaterReport)]
-		void OnCheaterReport(MyPlayer plr, MyPlayer target, string reason)
+		void OnCheaterReport(ReportingCheaterEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) reported player &6{target.Nickname}&r (&6{target.UserId}&r) for cheating with reason &6{reason}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) reported player &6{ev.Target.Nickname}&r (&6{ev.Target.UserId}&r) for cheating with reason &6{ev.Reason}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerReport)]
-		void OnReport(MyPlayer plr, MyPlayer target, string reason)
+		void OnReport(ReportingEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) reported player &6{target.Nickname}&r (&6{target.UserId}&r) for breaking server rules with reason &6{reason}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) reported player &6{ev.Target.Nickname}&r (&6{ev.Target.UserId}&r) for breaking server rules with reason &6{ev.Reason}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractShootingTarget)]
-		void OnInteractWithShootingTarget(MyPlayer plr, ShootingTarget target)
+		void OnInteractWithShootingTarget(InteractingShootingTargetEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with shooting target in the position {target.transform.position}");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) interacted with shooting target in the position {ev.ShootingTarget.transform.position}");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractLocker)]
-		void OnInteractWithLocker(MyPlayer plr, Locker locker, LockerChamber chamber, bool canAccess)
+		void OnInteractWithLocker(InteractingLockerEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) {(canAccess ? "interacted" : "failed to interact")} with locker and chamber is in the position {chamber.transform.position}.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) {(ev.CanOpen ? "interacted" : "failed to interact")} with locker and chamber is in the position {ev.Chamber.transform.position}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractElevator)]
-		void OnInteractWithElevator(MyPlayer plr, ElevatorChamber elevator)
+		void OnInteractWithElevator(InteractingElevatorEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with elevator in position &6{elevator.transform.position}&r with the destination in &6{elevator.CurrentDestination.transform.position}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) interacted with elevator in position &6{ev.Elevator.transform.position}&r with the destination in &6{ev.Elevator.CurrentDestination.transform.position}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractScp330)]
-		void OnInteractWithScp330(MyPlayer plr)
+		void OnInteractWithScp330(InteractingScp330EventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with SCP330.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) interacted with SCP330.");
 		}
 
 		[PluginEvent(ServerEventType.RagdollSpawn)]
-		void OnRagdollSpawn(MyPlayer plr, IRagdollRole ragdoll, DamageHandlerBase damageHandler)
+		void OnRagdollSpawn(SpawningRagdollEventArgs ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) spawned ragdoll &6{ragdoll.Ragdoll}&r, reason &6{damageHandler}&r");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) spawned ragdoll &6{ev.Ragdoll}&r, reason &6{ev.DamageHandler}&r");
 		}
 
 		[PluginEvent(ServerEventType.RoundEnd)]
-		void OnRoundEnded(RoundSummary.LeadingTeam leadingTeam)
+		void OnRoundEnded(EndingRoundEventArgs ev)
 		{
-			Log.Info($"Round ended. {leadingTeam.ToString()} won!");
+			Log.Info($"Round ended. {ev.LeadingTeam} won!");
 		}
 
 		[PluginEvent(ServerEventType.RoundRestart)]

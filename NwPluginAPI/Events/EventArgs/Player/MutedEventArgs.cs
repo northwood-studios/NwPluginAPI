@@ -26,7 +26,7 @@ namespace PluginAPI.Events.EventArgs.Player
 		public Core.Player Player { get; }
 
 		/// <summary>
-		/// Get value indicating if the player is muted in intercom.s
+		/// Get value indicating if the player is muted in intercom
 		/// </summary>
 		public bool IsIntercomMute { get; }
 	}

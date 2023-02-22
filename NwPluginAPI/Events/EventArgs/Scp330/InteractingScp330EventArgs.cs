@@ -26,6 +26,7 @@ namespace PluginAPI.Events.EventArgs.Scp330
 
 		/// <summary>
 		/// Get or set the amount of candies taken of the player.
+		/// <remarks>This value only increases for each time the player interacts with the SCP-330.</remarks>
 		/// </summary>
 		public int CandiesTaken { get; set; }
 	}

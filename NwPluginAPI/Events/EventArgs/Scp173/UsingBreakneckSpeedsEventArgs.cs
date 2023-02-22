@@ -1,11 +1,15 @@
 using PlayerRoles.PlayableScps.Scp173;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp173
 {
 	/// <summary>
-	/// Create new event for this.
+	/// Contains all the information before an SCP-173 attempts to activate or deactivate its breakneck speeds ability.
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp173BreakneckSpeeds"/>.
+	/// </remarks>
 	/// </summary>
 	public class UsingBreakneckSpeedsEventArgs
 	{

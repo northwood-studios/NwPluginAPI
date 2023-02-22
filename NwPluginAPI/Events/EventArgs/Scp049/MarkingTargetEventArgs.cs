@@ -1,21 +1,25 @@
 using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp049
 {
 	/// <summary>
-	/// Make new event for this.
+	/// Contains all information before SCP-049 marks a player with its ability
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp049MarkingPlayer"/>.
+	/// </remarks>
 	/// </summary>
-	public class MarkTargetEventArgs
+	public class MarkingTargetEventArgs
 	{
 		/// <summary>
-		/// Initializes a new instance of <see cref="MarkTargetEventArgs"/>.
+		/// Initializes a new instance of <see cref="MarkingTargetEventArgs"/>.
 		/// </summary>
 		/// <param name="scp049"></param>
 		/// <param name="target"></param>
 		/// <param name="duration"></param>
-		public MarkTargetEventArgs(IPlayer scp049, IPlayer target, float duration)
+		public MarkingTargetEventArgs(IPlayer scp049, IPlayer target, float duration)
 		{
 			Player = (Core.Player)scp049;
 			Scp049Role = Player.RoleBase as Scp049Role;

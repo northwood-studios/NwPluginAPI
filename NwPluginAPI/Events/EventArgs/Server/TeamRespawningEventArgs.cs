@@ -17,7 +17,7 @@ namespace PluginAPI.Events.EventArgs.Server
 		/// </summary>
 		/// <param name="players"></param>
 		/// <param name="waveSize"></param>
-		public TeamRespawningEventArgs(List<IPlayer> players, int waveSize)
+		public TeamRespawningEventArgs(List<IPlayer> players, int waveSize, SpawnableTeamType teamType)
 		{
 			var list = new List<Core.Player>();
 			foreach (var player in players)
@@ -39,6 +39,11 @@ namespace PluginAPI.Events.EventArgs.Server
 		/// Get or set the number of players to be respawned.
 		/// </summary>
 		public int WaveSizes { get; set; }
+
+		/// <summary>
+		/// Gets the team spawning.
+		/// </summary>
+		public SpawnableTeamType Team { get; }
 
 	}
 }

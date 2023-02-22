@@ -2,11 +2,15 @@ using System.Numerics;
 using PlayerRoles.PlayableScps.Scp106;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp106
 {
 	/// <summary>
-	/// Create a new Event for this Licht.
+	/// Contains all information before SCP-106 used its hunter atlas ability.
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp106UsingHunterAtlas"/>.
+	/// </remarks>
 	/// </summary>
 	public class TeleportingEventArgs
 	{
@@ -19,6 +23,7 @@ namespace PluginAPI.Events.EventArgs.Scp106
 		{
 			Player = (Core.Player)player;
 			Scp106Role = Player.RoleBase as Scp106Role;
+			Position = teleport;
 		}
 
 		/// <summary>

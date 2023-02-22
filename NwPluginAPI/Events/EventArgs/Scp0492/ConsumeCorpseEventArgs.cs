@@ -1,11 +1,15 @@
 using PlayerRoles.PlayableScps.Scp049.Zombies;
 using PluginAPI.Core;
 using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.EventArgs.Scp0492
 {
 	/// <summary>
-	/// Create new event for this.
+	/// Contains all information after SCP-049-2 consumes a body
+	/// <remarks>
+	/// This EventArgs is for <see cref="ServerEventType.Scp0492ConsumedCorpse"/>.
+	/// </remarks>
 	/// </summary>
 	public class ConsumeCorpseEventArgs
 	{

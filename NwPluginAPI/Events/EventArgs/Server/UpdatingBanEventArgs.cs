@@ -8,14 +8,14 @@ namespace PluginAPI.Events.EventArgs.Server
 	/// This EventArgs is for <see cref="ServerEventType.BanUpdated"/>.
 	/// </remarks>
 	/// </summary>
-	public class BanUpdatingEventArgs
+	public class UpdatingBanEventArgs
 	{
 		/// <summary>
-		/// Initializes a new instance of <see cref="BanUpdatingEventArgs"/>.
+		/// Initializes a new instance of <see cref="UpdatingBanEventArgs"/>.
 		/// </summary>
 		/// <param name="banDetails"></param>
 		/// <param name="type"></param>
-		public BanUpdatingEventArgs(BanDetails banDetails, BanHandler.BanType type)
+		public UpdatingBanEventArgs(BanDetails banDetails, BanHandler.BanType type)
 		{
 			BanDetails = banDetails;
 			BanType = type;

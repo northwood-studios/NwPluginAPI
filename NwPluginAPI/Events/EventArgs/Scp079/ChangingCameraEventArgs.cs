@@ -9,14 +9,14 @@ namespace PluginAPI.Events.EventArgs.Scp079
 	/// <summary>
 	/// This EventArgs is for <see cref="ServerEventType.Scp079CameraChanged"/>.
 	/// </summary>
-	public class CameraChangedEventArgs
+	public class ChangingCameraEventArgs
 	{
 		/// <summary>
-		/// Initializes a new instance of <see cref="CameraChangedEventArgs"/>.
+		/// Initializes a new instance of <see cref="ChangingCameraEventArgs"/>.
 		/// </summary>
 		/// <param name="scp079"></param>
 		/// <param name="camera"></param>
-		public CameraChangedEventArgs(IPlayer scp079, Scp079Camera camera, float energyCost)
+		public ChangingCameraEventArgs(IPlayer scp079, Scp079Camera camera, float energyCost)
 		{
 			Player = (Core.Player)scp079;
 			Scp079Role = Player.RoleBase as Scp079Role;
