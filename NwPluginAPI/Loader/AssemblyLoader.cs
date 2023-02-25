@@ -117,6 +117,8 @@ namespace PluginAPI.Loader
 				.Select(x =>
 					$"{x.GetName().Name}&r v&6{x.GetName().Version.ToString(3)}");
 
+			var pluginInfoList = new List<PluginFileInformation>();
+
 			foreach (string pluginPath in files)
 			{
 				if (!TryGetAssembly(pluginPath, out Assembly assembly))
@@ -147,6 +149,17 @@ namespace PluginAPI.Loader
 					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, {e.ToString()}");
 					continue;
 				}
+
+				pluginInfoList.Add(new PluginFileInformation(pluginPath, assembly, types));
+			}
+
+			Log.Info($"Initializing &2{pluginInfoList.Count}&r plugins...");
+
+			foreach (var info in pluginInfoList)
+			{
+				string pluginPath = info.Path;
+				var assembly = info.PluginAssembly;
+				Type[] types = info.Types;
 
 				foreach (var entryType in types)
 				{
