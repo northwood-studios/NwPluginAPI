@@ -30,17 +30,17 @@ namespace PluginAPI.Events.EventArgs.Player
 		public Core.Player Target { get; }
 
 		/// <summary>
-		/// Get the player who did the ban
+		/// Gets the player who did the ban
 		/// </summary>
 		public Core.Player Issuer { get; }
 
 		/// <summary>
-		/// Gets the reason for the ban.
+		/// Get or set the reason for the ban.
 		/// </summary>
 		public string Reason { get; set; }
 
 		/// <summary>
-		/// Gets the duration of the ban.
+		/// Get or set the duration of the ban.
 		/// </summary>
 		public long Duration { get; set; }
 	}

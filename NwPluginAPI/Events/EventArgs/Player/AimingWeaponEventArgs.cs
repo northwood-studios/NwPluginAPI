@@ -28,7 +28,7 @@ namespace PluginAPI.Events.EventArgs.Player
 		public Core.Player Player { get; }
 
 		/// <summary>
-		///	Gets the <see cref="Firearm"/> weapon who is trigger this action.
+		/// Gets the <see cref="Firearm"/> weapon who is trigger this action.
 		/// </summary>
 		public Firearm Weapon { get; }
 
