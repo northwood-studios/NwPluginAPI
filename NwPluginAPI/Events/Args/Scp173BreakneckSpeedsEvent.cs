@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp173BreakneckSpeeds;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public bool Activate { get; set; }
+		public bool Activate { get; }
+
+		public Scp173BreakneckSpeedsEvent(ReferenceHub hub, bool activate)
+		{
+			Player = Player.Get(hub);
+			Activate = activate;
+		}
 	}
 }

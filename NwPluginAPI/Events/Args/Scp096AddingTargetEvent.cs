@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096AddingTarget;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Player Target { get; set; }
+		public Player Target { get; }
 		[EventArgument]
-		public bool IsForLook { get; set; }
+		public bool IsForLook { get; }
+
+		public Scp096AddingTargetEvent(ReferenceHub hub, ReferenceHub target, bool isForLook)
+		{
+			Player = Player.Get(hub);
+			Target = Player.Get(target);
+			IsForLook = isForLook;
+		}
 	}
 }

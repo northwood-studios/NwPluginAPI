@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerUseItem;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public UsableItem Item { get; set; }
+		public UsableItem Item { get; }
+
+		public PlayerUseItemEvent(ReferenceHub hub, UsableItem item)
+		{
+			Player = Player.Get(hub);
+			Item = item;
+		}
 	}
 }

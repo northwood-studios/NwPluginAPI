@@ -34,6 +34,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.RoundEnd;
 		[EventArgument]
-		public LeadingTeam LeadingTeam { get; set; }
+		public LeadingTeam LeadingTeam { get; }
+
+		public RoundEndEvent(LeadingTeam leadingTeam)
+		{
+			LeadingTeam = leadingTeam;
+		}
 	}
 }

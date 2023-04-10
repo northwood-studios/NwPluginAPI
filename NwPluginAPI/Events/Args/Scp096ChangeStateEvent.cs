@@ -34,8 +34,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096ChangeState;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Scp096RageState RageState { get; set; }
+		public Scp096RageState RageState { get; }
+
+		public Scp096ChangeStateEvent(ReferenceHub hub, Scp096RageState state)
+		{
+			Player = Player.Get(hub);
+			RageState = state;
+		}
 	}
 }

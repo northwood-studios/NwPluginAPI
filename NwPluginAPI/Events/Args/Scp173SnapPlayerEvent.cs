@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp173SnapPlayer;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Player Target { get; set; }
+		public Player Target { get; }
+
+		public Scp173SnapPlayerEvent(ReferenceHub hub, ReferenceHub target)
+		{
+			Player = Player.Get(hub);
+			Target = Player.Get(target);
+		}
 	}
 }

@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerUseHotkey;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public ActionName Action { get; set; }
+		public ActionName Action { get; }
+
+		public PlayerUseHotkeyEvent(ReferenceHub hub, ActionName action)
+		{
+			Player = Player.Get(hub);
+			Action = action;
+		}
 	}
 }

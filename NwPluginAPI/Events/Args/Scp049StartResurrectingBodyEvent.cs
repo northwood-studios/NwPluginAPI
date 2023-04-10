@@ -33,12 +33,20 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp049StartResurrectingBody;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Player Target { get; set; }
+		public Player Target { get; }
 		[EventArgument]
-		public BasicRagdoll Body { get; set; }
+		public BasicRagdoll Body { get; }
 		[EventArgument]
-		public bool CanResurrct { get; set; }
+		public bool CanResurrct { get; }
+
+		public Scp049StartResurrectingBodyEvent(ReferenceHub hub, ReferenceHub target, BasicRagdoll body, bool canResurrct)
+		{
+			Player = Player.Get(hub);
+			Target = Player.Get(target);
+			Body = body;
+			CanResurrct = canResurrct;
+		}
 	}
 }

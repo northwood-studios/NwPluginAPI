@@ -33,6 +33,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerPreCoinFlip;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
+
+		public PlayerPreCoinFlipEvent(ReferenceHub hub)
+		{
+			Player = Player.Get(hub);
+		}
 	}
 }

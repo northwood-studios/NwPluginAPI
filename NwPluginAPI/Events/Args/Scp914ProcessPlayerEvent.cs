@@ -34,10 +34,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914ProcessPlayer;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Scp914KnobSetting KnobSetting { get; set; }
+		public Scp914KnobSetting KnobSetting { get; }
 		[EventArgument]
 		public Vector3 OutPosition { get; set; }
+
+		public Scp914ProcessPlayerEvent(ReferenceHub hub, Scp914KnobSetting setting, Vector3 outPosition)
+		{
+			Player = Player.Get(hub);
+			KnobSetting = setting;
+			OutPosition = outPosition;
+		}
 	}
 }

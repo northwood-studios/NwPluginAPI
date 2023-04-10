@@ -33,6 +33,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.WarheadStop;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
+
+		public WarheadStopEvent(ReferenceHub hub)
+		{
+			Player = Player.Get(hub);
+		}
 	}
 }

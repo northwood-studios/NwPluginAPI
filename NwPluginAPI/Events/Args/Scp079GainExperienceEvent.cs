@@ -34,10 +34,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079GainExperience;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
 		public int Amount { get; set; }
 		[EventArgument]
 		public Scp079HudTranslation Reason { get; set; }
+
+		public Scp079GainExperienceEvent(ReferenceHub hub, int amount, Scp079HudTranslation reason)
+		{
+			Player = Player.Get(hub);
+			Amount = amount;
+			Reason = reason;
+		}
 	}
 }

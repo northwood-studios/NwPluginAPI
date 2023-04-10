@@ -34,8 +34,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079CameraChanged;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Scp079Camera Camera { get; set; }
+		public Scp079Camera Camera { get; }
+
+		public Scp079CameraChangedEvent(ReferenceHub hub, Scp079Camera camera)
+		{
+			Player = Player.Get(hub);
+			Camera = camera;
+		}
 	}
 }

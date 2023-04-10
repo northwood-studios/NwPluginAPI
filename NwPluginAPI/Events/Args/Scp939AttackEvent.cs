@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp939Attack;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public IDestructible Target { get; set; }
+		public IDestructible Target { get; }
+
+		public Scp939AttackEvent(ReferenceHub hub, IDestructible target)
+		{
+			Player = Player.Get(hub);
+			Target = target;
+		}
 	}
 }

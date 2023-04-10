@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerToggleFlashlight;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public ItemBase Item { get; set; }
+		public ItemBase Item { get; }
 		[EventArgument]
-		public bool IsToggled { get; set; }
+		public bool IsToggled { get; }
+
+		public PlayerToggleFlashlightEvent(ReferenceHub hub, ItemBase item, bool isToggled)
+		{
+			Player = Player.Get(hub);
+			Item = item;
+			IsToggled = isToggled;
+		}
 	}
 }

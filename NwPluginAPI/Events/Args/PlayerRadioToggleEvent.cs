@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerRadioToggle;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public RadioItem Radio { get; set; }
+		public RadioItem Radio { get; }
 		[EventArgument]
 		public bool NewState { get; set; }
+
+		public PlayerRadioToggleEvent(ReferenceHub hub, RadioItem radio, bool newState)
+		{
+			Player = Player.Get(hub);
+			Radio = radio;
+			NewState = newState;
+		}
 	}
 }

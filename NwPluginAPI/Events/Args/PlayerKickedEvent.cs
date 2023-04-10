@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerKicked;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public ICommandSender Issuer { get; set; }
+		public ICommandSender Issuer { get; }
 		[EventArgument]
 		public string Reason { get; set; }
+
+		public PlayerKickedEvent(ReferenceHub hub, ICommandSender issuer, string reason)
+		{
+			Player = Player.Get(hub);
+			Issuer = issuer;
+			Reason = reason;
+		}
 	}
 }

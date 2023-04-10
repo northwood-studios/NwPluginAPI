@@ -34,8 +34,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079BlackoutZone;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public FacilityZone Zone { get; set; }
+		public FacilityZone Zone { get; }
+
+		public Scp079BlackoutZoneEvent(ReferenceHub hub, FacilityZone zone)
+		{
+			Player = Player.Get(hub);
+			Zone = zone;
+		}
 	}
 }

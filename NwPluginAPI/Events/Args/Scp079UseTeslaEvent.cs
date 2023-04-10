@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079UseTesla;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public TeslaGate Tesla { get; set; }
+		public TeslaGate Tesla { get; }
+
+		public Scp079UseTeslaEvent(ReferenceHub hub, TeslaGate tesla)
+		{
+			Player = Player.Get(hub);
+			Tesla = tesla;
+		}
 	}
 }

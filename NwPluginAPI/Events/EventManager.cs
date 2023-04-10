@@ -40,6 +40,7 @@ namespace PluginAPI.Events
 	using Mirror;
 	using static UnityEngine.GraphicsBuffer;
 	using System.Security.Cryptography;
+	using System.Runtime.Serialization;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -64,7 +65,8 @@ namespace PluginAPI.Events
 
 				if (args == null) continue;
 
-				var obj = (IEventArguments)Activator.CreateInstance(type);
+				
+				var obj = (IEventArguments)FormatterServices.GetUninitializedObject(type);
 
 				var targetProperty = type.GetProperty(nameof(IEventArguments.BaseType), BindingFlags.Public);
 				ServerEventType eventType = (ServerEventType)targetProperty.GetValue(obj);
@@ -298,7 +300,7 @@ namespace PluginAPI.Events
 		/// <param name="type">The type of event</param>
 		/// <param name="args">The arguments of event.</param>
 		/// <returns>If false event is cancelled.</returns>
-		public static bool ExecuteEvent(ServerEventType type, IEventArguments args) => ExecuteEvent<bool>(type, args);
+		public static bool ExecuteEvent( IEventArguments args) => ExecuteEvent<bool>(args);
 
 		/// <summary>
 		/// Executes event.
@@ -307,11 +309,11 @@ namespace PluginAPI.Events
 		/// <param name="args">The arguments of event.</param>
 		/// <returns>Event cancellation data.</returns>
 		// ReSharper disable once MemberCanBePrivate.Global
-		public static T ExecuteEvent<T>(ServerEventType type, IEventArguments args) where T : struct
+		public static T ExecuteEvent<T>(IEventArguments args) where T : struct
 		{
-			if (!Events.TryGetValue(type, out Event ev))
+			if (!Events.TryGetValue(args.BaseType, out Event ev))
 			{
-				Log.Error($"Event &6{type}&r is not registered in manager! ( create issue on github )");
+				Log.Error($"Event &6{args.BaseType}&r is not registered in manager! ( create issue on github )");
 				return default;
 			}
 
@@ -363,7 +365,7 @@ namespace PluginAPI.Events
 					}
 					catch (Exception ex)
 					{
-						Log.Error($"Failed executing event &6{invoker.Method.Name}&r (&6{type}&r) in plugin &6{invoker.Plugin.FullName}&r\n{ex}");
+						Log.Error($"Failed executing event &6{invoker.Method.Name}&r (&6{args.BaseType}&r) in plugin &6{invoker.Plugin.FullName}&r\n{ex}");
 						continue;
 					}
 

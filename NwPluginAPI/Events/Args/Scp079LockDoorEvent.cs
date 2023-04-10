@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079LockDoor;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public DoorVariant Door { get; set; }
+		public DoorVariant Door { get; }
+
+		public Scp079LockDoorEvent(ReferenceHub hub, DoorVariant door)
+		{
+			Player = Player.Get(hub);
+			Door = door;
+		}
 	}
 }

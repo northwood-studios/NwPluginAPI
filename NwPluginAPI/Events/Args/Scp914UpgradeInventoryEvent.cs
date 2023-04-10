@@ -34,10 +34,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914UpgradeInventory;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public ItemBase Item { get; set; }
+		public ItemBase Item { get; }
 		[EventArgument]
-		public Scp914KnobSetting KnobSetting { get; set; }
+		public Scp914KnobSetting KnobSetting { get; }
+
+		public Scp914UpgradeInventoryEvent(ReferenceHub hub, ItemBase item, Scp914KnobSetting setting)
+		{
+			Player = Player.Get(hub);
+			Item = item;
+			KnobSetting = setting;
+		}
 	}
 }

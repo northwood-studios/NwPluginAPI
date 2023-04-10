@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerMuted;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public bool IsIntercom { get; set; }
+		public bool IsIntercom { get; }
+
+		public PlayerMutedEvent(ReferenceHub hub, bool isIntercom)
+		{
+			Player = Player.Get(hub);
+			IsIntercom = isIntercom;
+		}
 	}
 }

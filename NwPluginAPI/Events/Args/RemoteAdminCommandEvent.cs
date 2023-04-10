@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.RemoteAdminCommand;
 		[EventArgument]
-		public ICommandSender Sender { get; set; }
+		public ICommandSender Sender { get; }
 		[EventArgument]
-		public string Command { get; set; }
+		public string Command { get; }
 		[EventArgument]
-		public string[] Arguments { get; set; }
+		public string[] Arguments { get; }
+
+		public RemoteAdminCommandEvent(ICommandSender sender, string command, string[] arguments)
+		{
+			Sender = sender;
+			Command = command;
+			Arguments = arguments;
+		}
 	}
 }

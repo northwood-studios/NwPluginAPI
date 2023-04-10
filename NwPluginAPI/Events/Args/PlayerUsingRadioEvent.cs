@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerUsingRadio;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public RadioItem Radio { get; set; }
+		public RadioItem Radio { get; }
 		[EventArgument]
 		public float Drain { get; set; }
+
+		public PlayerUsingRadioEvent(ReferenceHub hub, RadioItem radio, float drain)
+		{
+			Player = Player.Get(hub);
+			Radio = radio;
+			Drain = drain;
+		}
 	}
 }

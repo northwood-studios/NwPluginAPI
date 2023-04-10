@@ -33,6 +33,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp173CreateTantrum;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
+
+		public Scp173CreateTantrumEvent(ReferenceHub hub)
+		{
+			Player = Player.Get(hub);
+		}
 	}
 }

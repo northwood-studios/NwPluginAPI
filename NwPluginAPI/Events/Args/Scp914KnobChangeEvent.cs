@@ -34,10 +34,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914KnobChange;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
 		public Scp914KnobSetting KnobSetting { get; set; }
 		[EventArgument]
-		public Scp914KnobSetting PreviousKnobSetting { get; set; }
+		public Scp914KnobSetting PreviousKnobSetting { get; }
+
+		public Scp914KnobChangeEvent(ReferenceHub hub, Scp914KnobSetting setting, Scp914KnobSetting oldSetting)
+		{
+			Player = Player.Get(hub);
+			KnobSetting = setting;
+			PreviousKnobSetting = oldSetting;
+		}
 	}
 }

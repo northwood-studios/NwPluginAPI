@@ -33,20 +33,32 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerPreauth;
 		[EventArgument]
-		public string UserId { get; set; }
+		public string UserId { get; }
 		[EventArgument]
-		public string IpAddress { get; set; }
+		public string IpAddress { get; }
 		[EventArgument]
-		public long Expiration { get; set; }
+		public long Expiration { get; }
 		[EventArgument]
-		public CentralAuthPreauthFlags CentralFlags { get; set; }
+		public CentralAuthPreauthFlags CentralFlags { get; }
 		[EventArgument]
-		public string Region { get; set; }
+		public string Region { get; }
 		[EventArgument]
-		public string[] Signature { get; set; }
+		public byte[] Signature { get; }
 		[EventArgument]
-		public ConnectionRequest ConnectionRequest { get; set; }
+		public ConnectionRequest ConnectionRequest { get; }
 		[EventArgument]
-		public int ReaderStartPosition { get; set; }
+		public int ReaderStartPosition { get; }
+
+		public PlayerPreauthEvent(string userId, string ipAddress, long expiration, CentralAuthPreauthFlags centralFlags, string region, byte[] signature, ConnectionRequest connectionRequest, int readerStartPosition)
+		{
+			UserId = userId;
+			IpAddress = ipAddress;
+			Expiration = expiration;
+			CentralFlags = centralFlags;
+			Region = region;
+			Signature = signature;
+			ConnectionRequest = connectionRequest;
+			ReaderStartPosition = readerStartPosition;
+		}
 	}
 }

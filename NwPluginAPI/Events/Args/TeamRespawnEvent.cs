@@ -34,6 +34,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.TeamRespawn;
 		[EventArgument]
-		public SpawnableTeamType Team { get; set; }
+		public SpawnableTeamType Team { get; }
+
+		public TeamRespawnEvent(SpawnableTeamType team)
+		{
+			Team = team;
+		}
 	}
 }

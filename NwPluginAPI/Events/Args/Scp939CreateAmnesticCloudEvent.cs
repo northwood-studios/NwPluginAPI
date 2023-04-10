@@ -33,6 +33,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp939CreateAmnesticCloud;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
+
+		public Scp939CreateAmnesticCloudEvent(ReferenceHub hub)
+		{
+			Player = Player.Get(hub);
+		}
 	}
 }

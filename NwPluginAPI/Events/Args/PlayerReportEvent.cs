@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerReport;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Player Target { get; set; }
+		public Player Target { get; }
 		[EventArgument]
 		public string Reason { get; set; }
+
+		public PlayerReportEvent(ReferenceHub hub, ReferenceHub target, string reason)
+		{
+			Player = Player.Get(hub);
+			Target = Player.Get(target);
+			Reason = reason;
+		}
 	}
 }

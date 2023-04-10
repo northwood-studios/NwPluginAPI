@@ -34,8 +34,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerUsingIntercom;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public IntercomState IntercomState { get; set; }
+		public IntercomState IntercomState { get; }
+
+		public PlayerUsingIntercomEvent(ReferenceHub hub, IntercomState state)
+		{
+			Player = Player.Get(hub);
+			IntercomState = state;
+		}
 	}
 }

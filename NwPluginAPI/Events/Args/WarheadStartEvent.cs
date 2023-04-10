@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.WarheadStart;
 		[EventArgument]
-		public bool IsAutomatic { get; set; }
+		public bool IsAutomatic { get; }
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public bool IsResumed { get; set; }
+		public bool IsResumed { get; }
+
+		public WarheadStartEvent(bool isAutomatic, ReferenceHub hub, bool isResumed)
+		{
+			IsAutomatic = isAutomatic;
+			Player = Player.Get(hub);
+			IsResumed = isResumed;
+		}
 	}
 }

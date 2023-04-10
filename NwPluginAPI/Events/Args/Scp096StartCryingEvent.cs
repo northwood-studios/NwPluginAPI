@@ -33,6 +33,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096StartCrying;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
+
+		public Scp096StartCryingEvent(ReferenceHub hub)
+		{
+			Player = Player.Get(hub);
+		}
 	}
 }

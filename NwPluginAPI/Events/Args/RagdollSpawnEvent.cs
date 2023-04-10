@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.RagdollSpawn;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public IRagdollRole Ragdoll { get; set; }
+		public IRagdollRole Ragdoll { get; }
 		[EventArgument]
-		public DamageHandlerBase DamageHandler { get; set; }
+		public DamageHandlerBase DamageHandler { get; }
+
+		public RagdollSpawnEvent(ReferenceHub hub, IRagdollRole ragdoll, DamageHandlerBase handler)
+		{
+			Player = Player.Get(hub);
+			Ragdoll = ragdoll;
+			DamageHandler = handler;
+		}
 	}
 }

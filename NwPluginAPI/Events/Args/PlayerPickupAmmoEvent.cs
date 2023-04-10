@@ -33,8 +33,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerPickupAmmo;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public ItemPickupBase Item { get; set; }
+		public ItemPickupBase Item { get; }
+
+		public PlayerPickupAmmoEvent(ReferenceHub hub, ItemPickupBase item)
+		{
+			Player = Player.Get(hub);
+			Item = item;
+		}
 	}
 }

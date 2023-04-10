@@ -33,10 +33,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerThrowItem;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public ItemBase Item { get; set; }
+		public ItemBase Item { get; }
 		[EventArgument]
-		public Rigidbody Rigidbody { get; set; }
+		public Rigidbody Rigidbody { get; }
+
+		public PlayerThrowItemEvent(ReferenceHub hub, ItemBase item, Rigidbody rb)
+		{
+			Player = Player.Get(hub);
+			Item = item;
+			Rigidbody = rb;
+		}
 	}
 }

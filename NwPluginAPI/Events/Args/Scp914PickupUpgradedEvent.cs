@@ -34,10 +34,17 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914PickupUpgraded;
 		[EventArgument]
-		public ItemPickupBase Item { get; set; }
+		public ItemPickupBase Item { get; }
 		[EventArgument]
 		public Vector3 NewPosition { get; set; }
 		[EventArgument]
-		public Scp914KnobSetting KnobSetting { get; set; }
+		public Scp914KnobSetting KnobSetting { get; }
+
+		public Scp914PickupUpgradedEvent(ItemPickupBase item, Vector3 newPosition, Scp914KnobSetting setting)
+		{
+			Item = item;
+			NewPosition = newPosition;
+			KnobSetting = setting;
+		}
 	}
 }

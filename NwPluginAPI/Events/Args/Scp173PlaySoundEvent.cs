@@ -34,8 +34,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp173PlaySound;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public Scp173SoundId SoundId { get; set; }
+		public Scp173SoundId SoundId { get; }
+
+		public Scp173PlaySoundEvent(ReferenceHub hub, Scp173SoundId id)
+		{
+			Player = Player.Get(hub);
+			SoundId = id;
+		}
 	}
 }

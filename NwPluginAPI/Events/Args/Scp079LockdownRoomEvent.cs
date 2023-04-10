@@ -34,8 +34,14 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079LockdownRoom;
 		[EventArgument]
-		public Player Player { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public RoomIdentifier Room { get; set; }
+		public RoomIdentifier Room { get; }
+
+		public Scp079LockdownRoomEvent(ReferenceHub hub, RoomIdentifier room)
+		{
+			Player = Player.Get(hub);
+			Room = room;
+		}
 	}
 }

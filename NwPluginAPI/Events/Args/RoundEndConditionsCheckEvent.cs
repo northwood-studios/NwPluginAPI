@@ -33,6 +33,11 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.RoundEndConditionsCheck;
 		[EventArgument]
-		public bool BaseGameConditionsSatisfied { get; set; }
+		public bool BaseGameConditionsSatisfied { get; }
+
+		public RoundEndConditionsCheckEvent(bool baseGameConditionsSatisfied)
+		{
+			BaseGameConditionsSatisfied = baseGameConditionsSatisfied;
+		}
 	}
 }
