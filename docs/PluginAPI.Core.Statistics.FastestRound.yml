@@ -5,7 +5,7 @@ items:
   id: Statistics.FastestRound
   parent: PluginAPI.Core
   children:
-  - PluginAPI.Core.Statistics.FastestRound.#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)
+  - PluginAPI.Core.Statistics.FastestRound.#ctor(LeadingTeam,System.TimeSpan,System.DateTime)
   - PluginAPI.Core.Statistics.FastestRound.Duration
   - PluginAPI.Core.Statistics.FastestRound.LeadingTeam
   - PluginAPI.Core.Statistics.FastestRound.Timestamp
@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FastestRound
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 46
@@ -48,22 +48,22 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: PluginAPI.Core.Statistics.FastestRound.#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)
-  commentId: M:PluginAPI.Core.Statistics.FastestRound.#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)
-  id: '#ctor(RoundSummary.LeadingTeam,System.TimeSpan,System.DateTime)'
+- uid: PluginAPI.Core.Statistics.FastestRound.#ctor(LeadingTeam,System.TimeSpan,System.DateTime)
+  commentId: M:PluginAPI.Core.Statistics.FastestRound.#ctor(LeadingTeam,System.TimeSpan,System.DateTime)
+  id: '#ctor(LeadingTeam,System.TimeSpan,System.DateTime)'
   parent: PluginAPI.Core.Statistics.FastestRound
   langs:
   - csharp
   - vb
-  name: FastestRound(RoundSummary.LeadingTeam, TimeSpan, DateTime)
-  nameWithType: Statistics.FastestRound.FastestRound(RoundSummary.LeadingTeam, TimeSpan, DateTime)
-  fullName: PluginAPI.Core.Statistics.FastestRound.FastestRound(RoundSummary.LeadingTeam, System.TimeSpan, System.DateTime)
+  name: FastestRound(LeadingTeam, TimeSpan, DateTime)
+  nameWithType: Statistics.FastestRound.FastestRound(LeadingTeam, TimeSpan, DateTime)
+  fullName: PluginAPI.Core.Statistics.FastestRound.FastestRound(LeadingTeam, System.TimeSpan, System.DateTime)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 48
@@ -71,15 +71,15 @@ items:
   - PluginAPI
   namespace: PluginAPI.Core
   syntax:
-    content: public FastestRound(RoundSummary.LeadingTeam leadingTeam, TimeSpan duration, DateTime timestamp)
+    content: public FastestRound(LeadingTeam leadingTeam, TimeSpan duration, DateTime timestamp)
     parameters:
     - id: leadingTeam
-      type: RoundSummary.LeadingTeam
+      type: LeadingTeam
     - id: duration
       type: System.TimeSpan
     - id: timestamp
       type: System.DateTime
-    content.vb: Public Sub New(leadingTeam As RoundSummary.LeadingTeam, duration As TimeSpan, timestamp As Date)
+    content.vb: Public Sub New(leadingTeam As LeadingTeam, duration As TimeSpan, timestamp As Date)
   overload: PluginAPI.Core.Statistics.FastestRound.#ctor*
   modifiers.csharp:
   - public
@@ -100,7 +100,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeadingTeam
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 55
@@ -108,11 +108,11 @@ items:
   - PluginAPI
   namespace: PluginAPI.Core
   syntax:
-    content: public RoundSummary.LeadingTeam LeadingTeam { get; }
+    content: public LeadingTeam LeadingTeam { get; }
     parameters: []
     return:
-      type: RoundSummary.LeadingTeam
-    content.vb: Public ReadOnly Property LeadingTeam As RoundSummary.LeadingTeam
+      type: LeadingTeam
+    content.vb: Public ReadOnly Property LeadingTeam As LeadingTeam
   overload: PluginAPI.Core.Statistics.FastestRound.LeadingTeam*
   modifiers.csharp:
   - public
@@ -135,7 +135,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 56
@@ -170,7 +170,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Timestamp
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 57
@@ -493,12 +493,11 @@ references:
   name: FastestRound
   nameWithType: Statistics.FastestRound.FastestRound
   fullName: PluginAPI.Core.Statistics.FastestRound.FastestRound
-- uid: RoundSummary.LeadingTeam
-  commentId: T:RoundSummary.LeadingTeam
+- uid: LeadingTeam
   isExternal: true
-  name: RoundSummary.LeadingTeam
-  nameWithType: RoundSummary.LeadingTeam
-  fullName: RoundSummary.LeadingTeam
+  name: LeadingTeam
+  nameWithType: LeadingTeam
+  fullName: LeadingTeam
 - uid: System.TimeSpan
   commentId: T:System.TimeSpan
   parent: System

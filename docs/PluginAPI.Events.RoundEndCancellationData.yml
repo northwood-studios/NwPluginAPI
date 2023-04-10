@@ -21,7 +21,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundEndCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 290
@@ -66,7 +66,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 293
@@ -106,7 +106,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Delay
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 295
@@ -139,7 +139,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AllowRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 307
@@ -176,7 +176,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DelayRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 316
@@ -220,7 +220,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AbortRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 328

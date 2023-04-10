@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "[REDACTED]/NwPluginAPI/NwPluginAPI.Docs",
+  "source_base_path": "E:/VS Projects/NwPluginAPI/NwPluginAPI.Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -149,17 +149,19 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 7,
-          "skipped_file_count": 6
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

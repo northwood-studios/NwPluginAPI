@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	public class BaseHuman : BaseRole
+	public class BaseHuman<TPlayer> : BaseRole<TPlayer> where TPlayer : Player
 	{
+		public BaseHuman(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class NtfSpecialist : BaseNineTailedFox
+	public class NtfSpecialist<TPlayer> : BaseNineTailedFox<TPlayer> where TPlayer : Player
 	{
+		public NtfSpecialist(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

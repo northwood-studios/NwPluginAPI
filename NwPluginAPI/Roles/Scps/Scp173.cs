@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class Scp173 : BaseScp
+	public class Scp173<TPlayer> : BaseScp<TPlayer> where TPlayer : Player
 	{
+		public Scp173(PlayerRoleBase role) : base(role) { }
 	}
 }

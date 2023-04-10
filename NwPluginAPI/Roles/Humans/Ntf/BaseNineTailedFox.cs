@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class BaseNineTailedFox : BaseHuman
+	public class BaseNineTailedFox<TPlayer> : BaseHuman<TPlayer> where TPlayer : Player
 	{
-
+		public BaseNineTailedFox(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

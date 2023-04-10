@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class Spectator : BaseRole
+	public class Spectator<TPlayer> : BaseRole<TPlayer> where TPlayer : Player
 	{
+		public Spectator(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

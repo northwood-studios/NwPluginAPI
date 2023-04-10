@@ -15,8 +15,8 @@
     name: ListCommand
   - uid: PluginAPI.Commands.PluginsCommand
     name: PluginsCommand
-  - uid: PluginAPI.Commands.ReloadCommmand
-    name: ReloadCommmand
+  - uid: PluginAPI.Commands.ReloadConfigCommand
+    name: ReloadConfigCommand
 - uid: PluginAPI.Core
   name: PluginAPI.Core
   items:

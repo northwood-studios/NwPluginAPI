@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -13,11 +13,6 @@ namespace PluginAPI.Events
 		public object Target;
 		public MethodInfo Method;
 
-		/// <summary>
-		/// Invokes the handler.
-		/// </summary>
-		/// <param name="parameters">The parameters.</param>
-		/// <returns>The return value.</returns>
-		public object Invoke(object[] parameters) => Method.Invoke(Target, parameters);
+		public bool IsDefaultMethod;
 	}
 }

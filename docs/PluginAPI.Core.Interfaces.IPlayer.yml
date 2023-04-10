@@ -27,7 +27,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IPlayer
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 7
@@ -62,7 +62,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsServer
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 12
@@ -97,14 +97,14 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReferenceHub
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 17
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Interfaces
-  summary: "\nGets the player&apos;s <xref href=\"ReferenceHub\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the player&apos;s <see cref=\"!:ReferenceHub\"></see>.\n"
   example: []
   syntax:
     content: ReferenceHub ReferenceHub { get; }
@@ -132,20 +132,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 22
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Interfaces
-  summary: "\nGets the player&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the player&apos;s <see cref=\"!:UnityEngine.GameObject\"></see>.\n"
   example: []
   syntax:
     content: GameObject GameObject { get; }
     parameters: []
     return:
-      type: UnityEngine.GameObject
+      type: GameObject
     content.vb: ReadOnly Property GameObject As GameObject
   overload: PluginAPI.Core.Interfaces.IPlayer.GameObject*
   modifiers.csharp:
@@ -167,7 +167,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TemporaryData
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 27
@@ -202,7 +202,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnStart
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 32
@@ -230,7 +230,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 37
@@ -258,7 +258,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnUpdate
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 42
@@ -286,7 +286,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnLateUpdate
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 47
@@ -314,7 +314,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnFixedUpdate
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 53
@@ -342,14 +342,14 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 58
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Interfaces
-  summary: "\nGets the <xref href=\"UnityEngine.MonoBehaviour\" data-throw-if-not-resolved=\"false\"></xref> and caches it.\n"
+  summary: "\nGets the <see cref=\"!:UnityEngine.MonoBehaviour\"></see> and caches it.\n"
   example: []
   syntax:
     content: >-
@@ -382,14 +382,14 @@ items:
     remote:
       path: NwPluginAPI/Core/Interfaces/IPlayer.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Interfaces/IPlayer.cs
     startLine: 63
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Interfaces
-  summary: "\nGets the <xref href=\"UnityEngine.MonoBehaviour\" data-throw-if-not-resolved=\"false\"></xref> and caches it.\n"
+  summary: "\nGets the <see cref=\"!:UnityEngine.MonoBehaviour\"></see> and caches it.\n"
   example: []
   syntax:
     content: >-
@@ -433,35 +433,26 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ReferenceHub
-  commentId: T:ReferenceHub
-  isExternal: true
-  name: ReferenceHub
-  nameWithType: ReferenceHub
-  fullName: ReferenceHub
 - uid: PluginAPI.Core.Interfaces.IPlayer.ReferenceHub*
   commentId: Overload:PluginAPI.Core.Interfaces.IPlayer.ReferenceHub
   name: ReferenceHub
   nameWithType: IPlayer.ReferenceHub
   fullName: PluginAPI.Core.Interfaces.IPlayer.ReferenceHub
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
+- uid: ReferenceHub
   isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: UnityEngine.GameObject
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub
 - uid: PluginAPI.Core.Interfaces.IPlayer.GameObject*
   commentId: Overload:PluginAPI.Core.Interfaces.IPlayer.GameObject
   name: GameObject
   nameWithType: IPlayer.GameObject
   fullName: PluginAPI.Core.Interfaces.IPlayer.GameObject
-- uid: UnityEngine
-  commentId: N:UnityEngine
+- uid: GameObject
   isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
 - uid: PluginAPI.Core.Interfaces.IPlayer.TemporaryData*
   commentId: Overload:PluginAPI.Core.Interfaces.IPlayer.TemporaryData
   name: TemporaryData
@@ -503,9 +494,6 @@ references:
   name: OnFixedUpdate
   nameWithType: IPlayer.OnFixedUpdate
   fullName: PluginAPI.Core.Interfaces.IPlayer.OnFixedUpdate
-- uid: UnityEngine.MonoBehaviour
-  commentId: T:UnityEngine.MonoBehaviour
-  isExternal: true
 - uid: PluginAPI.Core.Interfaces.IPlayer.GetComponent*
   commentId: Overload:PluginAPI.Core.Interfaces.IPlayer.GetComponent
   name: GetComponent

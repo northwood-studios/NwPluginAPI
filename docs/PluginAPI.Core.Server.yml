@@ -6,27 +6,27 @@ items:
   parent: PluginAPI.Core
   children:
   - PluginAPI.Core.Server.#ctor(PluginAPI.Core.Interfaces.IGameComponent)
-  - PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
+  - PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,ICommandSender,System.String,System.Int64)
   - PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64)
   - PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,System.String,System.Int64)
-  - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,ICommandSender,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,System.String,System.Int64,System.String)
-  - PluginAPI.Core.Server.BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+  - PluginAPI.Core.Server.BanPlayerByUserId(System.String,ICommandSender,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByUserId(System.String,PluginAPI.Core.Interfaces.IPlayer,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.BanPlayerByUserId(System.String,System.String,System.Int64,System.String)
   - PluginAPI.Core.Server.Broadcast
   - PluginAPI.Core.Server.ClearBroadcasts
   - PluginAPI.Core.Server.FriendlyFire
   - PluginAPI.Core.Server.GetAllPlayersBanned
-  - PluginAPI.Core.Server.GetAllPlayersBanned(BanHandler.BanType)
+  - PluginAPI.Core.Server.GetAllPlayersBanned(BanType)
   - PluginAPI.Core.Server.IdleModeActive
   - PluginAPI.Core.Server.IdleModeAvailable
   - PluginAPI.Core.Server.Init
   - PluginAPI.Core.Server.Instance
   - PluginAPI.Core.Server.IsHeavilyModded
   - PluginAPI.Core.Server.IsPlayerBanned(System.String)
-  - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
+  - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,ICommandSender,System.String)
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,PluginAPI.Core.Interfaces.IPlayer,System.String)
   - PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,System.String)
   - PluginAPI.Core.Server.MaxPlayers
@@ -38,7 +38,7 @@ items:
   - PluginAPI.Core.Server.Restart
   - PluginAPI.Core.Server.Restart(System.UInt16)
   - PluginAPI.Core.Server.RunCommand(System.String,CommandSender)
-  - PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
+  - PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,BroadcastFlags,System.Boolean)
   - PluginAPI.Core.Server.ServerIpAddress
   - PluginAPI.Core.Server.SetIdleMode(System.Boolean)
   - PluginAPI.Core.Server.Shutdown
@@ -58,7 +58,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Server
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 18
@@ -88,18 +88,18 @@ items:
   - PluginAPI.Core.Player.GetPlayers``1
   - PluginAPI.Core.Player.TryGet(PluginAPI.Core.Interfaces.IGameComponent,PluginAPI.Core.Player@)
   - PluginAPI.Core.Player.TryGet``1(PluginAPI.Core.Interfaces.IGameComponent,{T}@)
-  - PluginAPI.Core.Player.Get(UnityEngine.GameObject)
-  - PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
-  - PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
-  - PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,{T}@)
+  - PluginAPI.Core.Player.Get(GameObject)
+  - PluginAPI.Core.Player.Get``1(GameObject)
+  - PluginAPI.Core.Player.TryGet(GameObject,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet``1(GameObject,{T}@)
   - PluginAPI.Core.Player.Get(ReferenceHub)
   - PluginAPI.Core.Player.Get``1(ReferenceHub)
   - PluginAPI.Core.Player.TryGet(ReferenceHub,PluginAPI.Core.Player@)
   - PluginAPI.Core.Player.TryGet``1(ReferenceHub,{T}@)
-  - PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
-  - PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
-  - PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
-  - PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,{T}@)
+  - PluginAPI.Core.Player.Get(NetworkIdentity)
+  - PluginAPI.Core.Player.Get``1(NetworkIdentity)
+  - PluginAPI.Core.Player.TryGet(NetworkIdentity,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet``1(NetworkIdentity,{T}@)
   - PluginAPI.Core.Player.GetByName(System.String)
   - PluginAPI.Core.Player.GetByName``1(System.String)
   - PluginAPI.Core.Player.TryGetByName(System.String,PluginAPI.Core.Player@)
@@ -116,10 +116,10 @@ items:
   - PluginAPI.Core.Player.Get``1(System.UInt32)
   - PluginAPI.Core.Player.TryGet(System.UInt32,PluginAPI.Core.Player@)
   - PluginAPI.Core.Player.TryGet``1(System.UInt32,{T}@)
-  - PluginAPI.Core.Player.Get(CommandSystem.ICommandSender)
-  - PluginAPI.Core.Player.Get``1(CommandSystem.ICommandSender)
-  - PluginAPI.Core.Player.TryGet(CommandSystem.ICommandSender,PluginAPI.Core.Player@)
-  - PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,{T}@)
+  - PluginAPI.Core.Player.Get(ICommandSender)
+  - PluginAPI.Core.Player.Get``1(ICommandSender)
+  - PluginAPI.Core.Player.TryGet(ICommandSender,PluginAPI.Core.Player@)
+  - PluginAPI.Core.Player.TryGet``1(ICommandSender,{T}@)
   - PluginAPI.Core.Player.ReferenceHub
   - PluginAPI.Core.Player.GameObject
   - PluginAPI.Core.Player.NetworkId
@@ -194,9 +194,11 @@ items:
   - PluginAPI.Core.Player.AddItem(ItemType)
   - PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
   - PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
-  - PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  - PluginAPI.Core.Player.RemoveItem(ItemPickupBase)
+  - PluginAPI.Core.Player.RemoveItem(ItemBase)
+  - PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
   - PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
-  - PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  - PluginAPI.Core.Player.DropItem(ItemBase)
   - PluginAPI.Core.Player.DropItem(System.UInt16)
   - PluginAPI.Core.Player.SetAmmo(ItemType,System.UInt16)
   - PluginAPI.Core.Player.GetAmmo(ItemType)
@@ -205,10 +207,10 @@ items:
   - PluginAPI.Core.Player.ClearInventory(System.Boolean,System.Boolean)
   - PluginAPI.Core.Player.SetGroup(UserGroup)
   - PluginAPI.Core.Player.Heal(System.Single)
-  - PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  - PluginAPI.Core.Player.SetRole(RoleTypeId,RoleChangeReason)
   - PluginAPI.Core.Player.Disconnect(System.String)
   - PluginAPI.Core.Player.ReceiveHint(System.String,System.Single)
-  - PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+  - PluginAPI.Core.Player.ReceiveHint(System.String,HintEffect[],System.Single)
   - PluginAPI.Core.Player.ReceiveHitMarker(System.Single)
   - PluginAPI.Core.Player.GetStatModule``1
   - PluginAPI.Core.Player.RedirectToServer(System.UInt16)
@@ -216,8 +218,8 @@ items:
   - PluginAPI.Core.Player.Kill
   - PluginAPI.Core.Player.Kill(System.String,System.String)
   - PluginAPI.Core.Player.Damage(System.Single,System.String,System.String)
-  - PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
-  - PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  - PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,Vector3,System.Int32)
+  - PluginAPI.Core.Player.Damage(DamageHandlerBase)
   - PluginAPI.Core.Player.OnStart
   - PluginAPI.Core.Player.OnDestroy
   - PluginAPI.Core.Player.OnUpdate
@@ -256,7 +258,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Instance
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 23
@@ -295,7 +297,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Init
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 25
@@ -327,7 +329,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 31
@@ -363,7 +365,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ServerIpAddress
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 36
@@ -402,7 +404,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Port
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 41
@@ -441,7 +443,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FriendlyFire
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 46
@@ -480,7 +482,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCount
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 63
@@ -519,7 +521,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxPlayers
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 68
@@ -558,7 +560,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReservedSlots
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 77
@@ -597,13 +599,15 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Broadcast
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 83
+    startLine: 86
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
+  summary: "\nGets server broadcast singleton.\n"
+  example: []
   syntax:
     content: public static Broadcast Broadcast { get; }
     parameters: []
@@ -634,10 +638,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PermissionsHandler
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 88
+    startLine: 91
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -673,10 +677,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TPS
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 93
+    startLine: 96
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -712,10 +716,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SpawnProtectDuration
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 98
+    startLine: 101
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -751,10 +755,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsHeavilyModded
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 107
+    startLine: 110
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -790,10 +794,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 122
+    startLine: 125
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -837,10 +841,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 132
+    startLine: 135
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -872,25 +876,25 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
-  commentId: M:PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
-  id: BanPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String,System.Int64)
+- uid: PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,ICommandSender,System.String,System.Int64)
+  commentId: M:PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player,ICommandSender,System.String,System.Int64)
+  id: BanPlayer(PluginAPI.Core.Player,ICommandSender,System.String,System.Int64)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
   name: BanPlayer(Player, ICommandSender, String, Int64)
   nameWithType: Server.BanPlayer(Player, ICommandSender, String, Int64)
-  fullName: PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player, CommandSystem.ICommandSender, System.String, System.Int64)
+  fullName: PluginAPI.Core.Server.BanPlayer(PluginAPI.Core.Player, ICommandSender, System.String, System.Int64)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 142
+    startLine: 145
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -903,7 +907,7 @@ items:
       type: PluginAPI.Core.Player
       description: The player which will be banned.
     - id: issuer
-      type: CommandSystem.ICommandSender
+      type: ICommandSender
       description: The player who issued the ban.
     - id: reason
       type: System.String
@@ -937,10 +941,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 150
+    startLine: 153
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -966,25 +970,25 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
-  commentId: M:PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
-  id: KickPlayer(PluginAPI.Core.Player,CommandSystem.ICommandSender,System.String)
+- uid: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,ICommandSender,System.String)
+  commentId: M:PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player,ICommandSender,System.String)
+  id: KickPlayer(PluginAPI.Core.Player,ICommandSender,System.String)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
   name: KickPlayer(Player, ICommandSender, String)
   nameWithType: Server.KickPlayer(Player, ICommandSender, String)
-  fullName: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player, CommandSystem.ICommandSender, System.String)
+  fullName: PluginAPI.Core.Server.KickPlayer(PluginAPI.Core.Player, ICommandSender, System.String)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 158
+    startLine: 161
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -997,7 +1001,7 @@ items:
       type: PluginAPI.Core.Player
       description: The player which will be kicked.
     - id: issuer
-      type: CommandSystem.ICommandSender
+      type: ICommandSender
       description: The player who issued kick.
     - id: reason
       type: System.String
@@ -1025,10 +1029,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 165
+    startLine: 168
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1066,10 +1070,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 175
+    startLine: 178
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1116,10 +1120,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 186
+    startLine: 189
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1154,25 +1158,25 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
-  commentId: M:PluginAPI.Core.Server.BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
-  id: BanPlayerByUserId(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+- uid: PluginAPI.Core.Server.BanPlayerByUserId(System.String,ICommandSender,System.String,System.Int64,System.String)
+  commentId: M:PluginAPI.Core.Server.BanPlayerByUserId(System.String,ICommandSender,System.String,System.Int64,System.String)
+  id: BanPlayerByUserId(System.String,ICommandSender,System.String,System.Int64,System.String)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
   name: BanPlayerByUserId(String, ICommandSender, String, Int64, String)
   nameWithType: Server.BanPlayerByUserId(String, ICommandSender, String, Int64, String)
-  fullName: PluginAPI.Core.Server.BanPlayerByUserId(System.String, CommandSystem.ICommandSender, System.String, System.Int64, System.String)
+  fullName: PluginAPI.Core.Server.BanPlayerByUserId(System.String, ICommandSender, System.String, System.Int64, System.String)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 197
+    startLine: 200
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1185,7 +1189,7 @@ items:
       type: System.String
       description: The userid of the player which will be banned.
     - id: issuer
-      type: CommandSystem.ICommandSender
+      type: ICommandSender
       description: The issuer of the ban.
     - id: reason
       type: System.String
@@ -1222,10 +1226,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 220
+    startLine: 223
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1272,10 +1276,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 231
+    startLine: 234
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1310,25 +1314,25 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
-  commentId: M:PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
-  id: BanPlayerByIpAddress(System.String,CommandSystem.ICommandSender,System.String,System.Int64,System.String)
+- uid: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,ICommandSender,System.String,System.Int64,System.String)
+  commentId: M:PluginAPI.Core.Server.BanPlayerByIpAddress(System.String,ICommandSender,System.String,System.Int64,System.String)
+  id: BanPlayerByIpAddress(System.String,ICommandSender,System.String,System.Int64,System.String)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
   name: BanPlayerByIpAddress(String, ICommandSender, String, Int64, String)
   nameWithType: Server.BanPlayerByIpAddress(String, ICommandSender, String, Int64, String)
-  fullName: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String, CommandSystem.ICommandSender, System.String, System.Int64, System.String)
+  fullName: PluginAPI.Core.Server.BanPlayerByIpAddress(System.String, ICommandSender, System.String, System.Int64, System.String)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 242
+    startLine: 245
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1341,7 +1345,7 @@ items:
       type: System.String
       description: The ip address of the player which will be banned.
     - id: issuer
-      type: CommandSystem.ICommandSender
+      type: ICommandSender
       description: The issuer of the ban.
     - id: reason
       type: System.String
@@ -1378,10 +1382,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 262
+    startLine: 265
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1419,10 +1423,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 277
+    startLine: 280
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1460,10 +1464,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsPlayerBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 292
+    startLine: 295
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1501,10 +1505,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 303
+    startLine: 306
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1523,40 +1527,40 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.GetAllPlayersBanned(BanHandler.BanType)
-  commentId: M:PluginAPI.Core.Server.GetAllPlayersBanned(BanHandler.BanType)
-  id: GetAllPlayersBanned(BanHandler.BanType)
+- uid: PluginAPI.Core.Server.GetAllPlayersBanned(BanType)
+  commentId: M:PluginAPI.Core.Server.GetAllPlayersBanned(BanType)
+  id: GetAllPlayersBanned(BanType)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
-  name: GetAllPlayersBanned(BanHandler.BanType)
-  nameWithType: Server.GetAllPlayersBanned(BanHandler.BanType)
-  fullName: PluginAPI.Core.Server.GetAllPlayersBanned(BanHandler.BanType)
+  name: GetAllPlayersBanned(BanType)
+  nameWithType: Server.GetAllPlayersBanned(BanType)
+  fullName: PluginAPI.Core.Server.GetAllPlayersBanned(BanType)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 315
+    startLine: 318
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
   summary: "\nGets all banned players.\n"
   example: []
   syntax:
-    content: public static BanDetails[] GetAllPlayersBanned(BanHandler.BanType banType)
+    content: public static BanDetails[] GetAllPlayersBanned(BanType banType)
     parameters:
     - id: banType
-      type: BanHandler.BanType
+      type: BanType
       description: The type of ban.
     return:
       type: BanDetails[]
       description: List of specified ban types.
-    content.vb: Public Shared Function GetAllPlayersBanned(banType As BanHandler.BanType) As BanDetails()
+    content.vb: Public Shared Function GetAllPlayersBanned(banType As BanType) As BanDetails()
   overload: PluginAPI.Core.Server.GetAllPlayersBanned*
   modifiers.csharp:
   - public
@@ -1579,10 +1583,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 322
+    startLine: 325
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1613,10 +1617,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 327
+    startLine: 330
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1650,10 +1654,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 336
+    startLine: 339
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1684,10 +1688,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 341
+    startLine: 344
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1721,10 +1725,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RunCommand
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 352
+    startLine: 355
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1738,7 +1742,7 @@ items:
       description: The command name.
     - id: sender
       type: CommandSender
-      description: The <xref href="CommandSender" data-throw-if-not-resolved="false"></xref> running the command.
+      description: The <see cref="!:CommandSender"></see> running the command.
     return:
       type: System.String
     content.vb: Public Shared Function RunCommand(command As String, sender As CommandSender = Nothing) As String
@@ -1749,32 +1753,32 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
-  commentId: M:PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
-  id: SendBroadcast(System.String,System.UInt16,Broadcast.BroadcastFlags,System.Boolean)
+- uid: PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,BroadcastFlags,System.Boolean)
+  commentId: M:PluginAPI.Core.Server.SendBroadcast(System.String,System.UInt16,BroadcastFlags,System.Boolean)
+  id: SendBroadcast(System.String,System.UInt16,BroadcastFlags,System.Boolean)
   parent: PluginAPI.Core.Server
   langs:
   - csharp
   - vb
-  name: SendBroadcast(String, UInt16, Broadcast.BroadcastFlags, Boolean)
-  nameWithType: Server.SendBroadcast(String, UInt16, Broadcast.BroadcastFlags, Boolean)
-  fullName: PluginAPI.Core.Server.SendBroadcast(System.String, System.UInt16, Broadcast.BroadcastFlags, System.Boolean)
+  name: SendBroadcast(String, UInt16, BroadcastFlags, Boolean)
+  nameWithType: Server.SendBroadcast(String, UInt16, BroadcastFlags, Boolean)
+  fullName: PluginAPI.Core.Server.SendBroadcast(System.String, System.UInt16, BroadcastFlags, System.Boolean)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 361
+    startLine: 364
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
   summary: "\nShows a broadcast to the player.\n"
   example: []
   syntax:
-    content: public static void SendBroadcast(string message, ushort duration, Broadcast.BroadcastFlags type = Broadcast.BroadcastFlags.Normal, bool shouldClearPrevious = false)
+    content: public static void SendBroadcast(string message, ushort duration, BroadcastFlags type = null, bool shouldClearPrevious = false)
     parameters:
     - id: message
       type: System.String
@@ -1783,12 +1787,12 @@ items:
       type: System.UInt16
       description: The broadcast duration.
     - id: type
-      type: Broadcast.BroadcastFlags
+      type: BroadcastFlags
       description: The broadcast type.
     - id: shouldClearPrevious
       type: System.Boolean
       description: Clears previous displayed broadcast.
-    content.vb: Public Shared Sub SendBroadcast(message As String, duration As UShort, type As Broadcast.BroadcastFlags = Broadcast.BroadcastFlags.Normal, shouldClearPrevious As Boolean = False)
+    content.vb: Public Shared Sub SendBroadcast(message As String, duration As UShort, type As BroadcastFlags = Nothing, shouldClearPrevious As Boolean = False)
   overload: PluginAPI.Core.Server.SendBroadcast*
   modifiers.csharp:
   - public
@@ -1811,10 +1815,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 371
+    startLine: 374
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1845,10 +1849,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IdleModeActive
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 376
+    startLine: 379
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1884,10 +1888,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PauseIdleMode
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 381
+    startLine: 384
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1923,10 +1927,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IdleModeAvailable
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 391
+    startLine: 394
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1962,10 +1966,10 @@ items:
     remote:
       path: NwPluginAPI/Core/Server.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SetIdleMode
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 402
+    startLine: 405
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -2201,106 +2205,106 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Get(UnityEngine.GameObject)
-  commentId: M:PluginAPI.Core.Player.Get(UnityEngine.GameObject)
+- uid: PluginAPI.Core.Player.Get(GameObject)
+  commentId: M:PluginAPI.Core.Player.Get(GameObject)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Get(GameObject)
   nameWithType: Player.Get(GameObject)
-  fullName: PluginAPI.Core.Player.Get(UnityEngine.GameObject)
+  fullName: PluginAPI.Core.Player.Get(GameObject)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Get(UnityEngine.GameObject)
+  - uid: PluginAPI.Core.Player.Get(GameObject)
     name: Get
     nameWithType: Player.Get
     fullName: PluginAPI.Core.Player.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Get(UnityEngine.GameObject)
+  - uid: PluginAPI.Core.Player.Get(GameObject)
     name: Get
     nameWithType: Player.Get
     fullName: PluginAPI.Core.Player.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
-  commentId: M:PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
+- uid: PluginAPI.Core.Player.Get``1(GameObject)
+  commentId: M:PluginAPI.Core.Player.Get``1(GameObject)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Get<T>(GameObject)
   nameWithType: Player.Get<T>(GameObject)
-  fullName: PluginAPI.Core.Player.Get<T>(UnityEngine.GameObject)
+  fullName: PluginAPI.Core.Player.Get<T>(GameObject)
   nameWithType.vb: Player.Get(Of T)(GameObject)
-  fullName.vb: PluginAPI.Core.Player.Get(Of T)(UnityEngine.GameObject)
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(GameObject)
   name.vb: Get(Of T)(GameObject)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
+  - uid: PluginAPI.Core.Player.Get``1(GameObject)
     name: Get<T>
     nameWithType: Player.Get<T>
     fullName: PluginAPI.Core.Player.Get<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Get``1(UnityEngine.GameObject)
+  - uid: PluginAPI.Core.Player.Get``1(GameObject)
     name: Get(Of T)
     nameWithType: Player.Get(Of T)
     fullName: PluginAPI.Core.Player.Get(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
-  commentId: M:PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
+- uid: PluginAPI.Core.Player.TryGet(GameObject,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(GameObject,PluginAPI.Core.Player@)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: TryGet(GameObject, Player)
   nameWithType: Player.TryGet(GameObject, Player)
-  fullName: PluginAPI.Core.Player.TryGet(UnityEngine.GameObject, PluginAPI.Core.Player)
+  fullName: PluginAPI.Core.Player.TryGet(GameObject, PluginAPI.Core.Player)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
+  - uid: PluginAPI.Core.Player.TryGet(GameObject,PluginAPI.Core.Player@)
     name: TryGet
     nameWithType: Player.TryGet
     fullName: PluginAPI.Core.Player.TryGet
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -2313,17 +2317,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet(UnityEngine.GameObject,PluginAPI.Core.Player@)
+  - uid: PluginAPI.Core.Player.TryGet(GameObject,PluginAPI.Core.Player@)
     name: TryGet
     nameWithType: Player.TryGet
     fullName: PluginAPI.Core.Player.TryGet
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -2335,28 +2339,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,{T}@)
-  commentId: M:PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+- uid: PluginAPI.Core.Player.TryGet``1(GameObject,{T}@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
   parent: PluginAPI.Core.Player
-  definition: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  definition: PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
   name: TryGet<T>(GameObject, T)
   nameWithType: Player.TryGet<T>(GameObject, T)
-  fullName: PluginAPI.Core.Player.TryGet<T>(UnityEngine.GameObject, T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(GameObject, T)
   nameWithType.vb: Player.TryGet(Of T)(GameObject, T)
-  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(UnityEngine.GameObject, T)
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(GameObject, T)
   name.vb: TryGet(Of T)(GameObject, T)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
     name: TryGet<T>
     nameWithType: Player.TryGet<T>
     fullName: PluginAPI.Core.Player.TryGet<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -2368,17 +2372,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
     name: TryGet(Of T)
     nameWithType: Player.TryGet(Of T)
     fullName: PluginAPI.Core.Player.TryGet(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -2577,106 +2581,106 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
-  commentId: M:PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+- uid: PluginAPI.Core.Player.Get(NetworkIdentity)
+  commentId: M:PluginAPI.Core.Player.Get(NetworkIdentity)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Get(NetworkIdentity)
   nameWithType: Player.Get(NetworkIdentity)
-  fullName: PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+  fullName: PluginAPI.Core.Player.Get(NetworkIdentity)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+  - uid: PluginAPI.Core.Player.Get(NetworkIdentity)
     name: Get
     nameWithType: Player.Get
     fullName: PluginAPI.Core.Player.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Get(Mirror.NetworkIdentity)
+  - uid: PluginAPI.Core.Player.Get(NetworkIdentity)
     name: Get
     nameWithType: Player.Get
     fullName: PluginAPI.Core.Player.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
-  commentId: M:PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
+- uid: PluginAPI.Core.Player.Get``1(NetworkIdentity)
+  commentId: M:PluginAPI.Core.Player.Get``1(NetworkIdentity)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Get<T>(NetworkIdentity)
   nameWithType: Player.Get<T>(NetworkIdentity)
-  fullName: PluginAPI.Core.Player.Get<T>(Mirror.NetworkIdentity)
+  fullName: PluginAPI.Core.Player.Get<T>(NetworkIdentity)
   nameWithType.vb: Player.Get(Of T)(NetworkIdentity)
-  fullName.vb: PluginAPI.Core.Player.Get(Of T)(Mirror.NetworkIdentity)
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(NetworkIdentity)
   name.vb: Get(Of T)(NetworkIdentity)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
+  - uid: PluginAPI.Core.Player.Get``1(NetworkIdentity)
     name: Get<T>
     nameWithType: Player.Get<T>
     fullName: PluginAPI.Core.Player.Get<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Get``1(Mirror.NetworkIdentity)
+  - uid: PluginAPI.Core.Player.Get``1(NetworkIdentity)
     name: Get(Of T)
     nameWithType: Player.Get(Of T)
     fullName: PluginAPI.Core.Player.Get(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
-  commentId: M:PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
+- uid: PluginAPI.Core.Player.TryGet(NetworkIdentity,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(NetworkIdentity,PluginAPI.Core.Player@)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: TryGet(NetworkIdentity, Player)
   nameWithType: Player.TryGet(NetworkIdentity, Player)
-  fullName: PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity, PluginAPI.Core.Player)
+  fullName: PluginAPI.Core.Player.TryGet(NetworkIdentity, PluginAPI.Core.Player)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
+  - uid: PluginAPI.Core.Player.TryGet(NetworkIdentity,PluginAPI.Core.Player@)
     name: TryGet
     nameWithType: Player.TryGet
     fullName: PluginAPI.Core.Player.TryGet
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -2689,17 +2693,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet(Mirror.NetworkIdentity,PluginAPI.Core.Player@)
+  - uid: PluginAPI.Core.Player.TryGet(NetworkIdentity,PluginAPI.Core.Player@)
     name: TryGet
     nameWithType: Player.TryGet
     fullName: PluginAPI.Core.Player.TryGet
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -2711,28 +2715,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,{T}@)
-  commentId: M:PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+- uid: PluginAPI.Core.Player.TryGet``1(NetworkIdentity,{T}@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
   parent: PluginAPI.Core.Player
-  definition: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  definition: PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
   name: TryGet<T>(NetworkIdentity, T)
   nameWithType: Player.TryGet<T>(NetworkIdentity, T)
-  fullName: PluginAPI.Core.Player.TryGet<T>(Mirror.NetworkIdentity, T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(NetworkIdentity, T)
   nameWithType.vb: Player.TryGet(Of T)(NetworkIdentity, T)
-  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(Mirror.NetworkIdentity, T)
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(NetworkIdentity, T)
   name.vb: TryGet(Of T)(NetworkIdentity, T)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
     name: TryGet<T>
     nameWithType: Player.TryGet<T>
     fullName: PluginAPI.Core.Player.TryGet<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -2744,17 +2748,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
     name: TryGet(Of T)
     nameWithType: Player.TryGet(Of T)
     fullName: PluginAPI.Core.Player.TryGet(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -3517,106 +3521,106 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Get(CommandSystem.ICommandSender)
-  commentId: M:PluginAPI.Core.Player.Get(CommandSystem.ICommandSender)
+- uid: PluginAPI.Core.Player.Get(ICommandSender)
+  commentId: M:PluginAPI.Core.Player.Get(ICommandSender)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Get(ICommandSender)
   nameWithType: Player.Get(ICommandSender)
-  fullName: PluginAPI.Core.Player.Get(CommandSystem.ICommandSender)
+  fullName: PluginAPI.Core.Player.Get(ICommandSender)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Get(CommandSystem.ICommandSender)
+  - uid: PluginAPI.Core.Player.Get(ICommandSender)
     name: Get
     nameWithType: Player.Get
     fullName: PluginAPI.Core.Player.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Get(CommandSystem.ICommandSender)
+  - uid: PluginAPI.Core.Player.Get(ICommandSender)
     name: Get
     nameWithType: Player.Get
     fullName: PluginAPI.Core.Player.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Get``1(CommandSystem.ICommandSender)
-  commentId: M:PluginAPI.Core.Player.Get``1(CommandSystem.ICommandSender)
+- uid: PluginAPI.Core.Player.Get``1(ICommandSender)
+  commentId: M:PluginAPI.Core.Player.Get``1(ICommandSender)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Get<T>(ICommandSender)
   nameWithType: Player.Get<T>(ICommandSender)
-  fullName: PluginAPI.Core.Player.Get<T>(CommandSystem.ICommandSender)
+  fullName: PluginAPI.Core.Player.Get<T>(ICommandSender)
   nameWithType.vb: Player.Get(Of T)(ICommandSender)
-  fullName.vb: PluginAPI.Core.Player.Get(Of T)(CommandSystem.ICommandSender)
+  fullName.vb: PluginAPI.Core.Player.Get(Of T)(ICommandSender)
   name.vb: Get(Of T)(ICommandSender)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Get``1(CommandSystem.ICommandSender)
+  - uid: PluginAPI.Core.Player.Get``1(ICommandSender)
     name: Get<T>
     nameWithType: Player.Get<T>
     fullName: PluginAPI.Core.Player.Get<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Get``1(CommandSystem.ICommandSender)
+  - uid: PluginAPI.Core.Player.Get``1(ICommandSender)
     name: Get(Of T)
     nameWithType: Player.Get(Of T)
     fullName: PluginAPI.Core.Player.Get(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet(CommandSystem.ICommandSender,PluginAPI.Core.Player@)
-  commentId: M:PluginAPI.Core.Player.TryGet(CommandSystem.ICommandSender,PluginAPI.Core.Player@)
+- uid: PluginAPI.Core.Player.TryGet(ICommandSender,PluginAPI.Core.Player@)
+  commentId: M:PluginAPI.Core.Player.TryGet(ICommandSender,PluginAPI.Core.Player@)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: TryGet(ICommandSender, Player)
   nameWithType: Player.TryGet(ICommandSender, Player)
-  fullName: PluginAPI.Core.Player.TryGet(CommandSystem.ICommandSender, PluginAPI.Core.Player)
+  fullName: PluginAPI.Core.Player.TryGet(ICommandSender, PluginAPI.Core.Player)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet(CommandSystem.ICommandSender,PluginAPI.Core.Player@)
+  - uid: PluginAPI.Core.Player.TryGet(ICommandSender,PluginAPI.Core.Player@)
     name: TryGet
     nameWithType: Player.TryGet
     fullName: PluginAPI.Core.Player.TryGet
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -3629,17 +3633,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet(CommandSystem.ICommandSender,PluginAPI.Core.Player@)
+  - uid: PluginAPI.Core.Player.TryGet(ICommandSender,PluginAPI.Core.Player@)
     name: TryGet
     nameWithType: Player.TryGet
     fullName: PluginAPI.Core.Player.TryGet
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -3651,28 +3655,28 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,{T}@)
-  commentId: M:PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
+- uid: PluginAPI.Core.Player.TryGet``1(ICommandSender,{T}@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
   parent: PluginAPI.Core.Player
-  definition: PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
+  definition: PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
   name: TryGet<T>(ICommandSender, T)
   nameWithType: Player.TryGet<T>(ICommandSender, T)
-  fullName: PluginAPI.Core.Player.TryGet<T>(CommandSystem.ICommandSender, T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(ICommandSender, T)
   nameWithType.vb: Player.TryGet(Of T)(ICommandSender, T)
-  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(CommandSystem.ICommandSender, T)
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(ICommandSender, T)
   name.vb: TryGet(Of T)(ICommandSender, T)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
     name: TryGet<T>
     nameWithType: Player.TryGet<T>
     fullName: PluginAPI.Core.Player.TryGet<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -3684,17 +3688,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
     name: TryGet(Of T)
     nameWithType: Player.TryGet(Of T)
     fullName: PluginAPI.Core.Player.TryGet(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4664,41 +4668,135 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
-  commentId: M:PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+- uid: PluginAPI.Core.Player.RemoveItem(ItemPickupBase)
+  commentId: M:PluginAPI.Core.Player.RemoveItem(ItemPickupBase)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: RemoveItem(ItemPickupBase)
   nameWithType: Player.RemoveItem(ItemPickupBase)
-  fullName: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  fullName: PluginAPI.Core.Player.RemoveItem(ItemPickupBase)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  - uid: PluginAPI.Core.Player.RemoveItem(ItemPickupBase)
     name: RemoveItem
     nameWithType: Player.RemoveItem
     fullName: PluginAPI.Core.Player.RemoveItem
   - name: (
     nameWithType: (
     fullName: (
-  - uid: InventorySystem.Items.Pickups.ItemPickupBase
+  - uid: ItemPickupBase
     name: ItemPickupBase
     nameWithType: ItemPickupBase
-    fullName: InventorySystem.Items.Pickups.ItemPickupBase
+    fullName: ItemPickupBase
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  - uid: PluginAPI.Core.Player.RemoveItem(ItemPickupBase)
     name: RemoveItem
     nameWithType: Player.RemoveItem
     fullName: PluginAPI.Core.Player.RemoveItem
   - name: (
     nameWithType: (
     fullName: (
-  - uid: InventorySystem.Items.Pickups.ItemPickupBase
+  - uid: ItemPickupBase
     name: ItemPickupBase
     nameWithType: ItemPickupBase
-    fullName: InventorySystem.Items.Pickups.ItemPickupBase
+    fullName: ItemPickupBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.RemoveItem(ItemBase)
+  commentId: M:PluginAPI.Core.Player.RemoveItem(ItemBase)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: RemoveItem(ItemBase)
+  nameWithType: Player.RemoveItem(ItemBase)
+  fullName: PluginAPI.Core.Player.RemoveItem(ItemBase)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.RemoveItem(ItemBase)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemBase
+    name: ItemBase
+    nameWithType: ItemBase
+    fullName: ItemBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.RemoveItem(ItemBase)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemBase
+    name: ItemBase
+    nameWithType: ItemBase
+    fullName: ItemBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+  commentId: M:PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: RemoveItems(ItemType, Int32)
+  nameWithType: Player.RemoveItems(ItemType, Int32)
+  fullName: PluginAPI.Core.Player.RemoveItems(ItemType, System.Int32)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+    name: RemoveItems
+    nameWithType: Player.RemoveItems
+    fullName: PluginAPI.Core.Player.RemoveItems
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+    name: RemoveItems
+    nameWithType: Player.RemoveItems
+    fullName: PluginAPI.Core.Player.RemoveItems
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
   - name: )
     nameWithType: )
@@ -4739,41 +4837,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
-  commentId: M:PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+- uid: PluginAPI.Core.Player.DropItem(ItemBase)
+  commentId: M:PluginAPI.Core.Player.DropItem(ItemBase)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: DropItem(ItemBase)
   nameWithType: Player.DropItem(ItemBase)
-  fullName: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  fullName: PluginAPI.Core.Player.DropItem(ItemBase)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  - uid: PluginAPI.Core.Player.DropItem(ItemBase)
     name: DropItem
     nameWithType: Player.DropItem
     fullName: PluginAPI.Core.Player.DropItem
   - name: (
     nameWithType: (
     fullName: (
-  - uid: InventorySystem.Items.ItemBase
+  - uid: ItemBase
     name: ItemBase
     nameWithType: ItemBase
-    fullName: InventorySystem.Items.ItemBase
+    fullName: ItemBase
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
+  - uid: PluginAPI.Core.Player.DropItem(ItemBase)
     name: DropItem
     nameWithType: Player.DropItem
     fullName: PluginAPI.Core.Player.DropItem
   - name: (
     nameWithType: (
     fullName: (
-  - uid: InventorySystem.Items.ItemBase
+  - uid: ItemBase
     name: ItemBase
     nameWithType: ItemBase
-    fullName: InventorySystem.Items.ItemBase
+    fullName: ItemBase
     isExternal: true
   - name: )
     nameWithType: )
@@ -5143,57 +5241,57 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
-  commentId: M:PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+- uid: PluginAPI.Core.Player.SetRole(RoleTypeId,RoleChangeReason)
+  commentId: M:PluginAPI.Core.Player.SetRole(RoleTypeId,RoleChangeReason)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: SetRole(RoleTypeId, RoleChangeReason)
   nameWithType: Player.SetRole(RoleTypeId, RoleChangeReason)
-  fullName: PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId, PlayerRoles.RoleChangeReason)
+  fullName: PluginAPI.Core.Player.SetRole(RoleTypeId, RoleChangeReason)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  - uid: PluginAPI.Core.Player.SetRole(RoleTypeId,RoleChangeReason)
     name: SetRole
     nameWithType: Player.SetRole
     fullName: PluginAPI.Core.Player.SetRole
   - name: (
     nameWithType: (
     fullName: (
-  - uid: PlayerRoles.RoleTypeId
+  - uid: RoleTypeId
     name: RoleTypeId
     nameWithType: RoleTypeId
-    fullName: PlayerRoles.RoleTypeId
+    fullName: RoleTypeId
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: PlayerRoles.RoleChangeReason
+  - uid: RoleChangeReason
     name: RoleChangeReason
     nameWithType: RoleChangeReason
-    fullName: PlayerRoles.RoleChangeReason
+    fullName: RoleChangeReason
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.SetRole(PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  - uid: PluginAPI.Core.Player.SetRole(RoleTypeId,RoleChangeReason)
     name: SetRole
     nameWithType: Player.SetRole
     fullName: PluginAPI.Core.Player.SetRole
   - name: (
     nameWithType: (
     fullName: (
-  - uid: PlayerRoles.RoleTypeId
+  - uid: RoleTypeId
     name: RoleTypeId
     nameWithType: RoleTypeId
-    fullName: PlayerRoles.RoleTypeId
+    fullName: RoleTypeId
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: PlayerRoles.RoleChangeReason
+  - uid: RoleChangeReason
     name: RoleChangeReason
     nameWithType: RoleChangeReason
-    fullName: PlayerRoles.RoleChangeReason
+    fullName: RoleChangeReason
     isExternal: true
   - name: )
     nameWithType: )
@@ -5292,18 +5390,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
-  commentId: M:PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+- uid: PluginAPI.Core.Player.ReceiveHint(System.String,HintEffect[],System.Single)
+  commentId: M:PluginAPI.Core.Player.ReceiveHint(System.String,HintEffect[],System.Single)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: ReceiveHint(String, HintEffect[], Single)
   nameWithType: Player.ReceiveHint(String, HintEffect[], Single)
-  fullName: PluginAPI.Core.Player.ReceiveHint(System.String, Hints.HintEffect[], System.Single)
+  fullName: PluginAPI.Core.Player.ReceiveHint(System.String, HintEffect[], System.Single)
   nameWithType.vb: Player.ReceiveHint(String, HintEffect(), Single)
-  fullName.vb: PluginAPI.Core.Player.ReceiveHint(System.String, Hints.HintEffect(), System.Single)
+  fullName.vb: PluginAPI.Core.Player.ReceiveHint(System.String, HintEffect(), System.Single)
   name.vb: ReceiveHint(String, HintEffect(), Single)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+  - uid: PluginAPI.Core.Player.ReceiveHint(System.String,HintEffect[],System.Single)
     name: ReceiveHint
     nameWithType: Player.ReceiveHint
     fullName: PluginAPI.Core.Player.ReceiveHint
@@ -5318,10 +5416,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Hints.HintEffect
+  - uid: HintEffect
     name: HintEffect
     nameWithType: HintEffect
-    fullName: Hints.HintEffect
+    fullName: HintEffect
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
@@ -5338,7 +5436,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.ReceiveHint(System.String,Hints.HintEffect[],System.Single)
+  - uid: PluginAPI.Core.Player.ReceiveHint(System.String,HintEffect[],System.Single)
     name: ReceiveHint
     nameWithType: Player.ReceiveHint
     fullName: PluginAPI.Core.Player.ReceiveHint
@@ -5353,10 +5451,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Hints.HintEffect
+  - uid: HintEffect
     name: HintEffect
     nameWithType: HintEffect
-    fullName: Hints.HintEffect
+    fullName: HintEffect
     isExternal: true
   - name: ()
     nameWithType: ()
@@ -5690,15 +5788,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
-  commentId: M:PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
+- uid: PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,Vector3,System.Int32)
+  commentId: M:PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,Vector3,System.Int32)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Damage(Single, Player, Vector3, Int32)
   nameWithType: Player.Damage(Single, Player, Vector3, Int32)
-  fullName: PluginAPI.Core.Player.Damage(System.Single, PluginAPI.Core.Player, UnityEngine.Vector3, System.Int32)
+  fullName: PluginAPI.Core.Player.Damage(System.Single, PluginAPI.Core.Player, Vector3, System.Int32)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
+  - uid: PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,Vector3,System.Int32)
     name: Damage
     nameWithType: Player.Damage
     fullName: PluginAPI.Core.Player.Damage
@@ -5720,10 +5818,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: UnityEngine.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: UnityEngine.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -5737,7 +5835,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,UnityEngine.Vector3,System.Int32)
+  - uid: PluginAPI.Core.Player.Damage(System.Single,PluginAPI.Core.Player,Vector3,System.Int32)
     name: Damage
     nameWithType: Player.Damage
     fullName: PluginAPI.Core.Player.Damage
@@ -5759,10 +5857,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: UnityEngine.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: UnityEngine.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -5775,41 +5873,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
-  commentId: M:PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+- uid: PluginAPI.Core.Player.Damage(DamageHandlerBase)
+  commentId: M:PluginAPI.Core.Player.Damage(DamageHandlerBase)
   parent: PluginAPI.Core.Player
   isExternal: true
   name: Damage(DamageHandlerBase)
   nameWithType: Player.Damage(DamageHandlerBase)
-  fullName: PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  fullName: PluginAPI.Core.Player.Damage(DamageHandlerBase)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  - uid: PluginAPI.Core.Player.Damage(DamageHandlerBase)
     name: Damage
     nameWithType: Player.Damage
     fullName: PluginAPI.Core.Player.Damage
   - name: (
     nameWithType: (
     fullName: (
-  - uid: PlayerStatsSystem.DamageHandlerBase
+  - uid: DamageHandlerBase
     name: DamageHandlerBase
     nameWithType: DamageHandlerBase
-    fullName: PlayerStatsSystem.DamageHandlerBase
+    fullName: DamageHandlerBase
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.Damage(PlayerStatsSystem.DamageHandlerBase)
+  - uid: PluginAPI.Core.Player.Damage(DamageHandlerBase)
     name: Damage
     nameWithType: Player.Damage
     fullName: PluginAPI.Core.Player.Damage
   - name: (
     nameWithType: (
     fullName: (
-  - uid: PlayerStatsSystem.DamageHandlerBase
+  - uid: DamageHandlerBase
     name: DamageHandlerBase
     nameWithType: DamageHandlerBase
-    fullName: PlayerStatsSystem.DamageHandlerBase
+    fullName: DamageHandlerBase
     isExternal: true
   - name: )
     nameWithType: )
@@ -6468,27 +6566,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
-  commentId: M:PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+- uid: PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
   isExternal: true
   name: TryGet<T>(GameObject, T)
   nameWithType: Player.TryGet<T>(GameObject, T)
-  fullName: PluginAPI.Core.Player.TryGet<T>(UnityEngine.GameObject, T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(GameObject, T)
   nameWithType.vb: Player.TryGet(Of T)(GameObject, T)
-  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(UnityEngine.GameObject, T)
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(GameObject, T)
   name.vb: TryGet(Of T)(GameObject, T)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
     name: TryGet<T>
     nameWithType: Player.TryGet<T>
     fullName: PluginAPI.Core.Player.TryGet<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -6500,17 +6598,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet``1(UnityEngine.GameObject,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(GameObject,``0@)
     name: TryGet(Of T)
     nameWithType: Player.TryGet(Of T)
     fullName: PluginAPI.Core.Player.TryGet(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: UnityEngine.GameObject
+  - uid: GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: UnityEngine.GameObject
+    fullName: GameObject
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -6574,27 +6672,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
-  commentId: M:PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+- uid: PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
   isExternal: true
   name: TryGet<T>(NetworkIdentity, T)
   nameWithType: Player.TryGet<T>(NetworkIdentity, T)
-  fullName: PluginAPI.Core.Player.TryGet<T>(Mirror.NetworkIdentity, T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(NetworkIdentity, T)
   nameWithType.vb: Player.TryGet(Of T)(NetworkIdentity, T)
-  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(Mirror.NetworkIdentity, T)
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(NetworkIdentity, T)
   name.vb: TryGet(Of T)(NetworkIdentity, T)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
     name: TryGet<T>
     nameWithType: Player.TryGet<T>
     fullName: PluginAPI.Core.Player.TryGet<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -6606,17 +6704,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet``1(Mirror.NetworkIdentity,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(NetworkIdentity,``0@)
     name: TryGet(Of T)
     nameWithType: Player.TryGet(Of T)
     fullName: PluginAPI.Core.Player.TryGet(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Mirror.NetworkIdentity
+  - uid: NetworkIdentity
     name: NetworkIdentity
     nameWithType: NetworkIdentity
-    fullName: Mirror.NetworkIdentity
+    fullName: NetworkIdentity
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -6839,27 +6937,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
-  commentId: M:PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
+- uid: PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
+  commentId: M:PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
   isExternal: true
   name: TryGet<T>(ICommandSender, T)
   nameWithType: Player.TryGet<T>(ICommandSender, T)
-  fullName: PluginAPI.Core.Player.TryGet<T>(CommandSystem.ICommandSender, T)
+  fullName: PluginAPI.Core.Player.TryGet<T>(ICommandSender, T)
   nameWithType.vb: Player.TryGet(Of T)(ICommandSender, T)
-  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(CommandSystem.ICommandSender, T)
+  fullName.vb: PluginAPI.Core.Player.TryGet(Of T)(ICommandSender, T)
   name.vb: TryGet(Of T)(ICommandSender, T)
   spec.csharp:
-  - uid: PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
     name: TryGet<T>
     nameWithType: Player.TryGet<T>
     fullName: PluginAPI.Core.Player.TryGet<T>
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -6871,17 +6969,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Player.TryGet``1(CommandSystem.ICommandSender,``0@)
+  - uid: PluginAPI.Core.Player.TryGet``1(ICommandSender,``0@)
     name: TryGet(Of T)
     nameWithType: Player.TryGet(Of T)
     fullName: PluginAPI.Core.Player.TryGet(Of T)
   - name: (
     nameWithType: (
     fullName: (
-  - uid: CommandSystem.ICommandSender
+  - uid: ICommandSender
     name: ICommandSender
     nameWithType: ICommandSender
-    fullName: CommandSystem.ICommandSender
+    fullName: ICommandSender
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -7146,7 +7244,7 @@ references:
   nameWithType: Server.Broadcast
   fullName: PluginAPI.Core.Server.Broadcast
 - uid: Broadcast
-  commentId: T:Broadcast
+  commentId: '!:Broadcast'
   isExternal: true
   name: Broadcast
   nameWithType: Broadcast
@@ -7160,7 +7258,7 @@ references:
   nameWithType: Server.PermissionsHandler
   fullName: PluginAPI.Core.Server.PermissionsHandler
 - uid: PermissionsHandler
-  commentId: T:PermissionsHandler
+  commentId: '!:PermissionsHandler'
   isExternal: true
   name: PermissionsHandler
   nameWithType: PermissionsHandler
@@ -7206,19 +7304,11 @@ references:
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
-- uid: CommandSystem.ICommandSender
-  commentId: T:CommandSystem.ICommandSender
-  parent: CommandSystem
+- uid: ICommandSender
   isExternal: true
   name: ICommandSender
   nameWithType: ICommandSender
-  fullName: CommandSystem.ICommandSender
-- uid: CommandSystem
-  commentId: N:CommandSystem
-  isExternal: true
-  name: CommandSystem
-  nameWithType: CommandSystem
-  fullName: CommandSystem
+  fullName: ICommandSender
 - uid: PluginAPI.Core.Server.KickPlayer*
   commentId: Overload:PluginAPI.Core.Server.KickPlayer
   name: KickPlayer
@@ -7280,12 +7370,12 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: BanHandler.BanType
-  commentId: T:BanHandler.BanType
+- uid: BanType
+  commentId: '!:BanType'
   isExternal: true
-  name: BanHandler.BanType
-  nameWithType: BanHandler.BanType
-  fullName: BanHandler.BanType
+  name: BanType
+  nameWithType: BanType
+  fullName: BanType
 - uid: PluginAPI.Core.Server.Restart*
   commentId: Overload:PluginAPI.Core.Server.Restart
   name: Restart
@@ -7296,28 +7386,27 @@ references:
   name: Shutdown
   nameWithType: Server.Shutdown
   fullName: PluginAPI.Core.Server.Shutdown
-- uid: CommandSender
-  commentId: T:CommandSender
-  isExternal: true
-  name: CommandSender
-  nameWithType: CommandSender
-  fullName: CommandSender
 - uid: PluginAPI.Core.Server.RunCommand*
   commentId: Overload:PluginAPI.Core.Server.RunCommand
   name: RunCommand
   nameWithType: Server.RunCommand
   fullName: PluginAPI.Core.Server.RunCommand
+- uid: CommandSender
+  commentId: '!:CommandSender'
+  isExternal: true
+  name: CommandSender
+  nameWithType: CommandSender
+  fullName: CommandSender
 - uid: PluginAPI.Core.Server.SendBroadcast*
   commentId: Overload:PluginAPI.Core.Server.SendBroadcast
   name: SendBroadcast
   nameWithType: Server.SendBroadcast
   fullName: PluginAPI.Core.Server.SendBroadcast
-- uid: Broadcast.BroadcastFlags
-  commentId: T:Broadcast.BroadcastFlags
+- uid: BroadcastFlags
   isExternal: true
-  name: Broadcast.BroadcastFlags
-  nameWithType: Broadcast.BroadcastFlags
-  fullName: Broadcast.BroadcastFlags
+  name: BroadcastFlags
+  nameWithType: BroadcastFlags
+  fullName: BroadcastFlags
 - uid: PluginAPI.Core.Server.ClearBroadcasts*
   commentId: Overload:PluginAPI.Core.Server.ClearBroadcasts
   name: ClearBroadcasts

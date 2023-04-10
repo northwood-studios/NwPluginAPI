@@ -18,7 +18,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/Command.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/Command.cs
     startLine: 8
@@ -61,7 +61,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/Command.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Object
     path: ../NwPluginAPI/Commands/Command.cs
     startLine: 10
@@ -71,7 +71,7 @@ items:
   syntax:
     content: public ICommand Object
     return:
-      type: CommandSystem.ICommand
+      type: ICommand
     content.vb: Public Object As ICommand
   modifiers.csharp:
   - public
@@ -92,7 +92,7 @@ items:
     remote:
       path: NwPluginAPI/Commands/Command.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Plugin
     path: ../NwPluginAPI/Commands/Command.cs
     startLine: 11
@@ -406,19 +406,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: CommandSystem.ICommand
-  commentId: T:CommandSystem.ICommand
-  parent: CommandSystem
+- uid: ICommand
+  commentId: '!:ICommand'
   isExternal: true
   name: ICommand
   nameWithType: ICommand
-  fullName: CommandSystem.ICommand
-- uid: CommandSystem
-  commentId: N:CommandSystem
-  isExternal: true
-  name: CommandSystem
-  nameWithType: CommandSystem
-  fullName: CommandSystem
+  fullName: ICommand
 - uid: PluginAPI.Core.PluginHandler
   commentId: T:PluginAPI.Core.PluginHandler
   parent: PluginAPI.Core

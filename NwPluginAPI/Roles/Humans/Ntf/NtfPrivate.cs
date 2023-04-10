@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class NtfPrivate : BaseNineTailedFox
+	public class NtfPrivate<TPlayer> : BaseNineTailedFox<TPlayer> where TPlayer : Player
 	{
+		public NtfPrivate(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class ChaosRifleman : BaseChaos
+	public class ChaosRifleman<TPlayer> : BaseChaos<TPlayer> where TPlayer : Player
 	{
+		public ChaosRifleman(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

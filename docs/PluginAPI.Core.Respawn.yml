@@ -5,11 +5,11 @@ items:
   id: Respawn
   parent: PluginAPI.Core
   children:
-  - PluginAPI.Core.Respawn.AddTickets(Respawning.SpawnableTeamType,System.Single)
+  - PluginAPI.Core.Respawn.AddTickets(SpawnableTeamType,System.Single)
   - PluginAPI.Core.Respawn.ChaosTickets
   - PluginAPI.Core.Respawn.NextKnownTeam
   - PluginAPI.Core.Respawn.NtfTickets
-  - PluginAPI.Core.Respawn.Spawn(Respawning.SpawnableTeamType,System.Boolean)
+  - PluginAPI.Core.Respawn.Spawn(SpawnableTeamType,System.Boolean)
   langs:
   - csharp
   - vb
@@ -21,7 +21,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Respawn
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 8
@@ -65,7 +65,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: NtfTickets
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 13
@@ -104,7 +104,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChaosTickets
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 18
@@ -143,7 +143,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: NextKnownTeam
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 23
@@ -156,7 +156,7 @@ items:
     content: public static SpawnableTeamType NextKnownTeam { get; }
     parameters: []
     return:
-      type: Respawning.SpawnableTeamType
+      type: SpawnableTeamType
     content.vb: Public Shared ReadOnly Property NextKnownTeam As SpawnableTeamType
   overload: PluginAPI.Core.Respawn.NextKnownTeam*
   modifiers.csharp:
@@ -167,22 +167,22 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: PluginAPI.Core.Respawn.AddTickets(Respawning.SpawnableTeamType,System.Single)
-  commentId: M:PluginAPI.Core.Respawn.AddTickets(Respawning.SpawnableTeamType,System.Single)
-  id: AddTickets(Respawning.SpawnableTeamType,System.Single)
+- uid: PluginAPI.Core.Respawn.AddTickets(SpawnableTeamType,System.Single)
+  commentId: M:PluginAPI.Core.Respawn.AddTickets(SpawnableTeamType,System.Single)
+  id: AddTickets(SpawnableTeamType,System.Single)
   parent: PluginAPI.Core.Respawn
   langs:
   - csharp
   - vb
   name: AddTickets(SpawnableTeamType, Single)
   nameWithType: Respawn.AddTickets(SpawnableTeamType, Single)
-  fullName: PluginAPI.Core.Respawn.AddTickets(Respawning.SpawnableTeamType, System.Single)
+  fullName: PluginAPI.Core.Respawn.AddTickets(SpawnableTeamType, System.Single)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AddTickets
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 30
@@ -195,7 +195,7 @@ items:
     content: public static void AddTickets(SpawnableTeamType team, float amount)
     parameters:
     - id: team
-      type: Respawning.SpawnableTeamType
+      type: SpawnableTeamType
       description: The team to add tickets to.
     - id: amount
       type: System.Single
@@ -208,22 +208,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Respawn.Spawn(Respawning.SpawnableTeamType,System.Boolean)
-  commentId: M:PluginAPI.Core.Respawn.Spawn(Respawning.SpawnableTeamType,System.Boolean)
-  id: Spawn(Respawning.SpawnableTeamType,System.Boolean)
+- uid: PluginAPI.Core.Respawn.Spawn(SpawnableTeamType,System.Boolean)
+  commentId: M:PluginAPI.Core.Respawn.Spawn(SpawnableTeamType,System.Boolean)
+  id: Spawn(SpawnableTeamType,System.Boolean)
   parent: PluginAPI.Core.Respawn
   langs:
   - csharp
   - vb
   name: Spawn(SpawnableTeamType, Boolean)
   nameWithType: Respawn.Spawn(SpawnableTeamType, Boolean)
-  fullName: PluginAPI.Core.Respawn.Spawn(Respawning.SpawnableTeamType, System.Boolean)
+  fullName: PluginAPI.Core.Respawn.Spawn(SpawnableTeamType, System.Boolean)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Respawn.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Spawn
     path: ../NwPluginAPI/Core/Respawn.cs
     startLine: 37
@@ -236,7 +236,7 @@ items:
     content: public static void Spawn(SpawnableTeamType team, bool playEffects = false)
     parameters:
     - id: team
-      type: Respawning.SpawnableTeamType
+      type: SpawnableTeamType
       description: The team to spawn.
     - id: playEffects
       type: System.Boolean
@@ -569,19 +569,11 @@ references:
   name: NextKnownTeam
   nameWithType: Respawn.NextKnownTeam
   fullName: PluginAPI.Core.Respawn.NextKnownTeam
-- uid: Respawning.SpawnableTeamType
-  commentId: T:Respawning.SpawnableTeamType
-  parent: Respawning
+- uid: SpawnableTeamType
   isExternal: true
   name: SpawnableTeamType
   nameWithType: SpawnableTeamType
-  fullName: Respawning.SpawnableTeamType
-- uid: Respawning
-  commentId: N:Respawning
-  isExternal: true
-  name: Respawning
-  nameWithType: Respawning
-  fullName: Respawning
+  fullName: SpawnableTeamType
 - uid: PluginAPI.Core.Respawn.AddTickets*
   commentId: Overload:PluginAPI.Core.Respawn.AddTickets
   name: AddTickets

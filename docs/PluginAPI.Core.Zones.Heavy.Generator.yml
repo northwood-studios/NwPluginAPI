@@ -5,7 +5,7 @@ items:
   id: Generator
   parent: PluginAPI.Core.Zones.Heavy
   children:
-  - PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)
+  - PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,Scp079Generator)
   - PluginAPI.Core.Zones.Heavy.Generator.GameObject
   - PluginAPI.Core.Zones.Heavy.Generator.IsActivating
   - PluginAPI.Core.Zones.Heavy.Generator.IsActivationReady
@@ -27,7 +27,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Generator
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 8
@@ -70,7 +70,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 13
@@ -82,7 +82,7 @@ items:
   syntax:
     content: public readonly Scp079Generator OriginalObject
     return:
-      type: MapGeneration.Distributors.Scp079Generator
+      type: Scp079Generator
     content.vb: Public ReadOnly OriginalObject As Scp079Generator
   modifiers.csharp:
   - public
@@ -105,7 +105,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Room
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 18
@@ -140,7 +140,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsActivating
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 54
@@ -177,7 +177,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsActivationReady
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 64
@@ -214,7 +214,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsEngaged
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 69
@@ -251,20 +251,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 114
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones.Heavy
-  summary: "\nGets the generator&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the generator&apos;s <see cref=\"!:UnityEngine.Transform\"></see>.\n"
   example: []
   syntax:
     content: public Transform Transform { get; }
     parameters: []
     return:
-      type: UnityEngine.Transform
+      type: Transform
     content.vb: Public ReadOnly Property Transform As Transform
   overload: PluginAPI.Core.Zones.Heavy.Generator.Transform*
   modifiers.csharp:
@@ -288,20 +288,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 119
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones.Heavy
-  summary: "\nGets the generator&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the generator&apos;s <see cref=\"!:UnityEngine.GameObject\"></see>.\n"
   example: []
   syntax:
     content: public GameObject GameObject { get; }
     parameters: []
     return:
-      type: UnityEngine.GameObject
+      type: GameObject
     content.vb: Public ReadOnly Property GameObject As GameObject
   overload: PluginAPI.Core.Zones.Heavy.Generator.GameObject*
   modifiers.csharp:
@@ -325,7 +325,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 124
@@ -338,7 +338,7 @@ items:
     content: public Vector3 Position { get; }
     parameters: []
     return:
-      type: UnityEngine.Vector3
+      type: Vector3
     content.vb: Public ReadOnly Property Position As Vector3
   overload: PluginAPI.Core.Zones.Heavy.Generator.Position*
   modifiers.csharp:
@@ -362,7 +362,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 129
@@ -375,7 +375,7 @@ items:
     content: public Quaternion Rotation { get; }
     parameters: []
     return:
-      type: UnityEngine.Quaternion
+      type: Quaternion
     content.vb: Public ReadOnly Property Rotation As Quaternion
   overload: PluginAPI.Core.Zones.Heavy.Generator.Rotation*
   modifiers.csharp:
@@ -399,7 +399,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayDeniedSound
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 134
@@ -416,22 +416,22 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)
-  commentId: M:PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)
-  id: '#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,MapGeneration.Distributors.Scp079Generator)'
+- uid: PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,Scp079Generator)
+  commentId: M:PluginAPI.Core.Zones.Heavy.Generator.#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,Scp079Generator)
+  id: '#ctor(PluginAPI.Core.Zones.Heavy.HczRoom,Scp079Generator)'
   parent: PluginAPI.Core.Zones.Heavy.Generator
   langs:
   - csharp
   - vb
   name: Generator(HczRoom, Scp079Generator)
   nameWithType: Generator.Generator(HczRoom, Scp079Generator)
-  fullName: PluginAPI.Core.Zones.Heavy.Generator.Generator(PluginAPI.Core.Zones.Heavy.HczRoom, MapGeneration.Distributors.Scp079Generator)
+  fullName: PluginAPI.Core.Zones.Heavy.Generator.Generator(PluginAPI.Core.Zones.Heavy.HczRoom, Scp079Generator)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/Generator.cs
     startLine: 144
@@ -447,7 +447,7 @@ items:
       type: PluginAPI.Core.Zones.Heavy.HczRoom
       description: The room the generator is in.
     - id: generator
-      type: MapGeneration.Distributors.Scp079Generator
+      type: Scp079Generator
       description: The base-game generator.
     content.vb: Public Sub New(room As HczRoom, generator As Scp079Generator)
   overload: PluginAPI.Core.Zones.Heavy.Generator.#ctor*
@@ -753,19 +753,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MapGeneration.Distributors.Scp079Generator
-  commentId: T:MapGeneration.Distributors.Scp079Generator
-  parent: MapGeneration.Distributors
+- uid: Scp079Generator
   isExternal: true
   name: Scp079Generator
   nameWithType: Scp079Generator
-  fullName: MapGeneration.Distributors.Scp079Generator
-- uid: MapGeneration.Distributors
-  commentId: N:MapGeneration.Distributors
-  isExternal: true
-  name: MapGeneration.Distributors
-  nameWithType: MapGeneration.Distributors
-  fullName: MapGeneration.Distributors
+  fullName: Scp079Generator
 - uid: PluginAPI.Core.Zones.Heavy.HczRoom
   commentId: T:PluginAPI.Core.Zones.Heavy.HczRoom
   parent: PluginAPI.Core.Zones.Heavy
@@ -794,60 +786,46 @@ references:
   name: IsEngaged
   nameWithType: Generator.IsEngaged
   fullName: PluginAPI.Core.Zones.Heavy.Generator.IsEngaged
-- uid: UnityEngine.Transform
-  commentId: T:UnityEngine.Transform
-  parent: UnityEngine
-  isExternal: true
-  name: Transform
-  nameWithType: Transform
-  fullName: UnityEngine.Transform
 - uid: PluginAPI.Core.Zones.Heavy.Generator.Transform*
   commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.Transform
   name: Transform
   nameWithType: Generator.Transform
   fullName: PluginAPI.Core.Zones.Heavy.Generator.Transform
-- uid: UnityEngine
-  commentId: N:UnityEngine
+- uid: Transform
   isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
-  isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: UnityEngine.GameObject
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
 - uid: PluginAPI.Core.Zones.Heavy.Generator.GameObject*
   commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.GameObject
   name: GameObject
   nameWithType: Generator.GameObject
   fullName: PluginAPI.Core.Zones.Heavy.Generator.GameObject
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
 - uid: PluginAPI.Core.Zones.Heavy.Generator.Position*
   commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.Position
   name: Position
   nameWithType: Generator.Position
   fullName: PluginAPI.Core.Zones.Heavy.Generator.Position
-- uid: UnityEngine.Vector3
-  commentId: T:UnityEngine.Vector3
-  parent: UnityEngine
+- uid: Vector3
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: UnityEngine.Vector3
+  fullName: Vector3
 - uid: PluginAPI.Core.Zones.Heavy.Generator.Rotation*
   commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.Rotation
   name: Rotation
   nameWithType: Generator.Rotation
   fullName: PluginAPI.Core.Zones.Heavy.Generator.Rotation
-- uid: UnityEngine.Quaternion
-  commentId: T:UnityEngine.Quaternion
-  parent: UnityEngine
+- uid: Quaternion
   isExternal: true
   name: Quaternion
   nameWithType: Quaternion
-  fullName: UnityEngine.Quaternion
+  fullName: Quaternion
 - uid: PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound*
   commentId: Overload:PluginAPI.Core.Zones.Heavy.Generator.PlayDeniedSound
   name: PlayDeniedSound

@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginApiVersion
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 2
@@ -61,7 +61,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Version
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 4
@@ -94,7 +94,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: VersionString
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 5
@@ -127,7 +127,7 @@ items:
     remote:
       path: NwPluginAPI/PluginApiVersion.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: VersionStatic
     path: ../NwPluginAPI/PluginApiVersion.cs
     startLine: 9

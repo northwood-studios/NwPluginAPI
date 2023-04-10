@@ -5,7 +5,7 @@ items:
   id: LczRoom
   parent: PluginAPI.Core.Zones.Light
   children:
-  - PluginAPI.Core.Zones.Light.LczRoom.#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)
+  - PluginAPI.Core.Zones.Light.LczRoom.#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)
   - PluginAPI.Core.Zones.Light.LczRoom.Zone
   langs:
   - csharp
@@ -18,7 +18,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Light/LczRoom.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LczRoom
     path: ../NwPluginAPI/Core/Zones/Light/LczRoom.cs
     startLine: 5
@@ -72,7 +72,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Light/LczRoom.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/Light/LczRoom.cs
     startLine: 10
@@ -92,22 +92,22 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Zones.Light.LczRoom.#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.Light.LczRoom.#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.Light.LczRoom.#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Light.LczRoom.#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)'
   parent: PluginAPI.Core.Zones.Light.LczRoom
   langs:
   - csharp
   - vb
   name: LczRoom(LightZone, RoomIdentifier)
   nameWithType: LczRoom.LczRoom(LightZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.Light.LczRoom.LczRoom(PluginAPI.Core.Zones.LightZone, MapGeneration.RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Light.LczRoom.LczRoom(PluginAPI.Core.Zones.LightZone, RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/LczRoom.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Light/LczRoom.cs
     startLine: 17
@@ -123,7 +123,7 @@ items:
       type: PluginAPI.Core.Zones.LightZone
       description: The zone type.
     - id: room
-      type: MapGeneration.RoomIdentifier
+      type: RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As LightZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.Light.LczRoom.#ctor*
@@ -690,16 +690,8 @@ references:
   name: LczRoom
   nameWithType: LczRoom.LczRoom
   fullName: PluginAPI.Core.Zones.Light.LczRoom.LczRoom
-- uid: MapGeneration.RoomIdentifier
-  commentId: T:MapGeneration.RoomIdentifier
-  parent: MapGeneration
+- uid: RoomIdentifier
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: MapGeneration.RoomIdentifier
-- uid: MapGeneration
-  commentId: N:MapGeneration
-  isExternal: true
-  name: MapGeneration
-  nameWithType: MapGeneration
-  fullName: MapGeneration
+  fullName: RoomIdentifier

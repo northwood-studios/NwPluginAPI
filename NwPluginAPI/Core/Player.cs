@@ -35,14 +35,14 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class Player : IPlayer
 	{
-#region Static Internal Variables
+		#region Static Internal Variables
 
 		internal static Dictionary<int, IGameComponent> PlayersIds = new Dictionary<int, IGameComponent>();
 		public static Dictionary<string, IGameComponent> PlayersUserIds = new Dictionary<string, IGameComponent>();
 
-#endregion
+		#endregion
 
-#region Static Parameters
+		#region Static Parameters
 
 		/// <summary>
 		/// Gets the amount of online players.
@@ -62,9 +62,9 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static int ConnectionsCount => LiteNetLib4MirrorCore.Host.ConnectedPeersCount;
 
-#endregion
+		#endregion
 
-#region Static Methods
+		#region Static Methods
 
 		/// <summary>
 		/// Gets all players.
@@ -119,7 +119,7 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#region Get player from gameobject.
+		#region Get player from gameobject.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
@@ -169,9 +169,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from reference hub.
+		#region Get player from reference hub.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
@@ -215,9 +215,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from network identity.
+		#region Get player from network identity.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
@@ -260,9 +260,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from name.
+		#region Get player from name.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their name.
@@ -317,9 +317,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from player id.
+		#region Get player from player id.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their player id.
@@ -363,9 +363,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from userid.
+		#region Get player from userid.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their user id.
@@ -415,9 +415,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from network id.
+		#region Get player from network id.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their network id.
@@ -461,9 +461,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from ICommandSender
+		#region Get player from ICommandSender
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
@@ -513,11 +513,11 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#endregion
+		#endregion
 
-#region Public Parameters
+		#region Public Parameters
 
 		/// <summary>
 		/// Gets the player's <see cref="global::ReferenceHub"/>.
@@ -608,7 +608,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float ArtificialHealth
 		{
-			get => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue :  ((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue;
+			get => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue : ((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue;
 			set
 			{
 				if (IsSCP)
@@ -939,15 +939,15 @@ namespace PluginAPI.Core
 			set => ReferenceHub.playerStats.StatModules[2].CurValue = value;
 		}
 
-#endregion
+		#endregion
 
-#region Private Variables
+		#region Private Variables
 
 		internal PlayerSharedStorage SharedStorage { get; }
 
-#endregion
+		#endregion
 
-#region Constructor
+		#region Constructor
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Player"/> class.
@@ -976,9 +976,9 @@ namespace PluginAPI.Core
 			}
 		}
 
-#endregion
+		#endregion
 
-#region Internal Methods
+		#region Internal Methods
 
 		internal void OnInternalDestroy()
 		{
@@ -988,9 +988,9 @@ namespace PluginAPI.Core
 				PlayersUserIds.Remove(UserId);
 		}
 
-#endregion
+		#endregion
 
-#region Public Methods
+		#region Public Methods
 
 		/// <summary>
 		/// Sends a broadcast to the player.
@@ -1125,13 +1125,13 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="pickup">The item pickup.</param>
 		public void RemoveItem(ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Info.Serial, pickup);
-		
+
 		/// <summary>
 		/// Removes an specific item.
 		/// </summary>
 		/// <param name="item">The item base.</param>
 		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.UserInventory.Items.Remove(item.ItemSerial);
-		
+
 		/// <summary>
 		/// Removes all specific items.
 		/// </summary>
@@ -1341,7 +1341,7 @@ namespace PluginAPI.Core
 		/// <inheritdoc/>
 		public virtual void OnFixedUpdate() { }
 
-#region GetComponents
+		#region GetComponents
 
 		/// <inheritdoc/>
 		public T GetComponent<T>(bool globalSearch = false) where T : MonoBehaviour
@@ -1375,9 +1375,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#endregion
+		#endregion
 
 	}
 }

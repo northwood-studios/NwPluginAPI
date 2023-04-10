@@ -8,7 +8,7 @@ items:
   - PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.#ctor(PluginAPI.Core.Zones.Pocket.PocketDimension)
   - PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnDestroy
   - PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPD(PluginAPI.Core.Player,PluginAPI.Core.Player)
-  - PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player,PocketDimensionTeleport.PDTeleportType)
+  - PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player,PDTeleportType)
   - PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.PocketDimension
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PocketDimensionLogic
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 7
@@ -64,7 +64,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PocketDimension
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 12
@@ -84,22 +84,22 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player,PocketDimensionTeleport.PDTeleportType)
-  commentId: M:PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player,PocketDimensionTeleport.PDTeleportType)
-  id: OnPlayerEnteredPortal(PluginAPI.Core.Player,PocketDimensionTeleport.PDTeleportType)
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player,PDTeleportType)
+  commentId: M:PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player,PDTeleportType)
+  id: OnPlayerEnteredPortal(PluginAPI.Core.Player,PDTeleportType)
   parent: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic
   langs:
   - csharp
   - vb
-  name: OnPlayerEnteredPortal(Player, PocketDimensionTeleport.PDTeleportType)
-  nameWithType: PocketDimensionLogic.OnPlayerEnteredPortal(Player, PocketDimensionTeleport.PDTeleportType)
-  fullName: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player, PocketDimensionTeleport.PDTeleportType)
+  name: OnPlayerEnteredPortal(Player, PDTeleportType)
+  nameWithType: PocketDimensionLogic.OnPlayerEnteredPortal(Player, PDTeleportType)
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal(PluginAPI.Core.Player, PDTeleportType)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnPlayerEnteredPortal
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 14
@@ -107,15 +107,15 @@ items:
   - PluginAPI
   namespace: PluginAPI.Core.Zones.Pocket
   syntax:
-    content: public virtual bool OnPlayerEnteredPortal(Player plr, PocketDimensionTeleport.PDTeleportType type)
+    content: public virtual bool OnPlayerEnteredPortal(Player plr, PDTeleportType type)
     parameters:
     - id: plr
       type: PluginAPI.Core.Player
     - id: type
-      type: PocketDimensionTeleport.PDTeleportType
+      type: PDTeleportType
     return:
       type: System.Boolean
-    content.vb: Public Overridable Function OnPlayerEnteredPortal(plr As Player, type As PocketDimensionTeleport.PDTeleportType) As Boolean
+    content.vb: Public Overridable Function OnPlayerEnteredPortal(plr As Player, type As PDTeleportType) As Boolean
   overload: PluginAPI.Core.Zones.Pocket.PocketDimensionLogic.OnPlayerEnteredPortal*
   modifiers.csharp:
   - public
@@ -138,7 +138,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnPlayerEnteredPD
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 19
@@ -177,7 +177,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 24
@@ -209,7 +209,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimensionLogic.cs
     startLine: 30
@@ -545,12 +545,12 @@ references:
   name: Player
   nameWithType: Player
   fullName: PluginAPI.Core.Player
-- uid: PocketDimensionTeleport.PDTeleportType
-  commentId: T:PocketDimensionTeleport.PDTeleportType
+- uid: PDTeleportType
+  commentId: '!:PDTeleportType'
   isExternal: true
-  name: PocketDimensionTeleport.PDTeleportType
-  nameWithType: PocketDimensionTeleport.PDTeleportType
-  fullName: PocketDimensionTeleport.PDTeleportType
+  name: PDTeleportType
+  nameWithType: PDTeleportType
+  fullName: PDTeleportType
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

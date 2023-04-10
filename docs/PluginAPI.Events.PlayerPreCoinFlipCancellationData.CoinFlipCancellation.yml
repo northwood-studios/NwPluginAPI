@@ -20,7 +20,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CoinFlipCancellation
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 278
@@ -51,7 +51,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: None
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 280
@@ -83,7 +83,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Heads
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 281
@@ -115,7 +115,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Tails
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 282
@@ -147,7 +147,7 @@ items:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PreventFlip
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 283

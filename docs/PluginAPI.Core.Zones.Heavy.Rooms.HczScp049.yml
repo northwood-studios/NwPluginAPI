@@ -5,7 +5,7 @@ items:
   id: HczScp049
   parent: PluginAPI.Core.Zones.Heavy.Rooms
   children:
-  - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
+  - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)
   - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
   - PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomLights
   langs:
@@ -19,7 +19,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: HczScp049
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 10
@@ -76,7 +76,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoomLights
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 20
@@ -115,20 +115,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoomIdentifier
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 25
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones.Heavy.Rooms
-  summary: "\nGets the <xref href=\"PluginAPI.Core.Zones.Heavy.Rooms.HczScp049\" data-throw-if-not-resolved=\"false\"></xref>&apos;s <xref href=\"MapGeneration.RoomIdentifier\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the <xref href=\"PluginAPI.Core.Zones.Heavy.Rooms.HczScp049\" data-throw-if-not-resolved=\"false\"></xref>&apos;s <see cref=\"!:MapGeneration.RoomIdentifier\"></see>.\n"
   example: []
   syntax:
     content: public static RoomIdentifier RoomIdentifier { get; }
     parameters: []
     return:
-      type: MapGeneration.RoomIdentifier
+      type: RoomIdentifier
     content.vb: Public Shared ReadOnly Property RoomIdentifier As RoomIdentifier
   overload: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier*
   modifiers.csharp:
@@ -139,22 +139,22 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)'
   parent: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049
   langs:
   - csharp
   - vb
   name: HczScp049(HeavyZone, RoomIdentifier)
   nameWithType: HczScp049.HczScp049(HeavyZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.HczScp049(PluginAPI.Core.Zones.HeavyZone, MapGeneration.RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.HczScp049(PluginAPI.Core.Zones.HeavyZone, RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/Rooms/HczScp049.cs
     startLine: 32
@@ -170,7 +170,7 @@ items:
       type: PluginAPI.Core.Zones.HeavyZone
       description: The zone type.
     - id: room
-      type: MapGeneration.RoomIdentifier
+      type: RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As HeavyZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor*
@@ -764,24 +764,16 @@ references:
   name: PluginAPI.Core
   nameWithType: PluginAPI.Core
   fullName: PluginAPI.Core
-- uid: MapGeneration.RoomIdentifier
-  commentId: T:MapGeneration.RoomIdentifier
-  parent: MapGeneration
-  isExternal: true
-  name: RoomIdentifier
-  nameWithType: RoomIdentifier
-  fullName: MapGeneration.RoomIdentifier
 - uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier*
   commentId: Overload:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
   name: RoomIdentifier
   nameWithType: HczScp049.RoomIdentifier
   fullName: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.RoomIdentifier
-- uid: MapGeneration
-  commentId: N:MapGeneration
+- uid: RoomIdentifier
   isExternal: true
-  name: MapGeneration
-  nameWithType: MapGeneration
-  fullName: MapGeneration
+  name: RoomIdentifier
+  nameWithType: RoomIdentifier
+  fullName: RoomIdentifier
 - uid: PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor*
   commentId: Overload:PluginAPI.Core.Zones.Heavy.Rooms.HczScp049.#ctor
   name: HczScp049

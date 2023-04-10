@@ -18,7 +18,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Extensions/PlayerExtensions.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerExtensions
     path: ../NwPluginAPI/Core/Extensions/PlayerExtensions.cs
     startLine: 7
@@ -63,7 +63,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Extensions/PlayerExtensions.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAmmoLimit
     path: ../NwPluginAPI/Core/Extensions/PlayerExtensions.cs
     startLine: 14
@@ -110,7 +110,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Extensions/PlayerExtensions.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetCategoryLimit
     path: ../NwPluginAPI/Core/Extensions/PlayerExtensions.cs
     startLine: 21
@@ -451,7 +451,6 @@ references:
   nameWithType: Player
   fullName: PluginAPI.Core.Player
 - uid: ItemType
-  commentId: T:ItemType
   isExternal: true
   name: ItemType
   nameWithType: ItemType
@@ -469,7 +468,6 @@ references:
   nameWithType: PlayerExtensions.GetCategoryLimit
   fullName: PluginAPI.Core.PlayerExtensions.GetCategoryLimit
 - uid: ItemCategory
-  commentId: T:ItemCategory
   isExternal: true
   name: ItemCategory
   nameWithType: ItemCategory

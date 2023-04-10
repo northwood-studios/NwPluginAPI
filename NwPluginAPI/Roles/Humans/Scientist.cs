@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class Scientist : BaseHuman
+	public class Scientist<TPlayer> : BaseHuman<TPlayer> where TPlayer : Player
 	{
+		public Scientist(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

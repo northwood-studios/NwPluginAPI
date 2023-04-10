@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PlayerRoles;
+using PluginAPI.Core;
 
 namespace PluginAPI.Roles
 {
-	internal class Overwatch : BaseRole
+	public class Overwatch<TPlayer> : BaseRole<TPlayer> where TPlayer : Player
 	{
+		public Overwatch(PlayerRoleBase roleBase) : base(roleBase) { }
 	}
 }

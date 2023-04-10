@@ -6,9 +6,9 @@ items:
   parent: PluginAPI.Core
   children:
   - PluginAPI.Core.Facility.Doors
-  - PluginAPI.Core.Facility.GetRoom(MapGeneration.RoomIdentifier)
-  - PluginAPI.Core.Facility.RegisterDoor(MapGeneration.DoorSpawnpoint,Interactables.Interobjects.DoorUtils.DoorVariant)
-  - PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant[])
+  - PluginAPI.Core.Facility.GetRoom(RoomIdentifier)
+  - PluginAPI.Core.Facility.RegisterDoor(DoorSpawnpoint,DoorVariant)
+  - PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,DoorVariant[])
   - PluginAPI.Core.Facility.Reset
   - PluginAPI.Core.Facility.Rooms
   - PluginAPI.Core.Facility.TurnOffAllLights(System.Single)
@@ -24,7 +24,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Facility
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 16
@@ -52,22 +52,22 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: PluginAPI.Core.Facility.GetRoom(MapGeneration.RoomIdentifier)
-  commentId: M:PluginAPI.Core.Facility.GetRoom(MapGeneration.RoomIdentifier)
-  id: GetRoom(MapGeneration.RoomIdentifier)
+- uid: PluginAPI.Core.Facility.GetRoom(RoomIdentifier)
+  commentId: M:PluginAPI.Core.Facility.GetRoom(RoomIdentifier)
+  id: GetRoom(RoomIdentifier)
   parent: PluginAPI.Core.Facility
   langs:
   - csharp
   - vb
   name: GetRoom(RoomIdentifier)
   nameWithType: Facility.GetRoom(RoomIdentifier)
-  fullName: PluginAPI.Core.Facility.GetRoom(MapGeneration.RoomIdentifier)
+  fullName: PluginAPI.Core.Facility.GetRoom(RoomIdentifier)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRoom
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 29
@@ -78,7 +78,7 @@ items:
     content: public static FacilityRoom GetRoom(RoomIdentifier roomIdentity)
     parameters:
     - id: roomIdentity
-      type: MapGeneration.RoomIdentifier
+      type: RoomIdentifier
     return:
       type: PluginAPI.Core.Zones.FacilityRoom
     content.vb: Public Shared Function GetRoom(roomIdentity As RoomIdentifier) As FacilityRoom
@@ -89,22 +89,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant[])
-  commentId: M:PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant[])
-  id: RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant[])
+- uid: PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,DoorVariant[])
+  commentId: M:PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,DoorVariant[])
+  id: RegisterDoors(PluginAPI.Core.Zones.FacilityRoom,DoorVariant[])
   parent: PluginAPI.Core.Facility
   langs:
   - csharp
   - vb
   name: RegisterDoors(FacilityRoom, DoorVariant[])
   nameWithType: Facility.RegisterDoors(FacilityRoom, DoorVariant[])
-  fullName: PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom, Interactables.Interobjects.DoorUtils.DoorVariant[])
+  fullName: PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom, DoorVariant[])
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterDoors
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 101
@@ -117,7 +117,7 @@ items:
     - id: room
       type: PluginAPI.Core.Zones.FacilityRoom
     - id: doors
-      type: Interactables.Interobjects.DoorUtils.DoorVariant[]
+      type: DoorVariant[]
     content.vb: Public Shared Sub RegisterDoors(room As FacilityRoom, doors As DoorVariant())
   overload: PluginAPI.Core.Facility.RegisterDoors*
   nameWithType.vb: Facility.RegisterDoors(FacilityRoom, DoorVariant())
@@ -127,24 +127,24 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom, Interactables.Interobjects.DoorUtils.DoorVariant())
+  fullName.vb: PluginAPI.Core.Facility.RegisterDoors(PluginAPI.Core.Zones.FacilityRoom, DoorVariant())
   name.vb: RegisterDoors(FacilityRoom, DoorVariant())
-- uid: PluginAPI.Core.Facility.RegisterDoor(MapGeneration.DoorSpawnpoint,Interactables.Interobjects.DoorUtils.DoorVariant)
-  commentId: M:PluginAPI.Core.Facility.RegisterDoor(MapGeneration.DoorSpawnpoint,Interactables.Interobjects.DoorUtils.DoorVariant)
-  id: RegisterDoor(MapGeneration.DoorSpawnpoint,Interactables.Interobjects.DoorUtils.DoorVariant)
+- uid: PluginAPI.Core.Facility.RegisterDoor(DoorSpawnpoint,DoorVariant)
+  commentId: M:PluginAPI.Core.Facility.RegisterDoor(DoorSpawnpoint,DoorVariant)
+  id: RegisterDoor(DoorSpawnpoint,DoorVariant)
   parent: PluginAPI.Core.Facility
   langs:
   - csharp
   - vb
   name: RegisterDoor(DoorSpawnpoint, DoorVariant)
   nameWithType: Facility.RegisterDoor(DoorSpawnpoint, DoorVariant)
-  fullName: PluginAPI.Core.Facility.RegisterDoor(MapGeneration.DoorSpawnpoint, Interactables.Interobjects.DoorUtils.DoorVariant)
+  fullName: PluginAPI.Core.Facility.RegisterDoor(DoorSpawnpoint, DoorVariant)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterDoor
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 123
@@ -155,9 +155,9 @@ items:
     content: public static void RegisterDoor(DoorSpawnpoint spawnpoint, DoorVariant door)
     parameters:
     - id: spawnpoint
-      type: MapGeneration.DoorSpawnpoint
+      type: DoorSpawnpoint
     - id: door
-      type: Interactables.Interobjects.DoorUtils.DoorVariant
+      type: DoorVariant
     content.vb: Public Shared Sub RegisterDoor(spawnpoint As DoorSpawnpoint, door As DoorVariant)
   overload: PluginAPI.Core.Facility.RegisterDoor*
   modifiers.csharp:
@@ -181,7 +181,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Reset
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 143
@@ -213,7 +213,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 151
@@ -252,7 +252,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 156
@@ -291,7 +291,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TurnOffAllLights
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 161
@@ -328,7 +328,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Facility.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TurnOnAllLights
     path: ../NwPluginAPI/Core/Facility.cs
     startLine: 180
@@ -650,25 +650,17 @@ references:
   name: GetRoom
   nameWithType: Facility.GetRoom
   fullName: PluginAPI.Core.Facility.GetRoom
-- uid: MapGeneration.RoomIdentifier
-  commentId: T:MapGeneration.RoomIdentifier
-  parent: MapGeneration
+- uid: RoomIdentifier
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: MapGeneration.RoomIdentifier
+  fullName: RoomIdentifier
 - uid: PluginAPI.Core.Zones.FacilityRoom
   commentId: T:PluginAPI.Core.Zones.FacilityRoom
   parent: PluginAPI.Core.Zones
   name: FacilityRoom
   nameWithType: FacilityRoom
   fullName: PluginAPI.Core.Zones.FacilityRoom
-- uid: MapGeneration
-  commentId: N:MapGeneration
-  isExternal: true
-  name: MapGeneration
-  nameWithType: MapGeneration
-  fullName: MapGeneration
 - uid: PluginAPI.Core.Zones
   commentId: N:PluginAPI.Core.Zones
   name: PluginAPI.Core.Zones
@@ -679,28 +671,28 @@ references:
   name: RegisterDoors
   nameWithType: Facility.RegisterDoors
   fullName: PluginAPI.Core.Facility.RegisterDoors
-- uid: Interactables.Interobjects.DoorUtils.DoorVariant[]
+- uid: DoorVariant[]
   isExternal: true
   name: DoorVariant[]
   nameWithType: DoorVariant[]
-  fullName: Interactables.Interobjects.DoorUtils.DoorVariant[]
+  fullName: DoorVariant[]
   nameWithType.vb: DoorVariant()
-  fullName.vb: Interactables.Interobjects.DoorUtils.DoorVariant()
+  fullName.vb: DoorVariant()
   name.vb: DoorVariant()
   spec.csharp:
-  - uid: Interactables.Interobjects.DoorUtils.DoorVariant
+  - uid: DoorVariant
     name: DoorVariant
     nameWithType: DoorVariant
-    fullName: Interactables.Interobjects.DoorUtils.DoorVariant
+    fullName: DoorVariant
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: Interactables.Interobjects.DoorUtils.DoorVariant
+  - uid: DoorVariant
     name: DoorVariant
     nameWithType: DoorVariant
-    fullName: Interactables.Interobjects.DoorUtils.DoorVariant
+    fullName: DoorVariant
     isExternal: true
   - name: ()
     nameWithType: ()
@@ -710,26 +702,17 @@ references:
   name: RegisterDoor
   nameWithType: Facility.RegisterDoor
   fullName: PluginAPI.Core.Facility.RegisterDoor
-- uid: MapGeneration.DoorSpawnpoint
-  commentId: T:MapGeneration.DoorSpawnpoint
-  parent: MapGeneration
+- uid: DoorSpawnpoint
+  commentId: '!:DoorSpawnpoint'
   isExternal: true
   name: DoorSpawnpoint
   nameWithType: DoorSpawnpoint
-  fullName: MapGeneration.DoorSpawnpoint
-- uid: Interactables.Interobjects.DoorUtils.DoorVariant
-  commentId: T:Interactables.Interobjects.DoorUtils.DoorVariant
-  parent: Interactables.Interobjects.DoorUtils
+  fullName: DoorSpawnpoint
+- uid: DoorVariant
   isExternal: true
   name: DoorVariant
   nameWithType: DoorVariant
-  fullName: Interactables.Interobjects.DoorUtils.DoorVariant
-- uid: Interactables.Interobjects.DoorUtils
-  commentId: N:Interactables.Interobjects.DoorUtils
-  isExternal: true
-  name: Interactables.Interobjects.DoorUtils
-  nameWithType: Interactables.Interobjects.DoorUtils
-  fullName: Interactables.Interobjects.DoorUtils
+  fullName: DoorVariant
 - uid: PluginAPI.Core.Facility.Reset*
   commentId: Overload:PluginAPI.Core.Facility.Reset
   name: Reset

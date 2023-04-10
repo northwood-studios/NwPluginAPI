@@ -5,15 +5,15 @@ items:
   id: ItemPickup
   parent: PluginAPI.Core.Items
   children:
-  - PluginAPI.Core.Items.ItemPickup.#ctor(InventorySystem.Items.Pickups.ItemPickupBase)
-  - PluginAPI.Core.Items.ItemPickup.Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
+  - PluginAPI.Core.Items.ItemPickup.#ctor(ItemPickupBase)
+  - PluginAPI.Core.Items.ItemPickup.Create(ItemType,Vector3,Quaternion)
   - PluginAPI.Core.Items.ItemPickup.Destroy
   - PluginAPI.Core.Items.ItemPickup.GameObject
   - PluginAPI.Core.Items.ItemPickup.IsLocked
   - PluginAPI.Core.Items.ItemPickup.LastOwner
   - PluginAPI.Core.Items.ItemPickup.OriginalObject
   - PluginAPI.Core.Items.ItemPickup.Position
-  - PluginAPI.Core.Items.ItemPickup.Remove(InventorySystem.Items.Pickups.ItemPickupBase)
+  - PluginAPI.Core.Items.ItemPickup.Remove(ItemPickupBase)
   - PluginAPI.Core.Items.ItemPickup.Rigidbody
   - PluginAPI.Core.Items.ItemPickup.Rotation
   - PluginAPI.Core.Items.ItemPickup.Serial
@@ -32,7 +32,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ItemPickup
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 10
@@ -73,7 +73,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 17
@@ -85,7 +85,7 @@ items:
   syntax:
     content: public readonly ItemPickupBase OriginalObject
     return:
-      type: InventorySystem.Items.Pickups.ItemPickupBase
+      type: ItemPickupBase
     content.vb: Public ReadOnly OriginalObject As ItemPickupBase
   modifiers.csharp:
   - public
@@ -108,14 +108,14 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Type
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 22
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the pickup&apos;s <xref href=\"ItemType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the pickup&apos;s <see cref=\"!:ItemType\"></see>.\n"
   example: []
   syntax:
     content: public ItemType Type { get; }
@@ -145,7 +145,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LastOwner
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 27
@@ -182,7 +182,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Serial
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 32
@@ -219,7 +219,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Weight
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 37
@@ -256,7 +256,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 46
@@ -293,20 +293,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rigidbody
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 55
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the pickup&apos;s <xref href=\"UnityEngine.Rigidbody\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the pickup&apos;s <see cref=\"!:UnityEngine.Rigidbody\"></see>.\n"
   example: []
   syntax:
     content: public Rigidbody Rigidbody { get; }
     parameters: []
     return:
-      type: UnityEngine.Rigidbody
+      type: Rigidbody
     content.vb: Public ReadOnly Property Rigidbody As Rigidbody
   overload: PluginAPI.Core.Items.ItemPickup.Rigidbody*
   modifiers.csharp:
@@ -330,20 +330,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 60
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the pickup&apos;s <xref href=\"UnityEngine.Rigidbody\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the pickup&apos;s <see cref=\"!:UnityEngine.Rigidbody\"></see>.\n"
   example: []
   syntax:
     content: public Transform Transform { get; }
     parameters: []
     return:
-      type: UnityEngine.Transform
+      type: Transform
     content.vb: Public ReadOnly Property Transform As Transform
   overload: PluginAPI.Core.Items.ItemPickup.Transform*
   modifiers.csharp:
@@ -367,20 +367,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 65
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the pickup&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the pickup&apos;s <see cref=\"!:UnityEngine.GameObject\"></see>.\n"
   example: []
   syntax:
     content: public GameObject GameObject { get; }
     parameters: []
     return:
-      type: UnityEngine.GameObject
+      type: GameObject
     content.vb: Public ReadOnly Property GameObject As GameObject
   overload: PluginAPI.Core.Items.ItemPickup.GameObject*
   modifiers.csharp:
@@ -404,7 +404,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 70
@@ -417,7 +417,7 @@ items:
     content: public Vector3 Position { get; }
     parameters: []
     return:
-      type: UnityEngine.Vector3
+      type: Vector3
     content.vb: Public ReadOnly Property Position As Vector3
   overload: PluginAPI.Core.Items.ItemPickup.Position*
   modifiers.csharp:
@@ -441,7 +441,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 75
@@ -454,7 +454,7 @@ items:
     content: public Quaternion Rotation { get; }
     parameters: []
     return:
-      type: UnityEngine.Quaternion
+      type: Quaternion
     content.vb: Public ReadOnly Property Rotation As Quaternion
   overload: PluginAPI.Core.Items.ItemPickup.Rotation*
   modifiers.csharp:
@@ -463,22 +463,22 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Items.ItemPickup.Remove(InventorySystem.Items.Pickups.ItemPickupBase)
-  commentId: M:PluginAPI.Core.Items.ItemPickup.Remove(InventorySystem.Items.Pickups.ItemPickupBase)
-  id: Remove(InventorySystem.Items.Pickups.ItemPickupBase)
+- uid: PluginAPI.Core.Items.ItemPickup.Remove(ItemPickupBase)
+  commentId: M:PluginAPI.Core.Items.ItemPickup.Remove(ItemPickupBase)
+  id: Remove(ItemPickupBase)
   parent: PluginAPI.Core.Items.ItemPickup
   langs:
   - csharp
   - vb
   name: Remove(ItemPickupBase)
   nameWithType: ItemPickup.Remove(ItemPickupBase)
-  fullName: PluginAPI.Core.Items.ItemPickup.Remove(InventorySystem.Items.Pickups.ItemPickupBase)
+  fullName: PluginAPI.Core.Items.ItemPickup.Remove(ItemPickupBase)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Remove
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 87
@@ -489,7 +489,7 @@ items:
     content: public static bool Remove(ItemPickupBase item)
     parameters:
     - id: item
-      type: InventorySystem.Items.Pickups.ItemPickupBase
+      type: ItemPickupBase
     return:
       type: System.Boolean
     content.vb: Public Shared Function Remove(item As ItemPickupBase) As Boolean
@@ -500,22 +500,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Items.ItemPickup.Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
-  commentId: M:PluginAPI.Core.Items.ItemPickup.Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
-  id: Create(ItemType,UnityEngine.Vector3,UnityEngine.Quaternion)
+- uid: PluginAPI.Core.Items.ItemPickup.Create(ItemType,Vector3,Quaternion)
+  commentId: M:PluginAPI.Core.Items.ItemPickup.Create(ItemType,Vector3,Quaternion)
+  id: Create(ItemType,Vector3,Quaternion)
   parent: PluginAPI.Core.Items.ItemPickup
   langs:
   - csharp
   - vb
   name: Create(ItemType, Vector3, Quaternion)
   nameWithType: ItemPickup.Create(ItemType, Vector3, Quaternion)
-  fullName: PluginAPI.Core.Items.ItemPickup.Create(ItemType, UnityEngine.Vector3, UnityEngine.Quaternion)
+  fullName: PluginAPI.Core.Items.ItemPickup.Create(ItemType, Vector3, Quaternion)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 101
@@ -529,12 +529,12 @@ items:
     parameters:
     - id: item
       type: ItemType
-      description: The <xref href="ItemType" data-throw-if-not-resolved="false"></xref>.
+      description: The <see cref="!:ItemType"></see>.
     - id: position
-      type: UnityEngine.Vector3
+      type: Vector3
       description: The position.
     - id: rotation
-      type: UnityEngine.Quaternion
+      type: Quaternion
       description: The rotation.
     return:
       type: PluginAPI.Core.Items.ItemPickup
@@ -562,7 +562,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Spawn
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 118
@@ -594,7 +594,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Destroy
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 127
@@ -611,22 +611,22 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: PluginAPI.Core.Items.ItemPickup.#ctor(InventorySystem.Items.Pickups.ItemPickupBase)
-  commentId: M:PluginAPI.Core.Items.ItemPickup.#ctor(InventorySystem.Items.Pickups.ItemPickupBase)
-  id: '#ctor(InventorySystem.Items.Pickups.ItemPickupBase)'
+- uid: PluginAPI.Core.Items.ItemPickup.#ctor(ItemPickupBase)
+  commentId: M:PluginAPI.Core.Items.ItemPickup.#ctor(ItemPickupBase)
+  id: '#ctor(ItemPickupBase)'
   parent: PluginAPI.Core.Items.ItemPickup
   langs:
   - csharp
   - vb
   name: ItemPickup(ItemPickupBase)
   nameWithType: ItemPickup.ItemPickup(ItemPickupBase)
-  fullName: PluginAPI.Core.Items.ItemPickup.ItemPickup(InventorySystem.Items.Pickups.ItemPickupBase)
+  fullName: PluginAPI.Core.Items.ItemPickup.ItemPickup(ItemPickupBase)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Items/ItemPickup.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Items/ItemPickup.cs
     startLine: 132
@@ -637,7 +637,7 @@ items:
     content: public ItemPickup(ItemPickupBase item)
     parameters:
     - id: item
-      type: InventorySystem.Items.Pickups.ItemPickupBase
+      type: ItemPickupBase
     content.vb: Public Sub New(item As ItemPickupBase)
   overload: PluginAPI.Core.Items.ItemPickup.#ctor*
   modifiers.csharp:
@@ -942,30 +942,21 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: InventorySystem.Items.Pickups.ItemPickupBase
-  commentId: T:InventorySystem.Items.Pickups.ItemPickupBase
-  parent: InventorySystem.Items.Pickups
+- uid: ItemPickupBase
   isExternal: true
   name: ItemPickupBase
   nameWithType: ItemPickupBase
-  fullName: InventorySystem.Items.Pickups.ItemPickupBase
-- uid: InventorySystem.Items.Pickups
-  commentId: N:InventorySystem.Items.Pickups
-  isExternal: true
-  name: InventorySystem.Items.Pickups
-  nameWithType: InventorySystem.Items.Pickups
-  fullName: InventorySystem.Items.Pickups
-- uid: ItemType
-  commentId: T:ItemType
-  isExternal: true
-  name: ItemType
-  nameWithType: ItemType
-  fullName: ItemType
+  fullName: ItemPickupBase
 - uid: PluginAPI.Core.Items.ItemPickup.Type*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.Type
   name: Type
   nameWithType: ItemPickup.Type
   fullName: PluginAPI.Core.Items.ItemPickup.Type
+- uid: ItemType
+  isExternal: true
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
 - uid: PluginAPI.Core.Items.ItemPickup.LastOwner*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.LastOwner
   name: LastOwner
@@ -1018,72 +1009,57 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: UnityEngine.Rigidbody
-  commentId: T:UnityEngine.Rigidbody
-  parent: UnityEngine
-  isExternal: true
-  name: Rigidbody
-  nameWithType: Rigidbody
-  fullName: UnityEngine.Rigidbody
 - uid: PluginAPI.Core.Items.ItemPickup.Rigidbody*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.Rigidbody
   name: Rigidbody
   nameWithType: ItemPickup.Rigidbody
   fullName: PluginAPI.Core.Items.ItemPickup.Rigidbody
-- uid: UnityEngine
-  commentId: N:UnityEngine
+- uid: Rigidbody
+  commentId: '!:Rigidbody'
   isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: Rigidbody
 - uid: PluginAPI.Core.Items.ItemPickup.Transform*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.Transform
   name: Transform
   nameWithType: ItemPickup.Transform
   fullName: PluginAPI.Core.Items.ItemPickup.Transform
-- uid: UnityEngine.Transform
-  commentId: T:UnityEngine.Transform
-  parent: UnityEngine
+- uid: Transform
   isExternal: true
   name: Transform
   nameWithType: Transform
-  fullName: UnityEngine.Transform
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
-  isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: UnityEngine.GameObject
+  fullName: Transform
 - uid: PluginAPI.Core.Items.ItemPickup.GameObject*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.GameObject
   name: GameObject
   nameWithType: ItemPickup.GameObject
   fullName: PluginAPI.Core.Items.ItemPickup.GameObject
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
 - uid: PluginAPI.Core.Items.ItemPickup.Position*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.Position
   name: Position
   nameWithType: ItemPickup.Position
   fullName: PluginAPI.Core.Items.ItemPickup.Position
-- uid: UnityEngine.Vector3
-  commentId: T:UnityEngine.Vector3
-  parent: UnityEngine
+- uid: Vector3
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: UnityEngine.Vector3
+  fullName: Vector3
 - uid: PluginAPI.Core.Items.ItemPickup.Rotation*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.Rotation
   name: Rotation
   nameWithType: ItemPickup.Rotation
   fullName: PluginAPI.Core.Items.ItemPickup.Rotation
-- uid: UnityEngine.Quaternion
-  commentId: T:UnityEngine.Quaternion
-  parent: UnityEngine
+- uid: Quaternion
   isExternal: true
   name: Quaternion
   nameWithType: Quaternion
-  fullName: UnityEngine.Quaternion
+  fullName: Quaternion
 - uid: PluginAPI.Core.Items.ItemPickup.Remove*
   commentId: Overload:PluginAPI.Core.Items.ItemPickup.Remove
   name: Remove

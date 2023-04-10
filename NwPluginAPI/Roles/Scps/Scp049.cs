@@ -1,5 +1,3 @@
-﻿using JetBrains.Annotations;
-using PlayerRoles;
 using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core;
 using static PlayerRoles.PlayableScps.Scp049.Scp049AudioPlayer;

@@ -5,13 +5,13 @@ items:
   id: Item
   parent: PluginAPI.Core.Items
   children:
-  - PluginAPI.Core.Items.Item.#ctor(InventorySystem.Items.ItemBase)
+  - PluginAPI.Core.Items.Item.#ctor(ItemBase)
   - PluginAPI.Core.Items.Item.Category
   - PluginAPI.Core.Items.Item.CurrentOwner
   - PluginAPI.Core.Items.Item.GameObject
   - PluginAPI.Core.Items.Item.OriginalObject
   - PluginAPI.Core.Items.Item.Position
-  - PluginAPI.Core.Items.Item.Remove(InventorySystem.Items.ItemBase)
+  - PluginAPI.Core.Items.Item.Remove(ItemBase)
   - PluginAPI.Core.Items.Item.Rotation
   - PluginAPI.Core.Items.Item.Serial
   - PluginAPI.Core.Items.Item.ThrowSettings
@@ -30,7 +30,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Item
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 10
@@ -73,7 +73,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 17
@@ -85,7 +85,7 @@ items:
   syntax:
     content: public readonly ItemBase OriginalObject
     return:
-      type: InventorySystem.Items.ItemBase
+      type: ItemBase
     content.vb: Public ReadOnly OriginalObject As ItemBase
   modifiers.csharp:
   - public
@@ -108,14 +108,14 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Type
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 22
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the item&apos;s <xref href=\"ItemType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the item&apos;s <see cref=\"!:ItemType\"></see>.\n"
   example: []
   syntax:
     content: public ItemType Type { get; }
@@ -145,14 +145,14 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Category
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 27
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the item&apos;s <xref href=\"ItemCategory\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the item&apos;s <see cref=\"!:ItemCategory\"></see>.\n"
   example: []
   syntax:
     content: public ItemCategory Category { get; }
@@ -182,14 +182,14 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TierFlags
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 32
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the item&apos;s <xref href=\"ItemTierFlags\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the item&apos;s <see cref=\"!:ItemTierFlags\"></see>.\n"
   example: []
   syntax:
     content: public ItemTierFlags TierFlags { get; }
@@ -219,20 +219,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ThrowSettings
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 37
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the item&apos;s <xref href=\"InventorySystem.Items.ItemThrowSettings\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the item&apos;s <see cref=\"!:ItemThrowSettings\"></see>.\n"
   example: []
   syntax:
     content: public ItemThrowSettings ThrowSettings { get; }
     parameters: []
     return:
-      type: InventorySystem.Items.ItemThrowSettings
+      type: ItemThrowSettings
     content.vb: Public ReadOnly Property ThrowSettings As ItemThrowSettings
   overload: PluginAPI.Core.Items.Item.ThrowSettings*
   modifiers.csharp:
@@ -256,7 +256,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CurrentOwner
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 42
@@ -293,7 +293,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Serial
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 47
@@ -330,7 +330,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Weight
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 52
@@ -367,20 +367,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 57
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the item&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the item&apos;s <see cref=\"!:UnityEngine.Transform\"></see>.\n"
   example: []
   syntax:
     content: public Transform Transform { get; }
     parameters: []
     return:
-      type: UnityEngine.Transform
+      type: Transform
     content.vb: Public ReadOnly Property Transform As Transform
   overload: PluginAPI.Core.Items.Item.Transform*
   modifiers.csharp:
@@ -404,20 +404,20 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 62
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Items
-  summary: "\nGets the item&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nGets the item&apos;s <see cref=\"!:UnityEngine.GameObject\"></see>.\n"
   example: []
   syntax:
     content: public GameObject GameObject { get; }
     parameters: []
     return:
-      type: UnityEngine.GameObject
+      type: GameObject
     content.vb: Public ReadOnly Property GameObject As GameObject
   overload: PluginAPI.Core.Items.Item.GameObject*
   modifiers.csharp:
@@ -441,7 +441,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 67
@@ -454,7 +454,7 @@ items:
     content: public Vector3 Position { get; }
     parameters: []
     return:
-      type: UnityEngine.Vector3
+      type: Vector3
     content.vb: Public ReadOnly Property Position As Vector3
   overload: PluginAPI.Core.Items.Item.Position*
   modifiers.csharp:
@@ -478,7 +478,7 @@ items:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 72
@@ -491,7 +491,7 @@ items:
     content: public Quaternion Rotation { get; }
     parameters: []
     return:
-      type: UnityEngine.Quaternion
+      type: Quaternion
     content.vb: Public ReadOnly Property Rotation As Quaternion
   overload: PluginAPI.Core.Items.Item.Rotation*
   modifiers.csharp:
@@ -500,22 +500,22 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Items.Item.Remove(InventorySystem.Items.ItemBase)
-  commentId: M:PluginAPI.Core.Items.Item.Remove(InventorySystem.Items.ItemBase)
-  id: Remove(InventorySystem.Items.ItemBase)
+- uid: PluginAPI.Core.Items.Item.Remove(ItemBase)
+  commentId: M:PluginAPI.Core.Items.Item.Remove(ItemBase)
+  id: Remove(ItemBase)
   parent: PluginAPI.Core.Items.Item
   langs:
   - csharp
   - vb
   name: Remove(ItemBase)
   nameWithType: Item.Remove(ItemBase)
-  fullName: PluginAPI.Core.Items.Item.Remove(InventorySystem.Items.ItemBase)
+  fullName: PluginAPI.Core.Items.Item.Remove(ItemBase)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Remove
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 84
@@ -526,7 +526,7 @@ items:
     content: public static bool Remove(ItemBase item)
     parameters:
     - id: item
-      type: InventorySystem.Items.ItemBase
+      type: ItemBase
     return:
       type: System.Boolean
     content.vb: Public Shared Function Remove(item As ItemBase) As Boolean
@@ -537,22 +537,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Items.Item.#ctor(InventorySystem.Items.ItemBase)
-  commentId: M:PluginAPI.Core.Items.Item.#ctor(InventorySystem.Items.ItemBase)
-  id: '#ctor(InventorySystem.Items.ItemBase)'
+- uid: PluginAPI.Core.Items.Item.#ctor(ItemBase)
+  commentId: M:PluginAPI.Core.Items.Item.#ctor(ItemBase)
+  id: '#ctor(ItemBase)'
   parent: PluginAPI.Core.Items.Item
   langs:
   - csharp
   - vb
   name: Item(ItemBase)
   nameWithType: Item.Item(ItemBase)
-  fullName: PluginAPI.Core.Items.Item.Item(InventorySystem.Items.ItemBase)
+  fullName: PluginAPI.Core.Items.Item.Item(ItemBase)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
       branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 90
@@ -563,7 +563,7 @@ items:
     content: public Item(ItemBase item)
     parameters:
     - id: item
-      type: InventorySystem.Items.ItemBase
+      type: ItemBase
     content.vb: Public Sub New(item As ItemBase)
   overload: PluginAPI.Core.Items.Item.#ctor*
   modifiers.csharp:
@@ -868,64 +868,53 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: InventorySystem.Items.ItemBase
-  commentId: T:InventorySystem.Items.ItemBase
-  parent: InventorySystem.Items
+- uid: ItemBase
   isExternal: true
   name: ItemBase
   nameWithType: ItemBase
-  fullName: InventorySystem.Items.ItemBase
-- uid: InventorySystem.Items
-  commentId: N:InventorySystem.Items
-  isExternal: true
-  name: InventorySystem.Items
-  nameWithType: InventorySystem.Items
-  fullName: InventorySystem.Items
-- uid: ItemType
-  commentId: T:ItemType
-  isExternal: true
-  name: ItemType
-  nameWithType: ItemType
-  fullName: ItemType
+  fullName: ItemBase
 - uid: PluginAPI.Core.Items.Item.Type*
   commentId: Overload:PluginAPI.Core.Items.Item.Type
   name: Type
   nameWithType: Item.Type
   fullName: PluginAPI.Core.Items.Item.Type
-- uid: ItemCategory
-  commentId: T:ItemCategory
+- uid: ItemType
   isExternal: true
-  name: ItemCategory
-  nameWithType: ItemCategory
-  fullName: ItemCategory
+  name: ItemType
+  nameWithType: ItemType
+  fullName: ItemType
 - uid: PluginAPI.Core.Items.Item.Category*
   commentId: Overload:PluginAPI.Core.Items.Item.Category
   name: Category
   nameWithType: Item.Category
   fullName: PluginAPI.Core.Items.Item.Category
-- uid: ItemTierFlags
-  commentId: T:ItemTierFlags
+- uid: ItemCategory
   isExternal: true
-  name: ItemTierFlags
-  nameWithType: ItemTierFlags
-  fullName: ItemTierFlags
+  name: ItemCategory
+  nameWithType: ItemCategory
+  fullName: ItemCategory
 - uid: PluginAPI.Core.Items.Item.TierFlags*
   commentId: Overload:PluginAPI.Core.Items.Item.TierFlags
   name: TierFlags
   nameWithType: Item.TierFlags
   fullName: PluginAPI.Core.Items.Item.TierFlags
-- uid: InventorySystem.Items.ItemThrowSettings
-  commentId: T:InventorySystem.Items.ItemThrowSettings
-  parent: InventorySystem.Items
+- uid: ItemTierFlags
+  commentId: '!:ItemTierFlags'
   isExternal: true
-  name: ItemThrowSettings
-  nameWithType: ItemThrowSettings
-  fullName: InventorySystem.Items.ItemThrowSettings
+  name: ItemTierFlags
+  nameWithType: ItemTierFlags
+  fullName: ItemTierFlags
 - uid: PluginAPI.Core.Items.Item.ThrowSettings*
   commentId: Overload:PluginAPI.Core.Items.Item.ThrowSettings
   name: ThrowSettings
   nameWithType: Item.ThrowSettings
   fullName: PluginAPI.Core.Items.Item.ThrowSettings
+- uid: ItemThrowSettings
+  commentId: '!:ItemThrowSettings'
+  isExternal: true
+  name: ItemThrowSettings
+  nameWithType: ItemThrowSettings
+  fullName: ItemThrowSettings
 - uid: PluginAPI.Core.Items.Item.CurrentOwner*
   commentId: Overload:PluginAPI.Core.Items.Item.CurrentOwner
   name: CurrentOwner
@@ -966,60 +955,46 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: UnityEngine.Transform
-  commentId: T:UnityEngine.Transform
-  parent: UnityEngine
-  isExternal: true
-  name: Transform
-  nameWithType: Transform
-  fullName: UnityEngine.Transform
 - uid: PluginAPI.Core.Items.Item.Transform*
   commentId: Overload:PluginAPI.Core.Items.Item.Transform
   name: Transform
   nameWithType: Item.Transform
   fullName: PluginAPI.Core.Items.Item.Transform
-- uid: UnityEngine
-  commentId: N:UnityEngine
+- uid: Transform
   isExternal: true
-  name: UnityEngine
-  nameWithType: UnityEngine
-  fullName: UnityEngine
-- uid: UnityEngine.GameObject
-  commentId: T:UnityEngine.GameObject
-  parent: UnityEngine
-  isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: UnityEngine.GameObject
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
 - uid: PluginAPI.Core.Items.Item.GameObject*
   commentId: Overload:PluginAPI.Core.Items.Item.GameObject
   name: GameObject
   nameWithType: Item.GameObject
   fullName: PluginAPI.Core.Items.Item.GameObject
+- uid: GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
 - uid: PluginAPI.Core.Items.Item.Position*
   commentId: Overload:PluginAPI.Core.Items.Item.Position
   name: Position
   nameWithType: Item.Position
   fullName: PluginAPI.Core.Items.Item.Position
-- uid: UnityEngine.Vector3
-  commentId: T:UnityEngine.Vector3
-  parent: UnityEngine
+- uid: Vector3
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: UnityEngine.Vector3
+  fullName: Vector3
 - uid: PluginAPI.Core.Items.Item.Rotation*
   commentId: Overload:PluginAPI.Core.Items.Item.Rotation
   name: Rotation
   nameWithType: Item.Rotation
   fullName: PluginAPI.Core.Items.Item.Rotation
-- uid: UnityEngine.Quaternion
-  commentId: T:UnityEngine.Quaternion
-  parent: UnityEngine
+- uid: Quaternion
   isExternal: true
   name: Quaternion
   nameWithType: Quaternion
-  fullName: UnityEngine.Quaternion
+  fullName: Quaternion
 - uid: PluginAPI.Core.Items.Item.Remove*
   commentId: Overload:PluginAPI.Core.Items.Item.Remove
   name: Remove
