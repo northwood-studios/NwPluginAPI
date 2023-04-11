@@ -1,3 +1,6 @@
+using System.Text;
+using NorthwoodLib.Pools;
+
 namespace PluginAPI.Core
 {
 	using PlayerRoles;
@@ -46,6 +49,27 @@ namespace PluginAPI.Core
 		/// <param name="glitchChance">The chance of placing a glitch phrase between each word.</param>
 		/// <param name="jamChance">The chance of jamming each word.</param>
 		public static void GlitchyMessage(string message, float glitchChance, float jamChance) => singleton.ServerOnlyAddGlitchyPhrase(message, glitchChance, jamChance);
+
+		/// <summary>
+		/// Send CASSIE message with custom subtitles.
+		/// </summary>
+		/// <param name="message">The message</param>
+		/// <param name="subtitles">The custom subtitles</param>
+		/// <param name="isHeld">Whether or not the message is held.</param>
+		/// <param name="isNoisy">Whether or not the  message starts with intro sound.</param>
+		/// <param name="isSubtitles">Whether or not the  message includes subtitles.</param>
+		public static void MessageTranslated(string message, string subtitles, bool isHeld = false, bool isNoisy = true, bool isSubtitles = true)
+		{
+			var announcement = StringBuilderPool.Shared.Rent();
+			var cassies = message.Split('\n');
+			var translations = subtitles.Split('\n');
+			for (int i = 0; i < cassies.Length; i++)
+				announcement.Append($"{translations[i].Replace(' ', ' ')}<size=0> {cassies[i]} </size><split>");
+
+			RespawnEffectsController.PlayCassieAnnouncement(announcement.ToString(), isHeld, isNoisy, isSubtitles);
+
+			StringBuilderPool.Shared.Return(announcement);
+		}
 
 #endregion
 
