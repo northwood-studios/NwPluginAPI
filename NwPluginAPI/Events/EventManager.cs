@@ -65,7 +65,7 @@ namespace PluginAPI.Events
 
 				if (args == null) continue;
 
-				
+
 				var obj = (IEventArguments)FormatterServices.GetUninitializedObject(type);
 
 				var targetProperty = type.GetProperty(nameof(IEventArguments.BaseType), BindingFlags.Public);
@@ -329,7 +329,7 @@ namespace PluginAPI.Events
 			else cancellation = default;
 
 
-			foreach (var plugin in ev.Invokers.Values)
+			foreach (var plugin in ev.Invokers.Values.ToList())
 			{
 				foreach (var invoker in plugin)
 				{
