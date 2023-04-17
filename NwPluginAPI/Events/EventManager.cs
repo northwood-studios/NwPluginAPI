@@ -81,11 +81,10 @@ namespace PluginAPI.Events
 					Events.Add(evArg.BaseType, new Event(evArg));
 					TypeToEvent.Add(type, evArg.BaseType);
 				}
-				catch(Exception ex)
+				catch (Exception ex)
 				{
 					Log.Error(ex.ToString());
 				}
-
 			}
 		}
 
@@ -236,7 +235,6 @@ namespace PluginAPI.Events
 		/// <param name="eventHandler">The event handler.</param>
 		public static void UnregisterEvents(object plugin, object eventHandler) => UnregisterEvents(plugin.GetType(), eventHandler);
 
-
 		/// <summary>
 		/// Registers events in plugin.
 		/// </summary>>
@@ -251,18 +249,16 @@ namespace PluginAPI.Events
 					switch (attribute)
 					{
 						case PluginEvent pluginEvent:
-							var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
+							var eventParameters = method.GetParameters().Select(p => p.ParameterType.IsByRef ? p.ParameterType.GetElementType() : p.ParameterType).ToArray();
 
 							var targetType = pluginEvent.EventType;
 
-							if (eventParameters.Length != 0 && eventParameters[0] == typeof(IEventArguments))
-							{
+							if (eventParameters.Length != 0 && targetType == ServerEventType.None)
 								TypeToEvent.TryGetValue(eventParameters[0], out targetType);
-							}
 
 							if (!Events.TryGetValue(targetType, out Event ev))
 							{
-								Log.Error($"Event &6{targetType}&r is not registered in manager! ( create issue on github )");
+								Log.Error($"Event &6{targetType}&r is not registered in manager method {method.Name}! ( create issue on github )");
 								continue;
 							}
 
@@ -356,16 +352,15 @@ namespace PluginAPI.Events
 					{
 						if (invoker.IsDefaultMethod)
 						{
-							var argType = args.GetType();
-
-							object[] input = new object[0];
+							object[] input = new object[ev.Parameters.Count];
 
 							Dictionary<EventParameter, int> evToIndex = new Dictionary<EventParameter, int>();
 
 							int index = 0;
 							foreach(var parameter in ev.Parameters)
 							{
-								input[input.Length] = parameter.PropertyInfo.GetValue(args);
+								input[index] = parameter.PropertyInfo.GetValue(args);
+
 								if (!parameter.IsReadonly)
 									evToIndex.Add(parameter, index);
 								index++;

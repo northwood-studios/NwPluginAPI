@@ -1,8 +1,9 @@
+using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
 using PluginAPI.Core.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Reflection;
 
 namespace PluginAPI.Events
@@ -36,15 +37,16 @@ namespace PluginAPI.Events
 		/// <param name="parameters">The parameters.</param>
 		public Event(IEventArguments args)
 		{
-			EventArgType = args.GetType();
+			EventArg = args;
+			EventArgType = EventArg.GetType();
 
-			foreach(var property in EventArgType.GetProperties(BindingFlags.Public))
+			foreach(var property in EventArgType.GetProperties(BindingFlags.Public | BindingFlags.Instance))
 			{
 				var argument = property.GetCustomAttribute<EventArgument>();
 
 				if (argument == null) continue;
 
-				Parameters.Add(new EventParameter(property.PropertyType, property, property.Name));
+				Parameters.Add(new EventParameter(property.PropertyType.IsByRef ? property.PropertyType.GetElementType() : property.PropertyType, property, property.Name));
 			}
 		}
 
