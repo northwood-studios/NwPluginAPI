@@ -27,6 +27,7 @@ namespace TemplatePlugin
 	using TemplatePlugin.Configs;
 	using TemplatePlugin.Factory;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
+	using static InventorySystem.Items.Radio.RadioMessages;
 
 	public class MainClass
 	{
@@ -69,6 +70,9 @@ namespace TemplatePlugin
 
 			AnotherConfig.TestList = new List<string>() { "Template0" };
 			handler.SaveConfig(this, nameof(AnotherConfig));
+
+			if(Player.TryGet("hubert@northwood", out Player plr))
+				plr.Role = RoleTypeId.NtfCaptain;
 		}
 
 		[PluginEvent(ServerEventType.PlayerJoined)]
@@ -177,7 +181,7 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerBanned)]
-		void OnPlayerBanned(Player plr, ICommandSender issuer, string reason, long duration)
+		void OnPlayerBanned(Player plr, Player issuer, string reason, long duration)
 		{
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) got banned by &6{issuer.LogName}&r with reason &6{reason}&r for duration &6{duration}&r seconds");
 		}
@@ -195,7 +199,7 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerChangeRadioRange)]
-		void OnPlayerChangesRadioRange(Player plr, RadioItem item, byte range)
+		void OnPlayerChangesRadioRange(Player plr, RadioItem item, RadioRangeLevel range)
 		{
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) changed radio range to &6{range}&r");
 		}
