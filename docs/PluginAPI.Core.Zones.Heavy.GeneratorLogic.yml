@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GeneratorLogic
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Generator
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnUpdate
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnLateUpdate
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnPlayerInteraction
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OnDestroy
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/Generator/GeneratorLogic.cs

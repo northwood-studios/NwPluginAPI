@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/CommandsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CommandsManager
     path: ../NwPluginAPI/Commands/CommandsManager.cs

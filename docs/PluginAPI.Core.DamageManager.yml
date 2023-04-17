@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageManager
     path: ../NwPluginAPI/Core/DamageManager.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CanReceiveDamageFromPlayers
     path: ../NwPluginAPI/Core/DamageManager.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageBlacklist
     path: ../NwPluginAPI/Core/DamageManager.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DamageWhitelist
     path: ../NwPluginAPI/Core/DamageManager.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/DamageManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/DamageManager.cs

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoomLight
     path: ../NwPluginAPI/Core/RoomLight.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsEnabled
     path: ../NwPluginAPI/Core/RoomLight.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LightColor
     path: ../NwPluginAPI/Core/RoomLight.cs
@@ -115,7 +115,7 @@ items:
     content: public Color LightColor { get; set; }
     parameters: []
     return:
-      type: Color
+      type: UnityEngine.Color
     content.vb: Public Property LightColor As Color
   overload: PluginAPI.Core.RoomLight.LightColor*
   modifiers.csharp:
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DefaultColor
     path: ../NwPluginAPI/Core/RoomLight.cs
@@ -152,7 +152,7 @@ items:
     content: public Color DefaultColor { get; }
     parameters: []
     return:
-      type: Color
+      type: UnityEngine.Color
     content.vb: Public ReadOnly Property DefaultColor As Color
   overload: PluginAPI.Core.RoomLight.DefaultColor*
   modifiers.csharp:
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LightIntensity
     path: ../NwPluginAPI/Core/RoomLight.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FlickerLights
     path: ../NwPluginAPI/Core/RoomLight.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/RoomLight.cs
@@ -585,11 +585,19 @@ references:
   name: LightColor
   nameWithType: RoomLight.LightColor
   fullName: PluginAPI.Core.RoomLight.LightColor
-- uid: Color
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
   isExternal: true
   name: Color
   nameWithType: Color
-  fullName: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: PluginAPI.Core.RoomLight.DefaultColor*
   commentId: Overload:PluginAPI.Core.RoomLight.DefaultColor
   name: DefaultColor
@@ -624,7 +632,7 @@ references:
   nameWithType: RoomLight.RoomLight
   fullName: PluginAPI.Core.RoomLight.RoomLight
 - uid: FlickerableLightController
-  commentId: '!:FlickerableLightController'
+  commentId: T:FlickerableLightController
   isExternal: true
   name: FlickerableLightController
   nameWithType: FlickerableLightController

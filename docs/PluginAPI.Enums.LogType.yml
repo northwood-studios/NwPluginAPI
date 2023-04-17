@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LogType.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LogType
     path: ../NwPluginAPI/Enums/LogType.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LogType.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Info
     path: ../NwPluginAPI/Enums/LogType.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LogType.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Warning
     path: ../NwPluginAPI/Enums/LogType.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LogType.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Error
     path: ../NwPluginAPI/Enums/LogType.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LogType.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Debug
     path: ../NwPluginAPI/Enums/LogType.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LogType.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Raw
     path: ../NwPluginAPI/Enums/LogType.cs

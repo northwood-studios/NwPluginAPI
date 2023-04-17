@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent
+  commentId: T:PluginAPI.Events.PlayerReceiveEffectEvent
+  id: PlayerReceiveEffectEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerReceiveEffectEvent.#ctor(ReferenceHub,CustomPlayerEffects.StatusEffectBase,System.Byte,System.Single)
+  - PluginAPI.Events.PlayerReceiveEffectEvent.BaseType
+  - PluginAPI.Events.PlayerReceiveEffectEvent.Duration
+  - PluginAPI.Events.PlayerReceiveEffectEvent.Effect
+  - PluginAPI.Events.PlayerReceiveEffectEvent.Intensity
+  - PluginAPI.Events.PlayerReceiveEffectEvent.Player
+  langs:
+  - csharp
+  - vb
+  name: PlayerReceiveEffectEvent
+  nameWithType: PlayerReceiveEffectEvent
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerReceiveEffectEvent
+    path: ../NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerReceiveEffectEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerReceiveEffectEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerReceiveEffectEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerReceiveEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerReceiveEffectEvent.BaseType
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerReceiveEffectEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Player
+  commentId: P:PluginAPI.Events.PlayerReceiveEffectEvent.Player
+  id: Player
+  parent: PluginAPI.Events.PlayerReceiveEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: PlayerReceiveEffectEvent.Player
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.PlayerReceiveEffectEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Effect
+  commentId: P:PluginAPI.Events.PlayerReceiveEffectEvent.Effect
+  id: Effect
+  parent: PluginAPI.Events.PlayerReceiveEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: Effect
+  nameWithType: PlayerReceiveEffectEvent.Effect
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Effect
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Effect
+    path: ../NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public StatusEffectBase Effect { get; }
+    parameters: []
+    return:
+      type: CustomPlayerEffects.StatusEffectBase
+    content.vb: Public ReadOnly Property Effect As StatusEffectBase
+  overload: PluginAPI.Events.PlayerReceiveEffectEvent.Effect*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Intensity
+  commentId: P:PluginAPI.Events.PlayerReceiveEffectEvent.Intensity
+  id: Intensity
+  parent: PluginAPI.Events.PlayerReceiveEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: Intensity
+  nameWithType: PlayerReceiveEffectEvent.Intensity
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Intensity
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Intensity
+    path: ../NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public byte Intensity { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property Intensity As Byte
+  overload: PluginAPI.Events.PlayerReceiveEffectEvent.Intensity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Duration
+  commentId: P:PluginAPI.Events.PlayerReceiveEffectEvent.Duration
+  id: Duration
+  parent: PluginAPI.Events.PlayerReceiveEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: PlayerReceiveEffectEvent.Duration
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Duration
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Duration
+    path: ../NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public float Duration { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Duration As Single
+  overload: PluginAPI.Events.PlayerReceiveEffectEvent.Duration*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.#ctor(ReferenceHub,CustomPlayerEffects.StatusEffectBase,System.Byte,System.Single)
+  commentId: M:PluginAPI.Events.PlayerReceiveEffectEvent.#ctor(ReferenceHub,CustomPlayerEffects.StatusEffectBase,System.Byte,System.Single)
+  id: '#ctor(ReferenceHub,CustomPlayerEffects.StatusEffectBase,System.Byte,System.Single)'
+  parent: PluginAPI.Events.PlayerReceiveEffectEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerReceiveEffectEvent(ReferenceHub, StatusEffectBase, Byte, Single)
+  nameWithType: PlayerReceiveEffectEvent.PlayerReceiveEffectEvent(ReferenceHub, StatusEffectBase, Byte, Single)
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.PlayerReceiveEffectEvent(ReferenceHub, CustomPlayerEffects.StatusEffectBase, System.Byte, System.Single)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerReceiveEffectEvent.cs
+    startLine: 43
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerReceiveEffectEvent(ReferenceHub hub, StatusEffectBase effect, byte intensity, float duration)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: effect
+      type: CustomPlayerEffects.StatusEffectBase
+    - id: intensity
+      type: System.Byte
+    - id: duration
+      type: System.Single
+    content.vb: Public Sub New(hub As ReferenceHub, effect As StatusEffectBase, intensity As Byte, duration As Single)
+  overload: PluginAPI.Events.PlayerReceiveEffectEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerReceiveEffectEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerReceiveEffectEvent.BaseType
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Player*
+  commentId: Overload:PluginAPI.Events.PlayerReceiveEffectEvent.Player
+  name: Player
+  nameWithType: PlayerReceiveEffectEvent.Player
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Effect*
+  commentId: Overload:PluginAPI.Events.PlayerReceiveEffectEvent.Effect
+  name: Effect
+  nameWithType: PlayerReceiveEffectEvent.Effect
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Effect
+- uid: CustomPlayerEffects.StatusEffectBase
+  commentId: T:CustomPlayerEffects.StatusEffectBase
+  parent: CustomPlayerEffects
+  isExternal: true
+  name: StatusEffectBase
+  nameWithType: StatusEffectBase
+  fullName: CustomPlayerEffects.StatusEffectBase
+- uid: CustomPlayerEffects
+  commentId: N:CustomPlayerEffects
+  isExternal: true
+  name: CustomPlayerEffects
+  nameWithType: CustomPlayerEffects
+  fullName: CustomPlayerEffects
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Intensity*
+  commentId: Overload:PluginAPI.Events.PlayerReceiveEffectEvent.Intensity
+  name: Intensity
+  nameWithType: PlayerReceiveEffectEvent.Intensity
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Intensity
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.Duration*
+  commentId: Overload:PluginAPI.Events.PlayerReceiveEffectEvent.Duration
+  name: Duration
+  nameWithType: PlayerReceiveEffectEvent.Duration
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.Duration
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Events.PlayerReceiveEffectEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerReceiveEffectEvent.#ctor
+  name: PlayerReceiveEffectEvent
+  nameWithType: PlayerReceiveEffectEvent.PlayerReceiveEffectEvent
+  fullName: PluginAPI.Events.PlayerReceiveEffectEvent.PlayerReceiveEffectEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

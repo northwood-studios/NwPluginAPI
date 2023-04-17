@@ -5,7 +5,7 @@ items:
   id: PocketDimension
   parent: PluginAPI.Core.Zones.Pocket
   children:
-  - PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,RoomIdentifier)
+  - PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Zones.Pocket.PocketDimension.IsAccessible
   - PluginAPI.Core.Zones.Pocket.PocketDimension.Logic
   - PluginAPI.Core.Zones.Pocket.PocketDimension.ShuffleTeleports
@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PocketDimension
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Teleports
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Logic
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsAccessible
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ShuffleTeleports
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
@@ -243,21 +243,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.UnknownZone,RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.UnknownZone,MapGeneration.RoomIdentifier)'
   parent: PluginAPI.Core.Zones.Pocket.PocketDimension
   langs:
   - csharp
   - vb
   name: PocketDimension(UnknownZone, RoomIdentifier)
   nameWithType: PocketDimension.PocketDimension(UnknownZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.PocketDimension(PluginAPI.Core.Zones.UnknownZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.PocketDimension(PluginAPI.Core.Zones.UnknownZone, MapGeneration.RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Pocket/PocketDimension.cs
@@ -274,7 +274,7 @@ items:
       type: PluginAPI.Core.Zones.UnknownZone
       description: The zone type.
     - id: room
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As UnknownZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.Pocket.PocketDimension.#ctor*
@@ -963,8 +963,16 @@ references:
   name: PocketDimension
   nameWithType: PocketDimension.PocketDimension
   fullName: PluginAPI.Core.Zones.Pocket.PocketDimension.PocketDimension
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration

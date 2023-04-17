@@ -5,7 +5,7 @@ items:
   id: EzRoom
   parent: PluginAPI.Core.Zones.Entrance
   children:
-  - PluginAPI.Core.Zones.Entrance.EzRoom.#ctor(PluginAPI.Core.Zones.EntranceZone,RoomIdentifier)
+  - PluginAPI.Core.Zones.Entrance.EzRoom.#ctor(PluginAPI.Core.Zones.EntranceZone,MapGeneration.RoomIdentifier)
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EzRoom
     path: ../NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
@@ -57,21 +57,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: PluginAPI.Core.Zones.Entrance.EzRoom.#ctor(PluginAPI.Core.Zones.EntranceZone,RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.Entrance.EzRoom.#ctor(PluginAPI.Core.Zones.EntranceZone,RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.EntranceZone,RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.Entrance.EzRoom.#ctor(PluginAPI.Core.Zones.EntranceZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Entrance.EzRoom.#ctor(PluginAPI.Core.Zones.EntranceZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.EntranceZone,MapGeneration.RoomIdentifier)'
   parent: PluginAPI.Core.Zones.Entrance.EzRoom
   langs:
   - csharp
   - vb
   name: EzRoom(EntranceZone, RoomIdentifier)
   nameWithType: EzRoom.EzRoom(EntranceZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.Entrance.EzRoom.EzRoom(PluginAPI.Core.Zones.EntranceZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Entrance.EzRoom.EzRoom(PluginAPI.Core.Zones.EntranceZone, MapGeneration.RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Entrance/EzRoom.cs
@@ -88,7 +88,7 @@ items:
       type: PluginAPI.Core.Zones.EntranceZone
       description: The zone type.
     - id: room
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As EntranceZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.Entrance.EzRoom.#ctor*
@@ -655,8 +655,16 @@ references:
   name: EntranceZone
   nameWithType: EntranceZone
   fullName: PluginAPI.Core.Zones.EntranceZone
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration

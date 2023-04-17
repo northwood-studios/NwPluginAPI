@@ -8,7 +8,7 @@ items:
   - PluginAPI.Commands.ListCommand.Aliases
   - PluginAPI.Commands.ListCommand.Command
   - PluginAPI.Commands.ListCommand.Description
-  - PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},ICommandSender,System.String@)
+  - PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   - PluginAPI.Commands.ListCommand.Instance
   langs:
   - csharp
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ListCommand
     path: ../NwPluginAPI/Commands/ListCommand.cs
@@ -34,9 +34,19 @@ items:
     content: 'public class ListCommand : ICommand'
     content.vb: >-
       Public Class ListCommand
-          Inherits ICommand
+          Implements ICommand
   inheritance:
   - System.Object
+  implements:
+  - CommandSystem.ICommand
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -57,7 +67,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/ListCommand.cs
@@ -72,6 +82,8 @@ items:
       type: System.String
     content.vb: Public ReadOnly Property Command As String
   overload: PluginAPI.Commands.ListCommand.Command*
+  implements:
+  - CommandSystem.ICommand.Command
   modifiers.csharp:
   - public
   - get
@@ -92,7 +104,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Commands/ListCommand.cs
@@ -107,6 +119,8 @@ items:
       type: System.String[]
     content.vb: Public ReadOnly Property Aliases As String()
   overload: PluginAPI.Commands.ListCommand.Aliases*
+  implements:
+  - CommandSystem.ICommand.Aliases
   modifiers.csharp:
   - public
   - get
@@ -127,7 +141,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Commands/ListCommand.cs
@@ -142,6 +156,8 @@ items:
       type: System.String
     content.vb: Public ReadOnly Property Description As String
   overload: PluginAPI.Commands.ListCommand.Description*
+  implements:
+  - CommandSystem.ICommand.Description
   modifiers.csharp:
   - public
   - get
@@ -162,7 +178,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Instance
     path: ../NwPluginAPI/Commands/ListCommand.cs
@@ -181,21 +197,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},ICommandSender,System.String@)
-  commentId: M:PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},ICommandSender,System.String@)
-  id: Execute(System.ArraySegment{System.String},ICommandSender,System.String@)
+- uid: PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  commentId: M:PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  id: Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   parent: PluginAPI.Commands.ListCommand
   langs:
   - csharp
   - vb
   name: Execute(ArraySegment<String>, ICommandSender, out String)
   nameWithType: ListCommand.Execute(ArraySegment<String>, ICommandSender, out String)
-  fullName: PluginAPI.Commands.ListCommand.Execute(System.ArraySegment<System.String>, ICommandSender, out System.String)
+  fullName: PluginAPI.Commands.ListCommand.Execute(System.ArraySegment<System.String>, CommandSystem.ICommandSender, out System.String)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Execute
     path: ../NwPluginAPI/Commands/ListCommand.cs
@@ -209,19 +225,21 @@ items:
     - id: arguments
       type: System.ArraySegment{System.String}
     - id: sender
-      type: ICommandSender
+      type: CommandSystem.ICommandSender
     - id: response
       type: System.String
     return:
       type: System.Boolean
     content.vb: Public Function Execute(arguments As ArraySegment(Of String), sender As ICommandSender, ByRef response As String) As Boolean
   overload: PluginAPI.Commands.ListCommand.Execute*
+  implements:
+  - CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   nameWithType.vb: ListCommand.Execute(ArraySegment(Of String), ICommandSender, ByRef String)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: PluginAPI.Commands.ListCommand.Execute(System.ArraySegment(Of System.String), ICommandSender, ByRef System.String)
+  fullName.vb: PluginAPI.Commands.ListCommand.Execute(System.ArraySegment(Of System.String), CommandSystem.ICommandSender, ByRef System.String)
   name.vb: Execute(ArraySegment(Of String), ICommandSender, ByRef String)
 references:
 - uid: PluginAPI.Commands
@@ -236,17 +254,316 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: CommandSystem.ICommand
+  commentId: T:CommandSystem.ICommand
+  parent: CommandSystem
+  isExternal: true
+  name: ICommand
+  nameWithType: ICommand
+  fullName: CommandSystem.ICommand
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: CommandSystem
+  commentId: N:CommandSystem
+  isExternal: true
+  name: CommandSystem
+  nameWithType: CommandSystem
+  fullName: CommandSystem
 - uid: PluginAPI.Commands.ListCommand.Command*
   commentId: Overload:PluginAPI.Commands.ListCommand.Command
   name: Command
   nameWithType: ListCommand.Command
   fullName: PluginAPI.Commands.ListCommand.Command
+- uid: CommandSystem.ICommand.Command
+  commentId: P:CommandSystem.ICommand.Command
+  parent: CommandSystem.ICommand
+  isExternal: true
+  name: Command
+  nameWithType: ICommand.Command
+  fullName: CommandSystem.ICommand.Command
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -259,6 +576,13 @@ references:
   name: Aliases
   nameWithType: ListCommand.Aliases
   fullName: PluginAPI.Commands.ListCommand.Aliases
+- uid: CommandSystem.ICommand.Aliases
+  commentId: P:CommandSystem.ICommand.Aliases
+  parent: CommandSystem.ICommand
+  isExternal: true
+  name: Aliases
+  nameWithType: ICommand.Aliases
+  fullName: CommandSystem.ICommand.Aliases
 - uid: System.String[]
   isExternal: true
   name: String[]
@@ -290,6 +614,13 @@ references:
   name: Description
   nameWithType: ListCommand.Description
   fullName: PluginAPI.Commands.ListCommand.Description
+- uid: CommandSystem.ICommand.Description
+  commentId: P:CommandSystem.ICommand.Description
+  parent: CommandSystem.ICommand
+  isExternal: true
+  name: Description
+  nameWithType: ICommand.Description
+  fullName: CommandSystem.ICommand.Description
 - uid: PluginAPI.Commands.ListCommand
   commentId: T:PluginAPI.Commands.ListCommand
   parent: PluginAPI.Commands
@@ -301,6 +632,104 @@ references:
   name: Execute
   nameWithType: ListCommand.Execute
   fullName: PluginAPI.Commands.ListCommand.Execute
+- uid: CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  commentId: M:CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  parent: CommandSystem.ICommand
+  isExternal: true
+  name: Execute(ArraySegment<String>, ICommandSender, String)
+  nameWithType: ICommand.Execute(ArraySegment<String>, ICommandSender, String)
+  fullName: CommandSystem.ICommand.Execute(System.ArraySegment<System.String>, CommandSystem.ICommandSender, System.String)
+  nameWithType.vb: ICommand.Execute(ArraySegment(Of String), ICommandSender, String)
+  fullName.vb: CommandSystem.ICommand.Execute(System.ArraySegment(Of System.String), CommandSystem.ICommandSender, System.String)
+  name.vb: Execute(ArraySegment(Of String), ICommandSender, String)
+  spec.csharp:
+  - uid: CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+    name: Execute
+    nameWithType: ICommand.Execute
+    fullName: CommandSystem.ICommand.Execute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    nameWithType: ArraySegment
+    fullName: System.ArraySegment
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CommandSystem.ICommandSender
+    name: ICommandSender
+    nameWithType: ICommandSender
+    fullName: CommandSystem.ICommandSender
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+    name: Execute
+    nameWithType: ICommand.Execute
+    fullName: CommandSystem.ICommand.Execute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    nameWithType: ArraySegment
+    fullName: System.ArraySegment
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CommandSystem.ICommandSender
+    name: ICommandSender
+    nameWithType: ICommandSender
+    fullName: CommandSystem.ICommandSender
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.ArraySegment{System.String}
   commentId: T:System.ArraySegment{System.String}
   parent: System
@@ -345,11 +774,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: ICommandSender
+- uid: CommandSystem.ICommandSender
+  commentId: T:CommandSystem.ICommandSender
+  parent: CommandSystem
   isExternal: true
   name: ICommandSender
   nameWithType: ICommandSender
-  fullName: ICommandSender
+  fullName: CommandSystem.ICommandSender
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

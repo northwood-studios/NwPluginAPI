@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Enums.RoleRegisterType
+  commentId: T:PluginAPI.Enums.RoleRegisterType
+  id: RoleRegisterType
+  parent: PluginAPI.Enums
+  children:
+  - PluginAPI.Enums.RoleRegisterType.AddNew
+  - PluginAPI.Enums.RoleRegisterType.Override
+  langs:
+  - csharp
+  - vb
+  name: RoleRegisterType
+  nameWithType: RoleRegisterType
+  fullName: PluginAPI.Enums.RoleRegisterType
+  type: Enum
+  source:
+    remote:
+      path: NwPluginAPI/Enums/RoleRegisterType.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoleRegisterType
+    path: ../NwPluginAPI/Enums/RoleRegisterType.cs
+    startLine: 8
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: public enum RoleRegisterType
+    content.vb: Public Enum RoleRegisterType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: PluginAPI.Enums.RoleRegisterType.Override
+  commentId: F:PluginAPI.Enums.RoleRegisterType.Override
+  id: Override
+  parent: PluginAPI.Enums.RoleRegisterType
+  langs:
+  - csharp
+  - vb
+  name: Override
+  nameWithType: RoleRegisterType.Override
+  fullName: PluginAPI.Enums.RoleRegisterType.Override
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/RoleRegisterType.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Override
+    path: ../NwPluginAPI/Enums/RoleRegisterType.cs
+    startLine: 10
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: Override = 0
+    return:
+      type: PluginAPI.Enums.RoleRegisterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: PluginAPI.Enums.RoleRegisterType.AddNew
+  commentId: F:PluginAPI.Enums.RoleRegisterType.AddNew
+  id: AddNew
+  parent: PluginAPI.Enums.RoleRegisterType
+  langs:
+  - csharp
+  - vb
+  name: AddNew
+  nameWithType: RoleRegisterType.AddNew
+  fullName: PluginAPI.Enums.RoleRegisterType.AddNew
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Enums/RoleRegisterType.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: AddNew
+    path: ../NwPluginAPI/Enums/RoleRegisterType.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Enums
+  syntax:
+    content: AddNew = 1
+    return:
+      type: PluginAPI.Enums.RoleRegisterType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Enums.RoleRegisterType
+  commentId: T:PluginAPI.Enums.RoleRegisterType
+  parent: PluginAPI.Enums
+  name: RoleRegisterType
+  nameWithType: RoleRegisterType
+  fullName: PluginAPI.Enums.RoleRegisterType

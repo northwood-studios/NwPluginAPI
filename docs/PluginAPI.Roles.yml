@@ -1,0 +1,1058 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Roles
+  commentId: N:PluginAPI.Roles
+  id: PluginAPI.Roles
+  children:
+  - PluginAPI.Roles.BaseChaos`1
+  - PluginAPI.Roles.BaseHuman`1
+  - PluginAPI.Roles.BaseNineTailedFox`1
+  - PluginAPI.Roles.BaseRole`1
+  - PluginAPI.Roles.BaseScp`1
+  - PluginAPI.Roles.ChaosConscript`1
+  - PluginAPI.Roles.ChaosMarauder`1
+  - PluginAPI.Roles.ChaosRepressor`1
+  - PluginAPI.Roles.ChaosRifleman`1
+  - PluginAPI.Roles.ClassD`1
+  - PluginAPI.Roles.CustomRole`1
+  - PluginAPI.Roles.FacilityGuard`1
+  - PluginAPI.Roles.None`1
+  - PluginAPI.Roles.NtfCaptain`1
+  - PluginAPI.Roles.NtfPrivate`1
+  - PluginAPI.Roles.NtfSergeant`1
+  - PluginAPI.Roles.NtfSpecialist`1
+  - PluginAPI.Roles.Overwatch`1
+  - PluginAPI.Roles.RoleManager
+  - PluginAPI.Roles.Scientist`1
+  - PluginAPI.Roles.Scp049`1
+  - PluginAPI.Roles.Scp0492`1
+  - PluginAPI.Roles.Scp079`1
+  - PluginAPI.Roles.Scp096`1
+  - PluginAPI.Roles.Scp106`1
+  - PluginAPI.Roles.Scp173`1
+  - PluginAPI.Roles.Scp939`1
+  - PluginAPI.Roles.Spectator`1
+  - PluginAPI.Roles.Tutorial`1
+  langs:
+  - csharp
+  - vb
+  name: PluginAPI.Roles
+  nameWithType: PluginAPI.Roles
+  fullName: PluginAPI.Roles
+  type: Namespace
+  assemblies:
+  - PluginAPI
+references:
+- uid: PluginAPI.Roles.BaseRole`1
+  commentId: T:PluginAPI.Roles.BaseRole`1
+  name: BaseRole<TPlayer>
+  nameWithType: BaseRole<TPlayer>
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>
+  nameWithType.vb: BaseRole(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer)
+  name.vb: BaseRole(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.BaseRole`1
+    name: BaseRole
+    nameWithType: BaseRole
+    fullName: PluginAPI.Roles.BaseRole
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.BaseRole`1
+    name: BaseRole
+    nameWithType: BaseRole
+    fullName: PluginAPI.Roles.BaseRole
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.BaseHuman`1
+  commentId: T:PluginAPI.Roles.BaseHuman`1
+  name: BaseHuman<TPlayer>
+  nameWithType: BaseHuman<TPlayer>
+  fullName: PluginAPI.Roles.BaseHuman<TPlayer>
+  nameWithType.vb: BaseHuman(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.BaseHuman(Of TPlayer)
+  name.vb: BaseHuman(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.BaseHuman`1
+    name: BaseHuman
+    nameWithType: BaseHuman
+    fullName: PluginAPI.Roles.BaseHuman
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.BaseHuman`1
+    name: BaseHuman
+    nameWithType: BaseHuman
+    fullName: PluginAPI.Roles.BaseHuman
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.BaseChaos`1
+  commentId: T:PluginAPI.Roles.BaseChaos`1
+  name: BaseChaos<TPlayer>
+  nameWithType: BaseChaos<TPlayer>
+  fullName: PluginAPI.Roles.BaseChaos<TPlayer>
+  nameWithType.vb: BaseChaos(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.BaseChaos(Of TPlayer)
+  name.vb: BaseChaos(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.BaseChaos`1
+    name: BaseChaos
+    nameWithType: BaseChaos
+    fullName: PluginAPI.Roles.BaseChaos
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.BaseChaos`1
+    name: BaseChaos
+    nameWithType: BaseChaos
+    fullName: PluginAPI.Roles.BaseChaos
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.ChaosConscript`1
+  commentId: T:PluginAPI.Roles.ChaosConscript`1
+  name: ChaosConscript<TPlayer>
+  nameWithType: ChaosConscript<TPlayer>
+  fullName: PluginAPI.Roles.ChaosConscript<TPlayer>
+  nameWithType.vb: ChaosConscript(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.ChaosConscript(Of TPlayer)
+  name.vb: ChaosConscript(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.ChaosConscript`1
+    name: ChaosConscript
+    nameWithType: ChaosConscript
+    fullName: PluginAPI.Roles.ChaosConscript
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.ChaosConscript`1
+    name: ChaosConscript
+    nameWithType: ChaosConscript
+    fullName: PluginAPI.Roles.ChaosConscript
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.ChaosMarauder`1
+  commentId: T:PluginAPI.Roles.ChaosMarauder`1
+  name: ChaosMarauder<TPlayer>
+  nameWithType: ChaosMarauder<TPlayer>
+  fullName: PluginAPI.Roles.ChaosMarauder<TPlayer>
+  nameWithType.vb: ChaosMarauder(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.ChaosMarauder(Of TPlayer)
+  name.vb: ChaosMarauder(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.ChaosMarauder`1
+    name: ChaosMarauder
+    nameWithType: ChaosMarauder
+    fullName: PluginAPI.Roles.ChaosMarauder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.ChaosMarauder`1
+    name: ChaosMarauder
+    nameWithType: ChaosMarauder
+    fullName: PluginAPI.Roles.ChaosMarauder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.ChaosRepressor`1
+  commentId: T:PluginAPI.Roles.ChaosRepressor`1
+  name: ChaosRepressor<TPlayer>
+  nameWithType: ChaosRepressor<TPlayer>
+  fullName: PluginAPI.Roles.ChaosRepressor<TPlayer>
+  nameWithType.vb: ChaosRepressor(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.ChaosRepressor(Of TPlayer)
+  name.vb: ChaosRepressor(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.ChaosRepressor`1
+    name: ChaosRepressor
+    nameWithType: ChaosRepressor
+    fullName: PluginAPI.Roles.ChaosRepressor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.ChaosRepressor`1
+    name: ChaosRepressor
+    nameWithType: ChaosRepressor
+    fullName: PluginAPI.Roles.ChaosRepressor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.ChaosRifleman`1
+  commentId: T:PluginAPI.Roles.ChaosRifleman`1
+  name: ChaosRifleman<TPlayer>
+  nameWithType: ChaosRifleman<TPlayer>
+  fullName: PluginAPI.Roles.ChaosRifleman<TPlayer>
+  nameWithType.vb: ChaosRifleman(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.ChaosRifleman(Of TPlayer)
+  name.vb: ChaosRifleman(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.ChaosRifleman`1
+    name: ChaosRifleman
+    nameWithType: ChaosRifleman
+    fullName: PluginAPI.Roles.ChaosRifleman
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.ChaosRifleman`1
+    name: ChaosRifleman
+    nameWithType: ChaosRifleman
+    fullName: PluginAPI.Roles.ChaosRifleman
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.ClassD`1
+  commentId: T:PluginAPI.Roles.ClassD`1
+  name: ClassD<TPlayer>
+  nameWithType: ClassD<TPlayer>
+  fullName: PluginAPI.Roles.ClassD<TPlayer>
+  nameWithType.vb: ClassD(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.ClassD(Of TPlayer)
+  name.vb: ClassD(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.ClassD`1
+    name: ClassD
+    nameWithType: ClassD
+    fullName: PluginAPI.Roles.ClassD
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.ClassD`1
+    name: ClassD
+    nameWithType: ClassD
+    fullName: PluginAPI.Roles.ClassD
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.FacilityGuard`1
+  commentId: T:PluginAPI.Roles.FacilityGuard`1
+  name: FacilityGuard<TPlayer>
+  nameWithType: FacilityGuard<TPlayer>
+  fullName: PluginAPI.Roles.FacilityGuard<TPlayer>
+  nameWithType.vb: FacilityGuard(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.FacilityGuard(Of TPlayer)
+  name.vb: FacilityGuard(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.FacilityGuard`1
+    name: FacilityGuard
+    nameWithType: FacilityGuard
+    fullName: PluginAPI.Roles.FacilityGuard
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.FacilityGuard`1
+    name: FacilityGuard
+    nameWithType: FacilityGuard
+    fullName: PluginAPI.Roles.FacilityGuard
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.BaseNineTailedFox`1
+  commentId: T:PluginAPI.Roles.BaseNineTailedFox`1
+  name: BaseNineTailedFox<TPlayer>
+  nameWithType: BaseNineTailedFox<TPlayer>
+  fullName: PluginAPI.Roles.BaseNineTailedFox<TPlayer>
+  nameWithType.vb: BaseNineTailedFox(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.BaseNineTailedFox(Of TPlayer)
+  name.vb: BaseNineTailedFox(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.BaseNineTailedFox`1
+    name: BaseNineTailedFox
+    nameWithType: BaseNineTailedFox
+    fullName: PluginAPI.Roles.BaseNineTailedFox
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.BaseNineTailedFox`1
+    name: BaseNineTailedFox
+    nameWithType: BaseNineTailedFox
+    fullName: PluginAPI.Roles.BaseNineTailedFox
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.NtfCaptain`1
+  commentId: T:PluginAPI.Roles.NtfCaptain`1
+  name: NtfCaptain<TPlayer>
+  nameWithType: NtfCaptain<TPlayer>
+  fullName: PluginAPI.Roles.NtfCaptain<TPlayer>
+  nameWithType.vb: NtfCaptain(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.NtfCaptain(Of TPlayer)
+  name.vb: NtfCaptain(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.NtfCaptain`1
+    name: NtfCaptain
+    nameWithType: NtfCaptain
+    fullName: PluginAPI.Roles.NtfCaptain
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.NtfCaptain`1
+    name: NtfCaptain
+    nameWithType: NtfCaptain
+    fullName: PluginAPI.Roles.NtfCaptain
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.NtfPrivate`1
+  commentId: T:PluginAPI.Roles.NtfPrivate`1
+  name: NtfPrivate<TPlayer>
+  nameWithType: NtfPrivate<TPlayer>
+  fullName: PluginAPI.Roles.NtfPrivate<TPlayer>
+  nameWithType.vb: NtfPrivate(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.NtfPrivate(Of TPlayer)
+  name.vb: NtfPrivate(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.NtfPrivate`1
+    name: NtfPrivate
+    nameWithType: NtfPrivate
+    fullName: PluginAPI.Roles.NtfPrivate
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.NtfPrivate`1
+    name: NtfPrivate
+    nameWithType: NtfPrivate
+    fullName: PluginAPI.Roles.NtfPrivate
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.NtfSergeant`1
+  commentId: T:PluginAPI.Roles.NtfSergeant`1
+  name: NtfSergeant<TPlayer>
+  nameWithType: NtfSergeant<TPlayer>
+  fullName: PluginAPI.Roles.NtfSergeant<TPlayer>
+  nameWithType.vb: NtfSergeant(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.NtfSergeant(Of TPlayer)
+  name.vb: NtfSergeant(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.NtfSergeant`1
+    name: NtfSergeant
+    nameWithType: NtfSergeant
+    fullName: PluginAPI.Roles.NtfSergeant
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.NtfSergeant`1
+    name: NtfSergeant
+    nameWithType: NtfSergeant
+    fullName: PluginAPI.Roles.NtfSergeant
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.NtfSpecialist`1
+  commentId: T:PluginAPI.Roles.NtfSpecialist`1
+  name: NtfSpecialist<TPlayer>
+  nameWithType: NtfSpecialist<TPlayer>
+  fullName: PluginAPI.Roles.NtfSpecialist<TPlayer>
+  nameWithType.vb: NtfSpecialist(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.NtfSpecialist(Of TPlayer)
+  name.vb: NtfSpecialist(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.NtfSpecialist`1
+    name: NtfSpecialist
+    nameWithType: NtfSpecialist
+    fullName: PluginAPI.Roles.NtfSpecialist
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.NtfSpecialist`1
+    name: NtfSpecialist
+    nameWithType: NtfSpecialist
+    fullName: PluginAPI.Roles.NtfSpecialist
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scientist`1
+  commentId: T:PluginAPI.Roles.Scientist`1
+  name: Scientist<TPlayer>
+  nameWithType: Scientist<TPlayer>
+  fullName: PluginAPI.Roles.Scientist<TPlayer>
+  nameWithType.vb: Scientist(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scientist(Of TPlayer)
+  name.vb: Scientist(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scientist`1
+    name: Scientist
+    nameWithType: Scientist
+    fullName: PluginAPI.Roles.Scientist
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scientist`1
+    name: Scientist
+    nameWithType: Scientist
+    fullName: PluginAPI.Roles.Scientist
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Tutorial`1
+  commentId: T:PluginAPI.Roles.Tutorial`1
+  name: Tutorial<TPlayer>
+  nameWithType: Tutorial<TPlayer>
+  fullName: PluginAPI.Roles.Tutorial<TPlayer>
+  nameWithType.vb: Tutorial(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Tutorial(Of TPlayer)
+  name.vb: Tutorial(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Tutorial`1
+    name: Tutorial
+    nameWithType: Tutorial
+    fullName: PluginAPI.Roles.Tutorial
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Tutorial`1
+    name: Tutorial
+    nameWithType: Tutorial
+    fullName: PluginAPI.Roles.Tutorial
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.CustomRole`1
+  commentId: T:PluginAPI.Roles.CustomRole`1
+  name: CustomRole<TPlayer>
+  nameWithType: CustomRole<TPlayer>
+  fullName: PluginAPI.Roles.CustomRole<TPlayer>
+  nameWithType.vb: CustomRole(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.CustomRole(Of TPlayer)
+  name.vb: CustomRole(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.CustomRole`1
+    name: CustomRole
+    nameWithType: CustomRole
+    fullName: PluginAPI.Roles.CustomRole
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.CustomRole`1
+    name: CustomRole
+    nameWithType: CustomRole
+    fullName: PluginAPI.Roles.CustomRole
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.None`1
+  commentId: T:PluginAPI.Roles.None`1
+  name: None<TPlayer>
+  nameWithType: None<TPlayer>
+  fullName: PluginAPI.Roles.None<TPlayer>
+  nameWithType.vb: None(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.None(Of TPlayer)
+  name.vb: None(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.None`1
+    name: None
+    nameWithType: None
+    fullName: PluginAPI.Roles.None
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.None`1
+    name: None
+    nameWithType: None
+    fullName: PluginAPI.Roles.None
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Overwatch`1
+  commentId: T:PluginAPI.Roles.Overwatch`1
+  name: Overwatch<TPlayer>
+  nameWithType: Overwatch<TPlayer>
+  fullName: PluginAPI.Roles.Overwatch<TPlayer>
+  nameWithType.vb: Overwatch(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Overwatch(Of TPlayer)
+  name.vb: Overwatch(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Overwatch`1
+    name: Overwatch
+    nameWithType: Overwatch
+    fullName: PluginAPI.Roles.Overwatch
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Overwatch`1
+    name: Overwatch
+    nameWithType: Overwatch
+    fullName: PluginAPI.Roles.Overwatch
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Spectator`1
+  commentId: T:PluginAPI.Roles.Spectator`1
+  name: Spectator<TPlayer>
+  nameWithType: Spectator<TPlayer>
+  fullName: PluginAPI.Roles.Spectator<TPlayer>
+  nameWithType.vb: Spectator(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Spectator(Of TPlayer)
+  name.vb: Spectator(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Spectator`1
+    name: Spectator
+    nameWithType: Spectator
+    fullName: PluginAPI.Roles.Spectator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Spectator`1
+    name: Spectator
+    nameWithType: Spectator
+    fullName: PluginAPI.Roles.Spectator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.RoleManager
+  commentId: T:PluginAPI.Roles.RoleManager
+  name: RoleManager
+  nameWithType: RoleManager
+  fullName: PluginAPI.Roles.RoleManager
+- uid: PluginAPI.Roles.BaseScp`1
+  commentId: T:PluginAPI.Roles.BaseScp`1
+  name: BaseScp<TPlayer>
+  nameWithType: BaseScp<TPlayer>
+  fullName: PluginAPI.Roles.BaseScp<TPlayer>
+  nameWithType.vb: BaseScp(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.BaseScp(Of TPlayer)
+  name.vb: BaseScp(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.BaseScp`1
+    name: BaseScp
+    nameWithType: BaseScp
+    fullName: PluginAPI.Roles.BaseScp
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.BaseScp`1
+    name: BaseScp
+    nameWithType: BaseScp
+    fullName: PluginAPI.Roles.BaseScp
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scp049`1
+  commentId: T:PluginAPI.Roles.Scp049`1
+  name: Scp049<TPlayer>
+  nameWithType: Scp049<TPlayer>
+  fullName: PluginAPI.Roles.Scp049<TPlayer>
+  nameWithType.vb: Scp049(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scp049(Of TPlayer)
+  name.vb: Scp049(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scp049`1
+    name: Scp049
+    nameWithType: Scp049
+    fullName: PluginAPI.Roles.Scp049
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scp049`1
+    name: Scp049
+    nameWithType: Scp049
+    fullName: PluginAPI.Roles.Scp049
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scp0492`1
+  commentId: T:PluginAPI.Roles.Scp0492`1
+  name: Scp0492<TPlayer>
+  nameWithType: Scp0492<TPlayer>
+  fullName: PluginAPI.Roles.Scp0492<TPlayer>
+  nameWithType.vb: Scp0492(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scp0492(Of TPlayer)
+  name.vb: Scp0492(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scp0492`1
+    name: Scp0492
+    nameWithType: Scp0492
+    fullName: PluginAPI.Roles.Scp0492
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scp0492`1
+    name: Scp0492
+    nameWithType: Scp0492
+    fullName: PluginAPI.Roles.Scp0492
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scp079`1
+  commentId: T:PluginAPI.Roles.Scp079`1
+  name: Scp079<TPlayer>
+  nameWithType: Scp079<TPlayer>
+  fullName: PluginAPI.Roles.Scp079<TPlayer>
+  nameWithType.vb: Scp079(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scp079(Of TPlayer)
+  name.vb: Scp079(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scp079`1
+    name: Scp079
+    nameWithType: Scp079
+    fullName: PluginAPI.Roles.Scp079
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scp079`1
+    name: Scp079
+    nameWithType: Scp079
+    fullName: PluginAPI.Roles.Scp079
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scp096`1
+  commentId: T:PluginAPI.Roles.Scp096`1
+  name: Scp096<TPlayer>
+  nameWithType: Scp096<TPlayer>
+  fullName: PluginAPI.Roles.Scp096<TPlayer>
+  nameWithType.vb: Scp096(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scp096(Of TPlayer)
+  name.vb: Scp096(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scp096`1
+    name: Scp096
+    nameWithType: Scp096
+    fullName: PluginAPI.Roles.Scp096
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scp096`1
+    name: Scp096
+    nameWithType: Scp096
+    fullName: PluginAPI.Roles.Scp096
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scp106`1
+  commentId: T:PluginAPI.Roles.Scp106`1
+  name: Scp106<TPlayer>
+  nameWithType: Scp106<TPlayer>
+  fullName: PluginAPI.Roles.Scp106<TPlayer>
+  nameWithType.vb: Scp106(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scp106(Of TPlayer)
+  name.vb: Scp106(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scp106`1
+    name: Scp106
+    nameWithType: Scp106
+    fullName: PluginAPI.Roles.Scp106
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scp106`1
+    name: Scp106
+    nameWithType: Scp106
+    fullName: PluginAPI.Roles.Scp106
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scp173`1
+  commentId: T:PluginAPI.Roles.Scp173`1
+  name: Scp173<TPlayer>
+  nameWithType: Scp173<TPlayer>
+  fullName: PluginAPI.Roles.Scp173<TPlayer>
+  nameWithType.vb: Scp173(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scp173(Of TPlayer)
+  name.vb: Scp173(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scp173`1
+    name: Scp173
+    nameWithType: Scp173
+    fullName: PluginAPI.Roles.Scp173
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scp173`1
+    name: Scp173
+    nameWithType: Scp173
+    fullName: PluginAPI.Roles.Scp173
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Roles.Scp939`1
+  commentId: T:PluginAPI.Roles.Scp939`1
+  name: Scp939<TPlayer>
+  nameWithType: Scp939<TPlayer>
+  fullName: PluginAPI.Roles.Scp939<TPlayer>
+  nameWithType.vb: Scp939(Of TPlayer)
+  fullName.vb: PluginAPI.Roles.Scp939(Of TPlayer)
+  name.vb: Scp939(Of TPlayer)
+  spec.csharp:
+  - uid: PluginAPI.Roles.Scp939`1
+    name: Scp939
+    nameWithType: Scp939
+    fullName: PluginAPI.Roles.Scp939
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PluginAPI.Roles.Scp939`1
+    name: Scp939
+    nameWithType: Scp939
+    fullName: PluginAPI.Roles.Scp939
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPlayer
+    nameWithType: TPlayer
+    fullName: TPlayer
+  - name: )
+    nameWithType: )
+    fullName: )

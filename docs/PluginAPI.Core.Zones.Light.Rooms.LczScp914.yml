@@ -5,7 +5,7 @@ items:
   id: LczScp914
   parent: PluginAPI.Core.Zones.Light.Rooms
   children:
-  - PluginAPI.Core.Zones.Light.Rooms.LczScp914.#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)
+  - PluginAPI.Core.Zones.Light.Rooms.LczScp914.#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Zones.Light.Rooms.LczScp914.IntakeChamber
   - PluginAPI.Core.Zones.Light.Rooms.LczScp914.OutputChamber
   - PluginAPI.Core.Zones.Light.Rooms.LczScp914.Start
@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LczScp914
     path: ../NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IntakeChamber
     path: ../NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
@@ -81,13 +81,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones.Light.Rooms
-  summary: "\nGets the intake chamber <see cref=\"!:Transform\"></see>.\n"
+  summary: "\nGets the intake chamber <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static Transform IntakeChamber { get; }
     parameters: []
     return:
-      type: Transform
+      type: UnityEngine.Transform
     content.vb: Public Shared ReadOnly Property IntakeChamber As Transform
   overload: PluginAPI.Core.Zones.Light.Rooms.LczScp914.IntakeChamber*
   modifiers.csharp:
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OutputChamber
     path: ../NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
@@ -120,13 +120,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones.Light.Rooms
-  summary: "\nGets the output chamber <see cref=\"!:Transform\"></see>.\n"
+  summary: "\nGets the output chamber <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public static Transform OutputChamber { get; }
     parameters: []
     return:
-      type: Transform
+      type: UnityEngine.Transform
     content.vb: Public Shared ReadOnly Property OutputChamber As Transform
   overload: PluginAPI.Core.Zones.Light.Rooms.LczScp914.OutputChamber*
   modifiers.csharp:
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
@@ -171,21 +171,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.Light.Rooms.LczScp914.#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.LightZone,RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Light.Rooms.LczScp914.#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.LightZone,MapGeneration.RoomIdentifier)'
   parent: PluginAPI.Core.Zones.Light.Rooms.LczScp914
   langs:
   - csharp
   - vb
   name: LczScp914(LightZone, RoomIdentifier)
   nameWithType: LczScp914.LczScp914(LightZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.LczScp914(PluginAPI.Core.Zones.LightZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.LczScp914(PluginAPI.Core.Zones.LightZone, MapGeneration.RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Light/Rooms/LczScp914.cs
@@ -202,7 +202,7 @@ items:
       type: PluginAPI.Core.Zones.LightZone
       description: The zone type.
     - id: room
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As LightZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.Light.Rooms.LczScp914.#ctor*
@@ -769,16 +769,24 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
 - uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.IntakeChamber*
   commentId: Overload:PluginAPI.Core.Zones.Light.Rooms.LczScp914.IntakeChamber
   name: IntakeChamber
   nameWithType: LczScp914.IntakeChamber
   fullName: PluginAPI.Core.Zones.Light.Rooms.LczScp914.IntakeChamber
-- uid: Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
   isExternal: true
-  name: Transform
-  nameWithType: Transform
-  fullName: Transform
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: PluginAPI.Core.Zones.Light.Rooms.LczScp914.OutputChamber*
   commentId: Overload:PluginAPI.Core.Zones.Light.Rooms.LczScp914.OutputChamber
   name: OutputChamber
@@ -800,8 +808,16 @@ references:
   name: LightZone
   nameWithType: LightZone
   fullName: PluginAPI.Core.Zones.LightZone
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration

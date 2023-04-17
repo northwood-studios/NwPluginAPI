@@ -1,0 +1,621 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  commentId: T:PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  id: Scp914InventoryItemUpgradedEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.Scp914InventoryItemUpgradedEvent.#ctor(ReferenceHub,InventorySystem.Items.ItemBase,Scp914.Scp914KnobSetting)
+  - PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType
+  - PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item
+  - PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting
+  - PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player
+  langs:
+  - csharp
+  - vb
+  name: Scp914InventoryItemUpgradedEvent
+  nameWithType: Scp914InventoryItemUpgradedEvent
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Scp914InventoryItemUpgradedEvent
+    path: ../NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class Scp914InventoryItemUpgradedEvent : IEventArguments'
+    content.vb: >-
+      Public Class Scp914InventoryItemUpgradedEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType
+  commentId: P:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: Scp914InventoryItemUpgradedEvent.BaseType
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player
+  commentId: P:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player
+  id: Player
+  parent: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Scp914InventoryItemUpgradedEvent.Player
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item
+  commentId: P:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item
+  id: Item
+  parent: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: Scp914InventoryItemUpgradedEvent.Item
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Item
+    path: ../NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ItemBase Item { get; }
+    parameters: []
+    return:
+      type: InventorySystem.Items.ItemBase
+    content.vb: Public ReadOnly Property Item As ItemBase
+  overload: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting
+  commentId: P:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting
+  id: KnobSetting
+  parent: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  langs:
+  - csharp
+  - vb
+  name: KnobSetting
+  nameWithType: Scp914InventoryItemUpgradedEvent.KnobSetting
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: KnobSetting
+    path: ../NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+    startLine: 39
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Scp914KnobSetting KnobSetting { get; }
+    parameters: []
+    return:
+      type: Scp914.Scp914KnobSetting
+    content.vb: Public ReadOnly Property KnobSetting As Scp914KnobSetting
+  overload: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.#ctor(ReferenceHub,InventorySystem.Items.ItemBase,Scp914.Scp914KnobSetting)
+  commentId: M:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.#ctor(ReferenceHub,InventorySystem.Items.ItemBase,Scp914.Scp914KnobSetting)
+  id: '#ctor(ReferenceHub,InventorySystem.Items.ItemBase,Scp914.Scp914KnobSetting)'
+  parent: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+  langs:
+  - csharp
+  - vb
+  name: Scp914InventoryItemUpgradedEvent(ReferenceHub, ItemBase, Scp914KnobSetting)
+  nameWithType: Scp914InventoryItemUpgradedEvent.Scp914InventoryItemUpgradedEvent(ReferenceHub, ItemBase, Scp914KnobSetting)
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Scp914InventoryItemUpgradedEvent(ReferenceHub, InventorySystem.Items.ItemBase, Scp914.Scp914KnobSetting)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/Scp914InventoryItemUpgradedEvent.cs
+    startLine: 42
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Scp914InventoryItemUpgradedEvent(ReferenceHub hub, ItemBase item, Scp914KnobSetting setting)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: item
+      type: InventorySystem.Items.ItemBase
+    - id: setting
+      type: Scp914.Scp914KnobSetting
+    content.vb: Public Sub New(hub As ReferenceHub, item As ItemBase, setting As Scp914KnobSetting)
+  overload: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType
+  name: BaseType
+  nameWithType: Scp914InventoryItemUpgradedEvent.BaseType
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player*
+  commentId: Overload:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player
+  name: Player
+  nameWithType: Scp914InventoryItemUpgradedEvent.Player
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item*
+  commentId: Overload:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item
+  name: Item
+  nameWithType: Scp914InventoryItemUpgradedEvent.Item
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Item
+- uid: InventorySystem.Items.ItemBase
+  commentId: T:InventorySystem.Items.ItemBase
+  parent: InventorySystem.Items
+  isExternal: true
+  name: ItemBase
+  nameWithType: ItemBase
+  fullName: InventorySystem.Items.ItemBase
+- uid: InventorySystem.Items
+  commentId: N:InventorySystem.Items
+  isExternal: true
+  name: InventorySystem.Items
+  nameWithType: InventorySystem.Items
+  fullName: InventorySystem.Items
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting*
+  commentId: Overload:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting
+  name: KnobSetting
+  nameWithType: Scp914InventoryItemUpgradedEvent.KnobSetting
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.KnobSetting
+- uid: Scp914.Scp914KnobSetting
+  commentId: T:Scp914.Scp914KnobSetting
+  parent: Scp914
+  isExternal: true
+  name: Scp914KnobSetting
+  nameWithType: Scp914KnobSetting
+  fullName: Scp914.Scp914KnobSetting
+- uid: Scp914
+  commentId: N:Scp914
+  isExternal: true
+  name: Scp914
+  nameWithType: Scp914
+  fullName: Scp914
+- uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.Scp914InventoryItemUpgradedEvent.#ctor
+  name: Scp914InventoryItemUpgradedEvent
+  nameWithType: Scp914InventoryItemUpgradedEvent.Scp914InventoryItemUpgradedEvent
+  fullName: PluginAPI.Events.Scp914InventoryItemUpgradedEvent.Scp914InventoryItemUpgradedEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

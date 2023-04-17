@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Extensions/ReflectionExtensions.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReflectionExtensions
     path: ../NwPluginAPI/Core/Extensions/ReflectionExtensions.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Extensions/ReflectionExtensions.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsValidEntrypoint
     path: ../NwPluginAPI/Core/Extensions/ReflectionExtensions.cs

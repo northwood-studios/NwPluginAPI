@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Log
     path: ../NwPluginAPI/Core/Log.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisableBetterColors
     path: ../NwPluginAPI/Core/Log.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnityEditor
     path: ../NwPluginAPI/Core/Log.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DebugMode
     path: ../NwPluginAPI/Core/Log.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Debug
     path: ../NwPluginAPI/Core/Log.cs
@@ -219,7 +219,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Debug
     path: ../NwPluginAPI/Core/Log.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Info
     path: ../NwPluginAPI/Core/Log.cs
@@ -304,7 +304,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Warning
     path: ../NwPluginAPI/Core/Log.cs
@@ -345,7 +345,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Error
     path: ../NwPluginAPI/Core/Log.cs
@@ -386,7 +386,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Raw
     path: ../NwPluginAPI/Core/Log.cs
@@ -427,7 +427,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Log.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FormatText
     path: ../NwPluginAPI/Core/Log.cs

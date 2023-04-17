@@ -12,7 +12,7 @@ items:
   - PluginAPI.Core.EffectsManager.DisableEffect``1
   - PluginAPI.Core.EffectsManager.EnableEffect``1(System.Single,System.Boolean)
   - PluginAPI.Core.EffectsManager.GetEffect``1
-  - PluginAPI.Core.EffectsManager.TryGetEffect(System.String,StatusEffectBase@)
+  - PluginAPI.Core.EffectsManager.TryGetEffect(System.String,CustomPlayerEffects.StatusEffectBase@)
   - PluginAPI.Core.EffectsManager.TryGetEffect``1(``0@)
   langs:
   - csharp
@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EffectsManager
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChangeState
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -111,7 +111,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nChanges the state of a <see cref=\"!:StatusEffectBase\">status effect</see> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nChanges the state of a <xref href=\"CustomPlayerEffects.StatusEffectBase?text=status+effect\" data-throw-if-not-resolved=\"false\"></xref> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: >-
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChangeState
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -163,7 +163,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nChanges the state of a <see cref=\"!:StatusEffectBase\">status effect</see> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nChanges the state of a <xref href=\"CustomPlayerEffects.StatusEffectBase?text=status+effect\" data-throw-if-not-resolved=\"false\"></xref> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public StatusEffectBase ChangeState(string effectName, byte intensity, float duration = 0F, bool addDuration = false)
@@ -181,7 +181,7 @@ items:
       type: System.Boolean
       description: Whether the duration will be forced set or added to it&apos;s current one.
     return:
-      type: StatusEffectBase
+      type: CustomPlayerEffects.StatusEffectBase
       description: Whether or not an effect was found.
     content.vb: Public Function ChangeState(effectName As String, intensity As Byte, duration As Single = 0F, addDuration As Boolean = False) As StatusEffectBase
   overload: PluginAPI.Core.EffectsManager.ChangeState*
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisableAllEffects
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -211,7 +211,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nDisables all <see cref=\"!:StatusEffectBase\">status effects</see>.\n"
+  summary: "\nDisables all <xref href=\"CustomPlayerEffects.StatusEffectBase?text=status+effects\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public void DisableAllEffects()
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EnableEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -243,7 +243,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nEnables a specific <see cref=\"!:StatusEffectBase\">status effect</see> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nEnables a specific <xref href=\"CustomPlayerEffects.StatusEffectBase?text=status+effect\" data-throw-if-not-resolved=\"false\"></xref> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: >-
@@ -261,7 +261,7 @@ items:
       description: The specified effect that will be looked for.
     return:
       type: '{T}'
-      description: The <see cref="!:StatusEffectBase"></see> instance of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, otherwise <xref uid="langword_csharp_null" name="null" href=""></xref>.
+      description: The <xref href="CustomPlayerEffects.StatusEffectBase" data-throw-if-not-resolved="false"></xref> instance of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, otherwise <xref uid="langword_csharp_null" name="null" href=""></xref>.
     content.vb: Public Function EnableEffect(Of T As StatusEffectBase)(duration As Single = 0F, addDuration As Boolean = False) As T
   overload: PluginAPI.Core.EffectsManager.EnableEffect*
   nameWithType.vb: EffectsManager.EnableEffect(Of T)(Single, Boolean)
@@ -285,7 +285,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DisableEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -293,7 +293,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nDisables a specific <see cref=\"!:StatusEffectBase\">status effect</see> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nDisables a specific <xref href=\"CustomPlayerEffects.StatusEffectBase?text=status+effect\" data-throw-if-not-resolved=\"false\"></xref> on the <xref href=\"PluginAPI.Core.Player\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: >-
@@ -304,7 +304,7 @@ items:
       description: The specified effect that will be looked for.
     return:
       type: '{T}'
-      description: The <see cref="!:StatusEffectBase"></see> instance of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, otherwise <xref uid="langword_csharp_null" name="null" href=""></xref>.
+      description: The <xref href="CustomPlayerEffects.StatusEffectBase" data-throw-if-not-resolved="false"></xref> instance of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, otherwise <xref uid="langword_csharp_null" name="null" href=""></xref>.
     content.vb: Public Function DisableEffect(Of T As StatusEffectBase) As T
   overload: PluginAPI.Core.EffectsManager.DisableEffect*
   nameWithType.vb: EffectsManager.DisableEffect(Of T)()
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -336,7 +336,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nGets a specific <see cref=\"!:StatusEffectBase\"></see>.\n"
+  summary: "\nGets a specific <xref href=\"CustomPlayerEffects.StatusEffectBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: >-
@@ -347,7 +347,7 @@ items:
       description: The specified effect that will be looked for.
     return:
       type: '{T}'
-      description: The <see cref="!:StatusEffectBase"></see> instance of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, otherwise <xref uid="langword_csharp_null" name="null" href=""></xref>.
+      description: The <xref href="CustomPlayerEffects.StatusEffectBase" data-throw-if-not-resolved="false"></xref> instance of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>, otherwise <xref uid="langword_csharp_null" name="null" href=""></xref>.
     content.vb: Public Function GetEffect(Of T As StatusEffectBase) As T
   overload: PluginAPI.Core.EffectsManager.GetEffect*
   nameWithType.vb: EffectsManager.GetEffect(Of T)()
@@ -371,7 +371,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -379,7 +379,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nAttempts to find a <see cref=\"!:StatusEffectBase\"></see> and safely casts it.\n"
+  summary: "\nAttempts to find a <xref href=\"CustomPlayerEffects.StatusEffectBase\" data-throw-if-not-resolved=\"false\"></xref> and safely casts it.\n"
   example: []
   syntax:
     content: >-
@@ -404,21 +404,21 @@ items:
   - Public
   fullName.vb: PluginAPI.Core.EffectsManager.TryGetEffect(Of T)(ByRef T)
   name.vb: TryGetEffect(Of T)(ByRef T)
-- uid: PluginAPI.Core.EffectsManager.TryGetEffect(System.String,StatusEffectBase@)
-  commentId: M:PluginAPI.Core.EffectsManager.TryGetEffect(System.String,StatusEffectBase@)
-  id: TryGetEffect(System.String,StatusEffectBase@)
+- uid: PluginAPI.Core.EffectsManager.TryGetEffect(System.String,CustomPlayerEffects.StatusEffectBase@)
+  commentId: M:PluginAPI.Core.EffectsManager.TryGetEffect(System.String,CustomPlayerEffects.StatusEffectBase@)
+  id: TryGetEffect(System.String,CustomPlayerEffects.StatusEffectBase@)
   parent: PluginAPI.Core.EffectsManager
   langs:
   - csharp
   - vb
   name: TryGetEffect(String, out StatusEffectBase)
   nameWithType: EffectsManager.TryGetEffect(String, out StatusEffectBase)
-  fullName: PluginAPI.Core.EffectsManager.TryGetEffect(System.String, out StatusEffectBase)
+  fullName: PluginAPI.Core.EffectsManager.TryGetEffect(System.String, out CustomPlayerEffects.StatusEffectBase)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/EffectsManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetEffect
     path: ../NwPluginAPI/Core/EffectsManager.cs
@@ -426,7 +426,7 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nAttempts to find a <see cref=\"!:StatusEffectBase\"></see> based on the input string.\n"
+  summary: "\nAttempts to find a <xref href=\"CustomPlayerEffects.StatusEffectBase\" data-throw-if-not-resolved=\"false\"></xref> based on the input string.\n"
   example: []
   syntax:
     content: public bool TryGetEffect(string effectName, out StatusEffectBase statusEffect)
@@ -435,7 +435,7 @@ items:
       type: System.String
       description: The string that will be used to lookup the effect.
     - id: statusEffect
-      type: StatusEffectBase
+      type: CustomPlayerEffects.StatusEffectBase
       description: The returned player effect, if any was found. Otherwise it will be null.
     return:
       type: System.Boolean
@@ -447,7 +447,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: PluginAPI.Core.EffectsManager.TryGetEffect(System.String, ByRef StatusEffectBase)
+  fullName.vb: PluginAPI.Core.EffectsManager.TryGetEffect(System.String, ByRef CustomPlayerEffects.StatusEffectBase)
   name.vb: TryGetEffect(String, ByRef StatusEffectBase)
 references:
 - uid: PluginAPI.Core
@@ -764,6 +764,13 @@ references:
   name: Player
   nameWithType: Player
   fullName: PluginAPI.Core.Player
+- uid: CustomPlayerEffects.StatusEffectBase
+  commentId: T:CustomPlayerEffects.StatusEffectBase
+  parent: CustomPlayerEffects
+  isExternal: true
+  name: StatusEffectBase
+  nameWithType: StatusEffectBase
+  fullName: CustomPlayerEffects.StatusEffectBase
 - uid: PluginAPI.Core.EffectsManager.ChangeState*
   commentId: Overload:PluginAPI.Core.EffectsManager.ChangeState
   name: ChangeState
@@ -796,6 +803,12 @@ references:
   name: T
   nameWithType: T
   fullName: T
+- uid: CustomPlayerEffects
+  commentId: N:CustomPlayerEffects
+  isExternal: true
+  name: CustomPlayerEffects
+  nameWithType: CustomPlayerEffects
+  fullName: CustomPlayerEffects
 - uid: T
   name: T
   nameWithType: T
@@ -807,11 +820,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: StatusEffectBase
-  isExternal: true
-  name: StatusEffectBase
-  nameWithType: StatusEffectBase
-  fullName: StatusEffectBase
 - uid: PluginAPI.Core.EffectsManager.DisableAllEffects*
   commentId: Overload:PluginAPI.Core.EffectsManager.DisableAllEffects
   name: DisableAllEffects

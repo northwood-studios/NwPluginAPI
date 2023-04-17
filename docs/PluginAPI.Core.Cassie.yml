@@ -8,12 +8,12 @@ items:
   - PluginAPI.Core.Cassie.CalculateDuration(System.String,System.Boolean)
   - PluginAPI.Core.Cassie.Clear
   - PluginAPI.Core.Cassie.ConvertNumber(System.Int32)
-  - PluginAPI.Core.Cassie.ConvertTeam(Team,System.String)
+  - PluginAPI.Core.Cassie.ConvertTeam(PlayerRoles.Team,System.String)
   - PluginAPI.Core.Cassie.GlitchyMessage(System.String,System.Single,System.Single)
   - PluginAPI.Core.Cassie.IsSpeaking
   - PluginAPI.Core.Cassie.IsValid(System.String)
   - PluginAPI.Core.Cassie.Message(System.String,System.Boolean,System.Boolean,System.Boolean)
-  - PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player,DamageHandlerBase)
+  - PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player,PlayerStatsSystem.DamageHandlerBase)
   - PluginAPI.Core.Cassie.VoiceLines
   langs:
   - csharp
@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Cassie
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsSpeaking
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: VoiceLines
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -119,11 +119,11 @@ items:
   summary: "\nGets a collection of CASSIE voice lines.\n"
   example: []
   syntax:
-    content: public static IEnumerable<VoiceLine> VoiceLines { get; }
+    content: public static IEnumerable<NineTailedFoxAnnouncer.VoiceLine> VoiceLines { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IEnumerable{VoiceLine}
-    content.vb: Public Shared ReadOnly Property VoiceLines As IEnumerable(Of VoiceLine)
+      type: System.Collections.Generic.IEnumerable{NineTailedFoxAnnouncer.VoiceLine}
+    content.vb: Public Shared ReadOnly Property VoiceLines As IEnumerable(Of NineTailedFoxAnnouncer.VoiceLine)
   overload: PluginAPI.Core.Cassie.VoiceLines*
   modifiers.csharp:
   - public
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Message
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -194,7 +194,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GlitchyMessage
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -238,7 +238,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Clear
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -272,7 +272,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CalculateDuration
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -301,21 +301,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Cassie.ConvertTeam(Team,System.String)
-  commentId: M:PluginAPI.Core.Cassie.ConvertTeam(Team,System.String)
-  id: ConvertTeam(Team,System.String)
+- uid: PluginAPI.Core.Cassie.ConvertTeam(PlayerRoles.Team,System.String)
+  commentId: M:PluginAPI.Core.Cassie.ConvertTeam(PlayerRoles.Team,System.String)
+  id: ConvertTeam(PlayerRoles.Team,System.String)
   parent: PluginAPI.Core.Cassie
   langs:
   - csharp
   - vb
   name: ConvertTeam(Team, String)
   nameWithType: Cassie.ConvertTeam(Team, String)
-  fullName: PluginAPI.Core.Cassie.ConvertTeam(Team, System.String)
+  fullName: PluginAPI.Core.Cassie.ConvertTeam(PlayerRoles.Team, System.String)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConvertTeam
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -329,7 +329,7 @@ items:
     content: public static string ConvertTeam(Team team, string unitName)
     parameters:
     - id: team
-      type: Team
+      type: PlayerRoles.Team
       description: The team.
     - id: unitName
       type: System.String
@@ -358,7 +358,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ConvertNumber
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsValid
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -424,21 +424,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player,DamageHandlerBase)
-  commentId: M:PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player,DamageHandlerBase)
-  id: ScpTermination(PluginAPI.Core.Player,DamageHandlerBase)
+- uid: PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player,PlayerStatsSystem.DamageHandlerBase)
+  commentId: M:PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player,PlayerStatsSystem.DamageHandlerBase)
+  id: ScpTermination(PluginAPI.Core.Player,PlayerStatsSystem.DamageHandlerBase)
   parent: PluginAPI.Core.Cassie
   langs:
   - csharp
   - vb
   name: ScpTermination(Player, DamageHandlerBase)
   nameWithType: Cassie.ScpTermination(Player, DamageHandlerBase)
-  fullName: PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player, DamageHandlerBase)
+  fullName: PluginAPI.Core.Cassie.ScpTermination(PluginAPI.Core.Player, PlayerStatsSystem.DamageHandlerBase)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Cassie.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ScpTermination
     path: ../NwPluginAPI/Core/Cassie.cs
@@ -455,7 +455,7 @@ items:
       type: PluginAPI.Core.Player
       description: The player.
     - id: info
-      type: DamageHandlerBase
+      type: PlayerStatsSystem.DamageHandlerBase
       description: The damage information.
     content.vb: Public Shared Sub ScpTermination(player As Player, info As DamageHandlerBase)
   overload: PluginAPI.Core.Cassie.ScpTermination*
@@ -780,16 +780,16 @@ references:
   name: VoiceLines
   nameWithType: Cassie.VoiceLines
   fullName: PluginAPI.Core.Cassie.VoiceLines
-- uid: System.Collections.Generic.IEnumerable{VoiceLine}
-  commentId: T:System.Collections.Generic.IEnumerable{VoiceLine}
+- uid: System.Collections.Generic.IEnumerable{NineTailedFoxAnnouncer.VoiceLine}
+  commentId: T:System.Collections.Generic.IEnumerable{NineTailedFoxAnnouncer.VoiceLine}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
-  name: IEnumerable<VoiceLine>
-  nameWithType: IEnumerable<VoiceLine>
-  fullName: System.Collections.Generic.IEnumerable<VoiceLine>
-  nameWithType.vb: IEnumerable(Of VoiceLine)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of VoiceLine)
-  name.vb: IEnumerable(Of VoiceLine)
+  name: IEnumerable<NineTailedFoxAnnouncer.VoiceLine>
+  nameWithType: IEnumerable<NineTailedFoxAnnouncer.VoiceLine>
+  fullName: System.Collections.Generic.IEnumerable<NineTailedFoxAnnouncer.VoiceLine>
+  nameWithType.vb: IEnumerable(Of NineTailedFoxAnnouncer.VoiceLine)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of NineTailedFoxAnnouncer.VoiceLine)
+  name.vb: IEnumerable(Of NineTailedFoxAnnouncer.VoiceLine)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
@@ -799,10 +799,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: VoiceLine
-    name: VoiceLine
-    nameWithType: VoiceLine
-    fullName: VoiceLine
+  - uid: NineTailedFoxAnnouncer.VoiceLine
+    name: NineTailedFoxAnnouncer.VoiceLine
+    nameWithType: NineTailedFoxAnnouncer.VoiceLine
+    fullName: NineTailedFoxAnnouncer.VoiceLine
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -816,10 +816,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: VoiceLine
-    name: VoiceLine
-    nameWithType: VoiceLine
-    fullName: VoiceLine
+  - uid: NineTailedFoxAnnouncer.VoiceLine
+    name: NineTailedFoxAnnouncer.VoiceLine
+    nameWithType: NineTailedFoxAnnouncer.VoiceLine
+    fullName: NineTailedFoxAnnouncer.VoiceLine
     isExternal: true
   - name: )
     nameWithType: )
@@ -908,11 +908,19 @@ references:
   name: ConvertTeam
   nameWithType: Cassie.ConvertTeam
   fullName: PluginAPI.Core.Cassie.ConvertTeam
-- uid: Team
+- uid: PlayerRoles.Team
+  commentId: T:PlayerRoles.Team
+  parent: PlayerRoles
   isExternal: true
   name: Team
   nameWithType: Team
-  fullName: Team
+  fullName: PlayerRoles.Team
+- uid: PlayerRoles
+  commentId: N:PlayerRoles
+  isExternal: true
+  name: PlayerRoles
+  nameWithType: PlayerRoles
+  fullName: PlayerRoles
 - uid: PluginAPI.Core.Cassie.ConvertNumber*
   commentId: Overload:PluginAPI.Core.Cassie.ConvertNumber
   name: ConvertNumber
@@ -941,8 +949,16 @@ references:
   name: Player
   nameWithType: Player
   fullName: PluginAPI.Core.Player
-- uid: DamageHandlerBase
+- uid: PlayerStatsSystem.DamageHandlerBase
+  commentId: T:PlayerStatsSystem.DamageHandlerBase
+  parent: PlayerStatsSystem
   isExternal: true
   name: DamageHandlerBase
   nameWithType: DamageHandlerBase
-  fullName: DamageHandlerBase
+  fullName: PlayerStatsSystem.DamageHandlerBase
+- uid: PlayerStatsSystem
+  commentId: N:PlayerStatsSystem
+  isExternal: true
+  name: PlayerStatsSystem
+  nameWithType: PlayerStatsSystem
+  fullName: PlayerStatsSystem

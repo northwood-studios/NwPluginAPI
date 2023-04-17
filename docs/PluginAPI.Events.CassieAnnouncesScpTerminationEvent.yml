@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  commentId: T:PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  id: CassieAnnouncesScpTerminationEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.CassieAnnouncesScpTerminationEvent.#ctor(ReferenceHub,PlayerStatsSystem.DamageHandlerBase,System.String)
+  - PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement
+  - PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType
+  - PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler
+  - PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player
+  langs:
+  - csharp
+  - vb
+  name: CassieAnnouncesScpTerminationEvent
+  nameWithType: CassieAnnouncesScpTerminationEvent
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CassieAnnouncesScpTerminationEvent
+    path: ../NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class CassieAnnouncesScpTerminationEvent : IEventArguments'
+    content.vb: >-
+      Public Class CassieAnnouncesScpTerminationEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType
+  commentId: P:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: CassieAnnouncesScpTerminationEvent.BaseType
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player
+  commentId: P:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player
+  id: Player
+  parent: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: CassieAnnouncesScpTerminationEvent.Player
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler
+  commentId: P:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler
+  id: DamageHandler
+  parent: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  langs:
+  - csharp
+  - vb
+  name: DamageHandler
+  nameWithType: CassieAnnouncesScpTerminationEvent.DamageHandler
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DamageHandler
+    path: ../NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public DamageHandlerBase DamageHandler { get; }
+    parameters: []
+    return:
+      type: PlayerStatsSystem.DamageHandlerBase
+    content.vb: Public ReadOnly Property DamageHandler As DamageHandlerBase
+  overload: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement
+  commentId: P:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement
+  id: Announcement
+  parent: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  langs:
+  - csharp
+  - vb
+  name: Announcement
+  nameWithType: CassieAnnouncesScpTerminationEvent.Announcement
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Announcement
+    path: ../NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public string Announcement { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Announcement As String
+  overload: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.#ctor(ReferenceHub,PlayerStatsSystem.DamageHandlerBase,System.String)
+  commentId: M:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.#ctor(ReferenceHub,PlayerStatsSystem.DamageHandlerBase,System.String)
+  id: '#ctor(ReferenceHub,PlayerStatsSystem.DamageHandlerBase,System.String)'
+  parent: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+  langs:
+  - csharp
+  - vb
+  name: CassieAnnouncesScpTerminationEvent(ReferenceHub, DamageHandlerBase, String)
+  nameWithType: CassieAnnouncesScpTerminationEvent.CassieAnnouncesScpTerminationEvent(ReferenceHub, DamageHandlerBase, String)
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.CassieAnnouncesScpTerminationEvent(ReferenceHub, PlayerStatsSystem.DamageHandlerBase, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/CassieAnnouncesScpTerminationEvent.cs
+    startLine: 41
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public CassieAnnouncesScpTerminationEvent(ReferenceHub hub, DamageHandlerBase handler, string announcement)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: handler
+      type: PlayerStatsSystem.DamageHandlerBase
+    - id: announcement
+      type: System.String
+    content.vb: Public Sub New(hub As ReferenceHub, handler As DamageHandlerBase, announcement As String)
+  overload: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType
+  name: BaseType
+  nameWithType: CassieAnnouncesScpTerminationEvent.BaseType
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player*
+  commentId: Overload:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player
+  name: Player
+  nameWithType: CassieAnnouncesScpTerminationEvent.Player
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler*
+  commentId: Overload:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler
+  name: DamageHandler
+  nameWithType: CassieAnnouncesScpTerminationEvent.DamageHandler
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.DamageHandler
+- uid: PlayerStatsSystem.DamageHandlerBase
+  commentId: T:PlayerStatsSystem.DamageHandlerBase
+  parent: PlayerStatsSystem
+  isExternal: true
+  name: DamageHandlerBase
+  nameWithType: DamageHandlerBase
+  fullName: PlayerStatsSystem.DamageHandlerBase
+- uid: PlayerStatsSystem
+  commentId: N:PlayerStatsSystem
+  isExternal: true
+  name: PlayerStatsSystem
+  nameWithType: PlayerStatsSystem
+  fullName: PlayerStatsSystem
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement*
+  commentId: Overload:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement
+  name: Announcement
+  nameWithType: CassieAnnouncesScpTerminationEvent.Announcement
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.Announcement
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.CassieAnnouncesScpTerminationEvent.#ctor
+  name: CassieAnnouncesScpTerminationEvent
+  nameWithType: CassieAnnouncesScpTerminationEvent.CassieAnnouncesScpTerminationEvent
+  fullName: PluginAPI.Events.CassieAnnouncesScpTerminationEvent.CassieAnnouncesScpTerminationEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

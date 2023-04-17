@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent
+  commentId: T:PluginAPI.Events.PlayerThrowProjectileEvent
+  id: PlayerThrowProjectileEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerThrowProjectileEvent.#ctor(ReferenceHub,InventorySystem.Items.ThrowableProjectiles.ThrowableItem,InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings,System.Boolean)
+  - PluginAPI.Events.PlayerThrowProjectileEvent.BaseType
+  - PluginAPI.Events.PlayerThrowProjectileEvent.FullForce
+  - PluginAPI.Events.PlayerThrowProjectileEvent.Item
+  - PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings
+  - PluginAPI.Events.PlayerThrowProjectileEvent.Thrower
+  langs:
+  - csharp
+  - vb
+  name: PlayerThrowProjectileEvent
+  nameWithType: PlayerThrowProjectileEvent
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerThrowProjectileEvent
+    path: ../NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerThrowProjectileEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerThrowProjectileEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerThrowProjectileEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerThrowProjectileEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerThrowProjectileEvent.BaseType
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerThrowProjectileEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.Thrower
+  commentId: P:PluginAPI.Events.PlayerThrowProjectileEvent.Thrower
+  id: Thrower
+  parent: PluginAPI.Events.PlayerThrowProjectileEvent
+  langs:
+  - csharp
+  - vb
+  name: Thrower
+  nameWithType: PlayerThrowProjectileEvent.Thrower
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.Thrower
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Thrower
+    path: ../NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Thrower { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Thrower As Player
+  overload: PluginAPI.Events.PlayerThrowProjectileEvent.Thrower*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.Item
+  commentId: P:PluginAPI.Events.PlayerThrowProjectileEvent.Item
+  id: Item
+  parent: PluginAPI.Events.PlayerThrowProjectileEvent
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: PlayerThrowProjectileEvent.Item
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.Item
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Item
+    path: ../NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ThrowableItem Item { get; }
+    parameters: []
+    return:
+      type: InventorySystem.Items.ThrowableProjectiles.ThrowableItem
+    content.vb: Public ReadOnly Property Item As ThrowableItem
+  overload: PluginAPI.Events.PlayerThrowProjectileEvent.Item*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings
+  commentId: P:PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings
+  id: ProjectileSettings
+  parent: PluginAPI.Events.PlayerThrowProjectileEvent
+  langs:
+  - csharp
+  - vb
+  name: ProjectileSettings
+  nameWithType: PlayerThrowProjectileEvent.ProjectileSettings
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ProjectileSettings
+    path: ../NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+    startLine: 39
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ThrowableItem.ProjectileSettings ProjectileSettings { get; }
+    parameters: []
+    return:
+      type: InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings
+    content.vb: Public ReadOnly Property ProjectileSettings As ThrowableItem.ProjectileSettings
+  overload: PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.FullForce
+  commentId: P:PluginAPI.Events.PlayerThrowProjectileEvent.FullForce
+  id: FullForce
+  parent: PluginAPI.Events.PlayerThrowProjectileEvent
+  langs:
+  - csharp
+  - vb
+  name: FullForce
+  nameWithType: PlayerThrowProjectileEvent.FullForce
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.FullForce
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: FullForce
+    path: ../NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+    startLine: 41
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public bool FullForce { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FullForce As Boolean
+  overload: PluginAPI.Events.PlayerThrowProjectileEvent.FullForce*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.#ctor(ReferenceHub,InventorySystem.Items.ThrowableProjectiles.ThrowableItem,InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings,System.Boolean)
+  commentId: M:PluginAPI.Events.PlayerThrowProjectileEvent.#ctor(ReferenceHub,InventorySystem.Items.ThrowableProjectiles.ThrowableItem,InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings,System.Boolean)
+  id: '#ctor(ReferenceHub,InventorySystem.Items.ThrowableProjectiles.ThrowableItem,InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings,System.Boolean)'
+  parent: PluginAPI.Events.PlayerThrowProjectileEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerThrowProjectileEvent(ReferenceHub, ThrowableItem, ThrowableItem.ProjectileSettings, Boolean)
+  nameWithType: PlayerThrowProjectileEvent.PlayerThrowProjectileEvent(ReferenceHub, ThrowableItem, ThrowableItem.ProjectileSettings, Boolean)
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.PlayerThrowProjectileEvent(ReferenceHub, InventorySystem.Items.ThrowableProjectiles.ThrowableItem, InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerThrowProjectileEvent.cs
+    startLine: 44
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerThrowProjectileEvent(ReferenceHub hub, ThrowableItem item, ThrowableItem.ProjectileSettings projectileSettings, bool fullForce)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: item
+      type: InventorySystem.Items.ThrowableProjectiles.ThrowableItem
+    - id: projectileSettings
+      type: InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings
+    - id: fullForce
+      type: System.Boolean
+    content.vb: Public Sub New(hub As ReferenceHub, item As ThrowableItem, projectileSettings As ThrowableItem.ProjectileSettings, fullForce As Boolean)
+  overload: PluginAPI.Events.PlayerThrowProjectileEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerThrowProjectileEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerThrowProjectileEvent.BaseType
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.Thrower*
+  commentId: Overload:PluginAPI.Events.PlayerThrowProjectileEvent.Thrower
+  name: Thrower
+  nameWithType: PlayerThrowProjectileEvent.Thrower
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.Thrower
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.Item*
+  commentId: Overload:PluginAPI.Events.PlayerThrowProjectileEvent.Item
+  name: Item
+  nameWithType: PlayerThrowProjectileEvent.Item
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.Item
+- uid: InventorySystem.Items.ThrowableProjectiles.ThrowableItem
+  commentId: T:InventorySystem.Items.ThrowableProjectiles.ThrowableItem
+  parent: InventorySystem.Items.ThrowableProjectiles
+  isExternal: true
+  name: ThrowableItem
+  nameWithType: ThrowableItem
+  fullName: InventorySystem.Items.ThrowableProjectiles.ThrowableItem
+- uid: InventorySystem.Items.ThrowableProjectiles
+  commentId: N:InventorySystem.Items.ThrowableProjectiles
+  isExternal: true
+  name: InventorySystem.Items.ThrowableProjectiles
+  nameWithType: InventorySystem.Items.ThrowableProjectiles
+  fullName: InventorySystem.Items.ThrowableProjectiles
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings*
+  commentId: Overload:PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings
+  name: ProjectileSettings
+  nameWithType: PlayerThrowProjectileEvent.ProjectileSettings
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.ProjectileSettings
+- uid: InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings
+  commentId: T:InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings
+  parent: InventorySystem.Items.ThrowableProjectiles
+  isExternal: true
+  name: ThrowableItem.ProjectileSettings
+  nameWithType: ThrowableItem.ProjectileSettings
+  fullName: InventorySystem.Items.ThrowableProjectiles.ThrowableItem.ProjectileSettings
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.FullForce*
+  commentId: Overload:PluginAPI.Events.PlayerThrowProjectileEvent.FullForce
+  name: FullForce
+  nameWithType: PlayerThrowProjectileEvent.FullForce
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.FullForce
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Events.PlayerThrowProjectileEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerThrowProjectileEvent.#ctor
+  name: PlayerThrowProjectileEvent
+  nameWithType: PlayerThrowProjectileEvent.PlayerThrowProjectileEvent
+  fullName: PluginAPI.Events.PlayerThrowProjectileEvent.PlayerThrowProjectileEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

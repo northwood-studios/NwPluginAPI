@@ -11,7 +11,7 @@ items:
   - PluginAPI.Core.Round.IsLocked
   - PluginAPI.Core.Round.IsRoundEnded
   - PluginAPI.Core.Round.IsRoundStarted
-  - PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,NextRoundAction)
+  - PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
   - PluginAPI.Core.Round.RestartSilently
   - PluginAPI.Core.Round.Start
   langs:
@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Round
     path: ../NwPluginAPI/Core/Round.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsRoundStarted
     path: ../NwPluginAPI/Core/Round.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsRoundEnded
     path: ../NwPluginAPI/Core/Round.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Round.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLobbyLocked
     path: ../NwPluginAPI/Core/Round.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Round.cs
@@ -247,21 +247,21 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,NextRoundAction)
-  commentId: M:PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,NextRoundAction)
-  id: Restart(System.Boolean,System.Boolean,NextRoundAction)
+- uid: PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
+  commentId: M:PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
+  id: Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
   parent: PluginAPI.Core.Round
   langs:
   - csharp
   - vb
-  name: Restart(Boolean, Boolean, NextRoundAction)
-  nameWithType: Round.Restart(Boolean, Boolean, NextRoundAction)
-  fullName: PluginAPI.Core.Round.Restart(System.Boolean, System.Boolean, NextRoundAction)
+  name: Restart(Boolean, Boolean, ServerStatic.NextRoundAction)
+  nameWithType: Round.Restart(Boolean, Boolean, ServerStatic.NextRoundAction)
+  fullName: PluginAPI.Core.Round.Restart(System.Boolean, System.Boolean, ServerStatic.NextRoundAction)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Round.cs
@@ -272,7 +272,7 @@ items:
   summary: "\nRestarts round.\n"
   example: []
   syntax:
-    content: public static void Restart(bool fastRestart = true, bool overrideRestartAction = false, NextRoundAction restartAction = null)
+    content: public static void Restart(bool fastRestart = true, bool overrideRestartAction = false, ServerStatic.NextRoundAction restartAction = ServerStatic.NextRoundAction.Restart)
     parameters:
     - id: fastRestart
       type: System.Boolean
@@ -281,9 +281,9 @@ items:
       type: System.Boolean
       description: Overrides stop next round action.
     - id: restartAction
-      type: NextRoundAction
+      type: ServerStatic.NextRoundAction
       description: The restart action.
-    content.vb: Public Shared Sub Restart(fastRestart As Boolean = True, overrideRestartAction As Boolean = False, restartAction As NextRoundAction = Nothing)
+    content.vb: Public Shared Sub Restart(fastRestart As Boolean = True, overrideRestartAction As Boolean = False, restartAction As ServerStatic.NextRoundAction = ServerStatic.NextRoundAction.Restart)
   overload: PluginAPI.Core.Round.Restart*
   modifiers.csharp:
   - public
@@ -305,7 +305,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RestartSilently
     path: ../NwPluginAPI/Core/Round.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Round.cs
@@ -373,7 +373,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: End
     path: ../NwPluginAPI/Core/Round.cs
@@ -738,12 +738,12 @@ references:
   name: Restart
   nameWithType: Round.Restart
   fullName: PluginAPI.Core.Round.Restart
-- uid: NextRoundAction
-  commentId: '!:NextRoundAction'
+- uid: ServerStatic.NextRoundAction
+  commentId: T:ServerStatic.NextRoundAction
   isExternal: true
-  name: NextRoundAction
-  nameWithType: NextRoundAction
-  fullName: NextRoundAction
+  name: ServerStatic.NextRoundAction
+  nameWithType: ServerStatic.NextRoundAction
+  fullName: ServerStatic.NextRoundAction
 - uid: PluginAPI.Core.Round.RestartSilently*
   commentId: Overload:PluginAPI.Core.Round.RestartSilently
   name: RestartSilently

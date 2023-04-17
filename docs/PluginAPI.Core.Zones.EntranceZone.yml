@@ -9,7 +9,7 @@ items:
   - PluginAPI.Core.Zones.EntranceZone.Doors
   - PluginAPI.Core.Zones.EntranceZone.GetRooms``1
   - PluginAPI.Core.Zones.EntranceZone.Rooms
-  - PluginAPI.Core.Zones.EntranceZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  - PluginAPI.Core.Zones.EntranceZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
   - PluginAPI.Core.Zones.EntranceZone.ZoneType
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EntranceZone
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZoneType
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
@@ -79,11 +79,11 @@ items:
   summary: "\nGets the zone type.\n"
   example: []
   syntax:
-    content: public override MapGeneration.FacilityZone ZoneType { get; }
+    content: public override FacilityZone ZoneType { get; }
     parameters: []
     return:
       type: MapGeneration.FacilityZone
-    content.vb: Public Overrides ReadOnly Property ZoneType As MapGeneration.FacilityZone
+    content.vb: Public Overrides ReadOnly Property ZoneType As FacilityZone
   overridden: PluginAPI.Core.Zones.FacilityZone.ZoneType
   overload: PluginAPI.Core.Zones.EntranceZone.ZoneType*
   modifiers.csharp:
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
@@ -218,21 +218,21 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: PluginAPI.Core.Zones.EntranceZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
-  commentId: M:PluginAPI.Core.Zones.EntranceZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
-  id: TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+- uid: PluginAPI.Core.Zones.EntranceZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  commentId: M:PluginAPI.Core.Zones.EntranceZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  id: TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
   parent: PluginAPI.Core.Zones.EntranceZone
   langs:
   - csharp
   - vb
   name: TryGetRoom(RoomIdentifier, out FacilityRoom)
   nameWithType: EntranceZone.TryGetRoom(RoomIdentifier, out FacilityRoom)
-  fullName: PluginAPI.Core.Zones.EntranceZone.TryGetRoom(RoomIdentifier, out PluginAPI.Core.Zones.FacilityRoom)
+  fullName: PluginAPI.Core.Zones.EntranceZone.TryGetRoom(MapGeneration.RoomIdentifier, out PluginAPI.Core.Zones.FacilityRoom)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetRoom
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
@@ -246,7 +246,7 @@ items:
     content: public override bool TryGetRoom(RoomIdentifier roomIdentity, out FacilityRoom room)
     parameters:
     - id: roomIdentity
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: The room identifier.
     - id: room
       type: PluginAPI.Core.Zones.FacilityRoom
@@ -255,7 +255,7 @@ items:
       type: System.Boolean
       description: Whether or not the room was found.
     content.vb: Public Overrides Function TryGetRoom(roomIdentity As RoomIdentifier, ByRef room As FacilityRoom) As Boolean
-  overridden: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  overridden: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
   overload: PluginAPI.Core.Zones.EntranceZone.TryGetRoom*
   nameWithType.vb: EntranceZone.TryGetRoom(RoomIdentifier, ByRef FacilityRoom)
   modifiers.csharp:
@@ -264,7 +264,7 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-  fullName.vb: PluginAPI.Core.Zones.EntranceZone.TryGetRoom(RoomIdentifier, ByRef PluginAPI.Core.Zones.FacilityRoom)
+  fullName.vb: PluginAPI.Core.Zones.EntranceZone.TryGetRoom(MapGeneration.RoomIdentifier, ByRef PluginAPI.Core.Zones.FacilityRoom)
   name.vb: TryGetRoom(RoomIdentifier, ByRef FacilityRoom)
 - uid: PluginAPI.Core.Zones.EntranceZone.#ctor
   commentId: M:PluginAPI.Core.Zones.EntranceZone.#ctor
@@ -280,7 +280,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
@@ -642,10 +642,18 @@ references:
   nameWithType: EntranceZone.ZoneType
   fullName: PluginAPI.Core.Zones.EntranceZone.ZoneType
 - uid: MapGeneration.FacilityZone
+  commentId: T:MapGeneration.FacilityZone
+  parent: MapGeneration
   isExternal: true
-  name: MapGeneration.FacilityZone
-  nameWithType: MapGeneration.FacilityZone
+  name: FacilityZone
+  nameWithType: FacilityZone
   fullName: MapGeneration.FacilityZone
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
 - uid: PluginAPI.Core.Zones.FacilityZone.GetRooms``1
   commentId: M:PluginAPI.Core.Zones.FacilityZone.GetRooms``1
   parent: PluginAPI.Core.Zones.FacilityZone
@@ -861,25 +869,25 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
-  commentId: M:PluginAPI.Core.Zones.FacilityZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+- uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  commentId: M:PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
   parent: PluginAPI.Core.Zones.FacilityZone
   isExternal: true
   name: TryGetRoom(RoomIdentifier, FacilityRoom)
   nameWithType: FacilityZone.TryGetRoom(RoomIdentifier, FacilityRoom)
-  fullName: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(RoomIdentifier, PluginAPI.Core.Zones.FacilityRoom)
+  fullName: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier, PluginAPI.Core.Zones.FacilityRoom)
   spec.csharp:
-  - uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  - uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
     name: TryGetRoom
     nameWithType: FacilityZone.TryGetRoom
     fullName: PluginAPI.Core.Zones.FacilityZone.TryGetRoom
   - name: (
     nameWithType: (
     fullName: (
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -892,17 +900,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
+  - uid: PluginAPI.Core.Zones.FacilityZone.TryGetRoom(MapGeneration.RoomIdentifier,PluginAPI.Core.Zones.FacilityRoom@)
     name: TryGetRoom
     nameWithType: FacilityZone.TryGetRoom
     fullName: PluginAPI.Core.Zones.FacilityZone.TryGetRoom
   - name: (
     nameWithType: (
     fullName: (
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -919,11 +927,13 @@ references:
   name: TryGetRoom
   nameWithType: EntranceZone.TryGetRoom
   fullName: PluginAPI.Core.Zones.EntranceZone.TryGetRoom
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
 - uid: PluginAPI.Core.Zones.FacilityRoom
   commentId: T:PluginAPI.Core.Zones.FacilityRoom
   parent: PluginAPI.Core.Zones

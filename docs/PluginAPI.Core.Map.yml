@@ -8,27 +8,27 @@ items:
   - PluginAPI.Core.Map.Broadcast(System.UInt16,System.String,Broadcast.BroadcastFlags,System.Boolean)
   - PluginAPI.Core.Map.Cameras
   - PluginAPI.Core.Map.ChangeColorOfAllLights(UnityEngine.Color,System.Single)
-  - PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,FacilityZone,System.Single)
-  - PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{FacilityZone},System.Single)
+  - PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,MapGeneration.FacilityZone,System.Single)
+  - PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone},System.Single)
   - PluginAPI.Core.Map.ClearBroadcasts
   - PluginAPI.Core.Map.DecontaminationStatus
   - PluginAPI.Core.Map.Elevators
   - PluginAPI.Core.Map.FlickerAllLights(System.Single)
-  - PluginAPI.Core.Map.FlickerLights(System.Single,FacilityZone)
-  - PluginAPI.Core.Map.FlickerLights(System.Single,System.Collections.Generic.IEnumerable{FacilityZone})
+  - PluginAPI.Core.Map.FlickerLights(System.Single,MapGeneration.FacilityZone)
+  - PluginAPI.Core.Map.FlickerLights(System.Single,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
   - PluginAPI.Core.Map.ForceDecontamination
   - PluginAPI.Core.Map.Generators
-  - PluginAPI.Core.Map.GetRandomRoom(FacilityZone)
+  - PluginAPI.Core.Map.GetRandomRoom(MapGeneration.FacilityZone)
   - PluginAPI.Core.Map.Lockers
   - PluginAPI.Core.Map.PocketDimensionTeleports
   - PluginAPI.Core.Map.ResetColorOfAllLights
-  - PluginAPI.Core.Map.ResetColorOfLights(FacilityZone)
+  - PluginAPI.Core.Map.ResetColorOfLights(MapGeneration.FacilityZone)
   - PluginAPI.Core.Map.Rooms
   - PluginAPI.Core.Map.Seed
   - PluginAPI.Core.Map.TeslaGates
   - PluginAPI.Core.Map.TurnOnAllLights
-  - PluginAPI.Core.Map.TurnOnLights(FacilityZone)
-  - PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable{FacilityZone})
+  - PluginAPI.Core.Map.TurnOnLights(MapGeneration.FacilityZone)
+  - PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
   langs:
   - csharp
   - vb
@@ -39,7 +39,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Map
     path: ../NwPluginAPI/Core/Map.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Seed
     path: ../NwPluginAPI/Core/Map.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Map.cs
@@ -136,7 +136,7 @@ items:
     content: public static IReadOnlyCollection<RoomIdentifier> Rooms { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IReadOnlyCollection{RoomIdentifier}
+      type: System.Collections.Generic.IReadOnlyCollection{MapGeneration.RoomIdentifier}
     content.vb: Public Shared ReadOnly Property Rooms As IReadOnlyCollection(Of RoomIdentifier)
   overload: PluginAPI.Core.Map.Rooms*
   modifiers.csharp:
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Cameras
     path: ../NwPluginAPI/Core/Map.cs
@@ -169,14 +169,14 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
-  summary: "\nGet the current <see cref=\"!:Scp079Camera\"></see>s of the map.\n"
+  summary: "\nGet the current <xref href=\"PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera\" data-throw-if-not-resolved=\"false\"></xref>s of the map.\n"
   remarks: "\nPlease avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.\n"
   example: []
   syntax:
     content: public static IReadOnlyCollection<Scp079Camera> Cameras { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IReadOnlyCollection{Scp079Camera}
+      type: System.Collections.Generic.IReadOnlyCollection{PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera}
     content.vb: Public Shared ReadOnly Property Cameras As IReadOnlyCollection(Of Scp079Camera)
   overload: PluginAPI.Core.Map.Cameras*
   modifiers.csharp:
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PocketDimensionTeleports
     path: ../NwPluginAPI/Core/Map.cs
@@ -241,7 +241,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Lockers
     path: ../NwPluginAPI/Core/Map.cs
@@ -256,7 +256,7 @@ items:
     content: public static IReadOnlyCollection<Locker> Lockers { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IReadOnlyCollection{Locker}
+      type: System.Collections.Generic.IReadOnlyCollection{MapGeneration.Distributors.Locker}
     content.vb: Public Shared ReadOnly Property Lockers As IReadOnlyCollection(Of Locker)
   overload: PluginAPI.Core.Map.Lockers*
   modifiers.csharp:
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Elevators
     path: ../NwPluginAPI/Core/Map.cs
@@ -296,7 +296,7 @@ items:
     content: public static IReadOnlyCollection<ElevatorChamber> Elevators { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IReadOnlyCollection{ElevatorChamber}
+      type: System.Collections.Generic.IReadOnlyCollection{Interactables.Interobjects.ElevatorChamber}
     content.vb: Public Shared ReadOnly Property Elevators As IReadOnlyCollection(Of ElevatorChamber)
   overload: PluginAPI.Core.Map.Elevators*
   modifiers.csharp:
@@ -321,7 +321,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TeslaGates
     path: ../NwPluginAPI/Core/Map.cs
@@ -361,7 +361,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Generators
     path: ../NwPluginAPI/Core/Map.cs
@@ -376,7 +376,7 @@ items:
     content: public static IReadOnlyCollection<Scp079Generator> Generators { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.IReadOnlyCollection{Scp079Generator}
+      type: System.Collections.Generic.IReadOnlyCollection{MapGeneration.Distributors.Scp079Generator}
     content.vb: Public Shared ReadOnly Property Generators As IReadOnlyCollection(Of Scp079Generator)
   overload: PluginAPI.Core.Map.Generators*
   modifiers.csharp:
@@ -401,7 +401,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Broadcast
     path: ../NwPluginAPI/Core/Map.cs
@@ -412,7 +412,7 @@ items:
   summary: "\nBroadcast a message to all <xref href=\"PluginAPI.Core.Player?text=players\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public static void Broadcast(ushort duration, string message, Broadcast.BroadcastFlags flag = null, bool clearPrevius = false)
+    content: public static void Broadcast(ushort duration, string message, Broadcast.BroadcastFlags flag = Broadcast.BroadcastFlags.Normal, bool clearPrevius = false)
     parameters:
     - id: duration
       type: System.UInt16
@@ -426,7 +426,7 @@ items:
     - id: clearPrevius
       type: System.Boolean
       description: Clear all player broadcast before sending this broadcast ?
-    content.vb: Public Shared Sub Broadcast(duration As UShort, message As String, flag As Broadcast.BroadcastFlags = Nothing, clearPrevius As Boolean = False)
+    content.vb: Public Shared Sub Broadcast(duration As UShort, message As String, flag As Broadcast.BroadcastFlags = Broadcast.BroadcastFlags.Normal, clearPrevius As Boolean = False)
   overload: PluginAPI.Core.Map.Broadcast*
   modifiers.csharp:
   - public
@@ -448,7 +448,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Map.cs
@@ -482,7 +482,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ForceDecontamination
     path: ../NwPluginAPI/Core/Map.cs
@@ -516,7 +516,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DecontaminationStatus
     path: ../NwPluginAPI/Core/Map.cs
@@ -530,7 +530,7 @@ items:
     content: public static DecontaminationController.DecontaminationStatus DecontaminationStatus { get; set; }
     parameters: []
     return:
-      type: DecontaminationController.DecontaminationStatus
+      type: LightContainmentZoneDecontamination.DecontaminationController.DecontaminationStatus
     content.vb: Public Shared Property DecontaminationStatus As DecontaminationController.DecontaminationStatus
   overload: PluginAPI.Core.Map.DecontaminationStatus*
   modifiers.csharp:
@@ -541,21 +541,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.GetRandomRoom(FacilityZone)
-  commentId: M:PluginAPI.Core.Map.GetRandomRoom(FacilityZone)
-  id: GetRandomRoom(FacilityZone)
+- uid: PluginAPI.Core.Map.GetRandomRoom(MapGeneration.FacilityZone)
+  commentId: M:PluginAPI.Core.Map.GetRandomRoom(MapGeneration.FacilityZone)
+  id: GetRandomRoom(MapGeneration.FacilityZone)
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
   name: GetRandomRoom(FacilityZone)
   nameWithType: Map.GetRandomRoom(FacilityZone)
-  fullName: PluginAPI.Core.Map.GetRandomRoom(FacilityZone)
+  fullName: PluginAPI.Core.Map.GetRandomRoom(MapGeneration.FacilityZone)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRandomRoom
     path: ../NwPluginAPI/Core/Map.cs
@@ -570,10 +570,10 @@ items:
     content: public static RoomIdentifier GetRandomRoom(FacilityZone zone)
     parameters:
     - id: zone
-      type: FacilityZone
+      type: MapGeneration.FacilityZone
     return:
-      type: RoomIdentifier
-      description: <see cref="!:RoomIdentifier"></see>
+      type: MapGeneration.RoomIdentifier
+      description: <xref href="MapGeneration.RoomIdentifier" data-throw-if-not-resolved="false"></xref>
     content.vb: Public Shared Function GetRandomRoom(zone As FacilityZone) As RoomIdentifier
   overload: PluginAPI.Core.Map.GetRandomRoom*
   modifiers.csharp:
@@ -582,21 +582,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.FlickerLights(System.Single,FacilityZone)
-  commentId: M:PluginAPI.Core.Map.FlickerLights(System.Single,FacilityZone)
-  id: FlickerLights(System.Single,FacilityZone)
+- uid: PluginAPI.Core.Map.FlickerLights(System.Single,MapGeneration.FacilityZone)
+  commentId: M:PluginAPI.Core.Map.FlickerLights(System.Single,MapGeneration.FacilityZone)
+  id: FlickerLights(System.Single,MapGeneration.FacilityZone)
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
   name: FlickerLights(Single, FacilityZone)
   nameWithType: Map.FlickerLights(Single, FacilityZone)
-  fullName: PluginAPI.Core.Map.FlickerLights(System.Single, FacilityZone)
+  fullName: PluginAPI.Core.Map.FlickerLights(System.Single, MapGeneration.FacilityZone)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FlickerLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -613,7 +613,7 @@ items:
       type: System.Single
       description: The duration in seconds of the blackout
     - id: zone
-      type: FacilityZone
+      type: MapGeneration.FacilityZone
       description: The area where the lights are off
     content.vb: Public Shared Sub FlickerLights(duration As Single, zone As FacilityZone)
   overload: PluginAPI.Core.Map.FlickerLights*
@@ -623,21 +623,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.FlickerLights(System.Single,System.Collections.Generic.IEnumerable{FacilityZone})
-  commentId: M:PluginAPI.Core.Map.FlickerLights(System.Single,System.Collections.Generic.IEnumerable{FacilityZone})
-  id: FlickerLights(System.Single,System.Collections.Generic.IEnumerable{FacilityZone})
+- uid: PluginAPI.Core.Map.FlickerLights(System.Single,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
+  commentId: M:PluginAPI.Core.Map.FlickerLights(System.Single,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
+  id: FlickerLights(System.Single,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
   name: FlickerLights(Single, IEnumerable<FacilityZone>)
   nameWithType: Map.FlickerLights(Single, IEnumerable<FacilityZone>)
-  fullName: PluginAPI.Core.Map.FlickerLights(System.Single, System.Collections.Generic.IEnumerable<FacilityZone>)
+  fullName: PluginAPI.Core.Map.FlickerLights(System.Single, System.Collections.Generic.IEnumerable<MapGeneration.FacilityZone>)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FlickerLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -654,7 +654,7 @@ items:
       type: System.Single
       description: The duration in seconds of the blackout
     - id: zones
-      type: System.Collections.Generic.IEnumerable{FacilityZone}
+      type: System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone}
       description: The areas where the lights will be turned off
     content.vb: Public Shared Sub FlickerLights(duration As Single, zones As IEnumerable(Of FacilityZone))
   overload: PluginAPI.Core.Map.FlickerLights*
@@ -665,7 +665,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: PluginAPI.Core.Map.FlickerLights(System.Single, System.Collections.Generic.IEnumerable(Of FacilityZone))
+  fullName.vb: PluginAPI.Core.Map.FlickerLights(System.Single, System.Collections.Generic.IEnumerable(Of MapGeneration.FacilityZone))
   name.vb: FlickerLights(Single, IEnumerable(Of FacilityZone))
 - uid: PluginAPI.Core.Map.FlickerAllLights(System.Single)
   commentId: M:PluginAPI.Core.Map.FlickerAllLights(System.Single)
@@ -681,7 +681,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FlickerAllLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -719,7 +719,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TurnOnAllLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -739,21 +739,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.TurnOnLights(FacilityZone)
-  commentId: M:PluginAPI.Core.Map.TurnOnLights(FacilityZone)
-  id: TurnOnLights(FacilityZone)
+- uid: PluginAPI.Core.Map.TurnOnLights(MapGeneration.FacilityZone)
+  commentId: M:PluginAPI.Core.Map.TurnOnLights(MapGeneration.FacilityZone)
+  id: TurnOnLights(MapGeneration.FacilityZone)
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
   name: TurnOnLights(FacilityZone)
   nameWithType: Map.TurnOnLights(FacilityZone)
-  fullName: PluginAPI.Core.Map.TurnOnLights(FacilityZone)
+  fullName: PluginAPI.Core.Map.TurnOnLights(MapGeneration.FacilityZone)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TurnOnLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -767,7 +767,7 @@ items:
     content: public static void TurnOnLights(FacilityZone zone)
     parameters:
     - id: zone
-      type: FacilityZone
+      type: MapGeneration.FacilityZone
       description: The area where the lights off will be switched on
     content.vb: Public Shared Sub TurnOnLights(zone As FacilityZone)
   overload: PluginAPI.Core.Map.TurnOnLights*
@@ -777,21 +777,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable{FacilityZone})
-  commentId: M:PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable{FacilityZone})
-  id: TurnOnLights(System.Collections.Generic.IEnumerable{FacilityZone})
+- uid: PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
+  commentId: M:PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
+  id: TurnOnLights(System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone})
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
   name: TurnOnLights(IEnumerable<FacilityZone>)
   nameWithType: Map.TurnOnLights(IEnumerable<FacilityZone>)
-  fullName: PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable<FacilityZone>)
+  fullName: PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable<MapGeneration.FacilityZone>)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TurnOnLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -805,7 +805,7 @@ items:
     content: public static void TurnOnLights(IEnumerable<FacilityZone> zones)
     parameters:
     - id: zones
-      type: System.Collections.Generic.IEnumerable{FacilityZone}
+      type: System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone}
       description: The areas where the lights off will be switched on
     content.vb: Public Shared Sub TurnOnLights(zones As IEnumerable(Of FacilityZone))
   overload: PluginAPI.Core.Map.TurnOnLights*
@@ -816,7 +816,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable(Of FacilityZone))
+  fullName.vb: PluginAPI.Core.Map.TurnOnLights(System.Collections.Generic.IEnumerable(Of MapGeneration.FacilityZone))
   name.vb: TurnOnLights(IEnumerable(Of FacilityZone))
 - uid: PluginAPI.Core.Map.ChangeColorOfAllLights(UnityEngine.Color,System.Single)
   commentId: M:PluginAPI.Core.Map.ChangeColorOfAllLights(UnityEngine.Color,System.Single)
@@ -825,14 +825,14 @@ items:
   langs:
   - csharp
   - vb
-  name: ChangeColorOfAllLights(UnityEngine.Color, Single)
-  nameWithType: Map.ChangeColorOfAllLights(UnityEngine.Color, Single)
+  name: ChangeColorOfAllLights(Color, Single)
+  nameWithType: Map.ChangeColorOfAllLights(Color, Single)
   fullName: PluginAPI.Core.Map.ChangeColorOfAllLights(UnityEngine.Color, System.Single)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChangeColorOfAllLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -843,15 +843,15 @@ items:
   summary: "\nChanges the color of all lights on the map\n"
   example: []
   syntax:
-    content: public static void ChangeColorOfAllLights(UnityEngine.Color color, float intensity = 0F)
+    content: public static void ChangeColorOfAllLights(Color color, float intensity = 0F)
     parameters:
     - id: color
       type: UnityEngine.Color
-      description: <see cref="!:UnityEngine.Color"></see> of the lights
+      description: <xref href="UnityEngine.Color" data-throw-if-not-resolved="false"></xref> of the lights
     - id: intensity
       type: System.Single
       description: Light intensity
-    content.vb: Public Shared Sub ChangeColorOfAllLights(color As UnityEngine.Color, intensity As Single = 0F)
+    content.vb: Public Shared Sub ChangeColorOfAllLights(color As Color, intensity As Single = 0F)
   overload: PluginAPI.Core.Map.ChangeColorOfAllLights*
   modifiers.csharp:
   - public
@@ -859,21 +859,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,FacilityZone,System.Single)
-  commentId: M:PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,FacilityZone,System.Single)
-  id: ChangeColorOfLights(UnityEngine.Color,FacilityZone,System.Single)
+- uid: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,MapGeneration.FacilityZone,System.Single)
+  commentId: M:PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,MapGeneration.FacilityZone,System.Single)
+  id: ChangeColorOfLights(UnityEngine.Color,MapGeneration.FacilityZone,System.Single)
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
-  name: ChangeColorOfLights(UnityEngine.Color, FacilityZone, Single)
-  nameWithType: Map.ChangeColorOfLights(UnityEngine.Color, FacilityZone, Single)
-  fullName: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color, FacilityZone, System.Single)
+  name: ChangeColorOfLights(Color, FacilityZone, Single)
+  nameWithType: Map.ChangeColorOfLights(Color, FacilityZone, Single)
+  fullName: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color, MapGeneration.FacilityZone, System.Single)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChangeColorOfLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -884,15 +884,15 @@ items:
   summary: "\nChanges the color of the lights in a specific zone\n"
   example: []
   syntax:
-    content: public static void ChangeColorOfLights(UnityEngine.Color color, FacilityZone zone, float intensity = 0F)
+    content: public static void ChangeColorOfLights(Color color, FacilityZone zone, float intensity = 0F)
     parameters:
     - id: color
       type: UnityEngine.Color
     - id: zone
-      type: FacilityZone
+      type: MapGeneration.FacilityZone
     - id: intensity
       type: System.Single
-    content.vb: Public Shared Sub ChangeColorOfLights(color As UnityEngine.Color, zone As FacilityZone, intensity As Single = 0F)
+    content.vb: Public Shared Sub ChangeColorOfLights(color As Color, zone As FacilityZone, intensity As Single = 0F)
   overload: PluginAPI.Core.Map.ChangeColorOfLights*
   modifiers.csharp:
   - public
@@ -900,21 +900,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{FacilityZone},System.Single)
-  commentId: M:PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{FacilityZone},System.Single)
-  id: ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{FacilityZone},System.Single)
+- uid: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone},System.Single)
+  commentId: M:PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone},System.Single)
+  id: ChangeColorOfLights(UnityEngine.Color,System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone},System.Single)
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
-  name: ChangeColorOfLights(UnityEngine.Color, IEnumerable<FacilityZone>, Single)
-  nameWithType: Map.ChangeColorOfLights(UnityEngine.Color, IEnumerable<FacilityZone>, Single)
-  fullName: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color, System.Collections.Generic.IEnumerable<FacilityZone>, System.Single)
+  name: ChangeColorOfLights(Color, IEnumerable<FacilityZone>, Single)
+  nameWithType: Map.ChangeColorOfLights(Color, IEnumerable<FacilityZone>, Single)
+  fullName: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color, System.Collections.Generic.IEnumerable<MapGeneration.FacilityZone>, System.Single)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ChangeColorOfLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -925,25 +925,25 @@ items:
   summary: "\nChanges the color of the lights in a specific zones\n"
   example: []
   syntax:
-    content: public static void ChangeColorOfLights(UnityEngine.Color color, IEnumerable<FacilityZone> zones, float intensity = 0F)
+    content: public static void ChangeColorOfLights(Color color, IEnumerable<FacilityZone> zones, float intensity = 0F)
     parameters:
     - id: color
       type: UnityEngine.Color
     - id: zones
-      type: System.Collections.Generic.IEnumerable{FacilityZone}
+      type: System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone}
     - id: intensity
       type: System.Single
-    content.vb: Public Shared Sub ChangeColorOfLights(color As UnityEngine.Color, zones As IEnumerable(Of FacilityZone), intensity As Single = 0F)
+    content.vb: Public Shared Sub ChangeColorOfLights(color As Color, zones As IEnumerable(Of FacilityZone), intensity As Single = 0F)
   overload: PluginAPI.Core.Map.ChangeColorOfLights*
-  nameWithType.vb: Map.ChangeColorOfLights(UnityEngine.Color, IEnumerable(Of FacilityZone), Single)
+  nameWithType.vb: Map.ChangeColorOfLights(Color, IEnumerable(Of FacilityZone), Single)
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color, System.Collections.Generic.IEnumerable(Of FacilityZone), System.Single)
-  name.vb: ChangeColorOfLights(UnityEngine.Color, IEnumerable(Of FacilityZone), Single)
+  fullName.vb: PluginAPI.Core.Map.ChangeColorOfLights(UnityEngine.Color, System.Collections.Generic.IEnumerable(Of MapGeneration.FacilityZone), System.Single)
+  name.vb: ChangeColorOfLights(Color, IEnumerable(Of FacilityZone), Single)
 - uid: PluginAPI.Core.Map.ResetColorOfAllLights
   commentId: M:PluginAPI.Core.Map.ResetColorOfAllLights
   id: ResetColorOfAllLights
@@ -958,7 +958,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ResetColorOfAllLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -978,21 +978,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Map.ResetColorOfLights(FacilityZone)
-  commentId: M:PluginAPI.Core.Map.ResetColorOfLights(FacilityZone)
-  id: ResetColorOfLights(FacilityZone)
+- uid: PluginAPI.Core.Map.ResetColorOfLights(MapGeneration.FacilityZone)
+  commentId: M:PluginAPI.Core.Map.ResetColorOfLights(MapGeneration.FacilityZone)
+  id: ResetColorOfLights(MapGeneration.FacilityZone)
   parent: PluginAPI.Core.Map
   langs:
   - csharp
   - vb
   name: ResetColorOfLights(FacilityZone)
   nameWithType: Map.ResetColorOfLights(FacilityZone)
-  fullName: PluginAPI.Core.Map.ResetColorOfLights(FacilityZone)
+  fullName: PluginAPI.Core.Map.ResetColorOfLights(MapGeneration.FacilityZone)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Map.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ResetColorOfLights
     path: ../NwPluginAPI/Core/Map.cs
@@ -1006,7 +1006,7 @@ items:
     content: public static void ResetColorOfLights(FacilityZone zone)
     parameters:
     - id: zone
-      type: FacilityZone
+      type: MapGeneration.FacilityZone
       description: Facilty zone
     content.vb: Public Shared Sub ResetColorOfLights(zone As FacilityZone)
   overload: PluginAPI.Core.Map.ResetColorOfLights*
@@ -1331,15 +1331,15 @@ references:
   name: Rooms
   nameWithType: Map.Rooms
   fullName: PluginAPI.Core.Map.Rooms
-- uid: System.Collections.Generic.IReadOnlyCollection{RoomIdentifier}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{RoomIdentifier}
+- uid: System.Collections.Generic.IReadOnlyCollection{MapGeneration.RoomIdentifier}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{MapGeneration.RoomIdentifier}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyCollection`1
   name: IReadOnlyCollection<RoomIdentifier>
   nameWithType: IReadOnlyCollection<RoomIdentifier>
-  fullName: System.Collections.Generic.IReadOnlyCollection<RoomIdentifier>
+  fullName: System.Collections.Generic.IReadOnlyCollection<MapGeneration.RoomIdentifier>
   nameWithType.vb: IReadOnlyCollection(Of RoomIdentifier)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of RoomIdentifier)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of MapGeneration.RoomIdentifier)
   name.vb: IReadOnlyCollection(Of RoomIdentifier)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
@@ -1350,10 +1350,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1367,10 +1367,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: )
     nameWithType: )
@@ -1420,20 +1420,27 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera
+  commentId: T:PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera
+  parent: PlayerRoles.PlayableScps.Scp079.Cameras
+  isExternal: true
+  name: Scp079Camera
+  nameWithType: Scp079Camera
+  fullName: PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera
 - uid: PluginAPI.Core.Map.Cameras*
   commentId: Overload:PluginAPI.Core.Map.Cameras
   name: Cameras
   nameWithType: Map.Cameras
   fullName: PluginAPI.Core.Map.Cameras
-- uid: System.Collections.Generic.IReadOnlyCollection{Scp079Camera}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{Scp079Camera}
+- uid: System.Collections.Generic.IReadOnlyCollection{PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyCollection`1
   name: IReadOnlyCollection<Scp079Camera>
   nameWithType: IReadOnlyCollection<Scp079Camera>
-  fullName: System.Collections.Generic.IReadOnlyCollection<Scp079Camera>
+  fullName: System.Collections.Generic.IReadOnlyCollection<PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera>
   nameWithType.vb: IReadOnlyCollection(Of Scp079Camera)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Scp079Camera)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera)
   name.vb: IReadOnlyCollection(Of Scp079Camera)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
@@ -1444,10 +1451,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Scp079Camera
+  - uid: PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera
     name: Scp079Camera
     nameWithType: Scp079Camera
-    fullName: Scp079Camera
+    fullName: PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1461,14 +1468,20 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Scp079Camera
+  - uid: PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera
     name: Scp079Camera
     nameWithType: Scp079Camera
-    fullName: Scp079Camera
+    fullName: PlayerRoles.PlayableScps.Scp079.Cameras.Scp079Camera
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: PlayerRoles.PlayableScps.Scp079.Cameras
+  commentId: N:PlayerRoles.PlayableScps.Scp079.Cameras
+  isExternal: true
+  name: PlayerRoles.PlayableScps.Scp079.Cameras
+  nameWithType: PlayerRoles.PlayableScps.Scp079.Cameras
+  fullName: PlayerRoles.PlayableScps.Scp079.Cameras
 - uid: PluginAPI.Core.Map.PocketDimensionTeleports*
   commentId: Overload:PluginAPI.Core.Map.PocketDimensionTeleports
   name: PocketDimensionTeleports
@@ -1523,15 +1536,15 @@ references:
   name: Lockers
   nameWithType: Map.Lockers
   fullName: PluginAPI.Core.Map.Lockers
-- uid: System.Collections.Generic.IReadOnlyCollection{Locker}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{Locker}
+- uid: System.Collections.Generic.IReadOnlyCollection{MapGeneration.Distributors.Locker}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{MapGeneration.Distributors.Locker}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyCollection`1
   name: IReadOnlyCollection<Locker>
   nameWithType: IReadOnlyCollection<Locker>
-  fullName: System.Collections.Generic.IReadOnlyCollection<Locker>
+  fullName: System.Collections.Generic.IReadOnlyCollection<MapGeneration.Distributors.Locker>
   nameWithType.vb: IReadOnlyCollection(Of Locker)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Locker)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of MapGeneration.Distributors.Locker)
   name.vb: IReadOnlyCollection(Of Locker)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
@@ -1542,10 +1555,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Locker
+  - uid: MapGeneration.Distributors.Locker
     name: Locker
     nameWithType: Locker
-    fullName: Locker
+    fullName: MapGeneration.Distributors.Locker
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1559,10 +1572,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Locker
+  - uid: MapGeneration.Distributors.Locker
     name: Locker
     nameWithType: Locker
-    fullName: Locker
+    fullName: MapGeneration.Distributors.Locker
     isExternal: true
   - name: )
     nameWithType: )
@@ -1572,15 +1585,15 @@ references:
   name: Elevators
   nameWithType: Map.Elevators
   fullName: PluginAPI.Core.Map.Elevators
-- uid: System.Collections.Generic.IReadOnlyCollection{ElevatorChamber}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{ElevatorChamber}
+- uid: System.Collections.Generic.IReadOnlyCollection{Interactables.Interobjects.ElevatorChamber}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{Interactables.Interobjects.ElevatorChamber}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyCollection`1
   name: IReadOnlyCollection<ElevatorChamber>
   nameWithType: IReadOnlyCollection<ElevatorChamber>
-  fullName: System.Collections.Generic.IReadOnlyCollection<ElevatorChamber>
+  fullName: System.Collections.Generic.IReadOnlyCollection<Interactables.Interobjects.ElevatorChamber>
   nameWithType.vb: IReadOnlyCollection(Of ElevatorChamber)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of ElevatorChamber)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Interactables.Interobjects.ElevatorChamber)
   name.vb: IReadOnlyCollection(Of ElevatorChamber)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
@@ -1591,10 +1604,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: ElevatorChamber
+  - uid: Interactables.Interobjects.ElevatorChamber
     name: ElevatorChamber
     nameWithType: ElevatorChamber
-    fullName: ElevatorChamber
+    fullName: Interactables.Interobjects.ElevatorChamber
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1608,10 +1621,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: ElevatorChamber
+  - uid: Interactables.Interobjects.ElevatorChamber
     name: ElevatorChamber
     nameWithType: ElevatorChamber
-    fullName: ElevatorChamber
+    fullName: Interactables.Interobjects.ElevatorChamber
     isExternal: true
   - name: )
     nameWithType: )
@@ -1670,15 +1683,15 @@ references:
   name: Generators
   nameWithType: Map.Generators
   fullName: PluginAPI.Core.Map.Generators
-- uid: System.Collections.Generic.IReadOnlyCollection{Scp079Generator}
-  commentId: T:System.Collections.Generic.IReadOnlyCollection{Scp079Generator}
+- uid: System.Collections.Generic.IReadOnlyCollection{MapGeneration.Distributors.Scp079Generator}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{MapGeneration.Distributors.Scp079Generator}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IReadOnlyCollection`1
   name: IReadOnlyCollection<Scp079Generator>
   nameWithType: IReadOnlyCollection<Scp079Generator>
-  fullName: System.Collections.Generic.IReadOnlyCollection<Scp079Generator>
+  fullName: System.Collections.Generic.IReadOnlyCollection<MapGeneration.Distributors.Scp079Generator>
   nameWithType.vb: IReadOnlyCollection(Of Scp079Generator)
-  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Scp079Generator)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of MapGeneration.Distributors.Scp079Generator)
   name.vb: IReadOnlyCollection(Of Scp079Generator)
   spec.csharp:
   - uid: System.Collections.Generic.IReadOnlyCollection`1
@@ -1689,10 +1702,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Scp079Generator
+  - uid: MapGeneration.Distributors.Scp079Generator
     name: Scp079Generator
     nameWithType: Scp079Generator
-    fullName: Scp079Generator
+    fullName: MapGeneration.Distributors.Scp079Generator
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1706,10 +1719,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Scp079Generator
+  - uid: MapGeneration.Distributors.Scp079Generator
     name: Scp079Generator
     nameWithType: Scp079Generator
-    fullName: Scp079Generator
+    fullName: MapGeneration.Distributors.Scp079Generator
     isExternal: true
   - name: )
     nameWithType: )
@@ -1740,7 +1753,7 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: Broadcast.BroadcastFlags
-  commentId: '!:Broadcast.BroadcastFlags'
+  commentId: T:Broadcast.BroadcastFlags
   isExternal: true
   name: Broadcast.BroadcastFlags
   nameWithType: Broadcast.BroadcastFlags
@@ -1770,27 +1783,44 @@ references:
   name: DecontaminationStatus
   nameWithType: Map.DecontaminationStatus
   fullName: PluginAPI.Core.Map.DecontaminationStatus
-- uid: DecontaminationController.DecontaminationStatus
-  commentId: '!:DecontaminationController.DecontaminationStatus'
+- uid: LightContainmentZoneDecontamination.DecontaminationController.DecontaminationStatus
+  commentId: T:LightContainmentZoneDecontamination.DecontaminationController.DecontaminationStatus
+  parent: LightContainmentZoneDecontamination
   isExternal: true
   name: DecontaminationController.DecontaminationStatus
   nameWithType: DecontaminationController.DecontaminationStatus
-  fullName: DecontaminationController.DecontaminationStatus
+  fullName: LightContainmentZoneDecontamination.DecontaminationController.DecontaminationStatus
+- uid: LightContainmentZoneDecontamination
+  commentId: N:LightContainmentZoneDecontamination
+  isExternal: true
+  name: LightContainmentZoneDecontamination
+  nameWithType: LightContainmentZoneDecontamination
+  fullName: LightContainmentZoneDecontamination
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
+  isExternal: true
+  name: RoomIdentifier
+  nameWithType: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
 - uid: PluginAPI.Core.Map.GetRandomRoom*
   commentId: Overload:PluginAPI.Core.Map.GetRandomRoom
   name: GetRandomRoom
   nameWithType: Map.GetRandomRoom
   fullName: PluginAPI.Core.Map.GetRandomRoom
-- uid: FacilityZone
+- uid: MapGeneration.FacilityZone
+  commentId: T:MapGeneration.FacilityZone
+  parent: MapGeneration
   isExternal: true
   name: FacilityZone
   nameWithType: FacilityZone
-  fullName: FacilityZone
-- uid: RoomIdentifier
+  fullName: MapGeneration.FacilityZone
+- uid: MapGeneration
+  commentId: N:MapGeneration
   isExternal: true
-  name: RoomIdentifier
-  nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
 - uid: PluginAPI.Core.Map.FlickerLights*
   commentId: Overload:PluginAPI.Core.Map.FlickerLights
   name: FlickerLights
@@ -1803,15 +1833,15 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: System.Collections.Generic.IEnumerable{FacilityZone}
-  commentId: T:System.Collections.Generic.IEnumerable{FacilityZone}
+- uid: System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone}
+  commentId: T:System.Collections.Generic.IEnumerable{MapGeneration.FacilityZone}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<FacilityZone>
   nameWithType: IEnumerable<FacilityZone>
-  fullName: System.Collections.Generic.IEnumerable<FacilityZone>
+  fullName: System.Collections.Generic.IEnumerable<MapGeneration.FacilityZone>
   nameWithType.vb: IEnumerable(Of FacilityZone)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of FacilityZone)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of MapGeneration.FacilityZone)
   name.vb: IEnumerable(Of FacilityZone)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -1822,10 +1852,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: FacilityZone
+  - uid: MapGeneration.FacilityZone
     name: FacilityZone
     nameWithType: FacilityZone
-    fullName: FacilityZone
+    fullName: MapGeneration.FacilityZone
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -1839,10 +1869,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: FacilityZone
+  - uid: MapGeneration.FacilityZone
     name: FacilityZone
     nameWithType: FacilityZone
-    fullName: FacilityZone
+    fullName: MapGeneration.FacilityZone
     isExternal: true
   - name: )
     nameWithType: )
@@ -1901,16 +1931,24 @@ references:
   name: TurnOnLights
   nameWithType: Map.TurnOnLights
   fullName: PluginAPI.Core.Map.TurnOnLights
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
 - uid: PluginAPI.Core.Map.ChangeColorOfAllLights*
   commentId: Overload:PluginAPI.Core.Map.ChangeColorOfAllLights
   name: ChangeColorOfAllLights
   nameWithType: Map.ChangeColorOfAllLights
   fullName: PluginAPI.Core.Map.ChangeColorOfAllLights
-- uid: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
   isExternal: true
-  name: UnityEngine.Color
-  nameWithType: UnityEngine.Color
-  fullName: UnityEngine.Color
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
 - uid: PluginAPI.Core.Map.ChangeColorOfLights*
   commentId: Overload:PluginAPI.Core.Map.ChangeColorOfLights
   name: ChangeColorOfLights

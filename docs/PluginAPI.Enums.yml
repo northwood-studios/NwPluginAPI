@@ -7,6 +7,7 @@ items:
   - PluginAPI.Enums.CommandType
   - PluginAPI.Enums.LoadPriority
   - PluginAPI.Enums.LogType
+  - PluginAPI.Enums.RoleRegisterType
   - PluginAPI.Enums.ServerEventType
   langs:
   - csharp
@@ -36,6 +37,12 @@ references:
   name: LogType
   nameWithType: LogType
   fullName: PluginAPI.Enums.LogType
+- uid: PluginAPI.Enums.RoleRegisterType
+  commentId: T:PluginAPI.Enums.RoleRegisterType
+  parent: PluginAPI.Enums
+  name: RoleRegisterType
+  nameWithType: RoleRegisterType
+  fullName: PluginAPI.Enums.RoleRegisterType
 - uid: PluginAPI.Enums.ServerEventType
   commentId: T:PluginAPI.Enums.ServerEventType
   parent: PluginAPI.Enums

@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerChangeRoleEvent
+  commentId: T:PluginAPI.Events.PlayerChangeRoleEvent
+  id: PlayerChangeRoleEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerChangeRoleEvent.#ctor(ReferenceHub,PlayerRoles.PlayerRoleBase,PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  - PluginAPI.Events.PlayerChangeRoleEvent.BaseType
+  - PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason
+  - PluginAPI.Events.PlayerChangeRoleEvent.NewRole
+  - PluginAPI.Events.PlayerChangeRoleEvent.OldRole
+  - PluginAPI.Events.PlayerChangeRoleEvent.Player
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeRoleEvent
+  nameWithType: PlayerChangeRoleEvent
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerChangeRoleEvent
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerChangeRoleEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerChangeRoleEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerChangeRoleEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerChangeRoleEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerChangeRoleEvent.BaseType
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerChangeRoleEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.Player
+  commentId: P:PluginAPI.Events.PlayerChangeRoleEvent.Player
+  id: Player
+  parent: PluginAPI.Events.PlayerChangeRoleEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: PlayerChangeRoleEvent.Player
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.PlayerChangeRoleEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.OldRole
+  commentId: P:PluginAPI.Events.PlayerChangeRoleEvent.OldRole
+  id: OldRole
+  parent: PluginAPI.Events.PlayerChangeRoleEvent
+  langs:
+  - csharp
+  - vb
+  name: OldRole
+  nameWithType: PlayerChangeRoleEvent.OldRole
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.OldRole
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OldRole
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerRoleBase OldRole { get; }
+    parameters: []
+    return:
+      type: PlayerRoles.PlayerRoleBase
+    content.vb: Public ReadOnly Property OldRole As PlayerRoleBase
+  overload: PluginAPI.Events.PlayerChangeRoleEvent.OldRole*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.NewRole
+  commentId: P:PluginAPI.Events.PlayerChangeRoleEvent.NewRole
+  id: NewRole
+  parent: PluginAPI.Events.PlayerChangeRoleEvent
+  langs:
+  - csharp
+  - vb
+  name: NewRole
+  nameWithType: PlayerChangeRoleEvent.NewRole
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.NewRole
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: NewRole
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public RoleTypeId NewRole { get; set; }
+    parameters: []
+    return:
+      type: PlayerRoles.RoleTypeId
+    content.vb: Public Property NewRole As RoleTypeId
+  overload: PluginAPI.Events.PlayerChangeRoleEvent.NewRole*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason
+  commentId: P:PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason
+  id: ChangeReason
+  parent: PluginAPI.Events.PlayerChangeRoleEvent
+  langs:
+  - csharp
+  - vb
+  name: ChangeReason
+  nameWithType: PlayerChangeRoleEvent.ChangeReason
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ChangeReason
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public RoleChangeReason ChangeReason { get; }
+    parameters: []
+    return:
+      type: PlayerRoles.RoleChangeReason
+    content.vb: Public ReadOnly Property ChangeReason As RoleChangeReason
+  overload: PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.#ctor(ReferenceHub,PlayerRoles.PlayerRoleBase,PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  commentId: M:PluginAPI.Events.PlayerChangeRoleEvent.#ctor(ReferenceHub,PlayerRoles.PlayerRoleBase,PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)
+  id: '#ctor(ReferenceHub,PlayerRoles.PlayerRoleBase,PlayerRoles.RoleTypeId,PlayerRoles.RoleChangeReason)'
+  parent: PluginAPI.Events.PlayerChangeRoleEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeRoleEvent(ReferenceHub, PlayerRoleBase, RoleTypeId, RoleChangeReason)
+  nameWithType: PlayerChangeRoleEvent.PlayerChangeRoleEvent(ReferenceHub, PlayerRoleBase, RoleTypeId, RoleChangeReason)
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.PlayerChangeRoleEvent(ReferenceHub, PlayerRoles.PlayerRoleBase, PlayerRoles.RoleTypeId, PlayerRoles.RoleChangeReason)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRoleEvent.cs
+    startLine: 43
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerChangeRoleEvent(ReferenceHub hub, PlayerRoleBase oldRole, RoleTypeId newRole, RoleChangeReason reason)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: oldRole
+      type: PlayerRoles.PlayerRoleBase
+    - id: newRole
+      type: PlayerRoles.RoleTypeId
+    - id: reason
+      type: PlayerRoles.RoleChangeReason
+    content.vb: Public Sub New(hub As ReferenceHub, oldRole As PlayerRoleBase, newRole As RoleTypeId, reason As RoleChangeReason)
+  overload: PluginAPI.Events.PlayerChangeRoleEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRoleEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerChangeRoleEvent.BaseType
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.Player*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRoleEvent.Player
+  name: Player
+  nameWithType: PlayerChangeRoleEvent.Player
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.OldRole*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRoleEvent.OldRole
+  name: OldRole
+  nameWithType: PlayerChangeRoleEvent.OldRole
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.OldRole
+- uid: PlayerRoles.PlayerRoleBase
+  commentId: T:PlayerRoles.PlayerRoleBase
+  parent: PlayerRoles
+  isExternal: true
+  name: PlayerRoleBase
+  nameWithType: PlayerRoleBase
+  fullName: PlayerRoles.PlayerRoleBase
+- uid: PlayerRoles
+  commentId: N:PlayerRoles
+  isExternal: true
+  name: PlayerRoles
+  nameWithType: PlayerRoles
+  fullName: PlayerRoles
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.NewRole*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRoleEvent.NewRole
+  name: NewRole
+  nameWithType: PlayerChangeRoleEvent.NewRole
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.NewRole
+- uid: PlayerRoles.RoleTypeId
+  commentId: T:PlayerRoles.RoleTypeId
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleTypeId
+  nameWithType: RoleTypeId
+  fullName: PlayerRoles.RoleTypeId
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason
+  name: ChangeReason
+  nameWithType: PlayerChangeRoleEvent.ChangeReason
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.ChangeReason
+- uid: PlayerRoles.RoleChangeReason
+  commentId: T:PlayerRoles.RoleChangeReason
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleChangeReason
+  nameWithType: RoleChangeReason
+  fullName: PlayerRoles.RoleChangeReason
+- uid: PluginAPI.Events.PlayerChangeRoleEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRoleEvent.#ctor
+  name: PlayerChangeRoleEvent
+  nameWithType: PlayerChangeRoleEvent.PlayerChangeRoleEvent
+  fullName: PluginAPI.Events.PlayerChangeRoleEvent.PlayerChangeRoleEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

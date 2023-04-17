@@ -5,7 +5,7 @@ items:
   id: FacilityGate
   parent: PluginAPI.Core.Doors
   children:
-  - PluginAPI.Core.Doors.FacilityGate.#ctor(PluginAPI.Core.Zones.FacilityRoom,PryableDoor)
+  - PluginAPI.Core.Doors.FacilityGate.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.PryableDoor)
   - PluginAPI.Core.Doors.FacilityGate.Count
   - PluginAPI.Core.Doors.FacilityGate.List
   - PluginAPI.Core.Doors.FacilityGate.OriginalObject
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityGate
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
@@ -50,9 +50,9 @@ items:
   - PluginAPI.Core.Doors.FacilityDoor.GameObject
   - PluginAPI.Core.Doors.FacilityDoor.Position
   - PluginAPI.Core.Doors.FacilityDoor.Rotation
-  - PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  - PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
-  - PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+  - PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
@@ -171,7 +171,7 @@ items:
   syntax:
     content: public readonly PryableDoor OriginalObject
     return:
-      type: PryableDoor
+      type: Interactables.Interobjects.PryableDoor
     content.vb: Public ReadOnly OriginalObject As PryableDoor
   modifiers.csharp:
   - public
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PryPositions
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
@@ -207,7 +207,7 @@ items:
     content: public Transform[] PryPositions { get; }
     parameters: []
     return:
-      type: Transform[]
+      type: UnityEngine.Transform[]
     content.vb: Public ReadOnly Property PryPositions As Transform()
   overload: PluginAPI.Core.Doors.FacilityGate.PryPositions*
   modifiers.csharp:
@@ -216,21 +216,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Doors.FacilityGate.#ctor(PluginAPI.Core.Zones.FacilityRoom,PryableDoor)
-  commentId: M:PluginAPI.Core.Doors.FacilityGate.#ctor(PluginAPI.Core.Zones.FacilityRoom,PryableDoor)
-  id: '#ctor(PluginAPI.Core.Zones.FacilityRoom,PryableDoor)'
+- uid: PluginAPI.Core.Doors.FacilityGate.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.PryableDoor)
+  commentId: M:PluginAPI.Core.Doors.FacilityGate.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.PryableDoor)
+  id: '#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.PryableDoor)'
   parent: PluginAPI.Core.Doors.FacilityGate
   langs:
   - csharp
   - vb
   name: FacilityGate(FacilityRoom, PryableDoor)
   nameWithType: FacilityGate.FacilityGate(FacilityRoom, PryableDoor)
-  fullName: PluginAPI.Core.Doors.FacilityGate.FacilityGate(PluginAPI.Core.Zones.FacilityRoom, PryableDoor)
+  fullName: PluginAPI.Core.Doors.FacilityGate.FacilityGate(PluginAPI.Core.Zones.FacilityRoom, Interactables.Interobjects.PryableDoor)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityGate.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityGate.cs
@@ -247,7 +247,7 @@ items:
       type: PluginAPI.Core.Zones.FacilityRoom
       description: The room the gate is in.
     - id: gate
-      type: PryableDoor
+      type: Interactables.Interobjects.PryableDoor
       description: The base-game object.
     content.vb: Public Sub New(room As FacilityRoom, gate As PryableDoor)
   overload: PluginAPI.Core.Doors.FacilityGate.#ctor*
@@ -340,41 +340,41 @@ references:
   name: Rotation
   nameWithType: FacilityDoor.Rotation
   fullName: PluginAPI.Core.Doors.FacilityDoor.Rotation
-- uid: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
-  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+- uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   parent: PluginAPI.Core.Doors.FacilityDoor
   isExternal: true
   name: Get(RoomIdentifier)
   nameWithType: FacilityDoor.Get(RoomIdentifier)
-  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   spec.csharp:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
     name: Get
     nameWithType: FacilityDoor.Get
     fullName: PluginAPI.Core.Doors.FacilityDoor.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
     name: Get
     nameWithType: FacilityDoor.Get
     fullName: PluginAPI.Core.Doors.FacilityDoor.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: )
     nameWithType: )
@@ -415,25 +415,25 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
-  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+- uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   parent: PluginAPI.Core.Doors.FacilityDoor
   isExternal: true
   name: Lock(DoorLockReason, Boolean)
   nameWithType: FacilityDoor.Lock(DoorLockReason, Boolean)
-  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason, System.Boolean)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason, System.Boolean)
   spec.csharp:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
     name: Lock
     nameWithType: FacilityDoor.Lock
     fullName: PluginAPI.Core.Doors.FacilityDoor.Lock
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DoorLockReason
+  - uid: Interactables.Interobjects.DoorUtils.DoorLockReason
     name: DoorLockReason
     nameWithType: DoorLockReason
-    fullName: DoorLockReason
+    fullName: Interactables.Interobjects.DoorUtils.DoorLockReason
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -447,17 +447,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
     name: Lock
     nameWithType: FacilityDoor.Lock
     fullName: PluginAPI.Core.Doors.FacilityDoor.Lock
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DoorLockReason
+  - uid: Interactables.Interobjects.DoorUtils.DoorLockReason
     name: DoorLockReason
     nameWithType: DoorLockReason
-    fullName: DoorLockReason
+    fullName: Interactables.Interobjects.DoorUtils.DoorLockReason
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -864,38 +864,46 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: PryableDoor
+- uid: Interactables.Interobjects.PryableDoor
+  commentId: T:Interactables.Interobjects.PryableDoor
+  parent: Interactables.Interobjects
   isExternal: true
   name: PryableDoor
   nameWithType: PryableDoor
-  fullName: PryableDoor
+  fullName: Interactables.Interobjects.PryableDoor
+- uid: Interactables.Interobjects
+  commentId: N:Interactables.Interobjects
+  isExternal: true
+  name: Interactables.Interobjects
+  nameWithType: Interactables.Interobjects
+  fullName: Interactables.Interobjects
 - uid: PluginAPI.Core.Doors.FacilityGate.PryPositions*
   commentId: Overload:PluginAPI.Core.Doors.FacilityGate.PryPositions
   name: PryPositions
   nameWithType: FacilityGate.PryPositions
   fullName: PluginAPI.Core.Doors.FacilityGate.PryPositions
-- uid: Transform[]
+- uid: UnityEngine.Transform[]
   isExternal: true
   name: Transform[]
   nameWithType: Transform[]
-  fullName: Transform[]
+  fullName: UnityEngine.Transform[]
   nameWithType.vb: Transform()
-  fullName.vb: Transform()
+  fullName.vb: UnityEngine.Transform()
   name.vb: Transform()
   spec.csharp:
-  - uid: Transform
+  - uid: UnityEngine.Transform
     name: Transform
     nameWithType: Transform
-    fullName: Transform
+    fullName: UnityEngine.Transform
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: Transform
+  - uid: UnityEngine.Transform
     name: Transform
     nameWithType: Transform
-    fullName: Transform
+    fullName: UnityEngine.Transform
     isExternal: true
   - name: ()
     nameWithType: ()

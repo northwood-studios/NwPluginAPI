@@ -5,7 +5,7 @@ items:
   id: FacilityBreakableDoor
   parent: PluginAPI.Core.Doors
   children:
-  - PluginAPI.Core.Doors.FacilityBreakableDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,BreakableDoor)
+  - PluginAPI.Core.Doors.FacilityBreakableDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.BreakableDoor)
   - PluginAPI.Core.Doors.FacilityBreakableDoor.Count
   - PluginAPI.Core.Doors.FacilityBreakableDoor.Destroy
   - PluginAPI.Core.Doors.FacilityBreakableDoor.Health
@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityBreakableDoor
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -54,9 +54,9 @@ items:
   - PluginAPI.Core.Doors.FacilityDoor.GameObject
   - PluginAPI.Core.Doors.FacilityDoor.Position
   - PluginAPI.Core.Doors.FacilityDoor.Rotation
-  - PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  - PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
-  - PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+  - PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -175,7 +175,7 @@ items:
   syntax:
     content: public readonly BreakableDoor OriginalObject
     return:
-      type: BreakableDoor
+      type: Interactables.Interobjects.BreakableDoor
     content.vb: Public ReadOnly OriginalObject As BreakableDoor
   modifiers.csharp:
   - public
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Health
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxHealth
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IgnoredDamageSources
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -279,13 +279,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
-  summary: "\nGets or sets the door&apos;s ignored <see cref=\"!:DoorDamageType\"></see>.\n"
+  summary: "\nGets or sets the door&apos;s ignored <xref href=\"Interactables.Interobjects.DoorUtils.DoorDamageType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public DoorDamageType IgnoredDamageSources { get; set; }
     parameters: []
     return:
-      type: DoorDamageType
+      type: Interactables.Interobjects.DoorUtils.DoorDamageType
     content.vb: Public Property IgnoredDamageSources As DoorDamageType
   overload: PluginAPI.Core.Doors.FacilityBreakableDoor.IgnoredDamageSources*
   modifiers.csharp:
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsDestroyed
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -345,7 +345,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Destroy
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -363,21 +363,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: PluginAPI.Core.Doors.FacilityBreakableDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,BreakableDoor)
-  commentId: M:PluginAPI.Core.Doors.FacilityBreakableDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,BreakableDoor)
-  id: '#ctor(PluginAPI.Core.Zones.FacilityRoom,BreakableDoor)'
+- uid: PluginAPI.Core.Doors.FacilityBreakableDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.BreakableDoor)
+  commentId: M:PluginAPI.Core.Doors.FacilityBreakableDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.BreakableDoor)
+  id: '#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.BreakableDoor)'
   parent: PluginAPI.Core.Doors.FacilityBreakableDoor
   langs:
   - csharp
   - vb
   name: FacilityBreakableDoor(FacilityRoom, BreakableDoor)
   nameWithType: FacilityBreakableDoor.FacilityBreakableDoor(FacilityRoom, BreakableDoor)
-  fullName: PluginAPI.Core.Doors.FacilityBreakableDoor.FacilityBreakableDoor(PluginAPI.Core.Zones.FacilityRoom, BreakableDoor)
+  fullName: PluginAPI.Core.Doors.FacilityBreakableDoor.FacilityBreakableDoor(PluginAPI.Core.Zones.FacilityRoom, Interactables.Interobjects.BreakableDoor)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
@@ -394,7 +394,7 @@ items:
       type: PluginAPI.Core.Zones.FacilityRoom
       description: The room the door is in.
     - id: door
-      type: BreakableDoor
+      type: Interactables.Interobjects.BreakableDoor
       description: The base-game door object.
     content.vb: Public Sub New(room As FacilityRoom, door As BreakableDoor)
   overload: PluginAPI.Core.Doors.FacilityBreakableDoor.#ctor*
@@ -487,41 +487,41 @@ references:
   name: Rotation
   nameWithType: FacilityDoor.Rotation
   fullName: PluginAPI.Core.Doors.FacilityDoor.Rotation
-- uid: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
-  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+- uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   parent: PluginAPI.Core.Doors.FacilityDoor
   isExternal: true
   name: Get(RoomIdentifier)
   nameWithType: FacilityDoor.Get(RoomIdentifier)
-  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   spec.csharp:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
     name: Get
     nameWithType: FacilityDoor.Get
     fullName: PluginAPI.Core.Doors.FacilityDoor.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
     name: Get
     nameWithType: FacilityDoor.Get
     fullName: PluginAPI.Core.Doors.FacilityDoor.Get
   - name: (
     nameWithType: (
     fullName: (
-  - uid: RoomIdentifier
+  - uid: MapGeneration.RoomIdentifier
     name: RoomIdentifier
     nameWithType: RoomIdentifier
-    fullName: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
     isExternal: true
   - name: )
     nameWithType: )
@@ -562,25 +562,25 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
-  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+- uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   parent: PluginAPI.Core.Doors.FacilityDoor
   isExternal: true
   name: Lock(DoorLockReason, Boolean)
   nameWithType: FacilityDoor.Lock(DoorLockReason, Boolean)
-  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason, System.Boolean)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason, System.Boolean)
   spec.csharp:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
     name: Lock
     nameWithType: FacilityDoor.Lock
     fullName: PluginAPI.Core.Doors.FacilityDoor.Lock
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DoorLockReason
+  - uid: Interactables.Interobjects.DoorUtils.DoorLockReason
     name: DoorLockReason
     nameWithType: DoorLockReason
-    fullName: DoorLockReason
+    fullName: Interactables.Interobjects.DoorUtils.DoorLockReason
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -594,17 +594,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
     name: Lock
     nameWithType: FacilityDoor.Lock
     fullName: PluginAPI.Core.Doors.FacilityDoor.Lock
   - name: (
     nameWithType: (
     fullName: (
-  - uid: DoorLockReason
+  - uid: Interactables.Interobjects.DoorUtils.DoorLockReason
     name: DoorLockReason
     nameWithType: DoorLockReason
-    fullName: DoorLockReason
+    fullName: Interactables.Interobjects.DoorUtils.DoorLockReason
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -1011,11 +1011,19 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: BreakableDoor
+- uid: Interactables.Interobjects.BreakableDoor
+  commentId: T:Interactables.Interobjects.BreakableDoor
+  parent: Interactables.Interobjects
   isExternal: true
   name: BreakableDoor
   nameWithType: BreakableDoor
-  fullName: BreakableDoor
+  fullName: Interactables.Interobjects.BreakableDoor
+- uid: Interactables.Interobjects
+  commentId: N:Interactables.Interobjects
+  isExternal: true
+  name: Interactables.Interobjects
+  nameWithType: Interactables.Interobjects
+  fullName: Interactables.Interobjects
 - uid: PluginAPI.Core.Doors.FacilityBreakableDoor.Health*
   commentId: Overload:PluginAPI.Core.Doors.FacilityBreakableDoor.Health
   name: Health
@@ -1033,17 +1041,24 @@ references:
   name: MaxHealth
   nameWithType: FacilityBreakableDoor.MaxHealth
   fullName: PluginAPI.Core.Doors.FacilityBreakableDoor.MaxHealth
+- uid: Interactables.Interobjects.DoorUtils.DoorDamageType
+  commentId: T:Interactables.Interobjects.DoorUtils.DoorDamageType
+  parent: Interactables.Interobjects.DoorUtils
+  isExternal: true
+  name: DoorDamageType
+  nameWithType: DoorDamageType
+  fullName: Interactables.Interobjects.DoorUtils.DoorDamageType
 - uid: PluginAPI.Core.Doors.FacilityBreakableDoor.IgnoredDamageSources*
   commentId: Overload:PluginAPI.Core.Doors.FacilityBreakableDoor.IgnoredDamageSources
   name: IgnoredDamageSources
   nameWithType: FacilityBreakableDoor.IgnoredDamageSources
   fullName: PluginAPI.Core.Doors.FacilityBreakableDoor.IgnoredDamageSources
-- uid: DoorDamageType
-  commentId: '!:DoorDamageType'
+- uid: Interactables.Interobjects.DoorUtils
+  commentId: N:Interactables.Interobjects.DoorUtils
   isExternal: true
-  name: DoorDamageType
-  nameWithType: DoorDamageType
-  fullName: DoorDamageType
+  name: Interactables.Interobjects.DoorUtils
+  nameWithType: Interactables.Interobjects.DoorUtils
+  fullName: Interactables.Interobjects.DoorUtils
 - uid: PluginAPI.Core.Doors.FacilityBreakableDoor.IsDestroyed*
   commentId: Overload:PluginAPI.Core.Doors.FacilityBreakableDoor.IsDestroyed
   name: IsDestroyed

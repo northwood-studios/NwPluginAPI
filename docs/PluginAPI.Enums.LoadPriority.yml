@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LoadPriority
     path: ../NwPluginAPI/Enums/LoadPriority.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Highest
     path: ../NwPluginAPI/Enums/LoadPriority.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: High
     path: ../NwPluginAPI/Enums/LoadPriority.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Medium
     path: ../NwPluginAPI/Enums/LoadPriority.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Low
     path: ../NwPluginAPI/Enums/LoadPriority.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Lowest
     path: ../NwPluginAPI/Enums/LoadPriority.cs

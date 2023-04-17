@@ -4,6 +4,7 @@ items:
   commentId: N:PluginAPI.Core.Attributes
   id: PluginAPI.Core.Attributes
   children:
+  - PluginAPI.Core.Attributes.EventArgument
   - PluginAPI.Core.Attributes.PluginCommand
   - PluginAPI.Core.Attributes.PluginCommandAliases
   - PluginAPI.Core.Attributes.PluginConfig
@@ -11,6 +12,7 @@ items:
   - PluginAPI.Core.Attributes.PluginEvent
   - PluginAPI.Core.Attributes.PluginPriority
   - PluginAPI.Core.Attributes.PluginReload
+  - PluginAPI.Core.Attributes.PluginRole
   - PluginAPI.Core.Attributes.PluginUnload
   langs:
   - csharp
@@ -22,6 +24,11 @@ items:
   assemblies:
   - PluginAPI
 references:
+- uid: PluginAPI.Core.Attributes.EventArgument
+  commentId: T:PluginAPI.Core.Attributes.EventArgument
+  name: EventArgument
+  nameWithType: EventArgument
+  fullName: PluginAPI.Core.Attributes.EventArgument
 - uid: PluginAPI.Core.Attributes.PluginCommand
   commentId: T:PluginAPI.Core.Attributes.PluginCommand
   name: PluginCommand
@@ -57,6 +64,11 @@ references:
   name: PluginReload
   nameWithType: PluginReload
   fullName: PluginAPI.Core.Attributes.PluginReload
+- uid: PluginAPI.Core.Attributes.PluginRole
+  commentId: T:PluginAPI.Core.Attributes.PluginRole
+  name: PluginRole
+  nameWithType: PluginRole
+  fullName: PluginAPI.Core.Attributes.PluginRole
 - uid: PluginAPI.Core.Attributes.PluginUnload
   commentId: T:PluginAPI.Core.Attributes.PluginUnload
   name: PluginUnload

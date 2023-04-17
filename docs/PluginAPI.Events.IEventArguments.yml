@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  id: IEventArguments
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.IEventArguments.BaseType
+  langs:
+  - csharp
+  - vb
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+  type: Interface
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventArguments.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IEventArguments
+    path: ../NwPluginAPI/Events/IEventArguments.cs
+    startLine: 9
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public interface IEventArguments
+    content.vb: Public Interface IEventArguments
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.IEventArguments
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/IEventArguments.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/IEventArguments.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.IEventArguments.BaseType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: PluginAPI.Events.IEventArguments.BaseType*
+  commentId: Overload:PluginAPI.Events.IEventArguments.BaseType
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums

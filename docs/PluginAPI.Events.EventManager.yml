@@ -6,12 +6,13 @@ items:
   parent: PluginAPI.Events
   children:
   - PluginAPI.Events.EventManager.Events
-  - PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
-  - PluginAPI.Events.EventManager.ExecuteEvent``1(PluginAPI.Enums.ServerEventType,System.Object[])
+  - PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Events.IEventArguments)
+  - PluginAPI.Events.EventManager.ExecuteEvent``1(PluginAPI.Events.IEventArguments)
   - PluginAPI.Events.EventManager.RegisterAllEvents(System.Object)
   - PluginAPI.Events.EventManager.RegisterEvents(System.Object)
   - PluginAPI.Events.EventManager.RegisterEvents(System.Object,System.Object)
   - PluginAPI.Events.EventManager.RegisterEvents``1(System.Object)
+  - PluginAPI.Events.EventManager.TypeToEvent
   - PluginAPI.Events.EventManager.UnregisterAllEvents(System.Object)
   - PluginAPI.Events.EventManager.UnregisterEvents(System.Object)
   - PluginAPI.Events.EventManager.UnregisterEvents(System.Object,System.Object)
@@ -26,11 +27,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EventManager
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -70,11 +71,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Events
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 53
+    startLine: 57
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -85,6 +86,43 @@ items:
     return:
       type: System.Collections.Generic.Dictionary{PluginAPI.Enums.ServerEventType,PluginAPI.Events.Event}
     content.vb: Public Shared ReadOnly Events As Dictionary(Of ServerEventType,  Event)
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Events.EventManager.TypeToEvent
+  commentId: F:PluginAPI.Events.EventManager.TypeToEvent
+  id: TypeToEvent
+  parent: PluginAPI.Events.EventManager
+  langs:
+  - csharp
+  - vb
+  name: TypeToEvent
+  nameWithType: EventManager.TypeToEvent
+  fullName: PluginAPI.Events.EventManager.TypeToEvent
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventManager.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: TypeToEvent
+    path: ../NwPluginAPI/Events/EventManager.cs
+    startLine: 63
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  summary: "\nContains all event types and their event types.\n"
+  example: []
+  syntax:
+    content: public static readonly Dictionary<Type, ServerEventType> TypeToEvent
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,PluginAPI.Enums.ServerEventType}
+    content.vb: Public Shared ReadOnly TypeToEvent As Dictionary(Of Type, ServerEventType)
   modifiers.csharp:
   - public
   - static
@@ -107,11 +145,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterAllEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 744
+    startLine: 123
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -145,11 +183,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterAllEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 783
+    startLine: 162
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -183,11 +221,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 802
+    startLine: 181
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -221,11 +259,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 812
+    startLine: 191
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -259,11 +297,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 822
+    startLine: 201
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -304,11 +342,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 837
+    startLine: 216
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -349,11 +387,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RegisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 849
+    startLine: 228
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -390,11 +428,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnregisterEvents
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 856
+    startLine: 235
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -417,72 +455,66 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
-  commentId: M:PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
-  id: ExecuteEvent(PluginAPI.Enums.ServerEventType,System.Object[])
+- uid: PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Events.IEventArguments)
+  commentId: M:PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Events.IEventArguments)
+  id: ExecuteEvent(PluginAPI.Events.IEventArguments)
   parent: PluginAPI.Events.EventManager
   langs:
   - csharp
   - vb
-  name: ExecuteEvent(ServerEventType, Object[])
-  nameWithType: EventManager.ExecuteEvent(ServerEventType, Object[])
-  fullName: PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType, System.Object[])
+  name: ExecuteEvent(IEventArguments)
+  nameWithType: EventManager.ExecuteEvent(IEventArguments)
+  fullName: PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Events.IEventArguments)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 933
+    startLine: 316
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
   summary: "\nExecutes event.\n"
   example: []
   syntax:
-    content: public static bool ExecuteEvent(ServerEventType type, params object[] args)
+    content: public static bool ExecuteEvent(IEventArguments args)
     parameters:
-    - id: type
-      type: PluginAPI.Enums.ServerEventType
-      description: The type of event
     - id: args
-      type: System.Object[]
+      type: PluginAPI.Events.IEventArguments
       description: The arguments of event.
     return:
       type: System.Boolean
       description: If false event is cancelled.
-    content.vb: Public Shared Function ExecuteEvent(type As ServerEventType, ParamArray args As Object()) As Boolean
+    content.vb: Public Shared Function ExecuteEvent(args As IEventArguments) As Boolean
   overload: PluginAPI.Events.EventManager.ExecuteEvent*
-  nameWithType.vb: EventManager.ExecuteEvent(ServerEventType, Object())
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: PluginAPI.Events.EventManager.ExecuteEvent(PluginAPI.Enums.ServerEventType, System.Object())
-  name.vb: ExecuteEvent(ServerEventType, Object())
-- uid: PluginAPI.Events.EventManager.ExecuteEvent``1(PluginAPI.Enums.ServerEventType,System.Object[])
-  commentId: M:PluginAPI.Events.EventManager.ExecuteEvent``1(PluginAPI.Enums.ServerEventType,System.Object[])
-  id: ExecuteEvent``1(PluginAPI.Enums.ServerEventType,System.Object[])
+- uid: PluginAPI.Events.EventManager.ExecuteEvent``1(PluginAPI.Events.IEventArguments)
+  commentId: M:PluginAPI.Events.EventManager.ExecuteEvent``1(PluginAPI.Events.IEventArguments)
+  id: ExecuteEvent``1(PluginAPI.Events.IEventArguments)
   parent: PluginAPI.Events.EventManager
   langs:
   - csharp
   - vb
-  name: ExecuteEvent<T>(ServerEventType, Object[])
-  nameWithType: EventManager.ExecuteEvent<T>(ServerEventType, Object[])
-  fullName: PluginAPI.Events.EventManager.ExecuteEvent<T>(PluginAPI.Enums.ServerEventType, System.Object[])
+  name: ExecuteEvent<T>(IEventArguments)
+  nameWithType: EventManager.ExecuteEvent<T>(IEventArguments)
+  fullName: PluginAPI.Events.EventManager.ExecuteEvent<T>(PluginAPI.Events.IEventArguments)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/EventManager.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ExecuteEvent
     path: ../NwPluginAPI/Events/EventManager.cs
-    startLine: 942
+    startLine: 325
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -490,31 +522,28 @@ items:
   example: []
   syntax:
     content: >-
-      public static T ExecuteEvent<T>(ServerEventType type, params object[] args)
+      public static T ExecuteEvent<T>(IEventArguments args)
           where T : struct
     parameters:
-    - id: type
-      type: PluginAPI.Enums.ServerEventType
-      description: The type of event
     - id: args
-      type: System.Object[]
+      type: PluginAPI.Events.IEventArguments
       description: The arguments of event.
     typeParameters:
     - id: T
     return:
       type: '{T}'
       description: Event cancellation data.
-    content.vb: Public Shared Function ExecuteEvent(Of T As Structure)(type As ServerEventType, ParamArray args As Object()) As T
+    content.vb: Public Shared Function ExecuteEvent(Of T As Structure)(args As IEventArguments) As T
   overload: PluginAPI.Events.EventManager.ExecuteEvent*
-  nameWithType.vb: EventManager.ExecuteEvent(Of T)(ServerEventType, Object())
+  nameWithType.vb: EventManager.ExecuteEvent(Of T)(IEventArguments)
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: PluginAPI.Events.EventManager.ExecuteEvent(Of T)(PluginAPI.Enums.ServerEventType, System.Object())
-  name.vb: ExecuteEvent(Of T)(ServerEventType, Object())
+  fullName.vb: PluginAPI.Events.EventManager.ExecuteEvent(Of T)(PluginAPI.Events.IEventArguments)
+  name.vb: ExecuteEvent(Of T)(IEventArguments)
 references:
 - uid: PluginAPI.Events
   commentId: N:PluginAPI.Events
@@ -926,6 +955,64 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: System.Collections.Generic.Dictionary{System.Type,PluginAPI.Enums.ServerEventType}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,PluginAPI.Enums.ServerEventType}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Type, ServerEventType>
+  nameWithType: Dictionary<Type, ServerEventType>
+  fullName: System.Collections.Generic.Dictionary<System.Type, PluginAPI.Enums.ServerEventType>
+  nameWithType.vb: Dictionary(Of Type, ServerEventType)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, PluginAPI.Enums.ServerEventType)
+  name.vb: Dictionary(Of Type, ServerEventType)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: PluginAPI.Enums.ServerEventType
+    name: ServerEventType
+    nameWithType: ServerEventType
+    fullName: PluginAPI.Enums.ServerEventType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: PluginAPI.Enums.ServerEventType
+    name: ServerEventType
+    nameWithType: ServerEventType
+    fullName: PluginAPI.Enums.ServerEventType
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: PluginAPI.Events.EventManager.RegisterAllEvents*
   commentId: Overload:PluginAPI.Events.EventManager.RegisterAllEvents
   name: RegisterAllEvents
@@ -951,38 +1038,12 @@ references:
   name: ExecuteEvent
   nameWithType: EventManager.ExecuteEvent
   fullName: PluginAPI.Events.EventManager.ExecuteEvent
-- uid: PluginAPI.Enums.ServerEventType
-  commentId: T:PluginAPI.Enums.ServerEventType
-  parent: PluginAPI.Enums
-  name: ServerEventType
-  nameWithType: ServerEventType
-  fullName: PluginAPI.Enums.ServerEventType
-- uid: System.Object[]
-  isExternal: true
-  name: Object[]
-  nameWithType: Object[]
-  fullName: System.Object[]
-  nameWithType.vb: Object()
-  fullName.vb: System.Object()
-  name.vb: Object()
-  spec.csharp:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -990,11 +1051,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: PluginAPI.Enums
-  commentId: N:PluginAPI.Enums
-  name: PluginAPI.Enums
-  nameWithType: PluginAPI.Enums
-  fullName: PluginAPI.Enums
 - uid: '{T}'
   commentId: '!:T'
   definition: T

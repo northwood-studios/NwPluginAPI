@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundEndCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Delay
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AllowRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DelayRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -219,7 +219,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AbortRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs

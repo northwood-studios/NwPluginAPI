@@ -5,7 +5,7 @@ items:
   id: FacilityRoom
   parent: PluginAPI.Core.Zones
   children:
-  - PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,RoomIdentifier)
+  - PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Zones.FacilityRoom.GameObject
   - PluginAPI.Core.Zones.FacilityRoom.GetComponent``1(System.Boolean,System.Boolean)
   - PluginAPI.Core.Zones.FacilityRoom.Identifier
@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityRoom
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Lights
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Identifier
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -157,7 +157,7 @@ items:
   syntax:
     content: public readonly RoomIdentifier Identifier
     return:
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
     content.vb: Public ReadOnly Identifier As RoomIdentifier
   modifiers.csharp:
   - public
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -187,13 +187,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
-  summary: "\nGets the room&apos;s <see cref=\"!:UnityEngine.Transform\"></see>.\n"
+  summary: "\nGets the room&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public Transform Transform { get; }
     parameters: []
     return:
-      type: Transform
+      type: UnityEngine.Transform
     content.vb: Public ReadOnly Property Transform As Transform
   overload: PluginAPI.Core.Zones.FacilityRoom.Transform*
   modifiers.csharp:
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -224,13 +224,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Zones
-  summary: "\nGets room&apos;s <see cref=\"!:UnityEngine.GameObject\"></see>.\n"
+  summary: "\nGets room&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public GameObject GameObject { get; }
     parameters: []
     return:
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: Public ReadOnly Property GameObject As GameObject
   overload: PluginAPI.Core.Zones.FacilityRoom.GameObject*
   modifiers.csharp:
@@ -253,7 +253,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -267,7 +267,7 @@ items:
     content: public Vector3 Position { get; }
     parameters: []
     return:
-      type: Vector3
+      type: UnityEngine.Vector3
     content.vb: Public ReadOnly Property Position As Vector3
   overload: PluginAPI.Core.Zones.FacilityRoom.Position*
   modifiers.csharp:
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -304,7 +304,7 @@ items:
     content: public Quaternion Rotation { get; }
     parameters: []
     return:
-      type: Quaternion
+      type: UnityEngine.Quaternion
     content.vb: Public ReadOnly Property Rotation As Quaternion
   overload: PluginAPI.Core.Zones.FacilityRoom.Rotation*
   modifiers.csharp:
@@ -327,7 +327,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -372,7 +372,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -405,21 +405,21 @@ items:
   - Public
   fullName.vb: PluginAPI.Core.Zones.FacilityRoom.TryGetComponent(Of T)(ByRef T, System.Boolean, System.Boolean)
   name.vb: TryGetComponent(Of T)(ByRef T, Boolean, Boolean)
-- uid: PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.FacilityZone,RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.FacilityRoom.#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.FacilityZone,MapGeneration.RoomIdentifier)'
   parent: PluginAPI.Core.Zones.FacilityRoom
   langs:
   - csharp
   - vb
   name: FacilityRoom(FacilityZone, RoomIdentifier)
   nameWithType: FacilityRoom.FacilityRoom(FacilityZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.FacilityRoom.FacilityRoom(PluginAPI.Core.Zones.FacilityZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.FacilityRoom.FacilityRoom(PluginAPI.Core.Zones.FacilityZone, MapGeneration.RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
@@ -436,7 +436,7 @@ items:
       type: PluginAPI.Core.Zones.FacilityZone
       description: The zone type.
     - id: room
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As FacilityZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.FacilityRoom.#ctor*
@@ -759,51 +759,73 @@ references:
   name: PluginAPI.Core
   nameWithType: PluginAPI.Core
   fullName: PluginAPI.Core
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
 - uid: PluginAPI.Core.Zones.FacilityRoom.Transform*
   commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.Transform
   name: Transform
   nameWithType: FacilityRoom.Transform
   fullName: PluginAPI.Core.Zones.FacilityRoom.Transform
-- uid: Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
   isExternal: true
-  name: Transform
-  nameWithType: Transform
-  fullName: Transform
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
 - uid: PluginAPI.Core.Zones.FacilityRoom.GameObject*
   commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.GameObject
   name: GameObject
   nameWithType: FacilityRoom.GameObject
   fullName: PluginAPI.Core.Zones.FacilityRoom.GameObject
-- uid: GameObject
-  isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: GameObject
 - uid: PluginAPI.Core.Zones.FacilityRoom.Position*
   commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.Position
   name: Position
   nameWithType: FacilityRoom.Position
   fullName: PluginAPI.Core.Zones.FacilityRoom.Position
-- uid: Vector3
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: Vector3
+  fullName: UnityEngine.Vector3
 - uid: PluginAPI.Core.Zones.FacilityRoom.Rotation*
   commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.Rotation
   name: Rotation
   nameWithType: FacilityRoom.Rotation
   fullName: PluginAPI.Core.Zones.FacilityRoom.Rotation
-- uid: Quaternion
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
   isExternal: true
   name: Quaternion
   nameWithType: Quaternion
-  fullName: Quaternion
+  fullName: UnityEngine.Quaternion
 - uid: PluginAPI.Core.Zones.FacilityRoom.GetComponent*
   commentId: Overload:PluginAPI.Core.Zones.FacilityRoom.GetComponent
   name: GetComponent

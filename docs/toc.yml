@@ -67,6 +67,8 @@
 - uid: PluginAPI.Core.Attributes
   name: PluginAPI.Core.Attributes
   items:
+  - uid: PluginAPI.Core.Attributes.EventArgument
+    name: EventArgument
   - uid: PluginAPI.Core.Attributes.PluginCommand
     name: PluginCommand
   - uid: PluginAPI.Core.Attributes.PluginCommandAliases
@@ -81,6 +83,8 @@
     name: PluginPriority
   - uid: PluginAPI.Core.Attributes.PluginReload
     name: PluginReload
+  - uid: PluginAPI.Core.Attributes.PluginRole
+    name: PluginRole
   - uid: PluginAPI.Core.Attributes.PluginUnload
     name: PluginUnload
 - uid: PluginAPI.Core.Doors
@@ -190,11 +194,25 @@
     name: LoadPriority
   - uid: PluginAPI.Enums.LogType
     name: LogType
+  - uid: PluginAPI.Enums.RoleRegisterType
+    name: RoleRegisterType
   - uid: PluginAPI.Enums.ServerEventType
     name: ServerEventType
 - uid: PluginAPI.Events
   name: PluginAPI.Events
   items:
+  - uid: PluginAPI.Events.BanIssuedEvent
+    name: BanIssuedEvent
+  - uid: PluginAPI.Events.BanRevokedEvent
+    name: BanRevokedEvent
+  - uid: PluginAPI.Events.BanUpdatedEvent
+    name: BanUpdatedEvent
+  - uid: PluginAPI.Events.CassieAnnouncesScpTerminationEvent
+    name: CassieAnnouncesScpTerminationEvent
+  - uid: PluginAPI.Events.ConsoleCommandEvent
+    name: ConsoleCommandEvent
+  - uid: PluginAPI.Events.ConsoleCommandExecutedEvent
+    name: ConsoleCommandExecutedEvent
   - uid: PluginAPI.Events.Event
     name: Event
   - uid: PluginAPI.Events.EventInvokeLocation
@@ -203,24 +221,270 @@
     name: EventManager
   - uid: PluginAPI.Events.EventParameter
     name: EventParameter
+  - uid: PluginAPI.Events.GeneratorActivatedEvent
+    name: GeneratorActivatedEvent
+  - uid: PluginAPI.Events.GrenadeExplodedEvent
+    name: GrenadeExplodedEvent
+  - uid: PluginAPI.Events.IEventArguments
+    name: IEventArguments
   - uid: PluginAPI.Events.IEventCancellation
     name: IEventCancellation
+  - uid: PluginAPI.Events.ItemSpawnedEvent
+    name: ItemSpawnedEvent
+  - uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent
+    name: LczDecontaminationAnnouncementEvent
+  - uid: PluginAPI.Events.LczDecontaminationStartEvent
+    name: LczDecontaminationStartEvent
+  - uid: PluginAPI.Events.MapGeneratedEvent
+    name: MapGeneratedEvent
+  - uid: PluginAPI.Events.PlaceBloodEvent
+    name: PlaceBloodEvent
+  - uid: PluginAPI.Events.PlaceBulletHoleEvent
+    name: PlaceBulletHoleEvent
+  - uid: PluginAPI.Events.PlayerActivateGeneratorEvent
+    name: PlayerActivateGeneratorEvent
+  - uid: PluginAPI.Events.PlayerAimWeaponEvent
+    name: PlayerAimWeaponEvent
+  - uid: PluginAPI.Events.PlayerBannedEvent
+    name: PlayerBannedEvent
+  - uid: PluginAPI.Events.PlayerCancelUsingItemEvent
+    name: PlayerCancelUsingItemEvent
+  - uid: PluginAPI.Events.PlayerChangeItemEvent
+    name: PlayerChangeItemEvent
+  - uid: PluginAPI.Events.PlayerChangeRadioRangeEvent
+    name: PlayerChangeRadioRangeEvent
+  - uid: PluginAPI.Events.PlayerChangeRoleEvent
+    name: PlayerChangeRoleEvent
+  - uid: PluginAPI.Events.PlayerChangeSpectatorEvent
+    name: PlayerChangeSpectatorEvent
+  - uid: PluginAPI.Events.PlayerCheaterReportEvent
+    name: PlayerCheaterReportEvent
   - uid: PluginAPI.Events.PlayerCheckReservedSlotCancellationData
     name: PlayerCheckReservedSlotCancellationData
+  - uid: PluginAPI.Events.PlayerCheckReservedSlotEvent
+    name: PlayerCheckReservedSlotEvent
+  - uid: PluginAPI.Events.PlayerCloseGeneratorEvent
+    name: PlayerCloseGeneratorEvent
+  - uid: PluginAPI.Events.PlayerCoinFlipEvent
+    name: PlayerCoinFlipEvent
+  - uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+    name: PlayerDamagedShootingTargetEvent
+  - uid: PluginAPI.Events.PlayerDamagedWindowEvent
+    name: PlayerDamagedWindowEvent
+  - uid: PluginAPI.Events.PlayerDamageEvent
+    name: PlayerDamageEvent
+  - uid: PluginAPI.Events.PlayerDeactivatedGeneratorEvent
+    name: PlayerDeactivatedGeneratorEvent
+  - uid: PluginAPI.Events.PlayerDeathEvent
+    name: PlayerDeathEvent
+  - uid: PluginAPI.Events.PlayerDropAmmoEvent
+    name: PlayerDropAmmoEvent
+  - uid: PluginAPI.Events.PlayerDropItemEvent
+    name: PlayerDropItemEvent
+  - uid: PluginAPI.Events.PlayerDryfireWeaponEvent
+    name: PlayerDryfireWeaponEvent
+  - uid: PluginAPI.Events.PlayerDyingEvent
+    name: PlayerDyingEvent
+  - uid: PluginAPI.Events.PlayerEnterPocketDimensionEvent
+    name: PlayerEnterPocketDimensionEvent
+  - uid: PluginAPI.Events.PlayerEscapeEvent
+    name: PlayerEscapeEvent
+  - uid: PluginAPI.Events.PlayerExitPocketDimensionEvent
+    name: PlayerExitPocketDimensionEvent
+  - uid: PluginAPI.Events.PlayerGameConsoleCommandEvent
+    name: PlayerGameConsoleCommandEvent
+  - uid: PluginAPI.Events.PlayerGameConsoleCommandExecutedEvent
+    name: PlayerGameConsoleCommandExecutedEvent
   - uid: PluginAPI.Events.PlayerGetGroupCancellationData
     name: PlayerGetGroupCancellationData
+  - uid: PluginAPI.Events.PlayerGetGroupEvent
+    name: PlayerGetGroupEvent
+  - uid: PluginAPI.Events.PlayerHandcuffEvent
+    name: PlayerHandcuffEvent
+  - uid: PluginAPI.Events.PlayerInteractDoorEvent
+    name: PlayerInteractDoorEvent
+  - uid: PluginAPI.Events.PlayerInteractElevatorEvent
+    name: PlayerInteractElevatorEvent
+  - uid: PluginAPI.Events.PlayerInteractGeneratorEvent
+    name: PlayerInteractGeneratorEvent
+  - uid: PluginAPI.Events.PlayerInteractLockerEvent
+    name: PlayerInteractLockerEvent
+  - uid: PluginAPI.Events.PlayerInteractScp330Event
+    name: PlayerInteractScp330Event
+  - uid: PluginAPI.Events.PlayerInteractShootingTargetEvent
+    name: PlayerInteractShootingTargetEvent
+  - uid: PluginAPI.Events.PlayerJoinedEvent
+    name: PlayerJoinedEvent
+  - uid: PluginAPI.Events.PlayerKickedEvent
+    name: PlayerKickedEvent
+  - uid: PluginAPI.Events.PlayerLeftEvent
+    name: PlayerLeftEvent
+  - uid: PluginAPI.Events.PlayerMakeNoiseEvent
+    name: PlayerMakeNoiseEvent
+  - uid: PluginAPI.Events.PlayerMutedEvent
+    name: PlayerMutedEvent
+  - uid: PluginAPI.Events.PlayerOpenGeneratorEvent
+    name: PlayerOpenGeneratorEvent
+  - uid: PluginAPI.Events.PlayerPickupAmmoEvent
+    name: PlayerPickupAmmoEvent
+  - uid: PluginAPI.Events.PlayerPickupArmorEvent
+    name: PlayerPickupArmorEvent
+  - uid: PluginAPI.Events.PlayerPickupScp330Event
+    name: PlayerPickupScp330Event
+  - uid: PluginAPI.Events.PlayerPreauthEvent
+    name: PlayerPreauthEvent
   - uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData
     name: PlayerPreCoinFlipCancellationData
   - uid: PluginAPI.Events.PlayerPreCoinFlipCancellationData.CoinFlipCancellation
     name: PlayerPreCoinFlipCancellationData.CoinFlipCancellation
+  - uid: PluginAPI.Events.PlayerPreCoinFlipEvent
+    name: PlayerPreCoinFlipEvent
+  - uid: PluginAPI.Events.PlayerRadioToggleEvent
+    name: PlayerRadioToggleEvent
+  - uid: PluginAPI.Events.PlayerReceiveEffectEvent
+    name: PlayerReceiveEffectEvent
+  - uid: PluginAPI.Events.PlayerReloadWeaponEvent
+    name: PlayerReloadWeaponEvent
+  - uid: PluginAPI.Events.PlayerRemoveHandcuffsEvent
+    name: PlayerRemoveHandcuffsEvent
+  - uid: PluginAPI.Events.PlayerReportEvent
+    name: PlayerReportEvent
+  - uid: PluginAPI.Events.PlayerSearchedPickupEvent
+    name: PlayerSearchedPickupEvent
+  - uid: PluginAPI.Events.PlayerSearchPickupEvent
+    name: PlayerSearchPickupEvent
+  - uid: PluginAPI.Events.PlayerShotWeaponEvent
+    name: PlayerShotWeaponEvent
+  - uid: PluginAPI.Events.PlayerSpawnEvent
+    name: PlayerSpawnEvent
+  - uid: PluginAPI.Events.PlayerThrowItemEvent
+    name: PlayerThrowItemEvent
+  - uid: PluginAPI.Events.PlayerThrowProjectileEvent
+    name: PlayerThrowProjectileEvent
+  - uid: PluginAPI.Events.PlayerToggleFlashlightEvent
+    name: PlayerToggleFlashlightEvent
+  - uid: PluginAPI.Events.PlayerUnloadWeaponEvent
+    name: PlayerUnloadWeaponEvent
+  - uid: PluginAPI.Events.PlayerUnlockGeneratorEvent
+    name: PlayerUnlockGeneratorEvent
+  - uid: PluginAPI.Events.PlayerUnmutedEvent
+    name: PlayerUnmutedEvent
+  - uid: PluginAPI.Events.PlayerUsedItemEvent
+    name: PlayerUsedItemEvent
+  - uid: PluginAPI.Events.PlayerUseHotkeyEvent
+    name: PlayerUseHotkeyEvent
+  - uid: PluginAPI.Events.PlayerUseItemEvent
+    name: PlayerUseItemEvent
+  - uid: PluginAPI.Events.PlayerUsingIntercomEvent
+    name: PlayerUsingIntercomEvent
+  - uid: PluginAPI.Events.PlayerUsingRadioEvent
+    name: PlayerUsingRadioEvent
   - uid: PluginAPI.Events.PreauthCancellationData
     name: PreauthCancellationData
+  - uid: PluginAPI.Events.RagdollSpawnEvent
+    name: RagdollSpawnEvent
+  - uid: PluginAPI.Events.RemoteAdminCommandEvent
+    name: RemoteAdminCommandEvent
+  - uid: PluginAPI.Events.RemoteAdminCommandExecutedEvent
+    name: RemoteAdminCommandExecutedEvent
   - uid: PluginAPI.Events.RoundEndCancellationData
     name: RoundEndCancellationData
   - uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData
     name: RoundEndConditionsCheckCancellationData
   - uid: PluginAPI.Events.RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
     name: RoundEndConditionsCheckCancellationData.RoundEndConditionsCheckCancellation
+  - uid: PluginAPI.Events.RoundEndConditionsCheckEvent
+    name: RoundEndConditionsCheckEvent
+  - uid: PluginAPI.Events.RoundEndEvent
+    name: RoundEndEvent
+  - uid: PluginAPI.Events.RoundRestartEvent
+    name: RoundRestartEvent
+  - uid: PluginAPI.Events.RoundStartEvent
+    name: RoundStartEvent
+  - uid: PluginAPI.Events.Scp049ResurrectBodyEvent
+    name: Scp049ResurrectBodyEvent
+  - uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+    name: Scp049StartResurrectingBodyEvent
+  - uid: PluginAPI.Events.Scp079BlackoutRoomEvent
+    name: Scp079BlackoutRoomEvent
+  - uid: PluginAPI.Events.Scp079BlackoutZoneEvent
+    name: Scp079BlackoutZoneEvent
+  - uid: PluginAPI.Events.Scp079CameraChangedEvent
+    name: Scp079CameraChangedEvent
+  - uid: PluginAPI.Events.Scp079CancelRoomLockdownEvent
+    name: Scp079CancelRoomLockdownEvent
+  - uid: PluginAPI.Events.Scp079GainExperienceEvent
+    name: Scp079GainExperienceEvent
+  - uid: PluginAPI.Events.Scp079LevelUpTierEvent
+    name: Scp079LevelUpTierEvent
+  - uid: PluginAPI.Events.Scp079LockDoorEvent
+    name: Scp079LockDoorEvent
+  - uid: PluginAPI.Events.Scp079LockdownRoomEvent
+    name: Scp079LockdownRoomEvent
+  - uid: PluginAPI.Events.Scp079UnlockDoorEvent
+    name: Scp079UnlockDoorEvent
+  - uid: PluginAPI.Events.Scp079UseTeslaEvent
+    name: Scp079UseTeslaEvent
+  - uid: PluginAPI.Events.Scp096AddingTargetEvent
+    name: Scp096AddingTargetEvent
+  - uid: PluginAPI.Events.Scp096ChangeStateEvent
+    name: Scp096ChangeStateEvent
+  - uid: PluginAPI.Events.Scp096ChargingEvent
+    name: Scp096ChargingEvent
+  - uid: PluginAPI.Events.Scp096EnragingEvent
+    name: Scp096EnragingEvent
+  - uid: PluginAPI.Events.Scp096PryingGateEvent
+    name: Scp096PryingGateEvent
+  - uid: PluginAPI.Events.Scp096StartCryingEvent
+    name: Scp096StartCryingEvent
+  - uid: PluginAPI.Events.Scp096TryNotCryEvent
+    name: Scp096TryNotCryEvent
+  - uid: PluginAPI.Events.Scp106StalkingEvent
+    name: Scp106StalkingEvent
+  - uid: PluginAPI.Events.Scp106TeleportPlayerEvent
+    name: Scp106TeleportPlayerEvent
+  - uid: PluginAPI.Events.Scp173BreakneckSpeedsEvent
+    name: Scp173BreakneckSpeedsEvent
+  - uid: PluginAPI.Events.Scp173CreateTantrumEvent
+    name: Scp173CreateTantrumEvent
+  - uid: PluginAPI.Events.Scp173NewObserverEvent
+    name: Scp173NewObserverEvent
+  - uid: PluginAPI.Events.Scp173PlaySoundEvent
+    name: Scp173PlaySoundEvent
+  - uid: PluginAPI.Events.Scp173SnapPlayerEvent
+    name: Scp173SnapPlayerEvent
+  - uid: PluginAPI.Events.Scp914ActivateEvent
+    name: Scp914ActivateEvent
+  - uid: PluginAPI.Events.Scp914InventoryItemUpgradedEvent
+    name: Scp914InventoryItemUpgradedEvent
+  - uid: PluginAPI.Events.Scp914KnobChangeEvent
+    name: Scp914KnobChangeEvent
+  - uid: PluginAPI.Events.Scp914PickupUpgradedEvent
+    name: Scp914PickupUpgradedEvent
+  - uid: PluginAPI.Events.Scp914ProcessPlayerEvent
+    name: Scp914ProcessPlayerEvent
+  - uid: PluginAPI.Events.Scp914UpgradeInventoryEvent
+    name: Scp914UpgradeInventoryEvent
+  - uid: PluginAPI.Events.Scp914UpgradePickupEvent
+    name: Scp914UpgradePickupEvent
+  - uid: PluginAPI.Events.Scp939AttackEvent
+    name: Scp939AttackEvent
+  - uid: PluginAPI.Events.Scp939CreateAmnesticCloudEvent
+    name: Scp939CreateAmnesticCloudEvent
+  - uid: PluginAPI.Events.Scp939LungeEvent
+    name: Scp939LungeEvent
+  - uid: PluginAPI.Events.TeamRespawnEvent
+    name: TeamRespawnEvent
+  - uid: PluginAPI.Events.TeamRespawnSelectedEvent
+    name: TeamRespawnSelectedEvent
+  - uid: PluginAPI.Events.WaitingForPlayersEvent
+    name: WaitingForPlayersEvent
+  - uid: PluginAPI.Events.WarheadDetonationEvent
+    name: WarheadDetonationEvent
+  - uid: PluginAPI.Events.WarheadStartEvent
+    name: WarheadStartEvent
+  - uid: PluginAPI.Events.WarheadStopEvent
+    name: WarheadStopEvent
 - uid: PluginAPI.Helpers
   name: PluginAPI.Helpers
   items:
@@ -236,3 +500,92 @@
   items:
   - uid: PluginAPI.Loader.Features.PluginDirectory
     name: PluginDirectory
+- uid: PluginAPI.Roles
+  name: PluginAPI.Roles
+  items:
+  - uid: PluginAPI.Roles.BaseChaos`1
+    name: BaseChaos<TPlayer>
+    name.vb: BaseChaos(Of TPlayer)
+  - uid: PluginAPI.Roles.BaseHuman`1
+    name: BaseHuman<TPlayer>
+    name.vb: BaseHuman(Of TPlayer)
+  - uid: PluginAPI.Roles.BaseNineTailedFox`1
+    name: BaseNineTailedFox<TPlayer>
+    name.vb: BaseNineTailedFox(Of TPlayer)
+  - uid: PluginAPI.Roles.BaseRole`1
+    name: BaseRole<TPlayer>
+    name.vb: BaseRole(Of TPlayer)
+  - uid: PluginAPI.Roles.BaseScp`1
+    name: BaseScp<TPlayer>
+    name.vb: BaseScp(Of TPlayer)
+  - uid: PluginAPI.Roles.ChaosConscript`1
+    name: ChaosConscript<TPlayer>
+    name.vb: ChaosConscript(Of TPlayer)
+  - uid: PluginAPI.Roles.ChaosMarauder`1
+    name: ChaosMarauder<TPlayer>
+    name.vb: ChaosMarauder(Of TPlayer)
+  - uid: PluginAPI.Roles.ChaosRepressor`1
+    name: ChaosRepressor<TPlayer>
+    name.vb: ChaosRepressor(Of TPlayer)
+  - uid: PluginAPI.Roles.ChaosRifleman`1
+    name: ChaosRifleman<TPlayer>
+    name.vb: ChaosRifleman(Of TPlayer)
+  - uid: PluginAPI.Roles.ClassD`1
+    name: ClassD<TPlayer>
+    name.vb: ClassD(Of TPlayer)
+  - uid: PluginAPI.Roles.CustomRole`1
+    name: CustomRole<TPlayer>
+    name.vb: CustomRole(Of TPlayer)
+  - uid: PluginAPI.Roles.FacilityGuard`1
+    name: FacilityGuard<TPlayer>
+    name.vb: FacilityGuard(Of TPlayer)
+  - uid: PluginAPI.Roles.None`1
+    name: None<TPlayer>
+    name.vb: None(Of TPlayer)
+  - uid: PluginAPI.Roles.NtfCaptain`1
+    name: NtfCaptain<TPlayer>
+    name.vb: NtfCaptain(Of TPlayer)
+  - uid: PluginAPI.Roles.NtfPrivate`1
+    name: NtfPrivate<TPlayer>
+    name.vb: NtfPrivate(Of TPlayer)
+  - uid: PluginAPI.Roles.NtfSergeant`1
+    name: NtfSergeant<TPlayer>
+    name.vb: NtfSergeant(Of TPlayer)
+  - uid: PluginAPI.Roles.NtfSpecialist`1
+    name: NtfSpecialist<TPlayer>
+    name.vb: NtfSpecialist(Of TPlayer)
+  - uid: PluginAPI.Roles.Overwatch`1
+    name: Overwatch<TPlayer>
+    name.vb: Overwatch(Of TPlayer)
+  - uid: PluginAPI.Roles.RoleManager
+    name: RoleManager
+  - uid: PluginAPI.Roles.Scientist`1
+    name: Scientist<TPlayer>
+    name.vb: Scientist(Of TPlayer)
+  - uid: PluginAPI.Roles.Scp049`1
+    name: Scp049<TPlayer>
+    name.vb: Scp049(Of TPlayer)
+  - uid: PluginAPI.Roles.Scp0492`1
+    name: Scp0492<TPlayer>
+    name.vb: Scp0492(Of TPlayer)
+  - uid: PluginAPI.Roles.Scp079`1
+    name: Scp079<TPlayer>
+    name.vb: Scp079(Of TPlayer)
+  - uid: PluginAPI.Roles.Scp096`1
+    name: Scp096<TPlayer>
+    name.vb: Scp096(Of TPlayer)
+  - uid: PluginAPI.Roles.Scp106`1
+    name: Scp106<TPlayer>
+    name.vb: Scp106(Of TPlayer)
+  - uid: PluginAPI.Roles.Scp173`1
+    name: Scp173<TPlayer>
+    name.vb: Scp173(Of TPlayer)
+  - uid: PluginAPI.Roles.Scp939`1
+    name: Scp939<TPlayer>
+    name.vb: Scp939(Of TPlayer)
+  - uid: PluginAPI.Roles.Spectator`1
+    name: Spectator<TPlayer>
+    name.vb: Spectator(Of TPlayer)
+  - uid: PluginAPI.Roles.Tutorial`1
+    name: Tutorial<TPlayer>
+    name.vb: Tutorial(Of TPlayer)

@@ -5,16 +5,16 @@ items:
   id: FacilityDoor
   parent: PluginAPI.Core.Doors
   children:
-  - PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,DoorVariant)
+  - PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)
   - PluginAPI.Core.Doors.FacilityDoor.Bypass2176
   - PluginAPI.Core.Doors.FacilityDoor.Count
   - PluginAPI.Core.Doors.FacilityDoor.GameObject
+  - PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
-  - PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
   - PluginAPI.Core.Doors.FacilityDoor.IsLocked
   - PluginAPI.Core.Doors.FacilityDoor.IsOpened
   - PluginAPI.Core.Doors.FacilityDoor.List
-  - PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
+  - PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   - PluginAPI.Core.Doors.FacilityDoor.LockReason
   - PluginAPI.Core.Doors.FacilityDoor.Name
   - PluginAPI.Core.Doors.FacilityDoor.OriginalObject
@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityDoor
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -170,7 +170,7 @@ items:
   syntax:
     content: public readonly DoorVariant OriginalObject
     return:
-      type: DoorVariant
+      type: Interactables.Interobjects.DoorUtils.DoorVariant
     content.vb: Public ReadOnly OriginalObject As DoorVariant
   modifiers.csharp:
   - public
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Room
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsOpened
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -264,7 +264,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -301,7 +301,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LockReason
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -309,13 +309,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
-  summary: "\nGets or sets the door&apos;s <see cref=\"!:DoorLockReason\"></see>\n"
+  summary: "\nGets or sets the door&apos;s <xref href=\"Interactables.Interobjects.DoorUtils.DoorLockReason\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
     content: public DoorLockReason LockReason { get; set; }
     parameters: []
     return:
-      type: DoorLockReason
+      type: Interactables.Interobjects.DoorUtils.DoorLockReason
     content.vb: Public Property LockReason As DoorLockReason
   overload: PluginAPI.Core.Doors.FacilityDoor.LockReason*
   modifiers.csharp:
@@ -338,7 +338,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Permissions
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -346,13 +346,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
-  summary: "\nGets or sets the required <see cref=\"!:KeycardPermissions\"></see>.\n"
+  summary: "\nGets or sets the required <xref href=\"Interactables.Interobjects.DoorUtils.KeycardPermissions\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public KeycardPermissions Permissions { get; set; }
     parameters: []
     return:
-      type: KeycardPermissions
+      type: Interactables.Interobjects.DoorUtils.KeycardPermissions
     content.vb: Public Property Permissions As KeycardPermissions
   overload: PluginAPI.Core.Doors.FacilityDoor.Permissions*
   modifiers.csharp:
@@ -375,7 +375,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Bypass2176
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -412,7 +412,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Name
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -449,7 +449,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -457,13 +457,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
-  summary: "\nGets the door&apos;s <see cref=\"!:UnityEngine.Transform\"></see>.\n"
+  summary: "\nGets the door&apos;s <xref href=\"UnityEngine.Transform\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public Transform Transform { get; }
     parameters: []
     return:
-      type: Transform
+      type: UnityEngine.Transform
     content.vb: Public ReadOnly Property Transform As Transform
   overload: PluginAPI.Core.Doors.FacilityDoor.Transform*
   modifiers.csharp:
@@ -486,7 +486,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -494,13 +494,13 @@ items:
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core.Doors
-  summary: "\nGets the door&apos;s <see cref=\"!:UnityEngine.GameObject\"></see>.\n"
+  summary: "\nGets the door&apos;s <xref href=\"UnityEngine.GameObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public GameObject GameObject { get; }
     parameters: []
     return:
-      type: GameObject
+      type: UnityEngine.GameObject
     content.vb: Public ReadOnly Property GameObject As GameObject
   overload: PluginAPI.Core.Doors.FacilityDoor.GameObject*
   modifiers.csharp:
@@ -523,7 +523,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -537,7 +537,7 @@ items:
     content: public Vector3 Position { get; }
     parameters: []
     return:
-      type: Vector3
+      type: UnityEngine.Vector3
     content.vb: Public ReadOnly Property Position As Vector3
   overload: PluginAPI.Core.Doors.FacilityDoor.Position*
   modifiers.csharp:
@@ -560,7 +560,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -574,7 +574,7 @@ items:
     content: public Quaternion Rotation { get; }
     parameters: []
     return:
-      type: Quaternion
+      type: UnityEngine.Quaternion
     content.vb: Public ReadOnly Property Rotation As Quaternion
   overload: PluginAPI.Core.Doors.FacilityDoor.Rotation*
   modifiers.csharp:
@@ -583,21 +583,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
-  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
-  id: Get(RoomIdentifier)
+- uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  id: Get(MapGeneration.RoomIdentifier)
   parent: PluginAPI.Core.Doors.FacilityDoor
   langs:
   - csharp
   - vb
   name: Get(RoomIdentifier)
   nameWithType: FacilityDoor.Get(RoomIdentifier)
-  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(RoomIdentifier)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -611,7 +611,7 @@ items:
     content: public static IEnumerable<FacilityDoor> Get(RoomIdentifier roomId)
     parameters:
     - id: roomId
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: Target room identifier.
     return:
       type: System.Collections.Generic.IEnumerable{PluginAPI.Core.Doors.FacilityDoor}
@@ -637,7 +637,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -663,21 +663,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
-  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason,System.Boolean)
-  id: Lock(DoorLockReason,System.Boolean)
+- uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
+  id: Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   parent: PluginAPI.Core.Doors.FacilityDoor
   langs:
   - csharp
   - vb
   name: Lock(DoorLockReason, Boolean)
   nameWithType: FacilityDoor.Lock(DoorLockReason, Boolean)
-  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock(DoorLockReason, System.Boolean)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason, System.Boolean)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Lock
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -691,7 +691,7 @@ items:
     content: public void Lock(DoorLockReason reason, bool enabled)
     parameters:
     - id: reason
-      type: DoorLockReason
+      type: Interactables.Interobjects.DoorUtils.DoorLockReason
       description: The reason.
     - id: enabled
       type: System.Boolean
@@ -702,21 +702,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,DoorVariant)
-  commentId: M:PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,DoorVariant)
-  id: '#ctor(PluginAPI.Core.Zones.FacilityRoom,DoorVariant)'
+- uid: PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)
+  id: '#ctor(PluginAPI.Core.Zones.FacilityRoom,Interactables.Interobjects.DoorUtils.DoorVariant)'
   parent: PluginAPI.Core.Doors.FacilityDoor
   langs:
   - csharp
   - vb
   name: FacilityDoor(FacilityRoom, DoorVariant)
   nameWithType: FacilityDoor.FacilityDoor(FacilityRoom, DoorVariant)
-  fullName: PluginAPI.Core.Doors.FacilityDoor.FacilityDoor(PluginAPI.Core.Zones.FacilityRoom, DoorVariant)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.FacilityDoor(PluginAPI.Core.Zones.FacilityRoom, Interactables.Interobjects.DoorUtils.DoorVariant)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityDoor.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityDoor.cs
@@ -733,7 +733,7 @@ items:
       type: PluginAPI.Core.Zones.FacilityRoom
       description: The room the door is in.
     - id: door
-      type: DoorVariant
+      type: Interactables.Interobjects.DoorUtils.DoorVariant
       description: THe base-game door.
     content.vb: Public Sub New(room As FacilityRoom, door As DoorVariant)
   overload: PluginAPI.Core.Doors.FacilityDoor.#ctor*
@@ -1149,11 +1149,19 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: DoorVariant
+- uid: Interactables.Interobjects.DoorUtils.DoorVariant
+  commentId: T:Interactables.Interobjects.DoorUtils.DoorVariant
+  parent: Interactables.Interobjects.DoorUtils
   isExternal: true
   name: DoorVariant
   nameWithType: DoorVariant
-  fullName: DoorVariant
+  fullName: Interactables.Interobjects.DoorUtils.DoorVariant
+- uid: Interactables.Interobjects.DoorUtils
+  commentId: N:Interactables.Interobjects.DoorUtils
+  isExternal: true
+  name: Interactables.Interobjects.DoorUtils
+  nameWithType: Interactables.Interobjects.DoorUtils
+  fullName: Interactables.Interobjects.DoorUtils
 - uid: PluginAPI.Core.Zones.FacilityRoom
   commentId: T:PluginAPI.Core.Zones.FacilityRoom
   parent: PluginAPI.Core.Zones
@@ -1182,27 +1190,30 @@ references:
   name: IsLocked
   nameWithType: FacilityDoor.IsLocked
   fullName: PluginAPI.Core.Doors.FacilityDoor.IsLocked
+- uid: Interactables.Interobjects.DoorUtils.DoorLockReason
+  commentId: T:Interactables.Interobjects.DoorUtils.DoorLockReason
+  parent: Interactables.Interobjects.DoorUtils
+  isExternal: true
+  name: DoorLockReason
+  nameWithType: DoorLockReason
+  fullName: Interactables.Interobjects.DoorUtils.DoorLockReason
 - uid: PluginAPI.Core.Doors.FacilityDoor.LockReason*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.LockReason
   name: LockReason
   nameWithType: FacilityDoor.LockReason
   fullName: PluginAPI.Core.Doors.FacilityDoor.LockReason
-- uid: DoorLockReason
+- uid: Interactables.Interobjects.DoorUtils.KeycardPermissions
+  commentId: T:Interactables.Interobjects.DoorUtils.KeycardPermissions
+  parent: Interactables.Interobjects.DoorUtils
   isExternal: true
-  name: DoorLockReason
-  nameWithType: DoorLockReason
-  fullName: DoorLockReason
+  name: KeycardPermissions
+  nameWithType: KeycardPermissions
+  fullName: Interactables.Interobjects.DoorUtils.KeycardPermissions
 - uid: PluginAPI.Core.Doors.FacilityDoor.Permissions*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Permissions
   name: Permissions
   nameWithType: FacilityDoor.Permissions
   fullName: PluginAPI.Core.Doors.FacilityDoor.Permissions
-- uid: KeycardPermissions
-  commentId: '!:KeycardPermissions'
-  isExternal: true
-  name: KeycardPermissions
-  nameWithType: KeycardPermissions
-  fullName: KeycardPermissions
 - uid: PluginAPI.Core.Doors.FacilityDoor.Bypass2176*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Bypass2176
   name: Bypass2176
@@ -1220,56 +1231,72 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: UnityEngine.Transform
+  commentId: T:UnityEngine.Transform
+  parent: UnityEngine
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: UnityEngine.Transform
 - uid: PluginAPI.Core.Doors.FacilityDoor.Transform*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Transform
   name: Transform
   nameWithType: FacilityDoor.Transform
   fullName: PluginAPI.Core.Doors.FacilityDoor.Transform
-- uid: Transform
+- uid: UnityEngine
+  commentId: N:UnityEngine
   isExternal: true
-  name: Transform
-  nameWithType: Transform
-  fullName: Transform
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
 - uid: PluginAPI.Core.Doors.FacilityDoor.GameObject*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.GameObject
   name: GameObject
   nameWithType: FacilityDoor.GameObject
   fullName: PluginAPI.Core.Doors.FacilityDoor.GameObject
-- uid: GameObject
-  isExternal: true
-  name: GameObject
-  nameWithType: GameObject
-  fullName: GameObject
 - uid: PluginAPI.Core.Doors.FacilityDoor.Position*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Position
   name: Position
   nameWithType: FacilityDoor.Position
   fullName: PluginAPI.Core.Doors.FacilityDoor.Position
-- uid: Vector3
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
   isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: Vector3
+  fullName: UnityEngine.Vector3
 - uid: PluginAPI.Core.Doors.FacilityDoor.Rotation*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Rotation
   name: Rotation
   nameWithType: FacilityDoor.Rotation
   fullName: PluginAPI.Core.Doors.FacilityDoor.Rotation
-- uid: Quaternion
+- uid: UnityEngine.Quaternion
+  commentId: T:UnityEngine.Quaternion
+  parent: UnityEngine
   isExternal: true
   name: Quaternion
   nameWithType: Quaternion
-  fullName: Quaternion
+  fullName: UnityEngine.Quaternion
 - uid: PluginAPI.Core.Doors.FacilityDoor.Get*
   commentId: Overload:PluginAPI.Core.Doors.FacilityDoor.Get
   name: Get
   nameWithType: FacilityDoor.Get
   fullName: PluginAPI.Core.Doors.FacilityDoor.Get
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
 - uid: System.Collections.Generic.IEnumerable{PluginAPI.Core.Doors.FacilityDoor}
   commentId: T:System.Collections.Generic.IEnumerable{PluginAPI.Core.Doors.FacilityDoor}
   parent: System.Collections.Generic
@@ -1312,6 +1339,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true

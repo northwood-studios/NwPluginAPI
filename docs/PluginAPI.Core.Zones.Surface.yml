@@ -5,7 +5,7 @@ items:
   id: Surface
   parent: PluginAPI.Core.Zones
   children:
-  - PluginAPI.Core.Zones.Surface.#ctor(PluginAPI.Core.Zones.SurfaceZone,RoomIdentifier)
+  - PluginAPI.Core.Zones.Surface.#ctor(PluginAPI.Core.Zones.SurfaceZone,MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Zones.Surface.Zone
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Surface/Surface.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Surface
     path: ../NwPluginAPI/Core/Zones/Surface/Surface.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Surface/Surface.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/Surface/Surface.cs
@@ -92,21 +92,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Zones.Surface.#ctor(PluginAPI.Core.Zones.SurfaceZone,RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.Surface.#ctor(PluginAPI.Core.Zones.SurfaceZone,RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.SurfaceZone,RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.Surface.#ctor(PluginAPI.Core.Zones.SurfaceZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Surface.#ctor(PluginAPI.Core.Zones.SurfaceZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.SurfaceZone,MapGeneration.RoomIdentifier)'
   parent: PluginAPI.Core.Zones.Surface
   langs:
   - csharp
   - vb
   name: Surface(SurfaceZone, RoomIdentifier)
   nameWithType: Surface.Surface(SurfaceZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.Surface.Surface(PluginAPI.Core.Zones.SurfaceZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Surface.Surface(PluginAPI.Core.Zones.SurfaceZone, MapGeneration.RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Surface/Surface.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Surface/Surface.cs
@@ -123,7 +123,7 @@ items:
       type: PluginAPI.Core.Zones.SurfaceZone
       description: The zone type.
     - id: room
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As SurfaceZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.Surface.#ctor*
@@ -684,8 +684,16 @@ references:
   name: Surface
   nameWithType: Surface.Surface
   fullName: PluginAPI.Core.Zones.Surface.Surface
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration

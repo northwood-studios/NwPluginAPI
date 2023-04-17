@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginReload.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginReload
     path: ../NwPluginAPI/Core/Attributes/PluginReload.cs

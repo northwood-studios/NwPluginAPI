@@ -9,7 +9,7 @@ items:
   - PluginAPI.Events.PreauthCancellationData.GenerateWriter(System.Boolean@)
   - PluginAPI.Events.PreauthCancellationData.HandledManually
   - PluginAPI.Events.PreauthCancellationData.IsCancelled
-  - PluginAPI.Events.PreauthCancellationData.Reject(NetDataWriter,System.Boolean)
+  - PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
   - PluginAPI.Events.PreauthCancellationData.Reject(RejectionReason,System.Boolean)
   - PluginAPI.Events.PreauthCancellationData.Reject(System.String,System.Boolean)
   - PluginAPI.Events.PreauthCancellationData.RejectBanned(System.String,System.DateTime,System.Boolean)
@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PreauthCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RejectDelay
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RejectRedirect
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RejectBanned
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -246,7 +246,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RejectBanned
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -293,7 +293,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Reject
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Reject
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -367,21 +367,21 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: PluginAPI.Events.PreauthCancellationData.Reject(NetDataWriter,System.Boolean)
-  commentId: M:PluginAPI.Events.PreauthCancellationData.Reject(NetDataWriter,System.Boolean)
-  id: Reject(NetDataWriter,System.Boolean)
+- uid: PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
+  commentId: M:PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
+  id: Reject(LiteNetLib.Utils.NetDataWriter,System.Boolean)
   parent: PluginAPI.Events.PreauthCancellationData
   langs:
   - csharp
   - vb
   name: Reject(NetDataWriter, Boolean)
   nameWithType: PreauthCancellationData.Reject(NetDataWriter, Boolean)
-  fullName: PluginAPI.Events.PreauthCancellationData.Reject(NetDataWriter, System.Boolean)
+  fullName: PluginAPI.Events.PreauthCancellationData.Reject(LiteNetLib.Utils.NetDataWriter, System.Boolean)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Reject
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -395,8 +395,8 @@ items:
     content: public static PreauthCancellationData Reject(NetDataWriter writer, bool isForced)
     parameters:
     - id: writer
-      type: NetDataWriter
-      description: The <see cref="!:NetDataWriter"></see> instance.
+      type: LiteNetLib.Utils.NetDataWriter
+      description: The <xref href="LiteNetLib.Utils.NetDataWriter" data-throw-if-not-resolved="false"></xref> instance.
     - id: isForced
       type: System.Boolean
       description: Indicates whether or not the player has to be rejected forcefully or not.
@@ -425,7 +425,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Accept
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -462,7 +462,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: HandledManually
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -499,7 +499,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GenerateWriter
     path: ../NwPluginAPI/Events/IEventCancellation.cs
@@ -516,7 +516,7 @@ items:
       type: System.Boolean
       description: Indicates whether or not the rejection is forced.
     return:
-      type: NetDataWriter
+      type: LiteNetLib.Utils.NetDataWriter
       description: The generated network writer.
     content.vb: Public Function GenerateWriter(ByRef forced As Boolean) As NetDataWriter
   overload: PluginAPI.Events.PreauthCancellationData.GenerateWriter*
@@ -888,16 +888,24 @@ references:
   nameWithType: PreauthCancellationData.Reject
   fullName: PluginAPI.Events.PreauthCancellationData.Reject
 - uid: RejectionReason
-  commentId: '!:RejectionReason'
+  commentId: T:RejectionReason
   isExternal: true
   name: RejectionReason
   nameWithType: RejectionReason
   fullName: RejectionReason
-- uid: NetDataWriter
+- uid: LiteNetLib.Utils.NetDataWriter
+  commentId: T:LiteNetLib.Utils.NetDataWriter
+  parent: LiteNetLib.Utils
   isExternal: true
   name: NetDataWriter
   nameWithType: NetDataWriter
-  fullName: NetDataWriter
+  fullName: LiteNetLib.Utils.NetDataWriter
+- uid: LiteNetLib.Utils
+  commentId: N:LiteNetLib.Utils
+  isExternal: true
+  name: LiteNetLib.Utils
+  nameWithType: LiteNetLib.Utils
+  fullName: LiteNetLib.Utils
 - uid: PluginAPI.Events.PreauthCancellationData.Accept*
   commentId: Overload:PluginAPI.Events.PreauthCancellationData.Accept
   name: Accept

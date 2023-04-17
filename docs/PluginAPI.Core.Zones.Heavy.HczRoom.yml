@@ -5,7 +5,7 @@ items:
   id: HczRoom
   parent: PluginAPI.Core.Zones.Heavy
   children:
-  - PluginAPI.Core.Zones.Heavy.HczRoom.#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)
+  - PluginAPI.Core.Zones.Heavy.HczRoom.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
   - PluginAPI.Core.Zones.Heavy.HczRoom.Generator
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: HczRoom
     path: ../NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Generator
     path: ../NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
@@ -93,21 +93,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Core.Zones.Heavy.HczRoom.#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)
-  commentId: M:PluginAPI.Core.Zones.Heavy.HczRoom.#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)
-  id: '#ctor(PluginAPI.Core.Zones.HeavyZone,RoomIdentifier)'
+- uid: PluginAPI.Core.Zones.Heavy.HczRoom.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Zones.Heavy.HczRoom.#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)
+  id: '#ctor(PluginAPI.Core.Zones.HeavyZone,MapGeneration.RoomIdentifier)'
   parent: PluginAPI.Core.Zones.Heavy.HczRoom
   langs:
   - csharp
   - vb
   name: HczRoom(HeavyZone, RoomIdentifier)
   nameWithType: HczRoom.HczRoom(HeavyZone, RoomIdentifier)
-  fullName: PluginAPI.Core.Zones.Heavy.HczRoom.HczRoom(PluginAPI.Core.Zones.HeavyZone, RoomIdentifier)
+  fullName: PluginAPI.Core.Zones.Heavy.HczRoom.HczRoom(PluginAPI.Core.Zones.HeavyZone, MapGeneration.RoomIdentifier)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
-      branch: master
+      branch: 13.0.0
       repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Heavy/HczRoom.cs
@@ -124,7 +124,7 @@ items:
       type: PluginAPI.Core.Zones.HeavyZone
       description: The zone type.
     - id: room
-      type: RoomIdentifier
+      type: MapGeneration.RoomIdentifier
       description: The room identifier.
     content.vb: Public Sub New(zone As HeavyZone, room As RoomIdentifier)
   overload: PluginAPI.Core.Zones.Heavy.HczRoom.#ctor*
@@ -708,8 +708,16 @@ references:
   name: HeavyZone
   nameWithType: HeavyZone
   fullName: PluginAPI.Core.Zones.HeavyZone
-- uid: RoomIdentifier
+- uid: MapGeneration.RoomIdentifier
+  commentId: T:MapGeneration.RoomIdentifier
+  parent: MapGeneration
   isExternal: true
   name: RoomIdentifier
   nameWithType: RoomIdentifier
-  fullName: RoomIdentifier
+  fullName: MapGeneration.RoomIdentifier
+- uid: MapGeneration
+  commentId: N:MapGeneration
+  isExternal: true
+  name: MapGeneration
+  nameWithType: MapGeneration
+  fullName: MapGeneration
