@@ -26,6 +26,7 @@ using PluginAPI.Core.Attributes;
 
 using static BanHandler;
 using static MapGeneration.Distributors.Scp079Generator;
+using static InventorySystem.Items.Radio.RadioMessages;
 
 namespace PluginAPI.Events
 {
@@ -37,9 +38,9 @@ namespace PluginAPI.Events
 		[EventArgument]
 		public RadioItem Radio { get; }
 		[EventArgument]
-		public byte Range { get; set; }
+		public RadioRangeLevel Range { get; set; }
 
-		public PlayerChangeRadioRangeEvent(ReferenceHub hub, RadioItem radio, byte range)
+		public PlayerChangeRadioRangeEvent(ReferenceHub hub, RadioItem radio, RadioRangeLevel range)
 		{
 			Player = Player.Get(hub);
 			Radio = radio;

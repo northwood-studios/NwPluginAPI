@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core
+namespace PluginAPI.Core
 {
 	using System;
 	using System.Collections.Generic;
@@ -111,7 +111,7 @@
 		{
 			foreach (var factory in PlayerFactories.Values)
 			{
-				if (!factory.Entities.TryGetValue(obj, out IPlayer plr))
+				if (!factory.Entities.TryGetValue(obj, out Player plr))
 					continue;
 
 				try

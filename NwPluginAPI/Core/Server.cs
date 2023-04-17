@@ -148,7 +148,7 @@ namespace PluginAPI.Core
 		/// <param name="reason">The reason of ban.</param>
 		/// <param name="duration">The duration of the ban in seconds.</param>
 		/// <returns>Whether or not the ban was successful.</returns>
-		public static bool BanPlayer(Player player, IPlayer issuer, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, issuer.ReferenceHub, reason, duration);
+		public static bool BanPlayer(Player player, Player issuer, string reason, long duration) => global::BanPlayer.BanUser(player.ReferenceHub, issuer.ReferenceHub, reason, duration);
 
 		/// <summary>
 		/// Bans a player from the server.
@@ -166,7 +166,7 @@ namespace PluginAPI.Core
 		/// <param name="player">The player which will be kicked.</param>
 		/// <param name="issuer">The player who issued kick.</param>
 		/// <param name="reason">The reason of the kick.</param>
-		public static void KickPlayer(Player player, IPlayer issuer, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, issuer.ReferenceHub, reason);
+		public static void KickPlayer(Player player, Player issuer, string reason) => global::BanPlayer.KickUser(player.ReferenceHub, issuer.ReferenceHub, reason);
 
 		/// <summary>
 		/// Kicks a player from the server.
@@ -202,7 +202,7 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of the ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
 		/// <returns>Whether or not the ban was successful.</returns>
-		public static bool BanPlayerByUserId(string userId, IPlayer issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, new PlayerCommandSender(issuer.ReferenceHub), reason, duration, bannedPlayerNickname);
+		public static bool BanPlayerByUserId(string userId, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByUserId(userId, new PlayerCommandSender(issuer.ReferenceHub), reason, duration, bannedPlayerNickname);
 
 		/// <summary>
 		/// Bans a player from the server.
@@ -247,7 +247,7 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration of the ban.</param>
 		/// <param name="bannedPlayerNickname">The nickname of the banned player.</param>
 		/// <returns>Whether or not the ban was successful.</returns>
-		public static bool BanPlayerByIpAddress(string ipAddress, IPlayer issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, new PlayerCommandSender(issuer.ReferenceHub), reason, duration, bannedPlayerNickname);
+		public static bool BanPlayerByIpAddress(string ipAddress, Player issuer, string reason, long duration, string bannedPlayerNickname = "UnknownName") => BanPlayerByIpAddress(ipAddress, new PlayerCommandSender(issuer.ReferenceHub), reason, duration, bannedPlayerNickname);
 
 		/// <summary>
 		/// Bans a player from the server.

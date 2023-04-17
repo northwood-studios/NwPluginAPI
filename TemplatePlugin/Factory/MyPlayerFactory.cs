@@ -1,6 +1,7 @@
-﻿namespace TemplatePlugin.Factory
+namespace TemplatePlugin.Factory
 {
 	using System;
+	using PluginAPI.Core;
 	using PluginAPI.Core.Factories;
 	using PluginAPI.Core.Interfaces;
 
@@ -11,6 +12,6 @@
 	{
 		public override Type BaseType { get; } = typeof(MyPlayer);
 
-		public override IPlayer Create(IGameComponent component) => new MyPlayer(component);
+		public override Player Create(IGameComponent component) => new MyPlayer(component);
 	}
 }

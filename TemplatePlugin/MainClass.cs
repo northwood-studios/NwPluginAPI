@@ -482,6 +482,7 @@ namespace TemplatePlugin
 		void OnRagdollSpawn(Player plr, IRagdollRole ragdoll, DamageHandlerBase damageHandler)
 		{
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) spawned ragdoll &6{ragdoll.Ragdoll}&r, reason &6{damageHandler}&r");
+			Warhead.Stop();
 		}
 
 		[PluginEvent(ServerEventType.RoundEnd)]
@@ -500,6 +501,8 @@ namespace TemplatePlugin
 		void OnRoundStart()
 		{
 			Log.Info($"Round started");
+
+			Warhead.Start();
 		}
 
 		[PluginEvent(ServerEventType.WaitingForPlayers)]

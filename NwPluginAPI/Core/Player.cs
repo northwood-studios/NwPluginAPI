@@ -101,7 +101,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
 		/// </summary>
-		public static bool TryGet<T>(IGameComponent component, out T player) where T : IPlayer
+		public static bool TryGet<T>(IGameComponent component, out T player) where T : Player
 		{
 			if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
 			{
@@ -129,7 +129,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
 		/// </summary>
-		public static T Get<T>(GameObject gameObject) where T : IPlayer
+		public static T Get<T>(GameObject gameObject) where T : Player
 		{
 			TryGet(gameObject, out T player);
 			return player;
@@ -145,7 +145,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(GameObject gameObject, out T player) where T : IPlayer
+		public static bool TryGet<T>(GameObject gameObject, out T player) where T : Player
 		{
 			if (gameObject == null)
 			{
@@ -181,7 +181,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
 		/// </summary>
-		public static T Get<T>(ReferenceHub hub) where T : IPlayer
+		public static T Get<T>(ReferenceHub hub) where T : Player
 		{
 			TryGet(hub, out T player);
 			return player;
@@ -197,7 +197,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(ReferenceHub hub, out T player) where T : IPlayer
+		public static bool TryGet<T>(ReferenceHub hub, out T player) where T : Player
 		{
 			if (hub == null)
 			{
@@ -227,7 +227,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
 		/// </summary>
-		public static T Get<T>(NetworkIdentity netIdentity) where T : IPlayer
+		public static T Get<T>(NetworkIdentity netIdentity) where T : Player
 		{
 			TryGet(netIdentity, out T player);
 			return player;
@@ -243,7 +243,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : IPlayer
+		public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : Player
 		{
 			if (netIdentity == null)
 			{
@@ -272,7 +272,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their name.
 		/// </summary>
-		public static T GetByName<T>(string name) where T : IPlayer
+		public static T GetByName<T>(string name) where T : Player
 		{
 			TryGetByName(name, out T player);
 			return player;
@@ -288,7 +288,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their name.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGetByName<T>(string name, out T player) where T : IPlayer
+		public static bool TryGetByName<T>(string name, out T player) where T : Player
 		{
 			if (string.IsNullOrEmpty(name))
 			{
@@ -329,7 +329,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their player id.
 		/// </summary>
-		public static T Get<T>(int playerId) where T : IPlayer
+		public static T Get<T>(int playerId) where T : Player
 		{
 			TryGet(playerId, out T player);
 			return player;
@@ -345,7 +345,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their player id.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(int playerId, out T player) where T : IPlayer
+		public static bool TryGet<T>(int playerId, out T player) where T : Player
 		{
 			if (!PlayersIds.TryGetValue(playerId, out IGameComponent component))
 			{
@@ -375,7 +375,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their user id.
 		/// </summary>
-		public static T Get<T>(string userId) where T : IPlayer
+		public static T Get<T>(string userId) where T : Player
 		{
 			TryGet(userId, out T player);
 			return player;
@@ -391,7 +391,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their user id.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(string userId, out T player) where T : IPlayer
+		public static bool TryGet<T>(string userId, out T player) where T : Player
 		{
 			if (string.IsNullOrEmpty(userId))
 			{
@@ -427,7 +427,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their network id.
 		/// </summary>
-		public static T Get<T>(uint networkId) where T : IPlayer
+		public static T Get<T>(uint networkId) where T : Player
 		{
 			TryGet(networkId, out T player);
 			return player;
@@ -443,7 +443,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their network id.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(uint networkId, out T player) where T : IPlayer
+		public static bool TryGet<T>(uint networkId, out T player) where T : Player
 		{
 			if (!ReferenceHub.TryGetHubNetID(networkId, out ReferenceHub hub))
 			{
@@ -473,7 +473,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
 		/// </summary>
-		public static T Get<T>(ICommandSender sender) where T : IPlayer
+		public static T Get<T>(ICommandSender sender) where T : Player
 		{
 			TryGet(sender, out T player);
 			return player;
@@ -489,7 +489,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(ICommandSender sender, out T player) where T : IPlayer
+		public static bool TryGet<T>(ICommandSender sender, out T player) where T : Player
 		{
 			if (string.IsNullOrEmpty((sender as CommandSender)?.SenderId))
 			{
@@ -1025,7 +1025,7 @@ namespace PluginAPI.Core
 		/// <param name="reason">The reason of ban.</param>
 		/// <param name="duration">The duration of ban in seconds.</param>
 		/// <returns>If ban is successful.</returns>
-		public bool Ban(IPlayer issuer, string reason, long duration) => Server.BanPlayer(this, issuer, reason, duration);
+		public bool Ban(Player issuer, string reason, long duration) => Server.BanPlayer(this, issuer, reason, duration);
 
 		/// <summary>
 		/// Bans the player from the server.
@@ -1040,7 +1040,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="issuer">The player which issued kick.</param>
 		/// <param name="reason">The reason of kick.</param>
-		public void Kick(IPlayer issuer, string reason) => Server.KickPlayer(this, issuer, reason);
+		public void Kick(Player issuer, string reason) => Server.KickPlayer(this, issuer, reason);
 
 		/// <summary>
 		/// Kicks the player from the server.

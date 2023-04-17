@@ -163,15 +163,17 @@ namespace PluginAPI.Events
 		public static void UnregisterAllEvents(object plugin)
 		{
 			Type pluginType = plugin.GetType();
+			var handlers = Events
+							.SelectMany(x =>
+								x.Value.Invokers.Where(y => y.Key == pluginType))
+							.SelectMany(x =>
+								x.Value.Select(y => y.Target))
+							.Distinct()
+							.ToArray();
 
-			foreach (var handler in Events
-				         .SelectMany(x =>
-					         x.Value.Invokers.Where(y => y.Key == pluginType))
-				         .SelectMany(x =>
-					         x.Value.Select(y => y.Target))
-				         .Distinct())
+			for (int i = 0; i < handlers.Length; i++)
 			{
-				UnregisterEvents(pluginType, handler);
+				UnregisterEvents(pluginType, handlers[i]);
 			}
 		}
 

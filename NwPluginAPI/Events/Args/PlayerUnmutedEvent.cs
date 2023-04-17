@@ -35,11 +35,14 @@ namespace PluginAPI.Events
 		[EventArgument]
 		public Player Player { get; }
 		[EventArgument]
+		public Player Issuer { get; }
+		[EventArgument]
 		public bool IsIntercom { get; }
 
-		public PlayerUnmutedEvent(ReferenceHub hub, bool isIntercom)
+		public PlayerUnmutedEvent(ReferenceHub hub, ReferenceHub issuer, bool isIntercom)
 		{
 			Player = Player.Get(hub);
+			Issuer = Player.Get(issuer);
 			IsIntercom = isIntercom;
 		}
 

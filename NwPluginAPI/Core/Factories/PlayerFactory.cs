@@ -6,7 +6,7 @@ namespace PluginAPI.Core.Factories
 	/// <summary>
 	/// A factory to create <see cref="IPlayer"/>'s.
 	/// </summary>
-	public class PlayerFactory : Factory<IPlayer>
+	public class PlayerFactory : Factory<Player>
 	{
 		public virtual Type BaseType { get; } = typeof(Player);
 
@@ -15,6 +15,6 @@ namespace PluginAPI.Core.Factories
 		/// </summary>
 		/// <param name="component">The <see cref="IGameComponent"/>.</param>
 		/// <returns>The created <see cref="IPlayer"/>.</returns>
-		public override IPlayer Create(IGameComponent component) => new Player(component);
+		public override Player Create(IGameComponent component) => new Player(component);
 	}
 }
