@@ -111,8 +111,9 @@ namespace PluginAPI.Core
 		{
 			foreach (var factory in PlayerFactories.Values)
 			{
-				if (!factory.Entities.TryGetValue(obj, out Player plr))
-					continue;
+				var plr = factory.Get(obj);
+
+				if (plr == null) continue;
 
 				try
 				{

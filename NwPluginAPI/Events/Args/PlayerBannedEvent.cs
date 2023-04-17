@@ -14,24 +14,24 @@ namespace PluginAPI.Events
 		[EventArgument]
 		public IPlayer Player { get; }
 		[EventArgument]
-		public ICommandSender Issuer { get; }
+		public Player Issuer { get; }
 		[EventArgument]
 		public string Reason { get; set; }
 		[EventArgument]
 		public long Duration { get; set; }
 
-		public PlayerBannedEvent(ReferenceHub hub, ICommandSender issuer, string reason, long duration)
+		public PlayerBannedEvent(ReferenceHub hub, ReferenceHub issuer, string reason, long duration)
 		{
 			Player = Core.Player.Get(hub);
-			Issuer = issuer;
+			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Core.Player.Get(issuer);
 			Reason = reason;
 			Duration = duration;
 		}
 
-		public PlayerBannedEvent(string userId, string nickName, string ipAddress, ICommandSender issuer, string reason, long duration)
+		public PlayerBannedEvent(string userId, string nickName, string ipAddress, ReferenceHub issuer, string reason, long duration)
 		{
 			Player = new OfflinePlayer(userId, nickName, ipAddress);
-			Issuer = issuer;
+			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Core.Player.Get(issuer);
 			Reason = reason;
 			Duration = duration;
 		}

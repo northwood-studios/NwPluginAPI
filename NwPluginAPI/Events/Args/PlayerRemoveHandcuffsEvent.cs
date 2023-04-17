@@ -36,6 +36,8 @@ namespace PluginAPI.Events
 		public Player Player { get; }
 		[EventArgument]
 		public Player Target { get; }
+		[EventArgument]
+		public bool CanRemoveHandcuffsAsScp { get; set; } = false;
 
 		public PlayerRemoveHandcuffsEvent(ReferenceHub hub, ReferenceHub target)
 		{

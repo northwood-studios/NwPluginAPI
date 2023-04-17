@@ -26,32 +26,23 @@ using PluginAPI.Core.Attributes;
 
 using static BanHandler;
 using static MapGeneration.Distributors.Scp079Generator;
-using Respawning;
-using System.Collections.Generic;
 
 namespace PluginAPI.Events
 {
-	public class TeamRespawnEvent : IEventArguments
+	public class PlayerDroppedItemEvent : IEventArguments
 	{
-		public ServerEventType BaseType { get; } = ServerEventType.TeamRespawn;
+		public ServerEventType BaseType { get; } = ServerEventType.PlayerDropedpItem;
 		[EventArgument]
-		public SpawnableTeamType Team { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public List<Player> Players { get; set; } = new List<Player>();
-		[EventArgument]
-		public int NextWaveMaxSize { get; set; }
+		public ItemPickupBase Item { get; }
 
-		public TeamRespawnEvent(SpawnableTeamType team, List<ReferenceHub> spectators)
+		public PlayerDroppedItemEvent(ReferenceHub hub, ItemPickupBase item)
 		{
-			Team = team;
-
-			foreach(var spectator in spectators)
-			{
-				if (Player.TryGet(spectator, out Player plr))
-					Players.Add(plr);
-			}
+			Player = Player.Get(hub);
+			Item = item;
 		}
 
-		TeamRespawnEvent() { }
+		PlayerDroppedItemEvent() { }
 	}
 }

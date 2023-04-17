@@ -52,6 +52,27 @@ namespace PluginAPI.Core.Factories
 		}
 
 		/// <summary>
+		/// Gets entity from factory.
+		/// </summary>
+		/// <param name="component">The game component.</param>
+		/// <returns>Entity.</returns>
+		public T Get(IGameComponent component)
+		{
+			if (Entities.TryGetValue(component, out T entity))
+				return entity;
+
+			if (component is ReferenceHub hb && hb.isLocalPlayer)
+			{
+				if (DefaultServer == null)
+					DefaultServer = Create(component);
+
+				return DefaultServer;
+			}
+
+			return default(T);
+		}
+
+		/// <summary>
 		/// Adds missing entity if not exists.
 		/// </summary>
 		/// <param name="component">The game component.</param>

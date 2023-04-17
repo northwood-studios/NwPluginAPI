@@ -12,6 +12,12 @@ namespace TemplatePlugin.Factory
 	{
 		public override Type BaseType { get; } = typeof(MyPlayer);
 
-		public override Player Create(IGameComponent component) => new MyPlayer(component);
+		public override Player Create(IGameComponent component)
+		{
+			if (component is ReferenceHub hub && hub.isLocalPlayer)
+				return new Server(hub);
+
+			return new MyPlayer(component);
+		}
 	}
 }

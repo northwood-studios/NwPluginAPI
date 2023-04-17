@@ -554,6 +554,11 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets log name needed for command senders.
+		/// </summary>
+		public string LogName => IsServer ? "SERVER CONSOLE" : $"{Nickname} ({UserId})";
+
+		/// <summary>
 		/// Gets the player's user id.
 		/// </summary>
 		public string UserId => IsServer ? "server@server" : ReferenceHub.characterClassManager.UserId;
@@ -982,6 +987,8 @@ namespace PluginAPI.Core
 
 		internal void OnInternalDestroy()
 		{
+			Log.Info($"Remove id " + PlayerId + " user " + UserId);
+
 			PlayerSharedStorage.DestroyStorage(this);
 			PlayersIds.Remove(PlayerId);
 			if (!string.IsNullOrEmpty(UserId))

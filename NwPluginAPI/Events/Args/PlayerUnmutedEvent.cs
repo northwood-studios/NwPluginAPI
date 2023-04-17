@@ -42,7 +42,7 @@ namespace PluginAPI.Events
 		public PlayerUnmutedEvent(ReferenceHub hub, ReferenceHub issuer, bool isIntercom)
 		{
 			Player = Player.Get(hub);
-			Issuer = Player.Get(issuer);
+			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Player.Get(issuer);
 			IsIntercom = isIntercom;
 		}
 

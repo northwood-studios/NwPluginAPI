@@ -26,32 +26,30 @@ using PluginAPI.Core.Attributes;
 
 using static BanHandler;
 using static MapGeneration.Distributors.Scp079Generator;
-using Respawning;
-using System.Collections.Generic;
+using InventorySystem.Items.Firearms.Ammo;
 
 namespace PluginAPI.Events
 {
-	public class TeamRespawnEvent : IEventArguments
+	public class PlayerDroppedAmmoEvent : IEventArguments
 	{
-		public ServerEventType BaseType { get; } = ServerEventType.TeamRespawn;
+		public ServerEventType BaseType { get; } = ServerEventType.PlayerDroppedAmmo;
 		[EventArgument]
-		public SpawnableTeamType Team { get; set; }
+		public Player Player { get; }
 		[EventArgument]
-		public List<Player> Players { get; set; } = new List<Player>();
+		public AmmoPickup Item { get; set; }
 		[EventArgument]
-		public int NextWaveMaxSize { get; set; }
+		public int Amount { get; set; }
+		[EventArgument]
+		public int MaxAmount { get; set; }
 
-		public TeamRespawnEvent(SpawnableTeamType team, List<ReferenceHub> spectators)
+		public PlayerDroppedAmmoEvent(ReferenceHub hub, AmmoPickup item, int amount, int maxAmount)
 		{
-			Team = team;
-
-			foreach(var spectator in spectators)
-			{
-				if (Player.TryGet(spectator, out Player plr))
-					Players.Add(plr);
-			}
+			Player = Player.Get(hub);
+			Item = item;
+			Amount = amount;
+			MaxAmount = maxAmount;
 		}
 
-		TeamRespawnEvent() { }
+		PlayerDroppedAmmoEvent() { }
 	}
 }

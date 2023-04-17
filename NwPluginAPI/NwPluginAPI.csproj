@@ -65,8 +65,4 @@
 		<Reference Include="UnityEngine.CoreModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.CoreModule.dll" />
 	  <Reference Include="UnityEngine.PhysicsModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.PhysicsModule.dll" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Events\Args\" />
-	</ItemGroup>
 </Project>
