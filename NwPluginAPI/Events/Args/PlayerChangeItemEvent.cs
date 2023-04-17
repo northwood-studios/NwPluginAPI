@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			OldItem = oldItem;
 			NewItem = newItem;
 		}
+
+		PlayerChangeItemEvent() { }
 	}
 }

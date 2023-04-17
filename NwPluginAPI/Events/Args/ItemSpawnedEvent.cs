@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			Item = item;
 			Position = pos;
 		}
+
+		ItemSpawnedEvent() { }
 	}
 }

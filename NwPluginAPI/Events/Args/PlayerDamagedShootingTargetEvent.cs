@@ -48,5 +48,7 @@ namespace PluginAPI.Events
 			DamageHandler = handler;
 			DamageAmount = damageAmount;
 		}
+
+		PlayerDamagedShootingTargetEvent() { }
 	}
 }

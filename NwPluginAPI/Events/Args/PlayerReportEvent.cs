@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Target = Player.Get(target);
 			Reason = reason;
 		}
+
+		PlayerReportEvent() { }
 	}
 }

@@ -40,5 +40,7 @@ namespace PluginAPI.Events
 		{
 			Team = team;
 		}
+
+		TeamRespawnEvent() { }
 	}
 }

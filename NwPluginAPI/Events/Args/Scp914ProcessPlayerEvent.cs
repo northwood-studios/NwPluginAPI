@@ -46,5 +46,7 @@ namespace PluginAPI.Events
 			KnobSetting = setting;
 			OutPosition = outPosition;
 		}
+
+		Scp914ProcessPlayerEvent() { }
 	}
 }

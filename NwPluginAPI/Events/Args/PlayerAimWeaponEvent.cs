@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Firearm = firearm;
 			IsAiming = isAiming;
 		}
+
+		PlayerAimWeaponEvent() { }
 	}
 }

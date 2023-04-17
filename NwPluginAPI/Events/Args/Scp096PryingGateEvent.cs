@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			Player = Player.Get(hub);
 			GateDoor = door;
 		}
+
+		Scp096PryingGateEvent() { }
 	}
 }

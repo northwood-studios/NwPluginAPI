@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Item = item;
 			Rigidbody = rb;
 		}
+
+		PlayerThrowItemEvent() { }
 	}
 }

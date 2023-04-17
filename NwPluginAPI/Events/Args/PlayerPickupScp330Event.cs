@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			Player = Player.Get(hub);
 			Item = item;
 		}
+
+		PlayerPickupScp330Event() { }
 	}
 }

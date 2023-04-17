@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			Id = id;
 			BanType = type;
 		}
+
+		BanRevokedEvent() { }
 	}
 }

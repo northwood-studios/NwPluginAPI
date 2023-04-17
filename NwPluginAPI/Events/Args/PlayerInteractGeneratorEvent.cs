@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Generator = generator;
 			GeneratorColliderId = generatorColliderId;
 		}
+
+		PlayerInteractGeneratorEvent() { }
 	}
 }

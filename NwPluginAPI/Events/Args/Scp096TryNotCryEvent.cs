@@ -39,5 +39,7 @@ namespace PluginAPI.Events
 		{
 			Player = Player.Get(hub);
 		}
+
+		Scp096TryNotCryEvent() { }
 	}
 }

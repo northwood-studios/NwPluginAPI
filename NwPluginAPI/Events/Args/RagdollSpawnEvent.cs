@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Ragdoll = ragdoll;
 			DamageHandler = handler;
 		}
+
+		RagdollSpawnEvent() { }
 	}
 }

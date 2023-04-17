@@ -1,7 +1,7 @@
-﻿using PlayerRoles;
+using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core.Attributes;
-using PluginAPI.Core.Roles;
 using PluginAPI.Enums;
+using PluginAPI.Roles;
 using TemplatePlugin.Factory;
 
 namespace TemplatePlugin.Roles
@@ -9,7 +9,7 @@ namespace TemplatePlugin.Roles
 	[PluginRole(RoleRegisterType.Override)]
 	public class CustomScp049 : Scp049<MyPlayer>
 	{
-		public CustomScp049(PlayerRoleBase role) : base(role) { }
+		public CustomScp049(Scp049Role role) : base(role) { }
 
 		public override void OnUpdate()
 		{
@@ -19,7 +19,7 @@ namespace TemplatePlugin.Roles
 
 		public override bool InfectPlayer(MyPlayer target)
 		{
-			target.Ban("Bonk", 30);
+			target.Ban("Ban", 30);
 			return false;
 		}
 	}

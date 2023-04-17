@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Radio = radio;
 			Drain = drain;
 		}
+
+		PlayerUsingRadioEvent() { }
 	}
 }

@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Command = command;
 			Arguments = args;
 		}
+
+		PlayerGameConsoleCommandEvent() { }
 	}
 }

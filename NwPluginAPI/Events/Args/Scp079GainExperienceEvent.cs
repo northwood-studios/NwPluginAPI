@@ -46,5 +46,7 @@ namespace PluginAPI.Events
 			Amount = amount;
 			Reason = reason;
 		}
+
+		Scp079GainExperienceEvent() { }
 	}
 }

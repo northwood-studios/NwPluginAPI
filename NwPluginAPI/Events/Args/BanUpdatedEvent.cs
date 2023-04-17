@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			BanDetails = details;
 			BanType = type;
 		}
+
+		BanUpdatedEvent() { }
 	}
 }

@@ -51,5 +51,7 @@ namespace PluginAPI.Events
 			Result = result;
 			Response = response;
 		}
+
+		ConsoleCommandExecutedEvent() { }
 	}
 }

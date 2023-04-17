@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Door = door;
 			CanOpen = canOpen;
 		}
+
+		PlayerInteractDoorEvent() { }
 	}
 }

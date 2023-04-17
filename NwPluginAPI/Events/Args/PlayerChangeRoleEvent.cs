@@ -48,5 +48,7 @@ namespace PluginAPI.Events
 			NewRole = newRole;
 			ChangeReason = reason;
 		}
+
+		PlayerChangeRoleEvent() { }
 	}
 }

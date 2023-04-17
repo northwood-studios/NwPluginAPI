@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Attacker = Player.Get(attacker);
 			DamageHandler = handler;
 		}
+
+		PlayerDyingEvent() { }
 	}
 }

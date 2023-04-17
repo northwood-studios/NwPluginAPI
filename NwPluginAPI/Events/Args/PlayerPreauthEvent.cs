@@ -60,5 +60,7 @@ namespace PluginAPI.Events
 			ConnectionRequest = connectionRequest;
 			ReaderStartPosition = readerStartPosition;
 		}
+
+		PlayerPreauthEvent() { }
 	}
 }

@@ -46,5 +46,7 @@ namespace PluginAPI.Events
 			KnobSetting = setting;
 			PreviousKnobSetting = oldSetting;
 		}
+
+		Scp914KnobChangeEvent() { }
 	}
 }

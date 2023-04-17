@@ -47,5 +47,7 @@ namespace PluginAPI.Events
 			Window = window;
 			DamageHandler = handler;
 		}
+
+		PlayerDamagedWindowEvent() { }
 	}
 }

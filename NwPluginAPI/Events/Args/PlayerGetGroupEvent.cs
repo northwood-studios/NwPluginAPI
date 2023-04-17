@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			UserId = userId;
 			Group = group;
 		}
+
+		PlayerGetGroupEvent() { }
 	}
 }

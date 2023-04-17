@@ -57,23 +57,35 @@ namespace PluginAPI.Events
 		/// </summary>
 		public static readonly Dictionary<ServerEventType, Event> Events = new Dictionary<ServerEventType, Event>();
 
+		/// <summary>
+		/// Contains all event types and their event types.
+		/// </summary>
+
+		public static readonly Dictionary<Type, ServerEventType> TypeToEvent = new Dictionary<Type, ServerEventType>();
+
 		internal static void Init()
 		{
 			foreach(var type in typeof(EventManager).Assembly.GetTypes())
 			{
-				var args = type.GetInterface("IEventArguments");
+				var interfaces = type.GetInterfaces();
+				try
+				{
+					if (interfaces.Length != 1) continue;
 
-				if (args == null) continue;
+					if (interfaces[0] != typeof(IEventArguments)) continue;
 
-				
-				var obj = (IEventArguments)FormatterServices.GetUninitializedObject(type);
+					var evArg = (IEventArguments)Activator.CreateInstance(type, true);
 
-				var targetProperty = type.GetProperty(nameof(IEventArguments.BaseType), BindingFlags.Public);
-				ServerEventType eventType = (ServerEventType)targetProperty.GetValue(obj);
+					if (Events.ContainsKey(evArg.BaseType)) continue;
 
-				if (Events.ContainsKey(eventType)) continue;
+					Events.Add(evArg.BaseType, new Event(evArg));
+					TypeToEvent.Add(type, evArg.BaseType);
+				}
+				catch(Exception ex)
+				{
+					Log.Error(ex.ToString());
+				}
 
-				Events.Add(eventType, new Event(obj));
 			}
 		}
 
@@ -239,25 +251,31 @@ namespace PluginAPI.Events
 					switch (attribute)
 					{
 						case PluginEvent pluginEvent:
+							var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
 
-							if (!Events.TryGetValue(pluginEvent.EventType, out Event ev))
+							var targetType = pluginEvent.EventType;
+
+							if (eventParameters.Length != 0 && eventParameters[0] == typeof(IEventArguments))
 							{
-								Log.Error($"Event &6{pluginEvent.EventType}&r is not registered in manager! ( create issue on github )");
-								continue;
+								TypeToEvent.TryGetValue(eventParameters[0], out targetType);
 							}
 
-							var eventParameters = method.GetParameters().Select(p => p.ParameterType).ToArray();
+							if (!Events.TryGetValue(targetType, out Event ev))
+							{
+								Log.Error($"Event &6{targetType}&r is not registered in manager! ( create issue on github )");
+								continue;
+							}
 
 							bool isDefaultMethod = true;
 							if (!ValidateEvent(ev, eventParameters, ref isDefaultMethod))
 							{
-								Log.Error($"Event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", ev.Parameters.Select(p => p.BaseType.Name)))}.");
+								Log.Error($"Event &6{method.Name}&r (&6{targetType}&r) in plugin &6{plugin.FullName}&r contains wrong parameters\n - &6{(string.Join(", ", eventParameters.Select(p => p.Name)))}\n - Required:\n - &6{(string.Join(", ", ev.Parameters.Select(p => p.BaseType.Name)))}.");
 								continue;
 							}
 
 							ev.RegisterInvoker(plugin, eventHandler, method, isDefaultMethod);
 
-							Log.Debug($"Registered event &6{method.Name}&r (&6{pluginEvent.EventType}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
+							Log.Debug($"Registered event &6{method.Name}&r (&6{targetType}&r) in plugin &6{plugin.FullName}&r!", Log.DebugMode);
 							break;
 					}
 				}
@@ -273,7 +291,7 @@ namespace PluginAPI.Events
 		{
 			foreach (var ev in Events)
 			{
-				foreach (var invoker in ev.Value.Invokers)
+				foreach (var invoker in ev.Value.Invokers.ToArray())
 				{
 					foreach (var location in invoker.Value.ToArray())
 					{
@@ -300,7 +318,7 @@ namespace PluginAPI.Events
 		/// <param name="type">The type of event</param>
 		/// <param name="args">The arguments of event.</param>
 		/// <returns>If false event is cancelled.</returns>
-		public static bool ExecuteEvent( IEventArguments args) => ExecuteEvent<bool>(args);
+		public static bool ExecuteEvent(IEventArguments args) => ExecuteEvent<bool>(args);
 
 		/// <summary>
 		/// Executes event.

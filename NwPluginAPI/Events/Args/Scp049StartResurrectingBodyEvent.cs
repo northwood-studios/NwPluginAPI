@@ -48,5 +48,7 @@ namespace PluginAPI.Events
 			Body = body;
 			CanResurrct = canResurrct;
 		}
+
+		Scp049StartResurrectingBodyEvent() { }
 	}
 }

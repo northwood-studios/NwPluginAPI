@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Player = Player.Get(hub);
 			IsResumed = isResumed;
 		}
+
+		WarheadStartEvent() { }
 	}
 }

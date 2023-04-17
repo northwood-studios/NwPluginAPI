@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			Player = Player.Get(hub);
 			Tesla = tesla;
 		}
+
+		Scp079UseTeslaEvent() { }
 	}
 }

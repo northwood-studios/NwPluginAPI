@@ -43,5 +43,7 @@ namespace PluginAPI.Events
 			Player = Player.Get(hub);
 			SoundId = id;
 		}
+
+		Scp173PlaySoundEvent() { }
 	}
 }

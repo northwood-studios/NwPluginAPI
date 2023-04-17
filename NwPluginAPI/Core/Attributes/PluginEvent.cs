@@ -9,7 +9,7 @@ namespace PluginAPI.Core.Attributes
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
 	public class PluginEvent : Attribute
 	{
-		public ServerEventType EventType { get; }
+		public ServerEventType EventType { get; } = ServerEventType.None;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PluginEvent"/> class.
@@ -19,5 +19,7 @@ namespace PluginAPI.Core.Attributes
 		{
 			EventType = eventType;
 		}
+
+		public PluginEvent() { }
 	}
 }

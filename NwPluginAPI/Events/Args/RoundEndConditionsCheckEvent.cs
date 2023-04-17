@@ -39,5 +39,7 @@ namespace PluginAPI.Events
 		{
 			BaseGameConditionsSatisfied = baseGameConditionsSatisfied;
 		}
+
+		RoundEndConditionsCheckEvent() { }
 	}
 }

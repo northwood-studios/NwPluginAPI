@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Issuer = issuer;
 			Reason = reason;
 		}
+
+		PlayerKickedEvent() { }
 	}
 }

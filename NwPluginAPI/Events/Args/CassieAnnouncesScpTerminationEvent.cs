@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			DamageHandler = handler;
 			Announcement = announcement;
 		}
+
+		CassieAnnouncesScpTerminationEvent() { }
 	}
 }

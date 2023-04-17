@@ -48,5 +48,7 @@ namespace PluginAPI.Events
 			Reason = reason;
 			Duration = duration;
 		}
+
+		PlayerBannedEvent() { }
 	}
 }

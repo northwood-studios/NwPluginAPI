@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Position = pos;
 			Grenade = grenade;
 		}
+
+		GrenadeExplodedEvent() { }
 	}
 }

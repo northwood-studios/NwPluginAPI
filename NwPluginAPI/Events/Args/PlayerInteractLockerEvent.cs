@@ -48,5 +48,7 @@ namespace PluginAPI.Events
 			Chamber = chamber;
 			CanOpen = canOpen;
 		}
+
+		PlayerInteractLockerEvent() { }
 	}
 }

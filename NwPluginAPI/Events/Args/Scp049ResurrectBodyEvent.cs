@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Target = Player.Get(target);
 			Body = body;
 		}
+
+		Scp049ResurrectBodyEvent() { }
 	}
 }

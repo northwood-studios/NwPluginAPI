@@ -40,5 +40,7 @@ namespace PluginAPI.Events
 		{
 			LeadingTeam = leadingTeam;
 		}
+
+		RoundEndEvent() { }
 	}
 }

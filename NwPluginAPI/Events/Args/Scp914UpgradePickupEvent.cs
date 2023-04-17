@@ -46,5 +46,7 @@ namespace PluginAPI.Events
 			OutputPosition = outputPosition;
 			KnobSetting = setting;
 		}
+
+		Scp914UpgradePickupEvent() { }
 	}
 }

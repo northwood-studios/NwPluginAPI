@@ -42,5 +42,7 @@ namespace PluginAPI.Events
 			Userid = userId;
 			HasReservedSlot = hasReservedSlot;
 		}
+
+		PlayerCheckReservedSlotEvent() { }
 	}
 }

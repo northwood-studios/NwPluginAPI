@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			OldTarget = Player.Get(oldTarget);
 			NewTarget= Player.Get(newTarget);
 		}
+
+		PlayerChangeSpectatorEvent() { }
 	}
 }

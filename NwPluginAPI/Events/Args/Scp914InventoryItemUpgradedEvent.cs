@@ -46,5 +46,7 @@ namespace PluginAPI.Events
 			Item = item;
 			KnobSetting = setting;
 		}
+
+		Scp914InventoryItemUpgradedEvent() { }
 	}
 }

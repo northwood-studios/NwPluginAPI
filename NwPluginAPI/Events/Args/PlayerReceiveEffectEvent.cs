@@ -48,5 +48,7 @@ namespace PluginAPI.Events
 			Intensity = intensity;
 			Duration = duration;
 		}
+
+		PlayerReceiveEffectEvent() { }
 	}
 }

@@ -49,5 +49,7 @@ namespace PluginAPI.Events
 			ProjectileSettings = projectileSettings;
 			FullForce = fullForce;
 		}
+
+		PlayerThrowProjectileEvent() { }
 	}
 }

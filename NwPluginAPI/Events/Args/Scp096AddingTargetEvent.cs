@@ -45,5 +45,7 @@ namespace PluginAPI.Events
 			Target = Player.Get(target);
 			IsForLook = isForLook;
 		}
+
+		Scp096AddingTargetEvent() { }
 	}
 }
