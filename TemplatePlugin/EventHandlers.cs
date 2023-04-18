@@ -166,7 +166,13 @@ namespace TemplatePlugin
 		[PluginEvent]
 		public void OnScp173NewObserver(Scp173NewObserverEvent ev)
 		{
-			//Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-173 sees new target &6{target.Nickname}&r (&6{target.UserId}&r)");
+			if (ev.Player.RoleBase is Scp173Role scp173)
+			{
+				scp173.SubroutineModule.TryGetSubroutine(out Scp173ObserversTracker tracker);
+
+				if (!tracker.Observers.Contains(ev.Target.ReferenceHub))
+					Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) playing as SCP-173 sees new target &6{ev.Target.Nickname}&r (&6{ev.Target.UserId}&r)");
+			}
 		}
 
 		[PluginEvent]
@@ -272,7 +278,7 @@ namespace TemplatePlugin
 		[PluginEvent]
 		public void OnScp049StartResurrectingBody(Scp049StartResurrectingBodyEvent ev)
 		{
-			//Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) playing as SCP-049 tried resurrecting body of &6{target.Nickname}&r (&6{target.UserId}&r), ragdoll with class &2{body.Info.RoleType}&r but it {(canResurrect ? "failed" : "succeded")}!");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) playing as SCP-049 tried resurrecting body of &6{ev.Target.Nickname}&r (&6{ev.Target.UserId}&r), ragdoll with class &2{ev.Body.Info.RoleType}&r but it {(ev.CanResurrct ? "failed" : "succeded")}!");
 		}
 
 		[PluginEvent]
@@ -360,9 +366,10 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent]
-		public void OnPlayerPreCoinFlip(PlayerPreCoinFlipEvent ev)
+		public PlayerPreCoinFlipCancellationData OnPlayerPreCoinFlip(PlayerPreCoinFlipEvent ev)
 		{
 			Log.Info($"&rPlayer &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) flipped the coin (PreCoinFlip event).");
+			return PlayerPreCoinFlipCancellationData.LeaveUnchanged();
 		}
 
 		[PluginEvent]

@@ -141,7 +141,7 @@ namespace TemplatePlugin
 		[PluginEvent(ServerEventType.GrenadeExploded)]
 		void OnGrenadeExploded(Footprint owner, Vector3 position, ItemPickupBase item)
 		{
-			Log.Info($"Grenade &6{item.NetworkInfo.ItemId}&r thrown by &6{item.PreviousOwner.Nickname}&r exploded at &6{item.NetworkInfo.RelativePosition.ToString()}&r");
+			Log.Info($"Grenade &6{item.NetworkInfo.ItemId}&r thrown by &6{item.PreviousOwner.Nickname}&r exploded at &6{position.ToString()}&r");
 		}
 
 		[PluginEvent(ServerEventType.ItemSpawned)]
