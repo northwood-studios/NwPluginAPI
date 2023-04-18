@@ -303,7 +303,7 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerRemoveHandcuffs)]
-		void OnPlayerUncuffed(Player plr, Player target)
+		void OnPlayerUncuffed(Player plr, Player target, bool canRemoveCuffsAsScp)
 		{
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) uncuffed &6{target.Nickname}&r (&6{target.UserId}&r).");
 		}
@@ -477,9 +477,9 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractScp330)]
-		void OnInteractWithScp330(Player plr)
+		void OnInteractWithScp330(PlayerInteractScp330Event ev)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with SCP330.");
+			Log.Info($"Player &6{ev.Player.Nickname}&r (&6{ev.Player.UserId}&r) interacted with SCP330.");
 		}
 
 		[PluginEvent(ServerEventType.RagdollSpawn)]

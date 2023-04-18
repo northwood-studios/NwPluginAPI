@@ -67,12 +67,12 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Stops the detonation countdown.
 		/// </summary>
-		public static void Stop() => Server.Instance.GetComponent<AlphaWarheadController>().CancelDetonation();
+		public static void Stop() => Server.Instance.GetComponent<AlphaWarheadController>(true).CancelDetonation();
 
 		/// <summary>
 		/// Detonate warhead.
 		/// </summary>
-		public static void Detonate() => Server.Instance.GetComponent<AlphaWarheadController>().ForceTime(0);
+		public static void Detonate() => Server.Instance.GetComponent<AlphaWarheadController>(true).ForceTime(0);
 
 #endregion
 
