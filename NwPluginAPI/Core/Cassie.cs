@@ -52,6 +52,7 @@ namespace PluginAPI.Core
 
 		/// <summary>
 		/// Send CASSIE message with custom subtitles.
+		/// Credit: https://github.com/louis1706
 		/// </summary>
 		/// <param name="message">The message</param>
 		/// <param name="subtitles">The custom subtitles</param>
