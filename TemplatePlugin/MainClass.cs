@@ -28,6 +28,7 @@ namespace TemplatePlugin
 	using TemplatePlugin.Factory;
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 	using static InventorySystem.Items.Radio.RadioMessages;
+	using PluginAPI.Core.Interfaces;
 
 	public class MainClass
 	{
@@ -104,8 +105,8 @@ namespace TemplatePlugin
 			else
 			{
 				Log.Info(attacker == null
-					? $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying, cause {damageHandler}"
-					: $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying by &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}");
+					? $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying, cause {damageHandler.Type}"
+					: $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying by &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler.Type}");
 				// The event runs normally
 				return true;
 			}
@@ -115,9 +116,9 @@ namespace TemplatePlugin
 		void OnPlayerDied(Player player, Player attacker, DamageHandlerBase damageHandler)
 		{
 			if (attacker == null)
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) died, cause {damageHandler}");
+				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) died, cause {damageHandler.Type}");
 			else
-				Log.Info($"Player &6{attacker.Nickname}&r (&6{attacker.UserId}&r) killed &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler}");
+				Log.Info($"Player &6{attacker.Nickname}&r (&6{attacker.UserId}&r) killed &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler.Type}");
 		}
 
 		[PluginEvent(ServerEventType.LczDecontaminationStart)]
@@ -181,9 +182,17 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerBanned)]
-		void OnPlayerBanned(Player plr, Player issuer, string reason, long duration)
+		void OnPlayerBanned(IPlayer plr, Player issuer, string reason, long duration)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) got banned by &6{issuer.LogName}&r with reason &6{reason}&r for duration &6{duration}&r seconds");
+			switch (plr)
+			{
+				case OfflinePlayer offlinePlayer:
+					Log.Info($"Player &6{offlinePlayer.Nickname}&r (&6{offlinePlayer.UserId}&r) got offline banned by &6{issuer.Nickname}&r with reason &6{reason}&r for duration &6{duration}&r seconds");
+					break;
+				case Player player:
+					Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got banned by &6{issuer.Nickname}&r with reason &6{reason}&r for duration &6{duration}&r seconds");
+					break;
+			}
 		}
 
 		[PluginEvent(ServerEventType.PlayerCancelUsingItem)]
@@ -312,9 +321,9 @@ namespace TemplatePlugin
 		void OnPlayerDamage(Player player, Player attacker, DamageHandlerBase damageHandler)
 		{
 			if (attacker == null)
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler}.");
+				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler.Type}.");
 			else
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}.");
+				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler.Type}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerKicked)]
@@ -485,7 +494,7 @@ namespace TemplatePlugin
 		[PluginEvent(ServerEventType.RagdollSpawn)]
 		void OnRagdollSpawn(Player plr, IRagdollRole ragdoll, DamageHandlerBase damageHandler)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) spawned ragdoll &6{ragdoll.Ragdoll}&r, reason &6{damageHandler}&r");
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) spawned ragdoll &6{ragdoll.Ragdoll}&r, reason &6{damageHandler.Type}&r");
 			Warhead.Stop();
 		}
 
