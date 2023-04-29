@@ -1,7 +1,5 @@
 using Footprinting;
 using Interactables.Interobjects;
-using InventorySystem.Items.ThrowableProjectiles;
-using MapGeneration;
 using PlayerRoles.Voice;
 using UnityEngine;
 

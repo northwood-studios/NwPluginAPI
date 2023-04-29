@@ -1,12 +1,10 @@
 using MapGeneration;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using Interactables.Interobjects;
 using LightContainmentZoneDecontamination;
 using MapGeneration.Distributors;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
-using PluginAPI.Core.Zones.Heavy;
 using UnityEngine;
 using Color = UnityEngine.Color;
 

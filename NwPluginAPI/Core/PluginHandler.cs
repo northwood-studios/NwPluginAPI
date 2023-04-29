@@ -10,7 +10,6 @@ namespace PluginAPI.Core
 	using CommandSystem;
 	using Loader.Features;
 	using PluginAPI.Commands;
-	using PluginAPI.Enums;
 	using PluginAPI.Loader;
 	using Serialization;
 	using Directory = System.IO.Directory;

@@ -3,7 +3,6 @@ namespace PluginAPI.Core
 	using System;
 	using System.Collections.Generic;
 	using Factories;
-	using Interfaces;
 	using Events;
 
 	/// <summary>

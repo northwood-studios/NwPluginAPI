@@ -1,9 +1,7 @@
-using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
 using PluginAPI.Core.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Reflection;
 
 namespace PluginAPI.Events

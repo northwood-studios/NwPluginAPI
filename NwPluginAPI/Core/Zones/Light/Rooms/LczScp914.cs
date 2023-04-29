@@ -1,6 +1,5 @@
 namespace PluginAPI.Core.Zones.Light.Rooms
 {
-	using Interactables.Interobjects;
 	using MapGeneration;
 	using Core;
 	using Zones;

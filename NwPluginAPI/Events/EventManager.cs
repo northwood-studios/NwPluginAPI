@@ -1,46 +1,14 @@
-using Footprinting;
-using PlayerRoles.PlayableScps.Scp079.Cameras;
-using PlayerRoles.PlayableScps.Scp096;
-using PlayerRoles.Voice;
-
 namespace PluginAPI.Events
 {
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Reflection;
-	using AdminToys;
-	using CustomPlayerEffects;
-	using InventorySystem.Items;
-	using InventorySystem.Items.Firearms;
-	using InventorySystem.Items.Radio;
-	using InventorySystem.Items.Usables;
-	using MapGeneration.Distributors;
-	using PlayerRoles;
-	using PlayerStatsSystem;
 	using Core;
 	using Core.Attributes;
 	using Core.Factories;
-	using Core.Interfaces;
 	using Enums;
-	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
-	using Respawning;
 	using Loader;
-	using InventorySystem.Items.ThrowableProjectiles;
-	using PlayerRoles.PlayableScps.Scp173;
-	using PlayerRoles.PlayableScps.Scp079;
-	using MapGeneration;
-	using Interactables.Interobjects.DoorUtils;
-	using UnityEngine;
-	using PlayerRoles.PlayableScps.Scp939;
-	using CommandSystem;
-	using LiteNetLib;
-	using Scp914;
-	using Interactables.Interobjects;
-	using Mirror;
-	using static UnityEngine.GraphicsBuffer;
-	using System.Security.Cryptography;
-	using System.Runtime.Serialization;
 
 	/// <summary>
 	/// Manages plugin events.

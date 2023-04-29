@@ -4,8 +4,6 @@ using UnityEngine;
 
 namespace PluginAPI.Core
 {
-	using CommandSystem;
-	using RemoteAdmin;
 	using System.Collections.Generic;
 	using Mirror;
 	using Interfaces;

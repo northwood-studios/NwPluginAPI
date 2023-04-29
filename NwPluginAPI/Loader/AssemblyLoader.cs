@@ -10,8 +10,6 @@ namespace PluginAPI.Loader
 	using Core.Extensions;
 	using Helpers;
 	using Features;
-	using Utils.ConfigHandler;
-	using GameCore;
 	using Log = Core.Log;
 	using PluginAPI.Events;
 

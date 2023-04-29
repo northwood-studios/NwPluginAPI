@@ -1,26 +1,9 @@
-using Interactables.Interobjects;
-﻿using MapGeneration.Distributors;
-using PlayerRoles.PlayableScps.Scp079.Cameras;
-using PlayerRoles.PlayableScps.Scp096;
-using Scp914;
-
 namespace TemplatePlugin
 {
-	using CommandSystem;
-	using Interactables.Interobjects.DoorUtils;
-	using InventorySystem.Items;
-	using InventorySystem.Items.Pickups;
-	using InventorySystem.Items.ThrowableProjectiles;
-	using MapGeneration;
-	using PlayerRoles.PlayableScps.Scp079;
 	using PlayerRoles.PlayableScps.Scp173;
-	using PlayerRoles.PlayableScps.Scp939;
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
-	using PluginAPI.Enums;
-	using Respawning;
 	using Factory;
-	using UnityEngine;
 	using PluginAPI.Events;
 
 	public class EventHandlers
