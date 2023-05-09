@@ -27,6 +27,7 @@ namespace TemplatePlugin
 	using ItemPickupBase = InventorySystem.Items.Pickups.ItemPickupBase;
 	using static InventorySystem.Items.Radio.RadioMessages;
 	using PluginAPI.Core.Interfaces;
+	using PlayerRoles.PlayableScps.Scp939;
 
 	public class MainClass
 	{
@@ -103,8 +104,8 @@ namespace TemplatePlugin
 			else
 			{
 				Log.Info(attacker == null
-					? $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying, cause {damageHandler.Type}"
-					: $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying by &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler.Type}");
+					? $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying, cause {damageHandler}"
+					: $"Player &6{player.Nickname}&r (&6{player.UserId}&r) is dying by &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}");
 				// The event runs normally
 				return true;
 			}
@@ -114,9 +115,9 @@ namespace TemplatePlugin
 		void OnPlayerDied(Player player, Player attacker, DamageHandlerBase damageHandler)
 		{
 			if (attacker == null)
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) died, cause {damageHandler.Type}");
+				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) died, cause {damageHandler}");
 			else
-				Log.Info($"Player &6{attacker.Nickname}&r (&6{attacker.UserId}&r) killed &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler.Type}");
+				Log.Info($"Player &6{attacker.Nickname}&r (&6{attacker.UserId}&r) killed &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler}");
 		}
 
 		[PluginEvent(ServerEventType.LczDecontaminationStart)]
@@ -319,9 +320,9 @@ namespace TemplatePlugin
 		void OnPlayerDamage(Player player, Player attacker, DamageHandlerBase damageHandler)
 		{
 			if (attacker == null)
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler.Type}.");
+				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler}.");
 			else
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler.Type}.");
+				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerKicked)]
@@ -492,7 +493,7 @@ namespace TemplatePlugin
 		[PluginEvent(ServerEventType.RagdollSpawn)]
 		void OnRagdollSpawn(Player plr, IRagdollRole ragdoll, DamageHandlerBase damageHandler)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) spawned ragdoll &6{ragdoll.Ragdoll}&r, reason &6{damageHandler.Type}&r");
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) spawned ragdoll &6{ragdoll.Ragdoll}&r, reason &6{damageHandler}&r");
 			Warhead.Stop();
 		}
 

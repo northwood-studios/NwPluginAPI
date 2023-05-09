@@ -10,15 +10,16 @@ namespace PluginAPI.Events
 		[EventArgument]
 		public Player Player { get; }
 		[EventArgument]
-		public int MaxCandiesPerLife { get; set; }
+		public int Uses { get; set; }
 		[EventArgument]
-		public bool PlaySound { get; set; }
+		public bool PlaySound { get; set; } = true;
+		[EventArgument]
+		public bool AllowPunishment { get; set; } = true;
 
-		public PlayerInteractScp330Event(ReferenceHub hub, int maxCandiesPerLife, bool playSound)
+		public PlayerInteractScp330Event(ReferenceHub hub, int uses)
 		{
 			Player = Player.Get(hub);
-			MaxCandiesPerLife = maxCandiesPerLife;
-			PlaySound = playSound;
+			Uses = uses;
 		}
 
 		PlayerInteractScp330Event() { }

@@ -1197,7 +1197,7 @@ namespace PluginAPI.Core
 		/// <param name="amount">The amount of ammo which will be dropped.</param>
 		/// <param name="checkMinimals">Will prevent dropping small amounts of ammo.</param>
 		/// <returns>Whether or not the player dropped the ammo successfully.</returns>
-		public bool DropAmmo(ItemType item, ushort amount, out List<AmmoPickup> pickups, bool checkMinimals = false) => ReferenceHub.inventory.ServerDropAmmo(item, amount, out pickups, checkMinimals);
+		public List<AmmoPickup> DropAmmo(ItemType item, ushort amount, bool checkMinimals = false) => null;// ReferenceHub.inventory.ServerDropAmmo(item, amount, checkMinimals);
 
 		/// <summary>
 		/// Drops all items including ammo.
