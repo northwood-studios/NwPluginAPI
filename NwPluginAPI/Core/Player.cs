@@ -986,8 +986,6 @@ namespace PluginAPI.Core
 
 		internal void OnInternalDestroy()
 		{
-			Log.Info($"Remove id " + PlayerId + " user " + UserId);
-
 			PlayerSharedStorage.DestroyStorage(this);
 			PlayersIds.Remove(PlayerId);
 			if (!string.IsNullOrEmpty(UserId))
