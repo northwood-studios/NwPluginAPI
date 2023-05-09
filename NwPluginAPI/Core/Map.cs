@@ -139,7 +139,7 @@ namespace PluginAPI.Core
 		public static void FlickerLights(float duration, FacilityZone zone)
 		{
 
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				if(controller.Room.Zone == zone)
 					controller.ServerFlickerLights(duration);
@@ -165,7 +165,7 @@ namespace PluginAPI.Core
 		/// <param name="duration">The duration in seconds of the blackout</param>
 		public static void FlickerAllLights(float duration)
 		{
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				controller.ServerFlickerLights(duration);
 			}
@@ -180,7 +180,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static void TurnOnAllLights()
 		{
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				controller.ServerFlickerLights(1);
 			}
@@ -192,7 +192,7 @@ namespace PluginAPI.Core
 		/// <param name="zone">The area where the lights off will be switched on</param>
 		public static void TurnOnLights(FacilityZone zone)
 		{
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				if (controller.Room.Zone == zone)
 					controller.ServerFlickerLights(1);
@@ -219,41 +219,36 @@ namespace PluginAPI.Core
 		/// Changes the color of all lights on the map
 		/// </summary>
 		/// <param name="color"><see cref="Color"/> of the lights</param>
-		/// <param name="intensity">Light intensity</param>
-		public static void ChangeColorOfAllLights(Color color, float intensity = 0)
+		public static void ChangeColorOfAllLights(Color color)
 		{
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				controller.Room.ApiRoom.Lights.LightColor = color;
-				if (intensity > 0)
-					controller.Room.ApiRoom.Lights.LightIntensity = intensity;
 			}
 		}
 
 		/// <summary>
 		/// Changes the color of the lights in a specific zone
 		/// </summary>
-		public static void ChangeColorOfLights(Color color, FacilityZone zone, float intensity = 0)
+		public static void ChangeColorOfLights(Color color, FacilityZone zone)
 		{
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				if (controller.Room.Zone != zone)
 					continue;
 
 				controller.Room.ApiRoom.Lights.LightColor = color;
-				if (intensity > 0)
-					controller.Room.ApiRoom.Lights.LightIntensity = intensity;
 			}
 		}
 
 		/// <summary>
 		/// Changes the color of the lights in a specific zones
 		/// </summary>
-		public static void ChangeColorOfLights(Color color, IEnumerable<FacilityZone> zones, float intensity = 0)
+		public static void ChangeColorOfLights(Color color, IEnumerable<FacilityZone> zones)
 		{
 			foreach (var facilityZone in zones)
 			{
-				ChangeColorOfLights(color, facilityZone, intensity);
+				ChangeColorOfLights(color, facilityZone);
 			}
 		}
 
@@ -266,7 +261,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static void ResetColorOfAllLights()
 		{
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				if (controller.Room.ApiRoom.Lights.LightColor != controller.Room.ApiRoom.Lights.DefaultColor)
 					controller.Room.ApiRoom.Lights.LightColor = controller.Room.ApiRoom.Lights.DefaultColor;
@@ -279,7 +274,7 @@ namespace PluginAPI.Core
 		/// <param name="zone">Facilty zone</param>
 		public static void ResetColorOfLights(FacilityZone zone)
 		{
-			foreach (var controller in FlickerableLightController.Instances)
+			foreach (var controller in RoomLightController.Instances)
 			{
 				if (controller.Room.Zone != zone) continue;
 
