@@ -10,7 +10,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerReceiveEffect;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public StatusEffectBase Effect { get; }
 		[EventArgument]
@@ -20,7 +20,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerReceiveEffectEvent(ReferenceHub hub, StatusEffectBase effect, byte intensity, float duration)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Effect = effect;
 			Intensity = intensity;
 			Duration = duration;

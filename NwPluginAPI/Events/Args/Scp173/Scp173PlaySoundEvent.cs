@@ -9,13 +9,13 @@ namespace PluginAPI.Events.Args.Scp173
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp173PlaySound;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Scp173SoundId SoundId { get; }
 
 		public Scp173PlaySoundEvent(ReferenceHub hub, Scp173SoundId id)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			SoundId = id;
 		}
 

@@ -10,7 +10,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlaceBlood;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Vector3 Position { get; set; }
 

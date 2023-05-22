@@ -10,13 +10,13 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerOpenGenerator;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Scp079Generator Generator { get; }
 
 		public PlayerOpenGeneratorEvent(ReferenceHub hub, Scp079Generator generator)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Generator = generator;
 		}
 

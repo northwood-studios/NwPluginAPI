@@ -8,7 +8,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerGameConsoleCommandExecuted;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public string Command { get; }
 		[EventArgument]
@@ -20,7 +20,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerGameConsoleCommandExecutedEvent(ReferenceHub hub, string command, string[] args, bool result, string response)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Command = command;
 			Arguments = args;
 			Result = result;

@@ -8,13 +8,13 @@ namespace PluginAPI.Events.Args.Scp106
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp106Stalking;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public bool Activated { get; }
 
 		public Scp106StalkingEvent(ReferenceHub hub, bool activated)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Activated = activated;
 		}
 

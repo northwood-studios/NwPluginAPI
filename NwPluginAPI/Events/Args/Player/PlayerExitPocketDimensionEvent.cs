@@ -8,13 +8,13 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerExitPocketDimension;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public bool IsSuccessful { get; set; }
 
 		public PlayerExitPocketDimensionEvent(ReferenceHub hub, bool isSuccessful)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			IsSuccessful = isSuccessful;
 		}
 

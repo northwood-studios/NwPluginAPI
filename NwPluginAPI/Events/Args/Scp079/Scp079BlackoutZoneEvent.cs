@@ -9,13 +9,13 @@ namespace PluginAPI.Events.Args.Scp079
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079BlackoutZone;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public FacilityZone Zone { get; }
 
 		public Scp079BlackoutZoneEvent(ReferenceHub hub, FacilityZone zone)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Zone = zone;
 		}
 

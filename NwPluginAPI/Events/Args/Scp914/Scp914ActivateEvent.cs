@@ -9,13 +9,13 @@ namespace PluginAPI.Events.Args.Scp914
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914Activate;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Scp914KnobSetting KnobSetting { get; }
 
 		public Scp914ActivateEvent(ReferenceHub hub, Scp914KnobSetting setting)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			KnobSetting = setting;
 		}
 

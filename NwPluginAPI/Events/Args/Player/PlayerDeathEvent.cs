@@ -10,9 +10,9 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerDeath;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player Attacker { get; }
+		public Core.Player Attacker { get; }
 		[EventArgument]
 		public DamageHandlerBase DamageHandler { get; }
 

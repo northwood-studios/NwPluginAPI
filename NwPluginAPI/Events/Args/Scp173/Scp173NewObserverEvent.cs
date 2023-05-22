@@ -8,14 +8,14 @@ namespace PluginAPI.Events.Args.Scp173
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp173NewObserver;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player Target { get; }
+		public Core.Player Target { get; }
 
 		public Scp173NewObserverEvent(ReferenceHub hub, ReferenceHub target)
 		{
-			Player = Player.Get(hub);
-			Target = Player.Get(target);
+			Player = Core.Player.Get(hub);
+			Target = Core.Player.Get(target);
 		}
 
 		Scp173NewObserverEvent() { }

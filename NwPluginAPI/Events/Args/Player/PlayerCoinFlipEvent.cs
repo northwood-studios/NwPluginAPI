@@ -8,13 +8,13 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerCoinFlip;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public bool IsTails { get; }
 
 		public PlayerCoinFlipEvent(ReferenceHub hub, bool isTails)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			IsTails = isTails;
 		}
 

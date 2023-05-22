@@ -8,11 +8,11 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerLeft;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		public PlayerLeftEvent(ReferenceHub hub)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 		}
 
 		PlayerLeftEvent() { }

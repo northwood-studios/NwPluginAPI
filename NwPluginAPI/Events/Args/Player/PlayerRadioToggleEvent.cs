@@ -10,7 +10,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerRadioToggle;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public RadioItem Radio { get; }
 		[EventArgument]
@@ -18,7 +18,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerRadioToggleEvent(ReferenceHub hub, RadioItem radio, bool newState)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Radio = radio;
 			NewState = newState;
 		}

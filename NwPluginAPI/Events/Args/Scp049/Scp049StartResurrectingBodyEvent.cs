@@ -8,9 +8,9 @@ namespace PluginAPI.Events.Args.Scp049
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp049StartResurrectingBody;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player Target { get; }
+		public Core.Player Target { get; }
 		[EventArgument]
 		public BasicRagdoll Body { get; }
 		[EventArgument]
@@ -18,8 +18,8 @@ namespace PluginAPI.Events.Args.Scp049
 
 		public Scp049StartResurrectingBodyEvent(ReferenceHub hub, ReferenceHub target, BasicRagdoll body, bool canResurrct)
 		{
-			Player = Player.Get(hub);
-			Target = Player.Get(target);
+			Player = Core.Player.Get(hub);
+			Target = Core.Player.Get(target);
 			Body = body;
 			CanResurrct = canResurrct;
 		}

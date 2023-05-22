@@ -10,13 +10,13 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerSpawn;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public RoleTypeId Role { get; }
 
 		public PlayerSpawnEvent(ReferenceHub hub, RoleTypeId role)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Role = role;
 		}
 

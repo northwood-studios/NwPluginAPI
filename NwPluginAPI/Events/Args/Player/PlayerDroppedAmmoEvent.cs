@@ -9,7 +9,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerDroppedAmmo;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public AmmoPickup Item { get; set; }
 		[EventArgument]
@@ -19,7 +19,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerDroppedAmmoEvent(ReferenceHub hub, AmmoPickup item, int amount, int maxAmount)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 			Amount = amount;
 			MaxAmount = maxAmount;

@@ -8,13 +8,13 @@ namespace PluginAPI.Events.Args.Scp096
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096Enraging;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public float InitialDuration { get; }
 
 		public Scp096EnragingEvent(ReferenceHub hub, float intialDuration)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			InitialDuration = intialDuration;
 		}
 

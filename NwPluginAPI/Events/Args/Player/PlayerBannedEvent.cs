@@ -12,7 +12,7 @@ namespace PluginAPI.Events.Args.Player
 		[EventArgument]
 		public IPlayer Player { get; }
 		[EventArgument]
-		public Player Issuer { get; }
+		public Core.Player Issuer { get; }
 		[EventArgument]
 		public string Reason { get; set; }
 		[EventArgument]
@@ -21,7 +21,7 @@ namespace PluginAPI.Events.Args.Player
 		public PlayerBannedEvent(ReferenceHub hub, ReferenceHub issuer, string reason, long duration)
 		{
 			Player = Core.Player.Get(hub);
-			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Core.Player.Get(issuer);
+			Issuer = issuer == ReferenceHub.HostHub ? Core.Server.Instance : Core.Player.Get(issuer);
 			Reason = reason;
 			Duration = duration;
 		}
@@ -29,7 +29,7 @@ namespace PluginAPI.Events.Args.Player
 		public PlayerBannedEvent(string userId, string nickName, string ipAddress, ReferenceHub issuer, string reason, long duration)
 		{
 			Player = new OfflinePlayer(userId, nickName, ipAddress);
-			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Core.Player.Get(issuer);
+			Issuer = issuer == ReferenceHub.HostHub ? Core.Server.Instance : Core.Player.Get(issuer);
 			Reason = reason;
 			Duration = duration;
 		}

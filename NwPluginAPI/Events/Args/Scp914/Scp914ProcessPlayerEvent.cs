@@ -11,7 +11,7 @@ namespace PluginAPI.Events.Args.Scp914
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914ProcessPlayer;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Scp914KnobSetting KnobSetting { get; }
 		[EventArgument]
@@ -19,7 +19,7 @@ namespace PluginAPI.Events.Args.Scp914
 
 		public Scp914ProcessPlayerEvent(ReferenceHub hub, Scp914KnobSetting setting, Vector3 outPosition)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			KnobSetting = setting;
 			OutPosition = outPosition;
 		}

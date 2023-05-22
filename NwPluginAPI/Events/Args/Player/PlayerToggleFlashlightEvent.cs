@@ -10,7 +10,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerToggleFlashlight;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public ItemBase Item { get; }
 		[EventArgument]
@@ -18,7 +18,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerToggleFlashlightEvent(ReferenceHub hub, ItemBase item, bool isToggled)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 			IsToggled = isToggled;
 		}

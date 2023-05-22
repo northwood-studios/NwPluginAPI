@@ -10,13 +10,13 @@ namespace PluginAPI.Events.Args.Scp079
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079UnlockDoor;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public DoorVariant Door { get; }
 
 		public Scp079UnlockDoorEvent(ReferenceHub hub, DoorVariant door)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Door = door;
 		}
 

@@ -1,6 +1,4 @@
 using InventorySystem.Items;
-
-using PluginAPI.Core;
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using Scp914;
@@ -11,7 +9,7 @@ namespace PluginAPI.Events.Args.Scp914
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914UpgradeInventory;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public ItemBase Item { get; }
 		[EventArgument]
@@ -19,7 +17,7 @@ namespace PluginAPI.Events.Args.Scp914
 
 		public Scp914UpgradeInventoryEvent(ReferenceHub hub, ItemBase item, Scp914KnobSetting setting)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 			KnobSetting = setting;
 		}

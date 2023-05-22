@@ -11,7 +11,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerChangeRadioRange;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public RadioItem Radio { get; }
 		[EventArgument]
@@ -19,7 +19,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerChangeRadioRangeEvent(ReferenceHub hub, RadioItem radio, RadioRangeLevel range)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Radio = radio;
 			Range = range;
 		}

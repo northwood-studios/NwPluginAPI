@@ -11,7 +11,7 @@ namespace PluginAPI.Events.Args.Scp914
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914InventoryItemUpgraded;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public ItemBase Item { get; }
 		[EventArgument]
@@ -19,7 +19,7 @@ namespace PluginAPI.Events.Args.Scp914
 
 		public Scp914InventoryItemUpgradedEvent(ReferenceHub hub, ItemBase item, Scp914KnobSetting setting)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 			KnobSetting = setting;
 		}

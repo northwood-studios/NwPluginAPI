@@ -10,13 +10,13 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerCancelUsingItem;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public UsableItem Item { get; }
 
 		public PlayerCancelUsingItemEvent(ReferenceHub hub, UsableItem item)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 		}
 

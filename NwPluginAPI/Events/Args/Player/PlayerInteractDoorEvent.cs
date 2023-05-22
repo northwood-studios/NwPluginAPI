@@ -10,7 +10,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerInteractDoor;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public DoorVariant Door { get; }
 		[EventArgument]
@@ -18,7 +18,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerInteractDoorEvent(ReferenceHub hub, DoorVariant door, bool canOpen)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Door = door;
 			CanOpen = canOpen;
 		}

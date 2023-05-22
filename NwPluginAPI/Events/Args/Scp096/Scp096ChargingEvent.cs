@@ -8,11 +8,11 @@ namespace PluginAPI.Events.Args.Scp096
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096Charging;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		public Scp096ChargingEvent(ReferenceHub hub)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 		}
 
 		Scp096ChargingEvent() { }

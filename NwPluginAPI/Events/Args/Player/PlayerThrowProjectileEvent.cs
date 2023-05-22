@@ -11,7 +11,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerThrowProjectile;
 		[EventArgument]
-		public Player Thrower { get; }
+		public Core.Player Thrower { get; }
 		[EventArgument]
 		public ThrowableItem Item { get; }
 		[EventArgument]
@@ -21,7 +21,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerThrowProjectileEvent(ReferenceHub hub, ThrowableItem item, ProjectileSettings projectileSettings, bool fullForce)
 		{
-			Thrower = Player.Get(hub);
+			Thrower = Core.Player.Get(hub);
 			Item = item;
 			ProjectileSettings = projectileSettings;
 			FullForce = fullForce;

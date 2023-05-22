@@ -10,7 +10,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerAimWeapon;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Firearm Firearm { get; }
 		[EventArgument]
@@ -18,7 +18,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerAimWeaponEvent(ReferenceHub hub, Firearm firearm, bool isAiming)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Firearm = firearm;
 			IsAiming = isAiming;
 		}

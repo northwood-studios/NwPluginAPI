@@ -8,13 +8,13 @@ namespace PluginAPI.Events.Args.Scp079
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079LevelUpTier;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public int Tier { get; }
 
 		public Scp079LevelUpTierEvent(ReferenceHub hub, int tier)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Tier = tier;
 		}
 

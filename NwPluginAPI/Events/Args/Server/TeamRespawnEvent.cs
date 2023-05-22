@@ -12,7 +12,7 @@ namespace PluginAPI.Events.Args.Server
 		[EventArgument]
 		public SpawnableTeamType Team { get; set; }
 		[EventArgument]
-		public List<Player> Players { get; set; } = new List<Player>();
+		public List<Core.Player> Players { get; set; } = new();
 		[EventArgument]
 		public int NextWaveMaxSize { get; set; }
 
@@ -22,7 +22,7 @@ namespace PluginAPI.Events.Args.Server
 
 			foreach (var spectator in spectators)
 			{
-				if (Player.TryGet(spectator, out Player plr))
+				if (Core.Player.TryGet(spectator, out Core.Player plr))
 					Players.Add(plr);
 			}
 		}

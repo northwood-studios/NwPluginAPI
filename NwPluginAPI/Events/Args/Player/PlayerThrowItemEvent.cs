@@ -12,7 +12,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerThrowItem;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public ItemBase Item { get; }
 		[EventArgument]
@@ -20,7 +20,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerThrowItemEvent(ReferenceHub hub, ItemBase item, Rigidbody rb)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 			Rigidbody = rb;
 		}

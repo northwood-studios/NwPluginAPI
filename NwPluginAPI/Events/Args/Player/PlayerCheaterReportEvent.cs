@@ -8,16 +8,16 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerCheaterReport;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player Target { get; }
+		public Core.Player Target { get; }
 		[EventArgument]
 		public string Reason { get; set; }
 
 		public PlayerCheaterReportEvent(ReferenceHub hub, ReferenceHub target, string reason)
 		{
-			Player = Player.Get(hub);
-			Target = Player.Get(target);
+			Player = Core.Player.Get(hub);
+			Target = Core.Player.Get(target);
 			Reason = reason;
 		}
 

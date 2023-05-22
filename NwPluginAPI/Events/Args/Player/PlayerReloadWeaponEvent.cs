@@ -10,13 +10,13 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerReloadWeapon;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Firearm Firearm { get; }
 
 		public PlayerReloadWeaponEvent(ReferenceHub hub, Firearm firearm)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Firearm = firearm;
 		}
 

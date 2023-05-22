@@ -8,7 +8,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerInteractScp330;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public int Uses { get; set; }
 		[EventArgument]
@@ -18,7 +18,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerInteractScp330Event(ReferenceHub hub, int uses)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Uses = uses;
 		}
 

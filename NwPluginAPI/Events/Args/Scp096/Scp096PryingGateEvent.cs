@@ -10,13 +10,13 @@ namespace PluginAPI.Events.Args.Scp096
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096PryingGate;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public PryableDoor GateDoor { get; }
 
 		public Scp096PryingGateEvent(ReferenceHub hub, PryableDoor door)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			GateDoor = door;
 		}
 

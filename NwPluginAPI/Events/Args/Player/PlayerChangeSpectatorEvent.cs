@@ -8,17 +8,17 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerChangeSpectator;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player OldTarget { get; }
+		public Core.Player OldTarget { get; }
 		[EventArgument]
-		public Player NewTarget { get; set; }
+		public Core.Player NewTarget { get; set; }
 
 		public PlayerChangeSpectatorEvent(ReferenceHub hub, ReferenceHub oldTarget, ReferenceHub newTarget)
 		{
-			Player = Player.Get(hub);
-			OldTarget = Player.Get(oldTarget);
-			NewTarget= Player.Get(newTarget);
+			Player = Core.Player.Get(hub);
+			OldTarget = Core.Player.Get(oldTarget);
+			NewTarget= Core.Player.Get(newTarget);
 		}
 
 		PlayerChangeSpectatorEvent() { }

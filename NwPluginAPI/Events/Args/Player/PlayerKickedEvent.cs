@@ -10,7 +10,7 @@ namespace PluginAPI.Events.Args.Player
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerKicked;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public ICommandSender Issuer { get; }
 		[EventArgument]
@@ -18,7 +18,7 @@ namespace PluginAPI.Events.Args.Player
 
 		public PlayerKickedEvent(ReferenceHub hub, ICommandSender issuer, string reason)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Issuer = issuer;
 			Reason = reason;
 		}

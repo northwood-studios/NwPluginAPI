@@ -5,7 +5,7 @@ namespace PluginAPI.Core.Zones.Heavy
 
 	public class HczRoom : FacilityRoom
 	{
-		public Generator Generator { get; internal set; }
+		public Heavy.Generator.Generator Generator { get; internal set; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="HczRoom"/> class.
