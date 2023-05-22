@@ -1,6 +1,6 @@
 using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Warhead
 {
 	public class WarheadDetonationEvent : IEventArguments
 	{

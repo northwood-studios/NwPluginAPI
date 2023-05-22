@@ -3,7 +3,7 @@ using PluginAPI.Core.Attributes;
 
 using static BanHandler;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Server
 {
 	public class BanUpdatedEvent : IEventArguments
 	{

@@ -3,7 +3,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using MapGeneration;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp079
 {
 	public class Scp079BlackoutZoneEvent : IEventArguments
 	{

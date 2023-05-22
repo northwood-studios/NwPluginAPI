@@ -2,7 +2,7 @@ using PluginAPI.Core.Attributes;
 using PluginAPI.Enums;
 using static BanHandler;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Server
 {
 	public class BanRevokedEvent : IEventArguments
 	{

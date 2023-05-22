@@ -3,7 +3,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using PlayerRoles.PlayableScps.Scp939;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp939
 {
 	public class Scp939LungeEvent : IEventArguments
 	{

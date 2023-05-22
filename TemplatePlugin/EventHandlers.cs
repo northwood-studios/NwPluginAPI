@@ -5,6 +5,16 @@ namespace TemplatePlugin
 	using PluginAPI.Core.Attributes;
 	using Factory;
 	using PluginAPI.Events;
+	using PluginAPI.Events.Args.Scp939;
+	using PluginAPI.Events.Args.Scp079;
+	using PluginAPI.Events.Args.Server;
+	using PluginAPI.Events.Args.Scp173;
+	using PluginAPI.Events.Args.Scp914;
+	using PluginAPI.Events.Args.Scp096;
+	using PluginAPI.Events.Args.Scp106;
+	using PluginAPI.Events.Args.Player;
+	using PluginAPI.Events.Args.Warhead;
+	using PluginAPI.Events.Args.Scp049;
 
 	public class EventHandlers
 	{

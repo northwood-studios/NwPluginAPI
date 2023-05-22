@@ -3,7 +3,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using PlayerRoles.PlayableScps.Scp096;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp096
 {
 	public class Scp096ChangeStateEvent : IEventArguments
 	{

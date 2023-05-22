@@ -2,7 +2,7 @@ using PluginAPI.Core;
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp173
 {
 	public class Scp173CreateTantrumEvent : IEventArguments
 	{

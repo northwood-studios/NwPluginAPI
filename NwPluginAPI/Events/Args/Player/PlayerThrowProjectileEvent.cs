@@ -5,7 +5,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using static InventorySystem.Items.ThrowableProjectiles.ThrowableItem;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerThrowProjectileEvent : IEventArguments
 	{

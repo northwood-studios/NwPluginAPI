@@ -1,7 +1,8 @@
 using PlayerRoles;
 using PluginAPI.Core;
+using PluginAPI.Roles.Humans;
 
-namespace PluginAPI.Roles
+namespace PluginAPI.Roles.Humans.Chaos
 {
 	public class BaseChaos<TPlayer> : BaseHuman<TPlayer> where TPlayer : Player
 	{

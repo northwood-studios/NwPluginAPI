@@ -5,7 +5,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using static MapGeneration.Distributors.Scp079Generator;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerInteractGeneratorEvent : IEventArguments
 	{

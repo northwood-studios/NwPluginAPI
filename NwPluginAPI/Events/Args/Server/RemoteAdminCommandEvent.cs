@@ -2,7 +2,7 @@ using CommandSystem;
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Server
 {
 	public class RemoteAdminCommandEvent : IEventArguments
 	{

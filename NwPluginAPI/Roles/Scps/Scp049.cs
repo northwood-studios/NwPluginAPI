@@ -2,7 +2,7 @@ using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core;
 using static PlayerRoles.PlayableScps.Scp049.Scp049AudioPlayer;
 
-namespace PluginAPI.Roles
+namespace PluginAPI.Roles.Scps
 {
 	public class Scp049<TPlayer> : BaseScp<TPlayer> where TPlayer : Player
 	{
@@ -21,9 +21,9 @@ namespace PluginAPI.Roles
 
 				return _currentTarget;
 			}
-		} 
+		}
 
-		public Scp049(Scp049Role role) : base(role) 
+		public Scp049(Scp049Role role) : base(role)
 		{
 			RoleBase = role;
 			RoleBase.SubroutineModule.TryGetSubroutine(out SenseAbility);

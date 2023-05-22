@@ -1,7 +1,7 @@
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerGetGroupEvent : IEventArguments
 	{

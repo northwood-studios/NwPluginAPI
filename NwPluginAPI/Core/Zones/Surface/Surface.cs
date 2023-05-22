@@ -1,6 +1,7 @@
-namespace PluginAPI.Core.Zones
+namespace PluginAPI.Core.Zones.Surface
 {
 	using MapGeneration;
+	using PluginAPI.Core.Zones;
 
 	/// <summary>
 	/// Represents the surface.

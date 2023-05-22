@@ -1,7 +1,7 @@
 using PlayerRoles;
 using PluginAPI.Core;
 
-namespace PluginAPI.Roles
+namespace PluginAPI.Roles.Humans.Ntf
 {
 	public class NtfSpecialist<TPlayer> : BaseNineTailedFox<TPlayer> where TPlayer : Player
 	{

@@ -3,7 +3,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using PlayerRoles.Voice;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerUsingIntercomEvent : IEventArguments
 	{

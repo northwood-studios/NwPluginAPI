@@ -4,7 +4,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using Scp914;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp914
 {
 	public class Scp914PickupUpgradedEvent : IEventArguments
 	{

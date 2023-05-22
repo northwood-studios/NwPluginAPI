@@ -1,7 +1,7 @@
 using PlayerRoles;
 using PluginAPI.Core;
 
-namespace PluginAPI.Roles
+namespace PluginAPI.Roles.Other
 {
 	public class Overwatch<TPlayer> : BaseRole<TPlayer> where TPlayer : Player
 	{

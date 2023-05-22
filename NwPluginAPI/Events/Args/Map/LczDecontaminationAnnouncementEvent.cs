@@ -1,7 +1,7 @@
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Map
 {
 	public class LczDecontaminationAnnouncementEvent : IEventArguments
 	{

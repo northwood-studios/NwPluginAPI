@@ -5,7 +5,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using static InventorySystem.Items.Radio.RadioMessages;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerChangeRadioRangeEvent : IEventArguments
 	{

@@ -4,7 +4,7 @@ using PluginAPI.Core.Attributes;
 using Respawning;
 using System.Collections.Generic;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Server
 {
 	public class TeamRespawnEvent : IEventArguments
 	{
@@ -20,7 +20,7 @@ namespace PluginAPI.Events
 		{
 			Team = team;
 
-			foreach(var spectator in spectators)
+			foreach (var spectator in spectators)
 			{
 				if (Player.TryGet(spectator, out Player plr))
 					Players.Add(plr);

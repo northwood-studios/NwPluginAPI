@@ -29,6 +29,7 @@ namespace PluginAPI.Enums
 	using Interactables.Interobjects.DoorUtils;
 	using Interactables.Interobjects;
 	using Scp914;
+	using PluginAPI.Core.Zones.Heavy.Generator;
 
 	/// <summary>
 	/// Represents server event types.

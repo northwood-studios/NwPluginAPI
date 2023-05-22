@@ -3,7 +3,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using InventorySystem.Items.Firearms.Ammo;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerDroppedAmmoEvent : IEventArguments
 	{

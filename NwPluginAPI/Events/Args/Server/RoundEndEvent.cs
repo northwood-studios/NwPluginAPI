@@ -2,7 +2,7 @@ using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 using static RoundSummary;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Server
 {
 	public class RoundEndEvent : IEventArguments
 	{

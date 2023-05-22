@@ -2,7 +2,7 @@ using PluginAPI.Core;
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Warhead
 {
 	public class WarheadStartEvent : IEventArguments
 	{

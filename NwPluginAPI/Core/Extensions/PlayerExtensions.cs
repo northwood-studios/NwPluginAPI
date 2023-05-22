@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core
+﻿namespace PluginAPI.Core.Extensions
 {
 	using InventorySystem.Configs;
 

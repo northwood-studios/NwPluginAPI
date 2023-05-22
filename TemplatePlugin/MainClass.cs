@@ -28,6 +28,7 @@ namespace TemplatePlugin
 	using static InventorySystem.Items.Radio.RadioMessages;
 	using PluginAPI.Core.Interfaces;
 	using PlayerRoles.PlayableScps.Scp939;
+	using PluginAPI.Events.Args.Player;
 
 	public class MainClass
 	{
