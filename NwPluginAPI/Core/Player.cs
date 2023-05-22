@@ -1,33 +1,33 @@
 namespace PluginAPI.Core
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
+	using CommandSystem;
+	using Factories;
+	using Footprinting;
 	using Hints;
+	using Interfaces;
 	using InventorySystem;
+	using InventorySystem.Disarming;
 	using InventorySystem.Items;
+	using InventorySystem.Items.Armor;
+	using InventorySystem.Items.Firearms.Ammo;
+	using InventorySystem.Items.Pickups;
+	using MapGeneration;
 	using Mirror;
 	using PlayerRoles;
 	using PlayerRoles.FirstPersonControl;
+	using PlayerRoles.Voice;
 	using PlayerStatsSystem;
-	using Factories;
-	using Interfaces;
+	using PluginAPI.Core.Items;
 	using RoundRestarting;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
 	using UnityEngine;
+	using Utils.Networking;
 	using VoiceChat;
 	using VoiceChat.Playbacks;
 	using static Broadcast;
-	using InventorySystem.Disarming;
 	using static InventorySystem.Disarming.DisarmedPlayers;
-	using Utils.Networking;
-	using Mirror.LiteNetLib4Mirror;
-	using Footprinting;
-	using MapGeneration;
-	using CommandSystem;
-	using InventorySystem.Items.Pickups;
-	using PluginAPI.Core.Items;
-	using PlayerRoles.Voice;
-	using InventorySystem.Items.Firearms.Ammo;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -651,8 +651,18 @@ namespace PluginAPI.Core
 
 		/// <summary>
 		/// Player info displayed while looking at the player.
+		/// <br>This can be used to hide elements of the player's name such as the role, badge, unit name, etc.</br>
 		/// </summary>
 		public PlayerInfo PlayerInfo { get; }
+
+		/// <summary>
+		/// Gets or sets the distance that others can see the player's information.
+		/// </summary>
+		public float InfoViewRange
+		{
+			get => ReferenceHub.nicknameSync.NetworkViewRange;
+			set => ReferenceHub.nicknameSync.NetworkViewRange = value;
+		}
 
 		/// <summary>
 		/// Gets or sets the item in the player's hand, returns the default value if empty.
@@ -670,10 +680,15 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets player's BodyArmor if they have one.
+		/// </summary>
+		public BodyArmor CurrentArmor => ReferenceHub.inventory.TryGetBodyArmor(out var armor) ? armor : null;
+
+
+		/// <summary>
 		/// Get player current room.
 		/// </summary>
 		public RoomIdentifier Room => RoomIdUtils.RoomAtPosition(GameObject.transform.position);
-
 
 		/// <summary>
 		/// Get player current zone.
@@ -726,9 +741,9 @@ namespace PluginAPI.Core
 
 		/// <summary>
 		/// Gets player <see cref="VoiceModule"/>
-		/// <remarks>
-		///  Can be null.
-		/// </remarks>
+		/// <br>
+		/// Can be null.
+		/// </br>
 		/// </summary>
 		public VoiceModuleBase VoiceModule => ReferenceHub.roleManager.CurrentRole is IVoiceRole voiceRole ? voiceRole.VoiceModule : null;
 
@@ -736,6 +751,11 @@ namespace PluginAPI.Core
 		/// Gets player <see cref="VoiceChannel"/>.
 		/// </summary>
 		public VoiceChatChannel VoiceChannel => VoiceModule?.CurrentChannel ?? VoiceChatChannel.None;
+
+		/// <summary>
+		/// Gets if the player agree that his microphone was recorded or not.
+		/// </summary>
+		public bool AgreeToRecording => VoiceChatPrivacySettings.CheckUserFlags(ReferenceHub, VcPrivacyFlags.SettingsSelected | VcPrivacyFlags.AllowRecording | VcPrivacyFlags.AllowMicCapture);
 
 		/// <summary>
 		/// Gets if the player has no items in his inventory.
@@ -1256,7 +1276,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="text">The text which will be displayed.</param>
 		/// <param name="duration">The duration of which the text will be visible.</param>
-		public void ReceiveHint(string text, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, null, duration));
+		public void SendHint(string text, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, null, duration));
 
 		/// <summary>
 		/// Sends the player a hint text with effects.
@@ -1264,7 +1284,13 @@ namespace PluginAPI.Core
 		/// <param name="text">The text which will be displayed.</param>
 		/// <param name="effects">The effects of text.</param>
 		/// <param name="duration">The duration of which the text will be visible.</param>
-		public void ReceiveHint(string text, HintEffect[] effects, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, effects, duration));
+		public void SendHint(string text, HintEffect[] effects, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, effects, duration));
+
+		/// <summary>
+		/// Sends the player a hint.
+		/// </summary>
+		/// <param name="hint">The hint that will be sent to the player</param>
+		public void SendHint(Hint hint) => ReferenceHub.hints.Show(hint);
 
 		/// <summary>
 		/// Sends the player a hit marker.
