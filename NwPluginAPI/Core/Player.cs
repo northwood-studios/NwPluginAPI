@@ -1276,7 +1276,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="text">The text which will be displayed.</param>
 		/// <param name="duration">The duration of which the text will be visible.</param>
-		public void SendHint(string text, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, null, duration));
+		public void ShowHint(string text, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, null, duration));
 
 		/// <summary>
 		/// Sends the player a hint text with effects.
@@ -1284,13 +1284,13 @@ namespace PluginAPI.Core
 		/// <param name="text">The text which will be displayed.</param>
 		/// <param name="effects">The effects of text.</param>
 		/// <param name="duration">The duration of which the text will be visible.</param>
-		public void SendHint(string text, HintEffect[] effects, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, effects, duration));
+		public void ShowHint(string text, HintEffect[] effects, float duration = 3f) => ReferenceHub.hints.Show(new TextHint(text, new HintParameter[] { new StringHintParameter(text) }, effects, duration));
 
 		/// <summary>
 		/// Sends the player a hint.
 		/// </summary>
 		/// <param name="hint">The hint that will be sent to the player</param>
-		public void SendHint(Hint hint) => ReferenceHub.hints.Show(hint);
+		public void ShowHint(Hint hint) => ReferenceHub.hints.Show(hint);
 
 		/// <summary>
 		/// Sends the player a hit marker.
