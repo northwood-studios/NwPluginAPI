@@ -1,10 +1,10 @@
 namespace PluginAPI.Core.Items
 {
+	using Core;
 	using InventorySystem;
 	using InventorySystem.Items;
 	using InventorySystem.Items.Pickups;
 	using Mirror;
-	using Core;
 	using System.Collections.Generic;
 	using UnityEngine;
 

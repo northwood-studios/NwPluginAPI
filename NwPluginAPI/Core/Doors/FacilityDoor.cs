@@ -1,12 +1,12 @@
 namespace PluginAPI.Core.Doors
 {
-	using System.Linq;
+	using Core;
 	using Interactables.Interobjects.DoorUtils;
 	using MapGeneration;
-	using Core;
-	using Zones;
 	using System.Collections.Generic;
+	using System.Linq;
 	using UnityEngine;
+	using Zones;
 
 	/// <summary>
 	/// Represents a door.

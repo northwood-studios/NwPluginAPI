@@ -1,7 +1,6 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
-using PluginAPI.Core.Attributes;
 using PlayerRoles.PlayableScps.Scp079;
+using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.Args.Scp079
 {

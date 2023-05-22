@@ -1,14 +1,14 @@
 namespace PluginAPI.Events
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Reflection;
 	using Core;
 	using Core.Attributes;
 	using Core.Factories;
 	using Enums;
 	using Loader;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
+	using System.Reflection;
 
 	/// <summary>
 	/// Manages plugin events.
@@ -33,7 +33,7 @@ namespace PluginAPI.Events
 
 		internal static void Init()
 		{
-			foreach(var type in typeof(EventManager).Assembly.GetTypes())
+			foreach (var type in typeof(EventManager).Assembly.GetTypes())
 			{
 				var interfaces = type.GetInterfaces();
 				try
@@ -327,7 +327,7 @@ namespace PluginAPI.Events
 							Dictionary<EventParameter, int> evToIndex = new Dictionary<EventParameter, int>();
 
 							int index = 0;
-							foreach(var parameter in ev.Parameters)
+							foreach (var parameter in ev.Parameters)
 							{
 								input[index] = parameter.PropertyInfo.GetValue(args);
 

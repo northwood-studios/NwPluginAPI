@@ -1,6 +1,5 @@
 using PlayerRoles;
 using PluginAPI.Core;
-using PluginAPI.Roles.Humans;
 
 namespace PluginAPI.Roles.Humans.Chaos
 {

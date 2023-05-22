@@ -1,8 +1,6 @@
 using InventorySystem.Items.Radio;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using static InventorySystem.Items.Radio.RadioMessages;
 
 namespace PluginAPI.Events.Args.Player

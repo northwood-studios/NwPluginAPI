@@ -1,10 +1,7 @@
-using UnityEngine;
-
 using InventorySystem.Items;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
+using UnityEngine;
 
 namespace PluginAPI.Events.Args.Player
 {

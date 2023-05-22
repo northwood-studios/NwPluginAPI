@@ -1,10 +1,10 @@
 namespace PluginAPI.Core
 {
-	using System;
-	using System.Reflection;
 	using Enums;
 	using GameCore;
 	using PluginAPI.Loader;
+	using System;
+	using System.Reflection;
 
 	/// <summary>
 	/// Logger for plugin system.

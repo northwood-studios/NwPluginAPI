@@ -1,6 +1,5 @@
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
-
+using PluginAPI.Enums;
 using static BanHandler;
 
 namespace PluginAPI.Events.Args.Server

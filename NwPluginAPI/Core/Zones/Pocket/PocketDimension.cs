@@ -1,9 +1,9 @@
 namespace PluginAPI.Core.Zones.Pocket
 {
 	using MapGeneration;
-	using Zones;
 	using System.Collections.Generic;
 	using System.Linq;
+	using Zones;
 
 	/// <summary>
 	/// Represents the pocket dimension.

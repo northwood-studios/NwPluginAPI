@@ -1,17 +1,17 @@
 namespace PluginAPI.Loader
 {
-	using System.IO.Compression;
+	using Core;
+	using Core.Extensions;
+	using Features;
+	using Helpers;
+	using PluginAPI.Events;
 	using System;
 	using System.Collections.Generic;
 	using System.IO;
+	using System.IO.Compression;
 	using System.Linq;
 	using System.Reflection;
-	using Core;
-	using Core.Extensions;
-	using Helpers;
-	using Features;
 	using Log = Core.Log;
-	using PluginAPI.Events;
 
 	/// <summary>
 	/// Manages initialization of plugin system and loading of plugins.

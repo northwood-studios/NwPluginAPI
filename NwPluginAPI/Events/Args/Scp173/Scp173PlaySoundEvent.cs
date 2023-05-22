@@ -1,6 +1,5 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using static PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer;
 
 namespace PluginAPI.Events.Args.Scp173

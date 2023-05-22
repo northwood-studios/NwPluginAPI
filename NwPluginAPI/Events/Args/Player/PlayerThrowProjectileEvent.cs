@@ -1,8 +1,6 @@
 using InventorySystem.Items.ThrowableProjectiles;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using static InventorySystem.Items.ThrowableProjectiles.ThrowableItem;
 
 namespace PluginAPI.Events.Args.Player

@@ -1,8 +1,7 @@
-using PluginAPI.Enums;
-using PluginAPI.Core.Attributes;
-
-using PluginAPI.Core.Interfaces;
 using PluginAPI.Core;
+using PluginAPI.Core.Attributes;
+using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.Args.Player
 {

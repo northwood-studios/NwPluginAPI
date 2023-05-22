@@ -1,8 +1,6 @@
 using MapGeneration.Distributors;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using static MapGeneration.Distributors.Scp079Generator;
 
 namespace PluginAPI.Events.Args.Player

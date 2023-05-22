@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core.Extensions
+namespace PluginAPI.Core.Extensions
 {
 	using InventorySystem.Configs;
 
@@ -20,5 +20,7 @@
 		/// <param name="category">The item category.</param>
 		/// <returns>Maximum amount of items which player can hold.</returns>
 		public static int GetCategoryLimit(this Player plr, ItemCategory category) => InventoryLimits.GetCategoryLimit(category, plr.ReferenceHub);
+
+
 	}
 }

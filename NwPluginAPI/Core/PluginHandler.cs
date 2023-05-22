@@ -2,16 +2,16 @@ using System.Linq;
 
 namespace PluginAPI.Core
 {
-	using System;
-	using System.Collections.Generic;
-	using System.IO;
-	using System.Reflection;
 	using Attributes;
 	using CommandSystem;
 	using Loader.Features;
 	using PluginAPI.Commands;
 	using PluginAPI.Loader;
 	using Serialization;
+	using System;
+	using System.Collections.Generic;
+	using System.IO;
+	using System.Reflection;
 	using Directory = System.IO.Directory;
 	using File = System.IO.File;
 

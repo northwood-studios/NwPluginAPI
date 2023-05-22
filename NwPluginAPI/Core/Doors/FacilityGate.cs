@@ -1,11 +1,11 @@
 namespace PluginAPI.Core.Doors
 {
-	using Interactables.Interobjects;
 	using Core;
-	using Zones;
+	using Interactables.Interobjects;
 	using System.Collections.Generic;
 	using System.Linq;
 	using UnityEngine;
+	using Zones;
 
 	/// <summary>
 	/// Represents a gate.

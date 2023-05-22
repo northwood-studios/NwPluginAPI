@@ -1,9 +1,9 @@
 namespace PluginAPI.Commands
 {
-	using System;
-	using System.Collections.Generic;
 	using CommandSystem;
 	using Loader;
+	using System;
+	using System.Collections.Generic;
 
 	/// <summary>
 	/// Lists all plugins on the server.

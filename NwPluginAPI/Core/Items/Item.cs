@@ -1,7 +1,7 @@
 namespace PluginAPI.Core.Items
 {
-	using InventorySystem.Items;
 	using Core;
+	using InventorySystem.Items;
 	using System.Collections.Generic;
 	using UnityEngine;
 

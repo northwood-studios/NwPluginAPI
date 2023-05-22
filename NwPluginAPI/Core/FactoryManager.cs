@@ -1,9 +1,9 @@
 namespace PluginAPI.Core
 {
+	using Events;
+	using Factories;
 	using System;
 	using System.Collections.Generic;
-	using Factories;
-	using Events;
 
 	/// <summary>
 	/// Manages factories for plugin system.

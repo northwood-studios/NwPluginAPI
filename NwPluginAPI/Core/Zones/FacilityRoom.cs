@@ -1,9 +1,9 @@
 namespace PluginAPI.Core.Zones
 {
+	using Doors;
 	using Interactables.Interobjects;
 	using Interactables.Interobjects.DoorUtils;
 	using MapGeneration;
-	using Doors;
 	using System;
 	using System.Collections.Generic;
 	using UnityEngine;
@@ -51,7 +51,7 @@ namespace PluginAPI.Core.Zones
 		/// </summary>
 		public Quaternion Rotation => Transform.rotation;
 
-#region Get Components
+		#region Get Components
 
 		/// <inheritdoc/>
 		public T GetComponent<T>(bool globalSearch = false, bool childSearch = false) where T : MonoBehaviour
@@ -119,7 +119,7 @@ namespace PluginAPI.Core.Zones
 			return true;
 		}
 
-#endregion
+		#endregion
 
 		internal void RegisterDoor(DoorVariant door)
 		{
@@ -150,7 +150,7 @@ namespace PluginAPI.Core.Zones
 			Identifier = room;
 
 			var lightController = room.GetComponentInChildren<RoomLightController>();
-			if(lightController != null)
+			if (lightController != null)
 				Lights = new RoomLight(lightController);
 
 			Facility.RegisterDoors(this, room.gameObject.GetComponentsInChildren<DoorVariant>());

@@ -51,7 +51,7 @@ namespace PluginAPI.Core
 			set => AlphaWarheadController.Singleton.ForceTime(value);
 		}
 
-#region Detonation
+		#region Detonation
 
 		/// <summary>
 		/// Starts the detonation countdown.
@@ -74,9 +74,9 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static void Detonate() => Server.Instance.GetComponent<AlphaWarheadController>(true).ForceTime(0);
 
-#endregion
+		#endregion
 
-#region Shake Effect
+		#region Shake Effect
 
 		/// <summary>
 		/// Show the shake effect to all players.
@@ -87,6 +87,6 @@ namespace PluginAPI.Core
 			//	player.Warhead.Shake();
 		}
 
-#endregion
+		#endregion
 	}
 }

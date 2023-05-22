@@ -1,6 +1,6 @@
 using MapGeneration.Distributors;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
 namespace PluginAPI.Events.Args.Map
 {
