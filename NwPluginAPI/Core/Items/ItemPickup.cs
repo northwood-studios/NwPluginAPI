@@ -106,9 +106,10 @@ namespace PluginAPI.Core.Items
 
 			ItemPickupBase newPickup = Object.Instantiate(ib.PickupDropModel, position, rotation);
 			newPickup.Info.ItemId = item;
-			newPickup.Info.ServerSetPositionAndRotation(position, rotation);
+			newPickup.Position = position;
+			newPickup.Rotation = rotation;
 			newPickup.Info.Serial = ItemSerialGenerator.GenerateNext();
-			newPickup.Info.Weight = ib.Weight;
+			newPickup.Info.WeightKg = ib.Weight;
 
 			return GetOrAdd(newPickup);
 		}
