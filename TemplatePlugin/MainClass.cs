@@ -317,12 +317,12 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerDamage)]
-		void OnPlayerDamage(Player player, Player attacker, DamageHandlerBase damageHandler)
+		void OnPlayerDamage(Player player, Player target, DamageHandlerBase damageHandler)
 		{
-			if (attacker == null)
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) got damaged, cause {damageHandler}.");
+			if (player == null)
+				Log.Info($"Player &6{target.Nickname}&r (&6{target.UserId}&r) got damaged, cause {damageHandler}.");
 			else
-				Log.Info($"Player &6{player.Nickname}&r (&6{player.UserId}&r) received damage from &6{attacker.Nickname}&r (&6{attacker.UserId}&r), cause {damageHandler}.");
+				Log.Info($"Player &6{target.Nickname}&r (&6{target.UserId}&r) received damage from &6{player.Nickname}&r (&6{player.UserId}&r), cause {damageHandler}.");
 		}
 
 		[PluginEvent(ServerEventType.PlayerKicked)]
