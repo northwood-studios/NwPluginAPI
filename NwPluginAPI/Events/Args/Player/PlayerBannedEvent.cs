@@ -10,7 +10,7 @@ namespace PluginAPI.Events
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerBanned;
 		[EventArgument]
-		public IPlayer Player { get; }
+		public Player Player { get; }
 		[EventArgument]
 		public Player Issuer { get; }
 		[EventArgument]
