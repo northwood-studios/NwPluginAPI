@@ -558,6 +558,11 @@ namespace PluginAPI.Core
 		public string LogName => IsServer ? "SERVER CONSOLE" : $"{Nickname} ({UserId})";
 
 		/// <summary>
+		/// Gets if the player is in the server.
+		/// </summary>
+		public bool IsOffline => GameObject == null;
+
+		/// <summary>
 		/// Gets the player's user id.
 		/// </summary>
 		public string UserId => IsServer ? "server@server" : ReferenceHub.characterClassManager.UserId;

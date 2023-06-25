@@ -5,6 +5,11 @@ namespace PluginAPI.Core
 	public class OfflinePlayer : IPlayer
 	{
 		/// <summary>
+		/// Gets if the player is in the server.
+		/// </summary>
+		public bool IsOffline { get; }
+
+		/// <summary>
 		/// Gets the player's user id.
 		/// </summary>
 		public string UserId { get; private set; }
@@ -27,6 +32,7 @@ namespace PluginAPI.Core
 		/// <param name="ipAddress">The ip address.</param>
 		public OfflinePlayer(string userId, string name = "(no nick)", string ipAddress = "127.0.0.1")
 		{
+			IsOffline = true;
 			UserId = userId;
 			Nickname = name;
 			IpAddress = ipAddress;
