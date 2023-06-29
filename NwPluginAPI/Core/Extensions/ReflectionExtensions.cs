@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core.Extensions
+namespace PluginAPI.Core.Extensions
 {
 	using Attributes;
 	using System;
@@ -17,21 +17,7 @@
 				if (attr != null)
 					return true;
 			}
-
 			return false;
-		}
-
-		public static T GetPrivateFieldValue<T>(this object obj, string fieldName)
-		{
-			Type type = obj.GetType();
-			FieldInfo field = type.GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Instance);
-        
-			if (field != null)
-			{
-				return (T)field.GetValue(obj);
-			}
-        
-			throw new ArgumentException($"Field '{fieldName}' not found in type '{type}'.");
 		}
 	}
 }

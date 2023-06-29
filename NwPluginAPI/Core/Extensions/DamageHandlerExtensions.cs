@@ -44,8 +44,7 @@ namespace PluginAPI.Core.Extensions
 					return DamageType.Jailbird;
 				case ScpDamageHandler scpDamageHandler:
 				{
-					var translationId = scpDamageHandler.GetPrivateFieldValue<byte>("_translationId");
-					var deathTranslation = DeathTranslations.TranslationsById[translationId];
+					var deathTranslation = DeathTranslations.TranslationsById[scpDamageHandler._translationId];
 					// Scp106 does damage directly with a value of 106106f so if I want DamageType.Scp106 to be activated at least 1 time I have to do this check
 					// And how floats with more than 3 digits become inaccurate...
 					return Math.Abs(scpDamageHandler.Damage - 106106) < 0.001 ? DamageType.Scp106 : deathTranslation.GetTranslationDamageType();
@@ -96,9 +95,7 @@ namespace PluginAPI.Core.Extensions
 		/// <returns><see cref="DamageType"/>.Scp096GateKill or <see cref="DamageType"/>.Scp096SlapLeft or <see cref="DamageType"/>.Scp096SlapRight or <see cref="DamageType"/>.Scp096Charge</returns>
 		public static DamageType GetScp096DamageType(this Scp096DamageHandler handler)
 		{
-			var attackType = handler.GetPrivateFieldValue<Scp096DamageHandler.AttackType>("_attackType");
-
-			return attackType switch
+			return handler._attackType switch
 			{
 				Scp096DamageHandler.AttackType.Charge => DamageType.Scp096Charge,
 				Scp096DamageHandler.AttackType.GateKill => DamageType.Scp096GateKill,
@@ -114,9 +111,7 @@ namespace PluginAPI.Core.Extensions
 		/// <returns><see cref="DamageType"/>.Scp939Claw or <see cref="DamageType"/>.Scp939LungeSecondary or <see cref="DamageType"/>.Scp939LungeTarget</returns>
 		public static DamageType GetScp939DamageType(this Scp939DamageHandler handler)
 		{
-			var attackType = handler.GetPrivateFieldValue<Scp939DamageType>("_damageType");
-
-			switch (attackType)
+			switch (handler._damageType)
 			{
 				case Scp939DamageType.Claw:
 					return DamageType.Scp939Claw;
