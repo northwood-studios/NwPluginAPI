@@ -15,7 +15,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets a value indicating whether the round is ended or not.
 		/// </summary>
-		public static bool IsRoundEnded => !IsRoundStarted && Round.Duration.Seconds > 1;
+		public static bool IsRoundEnded => !IsRoundStarted && Round.Duration.TotalSeconds > 1;
 
 		/// <summary>
 		/// Gets or sets a value indicating whether the round is locked or not.
