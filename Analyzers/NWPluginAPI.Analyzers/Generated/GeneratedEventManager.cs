@@ -221,7 +221,7 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
 			new EventParameter("System.String", false, "reason")) },
 		{ 57, new Event(
-			new EventParameter("RoundSummary+LeadingTeam", false, "leadingTeam")) },
+			new EventParameter("RoundSummary.LeadingTeam", false, "leadingTeam")) },
 		{ 58, new Event() },
 		{ 59, new Event() },
 		{ 60, new Event() },
@@ -254,9 +254,11 @@ public static class EventManager
 			new EventParameter("System.String", false, "command"),
 			new EventParameter("System.String", true, "arguments")) },
 		{ 71, new Event(
-			new EventParameter("Respawning.SpawnableTeamType", false, "team")) },
+			new EventParameter("Respawning.SpawnableTeamType", false, "team"),
+			new EventParameter("List<Player>",false,"spawnlist"),
+			new EventParameter("int",false,"spawnNum"))},
 		{ 70, new Event(
-			new EventParameter("Respawning.SpawnableTeamType", false, "team")) },
+				new EventParameter("Respawning.SpawnableTeamType", false, "team")) },
 		{ 72, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("System.Boolean", false, "activated")) },
