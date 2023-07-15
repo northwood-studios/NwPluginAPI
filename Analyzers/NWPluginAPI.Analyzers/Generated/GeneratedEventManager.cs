@@ -447,5 +447,13 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("InventorySystem.Items.Radio.RadioItem", false, "radio"),
 			new EventParameter("System.Boolean", false, "newState")) },
+		{130, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("InventorySystem.Items.ItemBase", false, "item"))},
+		{131, new Event(
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
+			new EventParameter("ItemType", false, "type"),
+			new EventParameter("int", false, "amount")
+		)},
 	};
 }
