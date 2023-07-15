@@ -255,8 +255,8 @@ public static class EventManager
 			new EventParameter("System.String", true, "arguments")) },
 		{ 71, new Event(
 			new EventParameter("Respawning.SpawnableTeamType", false, "team"),
-			new EventParameter("List<Player>",false,"spawnList"),
-			new EventParameter("int",false,"spawnNum"))},
+			new EventParameter("List<Player>",false,"players"),
+			new EventParameter("int",false,"nextWaveMaxSize"))},
 		{ 70, new Event(
 				new EventParameter("Respawning.SpawnableTeamType", false, "team")) },
 		{ 72, new Event(
