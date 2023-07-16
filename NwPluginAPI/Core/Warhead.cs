@@ -81,11 +81,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Show the shake effect to all players.
 		/// </summary>
-		public static void Shake()
-		{
-			//foreach(var player in Player.List)
-			//	player.Warhead.Shake();
-		}
+		public static void Shake() => Server.Instance.GetComponent<AlphaWarheadController>(globalSearch: true).RpcShake(true);
 
 #endregion
 	}
