@@ -117,8 +117,8 @@ public static class EventManager
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target")) },
 		{ 28, new Event(
-			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "attacker"),
+			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "target"),
 			new EventParameter("PlayerStatsSystem.DamageHandlerBase", false, "damageHandler")) },
 		{ 29, new Event(
 			new EventParameter("PluginAPI.Core.Interfaces.IPlayer", false, "player"),
