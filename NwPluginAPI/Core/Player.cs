@@ -599,7 +599,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets player <see cref="Mirror.NetworkIdentity"/>.
+		/// Gets player's <see cref="Mirror.NetworkIdentity"/>.
 		/// </summary>
 		public NetworkIdentity NetworkIdentity => ReferenceHub.networkIdentity;
 
