@@ -10,6 +10,7 @@ namespace PluginAPI.Core
 	using RoundRestarting;
 	using static BanHandler;
 	using static Broadcast;
+	using System.Reflection;
 
 	/// <summary>
 	/// Represents the server.
@@ -17,6 +18,7 @@ namespace PluginAPI.Core
 	public class Server : Player
 	{
 		private static Server _instance;
+		private static MethodInfo _sendSpawnMessage;
 
 		/// <summary>
 		/// The <see cref="Server"/> instance.
@@ -103,6 +105,11 @@ namespace PluginAPI.Core
 		/// Get server <see cref="PermissionsHandler"/>
 		/// </summary>
 		public static PermissionsHandler PermissionsHandler => ServerStatic.GetPermissionsHandler();
+
+		/// <summary>
+		/// Gets cached <see cref="NetworkServer"/>.SendSpawnMessage private method.
+		/// </summary>
+		public static MethodInfo SpawnMessage => _sendSpawnMessage ??= typeof(NetworkServer).GetMethod("SendSpawnMessage", BindingFlags.NonPublic | BindingFlags.Static);
 
 		/// <summary>
 		/// Get actual ticks per second of the server.
