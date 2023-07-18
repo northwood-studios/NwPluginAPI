@@ -577,7 +577,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		public Vector3 Scale
 		{
-			get => ReferenceHub.transform.localScale;
+			get => GameObject.transform.localScale;
 			set
 			{
 				if (value == Scale)
@@ -585,7 +585,7 @@ namespace PluginAPI.Core
 
 				try
 				{
-					ReferenceHub.transform.localScale = value;
+					GameObject.transform.localScale = value;
 					foreach(var player in GetPlayers())
 					{
 						Server.SpawnMessage?.Invoke(null, new object[] { NetworkIdentity, player.Connection });
