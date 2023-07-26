@@ -118,6 +118,54 @@ namespace PluginAPI.Core
 			return true;
 		}
 
+		/// <summary>
+		/// Gets a <see cref="Player"/> <see cref="IEnumerable{T}"/> filtred by <see cref="Team"/>.
+		/// <para><b>Can be empty.</b></para>
+		/// </summary>
+		/// <param name="team">The player's team</param>
+		/// <returns>The filtered <see cref="IEnumerable{T}"/>.</returns>
+		public static IEnumerable<Player> GetPlayers(Team team) => GetPlayers().Where(p => p.Team == team);
+
+		/// <summary>
+		/// Gets a <see cref="Player"/> <see cref="IEnumerable{T}"/> filtred by <see cref="RoleTypeId"/>.
+		/// <para><b>Can be empty.</b></para>
+		/// </summary>
+		/// <param name="team">The player's team</param>
+		/// <returns>The filtered <see cref="IEnumerable{T}"/>.</returns>
+		public static IEnumerable<Player> GetPlayers(RoleTypeId roleType) => GetPlayers().Where(p => p.Role == roleType);
+
+		#region Get player from collider
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="Footprint"/>, if any.
+		/// </summary>
+		public static Player Get(Collider collider) => Get(collider.gameObject);
+
+		/// <summary>
+		/// Try-get a <see cref="Player"/> associated with the <see cref="Collider"/>.
+		/// </summary>
+		/// <param name="collider">The <see cref="Collider"/></param>
+		/// <param name="player">The <see cref="Player"/> found by the <see cref="Collider"/>, if there is none it will return <see langword="null"/>.</param>
+		/// <returns>A boolean indicating whether or not a player was found.</returns>
+		public static bool TryGet(Collider collider, out Player player) => TryGet(collider.gameObject, out player);
+		#endregion
+
+		#region Get player from footprint
+
+		/// <summary>
+		/// Gets the <see cref="Player"/> associated with the <see cref="Footprint"/>, if any.
+		/// </summary>
+		public static Player Get(Footprint footprint) => Get(footprint.Hub);
+
+		/// <summary>
+		/// Try-get a <see cref="Player"/> associated with the <see cref="Footprint"/>.
+		/// </summary>
+		/// <param name="footprint">The <see cref="Footprint"/></param>
+		/// <param name="player">The <see cref="Player"/> found by the <see cref="Footprint"/>, if there is none it will return <see langword="null"/>.</param>
+		/// <returns>A boolean indicating whether or not a player was found.</returns>
+		public static bool TryGet(Footprint footprint, out Player player) => TryGet(footprint.Hub, out player);
+		#endregion
+
 		#region Get player from gameobject.
 
 		/// <summary>
@@ -580,6 +628,11 @@ namespace PluginAPI.Core
 			get => ReferenceHub.GetRoleId();
 			set => ReferenceHub.roleManager.ServerSetRole(value, RoleChangeReason.RemoteAdmin);
 		}
+
+		/// <summary>
+		/// Gets the player's <see cref="Footprinting.Footprint"/>.
+		/// </summary>
+		public Footprint Footprint => new(ReferenceHub);
 
 		/// <summary>
 		/// Gets player <see cref="PlayerRoleBase"/>.
@@ -1200,7 +1253,7 @@ namespace PluginAPI.Core
 		/// <param name="amount">The amount of ammo which will be dropped.</param>
 		/// <param name="checkMinimals">Will prevent dropping small amounts of ammo.</param>
 		/// <returns>Whether or not the player dropped the ammo successfully.</returns>
-		public List<AmmoPickup> DropAmmo(ItemType item, ushort amount, bool checkMinimals = false) => null;// ReferenceHub.inventory.ServerDropAmmo(item, amount, checkMinimals);
+		public List<AmmoPickup> DropAmmo(ItemType item, ushort amount, bool checkMinimals = false) => ReferenceHub.inventory.ServerDropAmmo(item, amount, checkMinimals);
 
 		/// <summary>
 		/// Drops all items including ammo.
@@ -1248,7 +1301,8 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="newRole">The <see cref="RoleTypeId"/> which will be set.</param>
 		/// <param name="reason">The <see cref="RoleChangeReason"/> of role change.</param>
-		public void SetRole(RoleTypeId newRole, RoleChangeReason reason = RoleChangeReason.RemoteAdmin) => ReferenceHub.roleManager.ServerSetRole(newRole, reason);
+		/// <param name="spawnFlags">The <see cref="RoleSpawnFlags"/> of role change.</param>
+		public void SetRole(RoleTypeId newRole, RoleChangeReason reason = RoleChangeReason.RemoteAdmin, RoleSpawnFlags spawnFlags = RoleSpawnFlags.All) => ReferenceHub.roleManager.ServerSetRole(newRole, reason, spawnFlags);
 
 		/// <summary>
 		/// Disconnects the player from the server.
@@ -1387,6 +1441,5 @@ namespace PluginAPI.Core
 		#endregion
 
 		#endregion
-
 	}
 }
