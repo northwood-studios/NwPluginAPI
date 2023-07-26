@@ -12,6 +12,11 @@ namespace PluginAPI.Core.Extensions
 {
 	public static class ItemExtensions
 	{
+		/// <summary>
+		/// Gets if the <see cref="ItemType"/> is ammo for a firearm.
+		/// </summary>
+		/// <param name="type">The <see cref="ItemType"/> to check</param>
+		/// <returns>Returns whether or not the <see cref="ItemType"/> is ammo.</returns>
 		public static bool IsAmmo(this ItemType type)
 		{
 			switch (type)
