@@ -1078,7 +1078,7 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
 		/// </remarks>
-		PlayerDropedpItem = 130,
+		PlayerDroppedItem = 130,
 
 		/// <summary>
 		/// Executed when player dropped ammo.
