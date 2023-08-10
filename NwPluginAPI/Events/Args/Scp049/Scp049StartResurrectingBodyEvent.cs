@@ -14,14 +14,14 @@ namespace PluginAPI.Events
 		[EventArgument]
 		public BasicRagdoll Body { get; }
 		[EventArgument]
-		public bool CanResurrct { get; }
+		public bool CanResurrect { get; }
 
-		public Scp049StartResurrectingBodyEvent(ReferenceHub hub, ReferenceHub target, BasicRagdoll body, bool canResurrct)
+		public Scp049StartResurrectingBodyEvent(ReferenceHub hub, ReferenceHub target, BasicRagdoll body, bool canResurrect)
 		{
 			Player = Player.Get(hub);
 			Target = Player.Get(target);
 			Body = body;
-			CanResurrct = canResurrct;
+			CanResurrect = canResurrect;
 		}
 
 		Scp049StartResurrectingBodyEvent() { }
