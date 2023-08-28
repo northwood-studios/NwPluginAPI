@@ -115,16 +115,23 @@ namespace PluginAPI.Loader
 			var loadedAssemblies = AppDomain.CurrentDomain
 				.GetAssemblies()
 				.Select(x =>
-					$"{x.GetName().Name}&r v&6{x.GetName().Version.ToString(3)}");
+					$"{x.GetName().Name}&r v&6{x.GetName().Version.ToString(3)}")
+				.ToHashSet();
+
+			var loadedPluginAssemblies = new List<PluginAssemblyInformation>();
+			var pluginsToInitialize = new List<PluginAssemblyInformation>();
 
 			foreach (string pluginPath in files)
 			{
 				if (!TryGetAssembly(pluginPath, out Assembly assembly))
 					continue;
+				loadedPluginAssemblies.Add(new PluginAssemblyInformation(pluginPath, assembly));
+				loadedAssemblies.Add($"{assembly.GetName().Name}&r v&6{assembly.GetName().Version.ToString(3)}");
+			}
 
-				Type[] types = null;
-
-				var missingDependencies = assembly
+			foreach (var pluginInfo in loadedPluginAssemblies)
+			{
+				var missingDependencies = pluginInfo.Assembly
 					.GetReferencedAssemblies()
 					.Select(x =>
 						$"{x.Name}&r v&6{x.Version.ToString(3)}")
@@ -133,21 +140,28 @@ namespace PluginAPI.Loader
 				try
 				{
 					if (missingDependencies.Length != 0)
-						ResolveAssemblyEmbeddedResources(assembly);
-					types = assembly.GetTypes();
+						ResolveAssemblyEmbeddedResources(pluginInfo.Assembly);
+					pluginInfo.Types = pluginInfo.Assembly.GetTypes();
+					pluginsToInitialize.Add(pluginInfo);
 				}
 				catch (Exception e)
 				{
 					if (missingDependencies.Length != 0)
 					{
-						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}\n\n{e}", "Loader");
-						continue;
+						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => "&r - &2" + x + "&r"))}\n\n{e}", "Loader");
 					}
-
-					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, {e.ToString()}");
-					continue;
+					else
+					{
+						Log.Error("Failed loading plugin &2" + Path.GetFileNameWithoutExtension(pluginInfo.Path) + "&r, " + e, "Loader");
+					}
 				}
+			}
 
+			foreach (var pluginInfo in pluginsToInitialize)
+			{
+				var pluginPath = pluginInfo.Path;
+				var assembly = pluginInfo.Assembly;
+				var types = pluginInfo.Types;
 				foreach (var entryType in types)
 				{
 					try
