@@ -157,6 +157,7 @@ namespace PluginAPI.Loader
 				}
 			}
 
+			Log.Info($"Initializing &2{pluginsToInitialize.Count}&r plugins...");
 			foreach (var pluginInfo in pluginsToInitialize)
 			{
 				var pluginPath = pluginInfo.Path;
