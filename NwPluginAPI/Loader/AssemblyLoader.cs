@@ -141,6 +141,12 @@ namespace PluginAPI.Loader
 				{
 					if (missingDependencies.Count != 0)
 						ResolveAssemblyEmbeddedResources(pluginInfo.Assembly, missingDependencies);
+					if (missingDependencies.Count != 0)
+					{
+						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => "&r - &2" + x + "&r"))}", "Loader");
+						continue;
+					}
+
 					pluginInfo.Types = pluginInfo.Assembly.GetTypes();
 					pluginsToInitialize.Add(pluginInfo);
 				}
@@ -154,11 +160,6 @@ namespace PluginAPI.Loader
 					{
 						Log.Error("Failed loading plugin &2" + Path.GetFileNameWithoutExtension(pluginInfo.Path) + "&r, " + e, "Loader");
 					}
-				}
-
-				if (missingDependencies.Count != 0)
-				{
-					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => "&r - &2" + x + "&r"))}", "Loader");
 				}
 			}
 
