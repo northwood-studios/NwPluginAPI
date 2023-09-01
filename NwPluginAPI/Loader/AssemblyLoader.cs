@@ -135,18 +135,18 @@ namespace PluginAPI.Loader
 					.GetReferencedAssemblies()
 					.Select(x =>
 						$"{x.Name}&r v&6{x.Version.ToString(3)}")
-					.Where(x => !loadedAssemblies.Contains(x)).ToArray();
+					.Where(x => !loadedAssemblies.Contains(x)).ToHashSet();
 
 				try
 				{
-					if (missingDependencies.Length != 0)
-						ResolveAssemblyEmbeddedResources(pluginInfo.Assembly);
+					if (missingDependencies.Count != 0)
+						ResolveAssemblyEmbeddedResources(pluginInfo.Assembly, missingDependencies);
 					pluginInfo.Types = pluginInfo.Assembly.GetTypes();
 					pluginsToInitialize.Add(pluginInfo);
 				}
 				catch (Exception e)
 				{
-					if (missingDependencies.Length != 0)
+					if (missingDependencies.Count != 0)
 					{
 						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => "&r - &2" + x + "&r"))}\n\n{e}", "Loader");
 					}
@@ -154,6 +154,11 @@ namespace PluginAPI.Loader
 					{
 						Log.Error("Failed loading plugin &2" + Path.GetFileNameWithoutExtension(pluginInfo.Path) + "&r, " + e, "Loader");
 					}
+				}
+
+				if (missingDependencies.Count != 0)
+				{
+					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => "&r - &2" + x + "&r"))}", "Loader");
 				}
 			}
 
@@ -232,6 +237,7 @@ namespace PluginAPI.Loader
 					Log.Error($"Failed loading dependency &2{Path.GetFileNameWithoutExtension(dependencyPath)}&r.\n{ex}");
 					continue;
 				}
+
 				successes++;
 			}
 
@@ -264,7 +270,8 @@ namespace PluginAPI.Loader
 		/// Attempts to load Embedded assemblies (compressed) from the target
 		/// </summary>
 		/// <param name="target">Assembly to check for embedded assemblies</param>
-		private static void ResolveAssemblyEmbeddedResources(Assembly target)
+		/// <param name="missingDependencies"></param>
+		private static void ResolveAssemblyEmbeddedResources(Assembly target, HashSet<string> missingDependencies)
 		{
 			Log.Debug($"Attempting to load embedded resources for {target.FullName}", Log.DebugMode);
 
@@ -286,7 +293,8 @@ namespace PluginAPI.Loader
 						}
 
 						dataStream.CopyTo(stream);
-						Assembly.Load(stream.ToArray());
+						var assemblyName = Assembly.Load(stream.ToArray()).GetName();
+						missingDependencies.Remove($"{assemblyName.Name}&r v&6{assemblyName.Version.ToString(3)}");
 						Log.Debug($"Loaded {name}", Log.DebugMode);
 					}
 				}
@@ -304,7 +312,8 @@ namespace PluginAPI.Loader
 					{
 						Log.Debug($"Loading {name}", Log.DebugMode);
 						stream.CopyTo(memStream);
-						Assembly.Load(memStream.ToArray());
+						var assemblyName = Assembly.Load(memStream.ToArray()).GetName();
+						missingDependencies.Remove($"{assemblyName.Name}&r v&6{assemblyName.Version.ToString(3)}");
 						Log.Debug($"Loaded {name}", Log.DebugMode);
 					}
 				}
