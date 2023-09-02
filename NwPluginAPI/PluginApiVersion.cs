@@ -2,8 +2,8 @@
 {
 	public static class PluginApiVersion
 	{
-		public const string Version = "13.1.0"; //major.minor.patch ONLY
-		public const string VersionString = "13.1.0";
+		public const string Version = "13.1.1"; //major.minor.patch ONLY
+		public const string VersionString = "13.1.1";
 
 		//PackageVersion needs to be set to the same value as VersionString MANUALLY IN .csproj
 

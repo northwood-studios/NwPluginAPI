@@ -117,16 +117,7 @@ namespace PluginAPI.Core
 			get => SpawnProtected.SpawnDuration;
 			set => SpawnProtected.SpawnDuration = value;
 		}
-
-		/// <summary>
-		/// Get or set if server is heavily modded.
-		/// </summary>
-		public static bool IsHeavilyModded
-		{
-			get => CustomNetworkManager.HeavilyModded;
-			set => CustomNetworkManager.HeavilyModded = value;
-		}
-
+		
 		#region Ban System
 
 		/// <summary>
