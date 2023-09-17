@@ -7,7 +7,7 @@ on:
     branches: [ "master", "dev", "dev2" ]
 
 env:
-  DEPOT_DOWNLOADER_VERSION: 2.4.7 
+  DEPOT_DOWNLOADER_VERSION: 2.5.0 
   SL_REFERENCES: D:\a\NwPluginAPI\SCPSL_REFERENCES\SCPSL_Data\Managed
   UNITY_REFERENCES: D:\a\NwPluginAPI\SCPSL_REFERENCES\SCPSL_Data\Managed
 
