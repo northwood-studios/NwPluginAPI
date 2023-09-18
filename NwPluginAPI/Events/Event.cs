@@ -38,7 +38,7 @@ namespace PluginAPI.Events
 			EventArg = args;
 			EventArgType = EventArg.GetType();
 
-			foreach(var property in EventArgType.GetProperties(BindingFlags.Public | BindingFlags.Instance))
+			foreach (var property in EventArgType.GetProperties(BindingFlags.Public | BindingFlags.Instance))
 			{
 				var argument = property.GetCustomAttribute<EventArgument>();
 

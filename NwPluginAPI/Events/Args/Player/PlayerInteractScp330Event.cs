@@ -1,14 +1,13 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerInteractScp330Event : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerInteractScp330;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public int Uses { get; set; }
 		[EventArgument]
@@ -18,7 +17,7 @@ namespace PluginAPI.Events
 
 		public PlayerInteractScp330Event(ReferenceHub hub, int uses)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Uses = uses;
 		}
 

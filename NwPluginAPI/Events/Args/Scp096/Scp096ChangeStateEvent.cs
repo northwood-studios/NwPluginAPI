@@ -1,21 +1,20 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
-using PluginAPI.Core.Attributes;
 using PlayerRoles.PlayableScps.Scp096;
+using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp096
 {
 	public class Scp096ChangeStateEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096ChangeState;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Scp096RageState RageState { get; }
 
 		public Scp096ChangeStateEvent(ReferenceHub hub, Scp096RageState state)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			RageState = state;
 		}
 

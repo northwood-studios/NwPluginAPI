@@ -1,11 +1,11 @@
 namespace PluginAPI.Core.Doors
 {
+	using Core;
 	using Interactables.Interobjects;
 	using Interactables.Interobjects.DoorUtils;
-	using Core;
-	using Zones;
 	using System.Collections.Generic;
 	using System.Linq;
+	using Zones;
 
 	/// <summary>
 	/// Represents a breakable door.

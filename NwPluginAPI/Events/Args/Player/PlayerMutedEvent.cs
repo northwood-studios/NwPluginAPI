@@ -1,23 +1,22 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerMutedEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerMuted;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player Issuer { get; }
+		public Core.Player Issuer { get; }
 		[EventArgument]
 		public bool IsIntercom { get; }
 
 		public PlayerMutedEvent(ReferenceHub hub, ReferenceHub issuer, bool isIntercom)
 		{
-			Player = Player.Get(hub);
-			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Player.Get(issuer);
+			Player = Core.Player.Get(hub);
+			Issuer = issuer == ReferenceHub.HostHub ? Core.Server.Instance : Core.Player.Get(issuer);
 			IsIntercom = isIntercom;
 		}
 

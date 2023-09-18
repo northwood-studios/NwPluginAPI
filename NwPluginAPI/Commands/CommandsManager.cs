@@ -1,11 +1,11 @@
 ﻿namespace PluginAPI.Commands
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
 	using CommandSystem;
 	using PluginAPI.Core;
 	using RemoteAdmin;
+	using System;
+	using System.Collections.Generic;
+	using System.Linq;
 
 	/// <summary>
 	/// Manages commands.

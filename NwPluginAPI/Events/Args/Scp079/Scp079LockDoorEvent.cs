@@ -1,22 +1,20 @@
 using Interactables.Interobjects.DoorUtils;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp079
 {
 	public class Scp079LockDoorEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079LockDoor;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public DoorVariant Door { get; }
 
 		public Scp079LockDoorEvent(ReferenceHub hub, DoorVariant door)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Door = door;
 		}
 

@@ -1,17 +1,15 @@
+using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
+using Scp914;
 using UnityEngine;
 
-using PluginAPI.Core;
-using PluginAPI.Enums;
-using PluginAPI.Core.Attributes;
-using Scp914;
-
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp914
 {
 	public class Scp914ProcessPlayerEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp914ProcessPlayer;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Scp914KnobSetting KnobSetting { get; }
 		[EventArgument]
@@ -19,7 +17,7 @@ namespace PluginAPI.Events
 
 		public Scp914ProcessPlayerEvent(ReferenceHub hub, Scp914KnobSetting setting, Vector3 outPosition)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			KnobSetting = setting;
 			OutPosition = outPosition;
 		}

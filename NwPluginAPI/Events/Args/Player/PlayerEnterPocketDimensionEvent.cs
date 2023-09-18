@@ -1,18 +1,17 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerEnterPocketDimensionEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerEnterPocketDimension;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 
 		public PlayerEnterPocketDimensionEvent(ReferenceHub hub)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 		}
 
 		PlayerEnterPocketDimensionEvent() { }

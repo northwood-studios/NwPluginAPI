@@ -1,16 +1,14 @@
 using InventorySystem.Items;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerToggleFlashlightEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerToggleFlashlight;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public ItemBase Item { get; }
 		[EventArgument]
@@ -18,7 +16,7 @@ namespace PluginAPI.Events
 
 		public PlayerToggleFlashlightEvent(ReferenceHub hub, ItemBase item, bool isToggled)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 			IsToggled = isToggled;
 		}

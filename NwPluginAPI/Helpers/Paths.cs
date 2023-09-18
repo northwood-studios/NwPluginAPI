@@ -1,10 +1,10 @@
 namespace PluginAPI.Helpers
 {
-	using System;
-	using System.IO;
 	using Core;
 	using Loader.Features;
 	using NorthwoodLib;
+	using System;
+	using System.IO;
 
 	/// <summary>
 	/// Contains all important folder paths.

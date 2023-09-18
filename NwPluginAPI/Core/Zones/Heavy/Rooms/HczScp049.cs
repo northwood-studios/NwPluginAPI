@@ -1,9 +1,9 @@
 namespace PluginAPI.Core.Zones.Heavy.Rooms
 {
-	using MapGeneration;
 	using Core;
-	using Zones;
 	using Heavy;
+	using MapGeneration;
+	using Zones;
 
 	/// <summary>
 	/// Represents SCP-049's room.

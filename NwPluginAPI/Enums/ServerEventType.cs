@@ -7,28 +7,28 @@ using PluginAPI.Events;
 
 namespace PluginAPI.Enums
 {
-	using CommandSystem;
-	using MapGeneration.Distributors;
-	using Core.Zones.Heavy;
-	using Core.Interfaces;
-	using PlayerRoles;
-	using PlayerRoles.PlayableScps.Scp173;
-	using PlayerRoles.PlayableScps.Scp079;
-	using PlayerRoles.PlayableScps.Scp939;
 	using AdminToys;
-	using PlayerStatsSystem;
+	using CommandSystem;
+	using Core.Interfaces;
 	using Core.Items;
+	using Interactables.Interobjects;
+	using Interactables.Interobjects.DoorUtils;
 	using InventorySystem.Items;
-	using InventorySystem.Items.Usables;
 	using InventorySystem.Items.Firearms;
 	using InventorySystem.Items.Pickups;
 	using InventorySystem.Items.ThrowableProjectiles;
-	using Respawning;
-	using UnityEngine;
+	using InventorySystem.Items.Usables;
 	using MapGeneration;
-	using Interactables.Interobjects.DoorUtils;
-	using Interactables.Interobjects;
+	using MapGeneration.Distributors;
+	using PlayerRoles;
+	using PlayerRoles.PlayableScps.Scp079;
+	using PlayerRoles.PlayableScps.Scp173;
+	using PlayerRoles.PlayableScps.Scp939;
+	using PlayerStatsSystem;
+	using PluginAPI.Core.Zones.Heavy.Generator;
+	using Respawning;
 	using Scp914;
+	using UnityEngine;
 
 	/// <summary>
 	/// Represents server event types.
@@ -59,7 +59,7 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="IPlayer"/> attacker, <see cref="DamageHandlerBase"/> damageHandler.
 		/// </remarks>
-		PlayerDying  = 2,
+		PlayerDying = 2,
 
 		/// <summary>
 		/// Executed when decontamination in LCZ starts.
@@ -1042,7 +1042,7 @@ namespace PluginAPI.Enums
 		/// <remarks>
 		/// Params: <see cref="string"/> userId, <see cref="UserGroup"/> group.
 		/// Cancellable with <see cref="PlayerGetGroupCancellationData"/>.
- 		/// </remarks>
+		/// </remarks>
 		PlayerGetGroup = 125,
 
 		/// <summary>

@@ -1,8 +1,7 @@
-using LiteNetLib;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerPreauthEvent : IEventArguments
 	{

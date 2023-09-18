@@ -1,14 +1,13 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerGameConsoleCommandEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerGameConsoleCommand;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public string Command { get; }
 		[EventArgument]
@@ -16,7 +15,7 @@ namespace PluginAPI.Events
 
 		public PlayerGameConsoleCommandEvent(ReferenceHub hub, string command, string[] args)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Command = command;
 			Arguments = args;
 		}

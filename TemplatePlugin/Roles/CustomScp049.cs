@@ -1,7 +1,7 @@
 using PlayerRoles.PlayableScps.Scp049;
 using PluginAPI.Core.Attributes;
 using PluginAPI.Enums;
-using PluginAPI.Roles;
+using PluginAPI.Roles.Scps;
 using TemplatePlugin.Factory;
 
 namespace TemplatePlugin.Roles

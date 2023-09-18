@@ -1,10 +1,10 @@
-using MapGeneration;
-using System.Collections.Generic;
-using System.Linq;
 using Interactables.Interobjects;
 using LightContainmentZoneDecontamination;
+using MapGeneration;
 using MapGeneration.Distributors;
 using PlayerRoles.PlayableScps.Scp079.Cameras;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Color = UnityEngine.Color;
 
@@ -141,7 +141,7 @@ namespace PluginAPI.Core
 
 			foreach (var controller in RoomLightController.Instances)
 			{
-				if(controller.Room.Zone == zone)
+				if (controller.Room.Zone == zone)
 					controller.ServerFlickerLights(duration);
 			}
 		}

@@ -1,13 +1,13 @@
-using System;
 using CustomPlayerEffects;
+using System;
 using UnityEngine;
 
 namespace PluginAPI.Core
 {
-	using System.Collections.Generic;
-	using Mirror;
 	using Interfaces;
+	using Mirror;
 	using RoundRestarting;
+	using System.Collections.Generic;
 	using static BanHandler;
 	using static Broadcast;
 
@@ -282,7 +282,7 @@ namespace PluginAPI.Core
 		/// <returns>List of specified ban types.</returns>
 		public static BanDetails[] GetAllPlayersBanned(BanType banType) => GetBans(banType).ToArray();
 
-#endregion
+		#endregion
 
 		/// <summary>
 		/// Restarts the server and reconnects all players.

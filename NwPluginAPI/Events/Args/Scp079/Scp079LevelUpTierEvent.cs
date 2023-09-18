@@ -1,20 +1,19 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp079
 {
 	public class Scp079LevelUpTierEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp079LevelUpTier;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public int Tier { get; }
 
 		public Scp079LevelUpTierEvent(ReferenceHub hub, int tier)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Tier = tier;
 		}
 

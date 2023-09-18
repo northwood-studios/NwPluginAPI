@@ -29,30 +29,30 @@ namespace PluginAPI.Commands
 			switch (arguments.At(0).ToLowerInvariant())
 			{
 				case "plugins":
-				{
-					var plugins = new List<string>();
-
-					foreach (var plugin in AssemblyLoader.InstalledPlugins)
 					{
-						plugin.ReloadConfig(plugin);
-						plugins.Add($"<color=lime>{plugin.PluginName}</color>");
-					}
+						var plugins = new List<string>();
 
-					response =
-						$"{(plugins.Count == 0 ? "Reloaded 0 plugin configs!" : $"Reloaded {string.Join(", ", plugins)} plugin configs!")}";
-					return true;
-				}
+						foreach (var plugin in AssemblyLoader.InstalledPlugins)
+						{
+							plugin.ReloadConfig(plugin);
+							plugins.Add($"<color=lime>{plugin.PluginName}</color>");
+						}
+
+						response =
+							$"{(plugins.Count == 0 ? "Reloaded 0 plugin configs!" : $"Reloaded {string.Join(", ", plugins)} plugin configs!")}";
+						return true;
+					}
 				case "gameplay":
-				{
-					GameCore.ConfigFile.ReloadGameConfigs();
-					response = $"config_gameplay successfully reloaded";
-					return true;
-				}
+					{
+						GameCore.ConfigFile.ReloadGameConfigs();
+						response = $"config_gameplay successfully reloaded";
+						return true;
+					}
 				default:
-				{
-					response = $"Please specify a valid argument\nUsage: plugins reload {this.DisplayCommandUsage()}";
-					return false;
-				}
+					{
+						response = $"Please specify a valid argument\nUsage: plugins reload {this.DisplayCommandUsage()}";
+						return false;
+					}
 			}
 		}
 	}

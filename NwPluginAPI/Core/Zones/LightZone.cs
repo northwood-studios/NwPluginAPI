@@ -1,10 +1,10 @@
 namespace PluginAPI.Core.Zones
 {
-	using LightContainmentZoneDecontamination;
-	using MapGeneration;
 	using Doors;
 	using Light;
 	using Light.Rooms;
+	using LightContainmentZoneDecontamination;
+	using MapGeneration;
 	using System.Collections.Generic;
 	using System.Linq;
 

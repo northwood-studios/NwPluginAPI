@@ -1,17 +1,15 @@
 using InventorySystem.Items.Radio;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using static InventorySystem.Items.Radio.RadioMessages;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerChangeRadioRangeEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerChangeRadioRange;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public RadioItem Radio { get; }
 		[EventArgument]
@@ -19,7 +17,7 @@ namespace PluginAPI.Events
 
 		public PlayerChangeRadioRangeEvent(ReferenceHub hub, RadioItem radio, RadioRangeLevel range)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Radio = radio;
 			Range = range;
 		}

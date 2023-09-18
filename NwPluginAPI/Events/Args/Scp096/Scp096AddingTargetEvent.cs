@@ -1,23 +1,22 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp096
 {
 	public class Scp096AddingTargetEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp096AddingTarget;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player Target { get; }
+		public Core.Player Target { get; }
 		[EventArgument]
 		public bool IsForLook { get; }
 
 		public Scp096AddingTargetEvent(ReferenceHub hub, ReferenceHub target, bool isForLook)
 		{
-			Player = Player.Get(hub);
-			Target = Player.Get(target);
+			Player = Core.Player.Get(hub);
+			Target = Core.Player.Get(target);
 			IsForLook = isForLook;
 		}
 

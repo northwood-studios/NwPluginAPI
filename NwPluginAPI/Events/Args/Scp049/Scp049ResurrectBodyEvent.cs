@@ -1,23 +1,22 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp049
 {
 	public class Scp049ResurrectBodyEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.Scp049ResurrectBody;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
-		public Player Target { get; }
+		public Core.Player Target { get; }
 		[EventArgument]
 		public BasicRagdoll Body { get; }
 
 		public Scp049ResurrectBodyEvent(ReferenceHub hub, ReferenceHub target, BasicRagdoll body)
 		{
-			Player = Player.Get(hub);
-			Target = Player.Get(target);
+			Player = Core.Player.Get(hub);
+			Target = Core.Player.Get(target);
 			Body = body;
 		}
 

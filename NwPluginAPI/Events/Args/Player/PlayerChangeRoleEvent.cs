@@ -1,16 +1,14 @@
 using PlayerRoles;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerChangeRoleEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerChangeRole;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public PlayerRoleBase OldRole { get; }
 		[EventArgument]
@@ -20,7 +18,7 @@ namespace PluginAPI.Events
 
 		public PlayerChangeRoleEvent(ReferenceHub hub, PlayerRoleBase oldRole, RoleTypeId newRole, RoleChangeReason reason)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			OldRole = oldRole;
 			NewRole = newRole;
 			ChangeReason = reason;

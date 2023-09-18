@@ -1,16 +1,14 @@
 using PlayerStatsSystem;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerDamagedWindowEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerDamagedWindow;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public BreakableWindow Window { get; }
 		[EventArgument]
@@ -20,7 +18,7 @@ namespace PluginAPI.Events
 
 		public PlayerDamagedWindowEvent(ReferenceHub hub, BreakableWindow window, DamageHandlerBase handler)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Window = window;
 			DamageHandler = handler;
 		}

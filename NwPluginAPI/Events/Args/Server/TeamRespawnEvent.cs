@@ -1,10 +1,9 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using Respawning;
 using System.Collections.Generic;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Server
 {
 	public class TeamRespawnEvent : IEventArguments
 	{
@@ -12,7 +11,7 @@ namespace PluginAPI.Events
 		[EventArgument]
 		public SpawnableTeamType Team { get; set; }
 		[EventArgument]
-		public List<Player> Players { get; set; } = new List<Player>();
+		public List<Core.Player> Players { get; set; } = new();
 		[EventArgument]
 		public int NextWaveMaxSize { get; set; }
 
@@ -20,9 +19,9 @@ namespace PluginAPI.Events
 		{
 			Team = team;
 
-			foreach(var spectator in spectators)
+			foreach (var spectator in spectators)
 			{
-				if (Player.TryGet(spectator, out Player plr))
+				if (Core.Player.TryGet(spectator, out Core.Player plr))
 					Players.Add(plr);
 			}
 		}

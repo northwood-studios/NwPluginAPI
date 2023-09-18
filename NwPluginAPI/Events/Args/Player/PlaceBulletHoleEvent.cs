@@ -1,8 +1,8 @@
-using UnityEngine;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
+using UnityEngine;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlaceBulletHoleEvent : IEventArguments
 	{

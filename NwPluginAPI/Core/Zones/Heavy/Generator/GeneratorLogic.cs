@@ -1,4 +1,4 @@
-namespace PluginAPI.Core.Zones.Heavy
+namespace PluginAPI.Core.Zones.Heavy.Generator
 {
 	/// <summary>
 	/// Handles a generator's logic.

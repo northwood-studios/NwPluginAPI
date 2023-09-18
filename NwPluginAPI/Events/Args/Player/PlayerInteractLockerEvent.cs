@@ -1,16 +1,14 @@
 using MapGeneration.Distributors;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerInteractLockerEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerInteractLocker;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Locker Locker { get; }
 		[EventArgument]
@@ -20,7 +18,7 @@ namespace PluginAPI.Events
 
 		public PlayerInteractLockerEvent(ReferenceHub hub, Locker locker, LockerChamber chamber, bool canOpen)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Locker = locker;
 			Chamber = chamber;
 			CanOpen = canOpen;

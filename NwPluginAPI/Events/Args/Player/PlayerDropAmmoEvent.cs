@@ -1,14 +1,13 @@
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerDropAmmoEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerDropAmmo;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public ItemType Item { get; }
 		[EventArgument]
@@ -16,7 +15,7 @@ namespace PluginAPI.Events
 
 		public PlayerDropAmmoEvent(ReferenceHub hub, ItemType item, int amount)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			Item = item;
 			Amount = amount;
 		}

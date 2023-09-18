@@ -1,6 +1,7 @@
-namespace PluginAPI.Core.Zones.Heavy
+namespace PluginAPI.Core.Zones.Heavy.Generator
 {
 	using MapGeneration.Distributors;
+	using PluginAPI.Core.Zones.Heavy;
 	using UnityEngine;
 
 	/// <summary>

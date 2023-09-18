@@ -1,22 +1,20 @@
 using PlayerRoles;
-
-using PluginAPI.Core;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerEscapeEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlayerEscape;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public RoleTypeId NewRole { get; set; }
 
 		public PlayerEscapeEvent(ReferenceHub hub, RoleTypeId newRole)
 		{
-			Player = Player.Get(hub);
+			Player = Core.Player.Get(hub);
 			NewRole = newRole;
 		}
 

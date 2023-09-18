@@ -1,10 +1,9 @@
-using PluginAPI.Enums;
-using PluginAPI.Core.Attributes;
-
-using PluginAPI.Core.Interfaces;
 using PluginAPI.Core;
+using PluginAPI.Core.Attributes;
+using PluginAPI.Core.Interfaces;
+using PluginAPI.Enums;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlayerBannedEvent : IEventArguments
 	{
@@ -12,7 +11,7 @@ namespace PluginAPI.Events
 		[EventArgument]
 		public IPlayer Player { get; }
 		[EventArgument]
-		public Player Issuer { get; }
+		public Core.Player Issuer { get; }
 		[EventArgument]
 		public string Reason { get; set; }
 		[EventArgument]
@@ -21,7 +20,7 @@ namespace PluginAPI.Events
 		public PlayerBannedEvent(ReferenceHub hub, ReferenceHub issuer, string reason, long duration)
 		{
 			Player = Core.Player.Get(hub);
-			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Core.Player.Get(issuer);
+			Issuer = issuer == ReferenceHub.HostHub ? Core.Server.Instance : Core.Player.Get(issuer);
 			Reason = reason;
 			Duration = duration;
 		}
@@ -29,7 +28,7 @@ namespace PluginAPI.Events
 		public PlayerBannedEvent(string userId, string nickName, string ipAddress, ReferenceHub issuer, string reason, long duration)
 		{
 			Player = new OfflinePlayer(userId, nickName, ipAddress);
-			Issuer = issuer == ReferenceHub.HostHub ? Server.Instance : Core.Player.Get(issuer);
+			Issuer = issuer == ReferenceHub.HostHub ? Core.Server.Instance : Core.Player.Get(issuer);
 			Reason = reason;
 			Duration = duration;
 		}

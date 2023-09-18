@@ -1,16 +1,14 @@
+using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using UnityEngine;
 
-using PluginAPI.Core;
-using PluginAPI.Enums;
-using PluginAPI.Core.Attributes;
-
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Player
 {
 	public class PlaceBloodEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.PlaceBlood;
 		[EventArgument]
-		public Player Player { get; }
+		public Core.Player Player { get; }
 		[EventArgument]
 		public Vector3 Position { get; set; }
 

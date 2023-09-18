@@ -1,10 +1,10 @@
-using UnityEngine;
 using InventorySystem.Items.Pickups;
-using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
+using PluginAPI.Enums;
 using Scp914;
+using UnityEngine;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Scp914
 {
 	public class Scp914UpgradePickupEvent : IEventArguments
 	{
