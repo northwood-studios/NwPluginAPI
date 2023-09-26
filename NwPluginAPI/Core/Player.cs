@@ -1139,7 +1139,7 @@ namespace PluginAPI.Core
 		/// Removes an specific item.
 		/// </summary>
 		/// <param name="item">The item base.</param>
-		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.UserInventory.Items.Remove(item.ItemSerial);
+		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.ServerRemoveItem(item.ItemSerial, item.PickupDropModel);
 
 		/// <summary>
 		/// Removes all specific items.
