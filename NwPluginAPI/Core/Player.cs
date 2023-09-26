@@ -630,10 +630,14 @@ namespace PluginAPI.Core
 			}
 		}
 
-		/// <summary>
+
+		[Obsolete("Use MaxArtificialHealth instead")]
+		public float MaxArtificalHealth => MaxArtificialHealth;
+
+        /// <summary>
 		/// Gets the player's current maximum artifical health.
 		/// </summary>
-		public float MaxArtificalHealth => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).MaxValue : ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
+		public float MaxArtificialHealth => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).MaxValue : ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
 
 		/// <summary>
 		/// Gets whether or not the player has remoteadmin access.
