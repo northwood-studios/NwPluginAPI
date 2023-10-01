@@ -14,7 +14,11 @@ namespace PluginAPI.Core
 		public static float NtfTickets
 		{
 			get => RespawnTokensManager.GetTeamDominance(SpawnableTeamType.NineTailedFox);
-			set => AddTickets(SpawnableTeamType.NineTailedFox, value);
+			set
+			{
+				RespawnTokensManager.RemoveTokens(SpawnableTeamType.NineTailedFox, NtfTickets);
+				AddTickets(SpawnableTeamType.NineTailedFox, value);
+			}
 		}
 
 		/// <summary>
@@ -23,7 +27,11 @@ namespace PluginAPI.Core
 		public static float ChaosTickets
 		{
 			get => RespawnTokensManager.GetTeamDominance(SpawnableTeamType.ChaosInsurgency);
-			set => AddTickets(SpawnableTeamType.ChaosInsurgency, value);
+			set
+			{
+				RespawnTokensManager.RemoveTokens(SpawnableTeamType.ChaosInsurgency, ChaosTickets);
+				AddTickets(SpawnableTeamType.ChaosInsurgency, value);
+			}
 		}
 
 		/// <summary>
