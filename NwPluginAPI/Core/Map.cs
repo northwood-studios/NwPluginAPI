@@ -112,7 +112,7 @@ namespace PluginAPI.Core
 
 		#region Facility rooms tools
 
-		#region GetRandomRoom
+		#region Get random room
 
 		/// <summary>
 		/// Get a random room from the specified zone.
@@ -129,7 +129,7 @@ namespace PluginAPI.Core
 
 		#endregion
 
-		#region  Light Flicker
+		#region  Light flicker
 
 		/// <summary>
 		/// Turns off the lights in the specified zone, for a period of time.
@@ -173,7 +173,7 @@ namespace PluginAPI.Core
 
 		#endregion
 
-		#region Turn On Lights
+		#region Turn on lights
 
 		/// <summary>
 		/// Turn on all the lights on the map
@@ -223,7 +223,10 @@ namespace PluginAPI.Core
 		{
 			foreach (var controller in RoomLightController.Instances)
 			{
+				// this is only for save the default color.
 				controller.Room.ApiRoom.Lights.LightColor = color;
+
+				controller.NetworkOverrideColor = color;
 			}
 		}
 
@@ -236,8 +239,10 @@ namespace PluginAPI.Core
 			{
 				if (controller.Room.Zone != zone)
 					continue;
-
+				// this is only for save the default color.
 				controller.Room.ApiRoom.Lights.LightColor = color;
+
+				controller.NetworkOverrideColor = color;
 			}
 		}
 
@@ -264,7 +269,7 @@ namespace PluginAPI.Core
 			foreach (var controller in RoomLightController.Instances)
 			{
 				if (controller.Room.ApiRoom.Lights.LightColor != controller.Room.ApiRoom.Lights.DefaultColor)
-					controller.Room.ApiRoom.Lights.LightColor = controller.Room.ApiRoom.Lights.DefaultColor;
+					controller.NetworkOverrideColor = controller.Room.ApiRoom.Lights.DefaultColor;
 			}
 		}
 
@@ -279,7 +284,7 @@ namespace PluginAPI.Core
 				if (controller.Room.Zone != zone) continue;
 
 				if (controller.Room.ApiRoom.Lights.LightColor != controller.Room.ApiRoom.Lights.DefaultColor)
-					controller.Room.ApiRoom.Lights.LightColor = controller.Room.ApiRoom.Lights.DefaultColor;
+					controller.NetworkOverrideColor = controller.Room.ApiRoom.Lights.DefaultColor;
 			}
 		}
 

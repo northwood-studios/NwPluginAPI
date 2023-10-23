@@ -4,6 +4,7 @@
 		<TargetFramework>net48</TargetFramework>
 		<PlatformTarget>x64</PlatformTarget>
 		<OutputType>Library</OutputType>
+		<Nullable>Enable</Nullable>
 
 		<AssemblyName>PluginAPI</AssemblyName>
 		<RootNamespace>PluginAPI</RootNamespace>
