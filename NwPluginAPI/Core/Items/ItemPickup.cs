@@ -95,7 +95,7 @@ namespace PluginAPI.Core.Items
 		public GameObject GameObject => OriginalObject.gameObject;
 
 		/// <summary>
-		/// Gets the pickup's position.
+		/// Gets or sets the pickup's position.
 		/// </summary>
 		public Vector3 Position
 		{
