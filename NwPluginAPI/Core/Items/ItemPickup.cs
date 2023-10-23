@@ -104,7 +104,7 @@ namespace PluginAPI.Core.Items
 		}
 
 		/// <summary>
-		/// Gets or sets the rotation of the item pickup.
+		/// Gets or sets the rotation of the pickup.
 		/// </summary>
 		/// <value>The rotation of the item pickup as a <see cref="Quaternion"/>.</value>
 		public Quaternion Rotation
@@ -114,9 +114,9 @@ namespace PluginAPI.Core.Items
 		}
 
 		/// <summary>
-		/// Gets or sets the scale of the item pickup.
+		/// Gets or sets the scale of the pickup.
 		/// </summary>
-		/// <value>The scale of the item pickup as a <see cref="Vector3"/>.</value>
+		/// <value>The scale of the pickup as a <see cref="Vector3"/>.</value>
 		public Vector3 Scale
 		{
 			get => OriginalObject.transform.localScale;
@@ -142,7 +142,7 @@ namespace PluginAPI.Core.Items
 		}
 
 		/// <summary>
-		/// Gets or sets the time it takes to pick up this item based on its weight.
+		/// Gets or sets the time it takes to pick up this pickup based on its weight.
 		/// </summary>
 		/// <value>The pickup time in seconds.</value>
 		public float PickupTime
