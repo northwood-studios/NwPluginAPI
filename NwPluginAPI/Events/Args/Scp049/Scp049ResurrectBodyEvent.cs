@@ -1,3 +1,4 @@
+using PlayerRoles.Ragdolls;
 using PluginAPI.Core;
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;

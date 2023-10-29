@@ -1,3 +1,5 @@
+using Respawning.NamingRules;
+
 namespace PluginAPI.Core
 {
 	using System;
@@ -28,6 +30,7 @@ namespace PluginAPI.Core
 	using PluginAPI.Core.Items;
 	using PlayerRoles.Voice;
 	using InventorySystem.Items.Firearms.Ammo;
+	using CentralAuth;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -49,7 +52,7 @@ namespace PluginAPI.Core
 		public static int Count => ReferenceHub.AllHubs.Count(x =>
 			!x.isLocalPlayer &&
 			x.Mode == ClientInstanceMode.ReadyClient &&
-			!string.IsNullOrEmpty(x.characterClassManager.UserId));
+			!string.IsNullOrEmpty(x.authManager.UserId));
 
 		/// <summary>
 		/// Gets the amount of not verified players
@@ -565,7 +568,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the player's user id.
 		/// </summary>
-		public string UserId => IsServer ? "server@server" : ReferenceHub.characterClassManager.UserId;
+		public string UserId => IsServer ? "server@server" : ReferenceHub.authManager.UserId;
 
 		/// <summary>
 		/// Gets the player's ip address.
@@ -603,37 +606,37 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float Health
 		{
-			get => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).CurValue;
-			set => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).CurValue = value;
+			get => ReferenceHub.playerStats.GetModule<HealthStat>().CurValue;
+			set => ReferenceHub.playerStats.GetModule<HealthStat>().CurValue = value;
 		}
 
 		/// <summary>
 		/// Gets the player's current maximum health;
 		/// </summary>
-		public float MaxHealth => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).MaxValue;
+		public float MaxHealth => ReferenceHub.playerStats.GetModule<HealthStat>().MaxValue;
 
 		/// <summary>
 		/// Gets or sets the player's current artificial health;
 		/// </summary>
 		public float ArtificialHealth
 		{
-			get => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue : ((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue;
+			get => IsSCP ? ReferenceHub.playerStats.GetModule<HumeShieldStat>().CurValue : ReferenceHub.playerStats.GetModule<AhpStat>().CurValue;
 			set
 			{
 				if (IsSCP)
 				{
-					((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue = value;
+					ReferenceHub.playerStats.GetModule<HumeShieldStat>().CurValue = value;
 					return;
 				}
 
-				((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue = value;
+				ReferenceHub.playerStats.GetModule<AhpStat>().CurValue = value;
 			}
 		}
 
 		/// <summary>
 		/// Gets the player's current maximum artifical health.
 		/// </summary>
-		public float MaxArtificalHealth => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).MaxValue : ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
+		public float MaxArtificalHealth => IsSCP ? ReferenceHub.playerStats.GetModule<HumeShieldStat>().MaxValue : ReferenceHub.playerStats.GetModule<AhpStat>().MaxValue;
 
 		/// <summary>
 		/// Gets whether or not the player has remoteadmin access.
@@ -643,7 +646,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets if the player has DoNotTrack enabled.
 		/// </summary>
-		public bool DoNotTrack => ReferenceHub.serverRoles.DoNotTrack;
+		public bool DoNotTrack => ReferenceHub.authManager.DoNotTrack;
 
 		/// <summary>
 		/// Gets or sets whether ot not the player has overwatch enabled.
@@ -717,7 +720,13 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the player unit name.
 		/// </summary>
-		public string UnitName => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitName : null;
+		[Obsolete("Use UnitId instead of UnitName, this method will return null", true)]
+		public string UnitName => null;
+		
+		/// <summary>
+		/// Gets the player unit Id, -1 if unset
+		/// </summary>
+		public int UnitId => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitNameId : -1;
 
 		/// <summary>
 		/// Get if player has reserved slot.
@@ -791,12 +800,12 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets whether or not the player is global moderator.
 		/// </summary>
-		public bool IsGlobalModerator => ReferenceHub.serverRoles.RaEverywhere;
+		public bool IsGlobalModerator => ReferenceHub.authManager.RemoteAdminGlobalAccess;
 
 		/// <summary>
 		/// Gets whether or not the player is northwood staff.
 		/// </summary>
-		public bool IsNorthwoodStaff => ReferenceHub.serverRoles.Staff;
+		public bool IsNorthwoodStaff => ReferenceHub.authManager.NorthwoodStaff;
 
 		/// <summary>
 		/// Gets whether or not the player has bypass mode.
@@ -868,7 +877,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets whether or not the player is properly connected to server.
 		/// </summary>
-		public bool IsReady => ReferenceHub.characterClassManager.InstanceMode != ClientInstanceMode.Unverified && ReferenceHub.nicknameSync.NickSet;
+		public bool IsReady => ReferenceHub.authManager.InstanceMode != ClientInstanceMode.Unverified && ReferenceHub.nicknameSync.NickSet;
 
 		/// <summary>
 		/// Gets whether or not the player is the dedicated server.
@@ -944,8 +953,8 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float StaminaRemaining
 		{
-			get => ReferenceHub.playerStats.StatModules[2].CurValue;
-			set => ReferenceHub.playerStats.StatModules[2].CurValue = value;
+			get => ReferenceHub.playerStats.GetModule<StaminaStat>().CurValue;
+			set => ReferenceHub.playerStats.GetModule<StaminaStat>().CurValue = value;
 		}
 
 		#endregion
@@ -1025,7 +1034,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="message">The message to be sent.</param>
 		/// <param name="color">The message color.</param>
-		public void SendConsoleMessage(string message, string color = "green") => ReferenceHub.gameConsoleTransmission.SendToClient(ReferenceHub.characterClassManager.connectionToClient, message, color);
+		public void SendConsoleMessage(string message, string color = "green") => ReferenceHub.gameConsoleTransmission.SendToClient(message, color);
 
 		/// <summary>
 		/// Bans the player from the server.
@@ -1241,7 +1250,7 @@ namespace PluginAPI.Core
 		/// Heals the player.
 		/// </summary>
 		/// <param name="amount">The amount of health to heal.</param>
-		public void Heal(float amount) => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).ServerHeal(amount);
+		public void Heal(float amount) => ReferenceHub.playerStats.GetModule<HealthStat>().ServerHeal(amount);
 
 		/// <summary>
 		/// Sets the players role.
@@ -1275,7 +1284,7 @@ namespace PluginAPI.Core
 		/// Sends the player a hit marker.
 		/// </summary>
 		/// <param name="size">The size of hit marker.</param>
-		public void ReceiveHitMarker(float size = 1f) => Hitmarker.SendHitmarker(Connection, size);
+		public void ReceiveHitMarker(float size = 1f) => Hitmarker.SendHitmarkerDirectly(Connection, size);
 
 		/// <summary>
 		/// Gets the stats module.
