@@ -31,6 +31,12 @@ namespace PluginAPI.Core
 	using PlayerRoles.Voice;
 	using InventorySystem.Items.Firearms.Ammo;
 	using CentralAuth;
+  using Utils;
+	using InventorySystem.Items.Usables.Scp330;
+	using InventorySystem.Items.Usables;
+	using InventorySystem.Items.Firearms;
+	using InventorySystem.Items.Firearms.BasicMessages;
+	using InventorySystem.Items.Flashlight;
 
 	/// <summary>
 	/// Represents a player connected to server.
@@ -678,28 +684,27 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Get player current room.
+		/// Gets player current room.
 		/// </summary>
 		public RoomIdentifier Room => RoomIdUtils.RoomAtPosition(GameObject.transform.position);
 
-
 		/// <summary>
-		/// Get player current zone.
+		/// Gets player current zone.
 		/// </summary>
 		public FacilityZone Zone => Room?.Zone ?? FacilityZone.None;
 
 		/// <summary>
-		/// Get player items.
+		/// Gets player items.
 		/// </summary>
-		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values;
+		public IReadOnlyCollection<ItemBase> Items => ReferenceHub.inventory.UserInventory.Items.Values.ToList();
 
 		/// <summary>
-		/// Get player ammo bag.
+		/// Gets player ammo bag.
 		/// </summary>
 		public Dictionary<ItemType, ushort> AmmoBag => ReferenceHub.inventory.UserInventory.ReserveAmmo;
 
 		/// <summary>
-		/// Get or set server role color.
+		/// Gets or sets server role color.
 		/// </summary>
 		public string RoleColor
 		{
@@ -708,7 +713,7 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Get or set server role text.
+		/// Gets or sets server role text.
 		/// </summary>
 		public string RoleName
 		{
@@ -757,7 +762,7 @@ namespace PluginAPI.Core
 		public bool IsWithoutItems => ReferenceHub.inventory.UserInventory.Items.Count == 0;
 
 		/// <summary>
-		/// Get if the player has no ammunition.
+		/// Gets if the player has no ammunition.
 		/// </summary>
 		public bool IsOutOfAmmo => ReferenceHub.inventory.UserInventory.ReserveAmmo.All(ammo => ammo.Value == 0);
 
@@ -837,7 +842,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets whether or not the player's inventory is full.
 		/// </summary>
-		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count >= 8;
+		public bool IsInventoryFull => ReferenceHub.inventory.UserInventory.Items.Count == Inventory.MaxSlots;
 
 		/// <summary>
 		/// Get player role team.
@@ -1037,6 +1042,16 @@ namespace PluginAPI.Core
 		public void SendConsoleMessage(string message, string color = "green") => ReferenceHub.gameConsoleTransmission.SendToClient(message, color);
 
 		/// <summary>
+		/// Opens a reporting window with the specified message.
+		/// </summary>
+		/// <param name="message">The message to be displayed in the reporting window.</param>
+		/// <param name="color">The color of the message (default is "green").</param>
+		public void OpenReportWindow(string message, string color = "green")
+		{
+			SendConsoleMessage($"[REPORTING] {message}", color);
+		}
+
+		/// <summary>
 		/// Bans the player from the server.
 		/// </summary>
 		/// <param name="issuer">The player which issued ban.</param>
@@ -1151,10 +1166,10 @@ namespace PluginAPI.Core
 		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.UserInventory.Items.Remove(item.ItemSerial);
 
 		/// <summary>
-		/// Removes all specific items.
+		/// Removes a specified number of items of a particular type from the player's inventory.
 		/// </summary>
-		/// <param name="itemtype">The item type.</param>
-		/// <param name="number">The number of items that will be removed.</param>
+		/// <param name="itemType">The type of items to be removed.</param>
+		/// <param name="number">The number of items to remove (default is 1).</param>
 		public void RemoveItems(ItemType itemType, int number = 1)
 		{
 			int removed = 0;
@@ -1203,6 +1218,74 @@ namespace PluginAPI.Core
 		public ushort GetAmmo(ItemType item) => ReferenceHub.inventory.GetCurAmmo(item);
 
 		/// <summary>
+		/// Counts the number of items of a specific type in the player's inventory.
+		/// </summary>
+		/// <param name="type">The type of item to count.</param>
+		/// <returns>The number of items of the specified type in the inventory.</returns>
+		public int CountItem(ItemType type) => Items.Count(i => i.ItemTypeId == type);
+
+		/// <summary>
+		/// Checks if the player has an item of a specific type in their inventory.
+		/// </summary>
+		/// <param name="type">The type of item to check for.</param>
+		/// <returns><see langword="true"/> if the player has an item of the specified type, otherwise <see langword="false"/>.</returns>
+		public bool HasItem(ItemType type) => Items.Any(i => i.ItemTypeId == type);
+
+		/// <summary>
+		/// Attempts to reload the currently held firearm, if applicable.
+		/// </summary>
+		/// <returns><see langword="true"/> if reloading was successful, otherwise <see langword="false"/>.</returns>
+		public bool ReloadFirearm()
+		{
+			if (CurrentItem is Firearm firearm)
+			{
+				bool value = firearm.AmmoManagerModule.ServerTryReload();
+				Connection.Send(new RequestMessage(firearm.ItemSerial, RequestType.Reload));
+				return value;
+			}
+
+			return false;
+		}
+
+		/// <summary>
+		/// Attempts to unload the currently held firearm, if applicable.
+		/// </summary>
+		/// <returns><see langword="true"/> if unloading was successful, otherwise <see langword="false"/>.</returns>
+		public bool UnLoadFirearm()
+		{
+			if (CurrentItem is Firearm firearm)
+			{
+				bool value = firearm.AmmoManagerModule.ServerTryUnload();
+				Connection.Send(new RequestMessage(firearm.ItemSerial, RequestType.Unload));
+				return value;
+			}
+
+			return false;
+		}
+
+		/// <summary>
+		/// Toggles the flashlight on the player's currently held item, if applicable.
+		/// </summary>
+		/// <returns>
+		/// <see langword="true"/> if the flashlight state was toggled successfully; otherwise, <see langword="false"/>.
+		/// </returns>
+		public bool ToggleFlashlight()
+		{
+			if (CurrentItem is Firearm firearm)
+			{
+				Connection.Send(new RequestMessage(firearm.ItemSerial, RequestType.ToggleFlashlight));
+				return true;
+			}
+			if (CurrentItem is FlashlightItem item)
+			{
+				item.IsEmittingLight = !item.IsEmittingLight;
+				return true;
+			}
+			return false;
+		}
+
+
+		/// <summary>
 		/// Drops ammo.
 		/// </summary>
 		/// <param name="item">The type of ammo.</param>
@@ -1238,6 +1321,30 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Resets the player's inventory to contain the specified items.
+		/// </summary>
+		/// <param name="items">An enumerable collection of item types to add to the player's inventory.</param>
+		public void ResetInventory(IEnumerable<ItemType> items)
+		{
+			ClearInventory(false, true);
+
+			foreach (var item in items)
+				AddItem(item);
+		}
+
+		/// <summary>
+		/// Resets the player's ammo to the specified values.
+		/// </summary>
+		/// <param name="newAmmovalues">A dictionary of item types and their corresponding ammo values to set in the player's inventory.</param>
+		public void ResetAmmo(Dictionary<ItemType, ushort> newAmmovalues)
+		{
+			ClearInventory(true, false);
+
+			foreach (var ammo in newAmmovalues)
+				AddAmmo(ammo.Key, ammo.Value);
+		}
+
+		/// <summary>
 		/// Set player <see cref="UserGroup"/>
 		/// </summary>
 		/// <param name="group">UserGroup to set</param>
@@ -1247,10 +1354,48 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gives the player a specific candy. Will give the player a bag if they do not already have one.
+		/// </summary>
+		/// <param name="candy">The <see cref="CandyKindID"/> to give.</param>
+		/// <returns><see langword="true"/> if a candy was given.</returns>
+		public bool TryAddCandy(CandyKindID candy)
+		{
+			if(Scp330Bag.TryGetBag(ReferenceHub, out var bag))
+			{
+				bool isAdded = bag.TryAddSpecific(candy);
+
+				if (isAdded)
+					bag.ServerRefreshBag();
+
+				return isAdded;
+			}
+			else
+			{
+				if(AddItem(ItemType.SCP330) is Scp330Bag newBag)
+				{
+					newBag.Candies.Clear();
+					newBag.TryAddSpecific(candy);
+					newBag.ServerRefreshBag();
+
+					return true;
+				}
+
+				return false;
+			}
+		}
+
+		/// <summary>
 		/// Heals the player.
 		/// </summary>
 		/// <param name="amount">The amount of health to heal.</param>
 		public void Heal(float amount) => ReferenceHub.playerStats.GetModule<HealthStat>().ServerHeal(amount);
+
+		/// <summary>
+		/// Provides the player with a health regeneration effect at a specified rate and duration.
+		/// </summary>
+		/// <param name="rate">The rate at which health regeneration occurs.</param>
+		/// <param name="duration">The duration of the health regeneration effect.</param>
+		public void GiveHealthRegen(float rate, float duration) => Scp330Bag.AddSimpleRegeneration(ReferenceHub, rate, duration);
 
 		/// <summary>
 		/// Sets the players role.
@@ -1343,6 +1488,17 @@ namespace PluginAPI.Core
 		/// <param name="damageHandlerBase">The damage handler base.</param>
 		/// <returns>Whether or not damaging was successful.</returns>
 		public bool Damage(DamageHandlerBase damageHandlerBase) => ReferenceHub.playerStats.DealDamage(damageHandlerBase);
+
+		/// <summary>
+		/// Explode the player.
+		/// </summary>
+		public void Explode() => ExplosionUtils.ServerExplode(ReferenceHub);
+
+		/// <summary>
+		/// Triggers an explosion effect at the player's position with an optional explosion type.
+		/// </summary>
+		/// <param name="explodeType">The type of explosion (default is "GrenadeHE").</param>
+		public void ExplodeEffect(ItemType explodeType = ItemType.GrenadeHE) => ExplosionUtils.ServerSpawnEffect(Position, explodeType);
 
 		/// <inheritdoc/>
 		public virtual void OnStart() { }
