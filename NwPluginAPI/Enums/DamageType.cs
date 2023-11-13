@@ -60,5 +60,7 @@ namespace PluginAPI.Enums
 		Warhead = 46,
 		PlayerLeft = 47,
 		ForcedDeath = 48,
+		FRMG0 = 49,
+		A7 = 50,
 	}
 }
