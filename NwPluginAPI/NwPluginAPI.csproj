@@ -33,7 +33,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Northwood.PluginAPI</Title>
 		<Copyright>Copyright by Hubert Moszka Northwood, 2022-2023</Copyright>
-		<PackageVersion>13.1.1</PackageVersion>
+		<PackageVersion>13.1.2</PackageVersion>
 		<LangVersion>default</LangVersion>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
