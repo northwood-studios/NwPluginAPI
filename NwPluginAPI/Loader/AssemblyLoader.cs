@@ -114,40 +114,69 @@ namespace PluginAPI.Loader
 
 			var loadedAssemblies = AppDomain.CurrentDomain
 				.GetAssemblies()
-				.Select(x =>
-					$"{x.GetName().Name}&r v&6{x.GetName().Version.ToString(3)}");
+				.ToDictionary(x => x.GetName().Name, x => x.GetName().Version);
+
+			var loadedPluginAssemblies = new List<PluginAssemblyInformation>();
+			var pluginsToInitialize = new List<PluginAssemblyInformation>();
 
 			foreach (string pluginPath in files)
 			{
 				if (!TryGetAssembly(pluginPath, out Assembly assembly))
 					continue;
+				loadedPluginAssemblies.Add(new PluginAssemblyInformation(pluginPath, assembly));
+				loadedAssemblies[assembly.GetName().Name] = assembly.GetName().Version;
+			}
 
-				Type[] types = null;
-
-				var missingDependencies = assembly
+			foreach (var pluginInfo in loadedPluginAssemblies)
+			{
+				var missingDependencies = pluginInfo.Assembly
 					.GetReferencedAssemblies()
-					.Select(x =>
-						$"{x.Name}&r v&6{x.Version.ToString(3)}")
-					.Where(x => !loadedAssemblies.Contains(x)).ToArray();
+					.Where(x => !loadedAssemblies.ContainsKey(x.Name))
+					.ToDictionary(x => x.Name, x => x.Version);
+				var versionMismatch = pluginInfo.Assembly
+					.GetReferencedAssemblies()
+					.Where(x => loadedAssemblies.ContainsKey(x.Name) && loadedAssemblies[x.Name] != x.Version)
+					.ToDictionary(x => x.Name, x => (Expected: x.Version, Actual: loadedAssemblies[x.Name]));
 
 				try
 				{
-					if (missingDependencies.Length != 0)
-						ResolveAssemblyEmbeddedResources(assembly);
-					types = assembly.GetTypes();
-				}
-				catch (Exception e)
-				{
-					if (missingDependencies.Length != 0)
+					if (missingDependencies.Count != 0)
+						ResolveAssemblyEmbeddedResources(pluginInfo.Assembly, missingDependencies);
+					if (missingDependencies.Count != 0)
 					{
-						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => $"&r - &2{x}&r"))}\n\n{e}", "Loader");
+						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => "&r - &2" + x.Key + " v" + x.Value.ToString(3) + "&r"))}", "Loader");
 						continue;
 					}
 
-					Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginPath)}&r, {e.ToString()}");
+					pluginInfo.Types = pluginInfo.Assembly.GetTypes();
+					pluginsToInitialize.Add(pluginInfo);
+				}
+				catch (Exception e)
+				{
+					if (missingDependencies.Count != 0)
+					{
+						Log.Error($"Failed loading plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r, missing dependencies\n&2{string.Join("\n", missingDependencies.Select(x => "&r - &2" + x.Key + " v" + x.Value.ToString(3) + "&r"))}\n\n{e}", "Loader");
+					}
+					else
+					{
+						Log.Error("Failed loading plugin &2" + Path.GetFileNameWithoutExtension(pluginInfo.Path) + "&r, " + e, "Loader");
+					}
+
 					continue;
 				}
 
+				if (versionMismatch.Count != 0)
+				{
+					Log.Warning($"Dependency version mismatch in plugin &2{Path.GetFileNameWithoutExtension(pluginInfo.Path)}&r\n&2{string.Join("\n", versionMismatch.Select(x => "&r - &2" + x.Key + " v" + x.Value.Actual.ToString(3) + " (expected version by plugin: " + x.Value.Expected.ToString(3) + ")" + "&r"))}", "Loader");
+				}
+			}
+
+			Log.Info($"Initializing &2{pluginsToInitialize.Count}&r plugins...");
+			foreach (var pluginInfo in pluginsToInitialize)
+			{
+				var pluginPath = pluginInfo.Path;
+				var assembly = pluginInfo.Assembly;
+				var types = pluginInfo.Types;
 				foreach (var entryType in types)
 				{
 					try
@@ -217,6 +246,7 @@ namespace PluginAPI.Loader
 					Log.Error($"Failed loading dependency &2{Path.GetFileNameWithoutExtension(dependencyPath)}&r.\n{ex}");
 					continue;
 				}
+
 				successes++;
 			}
 
@@ -249,7 +279,8 @@ namespace PluginAPI.Loader
 		/// Attempts to load Embedded assemblies (compressed) from the target
 		/// </summary>
 		/// <param name="target">Assembly to check for embedded assemblies</param>
-		private static void ResolveAssemblyEmbeddedResources(Assembly target)
+		/// <param name="missingDependencies"></param>
+		private static void ResolveAssemblyEmbeddedResources(Assembly target, Dictionary<string, Version> missingDependencies)
 		{
 			Log.Debug($"Attempting to load embedded resources for {target.FullName}", Log.DebugMode);
 
@@ -271,7 +302,8 @@ namespace PluginAPI.Loader
 						}
 
 						dataStream.CopyTo(stream);
-						Assembly.Load(stream.ToArray());
+						var assemblyName = Assembly.Load(stream.ToArray()).GetName();
+						missingDependencies.Remove(assemblyName.Name);
 						Log.Debug($"Loaded {name}", Log.DebugMode);
 					}
 				}
@@ -289,7 +321,8 @@ namespace PluginAPI.Loader
 					{
 						Log.Debug($"Loading {name}", Log.DebugMode);
 						stream.CopyTo(memStream);
-						Assembly.Load(memStream.ToArray());
+						var assemblyName = Assembly.Load(memStream.ToArray()).GetName();
+						missingDependencies.Remove(assemblyName.Name);
 						Log.Debug($"Loaded {name}", Log.DebugMode);
 					}
 				}
