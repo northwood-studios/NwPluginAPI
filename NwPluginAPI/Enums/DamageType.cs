@@ -27,7 +27,7 @@ namespace PluginAPI.Enums
 		Com45 = 13,
 		Jailbird = 14,
 		Explosion = 15,
-		GrenadeExplosion = 16,
+		//GrenadeExplosion = 16,
 		Recontainment = 17,
 		Recontain079 = 18,
 		Universal = 19,
@@ -35,13 +35,15 @@ namespace PluginAPI.Enums
 		Bleeding = 21,
 		PocketDecay = 22,
 		Decontamination = 23,
-		Hemorrhage = 24,
+		// Its not the same as Bleeding ?
+		//Hemorrhage = 24,
 		Poisoned = 25,
 		SeveredHands = 26,
-		Checkpoint = 27,
+		// Checkpoint can kill you ?
+		//Checkpoint = 27,
 		FriendlyFireDetector = 28,
 		Hypothermia = 29,
-		CardiacArrest = 30,
+		//CardiacArrest = 30,
 		Falldown = 31,
 		Tesla = 32,
 		Scp207 = 33,
@@ -58,7 +60,13 @@ namespace PluginAPI.Enums
 		Scp939LungeSecondary = 44,
 		Scp018 = 45,
 		Warhead = 46,
-		PlayerLeft = 47,
-		ForcedDeath = 48,
+		//PlayerLeft = 47,
+		//ForcedDeath = 48,
+		
+		// Temporary DamageType until Nortwood implements its own system. 
+		Scp096 = 50,
+		Scp939 = 51,
+		Crushed = 52,
+		Unknown = 53,
 	}
 }

@@ -1,4 +1,4 @@
-﻿namespace PluginAPI.Core.Extensions
+namespace PluginAPI.Core.Extensions
 {
 	using Attributes;
 	using System;
@@ -17,7 +17,6 @@
 				if (attr != null)
 					return true;
 			}
-
 			return false;
 		}
 	}
