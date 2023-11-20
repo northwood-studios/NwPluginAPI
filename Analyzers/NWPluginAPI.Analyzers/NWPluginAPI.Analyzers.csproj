@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
@@ -14,7 +14,7 @@
 	
 	<PropertyGroup>
 		<PackageId>Northwood.PluginAPI.Analyzers</PackageId>
-		<PackageVersion>12.0.0</PackageVersion>
+		<PackageVersion>13.1.0</PackageVersion>
 		<Authors>Northwood Studios</Authors>
 		<Company>Northwood Studio</Company>
 		<Product>PluginAPI.Analyzers</Product>
