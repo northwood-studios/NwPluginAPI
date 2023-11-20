@@ -6,6 +6,7 @@ namespace PluginAPI.Core.Doors
 	using System.Collections.Generic;
 	using System.Linq;
 	using UnityEngine;
+	using Interactables.Interobjects.DoorUtils;
 
 	/// <summary>
 	/// Represents a gate.
@@ -31,6 +32,24 @@ namespace PluginAPI.Core.Doors
 		/// Gets the positions the door can be pryed open from.
 		/// </summary>
 		public Transform[] PryPositions => OriginalObject.PryPositions;
+
+		/// <summary>
+		/// Try-get a <see cref="FacilityGate"/> from a <see cref="DoorVariant"/>
+		/// </summary>
+		/// <param name="baseDoor">The <see cref="DoorVariant"/></param>
+		/// <param name="facilityDoor">The <see cref="FacilityGate"/> if its found otherwise will be <see langword="null"/></param>
+		/// <returns>A boolean indicating if the <see cref="FacilityGate"/> was found.</returns>
+		public static bool TryGet(DoorVariant baseDoor, out FacilityGate facilityDoor)
+		{
+			if (List == null)
+			{
+				facilityDoor = null;
+				return false;
+			}
+
+			facilityDoor = List.FirstOrDefault(door => door.GameObject == baseDoor.gameObject);
+			return facilityDoor != null;
+		}
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="FacilityGate"/> class.

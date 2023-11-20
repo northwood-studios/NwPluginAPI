@@ -124,6 +124,25 @@ namespace PluginAPI.Core.Doors
 		/// <param name="enabled">Whether or not the door lock reason is new.</param>
 		public void Lock(DoorLockReason reason, bool enabled) => OriginalObject.ServerChangeLock(reason, enabled);
 
+
+		/// <summary>
+		/// Try-get a <see cref="FacilityDoor"/> from a <see cref="DoorVariant"/>
+		/// </summary>
+		/// <param name="baseDoor">The <see cref="DoorVariant"/></param>
+		/// <param name="facilityDoor">The <see cref="FacilityDoor"/> if its found otherwise will be <see langword="null"/></param>
+		/// <returns>A boolean indicating if the <see cref="FacilityDoor"/> was found.</returns>
+		public static bool TryGet(DoorVariant baseDoor, out FacilityDoor facilityDoor)
+		{
+			if (Facility.Doors == null)
+			{
+				facilityDoor = null;
+				return false;
+			}
+
+			facilityDoor = Facility.Doors.FirstOrDefault(door => door.GameObject == baseDoor.gameObject);
+			return facilityDoor != null;
+		}
+
 		/// <summary>
 		/// Initializes a new instance of the <see cref="FacilityDoor"/> class.
 		/// </summary>
