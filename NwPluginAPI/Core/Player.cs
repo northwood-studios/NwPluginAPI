@@ -576,6 +576,37 @@ namespace PluginAPI.Core
 		public string IpAddress => ReferenceHub.characterClassManager.connectionToClient.address;
 
 		/// <summary>
+		/// Gets or sets player's scale.
+		/// </summary>
+		public Vector3 Scale
+		{
+			get => GameObject.transform.localScale;
+			set
+			{
+				if (value == Scale)
+					return;
+
+				try
+				{
+					GameObject.transform.localScale = value;
+					foreach(var player in GetPlayers())
+					{
+						Server.SpawnMessage?.Invoke(null, new object[] { NetworkIdentity, player.Connection });
+					}
+				}
+				catch (Exception e)
+				{
+					Log.Error($"Error on {nameof(Scale)}: {e}");
+				}
+			}
+		}
+
+		/// <summary>
+		/// Gets player's <see cref="Mirror.NetworkIdentity"/>.
+		/// </summary>
+		public NetworkIdentity NetworkIdentity => ReferenceHub.networkIdentity;
+
+		/// <summary>
 		/// Gets or sets the player's current role.
 		/// </summary>
 		public RoleTypeId Role
@@ -682,7 +713,6 @@ namespace PluginAPI.Core
 		/// </summary>
 		public RoomIdentifier Room => RoomIdUtils.RoomAtPosition(GameObject.transform.position);
 
-
 		/// <summary>
 		/// Get player current zone.
 		/// </summary>
@@ -715,7 +745,6 @@ namespace PluginAPI.Core
 			get => ReferenceHub.serverRoles.Network_myText;
 			set => ReferenceHub.serverRoles.SetText(value);
 		}
-
 
 		/// <summary>
 		/// Gets the player unit name.
