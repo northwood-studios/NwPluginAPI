@@ -29,6 +29,8 @@ namespace PluginAPI.Enums
 	using Interactables.Interobjects.DoorUtils;
 	using Interactables.Interobjects;
 	using Scp914;
+	using Hazards;
+	using PlayerRoles.PlayableScps.Scp049;
 
 	/// <summary>
 	/// Represents server event types.
@@ -1087,5 +1089,49 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemType"/> type. <see cref="int"/> amount.
 		/// </remarks>
 		PlayerDroppedAmmo = 131,
+
+		/// <summary>
+		/// Executed when player enters a <see cref="EnvironmentalHazard"/>.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="EnvironmentalHazard"/> hazard.
+		/// </remarks>
+		PlayerEnterEnvironmentalHazard = 132,
+
+		/// <summary>
+		/// Executed when player stays in an <see cref="EnvironmentalHazard"/>.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="EnvironmentalHazard"/> hazard.
+		/// </remarks>
+		PlayerStayOnEnvironmentalHazard = 133,
+
+		/// <summary>
+		/// Executed when player exits a <see cref="EnvironmentalHazard"/>.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="EnvironmentalHazard"/> hazard.
+		/// </remarks>
+		PlayerExitEnvironmentalHazard = 134,
+
+		/// <summary>
+		/// Executed when player consume a corpse as SCP-049-2
+		/// </summary>
+		Scp0492ConsumeCorpse = 135,
+
+		/// <summary>
+		/// Executed when a player as SCP-049 mark a player with SenseAbilty.
+		/// </summary>
+		Scp049MarkPlayer = 136,
+
+		/// <summary>
+		/// Executed when a player as SCP-049 lose a player with SenseAbility.
+		/// </summary>
+		Scp049LosingPlayer = 137,
+
+		/// <summary>
+		/// Executed when a player as SCP-049 use <see cref="Scp049CallAbility"/>
+		/// </summary>
+		Scp049CallProgeny = 138
 	}
 }
