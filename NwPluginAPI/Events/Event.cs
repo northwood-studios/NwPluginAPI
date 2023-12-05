@@ -1,7 +1,7 @@
-﻿using PluginAPI.Core.Interfaces;
+using PluginAPI.Core.Attributes;
+using PluginAPI.Core.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
 namespace PluginAPI.Events
@@ -22,47 +22,31 @@ namespace PluginAPI.Events
 			{ typeof(IPlayer) }
 		};
 
-		private readonly List<IndexInfo> IndexesToRegenerate = new();
-
 		public readonly Dictionary<Type, List<EventInvokeLocation>> Invokers = new();
 
-		public readonly EventParameter[] Parameters;
+		public readonly List<EventParameter> Parameters = new List<EventParameter>();
+
+		public readonly IEventArguments EventArg;
+		public readonly Type EventArgType;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Event"/> class.
 		/// </summary>
 		/// <param name="parameters">The parameters.</param>
-		public Event(params EventParameter[] parameters)
+		public Event(IEventArguments args)
 		{
-			Parameters = parameters;
+			EventArg = args;
+			EventArgType = EventArg.GetType();
 
-			for (int x = 0; x < Parameters.Length; x++)
+			foreach(var property in EventArgType.GetProperties(BindingFlags.Public | BindingFlags.Instance))
 			{
-				if (!ParametersToRegenerate.Contains(Parameters[x].BaseType)) continue;
+				var argument = property.GetCustomAttribute<EventArgument>();
 
-				IndexesToRegenerate.Add(new IndexInfo() { Index = x, Type = Parameters[x].BaseType });
+				if (argument == null) continue;
+
+				Parameters.Add(new EventParameter(property.PropertyType.IsByRef ? property.PropertyType.GetElementType() : property.PropertyType, property, property.Name));
 			}
 		}
-
-		public object[] RegenerateParameters(EventInvokeLocation invoker, object[] parameters)
-		{
-			object[] regeneratedParameters = parameters.ToArray();
-
-			foreach (var index in IndexesToRegenerate)
-			{
-				if (parameters[index.Index] == null)
-				{
-					regeneratedParameters[index.Index] = null;
-					continue;
-				}
-
-				if (index.Type == typeof(IPlayer))
-					regeneratedParameters[index.Index] = EventManager.GetPlayerFactory(invoker).GetOrAdd((IGameComponent)parameters[index.Index]);
-			}
-
-			return regeneratedParameters;
-		}
-
 
 		/// <summary>
 		/// Registers a event handler.
@@ -70,7 +54,8 @@ namespace PluginAPI.Events
 		/// <param name="plugin">The plugin of the handler.</param>
 		/// <param name="handle">The handle.</param>
 		/// <param name="method">The method.</param>
-		public void RegisterInvoker(Type plugin, object handle, MethodInfo method)
+		/// <param name="defaultMethod">The default method.</param>
+		public void RegisterInvoker(Type plugin, object handle, MethodInfo method, bool defaultMethod)
 		{
 			if (!Invokers.ContainsKey(plugin))
 				Invokers.Add(plugin, new List<EventInvokeLocation>());
@@ -79,7 +64,8 @@ namespace PluginAPI.Events
 			{
 				Plugin = plugin,
 				Target = handle,
-				Method = method
+				Method = method,
+				IsDefaultMethod = defaultMethod
 			});
 		}
 	}

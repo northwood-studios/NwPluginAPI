@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/CommandType.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CommandType
     path: ../NwPluginAPI/Enums/CommandType.cs
     startLine: 7
@@ -61,8 +61,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/CommandType.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Console
     path: ../NwPluginAPI/Enums/CommandType.cs
     startLine: 10
@@ -93,8 +93,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/CommandType.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameConsole
     path: ../NwPluginAPI/Enums/CommandType.cs
     startLine: 11
@@ -125,8 +125,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/CommandType.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RemoteAdmin
     path: ../NwPluginAPI/Enums/CommandType.cs
     startLine: 12

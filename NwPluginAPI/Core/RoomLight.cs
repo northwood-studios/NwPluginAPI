@@ -7,13 +7,13 @@ namespace PluginAPI.Core
 	/// </summary>
 	public class RoomLight
 	{
-		private readonly FlickerableLightController _lightController;
+		private readonly RoomLightController _lightController;
 		private Color? _defaultLightColor;
 
 		private void SaveDefaultColor()
 		{
 			if (!_defaultLightColor.HasValue)
-				_defaultLightColor = _lightController.WarheadLightColor;
+				_defaultLightColor = _lightController.OverrideColor;
 		}
 
 		/// <summary>
@@ -45,8 +45,7 @@ namespace PluginAPI.Core
 			set
 			{
 				SaveDefaultColor();
-				_lightController.WarheadLightColor = value;
-				_lightController.WarheadLightOverride = value != DefaultColor;
+				_lightController.OverrideColor = value;
 			}
 		}
 
@@ -63,22 +62,6 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
-		/// Gets or sets lightning intensity in room.
-		/// </summary>
-		public float LightIntensity
-		{
-			get
-			{
-				return _lightController.LightIntensityMultiplier;
-			}
-
-			set
-			{
-				_lightController.LightIntensityMultiplier = value;
-			}
-		}
-
-		/// <summary>
 		/// Flickers the lights.
 		/// </summary>
 		/// <param name="duration">The durtaion of flicker.</param>
@@ -91,6 +74,6 @@ namespace PluginAPI.Core
 		/// Initializes a new instance of the <see cref="RoomLight"/> class.
 		/// </summary>
 		/// <param name="lightController">The light controller for room.</param>
-		public RoomLight(FlickerableLightController lightController) => _lightController = lightController;
+		public RoomLight(RoomLightController lightController) => _lightController = lightController;
 	}
 }

@@ -1,48 +1,46 @@
 ### YamlMime:ManagedReference
 items:
-- uid: PluginAPI.Commands.ReloadCommmand
-  commentId: T:PluginAPI.Commands.ReloadCommmand
-  id: ReloadCommmand
+- uid: PluginAPI.Commands.ReloadConfigCommand
+  commentId: T:PluginAPI.Commands.ReloadConfigCommand
+  id: ReloadConfigCommand
   parent: PluginAPI.Commands
   children:
-  - PluginAPI.Commands.ReloadCommmand.Aliases
-  - PluginAPI.Commands.ReloadCommmand.Command
-  - PluginAPI.Commands.ReloadCommmand.Description
-  - PluginAPI.Commands.ReloadCommmand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  - PluginAPI.Commands.ReloadConfigCommand.Aliases
+  - PluginAPI.Commands.ReloadConfigCommand.Command
+  - PluginAPI.Commands.ReloadConfigCommand.Description
+  - PluginAPI.Commands.ReloadConfigCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  - PluginAPI.Commands.ReloadConfigCommand.Instance
+  - PluginAPI.Commands.ReloadConfigCommand.Usage
   langs:
   - csharp
   - vb
-  name: ReloadCommmand
-  nameWithType: ReloadCommmand
-  fullName: PluginAPI.Commands.ReloadCommmand
+  name: ReloadConfigCommand
+  nameWithType: ReloadConfigCommand
+  fullName: PluginAPI.Commands.ReloadConfigCommand
   type: Class
   source:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
-    id: ReloadCommmand
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ReloadConfigCommand
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
-    startLine: 10
+    startLine: 15
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
-  summary: "\nReloads plugins configs.\n"
+  summary: "\nReloads plugins or gameplay configs.\n"
   example: []
   syntax:
-    content: >-
-      [CommandHandler(typeof(PluginsCommand))]
-
-      public class ReloadCommmand : ICommand
+    content: 'public class ReloadConfigCommand : ICommand, IUsageProvider'
     content.vb: >-
-      <CommandHandler(GetType(PluginsCommand))>
-
-      Public Class ReloadCommmand
-          Implements ICommand
+      Public Class ReloadConfigCommand
+          Implements ICommand, IUsageProvider
   inheritance:
   - System.Object
   implements:
   - CommandSystem.ICommand
+  - CommandSystem.IUsageProvider
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -51,37 +49,31 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: CommandSystem.CommandHandlerAttribute
-    ctor: CommandSystem.CommandHandlerAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: PluginAPI.Commands.PluginsCommand
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: PluginAPI.Commands.ReloadCommmand.Command
-  commentId: P:PluginAPI.Commands.ReloadCommmand.Command
+- uid: PluginAPI.Commands.ReloadConfigCommand.Command
+  commentId: P:PluginAPI.Commands.ReloadConfigCommand.Command
   id: Command
-  parent: PluginAPI.Commands.ReloadCommmand
+  parent: PluginAPI.Commands.ReloadConfigCommand
   langs:
   - csharp
   - vb
   name: Command
-  nameWithType: ReloadCommmand.Command
-  fullName: PluginAPI.Commands.ReloadCommmand.Command
+  nameWithType: ReloadConfigCommand.Command
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Command
   type: Property
   source:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
@@ -91,7 +83,7 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property Command As String
-  overload: PluginAPI.Commands.ReloadCommmand.Command*
+  overload: PluginAPI.Commands.ReloadConfigCommand.Command*
   implements:
   - CommandSystem.ICommand.Command
   modifiers.csharp:
@@ -100,25 +92,25 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Commands.ReloadCommmand.Aliases
-  commentId: P:PluginAPI.Commands.ReloadCommmand.Aliases
+- uid: PluginAPI.Commands.ReloadConfigCommand.Aliases
+  commentId: P:PluginAPI.Commands.ReloadConfigCommand.Aliases
   id: Aliases
-  parent: PluginAPI.Commands.ReloadCommmand
+  parent: PluginAPI.Commands.ReloadConfigCommand
   langs:
   - csharp
   - vb
   name: Aliases
-  nameWithType: ReloadCommmand.Aliases
-  fullName: PluginAPI.Commands.ReloadCommmand.Aliases
+  nameWithType: ReloadConfigCommand.Aliases
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Aliases
   type: Property
   source:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
@@ -128,7 +120,7 @@ items:
     return:
       type: System.String[]
     content.vb: Public ReadOnly Property Aliases As String()
-  overload: PluginAPI.Commands.ReloadCommmand.Aliases*
+  overload: PluginAPI.Commands.ReloadConfigCommand.Aliases*
   implements:
   - CommandSystem.ICommand.Aliases
   modifiers.csharp:
@@ -137,25 +129,25 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Commands.ReloadCommmand.Description
-  commentId: P:PluginAPI.Commands.ReloadCommmand.Description
+- uid: PluginAPI.Commands.ReloadConfigCommand.Description
+  commentId: P:PluginAPI.Commands.ReloadConfigCommand.Description
   id: Description
-  parent: PluginAPI.Commands.ReloadCommmand
+  parent: PluginAPI.Commands.ReloadConfigCommand
   langs:
   - csharp
   - vb
   name: Description
-  nameWithType: ReloadCommmand.Description
-  fullName: PluginAPI.Commands.ReloadCommmand.Description
+  nameWithType: ReloadConfigCommand.Description
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Description
   type: Property
   source:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
@@ -165,7 +157,7 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property Description As String
-  overload: PluginAPI.Commands.ReloadCommmand.Description*
+  overload: PluginAPI.Commands.ReloadConfigCommand.Description*
   implements:
   - CommandSystem.ICommand.Description
   modifiers.csharp:
@@ -174,25 +166,95 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Commands.ReloadCommmand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
-  commentId: M:PluginAPI.Commands.ReloadCommmand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+- uid: PluginAPI.Commands.ReloadConfigCommand.Usage
+  commentId: P:PluginAPI.Commands.ReloadConfigCommand.Usage
+  id: Usage
+  parent: PluginAPI.Commands.ReloadConfigCommand
+  langs:
+  - csharp
+  - vb
+  name: Usage
+  nameWithType: ReloadConfigCommand.Usage
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Usage
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Commands/ReloadCommand.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Usage
+    path: ../NwPluginAPI/Commands/ReloadCommand.cs
+    startLine: 20
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Commands
+  syntax:
+    content: public string[] Usage { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public ReadOnly Property Usage As String()
+  overload: PluginAPI.Commands.ReloadConfigCommand.Usage*
+  implements:
+  - CommandSystem.IUsageProvider.Usage
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Commands.ReloadConfigCommand.Instance
+  commentId: F:PluginAPI.Commands.ReloadConfigCommand.Instance
+  id: Instance
+  parent: PluginAPI.Commands.ReloadConfigCommand
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ReloadConfigCommand.Instance
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Instance
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Commands/ReloadCommand.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Instance
+    path: ../NwPluginAPI/Commands/ReloadCommand.cs
+    startLine: 22
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Commands
+  syntax:
+    content: public static ReloadConfigCommand Instance
+    return:
+      type: PluginAPI.Commands.ReloadConfigCommand
+    content.vb: Public Shared Instance As ReloadConfigCommand
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: PluginAPI.Commands.ReloadConfigCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  commentId: M:PluginAPI.Commands.ReloadConfigCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   id: Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
-  parent: PluginAPI.Commands.ReloadCommmand
+  parent: PluginAPI.Commands.ReloadConfigCommand
   langs:
   - csharp
   - vb
   name: Execute(ArraySegment<String>, ICommandSender, out String)
-  nameWithType: ReloadCommmand.Execute(ArraySegment<String>, ICommandSender, out String)
-  fullName: PluginAPI.Commands.ReloadCommmand.Execute(System.ArraySegment<System.String>, CommandSystem.ICommandSender, out System.String)
+  nameWithType: ReloadConfigCommand.Execute(ArraySegment<String>, ICommandSender, out String)
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Execute(System.ArraySegment<System.String>, CommandSystem.ICommandSender, out System.String)
   type: Method
   source:
     remote:
       path: NwPluginAPI/Commands/ReloadCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Execute
     path: ../NwPluginAPI/Commands/ReloadCommand.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
@@ -208,15 +270,15 @@ items:
     return:
       type: System.Boolean
     content.vb: Public Function Execute(arguments As ArraySegment(Of String), sender As ICommandSender, ByRef response As String) As Boolean
-  overload: PluginAPI.Commands.ReloadCommmand.Execute*
+  overload: PluginAPI.Commands.ReloadConfigCommand.Execute*
   implements:
   - CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
-  nameWithType.vb: ReloadCommmand.Execute(ArraySegment(Of String), ICommandSender, ByRef String)
+  nameWithType.vb: ReloadConfigCommand.Execute(ArraySegment(Of String), ICommandSender, ByRef String)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: PluginAPI.Commands.ReloadCommmand.Execute(System.ArraySegment(Of System.String), CommandSystem.ICommandSender, ByRef System.String)
+  fullName.vb: PluginAPI.Commands.ReloadConfigCommand.Execute(System.ArraySegment(Of System.String), CommandSystem.ICommandSender, ByRef System.String)
   name.vb: Execute(ArraySegment(Of String), ICommandSender, ByRef String)
 references:
 - uid: PluginAPI.Commands
@@ -238,6 +300,13 @@ references:
   name: ICommand
   nameWithType: ICommand
   fullName: CommandSystem.ICommand
+- uid: CommandSystem.IUsageProvider
+  commentId: T:CommandSystem.IUsageProvider
+  parent: CommandSystem
+  isExternal: true
+  name: IUsageProvider
+  nameWithType: IUsageProvider
+  fullName: CommandSystem.IUsageProvider
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -529,11 +598,11 @@ references:
   name: CommandSystem
   nameWithType: CommandSystem
   fullName: CommandSystem
-- uid: PluginAPI.Commands.ReloadCommmand.Command*
-  commentId: Overload:PluginAPI.Commands.ReloadCommmand.Command
+- uid: PluginAPI.Commands.ReloadConfigCommand.Command*
+  commentId: Overload:PluginAPI.Commands.ReloadConfigCommand.Command
   name: Command
-  nameWithType: ReloadCommmand.Command
-  fullName: PluginAPI.Commands.ReloadCommmand.Command
+  nameWithType: ReloadConfigCommand.Command
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Command
 - uid: CommandSystem.ICommand.Command
   commentId: P:CommandSystem.ICommand.Command
   parent: CommandSystem.ICommand
@@ -548,11 +617,11 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: PluginAPI.Commands.ReloadCommmand.Aliases*
-  commentId: Overload:PluginAPI.Commands.ReloadCommmand.Aliases
+- uid: PluginAPI.Commands.ReloadConfigCommand.Aliases*
+  commentId: Overload:PluginAPI.Commands.ReloadConfigCommand.Aliases
   name: Aliases
-  nameWithType: ReloadCommmand.Aliases
-  fullName: PluginAPI.Commands.ReloadCommmand.Aliases
+  nameWithType: ReloadConfigCommand.Aliases
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Aliases
 - uid: CommandSystem.ICommand.Aliases
   commentId: P:CommandSystem.ICommand.Aliases
   parent: CommandSystem.ICommand
@@ -586,11 +655,11 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: PluginAPI.Commands.ReloadCommmand.Description*
-  commentId: Overload:PluginAPI.Commands.ReloadCommmand.Description
+- uid: PluginAPI.Commands.ReloadConfigCommand.Description*
+  commentId: Overload:PluginAPI.Commands.ReloadConfigCommand.Description
   name: Description
-  nameWithType: ReloadCommmand.Description
-  fullName: PluginAPI.Commands.ReloadCommmand.Description
+  nameWithType: ReloadConfigCommand.Description
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Description
 - uid: CommandSystem.ICommand.Description
   commentId: P:CommandSystem.ICommand.Description
   parent: CommandSystem.ICommand
@@ -598,11 +667,29 @@ references:
   name: Description
   nameWithType: ICommand.Description
   fullName: CommandSystem.ICommand.Description
-- uid: PluginAPI.Commands.ReloadCommmand.Execute*
-  commentId: Overload:PluginAPI.Commands.ReloadCommmand.Execute
+- uid: PluginAPI.Commands.ReloadConfigCommand.Usage*
+  commentId: Overload:PluginAPI.Commands.ReloadConfigCommand.Usage
+  name: Usage
+  nameWithType: ReloadConfigCommand.Usage
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Usage
+- uid: CommandSystem.IUsageProvider.Usage
+  commentId: P:CommandSystem.IUsageProvider.Usage
+  parent: CommandSystem.IUsageProvider
+  isExternal: true
+  name: Usage
+  nameWithType: IUsageProvider.Usage
+  fullName: CommandSystem.IUsageProvider.Usage
+- uid: PluginAPI.Commands.ReloadConfigCommand
+  commentId: T:PluginAPI.Commands.ReloadConfigCommand
+  parent: PluginAPI.Commands
+  name: ReloadConfigCommand
+  nameWithType: ReloadConfigCommand
+  fullName: PluginAPI.Commands.ReloadConfigCommand
+- uid: PluginAPI.Commands.ReloadConfigCommand.Execute*
+  commentId: Overload:PluginAPI.Commands.ReloadConfigCommand.Execute
   name: Execute
-  nameWithType: ReloadCommmand.Execute
-  fullName: PluginAPI.Commands.ReloadCommmand.Execute
+  nameWithType: ReloadConfigCommand.Execute
+  fullName: PluginAPI.Commands.ReloadConfigCommand.Execute
 - uid: CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   commentId: M:CommandSystem.ICommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   parent: CommandSystem.ICommand

@@ -57,8 +57,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Server
     path: ../NwPluginAPI/Core/Server.cs
     startLine: 18
@@ -195,6 +195,8 @@ items:
   - PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.Item)
   - PluginAPI.Core.Player.RemoveItem(PluginAPI.Core.Items.ItemPickup)
   - PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.Pickups.ItemPickupBase)
+  - PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.ItemBase)
+  - PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
   - PluginAPI.Core.Player.DropItem(PluginAPI.Core.Items.Item)
   - PluginAPI.Core.Player.DropItem(InventorySystem.Items.ItemBase)
   - PluginAPI.Core.Player.DropItem(System.UInt16)
@@ -255,31 +257,31 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Instance
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
   summary: "\nThe <xref href=\"PluginAPI.Core.Server\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
   example: []
   syntax:
-    content: public static Server Instance { get; }
+    content: public static Server Instance { get; set; }
     parameters: []
     return:
       type: PluginAPI.Core.Server
-    content.vb: Public Shared ReadOnly Property Instance As Server
+    content.vb: Public Shared Property Instance As Server
   overload: PluginAPI.Core.Server.Instance*
   modifiers.csharp:
   - public
   - static
   - get
+  - set
   modifiers.vb:
   - Public
   - Shared
-  - ReadOnly
 - uid: PluginAPI.Core.Server.Init
   commentId: M:PluginAPI.Core.Server.Init
   id: Init
@@ -294,11 +296,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Init
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 25
+    startLine: 40
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -326,11 +328,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 31
+    startLine: 46
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -362,11 +364,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ServerIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 36
+    startLine: 51
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -401,11 +403,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Port
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 41
+    startLine: 56
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -440,11 +442,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FriendlyFire
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 46
+    startLine: 61
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -479,11 +481,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerCount
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 63
+    startLine: 78
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -518,11 +520,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxPlayers
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 68
+    startLine: 83
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -557,11 +559,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ReservedSlots
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 77
+    startLine: 92
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -596,14 +598,16 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Broadcast
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 83
+    startLine: 101
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
+  summary: "\nGets server broadcast singleton.\n"
+  example: []
   syntax:
     content: public static Broadcast Broadcast { get; }
     parameters: []
@@ -633,11 +637,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PermissionsHandler
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 88
+    startLine: 106
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -672,11 +676,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TPS
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 93
+    startLine: 111
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -711,11 +715,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SpawnProtectDuration
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 98
+    startLine: 116
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -750,11 +754,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsHeavilyModded
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 107
+    startLine: 125
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -789,11 +793,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 122
+    startLine: 140
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -836,11 +840,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 132
+    startLine: 150
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -886,11 +890,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 142
+    startLine: 160
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -936,11 +940,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 150
+    startLine: 168
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -980,11 +984,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 158
+    startLine: 176
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1024,11 +1028,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: KickPlayer
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 165
+    startLine: 183
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1065,11 +1069,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 175
+    startLine: 193
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1115,11 +1119,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 186
+    startLine: 204
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1168,11 +1172,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 197
+    startLine: 215
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1221,11 +1225,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 220
+    startLine: 238
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1271,11 +1275,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 231
+    startLine: 249
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1324,11 +1328,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 242
+    startLine: 260
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1377,11 +1381,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByUserId
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 262
+    startLine: 280
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1418,11 +1422,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: UnbanPlayerByIpAddress
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 277
+    startLine: 295
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1459,11 +1463,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsPlayerBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 292
+    startLine: 310
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1500,11 +1504,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 303
+    startLine: 321
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1537,11 +1541,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetAllPlayersBanned
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 315
+    startLine: 333
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1578,11 +1582,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 322
+    startLine: 340
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1612,11 +1616,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 327
+    startLine: 345
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1649,11 +1653,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 336
+    startLine: 354
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1683,11 +1687,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Shutdown
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 341
+    startLine: 359
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1720,11 +1724,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RunCommand
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 352
+    startLine: 370
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1763,11 +1767,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SendBroadcast
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 361
+    startLine: 379
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1810,11 +1814,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ClearBroadcasts
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 371
+    startLine: 389
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1844,11 +1848,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IdleModeActive
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 376
+    startLine: 394
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1883,11 +1887,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PauseIdleMode
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 381
+    startLine: 399
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1922,11 +1926,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IdleModeAvailable
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 391
+    startLine: 409
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -1961,11 +1965,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Server.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SetIdleMode
     path: ../NwPluginAPI/Core/Server.cs
-    startLine: 402
+    startLine: 420
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -4699,6 +4703,100 @@ references:
     name: ItemPickupBase
     nameWithType: ItemPickupBase
     fullName: InventorySystem.Items.Pickups.ItemPickupBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.ItemBase)
+  commentId: M:PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.ItemBase)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: RemoveItem(ItemBase)
+  nameWithType: Player.RemoveItem(ItemBase)
+  fullName: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.ItemBase)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.ItemBase)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: InventorySystem.Items.ItemBase
+    name: ItemBase
+    nameWithType: ItemBase
+    fullName: InventorySystem.Items.ItemBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.RemoveItem(InventorySystem.Items.ItemBase)
+    name: RemoveItem
+    nameWithType: Player.RemoveItem
+    fullName: PluginAPI.Core.Player.RemoveItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: InventorySystem.Items.ItemBase
+    name: ItemBase
+    nameWithType: ItemBase
+    fullName: InventorySystem.Items.ItemBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+  commentId: M:PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+  parent: PluginAPI.Core.Player
+  isExternal: true
+  name: RemoveItems(ItemType, Int32)
+  nameWithType: Player.RemoveItems(ItemType, Int32)
+  fullName: PluginAPI.Core.Player.RemoveItems(ItemType, System.Int32)
+  spec.csharp:
+  - uid: PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+    name: RemoveItems
+    nameWithType: Player.RemoveItems
+    fullName: PluginAPI.Core.Player.RemoveItems
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Player.RemoveItems(ItemType,System.Int32)
+    name: RemoveItems
+    nameWithType: Player.RemoveItems
+    fullName: PluginAPI.Core.Player.RemoveItems
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: ItemType
+    name: ItemType
+    nameWithType: ItemType
+    fullName: ItemType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
   - name: )
     nameWithType: )

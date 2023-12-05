@@ -29,8 +29,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Item
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 10
@@ -72,8 +72,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 17
@@ -107,8 +107,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Type
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 22
@@ -144,8 +144,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Category
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 27
@@ -181,8 +181,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TierFlags
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 32
@@ -218,8 +218,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ThrowSettings
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 37
@@ -255,8 +255,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CurrentOwner
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 42
@@ -292,8 +292,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Serial
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 47
@@ -329,8 +329,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Weight
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 52
@@ -366,8 +366,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 57
@@ -403,8 +403,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 62
@@ -440,8 +440,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 67
@@ -477,8 +477,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 72
@@ -514,8 +514,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Remove
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 84
@@ -551,8 +551,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Items/Item.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Items/Item.cs
     startLine: 90

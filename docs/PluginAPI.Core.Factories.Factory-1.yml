@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Factory
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 9
@@ -75,8 +75,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 17
@@ -114,8 +114,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DefaultServer
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 22
@@ -155,8 +155,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 29
@@ -200,8 +200,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetOrAdd
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 36
@@ -243,8 +243,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/Factory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AddIfNotExists
     path: ../NwPluginAPI/Core/Factories/Factory.cs
     startLine: 57

@@ -1,0 +1,499 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent
+  commentId: T:PluginAPI.Events.LczDecontaminationAnnouncementEvent
+  id: LczDecontaminationAnnouncementEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.LczDecontaminationAnnouncementEvent.#ctor(System.Int32)
+  - PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType
+  - PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id
+  langs:
+  - csharp
+  - vb
+  name: LczDecontaminationAnnouncementEvent
+  nameWithType: LczDecontaminationAnnouncementEvent
+  fullName: PluginAPI.Events.LczDecontaminationAnnouncementEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LczDecontaminationAnnouncementEvent
+    path: ../NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class LczDecontaminationAnnouncementEvent : IEventArguments'
+    content.vb: >-
+      Public Class LczDecontaminationAnnouncementEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType
+  commentId: P:PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.LczDecontaminationAnnouncementEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: LczDecontaminationAnnouncementEvent.BaseType
+  fullName: PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id
+  commentId: P:PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id
+  id: Id
+  parent: PluginAPI.Events.LczDecontaminationAnnouncementEvent
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: LczDecontaminationAnnouncementEvent.Id
+  fullName: PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Id
+    path: ../NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public int Id { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Id As Integer
+  overload: PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent.#ctor(System.Int32)
+  commentId: M:PluginAPI.Events.LczDecontaminationAnnouncementEvent.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: PluginAPI.Events.LczDecontaminationAnnouncementEvent
+  langs:
+  - csharp
+  - vb
+  name: LczDecontaminationAnnouncementEvent(Int32)
+  nameWithType: LczDecontaminationAnnouncementEvent.LczDecontaminationAnnouncementEvent(Int32)
+  fullName: PluginAPI.Events.LczDecontaminationAnnouncementEvent.LczDecontaminationAnnouncementEvent(System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/LczDecontaminationAnnouncementEvent.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public LczDecontaminationAnnouncementEvent(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub New(id As Integer)
+  overload: PluginAPI.Events.LczDecontaminationAnnouncementEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType
+  name: BaseType
+  nameWithType: LczDecontaminationAnnouncementEvent.BaseType
+  fullName: PluginAPI.Events.LczDecontaminationAnnouncementEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id*
+  commentId: Overload:PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id
+  name: Id
+  nameWithType: LczDecontaminationAnnouncementEvent.Id
+  fullName: PluginAPI.Events.LczDecontaminationAnnouncementEvent.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PluginAPI.Events.LczDecontaminationAnnouncementEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.LczDecontaminationAnnouncementEvent.#ctor
+  name: LczDecontaminationAnnouncementEvent
+  nameWithType: LczDecontaminationAnnouncementEvent.LczDecontaminationAnnouncementEvent
+  fullName: PluginAPI.Events.LczDecontaminationAnnouncementEvent.LczDecontaminationAnnouncementEvent

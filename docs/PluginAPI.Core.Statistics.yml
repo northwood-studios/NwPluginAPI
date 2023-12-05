@@ -21,8 +21,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Statistics
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 11
@@ -65,8 +65,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TotalConnectedPlayers
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 16
@@ -104,8 +104,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TotalRejectedConnections
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 21
@@ -143,8 +143,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PeakPlayers
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 26
@@ -178,8 +178,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TotalRoundrestarts
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 31
@@ -217,8 +217,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FastestEndedRound
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 36
@@ -252,8 +252,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Statistics.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: CurrentRound
     path: ../NwPluginAPI/Core/Statistics.cs
     startLine: 41

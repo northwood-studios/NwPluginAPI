@@ -10,9 +10,8 @@ namespace PluginAPI.Loader
 	using Core.Extensions;
 	using Helpers;
 	using Features;
-	using Utils.ConfigHandler;
-	using GameCore;
 	using Log = Core.Log;
+	using PluginAPI.Events;
 
 	/// <summary>
 	/// Manages initialization of plugin system and loading of plugins.
@@ -73,6 +72,7 @@ namespace PluginAPI.Loader
 
 			Paths.Setup();
 			FactoryManager.Init();
+			EventManager.Init();
 
 			Log.Info("<---<    Loading global plugins     <---<");
 			// Load plugins from the Global directory inside "configs".

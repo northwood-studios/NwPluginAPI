@@ -1,5 +1,3 @@
-using System.Reflection;
-
 namespace PluginAPI.Core
 {
 	using GameCore;

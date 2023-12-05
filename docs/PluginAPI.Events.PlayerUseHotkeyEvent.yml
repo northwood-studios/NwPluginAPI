@@ -1,0 +1,558 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent
+  commentId: T:PluginAPI.Events.PlayerUseHotkeyEvent
+  id: PlayerUseHotkeyEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerUseHotkeyEvent.#ctor(ReferenceHub,ActionName)
+  - PluginAPI.Events.PlayerUseHotkeyEvent.Action
+  - PluginAPI.Events.PlayerUseHotkeyEvent.BaseType
+  - PluginAPI.Events.PlayerUseHotkeyEvent.Player
+  langs:
+  - csharp
+  - vb
+  name: PlayerUseHotkeyEvent
+  nameWithType: PlayerUseHotkeyEvent
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerUseHotkeyEvent
+    path: ../NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerUseHotkeyEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerUseHotkeyEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerUseHotkeyEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerUseHotkeyEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerUseHotkeyEvent.BaseType
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerUseHotkeyEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.Player
+  commentId: P:PluginAPI.Events.PlayerUseHotkeyEvent.Player
+  id: Player
+  parent: PluginAPI.Events.PlayerUseHotkeyEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: PlayerUseHotkeyEvent.Player
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.PlayerUseHotkeyEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.Action
+  commentId: P:PluginAPI.Events.PlayerUseHotkeyEvent.Action
+  id: Action
+  parent: PluginAPI.Events.PlayerUseHotkeyEvent
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: PlayerUseHotkeyEvent.Action
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.Action
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Action
+    path: ../NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ActionName Action { get; }
+    parameters: []
+    return:
+      type: ActionName
+    content.vb: Public ReadOnly Property Action As ActionName
+  overload: PluginAPI.Events.PlayerUseHotkeyEvent.Action*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.#ctor(ReferenceHub,ActionName)
+  commentId: M:PluginAPI.Events.PlayerUseHotkeyEvent.#ctor(ReferenceHub,ActionName)
+  id: '#ctor(ReferenceHub,ActionName)'
+  parent: PluginAPI.Events.PlayerUseHotkeyEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerUseHotkeyEvent(ReferenceHub, ActionName)
+  nameWithType: PlayerUseHotkeyEvent.PlayerUseHotkeyEvent(ReferenceHub, ActionName)
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.PlayerUseHotkeyEvent(ReferenceHub, ActionName)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerUseHotkeyEvent.cs
+    startLine: 39
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerUseHotkeyEvent(ReferenceHub hub, ActionName action)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: action
+      type: ActionName
+    content.vb: Public Sub New(hub As ReferenceHub, action As ActionName)
+  overload: PluginAPI.Events.PlayerUseHotkeyEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerUseHotkeyEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerUseHotkeyEvent.BaseType
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.Player*
+  commentId: Overload:PluginAPI.Events.PlayerUseHotkeyEvent.Player
+  name: Player
+  nameWithType: PlayerUseHotkeyEvent.Player
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.Action*
+  commentId: Overload:PluginAPI.Events.PlayerUseHotkeyEvent.Action
+  name: Action
+  nameWithType: PlayerUseHotkeyEvent.Action
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.Action
+- uid: ActionName
+  commentId: T:ActionName
+  isExternal: true
+  name: ActionName
+  nameWithType: ActionName
+  fullName: ActionName
+- uid: PluginAPI.Events.PlayerUseHotkeyEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerUseHotkeyEvent.#ctor
+  name: PlayerUseHotkeyEvent
+  nameWithType: PlayerUseHotkeyEvent.PlayerUseHotkeyEvent
+  fullName: PluginAPI.Events.PlayerUseHotkeyEvent.PlayerUseHotkeyEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

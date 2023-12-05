@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerGetGroupCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 373
@@ -64,8 +64,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 376
@@ -104,8 +104,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AssignedUserGroup
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 378
@@ -137,8 +137,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeaveUnchanged
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 390
@@ -174,8 +174,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Override
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 399

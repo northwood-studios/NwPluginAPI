@@ -1,9 +1,6 @@
 ﻿namespace PluginAPI.Core
 {
-	using Footprinting;
-	using PlayerStatsSystem;
 	using System.Collections.Generic;
-	using UnityEngine;
 
 	/// <summary>
 	/// Manages damage for a player.

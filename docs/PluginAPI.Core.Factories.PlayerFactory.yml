@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/PlayerFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerFactory
     path: ../NwPluginAPI/Core/Factories/PlayerFactory.cs
     startLine: 8
@@ -70,8 +70,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/PlayerFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BaseType
     path: ../NwPluginAPI/Core/Factories/PlayerFactory.cs
     startLine: 10
@@ -107,8 +107,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/PlayerFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/PlayerFactory.cs
     startLine: 17

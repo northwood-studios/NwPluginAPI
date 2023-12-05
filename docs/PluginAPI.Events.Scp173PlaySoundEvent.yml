@@ -1,0 +1,565 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.Scp173PlaySoundEvent
+  commentId: T:PluginAPI.Events.Scp173PlaySoundEvent
+  id: Scp173PlaySoundEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.Scp173PlaySoundEvent.#ctor(ReferenceHub,PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId)
+  - PluginAPI.Events.Scp173PlaySoundEvent.BaseType
+  - PluginAPI.Events.Scp173PlaySoundEvent.Player
+  - PluginAPI.Events.Scp173PlaySoundEvent.SoundId
+  langs:
+  - csharp
+  - vb
+  name: Scp173PlaySoundEvent
+  nameWithType: Scp173PlaySoundEvent
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Scp173PlaySoundEvent
+    path: ../NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class Scp173PlaySoundEvent : IEventArguments'
+    content.vb: >-
+      Public Class Scp173PlaySoundEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.BaseType
+  commentId: P:PluginAPI.Events.Scp173PlaySoundEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.Scp173PlaySoundEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: Scp173PlaySoundEvent.BaseType
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.Scp173PlaySoundEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.Player
+  commentId: P:PluginAPI.Events.Scp173PlaySoundEvent.Player
+  id: Player
+  parent: PluginAPI.Events.Scp173PlaySoundEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Scp173PlaySoundEvent.Player
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.Scp173PlaySoundEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.SoundId
+  commentId: P:PluginAPI.Events.Scp173PlaySoundEvent.SoundId
+  id: SoundId
+  parent: PluginAPI.Events.Scp173PlaySoundEvent
+  langs:
+  - csharp
+  - vb
+  name: SoundId
+  nameWithType: Scp173PlaySoundEvent.SoundId
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.SoundId
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SoundId
+    path: ../NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Scp173AudioPlayer.Scp173SoundId SoundId { get; }
+    parameters: []
+    return:
+      type: PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId
+    content.vb: Public ReadOnly Property SoundId As Scp173AudioPlayer.Scp173SoundId
+  overload: PluginAPI.Events.Scp173PlaySoundEvent.SoundId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.#ctor(ReferenceHub,PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId)
+  commentId: M:PluginAPI.Events.Scp173PlaySoundEvent.#ctor(ReferenceHub,PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId)
+  id: '#ctor(ReferenceHub,PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId)'
+  parent: PluginAPI.Events.Scp173PlaySoundEvent
+  langs:
+  - csharp
+  - vb
+  name: Scp173PlaySoundEvent(ReferenceHub, Scp173AudioPlayer.Scp173SoundId)
+  nameWithType: Scp173PlaySoundEvent.Scp173PlaySoundEvent(ReferenceHub, Scp173AudioPlayer.Scp173SoundId)
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.Scp173PlaySoundEvent(ReferenceHub, PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/Scp173PlaySoundEvent.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Scp173PlaySoundEvent(ReferenceHub hub, Scp173AudioPlayer.Scp173SoundId id)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: id
+      type: PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId
+    content.vb: Public Sub New(hub As ReferenceHub, id As Scp173AudioPlayer.Scp173SoundId)
+  overload: PluginAPI.Events.Scp173PlaySoundEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.Scp173PlaySoundEvent.BaseType
+  name: BaseType
+  nameWithType: Scp173PlaySoundEvent.BaseType
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.Player*
+  commentId: Overload:PluginAPI.Events.Scp173PlaySoundEvent.Player
+  name: Player
+  nameWithType: Scp173PlaySoundEvent.Player
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.SoundId*
+  commentId: Overload:PluginAPI.Events.Scp173PlaySoundEvent.SoundId
+  name: SoundId
+  nameWithType: Scp173PlaySoundEvent.SoundId
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.SoundId
+- uid: PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId
+  commentId: T:PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId
+  parent: PlayerRoles.PlayableScps.Scp173
+  isExternal: true
+  name: Scp173AudioPlayer.Scp173SoundId
+  nameWithType: Scp173AudioPlayer.Scp173SoundId
+  fullName: PlayerRoles.PlayableScps.Scp173.Scp173AudioPlayer.Scp173SoundId
+- uid: PlayerRoles.PlayableScps.Scp173
+  commentId: N:PlayerRoles.PlayableScps.Scp173
+  isExternal: true
+  name: PlayerRoles.PlayableScps.Scp173
+  nameWithType: PlayerRoles.PlayableScps.Scp173
+  fullName: PlayerRoles.PlayableScps.Scp173
+- uid: PluginAPI.Events.Scp173PlaySoundEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.Scp173PlaySoundEvent.#ctor
+  name: Scp173PlaySoundEvent
+  nameWithType: Scp173PlaySoundEvent.Scp173PlaySoundEvent
+  fullName: PluginAPI.Events.Scp173PlaySoundEvent.Scp173PlaySoundEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

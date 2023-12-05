@@ -1,7 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using NWPluginAPI.Analyzers.Enums;
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;

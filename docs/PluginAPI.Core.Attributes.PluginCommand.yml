@@ -19,8 +19,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PluginCommand
     path: ../NwPluginAPI/Core/Attributes/PluginCommand.cs
     startLine: 8
@@ -122,8 +122,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Name
     path: ../NwPluginAPI/Core/Attributes/PluginCommand.cs
     startLine: 11
@@ -157,8 +157,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Core/Attributes/PluginCommand.cs
     startLine: 12
@@ -192,8 +192,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Type
     path: ../NwPluginAPI/Core/Attributes/PluginCommand.cs
     startLine: 13
@@ -227,8 +227,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Attributes/PluginCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Attributes/PluginCommand.cs
     startLine: 21

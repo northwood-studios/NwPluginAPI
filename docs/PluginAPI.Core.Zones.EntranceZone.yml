@@ -21,8 +21,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EntranceZone
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
     startLine: 11
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZoneType
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
     startLine: 21
@@ -108,8 +108,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
     startLine: 24
@@ -154,8 +154,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
     startLine: 29
@@ -193,8 +193,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
     startLine: 34
@@ -232,8 +232,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetRoom
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
     startLine: 37
@@ -280,8 +280,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/EntranceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/EntranceZone.cs
     startLine: 61

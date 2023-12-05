@@ -1,3 +1,5 @@
+using Respawning.NamingRules;
+
 namespace PluginAPI.Core
 {
 	using System;
@@ -22,27 +24,27 @@ namespace PluginAPI.Core
 	using Utils.Networking;
 	using Mirror.LiteNetLib4Mirror;
 	using Footprinting;
-	using RemoteAdmin.Communication;
 	using MapGeneration;
 	using CommandSystem;
 	using InventorySystem.Items.Pickups;
 	using PluginAPI.Core.Items;
 	using PlayerRoles.Voice;
-	using RemoteAdmin;
+	using InventorySystem.Items.Firearms.Ammo;
+	using CentralAuth;
 
 	/// <summary>
 	/// Represents a player connected to server.
 	/// </summary>
 	public class Player : IPlayer
 	{
-#region Static Internal Variables
+		#region Static Internal Variables
 
 		internal static Dictionary<int, IGameComponent> PlayersIds = new Dictionary<int, IGameComponent>();
 		public static Dictionary<string, IGameComponent> PlayersUserIds = new Dictionary<string, IGameComponent>();
 
-#endregion
+		#endregion
 
-#region Static Parameters
+		#region Static Parameters
 
 		/// <summary>
 		/// Gets the amount of online players.
@@ -50,7 +52,7 @@ namespace PluginAPI.Core
 		public static int Count => ReferenceHub.AllHubs.Count(x =>
 			!x.isLocalPlayer &&
 			x.Mode == ClientInstanceMode.ReadyClient &&
-			!string.IsNullOrEmpty(x.characterClassManager.UserId));
+			!string.IsNullOrEmpty(x.authManager.UserId));
 
 		/// <summary>
 		/// Gets the amount of not verified players
@@ -62,9 +64,9 @@ namespace PluginAPI.Core
 		/// </summary>
 		public static int ConnectionsCount => LiteNetLib4MirrorCore.Host.ConnectedPeersCount;
 
-#endregion
+		#endregion
 
-#region Static Methods
+		#region Static Methods
 
 		/// <summary>
 		/// Gets all players.
@@ -101,7 +103,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="IGameComponent"/>.
 		/// </summary>
-		public static bool TryGet<T>(IGameComponent component, out T player) where T : IPlayer
+		public static bool TryGet<T>(IGameComponent component, out T player) where T : Player
 		{
 			if (!FactoryManager.FactoryTypes.TryGetValue(typeof(T), out Type plugin))
 			{
@@ -119,7 +121,7 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#region Get player from gameobject.
+		#region Get player from gameobject.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
@@ -129,7 +131,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
 		/// </summary>
-		public static T Get<T>(GameObject gameObject) where T : IPlayer
+		public static T Get<T>(GameObject gameObject) where T : Player
 		{
 			TryGet(gameObject, out T player);
 			return player;
@@ -145,7 +147,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="UnityEngine.GameObject"/>.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(GameObject gameObject, out T player) where T : IPlayer
+		public static bool TryGet<T>(GameObject gameObject, out T player) where T : Player
 		{
 			if (gameObject == null)
 			{
@@ -169,9 +171,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from reference hub.
+		#region Get player from reference hub.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
@@ -181,7 +183,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
 		/// </summary>
-		public static T Get<T>(ReferenceHub hub) where T : IPlayer
+		public static T Get<T>(ReferenceHub hub) where T : Player
 		{
 			TryGet(hub, out T player);
 			return player;
@@ -197,7 +199,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="global::ReferenceHub"/>.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(ReferenceHub hub, out T player) where T : IPlayer
+		public static bool TryGet<T>(ReferenceHub hub, out T player) where T : Player
 		{
 			if (hub == null)
 			{
@@ -215,9 +217,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from network identity.
+		#region Get player from network identity.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
@@ -227,7 +229,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
 		/// </summary>
-		public static T Get<T>(NetworkIdentity netIdentity) where T : IPlayer
+		public static T Get<T>(NetworkIdentity netIdentity) where T : Player
 		{
 			TryGet(netIdentity, out T player);
 			return player;
@@ -243,7 +245,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> associated with the <see cref="NetworkIdentity"/>.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : IPlayer
+		public static bool TryGet<T>(NetworkIdentity netIdentity, out T player) where T : Player
 		{
 			if (netIdentity == null)
 			{
@@ -260,9 +262,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from name.
+		#region Get player from name.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their name.
@@ -272,7 +274,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their name.
 		/// </summary>
-		public static T GetByName<T>(string name) where T : IPlayer
+		public static T GetByName<T>(string name) where T : Player
 		{
 			TryGetByName(name, out T player);
 			return player;
@@ -288,7 +290,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their name.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGetByName<T>(string name, out T player) where T : IPlayer
+		public static bool TryGetByName<T>(string name, out T player) where T : Player
 		{
 			if (string.IsNullOrEmpty(name))
 			{
@@ -317,9 +319,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from player id.
+		#region Get player from player id.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their player id.
@@ -329,7 +331,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their player id.
 		/// </summary>
-		public static T Get<T>(int playerId) where T : IPlayer
+		public static T Get<T>(int playerId) where T : Player
 		{
 			TryGet(playerId, out T player);
 			return player;
@@ -345,7 +347,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their player id.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(int playerId, out T player) where T : IPlayer
+		public static bool TryGet<T>(int playerId, out T player) where T : Player
 		{
 			if (!PlayersIds.TryGetValue(playerId, out IGameComponent component))
 			{
@@ -363,9 +365,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from userid.
+		#region Get player from userid.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their user id.
@@ -375,7 +377,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their user id.
 		/// </summary>
-		public static T Get<T>(string userId) where T : IPlayer
+		public static T Get<T>(string userId) where T : Player
 		{
 			TryGet(userId, out T player);
 			return player;
@@ -391,7 +393,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their user id.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(string userId, out T player) where T : IPlayer
+		public static bool TryGet<T>(string userId, out T player) where T : Player
 		{
 			if (string.IsNullOrEmpty(userId))
 			{
@@ -415,9 +417,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from network id.
+		#region Get player from network id.
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their network id.
@@ -427,7 +429,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> by their network id.
 		/// </summary>
-		public static T Get<T>(uint networkId) where T : IPlayer
+		public static T Get<T>(uint networkId) where T : Player
 		{
 			TryGet(networkId, out T player);
 			return player;
@@ -443,7 +445,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> by their network id.
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(uint networkId, out T player) where T : IPlayer
+		public static bool TryGet<T>(uint networkId, out T player) where T : Player
 		{
 			if (!ReferenceHub.TryGetHubNetID(networkId, out ReferenceHub hub))
 			{
@@ -461,9 +463,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#region Get player from ICommandSender
+		#region Get player from ICommandSender
 
 		/// <summary>
 		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
@@ -473,7 +475,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
 		/// </summary>
-		public static T Get<T>(ICommandSender sender) where T : IPlayer
+		public static T Get<T>(ICommandSender sender) where T : Player
 		{
 			TryGet(sender, out T player);
 			return player;
@@ -489,7 +491,7 @@ namespace PluginAPI.Core
 		/// Gets the <see cref="Player"/> from <see cref="ICommandSender"/>
 		/// </summary>
 		/// <returns>Whether or not a player was found.</returns>
-		public static bool TryGet<T>(ICommandSender sender, out T player) where T : IPlayer
+		public static bool TryGet<T>(ICommandSender sender, out T player) where T : Player
 		{
 			if (string.IsNullOrEmpty((sender as CommandSender)?.SenderId))
 			{
@@ -513,11 +515,11 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#endregion
+		#endregion
 
-#region Public Parameters
+		#region Public Parameters
 
 		/// <summary>
 		/// Gets the player's <see cref="global::ReferenceHub"/>.
@@ -554,9 +556,19 @@ namespace PluginAPI.Core
 		}
 
 		/// <summary>
+		/// Gets log name needed for command senders.
+		/// </summary>
+		public string LogName => IsServer ? "SERVER CONSOLE" : $"{Nickname} ({UserId})";
+
+		/// <summary>
+		/// Gets if the player is in the server.
+		/// </summary>
+		public bool IsOffline => GameObject == null;
+
+		/// <summary>
 		/// Gets the player's user id.
 		/// </summary>
-		public string UserId => IsServer ? "server@server" : ReferenceHub.characterClassManager.UserId;
+		public string UserId => IsServer ? "server@server" : ReferenceHub.authManager.UserId;
 
 		/// <summary>
 		/// Gets the player's ip address.
@@ -594,37 +606,37 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float Health
 		{
-			get => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).CurValue;
-			set => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).CurValue = value;
+			get => ReferenceHub.playerStats.GetModule<HealthStat>().CurValue;
+			set => ReferenceHub.playerStats.GetModule<HealthStat>().CurValue = value;
 		}
 
 		/// <summary>
 		/// Gets the player's current maximum health;
 		/// </summary>
-		public float MaxHealth => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).MaxValue;
+		public float MaxHealth => ReferenceHub.playerStats.GetModule<HealthStat>().MaxValue;
 
 		/// <summary>
 		/// Gets or sets the player's current artificial health;
 		/// </summary>
 		public float ArtificialHealth
 		{
-			get => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue :  ((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue;
+			get => IsSCP ? ReferenceHub.playerStats.GetModule<HumeShieldStat>().CurValue : ReferenceHub.playerStats.GetModule<AhpStat>().CurValue;
 			set
 			{
 				if (IsSCP)
 				{
-					((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).CurValue = value;
+					ReferenceHub.playerStats.GetModule<HumeShieldStat>().CurValue = value;
 					return;
 				}
 
-				((AhpStat)ReferenceHub.playerStats.StatModules[1]).CurValue = value;
+				ReferenceHub.playerStats.GetModule<AhpStat>().CurValue = value;
 			}
 		}
 
 		/// <summary>
 		/// Gets the player's current maximum artifical health.
 		/// </summary>
-		public float MaxArtificalHealth => IsSCP ? ((HumeShieldStat)ReferenceHub.playerStats.StatModules[4]).MaxValue : ((AhpStat)ReferenceHub.playerStats.StatModules[1]).MaxValue;
+		public float MaxArtificalHealth => IsSCP ? ReferenceHub.playerStats.GetModule<HumeShieldStat>().MaxValue : ReferenceHub.playerStats.GetModule<AhpStat>().MaxValue;
 
 		/// <summary>
 		/// Gets whether or not the player has remoteadmin access.
@@ -634,7 +646,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets if the player has DoNotTrack enabled.
 		/// </summary>
-		public bool DoNotTrack => ReferenceHub.serverRoles.DoNotTrack;
+		public bool DoNotTrack => ReferenceHub.authManager.DoNotTrack;
 
 		/// <summary>
 		/// Gets or sets whether ot not the player has overwatch enabled.
@@ -708,7 +720,13 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets the player unit name.
 		/// </summary>
-		public string UnitName => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitName : null;
+		[Obsolete("Use UnitId instead of UnitName, this method will return null", true)]
+		public string UnitName => null;
+		
+		/// <summary>
+		/// Gets the player unit Id, -1 if unset
+		/// </summary>
+		public int UnitId => ReferenceHub.roleManager.CurrentRole is HumanRole humanRole ? humanRole.UnitNameId : -1;
 
 		/// <summary>
 		/// Get if player has reserved slot.
@@ -782,12 +800,12 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets whether or not the player is global moderator.
 		/// </summary>
-		public bool IsGlobalModerator => ReferenceHub.serverRoles.RaEverywhere;
+		public bool IsGlobalModerator => ReferenceHub.authManager.RemoteAdminGlobalAccess;
 
 		/// <summary>
 		/// Gets whether or not the player is northwood staff.
 		/// </summary>
-		public bool IsNorthwoodStaff => ReferenceHub.serverRoles.Staff;
+		public bool IsNorthwoodStaff => ReferenceHub.authManager.NorthwoodStaff;
 
 		/// <summary>
 		/// Gets whether or not the player has bypass mode.
@@ -859,7 +877,7 @@ namespace PluginAPI.Core
 		/// <summary>
 		/// Gets whether or not the player is properly connected to server.
 		/// </summary>
-		public bool IsReady => ReferenceHub.characterClassManager.InstanceMode != ClientInstanceMode.Unverified && ReferenceHub.nicknameSync.NickSet;
+		public bool IsReady => ReferenceHub.authManager.InstanceMode != ClientInstanceMode.Unverified && ReferenceHub.nicknameSync.NickSet;
 
 		/// <summary>
 		/// Gets whether or not the player is the dedicated server.
@@ -935,19 +953,19 @@ namespace PluginAPI.Core
 		/// </summary>
 		public float StaminaRemaining
 		{
-			get => ReferenceHub.playerStats.StatModules[2].CurValue;
-			set => ReferenceHub.playerStats.StatModules[2].CurValue = value;
+			get => ReferenceHub.playerStats.GetModule<StaminaStat>().CurValue;
+			set => ReferenceHub.playerStats.GetModule<StaminaStat>().CurValue = value;
 		}
 
-#endregion
+		#endregion
 
-#region Private Variables
+		#region Private Variables
 
 		internal PlayerSharedStorage SharedStorage { get; }
 
-#endregion
+		#endregion
 
-#region Constructor
+		#region Constructor
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Player"/> class.
@@ -976,9 +994,9 @@ namespace PluginAPI.Core
 			}
 		}
 
-#endregion
+		#endregion
 
-#region Internal Methods
+		#region Internal Methods
 
 		internal void OnInternalDestroy()
 		{
@@ -988,9 +1006,9 @@ namespace PluginAPI.Core
 				PlayersUserIds.Remove(UserId);
 		}
 
-#endregion
+		#endregion
 
-#region Public Methods
+		#region Public Methods
 
 		/// <summary>
 		/// Sends a broadcast to the player.
@@ -1016,7 +1034,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="message">The message to be sent.</param>
 		/// <param name="color">The message color.</param>
-		public void SendConsoleMessage(string message, string color = "green") => ReferenceHub.gameConsoleTransmission.SendToClient(ReferenceHub.characterClassManager.connectionToClient, message, color);
+		public void SendConsoleMessage(string message, string color = "green") => ReferenceHub.gameConsoleTransmission.SendToClient(message, color);
 
 		/// <summary>
 		/// Bans the player from the server.
@@ -1025,7 +1043,7 @@ namespace PluginAPI.Core
 		/// <param name="reason">The reason of ban.</param>
 		/// <param name="duration">The duration of ban in seconds.</param>
 		/// <returns>If ban is successful.</returns>
-		public bool Ban(IPlayer issuer, string reason, long duration) => Server.BanPlayer(this, issuer, reason, duration);
+		public bool Ban(Player issuer, string reason, long duration) => Server.BanPlayer(this, issuer, reason, duration);
 
 		/// <summary>
 		/// Bans the player from the server.
@@ -1040,7 +1058,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="issuer">The player which issued kick.</param>
 		/// <param name="reason">The reason of kick.</param>
-		public void Kick(IPlayer issuer, string reason) => Server.KickPlayer(this, issuer, reason);
+		public void Kick(Player issuer, string reason) => Server.KickPlayer(this, issuer, reason);
 
 		/// <summary>
 		/// Kicks the player from the server.
@@ -1125,13 +1143,13 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="pickup">The item pickup.</param>
 		public void RemoveItem(ItemPickupBase pickup) => ReferenceHub.inventory.ServerRemoveItem(pickup.Info.Serial, pickup);
-		
+
 		/// <summary>
 		/// Removes an specific item.
 		/// </summary>
 		/// <param name="item">The item base.</param>
 		public void RemoveItem(ItemBase item) => ReferenceHub.inventory.UserInventory.Items.Remove(item.ItemSerial);
-		
+
 		/// <summary>
 		/// Removes all specific items.
 		/// </summary>
@@ -1191,7 +1209,7 @@ namespace PluginAPI.Core
 		/// <param name="amount">The amount of ammo which will be dropped.</param>
 		/// <param name="checkMinimals">Will prevent dropping small amounts of ammo.</param>
 		/// <returns>Whether or not the player dropped the ammo successfully.</returns>
-		public bool DropAmmo(ItemType item, ushort amount, bool checkMinimals = false) => ReferenceHub.inventory.ServerDropAmmo(item, amount, checkMinimals);
+		public List<AmmoPickup> DropAmmo(ItemType item, ushort amount, bool checkMinimals = false) => null;// ReferenceHub.inventory.ServerDropAmmo(item, amount, checkMinimals);
 
 		/// <summary>
 		/// Drops all items including ammo.
@@ -1232,7 +1250,7 @@ namespace PluginAPI.Core
 		/// Heals the player.
 		/// </summary>
 		/// <param name="amount">The amount of health to heal.</param>
-		public void Heal(float amount) => ((HealthStat)ReferenceHub.playerStats.StatModules[0]).ServerHeal(amount);
+		public void Heal(float amount) => ReferenceHub.playerStats.GetModule<HealthStat>().ServerHeal(amount);
 
 		/// <summary>
 		/// Sets the players role.
@@ -1266,7 +1284,7 @@ namespace PluginAPI.Core
 		/// Sends the player a hit marker.
 		/// </summary>
 		/// <param name="size">The size of hit marker.</param>
-		public void ReceiveHitMarker(float size = 1f) => Hitmarker.SendHitmarker(Connection, size);
+		public void ReceiveHitMarker(float size = 1f) => Hitmarker.SendHitmarkerDirectly(Connection, size);
 
 		/// <summary>
 		/// Gets the stats module.
@@ -1341,7 +1359,7 @@ namespace PluginAPI.Core
 		/// <inheritdoc/>
 		public virtual void OnFixedUpdate() { }
 
-#region GetComponents
+		#region GetComponents
 
 		/// <inheritdoc/>
 		public T GetComponent<T>(bool globalSearch = false) where T : MonoBehaviour
@@ -1375,9 +1393,9 @@ namespace PluginAPI.Core
 			return true;
 		}
 
-#endregion
+		#endregion
 
-#endregion
+		#endregion
 
 	}
 }

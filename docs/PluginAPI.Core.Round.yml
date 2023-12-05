@@ -9,6 +9,7 @@ items:
   - PluginAPI.Core.Round.End
   - PluginAPI.Core.Round.IsLobbyLocked
   - PluginAPI.Core.Round.IsLocked
+  - PluginAPI.Core.Round.IsRoundEnded
   - PluginAPI.Core.Round.IsRoundStarted
   - PluginAPI.Core.Round.Restart(System.Boolean,System.Boolean,ServerStatic.NextRoundAction)
   - PluginAPI.Core.Round.RestartSilently
@@ -23,11 +24,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Round
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -65,11 +66,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsRoundStarted
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -82,6 +83,45 @@ items:
       type: System.Boolean
     content.vb: Public Shared ReadOnly Property IsRoundStarted As Boolean
   overload: PluginAPI.Core.Round.IsRoundStarted*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: PluginAPI.Core.Round.IsRoundEnded
+  commentId: P:PluginAPI.Core.Round.IsRoundEnded
+  id: IsRoundEnded
+  parent: PluginAPI.Core.Round
+  langs:
+  - csharp
+  - vb
+  name: IsRoundEnded
+  nameWithType: Round.IsRoundEnded
+  fullName: PluginAPI.Core.Round.IsRoundEnded
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/Round.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsRoundEnded
+    path: ../NwPluginAPI/Core/Round.cs
+    startLine: 19
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets a value indicating whether the round is ended or not.\n"
+  example: []
+  syntax:
+    content: public static bool IsRoundEnded { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsRoundEnded As Boolean
+  overload: PluginAPI.Core.Round.IsRoundEnded*
   modifiers.csharp:
   - public
   - static
@@ -104,11 +144,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLocked
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -143,11 +183,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsLobbyLocked
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 26
+    startLine: 33
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -182,11 +222,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Duration
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 35
+    startLine: 42
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -221,11 +261,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Restart
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 43
+    startLine: 50
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -265,11 +305,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RestartSilently
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 57
+    startLine: 64
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -299,11 +339,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Start
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 62
+    startLine: 69
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -333,11 +373,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Round.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: End
     path: ../NwPluginAPI/Core/Round.cs
-    startLine: 68
+    startLine: 75
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -666,6 +706,11 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: PluginAPI.Core.Round.IsRoundEnded*
+  commentId: Overload:PluginAPI.Core.Round.IsRoundEnded
+  name: IsRoundEnded
+  nameWithType: Round.IsRoundEnded
+  fullName: PluginAPI.Core.Round.IsRoundEnded
 - uid: PluginAPI.Core.Round.IsLocked*
   commentId: Overload:PluginAPI.Core.Round.IsLocked
   name: IsLocked

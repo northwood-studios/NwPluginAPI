@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net48</TargetFramework>
@@ -33,7 +33,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Northwood.PluginAPI</Title>
 		<Copyright>Copyright by Hubert Moszka Northwood, 2022-2023</Copyright>
-		<PackageVersion>12.0.0</PackageVersion>
+		<PackageVersion>13.1.2</PackageVersion>
 		<LangVersion>default</LangVersion>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
@@ -57,11 +57,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="Assembly-CSharp" HintPath="$(SL_REFERENCES)\Assembly-CSharp.dll" />
-	  <Reference Include="CommandSystem.Core" HintPath="$(SL_REFERENCES)\CommandSystem.Core.dll" />
-	  <Reference Include="Mirror" HintPath="$(SL_REFERENCES)\Mirror.dll" />
-	  <Reference Include="NorthwoodLib" HintPath="$(SL_REFERENCES)\NorthwoodLib.dll" />
-	  <Reference Include="UnityEngine.CoreModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.CoreModule.dll" />
-	  <Reference Include="UnityEngine.PhysicsModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.PhysicsModule.dll" />
+		<Reference Include="Assembly-CSharp" HintPath="$(SL_REFERENCES)\Assembly-CSharp.dll" />
+		<Reference Include="CommandSystem.Core" HintPath="$(SL_REFERENCES)\CommandSystem.Core.dll" />
+		<Reference Include="Mirror" HintPath="$(SL_REFERENCES)\Mirror.dll" />
+		<Reference Include="NorthwoodLib" HintPath="$(SL_REFERENCES)\NorthwoodLib.dll" />
+		<Reference Include="Pooling" HintPath="$(SL_REFERENCES)\Pooling.dll" />
+		<Reference Include="UnityEngine.CoreModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.CoreModule.dll" />
+	    <Reference Include="UnityEngine.PhysicsModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.PhysicsModule.dll" />
 	</ItemGroup>
 </Project>

@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoundEndCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 290
@@ -65,8 +65,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 293
@@ -105,8 +105,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Delay
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 295
@@ -138,8 +138,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AllowRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 307
@@ -175,8 +175,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DelayRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 316
@@ -219,8 +219,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AbortRoundEnd
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 328

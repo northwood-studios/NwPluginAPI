@@ -1,0 +1,862 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerPreauthEvent
+  commentId: T:PluginAPI.Events.PlayerPreauthEvent
+  id: PlayerPreauthEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerPreauthEvent.#ctor(System.String,System.String,System.Int64,CentralAuthPreauthFlags,System.String,System.Byte[],LiteNetLib.ConnectionRequest,System.Int32)
+  - PluginAPI.Events.PlayerPreauthEvent.BaseType
+  - PluginAPI.Events.PlayerPreauthEvent.CentralFlags
+  - PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest
+  - PluginAPI.Events.PlayerPreauthEvent.Expiration
+  - PluginAPI.Events.PlayerPreauthEvent.IpAddress
+  - PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition
+  - PluginAPI.Events.PlayerPreauthEvent.Region
+  - PluginAPI.Events.PlayerPreauthEvent.Signature
+  - PluginAPI.Events.PlayerPreauthEvent.UserId
+  langs:
+  - csharp
+  - vb
+  name: PlayerPreauthEvent
+  nameWithType: PlayerPreauthEvent
+  fullName: PluginAPI.Events.PlayerPreauthEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerPreauthEvent
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerPreauthEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerPreauthEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerPreauthEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerPreauthEvent.BaseType
+  fullName: PluginAPI.Events.PlayerPreauthEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerPreauthEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.UserId
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.UserId
+  id: UserId
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: PlayerPreauthEvent.UserId
+  fullName: PluginAPI.Events.PlayerPreauthEvent.UserId
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: UserId
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public string UserId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property UserId As String
+  overload: PluginAPI.Events.PlayerPreauthEvent.UserId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.IpAddress
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.IpAddress
+  id: IpAddress
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: IpAddress
+  nameWithType: PlayerPreauthEvent.IpAddress
+  fullName: PluginAPI.Events.PlayerPreauthEvent.IpAddress
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IpAddress
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public string IpAddress { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property IpAddress As String
+  overload: PluginAPI.Events.PlayerPreauthEvent.IpAddress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.Expiration
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.Expiration
+  id: Expiration
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: Expiration
+  nameWithType: PlayerPreauthEvent.Expiration
+  fullName: PluginAPI.Events.PlayerPreauthEvent.Expiration
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Expiration
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public long Expiration { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property Expiration As Long
+  overload: PluginAPI.Events.PlayerPreauthEvent.Expiration*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.CentralFlags
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.CentralFlags
+  id: CentralFlags
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: CentralFlags
+  nameWithType: PlayerPreauthEvent.CentralFlags
+  fullName: PluginAPI.Events.PlayerPreauthEvent.CentralFlags
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CentralFlags
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public CentralAuthPreauthFlags CentralFlags { get; }
+    parameters: []
+    return:
+      type: CentralAuthPreauthFlags
+    content.vb: Public ReadOnly Property CentralFlags As CentralAuthPreauthFlags
+  overload: PluginAPI.Events.PlayerPreauthEvent.CentralFlags*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.Region
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.Region
+  id: Region
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: PlayerPreauthEvent.Region
+  fullName: PluginAPI.Events.PlayerPreauthEvent.Region
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Region
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 42
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public string Region { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Region As String
+  overload: PluginAPI.Events.PlayerPreauthEvent.Region*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.Signature
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.Signature
+  id: Signature
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: Signature
+  nameWithType: PlayerPreauthEvent.Signature
+  fullName: PluginAPI.Events.PlayerPreauthEvent.Signature
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Signature
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 44
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public byte[] Signature { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Signature As Byte()
+  overload: PluginAPI.Events.PlayerPreauthEvent.Signature*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest
+  id: ConnectionRequest
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: ConnectionRequest
+  nameWithType: PlayerPreauthEvent.ConnectionRequest
+  fullName: PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ConnectionRequest
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 46
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ConnectionRequest ConnectionRequest { get; }
+    parameters: []
+    return:
+      type: LiteNetLib.ConnectionRequest
+    content.vb: Public ReadOnly Property ConnectionRequest As ConnectionRequest
+  overload: PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition
+  commentId: P:PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition
+  id: ReaderStartPosition
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: ReaderStartPosition
+  nameWithType: PlayerPreauthEvent.ReaderStartPosition
+  fullName: PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ReaderStartPosition
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 48
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public int ReaderStartPosition { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property ReaderStartPosition As Integer
+  overload: PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerPreauthEvent.#ctor(System.String,System.String,System.Int64,CentralAuthPreauthFlags,System.String,System.Byte[],LiteNetLib.ConnectionRequest,System.Int32)
+  commentId: M:PluginAPI.Events.PlayerPreauthEvent.#ctor(System.String,System.String,System.Int64,CentralAuthPreauthFlags,System.String,System.Byte[],LiteNetLib.ConnectionRequest,System.Int32)
+  id: '#ctor(System.String,System.String,System.Int64,CentralAuthPreauthFlags,System.String,System.Byte[],LiteNetLib.ConnectionRequest,System.Int32)'
+  parent: PluginAPI.Events.PlayerPreauthEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerPreauthEvent(String, String, Int64, CentralAuthPreauthFlags, String, Byte[], ConnectionRequest, Int32)
+  nameWithType: PlayerPreauthEvent.PlayerPreauthEvent(String, String, Int64, CentralAuthPreauthFlags, String, Byte[], ConnectionRequest, Int32)
+  fullName: PluginAPI.Events.PlayerPreauthEvent.PlayerPreauthEvent(System.String, System.String, System.Int64, CentralAuthPreauthFlags, System.String, System.Byte[], LiteNetLib.ConnectionRequest, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerPreauthEvent.cs
+    startLine: 51
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerPreauthEvent(string userId, string ipAddress, long expiration, CentralAuthPreauthFlags centralFlags, string region, byte[] signature, ConnectionRequest connectionRequest, int readerStartPosition)
+    parameters:
+    - id: userId
+      type: System.String
+    - id: ipAddress
+      type: System.String
+    - id: expiration
+      type: System.Int64
+    - id: centralFlags
+      type: CentralAuthPreauthFlags
+    - id: region
+      type: System.String
+    - id: signature
+      type: System.Byte[]
+    - id: connectionRequest
+      type: LiteNetLib.ConnectionRequest
+    - id: readerStartPosition
+      type: System.Int32
+    content.vb: Public Sub New(userId As String, ipAddress As String, expiration As Long, centralFlags As CentralAuthPreauthFlags, region As String, signature As Byte(), connectionRequest As ConnectionRequest, readerStartPosition As Integer)
+  overload: PluginAPI.Events.PlayerPreauthEvent.#ctor*
+  nameWithType.vb: PlayerPreauthEvent.PlayerPreauthEvent(String, String, Int64, CentralAuthPreauthFlags, String, Byte(), ConnectionRequest, Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Events.PlayerPreauthEvent.PlayerPreauthEvent(System.String, System.String, System.Int64, CentralAuthPreauthFlags, System.String, System.Byte(), LiteNetLib.ConnectionRequest, System.Int32)
+  name.vb: PlayerPreauthEvent(String, String, Int64, CentralAuthPreauthFlags, String, Byte(), ConnectionRequest, Int32)
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerPreauthEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerPreauthEvent.BaseType
+  fullName: PluginAPI.Events.PlayerPreauthEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerPreauthEvent.UserId*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.UserId
+  name: UserId
+  nameWithType: PlayerPreauthEvent.UserId
+  fullName: PluginAPI.Events.PlayerPreauthEvent.UserId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Events.PlayerPreauthEvent.IpAddress*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.IpAddress
+  name: IpAddress
+  nameWithType: PlayerPreauthEvent.IpAddress
+  fullName: PluginAPI.Events.PlayerPreauthEvent.IpAddress
+- uid: PluginAPI.Events.PlayerPreauthEvent.Expiration*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.Expiration
+  name: Expiration
+  nameWithType: PlayerPreauthEvent.Expiration
+  fullName: PluginAPI.Events.PlayerPreauthEvent.Expiration
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: PluginAPI.Events.PlayerPreauthEvent.CentralFlags*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.CentralFlags
+  name: CentralFlags
+  nameWithType: PlayerPreauthEvent.CentralFlags
+  fullName: PluginAPI.Events.PlayerPreauthEvent.CentralFlags
+- uid: CentralAuthPreauthFlags
+  commentId: T:CentralAuthPreauthFlags
+  isExternal: true
+  name: CentralAuthPreauthFlags
+  nameWithType: CentralAuthPreauthFlags
+  fullName: CentralAuthPreauthFlags
+- uid: PluginAPI.Events.PlayerPreauthEvent.Region*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.Region
+  name: Region
+  nameWithType: PlayerPreauthEvent.Region
+  fullName: PluginAPI.Events.PlayerPreauthEvent.Region
+- uid: PluginAPI.Events.PlayerPreauthEvent.Signature*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.Signature
+  name: Signature
+  nameWithType: PlayerPreauthEvent.Signature
+  fullName: PluginAPI.Events.PlayerPreauthEvent.Signature
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest
+  name: ConnectionRequest
+  nameWithType: PlayerPreauthEvent.ConnectionRequest
+  fullName: PluginAPI.Events.PlayerPreauthEvent.ConnectionRequest
+- uid: LiteNetLib.ConnectionRequest
+  commentId: T:LiteNetLib.ConnectionRequest
+  parent: LiteNetLib
+  isExternal: true
+  name: ConnectionRequest
+  nameWithType: ConnectionRequest
+  fullName: LiteNetLib.ConnectionRequest
+- uid: LiteNetLib
+  commentId: N:LiteNetLib
+  isExternal: true
+  name: LiteNetLib
+  nameWithType: LiteNetLib
+  fullName: LiteNetLib
+- uid: PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition
+  name: ReaderStartPosition
+  nameWithType: PlayerPreauthEvent.ReaderStartPosition
+  fullName: PluginAPI.Events.PlayerPreauthEvent.ReaderStartPosition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PluginAPI.Events.PlayerPreauthEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerPreauthEvent.#ctor
+  name: PlayerPreauthEvent
+  nameWithType: PlayerPreauthEvent.PlayerPreauthEvent
+  fullName: PluginAPI.Events.PlayerPreauthEvent.PlayerPreauthEvent

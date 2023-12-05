@@ -21,8 +21,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/SurfaceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: SurfaceZone
     path: ../NwPluginAPI/Core/Zones/SurfaceZone.cs
     startLine: 10
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/SurfaceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ZoneType
     path: ../NwPluginAPI/Core/Zones/SurfaceZone.cs
     startLine: 16
@@ -108,8 +108,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/SurfaceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetRooms
     path: ../NwPluginAPI/Core/Zones/SurfaceZone.cs
     startLine: 19
@@ -154,8 +154,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/SurfaceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rooms
     path: ../NwPluginAPI/Core/Zones/SurfaceZone.cs
     startLine: 24
@@ -193,8 +193,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/SurfaceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Doors
     path: ../NwPluginAPI/Core/Zones/SurfaceZone.cs
     startLine: 29
@@ -232,8 +232,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/SurfaceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetRoom
     path: ../NwPluginAPI/Core/Zones/SurfaceZone.cs
     startLine: 32
@@ -280,8 +280,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/SurfaceZone.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/SurfaceZone.cs
     startLine: 56

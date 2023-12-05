@@ -8,7 +8,7 @@ items:
   - PluginAPI.Commands.CommandsManager
   - PluginAPI.Commands.ListCommand
   - PluginAPI.Commands.PluginsCommand
-  - PluginAPI.Commands.ReloadCommmand
+  - PluginAPI.Commands.ReloadConfigCommand
   langs:
   - csharp
   - vb
@@ -31,6 +31,7 @@ references:
   fullName: PluginAPI.Commands.CommandsManager
 - uid: PluginAPI.Commands.ListCommand
   commentId: T:PluginAPI.Commands.ListCommand
+  parent: PluginAPI.Commands
   name: ListCommand
   nameWithType: ListCommand
   fullName: PluginAPI.Commands.ListCommand
@@ -40,11 +41,12 @@ references:
   name: PluginsCommand
   nameWithType: PluginsCommand
   fullName: PluginAPI.Commands.PluginsCommand
-- uid: PluginAPI.Commands.ReloadCommmand
-  commentId: T:PluginAPI.Commands.ReloadCommmand
-  name: ReloadCommmand
-  nameWithType: ReloadCommmand
-  fullName: PluginAPI.Commands.ReloadCommmand
+- uid: PluginAPI.Commands.ReloadConfigCommand
+  commentId: T:PluginAPI.Commands.ReloadConfigCommand
+  parent: PluginAPI.Commands
+  name: ReloadConfigCommand
+  nameWithType: ReloadConfigCommand
+  fullName: PluginAPI.Commands.ReloadConfigCommand
 - uid: PluginAPI.Commands
   commentId: N:PluginAPI.Commands
   name: PluginAPI.Commands

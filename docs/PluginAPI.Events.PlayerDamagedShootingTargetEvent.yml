@@ -1,0 +1,671 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  commentId: T:PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  id: PlayerDamagedShootingTargetEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerDamagedShootingTargetEvent.#ctor(ReferenceHub,AdminToys.ShootingTarget,PlayerStatsSystem.DamageHandlerBase,System.Single)
+  - PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType
+  - PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount
+  - PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler
+  - PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player
+  - PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget
+  langs:
+  - csharp
+  - vb
+  name: PlayerDamagedShootingTargetEvent
+  nameWithType: PlayerDamagedShootingTargetEvent
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerDamagedShootingTargetEvent
+    path: ../NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerDamagedShootingTargetEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerDamagedShootingTargetEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerDamagedShootingTargetEvent.BaseType
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player
+  commentId: P:PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player
+  id: Player
+  parent: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: PlayerDamagedShootingTargetEvent.Player
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget
+  commentId: P:PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget
+  id: ShootingTarget
+  parent: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  langs:
+  - csharp
+  - vb
+  name: ShootingTarget
+  nameWithType: PlayerDamagedShootingTargetEvent.ShootingTarget
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ShootingTarget
+    path: ../NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ShootingTarget ShootingTarget { get; }
+    parameters: []
+    return:
+      type: AdminToys.ShootingTarget
+    content.vb: Public ReadOnly Property ShootingTarget As ShootingTarget
+  overload: PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler
+  commentId: P:PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler
+  id: DamageHandler
+  parent: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  langs:
+  - csharp
+  - vb
+  name: DamageHandler
+  nameWithType: PlayerDamagedShootingTargetEvent.DamageHandler
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DamageHandler
+    path: ../NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public DamageHandlerBase DamageHandler { get; }
+    parameters: []
+    return:
+      type: PlayerStatsSystem.DamageHandlerBase
+    content.vb: Public ReadOnly Property DamageHandler As DamageHandlerBase
+  overload: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount
+  commentId: P:PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount
+  id: DamageAmount
+  parent: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  langs:
+  - csharp
+  - vb
+  name: DamageAmount
+  nameWithType: PlayerDamagedShootingTargetEvent.DamageAmount
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: DamageAmount
+    path: ../NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public float DamageAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property DamageAmount As Single
+  overload: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.#ctor(ReferenceHub,AdminToys.ShootingTarget,PlayerStatsSystem.DamageHandlerBase,System.Single)
+  commentId: M:PluginAPI.Events.PlayerDamagedShootingTargetEvent.#ctor(ReferenceHub,AdminToys.ShootingTarget,PlayerStatsSystem.DamageHandlerBase,System.Single)
+  id: '#ctor(ReferenceHub,AdminToys.ShootingTarget,PlayerStatsSystem.DamageHandlerBase,System.Single)'
+  parent: PluginAPI.Events.PlayerDamagedShootingTargetEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerDamagedShootingTargetEvent(ReferenceHub, ShootingTarget, DamageHandlerBase, Single)
+  nameWithType: PlayerDamagedShootingTargetEvent.PlayerDamagedShootingTargetEvent(ReferenceHub, ShootingTarget, DamageHandlerBase, Single)
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.PlayerDamagedShootingTargetEvent(ReferenceHub, AdminToys.ShootingTarget, PlayerStatsSystem.DamageHandlerBase, System.Single)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerDamagedShootingTargetEvent.cs
+    startLine: 43
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerDamagedShootingTargetEvent(ReferenceHub hub, ShootingTarget target, DamageHandlerBase handler, float damageAmount)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: target
+      type: AdminToys.ShootingTarget
+    - id: handler
+      type: PlayerStatsSystem.DamageHandlerBase
+    - id: damageAmount
+      type: System.Single
+    content.vb: Public Sub New(hub As ReferenceHub, target As ShootingTarget, handler As DamageHandlerBase, damageAmount As Single)
+  overload: PluginAPI.Events.PlayerDamagedShootingTargetEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerDamagedShootingTargetEvent.BaseType
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player*
+  commentId: Overload:PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player
+  name: Player
+  nameWithType: PlayerDamagedShootingTargetEvent.Player
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget*
+  commentId: Overload:PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget
+  name: ShootingTarget
+  nameWithType: PlayerDamagedShootingTargetEvent.ShootingTarget
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.ShootingTarget
+- uid: AdminToys.ShootingTarget
+  commentId: T:AdminToys.ShootingTarget
+  parent: AdminToys
+  isExternal: true
+  name: ShootingTarget
+  nameWithType: ShootingTarget
+  fullName: AdminToys.ShootingTarget
+- uid: AdminToys
+  commentId: N:AdminToys
+  isExternal: true
+  name: AdminToys
+  nameWithType: AdminToys
+  fullName: AdminToys
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler*
+  commentId: Overload:PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler
+  name: DamageHandler
+  nameWithType: PlayerDamagedShootingTargetEvent.DamageHandler
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageHandler
+- uid: PlayerStatsSystem.DamageHandlerBase
+  commentId: T:PlayerStatsSystem.DamageHandlerBase
+  parent: PlayerStatsSystem
+  isExternal: true
+  name: DamageHandlerBase
+  nameWithType: DamageHandlerBase
+  fullName: PlayerStatsSystem.DamageHandlerBase
+- uid: PlayerStatsSystem
+  commentId: N:PlayerStatsSystem
+  isExternal: true
+  name: PlayerStatsSystem
+  nameWithType: PlayerStatsSystem
+  fullName: PlayerStatsSystem
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount*
+  commentId: Overload:PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount
+  name: DamageAmount
+  nameWithType: PlayerDamagedShootingTargetEvent.DamageAmount
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.DamageAmount
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Events.PlayerDamagedShootingTargetEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerDamagedShootingTargetEvent.#ctor
+  name: PlayerDamagedShootingTargetEvent
+  nameWithType: PlayerDamagedShootingTargetEvent.PlayerDamagedShootingTargetEvent
+  fullName: PluginAPI.Events.PlayerDamagedShootingTargetEvent.PlayerDamagedShootingTargetEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

@@ -24,8 +24,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityBreakableDoor
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 12
@@ -49,10 +49,13 @@ items:
   - PluginAPI.Core.Doors.FacilityDoor.LockReason
   - PluginAPI.Core.Doors.FacilityDoor.Permissions
   - PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+  - PluginAPI.Core.Doors.FacilityDoor.Name
   - PluginAPI.Core.Doors.FacilityDoor.Transform
   - PluginAPI.Core.Doors.FacilityDoor.GameObject
   - PluginAPI.Core.Doors.FacilityDoor.Position
   - PluginAPI.Core.Doors.FacilityDoor.Rotation
+  - PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  - PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
   - PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -81,8 +84,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: List
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 17
@@ -120,8 +123,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Count
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 22
@@ -159,8 +162,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: OriginalObject
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 27
@@ -194,8 +197,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Health
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 32
@@ -231,8 +234,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: MaxHealth
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 41
@@ -268,8 +271,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IgnoredDamageSources
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 50
@@ -305,8 +308,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsDestroyed
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 59
@@ -342,8 +345,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Destroy
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 64
@@ -374,8 +377,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Doors/FacilityBreakableDoor.cs
     startLine: 78
@@ -454,6 +457,12 @@ references:
   name: Bypass2176
   nameWithType: FacilityDoor.Bypass2176
   fullName: PluginAPI.Core.Doors.FacilityDoor.Bypass2176
+- uid: PluginAPI.Core.Doors.FacilityDoor.Name
+  commentId: P:PluginAPI.Core.Doors.FacilityDoor.Name
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  name: Name
+  nameWithType: FacilityDoor.Name
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Name
 - uid: PluginAPI.Core.Doors.FacilityDoor.Transform
   commentId: P:PluginAPI.Core.Doors.FacilityDoor.Transform
   parent: PluginAPI.Core.Doors.FacilityDoor
@@ -478,6 +487,81 @@ references:
   name: Rotation
   nameWithType: FacilityDoor.Rotation
   fullName: PluginAPI.Core.Doors.FacilityDoor.Rotation
+- uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  isExternal: true
+  name: Get(RoomIdentifier)
+  nameWithType: FacilityDoor.Get(RoomIdentifier)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+  spec.csharp:
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+    name: Get
+    nameWithType: FacilityDoor.Get
+    fullName: PluginAPI.Core.Doors.FacilityDoor.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MapGeneration.RoomIdentifier
+    name: RoomIdentifier
+    nameWithType: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(MapGeneration.RoomIdentifier)
+    name: Get
+    nameWithType: FacilityDoor.Get
+    fullName: PluginAPI.Core.Doors.FacilityDoor.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: MapGeneration.RoomIdentifier
+    name: RoomIdentifier
+    nameWithType: RoomIdentifier
+    fullName: MapGeneration.RoomIdentifier
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
+  commentId: M:PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
+  parent: PluginAPI.Core.Doors.FacilityDoor
+  name: Get(FacilityZone)
+  nameWithType: FacilityDoor.Get(FacilityZone)
+  fullName: PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
+  spec.csharp:
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
+    name: Get
+    nameWithType: FacilityDoor.Get
+    fullName: PluginAPI.Core.Doors.FacilityDoor.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Zones.FacilityZone
+    name: FacilityZone
+    nameWithType: FacilityZone
+    fullName: PluginAPI.Core.Zones.FacilityZone
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PluginAPI.Core.Doors.FacilityDoor.Get(PluginAPI.Core.Zones.FacilityZone)
+    name: Get
+    nameWithType: FacilityDoor.Get
+    fullName: PluginAPI.Core.Doors.FacilityDoor.Get
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: PluginAPI.Core.Zones.FacilityZone
+    name: FacilityZone
+    nameWithType: FacilityZone
+    fullName: PluginAPI.Core.Zones.FacilityZone
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   commentId: M:PluginAPI.Core.Doors.FacilityDoor.Lock(Interactables.Interobjects.DoorUtils.DoorLockReason,System.Boolean)
   parent: PluginAPI.Core.Doors.FacilityDoor

@@ -1,9 +1,8 @@
-﻿namespace PluginAPI.Core
+namespace PluginAPI.Core
 {
 	using System;
 	using System.Collections.Generic;
 	using Factories;
-	using Interfaces;
 	using Events;
 
 	/// <summary>
@@ -111,8 +110,9 @@
 		{
 			foreach (var factory in PlayerFactories.Values)
 			{
-				if (!factory.Entities.TryGetValue(obj, out IPlayer plr))
-					continue;
+				var plr = factory.Get(obj);
+
+				if (plr == null) continue;
 
 				try
 				{

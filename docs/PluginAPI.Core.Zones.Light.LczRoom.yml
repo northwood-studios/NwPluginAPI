@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/LczRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LczRoom
     path: ../NwPluginAPI/Core/Zones/Light/LczRoom.cs
     startLine: 5
@@ -71,8 +71,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/LczRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/Light/LczRoom.cs
     startLine: 10
@@ -106,8 +106,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/Light/LczRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/Light/LczRoom.cs
     startLine: 17

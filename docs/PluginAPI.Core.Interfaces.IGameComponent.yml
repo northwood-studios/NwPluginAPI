@@ -15,8 +15,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Interfaces/IGameComponent.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IGameComponent
     path: ../NwPluginAPI/Core/Interfaces/IGameComponent.cs
     startLine: 5

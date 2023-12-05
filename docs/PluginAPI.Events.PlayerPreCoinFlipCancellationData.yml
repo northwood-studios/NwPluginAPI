@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PlayerPreCoinFlipCancellationData
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 246
@@ -65,8 +65,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsCancelled
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 249
@@ -105,8 +105,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Cancellation
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 251
@@ -141,8 +141,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LeaveUnchanged
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 259
@@ -178,8 +178,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Override
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 268
@@ -219,8 +219,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/IEventCancellation.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: PreventFlip
     path: ../NwPluginAPI/Events/IEventCancellation.cs
     startLine: 275

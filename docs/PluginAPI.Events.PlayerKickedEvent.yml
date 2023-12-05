@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerKickedEvent
+  commentId: T:PluginAPI.Events.PlayerKickedEvent
+  id: PlayerKickedEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerKickedEvent.#ctor(ReferenceHub,CommandSystem.ICommandSender,System.String)
+  - PluginAPI.Events.PlayerKickedEvent.BaseType
+  - PluginAPI.Events.PlayerKickedEvent.Issuer
+  - PluginAPI.Events.PlayerKickedEvent.Player
+  - PluginAPI.Events.PlayerKickedEvent.Reason
+  langs:
+  - csharp
+  - vb
+  name: PlayerKickedEvent
+  nameWithType: PlayerKickedEvent
+  fullName: PluginAPI.Events.PlayerKickedEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerKickedEvent
+    path: ../NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerKickedEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerKickedEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerKickedEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerKickedEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerKickedEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerKickedEvent.BaseType
+  fullName: PluginAPI.Events.PlayerKickedEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerKickedEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerKickedEvent.Player
+  commentId: P:PluginAPI.Events.PlayerKickedEvent.Player
+  id: Player
+  parent: PluginAPI.Events.PlayerKickedEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: PlayerKickedEvent.Player
+  fullName: PluginAPI.Events.PlayerKickedEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.PlayerKickedEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerKickedEvent.Issuer
+  commentId: P:PluginAPI.Events.PlayerKickedEvent.Issuer
+  id: Issuer
+  parent: PluginAPI.Events.PlayerKickedEvent
+  langs:
+  - csharp
+  - vb
+  name: Issuer
+  nameWithType: PlayerKickedEvent.Issuer
+  fullName: PluginAPI.Events.PlayerKickedEvent.Issuer
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Issuer
+    path: ../NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ICommandSender Issuer { get; }
+    parameters: []
+    return:
+      type: CommandSystem.ICommandSender
+    content.vb: Public ReadOnly Property Issuer As ICommandSender
+  overload: PluginAPI.Events.PlayerKickedEvent.Issuer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerKickedEvent.Reason
+  commentId: P:PluginAPI.Events.PlayerKickedEvent.Reason
+  id: Reason
+  parent: PluginAPI.Events.PlayerKickedEvent
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: PlayerKickedEvent.Reason
+  fullName: PluginAPI.Events.PlayerKickedEvent.Reason
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Reason
+    path: ../NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public string Reason { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Reason As String
+  overload: PluginAPI.Events.PlayerKickedEvent.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.PlayerKickedEvent.#ctor(ReferenceHub,CommandSystem.ICommandSender,System.String)
+  commentId: M:PluginAPI.Events.PlayerKickedEvent.#ctor(ReferenceHub,CommandSystem.ICommandSender,System.String)
+  id: '#ctor(ReferenceHub,CommandSystem.ICommandSender,System.String)'
+  parent: PluginAPI.Events.PlayerKickedEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerKickedEvent(ReferenceHub, ICommandSender, String)
+  nameWithType: PlayerKickedEvent.PlayerKickedEvent(ReferenceHub, ICommandSender, String)
+  fullName: PluginAPI.Events.PlayerKickedEvent.PlayerKickedEvent(ReferenceHub, CommandSystem.ICommandSender, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerKickedEvent.cs
+    startLine: 41
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerKickedEvent(ReferenceHub hub, ICommandSender issuer, string reason)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: issuer
+      type: CommandSystem.ICommandSender
+    - id: reason
+      type: System.String
+    content.vb: Public Sub New(hub As ReferenceHub, issuer As ICommandSender, reason As String)
+  overload: PluginAPI.Events.PlayerKickedEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerKickedEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerKickedEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerKickedEvent.BaseType
+  fullName: PluginAPI.Events.PlayerKickedEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerKickedEvent.Player*
+  commentId: Overload:PluginAPI.Events.PlayerKickedEvent.Player
+  name: Player
+  nameWithType: PlayerKickedEvent.Player
+  fullName: PluginAPI.Events.PlayerKickedEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.PlayerKickedEvent.Issuer*
+  commentId: Overload:PluginAPI.Events.PlayerKickedEvent.Issuer
+  name: Issuer
+  nameWithType: PlayerKickedEvent.Issuer
+  fullName: PluginAPI.Events.PlayerKickedEvent.Issuer
+- uid: CommandSystem.ICommandSender
+  commentId: T:CommandSystem.ICommandSender
+  parent: CommandSystem
+  isExternal: true
+  name: ICommandSender
+  nameWithType: ICommandSender
+  fullName: CommandSystem.ICommandSender
+- uid: CommandSystem
+  commentId: N:CommandSystem
+  isExternal: true
+  name: CommandSystem
+  nameWithType: CommandSystem
+  fullName: CommandSystem
+- uid: PluginAPI.Events.PlayerKickedEvent.Reason*
+  commentId: Overload:PluginAPI.Events.PlayerKickedEvent.Reason
+  name: Reason
+  nameWithType: PlayerKickedEvent.Reason
+  fullName: PluginAPI.Events.PlayerKickedEvent.Reason
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Events.PlayerKickedEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerKickedEvent.#ctor
+  name: PlayerKickedEvent
+  nameWithType: PlayerKickedEvent.PlayerKickedEvent
+  fullName: PluginAPI.Events.PlayerKickedEvent.PlayerKickedEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

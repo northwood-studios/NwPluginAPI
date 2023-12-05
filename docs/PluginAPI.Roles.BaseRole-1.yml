@@ -1,0 +1,980 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Roles.BaseRole`1
+  commentId: T:PluginAPI.Roles.BaseRole`1
+  id: BaseRole`1
+  parent: PluginAPI.Roles
+  children:
+  - PluginAPI.Roles.BaseRole`1.#ctor(PlayerRoles.PlayerRoleBase)
+  - PluginAPI.Roles.BaseRole`1.ActiveTime
+  - PluginAPI.Roles.BaseRole`1.OnDestroy
+  - PluginAPI.Roles.BaseRole`1.OnFixedUpdate
+  - PluginAPI.Roles.BaseRole`1.OnLateUpdate
+  - PluginAPI.Roles.BaseRole`1.OnUpdate
+  - PluginAPI.Roles.BaseRole`1.Player
+  - PluginAPI.Roles.BaseRole`1.RoleBase
+  - PluginAPI.Roles.BaseRole`1.RoleColor
+  - PluginAPI.Roles.BaseRole`1.RoleId
+  - PluginAPI.Roles.BaseRole`1.RoleName
+  - PluginAPI.Roles.BaseRole`1.RoleTeam
+  - PluginAPI.Roles.BaseRole`1.SpawnReason
+  langs:
+  - csharp
+  - vb
+  name: BaseRole<TPlayer>
+  nameWithType: BaseRole<TPlayer>
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseRole
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 6
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: >-
+      public class BaseRole<TPlayer>
+          where TPlayer : Player
+    typeParameters:
+    - id: TPlayer
+    content.vb: Public Class BaseRole(Of TPlayer As Player)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - PluginAPI.Roles.BaseHuman`1
+  - PluginAPI.Roles.BaseScp`1
+  - PluginAPI.Roles.CustomRole`1
+  - PluginAPI.Roles.None`1
+  - PluginAPI.Roles.Overwatch`1
+  - PluginAPI.Roles.Spectator`1
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: BaseRole(Of TPlayer)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer)
+  name.vb: BaseRole(Of TPlayer)
+- uid: PluginAPI.Roles.BaseRole`1.Player
+  commentId: F:PluginAPI.Roles.BaseRole`1.Player
+  id: Player
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: BaseRole<TPlayer>.Player
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.Player
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 8
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public readonly TPlayer Player
+    return:
+      type: '{TPlayer}'
+    content.vb: Public ReadOnly Player As TPlayer
+  nameWithType.vb: BaseRole(Of TPlayer).Player
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).Player
+- uid: PluginAPI.Roles.BaseRole`1.RoleBase
+  commentId: F:PluginAPI.Roles.BaseRole`1.RoleBase
+  id: RoleBase
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: RoleBase
+  nameWithType: BaseRole<TPlayer>.RoleBase
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleBase
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoleBase
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 9
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public readonly PlayerRoleBase RoleBase
+    return:
+      type: PlayerRoles.PlayerRoleBase
+    content.vb: Public ReadOnly RoleBase As PlayerRoleBase
+  nameWithType.vb: BaseRole(Of TPlayer).RoleBase
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleBase
+- uid: PluginAPI.Roles.BaseRole`1.RoleId
+  commentId: P:PluginAPI.Roles.BaseRole`1.RoleId
+  id: RoleId
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: RoleId
+  nameWithType: BaseRole<TPlayer>.RoleId
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleId
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoleId
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 11
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public RoleTypeId RoleId { get; }
+    parameters: []
+    return:
+      type: PlayerRoles.RoleTypeId
+    content.vb: Public ReadOnly Property RoleId As RoleTypeId
+  overload: PluginAPI.Roles.BaseRole`1.RoleId*
+  nameWithType.vb: BaseRole(Of TPlayer).RoleId
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleId
+- uid: PluginAPI.Roles.BaseRole`1.RoleName
+  commentId: P:PluginAPI.Roles.BaseRole`1.RoleName
+  id: RoleName
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: RoleName
+  nameWithType: BaseRole<TPlayer>.RoleName
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleName
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoleName
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 13
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public string RoleName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RoleName As String
+  overload: PluginAPI.Roles.BaseRole`1.RoleName*
+  nameWithType.vb: BaseRole(Of TPlayer).RoleName
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleName
+- uid: PluginAPI.Roles.BaseRole`1.RoleColor
+  commentId: P:PluginAPI.Roles.BaseRole`1.RoleColor
+  id: RoleColor
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: RoleColor
+  nameWithType: BaseRole<TPlayer>.RoleColor
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleColor
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoleColor
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 15
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public Color RoleColor { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Color
+    content.vb: Public ReadOnly Property RoleColor As Color
+  overload: PluginAPI.Roles.BaseRole`1.RoleColor*
+  nameWithType.vb: BaseRole(Of TPlayer).RoleColor
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleColor
+- uid: PluginAPI.Roles.BaseRole`1.RoleTeam
+  commentId: P:PluginAPI.Roles.BaseRole`1.RoleTeam
+  id: RoleTeam
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: RoleTeam
+  nameWithType: BaseRole<TPlayer>.RoleTeam
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleTeam
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: RoleTeam
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 17
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public Team RoleTeam { get; }
+    parameters: []
+    return:
+      type: PlayerRoles.Team
+    content.vb: Public ReadOnly Property RoleTeam As Team
+  overload: PluginAPI.Roles.BaseRole`1.RoleTeam*
+  nameWithType.vb: BaseRole(Of TPlayer).RoleTeam
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleTeam
+- uid: PluginAPI.Roles.BaseRole`1.SpawnReason
+  commentId: P:PluginAPI.Roles.BaseRole`1.SpawnReason
+  id: SpawnReason
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: SpawnReason
+  nameWithType: BaseRole<TPlayer>.SpawnReason
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.SpawnReason
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: SpawnReason
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 19
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public RoleChangeReason SpawnReason { get; }
+    parameters: []
+    return:
+      type: PlayerRoles.RoleChangeReason
+    content.vb: Public ReadOnly Property SpawnReason As RoleChangeReason
+  overload: PluginAPI.Roles.BaseRole`1.SpawnReason*
+  nameWithType.vb: BaseRole(Of TPlayer).SpawnReason
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).SpawnReason
+- uid: PluginAPI.Roles.BaseRole`1.ActiveTime
+  commentId: P:PluginAPI.Roles.BaseRole`1.ActiveTime
+  id: ActiveTime
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: ActiveTime
+  nameWithType: BaseRole<TPlayer>.ActiveTime
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.ActiveTime
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: ActiveTime
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 21
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public float ActiveTime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property ActiveTime As Single
+  overload: PluginAPI.Roles.BaseRole`1.ActiveTime*
+  nameWithType.vb: BaseRole(Of TPlayer).ActiveTime
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).ActiveTime
+- uid: PluginAPI.Roles.BaseRole`1.#ctor(PlayerRoles.PlayerRoleBase)
+  commentId: M:PluginAPI.Roles.BaseRole`1.#ctor(PlayerRoles.PlayerRoleBase)
+  id: '#ctor(PlayerRoles.PlayerRoleBase)'
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: BaseRole(PlayerRoleBase)
+  nameWithType: BaseRole<TPlayer>.BaseRole(PlayerRoleBase)
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.BaseRole(PlayerRoles.PlayerRoleBase)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 23
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public BaseRole(PlayerRoleBase roleBase)
+    parameters:
+    - id: roleBase
+      type: PlayerRoles.PlayerRoleBase
+    content.vb: Public Sub New(roleBase As PlayerRoleBase)
+  overload: PluginAPI.Roles.BaseRole`1.#ctor*
+  nameWithType.vb: BaseRole(Of TPlayer).BaseRole(PlayerRoleBase)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).BaseRole(PlayerRoles.PlayerRoleBase)
+- uid: PluginAPI.Roles.BaseRole`1.OnUpdate
+  commentId: M:PluginAPI.Roles.BaseRole`1.OnUpdate
+  id: OnUpdate
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: BaseRole<TPlayer>.OnUpdate()
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnUpdate
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public virtual void OnUpdate()
+    content.vb: Public Overridable Sub OnUpdate
+  overload: PluginAPI.Roles.BaseRole`1.OnUpdate*
+  nameWithType.vb: BaseRole(Of TPlayer).OnUpdate()
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnUpdate()
+- uid: PluginAPI.Roles.BaseRole`1.OnFixedUpdate
+  commentId: M:PluginAPI.Roles.BaseRole`1.OnFixedUpdate
+  id: OnFixedUpdate
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: OnFixedUpdate()
+  nameWithType: BaseRole<TPlayer>.OnFixedUpdate()
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnFixedUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnFixedUpdate
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public virtual void OnFixedUpdate()
+    content.vb: Public Overridable Sub OnFixedUpdate
+  overload: PluginAPI.Roles.BaseRole`1.OnFixedUpdate*
+  nameWithType.vb: BaseRole(Of TPlayer).OnFixedUpdate()
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnFixedUpdate()
+- uid: PluginAPI.Roles.BaseRole`1.OnLateUpdate
+  commentId: M:PluginAPI.Roles.BaseRole`1.OnLateUpdate
+  id: OnLateUpdate
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: OnLateUpdate()
+  nameWithType: BaseRole<TPlayer>.OnLateUpdate()
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnLateUpdate()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnLateUpdate
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public virtual void OnLateUpdate()
+    content.vb: Public Overridable Sub OnLateUpdate
+  overload: PluginAPI.Roles.BaseRole`1.OnLateUpdate*
+  nameWithType.vb: BaseRole(Of TPlayer).OnLateUpdate()
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnLateUpdate()
+- uid: PluginAPI.Roles.BaseRole`1.OnDestroy
+  commentId: M:PluginAPI.Roles.BaseRole`1.OnDestroy
+  id: OnDestroy
+  parent: PluginAPI.Roles.BaseRole`1
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: BaseRole<TPlayer>.OnDestroy()
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnDestroy()
+  type: Method
+  source:
+    remote:
+      path: NwPluginAPI/Roles/BaseRole.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: OnDestroy
+    path: ../NwPluginAPI/Roles/BaseRole.cs
+    startLine: 39
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Roles
+  syntax:
+    content: public virtual void OnDestroy()
+    content.vb: Public Overridable Sub OnDestroy
+  overload: PluginAPI.Roles.BaseRole`1.OnDestroy*
+  nameWithType.vb: BaseRole(Of TPlayer).OnDestroy()
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnDestroy()
+references:
+- uid: PluginAPI.Roles
+  commentId: N:PluginAPI.Roles
+  name: PluginAPI.Roles
+  nameWithType: PluginAPI.Roles
+  fullName: PluginAPI.Roles
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: '{TPlayer}'
+  commentId: '!:TPlayer'
+  definition: TPlayer
+  name: TPlayer
+  nameWithType: TPlayer
+  fullName: TPlayer
+- uid: TPlayer
+  name: TPlayer
+  nameWithType: TPlayer
+  fullName: TPlayer
+- uid: PlayerRoles.PlayerRoleBase
+  commentId: T:PlayerRoles.PlayerRoleBase
+  parent: PlayerRoles
+  isExternal: true
+  name: PlayerRoleBase
+  nameWithType: PlayerRoleBase
+  fullName: PlayerRoles.PlayerRoleBase
+- uid: PlayerRoles
+  commentId: N:PlayerRoles
+  isExternal: true
+  name: PlayerRoles
+  nameWithType: PlayerRoles
+  fullName: PlayerRoles
+- uid: PluginAPI.Roles.BaseRole`1.RoleId*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.RoleId
+  name: RoleId
+  nameWithType: BaseRole<TPlayer>.RoleId
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleId
+  nameWithType.vb: BaseRole(Of TPlayer).RoleId
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleId
+- uid: PlayerRoles.RoleTypeId
+  commentId: T:PlayerRoles.RoleTypeId
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleTypeId
+  nameWithType: RoleTypeId
+  fullName: PlayerRoles.RoleTypeId
+- uid: PluginAPI.Roles.BaseRole`1.RoleName*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.RoleName
+  name: RoleName
+  nameWithType: BaseRole<TPlayer>.RoleName
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleName
+  nameWithType.vb: BaseRole(Of TPlayer).RoleName
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PluginAPI.Roles.BaseRole`1.RoleColor*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.RoleColor
+  name: RoleColor
+  nameWithType: BaseRole<TPlayer>.RoleColor
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleColor
+  nameWithType.vb: BaseRole(Of TPlayer).RoleColor
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleColor
+- uid: UnityEngine.Color
+  commentId: T:UnityEngine.Color
+  parent: UnityEngine
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: UnityEngine.Color
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: PluginAPI.Roles.BaseRole`1.RoleTeam*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.RoleTeam
+  name: RoleTeam
+  nameWithType: BaseRole<TPlayer>.RoleTeam
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.RoleTeam
+  nameWithType.vb: BaseRole(Of TPlayer).RoleTeam
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).RoleTeam
+- uid: PlayerRoles.Team
+  commentId: T:PlayerRoles.Team
+  parent: PlayerRoles
+  isExternal: true
+  name: Team
+  nameWithType: Team
+  fullName: PlayerRoles.Team
+- uid: PluginAPI.Roles.BaseRole`1.SpawnReason*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.SpawnReason
+  name: SpawnReason
+  nameWithType: BaseRole<TPlayer>.SpawnReason
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.SpawnReason
+  nameWithType.vb: BaseRole(Of TPlayer).SpawnReason
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).SpawnReason
+- uid: PlayerRoles.RoleChangeReason
+  commentId: T:PlayerRoles.RoleChangeReason
+  parent: PlayerRoles
+  isExternal: true
+  name: RoleChangeReason
+  nameWithType: RoleChangeReason
+  fullName: PlayerRoles.RoleChangeReason
+- uid: PluginAPI.Roles.BaseRole`1.ActiveTime*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.ActiveTime
+  name: ActiveTime
+  nameWithType: BaseRole<TPlayer>.ActiveTime
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.ActiveTime
+  nameWithType.vb: BaseRole(Of TPlayer).ActiveTime
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).ActiveTime
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: PluginAPI.Roles.BaseRole`1.#ctor*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.#ctor
+  name: BaseRole
+  nameWithType: BaseRole<TPlayer>.BaseRole
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.BaseRole
+  nameWithType.vb: BaseRole(Of TPlayer).BaseRole
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).BaseRole
+- uid: PluginAPI.Roles.BaseRole`1.OnUpdate*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.OnUpdate
+  name: OnUpdate
+  nameWithType: BaseRole<TPlayer>.OnUpdate
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnUpdate
+  nameWithType.vb: BaseRole(Of TPlayer).OnUpdate
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnUpdate
+- uid: PluginAPI.Roles.BaseRole`1.OnFixedUpdate*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.OnFixedUpdate
+  name: OnFixedUpdate
+  nameWithType: BaseRole<TPlayer>.OnFixedUpdate
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnFixedUpdate
+  nameWithType.vb: BaseRole(Of TPlayer).OnFixedUpdate
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnFixedUpdate
+- uid: PluginAPI.Roles.BaseRole`1.OnLateUpdate*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.OnLateUpdate
+  name: OnLateUpdate
+  nameWithType: BaseRole<TPlayer>.OnLateUpdate
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnLateUpdate
+  nameWithType.vb: BaseRole(Of TPlayer).OnLateUpdate
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnLateUpdate
+- uid: PluginAPI.Roles.BaseRole`1.OnDestroy*
+  commentId: Overload:PluginAPI.Roles.BaseRole`1.OnDestroy
+  name: OnDestroy
+  nameWithType: BaseRole<TPlayer>.OnDestroy
+  fullName: PluginAPI.Roles.BaseRole<TPlayer>.OnDestroy
+  nameWithType.vb: BaseRole(Of TPlayer).OnDestroy
+  fullName.vb: PluginAPI.Roles.BaseRole(Of TPlayer).OnDestroy

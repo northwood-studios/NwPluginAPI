@@ -1,0 +1,651 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  commentId: T:PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  id: Scp049StartResurrectingBodyEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.Scp049StartResurrectingBodyEvent.#ctor(ReferenceHub,ReferenceHub,BasicRagdoll,System.Boolean)
+  - PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType
+  - PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body
+  - PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct
+  - PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player
+  - PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target
+  langs:
+  - csharp
+  - vb
+  name: Scp049StartResurrectingBodyEvent
+  nameWithType: Scp049StartResurrectingBodyEvent
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Scp049StartResurrectingBodyEvent
+    path: ../NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class Scp049StartResurrectingBodyEvent : IEventArguments'
+    content.vb: >-
+      Public Class Scp049StartResurrectingBodyEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType
+  commentId: P:PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: Scp049StartResurrectingBodyEvent.BaseType
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player
+  commentId: P:PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player
+  id: Player
+  parent: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Scp049StartResurrectingBodyEvent.Player
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target
+  commentId: P:PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target
+  id: Target
+  parent: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  langs:
+  - csharp
+  - vb
+  name: Target
+  nameWithType: Scp049StartResurrectingBodyEvent.Target
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Target
+    path: ../NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Target { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Target As Player
+  overload: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body
+  commentId: P:PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body
+  id: Body
+  parent: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: Scp049StartResurrectingBodyEvent.Body
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Body
+    path: ../NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public BasicRagdoll Body { get; }
+    parameters: []
+    return:
+      type: BasicRagdoll
+    content.vb: Public ReadOnly Property Body As BasicRagdoll
+  overload: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct
+  commentId: P:PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct
+  id: CanResurrct
+  parent: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  langs:
+  - csharp
+  - vb
+  name: CanResurrct
+  nameWithType: Scp049StartResurrectingBodyEvent.CanResurrct
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: CanResurrct
+    path: ../NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+    startLine: 40
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public bool CanResurrct { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanResurrct As Boolean
+  overload: PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.#ctor(ReferenceHub,ReferenceHub,BasicRagdoll,System.Boolean)
+  commentId: M:PluginAPI.Events.Scp049StartResurrectingBodyEvent.#ctor(ReferenceHub,ReferenceHub,BasicRagdoll,System.Boolean)
+  id: '#ctor(ReferenceHub,ReferenceHub,BasicRagdoll,System.Boolean)'
+  parent: PluginAPI.Events.Scp049StartResurrectingBodyEvent
+  langs:
+  - csharp
+  - vb
+  name: Scp049StartResurrectingBodyEvent(ReferenceHub, ReferenceHub, BasicRagdoll, Boolean)
+  nameWithType: Scp049StartResurrectingBodyEvent.Scp049StartResurrectingBodyEvent(ReferenceHub, ReferenceHub, BasicRagdoll, Boolean)
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Scp049StartResurrectingBodyEvent(ReferenceHub, ReferenceHub, BasicRagdoll, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/Scp049StartResurrectingBodyEvent.cs
+    startLine: 43
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Scp049StartResurrectingBodyEvent(ReferenceHub hub, ReferenceHub target, BasicRagdoll body, bool canResurrct)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: target
+      type: ReferenceHub
+    - id: body
+      type: BasicRagdoll
+    - id: canResurrct
+      type: System.Boolean
+    content.vb: Public Sub New(hub As ReferenceHub, target As ReferenceHub, body As BasicRagdoll, canResurrct As Boolean)
+  overload: PluginAPI.Events.Scp049StartResurrectingBodyEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType
+  name: BaseType
+  nameWithType: Scp049StartResurrectingBodyEvent.BaseType
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player*
+  commentId: Overload:PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player
+  name: Player
+  nameWithType: Scp049StartResurrectingBodyEvent.Player
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target*
+  commentId: Overload:PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target
+  name: Target
+  nameWithType: Scp049StartResurrectingBodyEvent.Target
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Target
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body*
+  commentId: Overload:PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body
+  name: Body
+  nameWithType: Scp049StartResurrectingBodyEvent.Body
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Body
+- uid: BasicRagdoll
+  commentId: T:BasicRagdoll
+  isExternal: true
+  name: BasicRagdoll
+  nameWithType: BasicRagdoll
+  fullName: BasicRagdoll
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct*
+  commentId: Overload:PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct
+  name: CanResurrct
+  nameWithType: Scp049StartResurrectingBodyEvent.CanResurrct
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.CanResurrct
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PluginAPI.Events.Scp049StartResurrectingBodyEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.Scp049StartResurrectingBodyEvent.#ctor
+  name: Scp049StartResurrectingBodyEvent
+  nameWithType: Scp049StartResurrectingBodyEvent.Scp049StartResurrectingBodyEvent
+  fullName: PluginAPI.Events.Scp049StartResurrectingBodyEvent.Scp049StartResurrectingBodyEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

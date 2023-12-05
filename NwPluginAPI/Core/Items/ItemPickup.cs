@@ -11,6 +11,7 @@ namespace PluginAPI.Core.Items
 	public class ItemPickup
 	{
 		private static readonly Dictionary<ushort, ItemPickup> CachedItems = new Dictionary<ushort, ItemPickup>();
+		private PickupStandardPhysics _pickupStandardPhysics;
 
 		/// <summary>
 		/// The base-game object.
@@ -37,8 +38,8 @@ namespace PluginAPI.Core.Items
 		/// </summary>
 		public float Weight
 		{
-			get => OriginalObject.Info.Weight;
-			set => OriginalObject.Info.Weight = value;
+			get => OriginalObject.Info.WeightKg;
+			set => OriginalObject.Info.WeightKg = value;
 		}
 
 		/// <summary>
@@ -51,9 +52,22 @@ namespace PluginAPI.Core.Items
 		}
 
 		/// <summary>
+		/// Gets the pickup's <see cref="PickupStandardPhysics"/>.
+		/// </summary>
+		public PickupStandardPhysics PickupStandardPhysics
+		{
+			get
+			{
+				if (_pickupStandardPhysics == null)
+					_pickupStandardPhysics = OriginalObject.PhysicsModule as PickupStandardPhysics;
+				return _pickupStandardPhysics;
+			}
+		}
+
+		/// <summary>
 		/// Gets the pickup's <see cref="UnityEngine.Rigidbody"/>.
 		/// </summary>
-		public Rigidbody Rigidbody => OriginalObject.RigidBody;
+		public Rigidbody Rigidbody => PickupStandardPhysics.Rb;
 
 		/// <summary>
 		/// Gets the pickup's <see cref="UnityEngine.Rigidbody"/>.
@@ -104,11 +118,14 @@ namespace PluginAPI.Core.Items
 			if (item == ItemType.None || !InventoryItemLoader.AvailableItems.TryGetValue(item, out ItemBase ib))
 				return null;
 
-			ItemPickupBase newPickup = Object.Instantiate(ib.PickupDropModel, position, rotation);
-			newPickup.Info.ItemId = item;
-			newPickup.Info.ServerSetPositionAndRotation(position, rotation);
-			newPickup.Info.Serial = ItemSerialGenerator.GenerateNext();
-			newPickup.Info.Weight = ib.Weight;
+			PickupSyncInfo syncInfo = new PickupSyncInfo()
+			{
+				ItemId = item,
+				Serial = ItemSerialGenerator.GenerateNext(),
+				WeightKg = ib.Weight
+			};
+
+			ItemPickupBase newPickup = InventoryExtensions.ServerCreatePickup(ib, syncInfo, position, rotation, false);
 
 			return GetOrAdd(newPickup);
 		}
@@ -118,7 +135,6 @@ namespace PluginAPI.Core.Items
 		/// </summary>
 		public void Spawn()
 		{
-			OriginalObject.InfoReceived(default, OriginalObject.Info);
 			NetworkServer.Spawn(GameObject);
 		}
 

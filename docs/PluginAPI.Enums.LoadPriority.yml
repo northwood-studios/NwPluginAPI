@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LoadPriority
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 5
@@ -53,8 +53,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Highest
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 7
@@ -85,8 +85,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: High
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 8
@@ -117,8 +117,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Medium
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 9
@@ -149,8 +149,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Low
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 10
@@ -181,8 +181,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Enums/LoadPriority.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Lowest
     path: ../NwPluginAPI/Enums/LoadPriority.cs
     startLine: 11

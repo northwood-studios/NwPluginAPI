@@ -9,6 +9,7 @@ items:
   - PluginAPI.Commands.ListCommand.Command
   - PluginAPI.Commands.ListCommand.Description
   - PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
+  - PluginAPI.Commands.ListCommand.Instance
   langs:
   - csharp
   - vb
@@ -19,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: ListCommand
     path: ../NwPluginAPI/Commands/ListCommand.cs
     startLine: 10
@@ -30,13 +31,8 @@ items:
   summary: "\nLists all plugins on the server.\n"
   example: []
   syntax:
-    content: >-
-      [CommandHandler(typeof(PluginsCommand))]
-
-      public class ListCommand : ICommand
+    content: 'public class ListCommand : ICommand'
     content.vb: >-
-      <CommandHandler(GetType(PluginsCommand))>
-
       Public Class ListCommand
           Implements ICommand
   inheritance:
@@ -51,12 +47,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: CommandSystem.CommandHandlerAttribute
-    ctor: CommandSystem.CommandHandlerAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: PluginAPI.Commands.PluginsCommand
   modifiers.csharp:
   - public
   - class
@@ -77,15 +67,14 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Command
     path: ../NwPluginAPI/Commands/ListCommand.cs
-    startLine: 14
+    startLine: 12
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
-  example: []
   syntax:
     content: public string Command { get; }
     parameters: []
@@ -115,15 +104,14 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Aliases
     path: ../NwPluginAPI/Commands/ListCommand.cs
-    startLine: 17
+    startLine: 13
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
-  example: []
   syntax:
     content: public string[] Aliases { get; }
     parameters: []
@@ -153,15 +141,14 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Description
     path: ../NwPluginAPI/Commands/ListCommand.cs
-    startLine: 20
+    startLine: 14
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
-  example: []
   syntax:
     content: public string Description { get; }
     parameters: []
@@ -177,6 +164,39 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: PluginAPI.Commands.ListCommand.Instance
+  commentId: F:PluginAPI.Commands.ListCommand.Instance
+  id: Instance
+  parent: PluginAPI.Commands.ListCommand
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListCommand.Instance
+  fullName: PluginAPI.Commands.ListCommand.Instance
+  type: Field
+  source:
+    remote:
+      path: NwPluginAPI/Commands/ListCommand.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Instance
+    path: ../NwPluginAPI/Commands/ListCommand.cs
+    startLine: 15
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Commands
+  syntax:
+    content: public static ListCommand Instance
+    return:
+      type: PluginAPI.Commands.ListCommand
+    content.vb: Public Shared Instance As ListCommand
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   commentId: M:PluginAPI.Commands.ListCommand.Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
   id: Execute(System.ArraySegment{System.String},CommandSystem.ICommandSender,System.String@)
@@ -191,11 +211,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Commands/ListCommand.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Execute
     path: ../NwPluginAPI/Commands/ListCommand.cs
-    startLine: 22
+    startLine: 17
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Commands
@@ -601,6 +621,12 @@ references:
   name: Description
   nameWithType: ICommand.Description
   fullName: CommandSystem.ICommand.Description
+- uid: PluginAPI.Commands.ListCommand
+  commentId: T:PluginAPI.Commands.ListCommand
+  parent: PluginAPI.Commands
+  name: ListCommand
+  nameWithType: ListCommand
+  fullName: PluginAPI.Commands.ListCommand
 - uid: PluginAPI.Commands.ListCommand.Execute*
   commentId: Overload:PluginAPI.Commands.ListCommand.Execute
   name: Execute

@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IEntityFactory
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 10
@@ -62,8 +62,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DefaultServer
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 12
@@ -96,8 +96,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Create
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 13
@@ -129,8 +129,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetOrAdd
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 14
@@ -162,8 +162,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: AddIfNotExists
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 15
@@ -193,8 +193,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Factories/IEntityFactory.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Get
     path: ../NwPluginAPI/Core/Factories/IEntityFactory.cs
     startLine: 16

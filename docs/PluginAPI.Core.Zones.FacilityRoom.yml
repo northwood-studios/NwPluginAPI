@@ -25,8 +25,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FacilityRoom
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 13
@@ -74,8 +74,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Zone
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 21
@@ -109,8 +109,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Lights
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 26
@@ -144,8 +144,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Identifier
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 31
@@ -179,8 +179,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Transform
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 36
@@ -216,8 +216,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GameObject
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 41
@@ -253,8 +253,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Position
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 46
@@ -290,8 +290,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: Rotation
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 51
@@ -327,8 +327,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: GetComponent
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 56
@@ -372,8 +372,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: TryGetComponent
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 89
@@ -419,8 +419,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/Zones/FacilityRoom.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/Zones/FacilityRoom.cs
     startLine: 146

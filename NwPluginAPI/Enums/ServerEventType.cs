@@ -1069,5 +1069,23 @@ namespace PluginAPI.Enums
 		/// Parameters: <see cref="IPlayer"/> player, <see cref="RadioItem"/> radio, <see cref="bool"/> newState.
 		/// </remarks>
 		PlayerRadioToggle = 128,
+
+		None = 129,
+
+		/// <summary>
+		/// Executed when player dropped item.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="Item"/> item.
+		/// </remarks>
+		PlayerDropedpItem = 130,
+
+		/// <summary>
+		/// Executed when player dropped ammo.
+		/// </summary>
+		/// <remarks>
+		/// Parameters: <see cref="IPlayer"/> player, <see cref="ItemType"/> type. <see cref="int"/> amount.
+		/// </remarks>
+		PlayerDroppedAmmo = 131,
 	}
 }

@@ -5,9 +5,11 @@ items:
   id: EventParameter
   parent: PluginAPI.Events
   children:
-  - PluginAPI.Events.EventParameter.#ctor(System.Type,System.String)
+  - PluginAPI.Events.EventParameter.#ctor(System.Type,System.Reflection.PropertyInfo,System.String)
   - PluginAPI.Events.EventParameter.BaseType
   - PluginAPI.Events.EventParameter.DefaultIdentifierName
+  - PluginAPI.Events.EventParameter.IsReadonly
+  - PluginAPI.Events.EventParameter.PropertyInfo
   langs:
   - csharp
   - vb
@@ -18,11 +20,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: EventParameter
     path: ../NwPluginAPI/Events/EventParameter.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -61,11 +63,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: BaseType
     path: ../NwPluginAPI/Events/EventParameter.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -78,6 +80,41 @@ items:
       type: System.Type
     content.vb: Public ReadOnly Property BaseType As Type
   overload: PluginAPI.Events.EventParameter.BaseType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.EventParameter.IsReadonly
+  commentId: P:PluginAPI.Events.EventParameter.IsReadonly
+  id: IsReadonly
+  parent: PluginAPI.Events.EventParameter
+  langs:
+  - csharp
+  - vb
+  name: IsReadonly
+  nameWithType: EventParameter.IsReadonly
+  fullName: PluginAPI.Events.EventParameter.IsReadonly
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventParameter.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: IsReadonly
+    path: ../NwPluginAPI/Events/EventParameter.cs
+    startLine: 15
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public bool IsReadonly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadonly As Boolean
+  overload: PluginAPI.Events.EventParameter.IsReadonly*
   modifiers.csharp:
   - public
   - get
@@ -98,11 +135,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DefaultIdentifierName
     path: ../NwPluginAPI/Events/EventParameter.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
@@ -121,40 +158,77 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: PluginAPI.Events.EventParameter.#ctor(System.Type,System.String)
-  commentId: M:PluginAPI.Events.EventParameter.#ctor(System.Type,System.String)
-  id: '#ctor(System.Type,System.String)'
+- uid: PluginAPI.Events.EventParameter.PropertyInfo
+  commentId: P:PluginAPI.Events.EventParameter.PropertyInfo
+  id: PropertyInfo
   parent: PluginAPI.Events.EventParameter
   langs:
   - csharp
   - vb
-  name: EventParameter(Type, String)
-  nameWithType: EventParameter.EventParameter(Type, String)
-  fullName: PluginAPI.Events.EventParameter.EventParameter(System.Type, System.String)
+  name: PropertyInfo
+  nameWithType: EventParameter.PropertyInfo
+  fullName: PluginAPI.Events.EventParameter.PropertyInfo
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/EventParameter.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PropertyInfo
+    path: ../NwPluginAPI/Events/EventParameter.cs
+    startLine: 22
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PropertyInfo PropertyInfo { get; set; }
+    parameters: []
+    return:
+      type: System.Reflection.PropertyInfo
+    content.vb: Public Property PropertyInfo As PropertyInfo
+  overload: PluginAPI.Events.EventParameter.PropertyInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.EventParameter.#ctor(System.Type,System.Reflection.PropertyInfo,System.String)
+  commentId: M:PluginAPI.Events.EventParameter.#ctor(System.Type,System.Reflection.PropertyInfo,System.String)
+  id: '#ctor(System.Type,System.Reflection.PropertyInfo,System.String)'
+  parent: PluginAPI.Events.EventParameter
+  langs:
+  - csharp
+  - vb
+  name: EventParameter(Type, PropertyInfo, String)
+  nameWithType: EventParameter.EventParameter(Type, PropertyInfo, String)
+  fullName: PluginAPI.Events.EventParameter.EventParameter(System.Type, System.Reflection.PropertyInfo, System.String)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Events/EventParameter.cs
-      branch: master
-      repo: git@github.com:northwood-studios/NwPluginAPI.git
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Events/EventParameter.cs
-    startLine: 24
+    startLine: 29
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Events
   summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Events.EventParameter\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
-    content: public EventParameter(Type type, string defaultIdentifierName)
+    content: public EventParameter(Type type, PropertyInfo property, string defaultIdentifierName)
     parameters:
     - id: type
       type: System.Type
       description: The <xref href="PluginAPI.Events.EventParameter.BaseType" data-throw-if-not-resolved="false"></xref>.
+    - id: property
+      type: System.Reflection.PropertyInfo
     - id: defaultIdentifierName
       type: System.String
       description: The <xref href="PluginAPI.Events.EventParameter.DefaultIdentifierName" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Sub New(type As Type, defaultIdentifierName As String)
+    content.vb: Public Sub New(type As Type, property As PropertyInfo, defaultIdentifierName As String)
   overload: PluginAPI.Events.EventParameter.#ctor*
   modifiers.csharp:
   - public
@@ -470,6 +544,18 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
+- uid: PluginAPI.Events.EventParameter.IsReadonly*
+  commentId: Overload:PluginAPI.Events.EventParameter.IsReadonly
+  name: IsReadonly
+  nameWithType: EventParameter.IsReadonly
+  fullName: PluginAPI.Events.EventParameter.IsReadonly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: PluginAPI.Events.EventParameter.DefaultIdentifierName*
   commentId: Overload:PluginAPI.Events.EventParameter.DefaultIdentifierName
   name: DefaultIdentifierName
@@ -482,6 +568,24 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: PluginAPI.Events.EventParameter.PropertyInfo*
+  commentId: Overload:PluginAPI.Events.EventParameter.PropertyInfo
+  name: PropertyInfo
+  nameWithType: EventParameter.PropertyInfo
+  fullName: PluginAPI.Events.EventParameter.PropertyInfo
+- uid: System.Reflection.PropertyInfo
+  commentId: T:System.Reflection.PropertyInfo
+  parent: System.Reflection
+  isExternal: true
+  name: PropertyInfo
+  nameWithType: PropertyInfo
+  fullName: System.Reflection.PropertyInfo
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
 - uid: PluginAPI.Events.EventParameter
   commentId: T:PluginAPI.Events.EventParameter
   name: EventParameter

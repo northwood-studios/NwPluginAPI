@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent
+  commentId: T:PluginAPI.Events.PlayerChangeRadioRangeEvent
+  id: PlayerChangeRadioRangeEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.PlayerChangeRadioRangeEvent.#ctor(ReferenceHub,InventorySystem.Items.Radio.RadioItem,System.Byte)
+  - PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType
+  - PluginAPI.Events.PlayerChangeRadioRangeEvent.Player
+  - PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio
+  - PluginAPI.Events.PlayerChangeRadioRangeEvent.Range
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeRadioRangeEvent
+  nameWithType: PlayerChangeRadioRangeEvent
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: PlayerChangeRadioRangeEvent
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+    startLine: 31
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class PlayerChangeRadioRangeEvent : IEventArguments'
+    content.vb: >-
+      Public Class PlayerChangeRadioRangeEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType
+  commentId: P:PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.PlayerChangeRadioRangeEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: PlayerChangeRadioRangeEvent.BaseType
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+    startLine: 33
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.Player
+  commentId: P:PluginAPI.Events.PlayerChangeRadioRangeEvent.Player
+  id: Player
+  parent: PluginAPI.Events.PlayerChangeRadioRangeEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: PlayerChangeRadioRangeEvent.Player
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.PlayerChangeRadioRangeEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio
+  commentId: P:PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio
+  id: Radio
+  parent: PluginAPI.Events.PlayerChangeRadioRangeEvent
+  langs:
+  - csharp
+  - vb
+  name: Radio
+  nameWithType: PlayerChangeRadioRangeEvent.Radio
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Radio
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+    startLine: 36
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public RadioItem Radio { get; }
+    parameters: []
+    return:
+      type: InventorySystem.Items.Radio.RadioItem
+    content.vb: Public ReadOnly Property Radio As RadioItem
+  overload: PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.Range
+  commentId: P:PluginAPI.Events.PlayerChangeRadioRangeEvent.Range
+  id: Range
+  parent: PluginAPI.Events.PlayerChangeRadioRangeEvent
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: PlayerChangeRadioRangeEvent.Range
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.Range
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Range
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+    startLine: 38
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public byte Range { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property Range As Byte
+  overload: PluginAPI.Events.PlayerChangeRadioRangeEvent.Range*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.#ctor(ReferenceHub,InventorySystem.Items.Radio.RadioItem,System.Byte)
+  commentId: M:PluginAPI.Events.PlayerChangeRadioRangeEvent.#ctor(ReferenceHub,InventorySystem.Items.Radio.RadioItem,System.Byte)
+  id: '#ctor(ReferenceHub,InventorySystem.Items.Radio.RadioItem,System.Byte)'
+  parent: PluginAPI.Events.PlayerChangeRadioRangeEvent
+  langs:
+  - csharp
+  - vb
+  name: PlayerChangeRadioRangeEvent(ReferenceHub, RadioItem, Byte)
+  nameWithType: PlayerChangeRadioRangeEvent.PlayerChangeRadioRangeEvent(ReferenceHub, RadioItem, Byte)
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.PlayerChangeRadioRangeEvent(ReferenceHub, InventorySystem.Items.Radio.RadioItem, System.Byte)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/PlayerChangeRadioRangeEvent.cs
+    startLine: 41
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public PlayerChangeRadioRangeEvent(ReferenceHub hub, RadioItem radio, byte range)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: radio
+      type: InventorySystem.Items.Radio.RadioItem
+    - id: range
+      type: System.Byte
+    content.vb: Public Sub New(hub As ReferenceHub, radio As RadioItem, range As Byte)
+  overload: PluginAPI.Events.PlayerChangeRadioRangeEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType
+  name: BaseType
+  nameWithType: PlayerChangeRadioRangeEvent.BaseType
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.Player*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRadioRangeEvent.Player
+  name: Player
+  nameWithType: PlayerChangeRadioRangeEvent.Player
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio
+  name: Radio
+  nameWithType: PlayerChangeRadioRangeEvent.Radio
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.Radio
+- uid: InventorySystem.Items.Radio.RadioItem
+  commentId: T:InventorySystem.Items.Radio.RadioItem
+  parent: InventorySystem.Items.Radio
+  isExternal: true
+  name: RadioItem
+  nameWithType: RadioItem
+  fullName: InventorySystem.Items.Radio.RadioItem
+- uid: InventorySystem.Items.Radio
+  commentId: N:InventorySystem.Items.Radio
+  isExternal: true
+  name: InventorySystem.Items.Radio
+  nameWithType: InventorySystem.Items.Radio
+  fullName: InventorySystem.Items.Radio
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.Range*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRadioRangeEvent.Range
+  name: Range
+  nameWithType: PlayerChangeRadioRangeEvent.Range
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.Range
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: PluginAPI.Events.PlayerChangeRadioRangeEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.PlayerChangeRadioRangeEvent.#ctor
+  name: PlayerChangeRadioRangeEvent
+  nameWithType: PlayerChangeRadioRangeEvent.PlayerChangeRadioRangeEvent
+  fullName: PluginAPI.Events.PlayerChangeRadioRangeEvent.PlayerChangeRadioRangeEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub

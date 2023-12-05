@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "[REDACTED]/NwPluginAPI/NwPluginAPI.Docs",
+  "source_base_path": "E:/VS Projects/NwPluginAPI/NwPluginAPI.Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -149,17 +149,19 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 7,
-          "skipped_file_count": 6
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: PluginAPI.Events.Scp079GainExperienceEvent
+  commentId: T:PluginAPI.Events.Scp079GainExperienceEvent
+  id: Scp079GainExperienceEvent
+  parent: PluginAPI.Events
+  children:
+  - PluginAPI.Events.Scp079GainExperienceEvent.#ctor(ReferenceHub,System.Int32,PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation)
+  - PluginAPI.Events.Scp079GainExperienceEvent.Amount
+  - PluginAPI.Events.Scp079GainExperienceEvent.BaseType
+  - PluginAPI.Events.Scp079GainExperienceEvent.Player
+  - PluginAPI.Events.Scp079GainExperienceEvent.Reason
+  langs:
+  - csharp
+  - vb
+  name: Scp079GainExperienceEvent
+  nameWithType: Scp079GainExperienceEvent
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent
+  type: Class
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Scp079GainExperienceEvent
+    path: ../NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+    startLine: 32
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: 'public class Scp079GainExperienceEvent : IEventArguments'
+    content.vb: >-
+      Public Class Scp079GainExperienceEvent
+          Implements IEventArguments
+  inheritance:
+  - System.Object
+  implements:
+  - PluginAPI.Events.IEventArguments
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.BaseType
+  commentId: P:PluginAPI.Events.Scp079GainExperienceEvent.BaseType
+  id: BaseType
+  parent: PluginAPI.Events.Scp079GainExperienceEvent
+  langs:
+  - csharp
+  - vb
+  name: BaseType
+  nameWithType: Scp079GainExperienceEvent.BaseType
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.BaseType
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: BaseType
+    path: ../NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+    startLine: 34
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public ServerEventType BaseType { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Enums.ServerEventType
+    content.vb: Public ReadOnly Property BaseType As ServerEventType
+  overload: PluginAPI.Events.Scp079GainExperienceEvent.BaseType*
+  implements:
+  - PluginAPI.Events.IEventArguments.BaseType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.Player
+  commentId: P:PluginAPI.Events.Scp079GainExperienceEvent.Player
+  id: Player
+  parent: PluginAPI.Events.Scp079GainExperienceEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Scp079GainExperienceEvent.Player
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Player
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Player
+    path: ../NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+    startLine: 35
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Player Player { get; }
+    parameters: []
+    return:
+      type: PluginAPI.Core.Player
+    content.vb: Public ReadOnly Property Player As Player
+  overload: PluginAPI.Events.Scp079GainExperienceEvent.Player*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.Amount
+  commentId: P:PluginAPI.Events.Scp079GainExperienceEvent.Amount
+  id: Amount
+  parent: PluginAPI.Events.Scp079GainExperienceEvent
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: Scp079GainExperienceEvent.Amount
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Amount
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Amount
+    path: ../NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+    startLine: 37
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public int Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Amount As Integer
+  overload: PluginAPI.Events.Scp079GainExperienceEvent.Amount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.Reason
+  commentId: P:PluginAPI.Events.Scp079GainExperienceEvent.Reason
+  id: Reason
+  parent: PluginAPI.Events.Scp079GainExperienceEvent
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: Scp079GainExperienceEvent.Reason
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Reason
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: Reason
+    path: ../NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+    startLine: 39
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Scp079HudTranslation Reason { get; set; }
+    parameters: []
+    return:
+      type: PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation
+    content.vb: Public Property Reason As Scp079HudTranslation
+  overload: PluginAPI.Events.Scp079GainExperienceEvent.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.#ctor(ReferenceHub,System.Int32,PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation)
+  commentId: M:PluginAPI.Events.Scp079GainExperienceEvent.#ctor(ReferenceHub,System.Int32,PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation)
+  id: '#ctor(ReferenceHub,System.Int32,PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation)'
+  parent: PluginAPI.Events.Scp079GainExperienceEvent
+  langs:
+  - csharp
+  - vb
+  name: Scp079GainExperienceEvent(ReferenceHub, Int32, Scp079HudTranslation)
+  nameWithType: Scp079GainExperienceEvent.Scp079GainExperienceEvent(ReferenceHub, Int32, Scp079HudTranslation)
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Scp079GainExperienceEvent(ReferenceHub, System.Int32, PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation)
+  type: Constructor
+  source:
+    remote:
+      path: NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: .ctor
+    path: ../NwPluginAPI/Events/Args/Scp079GainExperienceEvent.cs
+    startLine: 42
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Events
+  syntax:
+    content: public Scp079GainExperienceEvent(ReferenceHub hub, int amount, Scp079HudTranslation reason)
+    parameters:
+    - id: hub
+      type: ReferenceHub
+    - id: amount
+      type: System.Int32
+    - id: reason
+      type: PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation
+    content.vb: Public Sub New(hub As ReferenceHub, amount As Integer, reason As Scp079HudTranslation)
+  overload: PluginAPI.Events.Scp079GainExperienceEvent.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: PluginAPI.Events
+  commentId: N:PluginAPI.Events
+  name: PluginAPI.Events
+  nameWithType: PluginAPI.Events
+  fullName: PluginAPI.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: PluginAPI.Events.IEventArguments
+  commentId: T:PluginAPI.Events.IEventArguments
+  parent: PluginAPI.Events
+  name: IEventArguments
+  nameWithType: IEventArguments
+  fullName: PluginAPI.Events.IEventArguments
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.BaseType*
+  commentId: Overload:PluginAPI.Events.Scp079GainExperienceEvent.BaseType
+  name: BaseType
+  nameWithType: Scp079GainExperienceEvent.BaseType
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.BaseType
+- uid: PluginAPI.Events.IEventArguments.BaseType
+  commentId: P:PluginAPI.Events.IEventArguments.BaseType
+  parent: PluginAPI.Events.IEventArguments
+  name: BaseType
+  nameWithType: IEventArguments.BaseType
+  fullName: PluginAPI.Events.IEventArguments.BaseType
+- uid: PluginAPI.Enums.ServerEventType
+  commentId: T:PluginAPI.Enums.ServerEventType
+  parent: PluginAPI.Enums
+  name: ServerEventType
+  nameWithType: ServerEventType
+  fullName: PluginAPI.Enums.ServerEventType
+- uid: PluginAPI.Enums
+  commentId: N:PluginAPI.Enums
+  name: PluginAPI.Enums
+  nameWithType: PluginAPI.Enums
+  fullName: PluginAPI.Enums
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.Player*
+  commentId: Overload:PluginAPI.Events.Scp079GainExperienceEvent.Player
+  name: Player
+  nameWithType: Scp079GainExperienceEvent.Player
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Player
+- uid: PluginAPI.Core.Player
+  commentId: T:PluginAPI.Core.Player
+  parent: PluginAPI.Core
+  name: Player
+  nameWithType: Player
+  fullName: PluginAPI.Core.Player
+- uid: PluginAPI.Core
+  commentId: N:PluginAPI.Core
+  name: PluginAPI.Core
+  nameWithType: PluginAPI.Core
+  fullName: PluginAPI.Core
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.Amount*
+  commentId: Overload:PluginAPI.Events.Scp079GainExperienceEvent.Amount
+  name: Amount
+  nameWithType: Scp079GainExperienceEvent.Amount
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Amount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.Reason*
+  commentId: Overload:PluginAPI.Events.Scp079GainExperienceEvent.Reason
+  name: Reason
+  nameWithType: Scp079GainExperienceEvent.Reason
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Reason
+- uid: PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation
+  commentId: T:PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation
+  parent: PlayerRoles.PlayableScps.Scp079
+  isExternal: true
+  name: Scp079HudTranslation
+  nameWithType: Scp079HudTranslation
+  fullName: PlayerRoles.PlayableScps.Scp079.Scp079HudTranslation
+- uid: PlayerRoles.PlayableScps.Scp079
+  commentId: N:PlayerRoles.PlayableScps.Scp079
+  isExternal: true
+  name: PlayerRoles.PlayableScps.Scp079
+  nameWithType: PlayerRoles.PlayableScps.Scp079
+  fullName: PlayerRoles.PlayableScps.Scp079
+- uid: PluginAPI.Events.Scp079GainExperienceEvent.#ctor*
+  commentId: Overload:PluginAPI.Events.Scp079GainExperienceEvent.#ctor
+  name: Scp079GainExperienceEvent
+  nameWithType: Scp079GainExperienceEvent.Scp079GainExperienceEvent
+  fullName: PluginAPI.Events.Scp079GainExperienceEvent.Scp079GainExperienceEvent
+- uid: ReferenceHub
+  commentId: T:ReferenceHub
+  isExternal: true
+  name: ReferenceHub
+  nameWithType: ReferenceHub
+  fullName: ReferenceHub
