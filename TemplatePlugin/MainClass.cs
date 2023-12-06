@@ -15,6 +15,7 @@ namespace TemplatePlugin
 	using LiteNetLib;
 	using MapGeneration.Distributors;
 	using PlayerRoles;
+	using PlayerRoles.Ragdolls;
 	using PlayerStatsSystem;
 	using PluginAPI.Core;
 	using PluginAPI.Core.Attributes;
