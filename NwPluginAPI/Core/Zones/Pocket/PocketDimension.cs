@@ -15,7 +15,6 @@ namespace PluginAPI.Core.Zones.Pocket
 		/// </summary>
 		public new readonly UnknownZone Zone;
 
-		internal PocketDimensionGenerator _pocketDim;
 		internal List<PocketDimensionTeleport> _teleports = new List<PocketDimensionTeleport>();
 
 		/// <summary>
@@ -38,7 +37,7 @@ namespace PluginAPI.Core.Zones.Pocket
 		/// </summary>
 		public void ShuffleTeleports()
 		{
-			_pocketDim.GenerateRandom();
+			PocketDimensionGenerator.RandomizeTeleports();
 		}
 
 		/// <summary>
@@ -48,7 +47,6 @@ namespace PluginAPI.Core.Zones.Pocket
 		/// <param name="room">The room identifier.</param>
 		public PocketDimension(UnknownZone zone, RoomIdentifier room) : base(zone, room)
 		{
-			_pocketDim = Server.Instance.GetComponent<PocketDimensionGenerator>(true);
 			_teleports = UnityEngine.Object.FindObjectsOfType<PocketDimensionTeleport>().ToList();
 		}
 	}

@@ -13,6 +13,7 @@ namespace PluginAPI.Commands
 		public string Command { get; } = "reload";
 		public string[] Aliases { get; } = null;
 		public string Description { get; } = "Reload plugins configuration or config_gameplay";
+		public bool SanitizeResponse { get; } = false;
 		public string[] Usage { get; } = { "plugins/gameplay" };
 
 		public static ReloadConfigCommand Instance = new();

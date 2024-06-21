@@ -13,6 +13,7 @@ namespace PluginAPI.Commands
 		public string Command { get; } = "list";
 		public string[] Aliases { get; } = null;
 		public string Description { get; } = "List of installed plugins.";
+		public bool SanitizeResponse { get; } = false;
 		public static ListCommand Instance = new();
 
 		public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)

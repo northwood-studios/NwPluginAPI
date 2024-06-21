@@ -12,6 +12,8 @@
 
 		public string Description { get; } = "Test command.";
 
+		public bool SanitizeResponse { get; } = false;
+
 		public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
 		{
 			response = "Success response";
