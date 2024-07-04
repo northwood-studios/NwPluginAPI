@@ -722,7 +722,7 @@ namespace PluginAPI.Core
 		/// </summary>
 		[Obsolete("Use UnitId instead of UnitName, this method will return null", true)]
 		public string UnitName => null;
-		
+
 		/// <summary>
 		/// Gets the player unit Id, -1 if unset
 		/// </summary>
@@ -1124,7 +1124,15 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="item">ItemType</param>
 		/// <returns>Returns the added item.</returns>
-		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item);
+		public ItemBase AddItem(ItemType item) => ReferenceHub.inventory.ServerAddItem(item, ItemAddReason.Undefined);
+
+		/// <summary>
+		/// Adds an Item of specific item type.
+		/// </summary>
+		/// <param name="item">ItemType</param>
+		/// <param name="reason">ItemAddReason</param>
+		/// <returns>Returns the added item.</returns>
+		public ItemBase AddItem(ItemType item, ItemAddReason reason) => ReferenceHub.inventory.ServerAddItem(item, reason);
 
 		/// <summary>
 		/// Removes an specific item.
