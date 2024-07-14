@@ -106,6 +106,13 @@ namespace PluginAPI.Core.Items
 			return CachedItems.Remove(item.Info.Serial);
 		}
 
+		public static bool Remove(ushort Serial)
+        {
+            if (!CachedItems.TryGetValue(Serial, out ItemPickup it)) return false;
+
+            return CachedItems.Remove(Serial);
+        }
+
 		/// <summary>
 		/// Creates a new <see cref="ItemPickup"/>.
 		/// </summary>
