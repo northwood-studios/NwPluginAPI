@@ -5,11 +5,12 @@ items:
   id: RoomLight
   parent: PluginAPI.Core
   children:
-  - PluginAPI.Core.RoomLight.#ctor(RoomLightController)
+  - PluginAPI.Core.RoomLight.#ctor(FlickerableLightController)
   - PluginAPI.Core.RoomLight.DefaultColor
   - PluginAPI.Core.RoomLight.FlickerLights(System.Single)
   - PluginAPI.Core.RoomLight.IsEnabled
   - PluginAPI.Core.RoomLight.LightColor
+  - PluginAPI.Core.RoomLight.LightIntensity
   langs:
   - csharp
   - vb
@@ -20,8 +21,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
-      repo: https://github.com/ced777ric/NwPluginAPI
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: RoomLight
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 7
@@ -63,8 +64,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
-      repo: https://github.com/ced777ric/NwPluginAPI
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: IsEnabled
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 21
@@ -100,8 +101,8 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
-      repo: https://github.com/ced777ric/NwPluginAPI
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: LightColor
     path: ../NwPluginAPI/Core/RoomLight.cs
     startLine: 37
@@ -137,11 +138,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
-      repo: https://github.com/ced777ric/NwPluginAPI
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: DefaultColor
     path: ../NwPluginAPI/Core/RoomLight.cs
-    startLine: 54
+    startLine: 55
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -160,6 +161,43 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: PluginAPI.Core.RoomLight.LightIntensity
+  commentId: P:PluginAPI.Core.RoomLight.LightIntensity
+  id: LightIntensity
+  parent: PluginAPI.Core.RoomLight
+  langs:
+  - csharp
+  - vb
+  name: LightIntensity
+  nameWithType: RoomLight.LightIntensity
+  fullName: PluginAPI.Core.RoomLight.LightIntensity
+  type: Property
+  source:
+    remote:
+      path: NwPluginAPI/Core/RoomLight.cs
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
+    id: LightIntensity
+    path: ../NwPluginAPI/Core/RoomLight.cs
+    startLine: 67
+  assemblies:
+  - PluginAPI
+  namespace: PluginAPI.Core
+  summary: "\nGets or sets lightning intensity in room.\n"
+  example: []
+  syntax:
+    content: public float LightIntensity { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property LightIntensity As Single
+  overload: PluginAPI.Core.RoomLight.LightIntensity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: PluginAPI.Core.RoomLight.FlickerLights(System.Single)
   commentId: M:PluginAPI.Core.RoomLight.FlickerLights(System.Single)
   id: FlickerLights(System.Single)
@@ -174,11 +212,11 @@ items:
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
-      repo: https://github.com/ced777ric/NwPluginAPI
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: FlickerLights
     path: ../NwPluginAPI/Core/RoomLight.cs
-    startLine: 67
+    startLine: 84
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
@@ -196,37 +234,37 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: PluginAPI.Core.RoomLight.#ctor(RoomLightController)
-  commentId: M:PluginAPI.Core.RoomLight.#ctor(RoomLightController)
-  id: '#ctor(RoomLightController)'
+- uid: PluginAPI.Core.RoomLight.#ctor(FlickerableLightController)
+  commentId: M:PluginAPI.Core.RoomLight.#ctor(FlickerableLightController)
+  id: '#ctor(FlickerableLightController)'
   parent: PluginAPI.Core.RoomLight
   langs:
   - csharp
   - vb
-  name: RoomLight(RoomLightController)
-  nameWithType: RoomLight.RoomLight(RoomLightController)
-  fullName: PluginAPI.Core.RoomLight.RoomLight(RoomLightController)
+  name: RoomLight(FlickerableLightController)
+  nameWithType: RoomLight.RoomLight(FlickerableLightController)
+  fullName: PluginAPI.Core.RoomLight.RoomLight(FlickerableLightController)
   type: Constructor
   source:
     remote:
       path: NwPluginAPI/Core/RoomLight.cs
-      branch: master
-      repo: https://github.com/ced777ric/NwPluginAPI
+      branch: 13.0.0
+      repo: https://github.com/northwood-studios/NwPluginAPI.git
     id: .ctor
     path: ../NwPluginAPI/Core/RoomLight.cs
-    startLine: 76
+    startLine: 93
   assemblies:
   - PluginAPI
   namespace: PluginAPI.Core
   summary: "\nInitializes a new instance of the <xref href=\"PluginAPI.Core.RoomLight\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
   example: []
   syntax:
-    content: public RoomLight(RoomLightController lightController)
+    content: public RoomLight(FlickerableLightController lightController)
     parameters:
     - id: lightController
-      type: RoomLightController
+      type: FlickerableLightController
       description: The light controller for room.
-    content.vb: Public Sub New(lightController As RoomLightController)
+    content.vb: Public Sub New(lightController As FlickerableLightController)
   overload: PluginAPI.Core.RoomLight.#ctor*
   modifiers.csharp:
   - public
@@ -565,11 +603,11 @@ references:
   name: DefaultColor
   nameWithType: RoomLight.DefaultColor
   fullName: PluginAPI.Core.RoomLight.DefaultColor
-- uid: PluginAPI.Core.RoomLight.FlickerLights*
-  commentId: Overload:PluginAPI.Core.RoomLight.FlickerLights
-  name: FlickerLights
-  nameWithType: RoomLight.FlickerLights
-  fullName: PluginAPI.Core.RoomLight.FlickerLights
+- uid: PluginAPI.Core.RoomLight.LightIntensity*
+  commentId: Overload:PluginAPI.Core.RoomLight.LightIntensity
+  name: LightIntensity
+  nameWithType: RoomLight.LightIntensity
+  fullName: PluginAPI.Core.RoomLight.LightIntensity
 - uid: System.Single
   commentId: T:System.Single
   parent: System
@@ -577,6 +615,11 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
+- uid: PluginAPI.Core.RoomLight.FlickerLights*
+  commentId: Overload:PluginAPI.Core.RoomLight.FlickerLights
+  name: FlickerLights
+  nameWithType: RoomLight.FlickerLights
+  fullName: PluginAPI.Core.RoomLight.FlickerLights
 - uid: PluginAPI.Core.RoomLight
   commentId: T:PluginAPI.Core.RoomLight
   parent: PluginAPI.Core
@@ -588,9 +631,9 @@ references:
   name: RoomLight
   nameWithType: RoomLight.RoomLight
   fullName: PluginAPI.Core.RoomLight.RoomLight
-- uid: RoomLightController
-  commentId: T:RoomLightController
+- uid: FlickerableLightController
+  commentId: T:FlickerableLightController
   isExternal: true
-  name: RoomLightController
-  nameWithType: RoomLightController
-  fullName: RoomLightController
+  name: FlickerableLightController
+  nameWithType: FlickerableLightController
+  fullName: FlickerableLightController
