@@ -444,7 +444,7 @@ namespace TemplatePlugin
 		}
 
 		[PluginEvent(ServerEventType.PlayerUseHotkey)]
-		void OnPlaeyrUsedHotkey(Player plr, ActionName action)
+		void OnPlayerUsedHotkey(Player plr, ActionName action)
 		{
 			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) used hotkey &6{action}&r");
 		}
