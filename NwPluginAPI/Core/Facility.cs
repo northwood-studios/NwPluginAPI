@@ -121,16 +121,6 @@ namespace PluginAPI.Core
 			}
 		}
 
-		public static void RegisterDoor(DoorSpawnpoint spawnpoint, DoorVariant door)
-		{
-			var roomIdentity = FindRoomIdentifier(spawnpoint.transform);
-			if (roomIdentity == null) return;
-
-			if (!TryGetRoom(roomIdentity, out FacilityRoom room)) return;
-
-			RegisterDoor(room, door);
-		}
-
 		private static RoomIdentifier FindRoomIdentifier(Transform tr)
 		{
 			if (tr.TryGetComponent<RoomIdentifier>(out RoomIdentifier ri))

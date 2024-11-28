@@ -1343,7 +1343,7 @@ namespace PluginAPI.Core
 		/// <param name="force">The force of explosion.</param>
 		/// <param name="armorPenetration">The amount of armor penetration.</param>
 		/// <returns>Whether or not damaging was successful.</returns>
-		public bool Damage(float amount, Player attacker, Vector3 force = default, int armorPenetration = 0) => Damage(new ExplosionDamageHandler(new Footprint(attacker.ReferenceHub), force, amount, armorPenetration));
+		public bool Damage(float amount, Player attacker, Vector3 force = default, int armorPenetration = 0) => Damage(new ExplosionDamageHandler(new Footprint(attacker.ReferenceHub), force, amount, armorPenetration, ExplosionType.Grenade));
 
 		/// <summary>
 		/// Damages player.

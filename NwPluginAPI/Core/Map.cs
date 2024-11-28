@@ -63,7 +63,7 @@ namespace PluginAPI.Core
 		/// <remarks>
 		/// Please avoid calling this method several times, I recommend you to save the values in a variable in your code and update it every time a map is generated again.
 		/// </remarks>
-		public static IReadOnlyCollection<TeslaGate> TeslaGates => TeslaGateController.Singleton.TeslaGates;
+		public static IReadOnlyCollection<TeslaGate> TeslaGates => TeslaGate.AllGates;
 
 		/// <summary>
 		/// Get the current generators of the map.
