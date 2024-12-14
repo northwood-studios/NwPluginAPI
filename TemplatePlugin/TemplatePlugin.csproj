@@ -34,7 +34,7 @@
 		<Reference Include="CommandSystem.Core" HintPath="$(SL_REFERENCES)\CommandSystem.Core.dll" />
 		<Reference Include="Mirror" HintPath="$(SL_REFERENCES)\Mirror.dll" />
 		<Reference Include="Pooling" HintPath="$(SL_REFERENCES)\Pooling.dll" />
-		<Reference Include="UnityEngine.CoreModule" HintPath="$(SL_REFERENCES)\UnityEngine.CoreModule.dll" />
-		<Reference Include="UnityEngine.PhysicsModule" HintPath="$(SL_REFERENCES)\UnityEngine.PhysicsModule.dll" />
+		<Reference Include="UnityEngine.CoreModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.CoreModule.dll" />
+		<Reference Include="UnityEngine.PhysicsModule" HintPath="$(UNITY_REFERENCES)\UnityEngine.PhysicsModule.dll" />
 	</ItemGroup>
 </Project>
