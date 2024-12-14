@@ -1,16 +1,16 @@
+using PlayerRoles;
 using PluginAPI.Enums;
 using PluginAPI.Core.Attributes;
-using Respawning;
 
-namespace PluginAPI.Events
+namespace PluginAPI.Events.Args.Server
 {
 	public class TeamRespawnSelectedEvent : IEventArguments
 	{
 		public ServerEventType BaseType { get; } = ServerEventType.TeamRespawnSelected;
 		[EventArgument]
-		public SpawnableTeamType Team { get; }
+		public Faction Team { get; }
 
-		public TeamRespawnSelectedEvent(SpawnableTeamType team)
+		public TeamRespawnSelectedEvent(Faction team)
 		{
 			Team = team;
 		}

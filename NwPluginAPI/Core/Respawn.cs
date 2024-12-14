@@ -55,25 +55,25 @@ namespace PluginAPI.Core
 		/// Gets the next team which will be spawned.
 		/// </summary>
 		[Obsolete]
-		public static SpawnableTeamType NextKnownTeam => SpawnableTeamType.None;
+		public static Faction NextKnownTeam => Faction.Unclassified;
 
 		/// <summary>
 		/// Adds tickets to a specific team.
 		/// </summary>
 		/// <param name="team">The team to add tickets to.</param>
 		/// <param name="amount">The amount of tickets to add.</param>
-		public static void AddTickets(SpawnableTeamType team, float amount)
+		public static void AddTickets(Faction team, float amount)
 		{
 			switch (team)
 			{
-				case SpawnableTeamType.ChaosInsurgency:
+				case Faction.FoundationEnemy:
 					if (!WaveManager.TryGet(Faction.FoundationEnemy, out SpawnableWaveBase chaosWave) || chaosWave is not NtfSpawnWave chaosSpawnWave)
 						return;
 
 					chaosSpawnWave.RespawnTokens += (int)amount;
 					break;
 
-				case SpawnableTeamType.NineTailedFox:
+				case Faction.FoundationStaff:
 					if (!WaveManager.TryGet(Faction.FoundationStaff, out SpawnableWaveBase ntfWave) || ntfWave is not NtfSpawnWave ntfSpawnWave)
 						return;
 
@@ -87,11 +87,11 @@ namespace PluginAPI.Core
 		/// </summary>
 		/// <param name="team">The team to spawn.</param>
 		/// <param name="playEffects">Plays spawn effects.</param>
-		public static void Spawn(SpawnableTeamType team, bool playEffects = false)
+		public static void Spawn(Faction team, bool playEffects = false)
 		{
 			switch (team)
 			{
-				case SpawnableTeamType.ChaosInsurgency:
+				case Faction.FoundationEnemy:
 					if (!WaveManager.TryGet(Faction.FoundationEnemy, out SpawnableWaveBase chaosWave))
 						return;
 
@@ -100,7 +100,7 @@ namespace PluginAPI.Core
 						WaveManager.InitiateRespawn(chaosWave);
 					break;
 
-				case SpawnableTeamType.NineTailedFox:
+				case Faction.FoundationStaff:
 					if (!WaveManager.TryGet(Faction.FoundationStaff, out SpawnableWaveBase ntfWave))
 						return;
 
