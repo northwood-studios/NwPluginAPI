@@ -1,3 +1,5 @@
+using PluginAPI.Events.Args.Server;
+
 namespace TemplatePlugin
 {
 	using PlayerRoles.PlayableScps.Scp173;

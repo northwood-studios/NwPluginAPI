@@ -482,7 +482,7 @@ namespace TemplatePlugin
 		[PluginEvent(ServerEventType.PlayerInteractElevator)]
 		void OnInteractWithElevator(Player plr, ElevatorChamber elevator)
 		{
-			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with elevator in position &6{elevator.transform.position}&r with the destination in &6{elevator.CurrentDestination.transform.position}&r");
+			Log.Info($"Player &6{plr.Nickname}&r (&6{plr.UserId}&r) interacted with elevator in position &6{elevator.transform.position}&r with the destination in &6{elevator.CurSequence}&r");
 		}
 
 		[PluginEvent(ServerEventType.PlayerInteractScp330)]
